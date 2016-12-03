@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
     <title>心灵港湾</title>
-    <link rel="stylesheet" href="/css/jquery.mobile-1.4.5.min.css">
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.mobile-1.4.5.min.js"></script>
 </head>
-<div data-role="page">
+<div data-role="page" id="pageone">
     <div data-role="header">
         <h1>欢迎来到心灵港湾</h1>
+        <div>
+            <button>主页</button>
+            <input type="button" value="登录">
+            <a href="#" data-role="button">书架</a>
+        </div>
     </div>
     <div data-role="main" class="ui-content">
         <p>我现在是一个移动端开发者!!</p>
+        <a href="#pagetwo">跳转到第二个页面</a>
+        <a href="#pagetwo" data-role="button">pagetwo</a>
     </div>
     <div data-role="footer">
         <h1>底部文本</h1>
     </div>
 </div>
+<div data-role="page" id="pagetwo">
+    <div data-role="main" class="ui-content">
+        <a href="#pagethree" data-transition="slide" data-direction="reverse">跳转到第三个对话框页面</a>
+        <a href="book.html">跳转到外部页面</a>
+    </div>
+</div>
+<div data-role="page" data-dialog="true" id="pagethree">
+    <div data-role="main" class="ui-content">
+        <a href="#pageone" data-transition="slideup">跳转到第一个页面</a>
+        <p>请输入您的姓名</p>
+    </div>
+
+
+</div>
+
 <body>
 </body>
 </html>
