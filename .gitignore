@@ -1,7 +1,7 @@
 /*/*/src/main/resources/rebel.xml
 /*/.gitignore
-/*/*/*.idea
-/*/*/*.iml
+/*/*.idea
+/*/*.iml
 /*/*/target/
 /*/*.classpath
 
