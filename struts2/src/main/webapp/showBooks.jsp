@@ -10,11 +10,15 @@
 <%--导入Struts2的标签库--%>
 <html>
 <head>
-    <title>作者李刚的图书</title>
+    <%--使用s:text输出国际化信息--%>
+    <title><s:text name="bookPageTitle"/></title>
+    <%--<title>作者李刚的图书</title>--%>
 </head>
 <body>
 <table border="1" width="360">
-    <caption>作者李刚的图书</caption>
+    <%--使用s:text输出国际化信息--%>
+    <caption><s:text name="bookPageTitle"/></caption>
+    <%--<caption>作者李刚的图书</caption>--%>
     <%--<%--%>
     <%--//        获取封装输出信息的ValueStack对象--%>
     <%--ValueStack vs = (ValueStack) request.getAttribute("struts.valueStack");--%>

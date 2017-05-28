@@ -12,5 +12,12 @@
             <result name="error">/error.jsp</result>
             <result name="success">/welcome.jsp</result>
         </action>
+        <!--定义获取系统中图书的Action,对应实现类为lee.GetBooksAction-->
+        <action name="GetBooks" class="lee.GetBooksAction">
+            <!--如果处理结果返回login,进入login.jsp页面-->
+            <result name="login">/login.jsp</result>
+            <!--如果处理结果返回success,进入showBook.jsp页面-->
+            <result name="success">/showBooks.jsp</result>
+        </action>
     </package>
 </struts>
