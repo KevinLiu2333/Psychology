@@ -12,6 +12,8 @@
 <head>
     <%--使用s:text输出国际化信息--%>
     <title><s:text name="bookPageTitle"/></title>
+    <%--这种格式也可以--%>
+    <%--<title><s:property value="%{getText('bookPageTitle')}"/></title>--%>
     <%--<title>作者李刚的图书</title>--%>
 </head>
 <body>

@@ -8,6 +8,7 @@
     <package name="strutsqs" extends="struts-default">
         <!--定义login的Action,该Action的实现类为lee.Action类-->
         <action name="Login" class="lee.LoginAction">
+            <result name="input">/login.jsp</result>
             <!--定义处理结果和资源之间的关系-->
             <result name="error">/error.jsp</result>
             <result name="success">/welcome.jsp</result>
@@ -19,5 +20,6 @@
             <!--如果处理结果返回success,进入showBook.jsp页面-->
             <result name="success">/showBooks.jsp</result>
         </action>
+
     </package>
 </struts>
