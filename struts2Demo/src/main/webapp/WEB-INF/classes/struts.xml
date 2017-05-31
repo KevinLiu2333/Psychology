@@ -16,10 +16,12 @@
         <!--定义获取系统中图书的Action,对应实现类为lee.GetBooksAction-->
         <action name="GetBooks" class="lee.GetBooksAction">
             <!--如果处理结果返回login,进入login.jsp页面-->
-            <result name="login">/login.jsp</result>
+            <!--type属性默认为jsp.也可以选用模板引擎-->
+            <result name="login" type="jsp">/login.jsp</result>
             <!--如果处理结果返回success,进入showBook.jsp页面-->
             <result name="success">/showBooks.jsp</result>
         </action>
-
     </package>
+    <!--constant元素也可以进行配置:两个必填属性 name value-->
+    <constant name="struts.multipart.maxSize" value="10mb"/>
 </struts>
