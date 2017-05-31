@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<!--struts.xml是struts2配置文件的根元素-->
+<struts>
+    <!--struts2的Action必须在指定的包空间下定义-->
+    <package name="strutsqs" extends="struts-default">
+        <!--定义login的Action,该Action的实现类为lee.Action类-->
+        <action name="Login" class="lee.LoginAction">
+            <result name="input">/login.jsp</result>
+            <!--定义处理结果和资源之间的关系-->
+            <result name="error">/error.jsp</result>
+            <result name="success">/welcome.jsp</result>
+        </action>
+        <!--定义获取系统中图书的Action,对应实现类为lee.GetBooksAction-->
+        <action name="GetBooks" class="lee.GetBooksAction">
+            <!--如果处理结果返回login,进入login.jsp页面-->
+            <result name="login">/login.jsp</result>
+            <!--如果处理结果返回success,进入showBook.jsp页面-->
+            <result name="success">/showBooks.jsp</result>
+        </action>
+
+    </package>
+</struts>
