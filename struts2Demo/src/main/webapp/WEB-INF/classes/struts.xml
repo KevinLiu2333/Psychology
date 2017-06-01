@@ -4,6 +4,48 @@
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 <!--struts.xml是struts2配置文件的根元素-->
 <struts>
+    <!--配置的第一个包,该包名为default,继承struts.default-->
+    <package name="default" extends="struts.default">
+        <!--下面定义了拦截器部分-->
+        <interceptors>
+            <!--定义拦截器栈-->
+            <interceptor-stack name="crudStack">
+                <interceptor-ref name="params"/>
+                <interceptor-ref name="defaultStack"/>
+            </interceptor-stack>
+        </interceptors>
+        <default-action-ref name="showcase"/>
+        <!--定义一个Action,该Action直接映射到showcase.jsp里面-->
+        <action name="Showcase">
+            <result>showcase.jsp</result>
+        </action>
+        <!--定义了一个Action,该Action类为com.opensymphony.webwork.showcase.DateAction-->
+        <action name="Date" class="lee.DateAction">
+            <result name="success">/date.jsp</result>
+        </action>
+
+    </package>
+    <!--定义名为skill的包,该Action继承default的包-->
+    <package name="skill" extends="default" namespace="/skill">
+        <!--定义默认拦截器引用-->
+        <default-interceptor-ref name="crudStack"/>
+        <!--定义名为Edit的Action,该Action对应的处理类为lee.SkillAction-->
+        <action name="Edit" class="lee.SkillAction">
+            <result>/empmanager/editSkill.jsp</result>
+            <interceptor-ref name="params"/>
+            <interceptor-ref name="basicStack"/>
+        </action>
+        <!--定义名为Save的Action,该Action对应的处理类为lee.SkillAction,使用save方法作为处理方法-->
+        <action name="Save" class="lee.SkillAction" method="save">
+            <result name="input">/empmanager/editSkill.jsp</result>
+            <result type="redirect">edit.action?skillName=${currentSkill.name}</result>
+        </action>
+        <!--定义名为Delete的Action,该Action对应的处理类为lee.SkillAction-->
+        <action name="Delete" class="lee.SkillAction" method="delete">
+            <result name="error">/empmanager/editSkill.jsp</result>
+            <result type="redirect">edit.action?skillName=${currentSkill.name}</result>
+        </action>
+    </package>
     <!--struts2的Action必须在指定的包空间下定义-->
     <package name="strutsqs" extends="struts-default">
         <!--定义login的Action,该Action的实现类为lee.Action类-->
@@ -22,6 +64,46 @@
             <result name="success">/showBooks.jsp</result>
         </action>
     </package>
+    <package name="get" extends="struts-default" namespace="/book">
+        <!--配置一个名为GetBooks的Action-->
+        <action name="GetBooks" class="lee.GetBooksAction">
+            <result name="login">/login.jsp</result>
+            <result name="success">/showBook.jsp</result>
+        </action>
+        <!--<interceptors>-->
+            <!--&lt;!&ndash;定义权限检查的拦截器&ndash;&gt;-->
+            <!--<interceptor name="authority" class="lee.AuthorityInterceptor"/>-->
+            <!--&lt;!&ndash;定义日志记录的拦截器&ndash;&gt;-->
+            <!--<interceptor name="log" class="lee.xxxx"/>-->
+            <!--&lt;!&ndash;定义一个拦截器栈&ndash;&gt;-->
+            <!--<interceptor-stack name="authorityandlog">-->
+                <!--&lt;!&ndash;定义该拦截器里包含authority拦截器&ndash;&gt;-->
+                <!--<interceptor-ref name="authority"/>-->
+                <!--&lt;!&ndash;log拦截器&ndash;&gt;-->
+                <!--<interceptor-ref name="log"/>-->
+            <!--</interceptor-stack>-->
+        <!--</interceptors>-->
+    </package>
     <!--constant元素也可以进行配置:两个必填属性 name value-->
-    <constant name="struts.multipart.maxSize" value="10mb"/>
+    <constant name="struts.custom.i18n.resources" value="messageResource"/>
 </struts>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
