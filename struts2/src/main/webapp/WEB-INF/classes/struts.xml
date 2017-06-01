@@ -2,6 +2,7 @@
 <!DOCTYPE struts PUBLIC
         "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
         "http://struts.apache.org/dtds/struts-2.5.dtd">
+<!--核心配置文件,该文件主要负责管理Struts框架的业务控制器Action-->
 <!--struts.xml是struts2配置文件的根元素-->
 <struts>
     <!--struts2的Action必须在指定的包空间下定义-->

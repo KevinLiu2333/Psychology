@@ -17,5 +17,6 @@
 ${sessionScope.user},您已经登录!<br>
 <%--通过表达式访问HttpServletRequest对象的属性--%>
 ${requestScope.tip}
+从系统中读取的Cookie值:${cookie.user.value}
 </body>
 </html>

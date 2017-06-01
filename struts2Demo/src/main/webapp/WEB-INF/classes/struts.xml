@@ -88,11 +88,29 @@
     <!--<constant name="struts.custom.i18n.resources" value="messageResource"/>-->
     <package name="lee" extends="struts-default">
         <!--定义名为login的Action,其实现类为lee.LoginAction-->
-        <action name="login" class="lee.LoginAction">
+        <!--<action name="login" class="lee.LoginAction">-->
+        <!--<result name="input">/login.jsp</result>-->
+        <!--<result name="error">/error.jsp</result>-->
+        <!--<result name="success">/welcome.jsp</result>-->
+        <!--</action>-->
+        <!--配置名为Regist的Action,该Action采用默认的regist方法处理用户请求-->
+        <!--指定method选定处理方法 其中参数可使用通配符,例如-->
+        <!--*.Action都会被处理,默认处理方法是 *-->
+        <!--神坑,要开启配置后指定允许的通配符-->
+        <global-allowed-methods>regex:.*</global-allowed-methods>
+        <action name="*Action" class="lee.LoginRegistAction" method="{1}">
+            <result name="input">/login.jsp</result>
             <result name="error">/error.jsp</result>
             <result name="success">/welcome.jsp</result>
         </action>
+        <!--<action name="Regist" class="lee.LoginRegistAction" method="regist">-->
+        <!--<result name="input">/login.jsp</result>-->
+        <!--<result name="error">/error.jsp</result>-->
+        <!--<result name="success">/welcome.jsp</result>-->
+        <!--</action>-->
     </package>
+    <!--神坑,2.5之后先要开启配置-->
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
 </struts>
 
 
