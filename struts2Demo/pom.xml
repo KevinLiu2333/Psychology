@@ -62,7 +62,6 @@
             <artifactId>javaee-api</artifactId>
             <version>7.0</version>
         </dependency>
-        <!--xwork相关包-->
     </dependencies>
 
 </project>

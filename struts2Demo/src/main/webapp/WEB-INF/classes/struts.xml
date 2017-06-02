@@ -3,6 +3,8 @@
         "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 <!--struts.xml是struts2配置文件的根元素-->
+<!--尽量不要让超级链接直接链接到某个视图资源上,因为这种方式增加了额外的风险.推荐将-->
+<!--所有请求都发给Struts2框架,让该框架来处理请求-->
 <struts>
     <!--&lt;!&ndash;配置的第一个包,该包名为default,继承struts.default&ndash;&gt;-->
     <!--<package name="default" extends="struts.default">-->
@@ -103,12 +105,35 @@
             <result name="error">/error.jsp</result>
             <result name="success">/welcome.jsp</result>
         </action>
+        <!--定义一个通用action result中也可以使用通配符
+        当规则有冲突时,先找到哪个action,就由哪个action执行-->
+        <action name="*">
+            <!--使用表达式定义Result-->
+            <result>/{1}.jsp</result>
+        </action>
         <!--<action name="Regist" class="lee.LoginRegistAction" method="regist">-->
         <!--<result name="input">/login.jsp</result>-->
         <!--<result name="error">/error.jsp</result>-->
         <!--<result name="success">/welcome.jsp</result>-->
         <!--</action>-->
+        <!--最典型的result配置-->
+        <!--<action name="Login" class="lee.LoginAction">-->
+        <!--&lt;!&ndash;为success的逻辑视图配置Result,type属性指定结果类型&ndash;&gt;-->
+        <!--<result name="success" type="dispatcher">-->
+        <!--&lt;!&ndash;指定该逻辑视图的实际视图资源&ndash;&gt;-->
+        <!--<param name="location">/thank_you.jsp</param>-->
+        <!--</result>-->
+        <!--</action>-->
+        <result-types>
+            <!--各种不同的结果类型-->
+            <!--Action链-->
+            <result-type name="chain" class="com.opensymphony.xwork2.ActionChainResult"/>
+            <!--用于与jsp整合的结果类型-->
+            <result-type name="dispatcher" class="org.apache.struts2.result.ServletDispatcherResult"/>
+
+        </result-types>
     </package>
+
     <!--神坑,2.5之后先要开启配置-->
     <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
 </struts>
