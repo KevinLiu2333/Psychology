@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.common.mapper.DbCountMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.common.model.DbCount">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="count" jdbcType="INTEGER" property="count" />
+    <result column="add_time" jdbcType="TIMESTAMP" property="addTime" />
+    <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="label" jdbcType="VARCHAR" property="label" />
+    <result column="assistant" jdbcType="VARCHAR" property="assistant" />
+    <result column="path" jdbcType="LONGVARCHAR" property="path" />
+  </resultMap>
+</mapper>

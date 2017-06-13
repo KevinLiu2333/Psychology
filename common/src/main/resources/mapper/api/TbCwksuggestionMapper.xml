@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.common.mapper.TbCwksuggestionMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.common.model.TbCwksuggestion">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="suggestion" jdbcType="VARCHAR" property="suggestion" />
+    <result column="proposerid" jdbcType="INTEGER" property="proposerid" />
+    <result column="imgpath" jdbcType="VARCHAR" property="imgpath" />
+    <result column="suggestiontype" jdbcType="VARCHAR" property="suggestiontype" />
+    <result column="addtime" jdbcType="DATE" property="addtime" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="replytime" jdbcType="DATE" property="replytime" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.common.mapper.TbCwkbeanMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.common.model.TbCwkbean">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="CWKID" jdbcType="INTEGER" property="cwkid" />
+    <result column="changeType" jdbcType="INTEGER" property="changetype" />
+    <result column="changeNumber" jdbcType="INTEGER" property="changenumber" />
+    <result column="addTime" jdbcType="TIMESTAMP" property="addtime" />
+    <result column="describtion" jdbcType="VARCHAR" property="describtion" />
+    <result column="remain_bean" jdbcType="INTEGER" property="remainBean" />
+  </resultMap>
+</mapper>

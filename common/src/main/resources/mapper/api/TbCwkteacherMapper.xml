@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.common.mapper.TbCwkteacherMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.common.model.TbCwkteacher">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="cwkid" jdbcType="INTEGER" property="cwkid" />
+    <result column="graduated_university" jdbcType="VARCHAR" property="graduatedUniversity" />
+    <result column="teach_grade" jdbcType="VARCHAR" property="teachGrade" />
+    <result column="average_score" jdbcType="REAL" property="averageScore" />
+    <result column="isauthentication" jdbcType="BIT" property="isauthentication" />
+    <result column="teach_experience" jdbcType="TINYINT" property="teachExperience" />
+    <result column="certificate_path" jdbcType="VARCHAR" property="certificatePath" />
+    <result column="authentication_process" jdbcType="VARCHAR" property="authenticationProcess" />
+    <result column="correcting_times" jdbcType="INTEGER" property="correctingTimes" />
+  </resultMap>
+</mapper>

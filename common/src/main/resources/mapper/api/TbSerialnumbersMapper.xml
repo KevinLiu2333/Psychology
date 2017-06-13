@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.common.mapper.TbSerialnumbersMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.common.model.TbSerialnumbers">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="Number" jdbcType="VARCHAR" property="number" />
+    <result column="IsUsed" jdbcType="BIT" property="isused" />
+    <result column="ActivationDate" jdbcType="TIMESTAMP" property="activationdate" />
+    <result column="AddDatetime" jdbcType="TIMESTAMP" property="adddatetime" />
+    <result column="UsedType" jdbcType="VARCHAR" property="usedtype" />
+    <result column="IsExport" jdbcType="BIT" property="isexport" />
+    <result column="IsOverdue" jdbcType="BIT" property="isoverdue" />
+    <result column="IsLocked" jdbcType="BIT" property="islocked" />
+    <result column="ExportZone" jdbcType="VARCHAR" property="exportzone" />
+  </resultMap>
+</mapper>

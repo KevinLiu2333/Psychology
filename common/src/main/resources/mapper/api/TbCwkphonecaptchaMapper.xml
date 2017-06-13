@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.common.mapper.TbCwkphonecaptchaMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.common.model.TbCwkphonecaptcha">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="captcha" jdbcType="VARCHAR" property="captcha" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="phoneNum" jdbcType="VARCHAR" property="phonenum" />
+  </resultMap>
+</mapper>

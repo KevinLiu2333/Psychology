@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.common.mapper.TbCwkcorrectinfoMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.common.model.TbCwkcorrectinfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="homeworkId" jdbcType="INTEGER" property="homeworkid" />
+    <result column="xValue" jdbcType="INTEGER" property="xvalue" />
+    <result column="yValue" jdbcType="INTEGER" property="yvalue" />
+    <result column="textValue" jdbcType="VARCHAR" property="textvalue" />
+    <result column="audioPath" jdbcType="VARCHAR" property="audiopath" />
+  </resultMap>
+</mapper>

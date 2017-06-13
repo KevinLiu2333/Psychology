@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.common.mapper.TbDesignatedMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.common.model.TbDesignated">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="ID" jdbcType="INTEGER" property="id" />
+    <result column="studentid" jdbcType="VARCHAR" property="studentid" />
+    <result column="teacherid" jdbcType="VARCHAR" property="teacherid" />
+    <result column="agree" jdbcType="TINYINT" property="agree" />
+    <result column="cost" jdbcType="DECIMAL" property="cost" />
+    <result column="addDate" jdbcType="TIMESTAMP" property="adddate" />
+  </resultMap>
+</mapper>

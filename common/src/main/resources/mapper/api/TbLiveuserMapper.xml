@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.common.mapper.TbLiveuserMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.common.model.TbLiveuser">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="avatar" jdbcType="VARCHAR" property="avatar" />
+    <result column="details" jdbcType="VARCHAR" property="details" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="loginFail" jdbcType="INTEGER" property="loginfail" />
+    <result column="locktime" jdbcType="TIMESTAMP" property="locktime" />
+    <result column="phoneNo" jdbcType="VARCHAR" property="phoneno" />
+    <result column="ticket" jdbcType="VARCHAR" property="ticket" />
+    <result column="token" jdbcType="VARCHAR" property="token" />
+    <result column="registTime" jdbcType="TIMESTAMP" property="registtime" />
+    <result column="lastLoginTime" jdbcType="TIMESTAMP" property="lastlogintime" />
+    <result column="liveBean" jdbcType="INTEGER" property="livebean" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="serialNum" jdbcType="VARCHAR" property="serialnum" />
+    <result column="loginTimeStamp" jdbcType="BIGINT" property="logintimestamp" />
+    <result column="pianoGrade" jdbcType="INTEGER" property="pianograde" />
+  </resultMap>
+</mapper>

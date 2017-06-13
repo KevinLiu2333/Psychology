@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.common.mapper.TbCwkorderBeanMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.common.model.TbCwkorderBean">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="orderSerial" jdbcType="VARCHAR" property="orderserial" />
+    <result column="userId" jdbcType="INTEGER" property="userid" />
+    <result column="beanCount" jdbcType="INTEGER" property="beancount" />
+    <result column="price" jdbcType="DOUBLE" property="price" />
+    <result column="ctime" jdbcType="TIMESTAMP" property="ctime" />
+    <result column="ltime" jdbcType="TIMESTAMP" property="ltime" />
+  </resultMap>
+</mapper>

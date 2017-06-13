@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.common.mapper.DbSonsubjectMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.common.model.DbSonsubject">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="addtime" jdbcType="TIMESTAMP" property="addtime" />
+    <result column="modifytime" jdbcType="TIMESTAMP" property="modifytime" />
+    <result column="son_subject_no" jdbcType="VARCHAR" property="sonSubjectNo" />
+    <result column="son_subject_name" jdbcType="VARCHAR" property="sonSubjectName" />
+    <result column="parent_subject_name" jdbcType="VARCHAR" property="parentSubjectName" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.common.mapper.DbOpernMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.common.model.DbOpern">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="add_time" jdbcType="TIMESTAMP" property="addTime" />
+    <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="main_title" jdbcType="VARCHAR" property="mainTitle" />
+    <result column="assistant_title" jdbcType="VARCHAR" property="assistantTitle" />
+    <result column="opern_no" jdbcType="VARCHAR" property="opernNo" />
+    <result column="book_name" jdbcType="VARCHAR" property="bookName" />
+    <result column="opern_label" jdbcType="VARCHAR" property="opernLabel" />
+    <result column="opern_path" jdbcType="LONGVARCHAR" property="opernPath" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.common.mapper.TbCwkvideorecordsMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.common.model.TbCwkvideorecords">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="ID" jdbcType="INTEGER" property="id" />
+    <result column="userid" jdbcType="VARCHAR" property="userid" />
+    <result column="pm_ClassTypeId" jdbcType="INTEGER" property="pmClasstypeid" />
+    <result column="addtime" jdbcType="TIMESTAMP" property="addtime" />
+    <result column="paymentstatus" jdbcType="TINYINT" property="paymentstatus" />
+  </resultMap>
+</mapper>

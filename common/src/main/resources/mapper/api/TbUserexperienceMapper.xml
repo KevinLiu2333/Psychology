@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.common.mapper.TbUserexperienceMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.common.model.TbUserexperience">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="BIGINT" property="id" />
+    <result column="SerialNumber" jdbcType="VARCHAR" property="serialnumber" />
+    <result column="Time" jdbcType="TIMESTAMP" property="time" />
+    <result column="Button" jdbcType="VARCHAR" property="button" />
+    <result column="CurPage" jdbcType="VARCHAR" property="curpage" />
+    <result column="NextPage" jdbcType="VARCHAR" property="nextpage" />
+    <result column="Ip" jdbcType="VARCHAR" property="ip" />
+  </resultMap>
+</mapper>

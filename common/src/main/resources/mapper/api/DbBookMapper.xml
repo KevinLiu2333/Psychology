@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.common.mapper.DbBookMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.common.model.DbBook">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="book_no" jdbcType="VARCHAR" property="bookNo" />
+    <result column="book_name" jdbcType="VARCHAR" property="bookName" />
+    <result column="book_label" jdbcType="VARCHAR" property="bookLabel" />
+    <result column="add_time" jdbcType="TIMESTAMP" property="addTime" />
+    <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="press" jdbcType="VARCHAR" property="press" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.common.mapper.TbLiveroomMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.common.model.TbLiveroom">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="anchorId" jdbcType="INTEGER" property="anchorid" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="startTime" jdbcType="TIMESTAMP" property="starttime" />
+    <result column="endTime" jdbcType="TIMESTAMP" property="endtime" />
+    <result column="duration" jdbcType="INTEGER" property="duration" />
+    <result column="audienceNum" jdbcType="INTEGER" property="audiencenum" />
+    <result column="interactNum" jdbcType="INTEGER" property="interactnum" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="interactUser" jdbcType="VARCHAR" property="interactuser" />
+    <result column="appointNum" jdbcType="INTEGER" property="appointnum" />
+    <result column="anchorName" jdbcType="VARCHAR" property="anchorname" />
+    <result column="level" jdbcType="INTEGER" property="level" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+</mapper>

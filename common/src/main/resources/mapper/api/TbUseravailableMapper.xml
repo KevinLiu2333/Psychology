@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.common.mapper.TbUseravailableMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.common.model.TbUseravailable">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="NewNumber" jdbcType="VARCHAR" property="newnumber" />
+    <result column="AddDateTime" jdbcType="TIMESTAMP" property="adddatetime" />
+    <result column="Nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="IsActivation" jdbcType="BIT" property="isactivation" />
+    <result column="HeadPic" jdbcType="VARCHAR" property="headpic" />
+  </resultMap>
+</mapper>

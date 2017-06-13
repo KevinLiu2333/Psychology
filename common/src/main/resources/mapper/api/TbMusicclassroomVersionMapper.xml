@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.common.mapper.TbMusicclassroomVersionMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.common.model.TbMusicclassroomVersion">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="apk_version" jdbcType="VARCHAR" property="apkVersion" />
+    <result column="opern_version" jdbcType="VARCHAR" property="opernVersion" />
+    <result column="apk_path" jdbcType="VARCHAR" property="apkPath" />
+    <result column="opern_path" jdbcType="VARCHAR" property="opernPath" />
+    <result column="apk_md5" jdbcType="VARCHAR" property="apkMd5" />
+    <result column="opern_md5" jdbcType="VARCHAR" property="opernMd5" />
+    <result column="isForceUpdate" jdbcType="BIT" property="isforceupdate" />
+    <result column="apk_size" jdbcType="VARCHAR" property="apkSize" />
+    <result column="opern_size" jdbcType="VARCHAR" property="opernSize" />
+  </resultMap>
+</mapper>
