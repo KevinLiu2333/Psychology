@@ -24,7 +24,7 @@ public class HelloWorldController {
 
     @RequestMapping("hello")
     public Object helloWorld() {
-        PageHelper.startPage(1,5);
+        PageHelper.startPage(1,8);
         List<TbCWK> list  =  userMapper.getAll();
         PageInfo<TbCWK> pageInfo = new PageInfo<TbCWK>(list);
         return pageInfo;
