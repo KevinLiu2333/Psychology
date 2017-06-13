@@ -15,7 +15,7 @@ import java.util.List;
  * Time: 10:36
  */
 @Component
-public interface UserMapper {
+public interface UserMapper{
 
 
     @Select("SELECT id,name FROM tb_CWK order by id asc")

@@ -24,8 +24,20 @@ public class JpaTest {
     private UserMapper userMapper;
 
     @Test
-    public void userTest(){
-        List<TbCWK> list =  userMapper.getAll();
+    public void userTest() {
+        List<TbCWK> list = userMapper.getAll();
         System.out.println(list.size());
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
