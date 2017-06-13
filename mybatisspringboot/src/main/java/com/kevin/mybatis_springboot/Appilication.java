@@ -15,7 +15,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootConfiguration
 @EnableAutoConfiguration
 @ComponentScan("com.kevin.mybatis_springboot")
-@MapperScan("com.kevin.mybatis_springboot.mapper")
+@MapperScan("com.kevin.common.mapper")
 public class Appilication {
     public static void main(String[] args) {
         SpringApplication.run(Appilication.class);

@@ -2,8 +2,8 @@ package com.kevin.mybatis_springboot.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.kevin.mybatis_springboot.entity.TbCWK;
-import com.kevin.mybatis_springboot.mapper.UserMapper;
+import com.kevin.common.mapper.TbCwkMapper;
+import com.kevin.common.model.TbCwk;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,13 +20,13 @@ import java.util.List;
 public class HelloWorldController {
 
     @Resource
-    private UserMapper userMapper;
+    private TbCwkMapper cwkMapper;
 
     @RequestMapping("hello")
     public Object helloWorld() {
-        PageHelper.startPage(1,8);
-        List<TbCWK> list  =  userMapper.getAll();
-        PageInfo<TbCWK> pageInfo = new PageInfo<TbCWK>(list);
+        PageHelper.startPage(1,5);
+        List<TbCwk> list  =  cwkMapper.selectAll();
+        PageInfo<TbCwk> pageInfo = new PageInfo<TbCwk>(list);
         return pageInfo;
     }
 
