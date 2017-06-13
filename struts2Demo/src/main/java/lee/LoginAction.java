@@ -1,102 +1,30 @@
 package lee;
 
-import com.opensymphony.xwork2.ActionContext;
-import org.apache.struts2.interceptor.ServletResponseAware;
-
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletResponse;
-
+import com.opensymphony.xwork2.ModelDriven;
 
 /**
- * Action直接访问ServletAPI
- * ServletContextAware:访问ServletContext实例
- * ServletRequestAware:访问HttpServletRequest实例
- * ServletResponseAware:访问HttpServletResponse实例
+ * 对于采用模型驱动的Action来言,该Action必须实现
+ * ModelDriven接口,下面是本应用所使用的Action的代码
  * Created with IntelliJ IDEA.
  * User: liukun
- * Date: 2017/5/27
- * Time: 11:38
+ * Date: 2017/6/3
+ * Time: 15:19
  */
-public class LoginAction implements Action, ServletResponseAware {
-    private String username;
-    private String password;
-    private String tip;
-    //需要访问的HttpServletResponse对象
-    //只是控制器.并不会对客户端造成输出
-    private HttpServletResponse response;
+public class LoginAction implements Action,ModelDriven<UserBean>{
+    //定义封装请求参数和处理结果的类型
+    private UserBean model = new UserBean();
 
-
-    public String getUsername() {
-        return username;
+    public UserBean getModel() {
+        return model;
     }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getTip() {
-        return tip;
-    }
-
-    public void setTip(String tip) {
-        this.tip = tip;
-    }
-
-    //    下面是处理用户请求的execute方法
+    //处理用户请求的execute方法
     public String execute() throws Exception {
-//        获取ActionContext实例,通过该实例访问Servlet API
-        ActionContext ctx = ActionContext.getContext();
-        //获取ServletContext里面的counter属性
-        Integer counter = (Integer) ctx.getApplication().get("counter");
-        //如果counter属性为null,设置该counter属性为1
-        if (counter == null) {
-            counter = 1;
-//            否则将counter+1
-        } else {
-            counter++;
-        }
-//        将增加1后的counter值设置成counter属性,从applicationScope中访问
-        ctx.getApplication().put("counter", counter);
-//        将登陆用的username属性设置成一个HttpSession属性,从sessionScope中文芳
-        ctx.getSession().put("user", getUsername());
-//        如果用户名为scott,密码为tiger
-        if ("scott".equals(getUsername()) && "tiger".equals(getPassword())) {
-            //从requestScope中访问
-            ctx.put("tip", "服务器提示:您已经成功登陆");
-//            创建一个user对象
-            Cookie c = new Cookie("user", getUsername());
-//            设置Cookie对象的最大生存事件
-            c.setMaxAge(60 * 60);
-            //使用HttpServletResponse添加Cookie对象
-            response.addCookie(c);
+        //如果username请求参数为scott,password请求参数为tiger
+        if(getModel().getUsername().equals("scott")&&getModel().getPassword().equals("tiger")){
+            getModel().setTip("哈哈,服务器提示");
             return SUCCESS;
-        } else {
-            ctx.put("tip", "服务器提示:登录失败");
+        }else {
             return ERROR;
         }
     }
-
-    public void setServletResponse(HttpServletResponse httpServletResponse) {
-        this.response = httpServletResponse;
-    }
 }
-
-
-
-
-
-
-
-
-
-
-
-

@@ -100,7 +100,12 @@
         <!--*.Action都会被处理,默认处理方法是 *-->
         <!--神坑,要开启配置后指定允许的通配符-->
         <global-allowed-methods>regex:.*</global-allowed-methods>
-        <action name="*Action" class="lee.LoginRegistAction" method="{1}">
+        <!--<action name="*Action" class="lee.LoginAction" method="{1}">-->
+            <!--<result name="input">/login.jsp</result>-->
+            <!--<result name="error">/error.jsp</result>-->
+            <!--<result name="success">/welcome.jsp</result>-->
+        <!--</action>-->
+        <action name="*Action" class="lee.LoginAction" method="execute">
             <result name="input">/login.jsp</result>
             <result name="error">/error.jsp</result>
             <result name="success">/welcome.jsp</result>
@@ -124,16 +129,28 @@
         <!--<param name="location">/thank_you.jsp</param>-->
         <!--</result>-->
         <!--</action>-->
-        <result-types>
-            <!--各种不同的结果类型-->
-            <!--Action链-->
-            <result-type name="chain" class="com.opensymphony.xwork2.ActionChainResult"/>
-            <!--用于与jsp整合的结果类型-->
-            <result-type name="dispatcher" class="org.apache.struts2.result.ServletDispatcherResult"/>
-
-        </result-types>
+        <!--<result-types>-->
+            <!--&lt;!&ndash;各种不同的结果类型&ndash;&gt;-->
+            <!--&lt;!&ndash;Action链&ndash;&gt;-->
+            <!--<result-type name="chain" class="com.opensymphony.xwork2.ActionChainResult"/>-->
+            <!--&lt;!&ndash;用于与jsp整合的结果类型&ndash;&gt;-->
+            <!--<result-type name="dispatcher" class="org.apache.struts2.result.ServletDispatcherResult"/>-->
+            <!--&lt;!&ndash;用于与FreeMarker整合的结果类型&ndash;&gt;-->
+            <!--<result-type name="freemarker" class="org.apache.struts2.views.freemarker.FreemarkerResult"/>-->
+            <!--&lt;!&ndash;用于控制特殊HTTP行为的结果类型&ndash;&gt;-->
+            <!--<result-type name="httpheader" class="org.apache.struts2.result.HttpHeaderResult"/>-->
+            <!--&lt;!&ndash;用于直接跳转到其他URL的结果类型&ndash;&gt;-->
+            <!--<result-type name="redirect" class="org.apache.struts2.result.ServletRedirectResult"/>-->
+            <!--&lt;!&ndash;用于直接跳转到其他Action的结果类型&ndash;&gt;-->
+            <!--<result-type name="stream" class="org.apache.struts2.result.StreamResult"/>-->
+            <!--&lt;!&ndash;用于整合Velocity的结果类型&ndash;&gt;-->
+            <!--<result-type name="velocity" class="org.apache.struts2.result.VelocityResult"/>-->
+            <!--&lt;!&ndash;用于整合XML/XSLT的结果类型&ndash;&gt;-->
+            <!--<result-type name="velocity" class="org.apache.struts2.views.xslt.XSLTResult"/>-->
+            <!--&lt;!&ndash;用于显示某个页面原始代码的结果类型&ndash;&gt;-->
+            <!--<result-type name="plaintext" class="org.apache.struts2.result.PlainTextResult"/>-->
+        <!--</result-types>-->
     </package>
-
     <!--神坑,2.5之后先要开启配置-->
     <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
 </struts>
