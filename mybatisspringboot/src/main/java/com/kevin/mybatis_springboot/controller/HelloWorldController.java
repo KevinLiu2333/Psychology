@@ -29,8 +29,7 @@ public class HelloWorldController {
     public Object helloWorld() {
         PageHelper.startPage(1, 5);
         List<TbCwk> list = cwkMapper.selectAll();
-        PageInfo<TbCwk> pageInfo = new PageInfo<TbCwk>(list);
-        return pageInfo;
+        return new PageInfo<TbCwk>(list);
     }
 
 }

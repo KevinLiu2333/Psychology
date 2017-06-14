@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo1</title>
+    <script>
+        var points = [{x: 3, y: 3}, {x: 4, y: 5}];
+
+        function plus1(x) {
+            return x + 1;
+        }
+
+        var square = function (x) {
+            return x * x;
+        };
+        //        绑定在对象上的方法
+        points.dist = function () {
+            var p1 = this[0];
+            var p2 = this[1];
+            var a = p2.x - p1.x;
+            var b = p2.y - p1.y;
+            return Math.sqrt(a * a + b * b);
+        };
+
+        //构造函数
+        function Point(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        var p = new Point(1, 1);
+        Point.prototype.r = function () {
+            return Math.sqrt(this.x * this.x + this.y * this.y);
+        };
+        //        实例对象继承方法
+        console.log(p.r());
+
+        function moveon() {
+//            通过弹出一个对话框来询问用户一个问题
+            var answer = confirm("准备好了吗");
+//            单击"确定"按钮,浏览器会加载一个新页面
+            if (answer) window.location = "http://taobao.com";
+        }
+
+        //在10秒后执行定义的函数
+        //        setTimeout(moveon, 10000);
+        //        在document中的指定区域输出调试信息
+        //        如果document不存在这样的一个区域,则创建一个
+        function debug(msg) {
+//            通过查看HTMl元素id属性来查找文档的调试部分
+            var log = document.getElementById("debuglog");
+//            如果不存在---直接用!判断
+            if (!log) {
+                log = document.createElement("div");
+                log.id = "debuglog";
+                log.innerHTML = "<h1>Debug log</h1>";
+                document.body.appendChild(log);//有bug
+            }
+//            将消息包装在<pre>中,并添加至log中
+            var pre = document.createElement("pre");
+            var text = document.createTextNode(msg);
+            pre.appendChild(text);
+            log.appendChild(pre);
+        }
+
+//        debug("dsahdkah");
+
+        //    显示隐藏元素
+        function hide(e, reflow) {//通过JavaScript操纵样式来显示隐藏元素
+            if (reflow) {//如果第二个参数是true
+                e.style.display = "none";//隐藏这个元素,其所占的空间也随之消失
+            } else {//否则
+                e.style.visibility = "hidden";//将e隐藏,但是保留其所占的空间
+            }
+        }
+
+        function highlight(e) {
+//            简单地定义或追加HTML属性
+//            这里假设css样式表中已经有"hilite"类的定义,追加class属性
+            if (!e.className) e.className = "hilite";
+            else e.className += "hilite";
+        }
+
+        window.onload = function () {//当文档加载完成时执行这里的代码
+            //找到文档中所有的<img>标签
+            var images = document.getElementsByTagName("img");
+            //遍历images,给每个节点的"click"事件添加事件处理程序
+            //在点击图片时候将图片隐藏
+            for (var i = 0; i < images.length; i++) {
+                var image = images[i];
+                if (image.addEventListener)//注册事件处理程序的另一种方法
+                    image.addEventListener("click", hide, false);
+                else//兼容IE8及以前的版本
+                    image.attachEvent("onclick", hide);
+            }
+
+//            这边是上面注册事件的处理函数
+            function hide(event) {
+//                visibility:hidden 隐藏元素
+                event.target.style.visibility = "hidden";
+            }
+        }
+    </script>
+</head>
+<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497260816745&di=76533df01c2e7556c2256f2c1f91d4cc&imgtype=0&src=http%3A%2F%2Fbbsatt.yineitong.com%2Fforum%2F2011%2F03%2F25%2F110325164993a2105258f0d314.jpg">
+<body>
+</body>
+</html>
+
+
+
+
+
+
+
+
