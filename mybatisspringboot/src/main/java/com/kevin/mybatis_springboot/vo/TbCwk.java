@@ -11,8 +11,10 @@ import javax.validation.constraints.Min;
  * Time: 13:45
  */
 public class TbCwk {
+//    验证模块
     @NotBlank(groups = NAME.class)
     private String name;
+//    验证模块
     @Min(value = 1,groups = ID.class)
     private Integer id;
     @NotBlank
