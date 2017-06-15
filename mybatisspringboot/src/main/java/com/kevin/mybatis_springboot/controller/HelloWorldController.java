@@ -6,12 +6,13 @@ import com.kevin.common.mapper.TbCwkMapper;
 import com.kevin.common.model.TbCwk;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.util.List;
-
+import com.kevin.mybatis_springboot.vo.TbCwk.ID;
 /**
  * Created with IntelliJ IDEA.
  * User: liukun
@@ -26,7 +27,7 @@ public class HelloWorldController {
     private TbCwkMapper cwkMapper;
 
     @RequestMapping("hello")
-    public Object helloWorld() {
+    public Object helloWorld(@Validated(ID.class) Integer userId) {
         PageHelper.startPage(1, 5);
         List<TbCwk> list = cwkMapper.selectAll();
         return new PageInfo<TbCwk>(list);
