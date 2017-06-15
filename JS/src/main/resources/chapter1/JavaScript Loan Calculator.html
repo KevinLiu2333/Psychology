@@ -97,31 +97,124 @@
         var zipcode = document.getElementById("zipcode");
         var payment = document.getElementById("payment");
         var total = document.getElementById("total");
-        var totalinterest= document.getElementById("totalinterest");
+        var totalinterest = document.getElementById("totalinterest");
         //假设所有的输入都是合法的,将从input元素中获取输入数据
         //将百分比格式转换为小数格式,并从年利率转换为月利率
         //将年度赔付转换为月度赔付
         var principal = parseFloat(amount.value);
-        var interest = parseFloat(apr.value)/100/12;
-        var payments = parseFloat(years.value)*12;
+        var interest = parseFloat(apr.value) / 100 / 12;
+        var payments = parseFloat(years.value) * 12;
         //现在计算月度赔付数据
-        var x = Math.pow(1+interest,payments);//Math.pow()进行幂次运算
-        var monthly = (principal*x*interest)/(x-1);
+        var x = Math.pow(1 + interest, payments);//Math.pow()进行幂次运算
+        var monthly = (principal * x * interest) / (x - 1);
         //如果结果没有超过JS能表示的数字范围,且用户的输入也是正确的
         //这里所展示的结果就是合法的
 //        判断是否合法
-        if(isFinite(monthly)){
+        if (isFinite(monthly)) {
 //            将数据填充至输出字段的位置,四舍五入到小数点后两位数字
             payment.innerHTML = monthly.toFixed(2);//toFixed()函数四舍五入
-            total.innerHTML = (monthly*payments).toFixed(2);
-            totalinterest.innerHTML = ((monthly*payments)-principal).toFixed(2);
+            total.innerHTML = (monthly * payments).toFixed(2);
+            totalinterest.innerHTML = ((monthly * payments) - principal).toFixed(2);
 
             //将用户的输入数据保存下来,这样在下次访问时也能取到数据
-            save(amount.value,apr.value,years.value,zipcode.value);
+            save(amount.value, apr.value, years.value, zipcode.value);
 
 //            找到并展示本地放贷人,但忽略网络错误
+            try {
+                getLendars(amount.value,apr.value,years.value,zipcode.value);
+            }catch (e){
+//                忽略
+            }
+//            FIX ME
 
         }
+    }
+
+    function save(amount, apr, years, zipcode) {
+        if (window.localStorage) {//只有在浏览器支持的时候才运行这行代码
+            localStorage.loan_amount = amount;
+            localStorage.loan_apr = apr;
+            localStorage.loan_years = years;
+            localStorage.loan_zipcode = zipcode;
+        }
+    }
+
+    //文档在首次加载时,将会尝试还原输入字段
+    window.onload = function () {
+        //如果浏览器支持本地存储并且上次保存的值是存在的
+        if (window.localStorage && localStorage.loan_amount) {
+            document.getElementById("amount").value = localStorage.loan_amount;
+            document.getElementById("apr").value = localStorage.loan_apr;
+            document.getElementById("years").value = localStorage.loan_years;
+            document.getElementById("zipcode").value = localStorage.loan_zipcode;
+        }
+    };
+
+    /**
+     * 将用户的输入发送至服务器脚本将返回一个本地放贷人的链接列表,在这个例子中并没有实现
+     * 这种查找放贷人的服务
+     *但如果该服务存在,该函数会使用它
+     */
+    function getLendars(amount, apr, years, zipcode) {
+        //如果浏览器不支持,退出
+        if (!window.XMLHttpRequest) return;
+        //找到要显示放贷人列表的元素
+        var ad = document.getElementById("lendars");
+        if (!ad) return;
+        //将用户输入数据进行URL编码,并作为查询参数附加在URL里
+        var url = "getlendars" + "?amt=" + encodeURIComponent(amount) + "&apr=" + encodeURIComponent(apr) + "&yrs=" + encodeURIComponent(years) + "&zip=" + encodeURIComponent(zipcode);
+        //通过XMLHttpRequest对象来提取数据 原生js ajax请求
+        var req = new XMLHttpRequest();
+        req.open("GET", url);
+        req.send(null);
+        /**
+         * 在返回数据之前注册了一个事件处理函数
+         * 这个处理函数将会在服务器的相应返回至客户端的时候调用
+         * 这种异步编程模型很常见
+         */
+        req.onreadystatechange = function () {
+            if (req.readyState === 4 && req.status === 200) {
+                //合法完整响应
+                var response = req.responseText;
+                var lendars = JSON.parse(response);
+                //将数组中的放贷人对象转换为HTML字符串形式
+                var list = "";
+                for (var i = 0; i < lendars.length; i++) {
+                    list += "<li><a href='" + lendars[i].url + "'>" + lendars[i].name + "</a>";
+                }
+//                显示数据
+                ad.innerHTML = "<ul>"+list+"</ul>";
+            }
+        }
+    }
+//    展示 不传参就清空
+    function chart(principle,interest,monthly,payments) {
+        var graph = document.getElementById("graph");
+        graph.width = graph.width;//巧妙的手法清除并重置画布
+//        不传参或不支持canvas,直接返回
+        if(arguments.length == 0||!graph.getContext)return;
+//        获取画布context
+        var g = graph.getContext("2d");//所有绘画都基于这个对象
+        var width = graph.width;
+        var height = graph.height;
+//        付款数字和美元转化为像素
+        function paymentToX(n) {
+            return n*width/payments;
+        }
+
+        function amountToY(a) {
+            return height - (a*height/(monthly*payments*1.05));
+        }
+//        (0,0)到(payments,monthly*payments)的直线
+        g.moveTo(paymentToX(0),amountToY(0));
+        g.lineTo(paymentToX(payments),amountToY(monthly*payments));
+        g.lineTo(paymentToX(payments),amountToY(0));
+        g.closePath();
+        g.fillStyle = "#f88";
+        g.fill();
+        g.font = "bold 12px san-serif";
+        g.fillText("Total Interest Payments",20,20);
+//        FIX ME
     }
 </script>
 </body>

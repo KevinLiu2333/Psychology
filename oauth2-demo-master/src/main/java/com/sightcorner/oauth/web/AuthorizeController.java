@@ -17,7 +17,6 @@ public class AuthorizeController {
     @RequestMapping(value = "authorize")
     public Object authorize() {
 
-
         return null;
     }
 
