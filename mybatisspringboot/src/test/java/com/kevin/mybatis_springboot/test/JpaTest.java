@@ -1,19 +1,22 @@
-package com.kevin.mybatis_springboot.test;
-
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-
-/**
- * Created with IntelliJ IDEA.
- * User: liukun
- * Date: 2017/6/13
- * Time: 11:12
- */
-@RunWith(SpringRunner.class)
-@SpringBootTest
-public class JpaTest {
-
+//package com.kevin.mybatis_springboot.test;
+//
+//import org.junit.Test;
+//import org.junit.runner.RunWith;
+//import org.springframework.boot.test.context.SpringBootTest;
+//import org.springframework.test.context.junit4.SpringRunner;
+//
+//import javax.annotation.Resource;
+//
+///**
+// * Created with IntelliJ IDEA.
+// * User: liukun
+// * Date: 2017/6/13
+// * Time: 11:12
+// */
+//@RunWith(SpringRunner.class)
+//@SpringBootTest
+//public class JpaTest {
+//
 //    @Resource
 //    private UserMapper userMapper;
 //
@@ -22,16 +25,16 @@ public class JpaTest {
 //        List<TbCWK> list = userMapper.getAll();
 //        System.out.println(list.size());
 //    }
-
-}
-
-
-
-
-
-
-
-
-
-
-
+//
+//}
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
