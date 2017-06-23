@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.common.mall.mapper.TMallOrderMapper">
+	<resultMap id="BaseResultMap" type="com.klsw.common.mall.model.TMallOrder">
+		<!-- WARNING - @mbggenerated -->
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="serial" property="serial" jdbcType="VARCHAR" />
+		<result column="status" property="status" jdbcType="INTEGER" />
+		<result column="userId" property="userid" jdbcType="INTEGER" />
+		<result column="totalCount" property="totalcount" jdbcType="INTEGER" />
+		<result column="totalPrice" property="totalprice" jdbcType="DOUBLE" />
+		<result column="ltime" property="ltime" jdbcType="TIMESTAMP" />
+		<result column="ctime" property="ctime" jdbcType="TIMESTAMP" />
+	</resultMap>
+
+	<select id="selectByUserId" parameterType="java.lang.Integer" resultType="java.util.Map">
+		SELECT t1.ctime, t1.serial AS orderSerial, t2.productSerial, t2.productCount, t3.name,
+		t3.color, t3.imgUrl, t4.userName, t1.totalPrice, t1.`status` FROM
+		t_mall_order t1 LEFT JOIN t_mall_order_product t2 ON t1.serial =
+		t2.orderSerial LEFT JOIN t_mall_product t3 ON t2.productSerial =
+		t3.serial LEFT JOIN t_mall_order_address t4 ON t1.serial =
+		t4.orderSerial WHERE t1.userId = #{userId} ORDER BY t1.id DESC
+	</select>
+</mapper>

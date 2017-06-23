@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper.TbCwknewsMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model.TbCwknews">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="video" jdbcType="VARCHAR" property="video" />
+    <result column="contents" jdbcType="VARCHAR" property="contents" />
+    <result column="img" jdbcType="VARCHAR" property="img" />
+    <result column="CWKID" jdbcType="INTEGER" property="cwkid" />
+    <result column="addtime" jdbcType="TIMESTAMP" property="addtime" />
+    <result column="viewcount" jdbcType="INTEGER" property="viewcount" />
+    <result column="usertype" jdbcType="VARCHAR" property="usertype" />
+    <result	column="newstype" jdbcType="INTEGER" property="newstype" />
+    <result column="praise" jdbcType="INTEGER" property="praise" />
+    <result column="collection" jdbcType="INTEGER" property="collection" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+  </resultMap>
+  <select id="selectFavoriteNewsByTbCwkId" parameterType="java.lang.String" resultMap="BaseResultMap">
+  	select tb_CWKNews.*,tb_CWK.name from tb_CWKFavorite
+  	left join tb_CWKNews 
+  	on tb_CWKFavorite.CWKNewsID =tb_CWKNews.ID
+  	left join tb_CWK
+  	on tb_CWK.ID=tb_CWKNews.ID
+  	where tb_CWKFavorite.CWKID=(select ID from tb_CWK where name=#{0} and type=#{1})
+  	order by tb_CWKNews.addtime
+  </select>
+  <!-- 自己写的sql不要使用pageHelper的排序语句，可能会发生错误 -->
+  <select id="selectNewsOrderByPraise" resultMap="BaseResultMap">
+    select tb_CWKNews.*,tb_CWK.name 
+  	from tb_CWKNews left join tb_CWK
+  	on tb_CWKNews.CWKID=tb_CWK.ID
+  	order by tb_CWKNews.praise
+  </select>
+  <select id="selectNewsOrderByAddtime" resultMap="BaseResultMap">
+    select tb_CWKNews.*,tb_CWK.name 
+  	from tb_CWKNews left join tb_CWK
+  	on tb_CWKNews.CWKID=tb_CWK.ID
+  	order by tb_CWKNews.addtime
+  </select>
+</mapper>

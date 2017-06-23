@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的订单</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="/css/center.css" rel="stylesheet" type="text/css"/>
+<link href="/css/pagination.css" rel="stylesheet" type="text/css"/>
+<link href="/css/reset.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="/css/pageGroup.css"/>
+<script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/js/pageGroup.js"></script>
+
+<script th:inline="javascript">
+var pages=[[${pageInfo.pages}]];
+
+
+var status = [[${status}]]; 
+
+ $(function(){ 
+	 for(var i=1;i<=pages;i++){
+	 	
+	 	$("#fy").append("  <a href='/order/list?pageNum='"+(i+1)+"></a>"); 
+	 }
+	 
+	 
+	 $(".myclick").eq(0).css("color","#eb5405");
+	   
+			if(status==null){
+				$(".myclick").css("color","#9e9fa1");
+				$(".myclick").eq(0).css("color","#eb5405");
+			}
+		 	if(status == 1) {
+		 		
+				$(".myclick").css("color","#9e9fa1");
+				$(".myclick").eq(1).css("color","#eb5405");
+			}
+			if(status == 4) {
+				
+				$(".myclick").css("color","#9e9fa1");
+				$(".myclick").eq(2).css("color","#eb5405");
+			}
+			if(status == 5) {
+				$(".myclick").css("color","#9e9fa1");
+				$(".myclick").eq(3).css("color","#eb5405");
+			}
+	  
+ });
+
+</script>
+
+<script th:inline="javascript">
+	var index = [[${index}]];
+	$(function(){
+		$('#bigTitle a').removeClass(); 
+		$('#bigTitle a').eq(index).addClass("idx-f1"); 
+	})
+</script> 
+</head>
+
+<body>
+  
+<div class="navhead" style="border-bottom:1px solid #ddd;">
+	<nav class="index-nav">
+		<div class="logo">
+			<a href="/index.html"><img src="/images/logo.png" /></a>
+		</div>
+		<div class="shopcart">
+			<a href="/cart"> </a>
+		</div>
+        <div class="exit" th:if="${session.klsw_user }">
+			<a href="/logout">退出</a>
+		</div>
+		<div class="login">
+			<a href="/order/list"></a>
+		</div>
+		<ul class="nav-list">
+
+			<li class="nav-item"><a href="/">首页</a></li>
+
+			<li class="nav-item"><a href="/smart.html">智能钢琴</a></li>
+
+			<li class="nav-item"><a href="/mall" class="orange">在线商城</a></li>
+
+			<li class="nav-item"><a href="/service.html">服务中心</a></li>
+
+			<li class="nav-item"><a href="/aboutus.html">关于我们</a></li>
+
+		</ul>
+	</nav>
+</div>
+
+<div class="center_info"> 
+<div th:include="common/center"></div> 
+<div class="center_infor">
+<div class="myorder_top">我的订单</div>
+<div class="hm-menu">
+<ul>
+	<li style="border:none;"><a name="dd" href="/order/list" class="myclick">全部订单</a>
+	</li><li><a  name="dd" href="/order/list?status=1 "  class="myclick">待付款</a>
+	</li><li><a  name="dd" href="/order/list?status=4"  class="myclick">待收货</a>
+	</li><li><a  name="dd" href="/order/list?status=5"  class="myclick">已完成</a></li>
+</ul>
+</div>
+<table class="table table-bordered table-hover" th:each="item : ${pageInfo.list}">
+     <tbody>
+       <tr align="center" style="background-color:#f1f1f1;">
+         <td height="31" colspan="5" nowrap="nowrap" style="text-align:left;" th:utext="${#dates.format(item.ctime, 'yyyy/MM/dd HH:mm:ss')}+ '<span style=padding:0 15px; color:#999;/>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;订单号：'+ ${item.serial}"></span></td>
+         </tr>
+       <tr align="center" >
+         <td width="42%" nowrap="nowrap" style="padding:0px;" >
+                              <div class="order_menu">
+                              <ul>
+                              <li th:each="productItem : ${item.productList}">
+                                <div class=" center_pic"><a href="#"><img th:src="${productItem.productImg}"/></a></div>
+                                <div class="order_text"><span   th:text="${productItem.productname}"></span>  *<span th:text="${productItem.productcount}">1</span><span style=" font-size:12px; display:block; line-height:26px;" th:text="${productItem.productColor}">燎原红</span> </div>
+                               </li>                                                                                            
+                              </ul>
+                              </div>
+                              
+         </td>
+         <td width="15%" nowrap="nowrap"><span  th:text="${item.receiver}"></span><span style="display:block; color:#e80014; line-height:30px;" th:text="'￥'+${#numbers.formatDecimal(item.totalprice,3,2)}" >￥12999.00</span></td>
+         <td width="13%" nowrap="nowrap" th:switch="${item.status}"> 
+         
+                <div style="text-align:center; color:#a1a1a1;" th:case="1">未支付<br/><br/><a th:href="'/order/orderDetail?orderSerial='+${item.serial}" style="color:#eb5405;">订单详情</a></div>
+	            <div style="text-align:center; color:#a1a1a1;" th:case="2">已支付<br/><br/><a th:href="'/order/orderDetail?orderSerial='+${item.serial}" style="color:#eb5405;">订单详情</a></div>
+	         	<div style="text-align:center; color:#a1a1a1;" th:case="3">待发货<br/><br/><a th:href="'/order/orderDetail?orderSerial='+${item.serial}" style="color:#eb5405;">订单详情</a></div>
+	         	<div style="text-align:center; color:#a1a1a1;" th:case="4">已发货<br/><br/><a th:href="'/order/orderDetail?orderSerial='+${item.serial}" style="color:#eb5405;">订单详情</a></div>
+	         	<div style="text-align:center; color:#a1a1a1;" th:case="5">已签收<br/><br/><a th:href="'/order/orderDetail?orderSerial='+${item.serial}" style="color:#eb5405;">订单详情</a></div>
+	         	<div style="text-align:center; color:#a1a1a1;" th:case="20">交易完成<br/><br/><a th:href="'/order/orderDetail?orderSerial='+${item.serial}" style="color:#eb5405;">订单详情</a></div>
+         
+         </td>
+         <td width="17%" nowrap="nowrap"><a href="/mall" class="buy_again">再次购买</a><!-- <a href="#" style="color:#2c71be;">订单详情</a> --></td>
+         </tr>                                       
+     </tbody>
+   </table>
+ 
+<div style="float:right;width:; margin-top:60px; margin-bottom:50px;">
+  
+<ul id="pagination ">
+<li title="上一页" class="pagination-disabled pagination-prev"><a></a></li>
+<li title="第一页" class="pagination-item pagination-item-1 pagination-item-active">	
+     <a id="fy" href="/order/list?pageNum=1">1</a>
+</li>
+<li title="2" class="pagination-item pagination-item-2"><a  href="/order/list?pageNum=2">2</a></li>
+<li title="3" class="pagination-item pagination-item-3"><a  href="/order/list?pageNum=3">3</a></li>
+<li title="4" class="pagination-item pagination-item-4"><a  href="/order/list?pageNum=4">4</a></li>
+<li title="5" class="pagination-item pagination-item-5"><a  href="/order/list?pageNum=5">5</a></li>
+<li title="6" class="pagination-item pagination-item-5"><a>6</a></li>
+<li title="7" class="pagination-item pagination-item-5"><a>7</a></li>
+<li title="8" class="pagination-item pagination-item-5"><a>8</a></li>
+<li title="9" class="pagination-item pagination-item-5"><a>9</a></li>
+<!-- <li title="向后 5 页" class="pagination-jump-next"><a></a></li> -->
+<!-- <li title="最后一页: 18" class="pagination-item pagination-item-18"><a>18</a></li> -->
+<li title="下一页" class="pagination-next"><a></a></li>
+</ul>  
+ 
+
+</div> 
+
+<!-- <div id="pageGro" class="cb">
+	<div class="pageUp">上一页</div>
+    <div class="pageList">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+    <div class="pageDown">下一页</div>
+</div> -->
+</div>
+</div>
+
+<div th:include="common/foot"></div>    
+</body> 
+</html>

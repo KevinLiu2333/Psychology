@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>克洛斯威智能钢琴</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/bdstat.js"></script>
+ <script type="text/javascript">
+	$(function(){
+		//鼠标移入
+		$('#a').mouseover(function(){
+		    $('#b').show();
+		});
+		//鼠标移出
+		$('#a').mouseout(function(){
+		$('#b').hide();
+		});
+	});
+</script>
+</head>
+<body>
+<div class="navhead">
+    <nav class="index-nav">
+        <div class="logo">
+            <a href="/"><img src="/images/logo.png" /></a>
+        </div>
+
+        <div class="shopcart">
+        <a href="/cart"> </a>
+        </div>
+        <!-- <div class="exit" th:if="${session.klsw_user }">
+		    <a href="/logout">退出</a>
+		</div> -->
+        <div class="login">
+          <a href="/order/list"></a>
+        </div>
+        <ul class="nav-list">
+            
+            <li class="nav-item ">
+                <a href="/" class="orange">首页</a>                
+            </li>
+            
+            <li class="nav-item">
+                <a href="/smart.html">智能钢琴</a>
+                
+    </li>
+            
+            <li class="nav-item">
+                <a href="/mall">在线商城</a>
+                
+    </li>
+            
+            <li class="nav-item">
+                <a href="/service.html">招商加盟</a>               
+                
+    </li>
+            
+            <li class="nav-item">
+                <a href="/aboutus.html">关于我们</a>
+                
+            </li>
+            
+        </ul>
+   </nav>
+</div>
+    <!-- 轮播广告 -->
+    <div id="banner_tabs" class="flexslider">
+        <ul class="slides">
+         
+        	<!-- <li>
+                <a title="" href="/mall">
+                    <img alt="" style="background: url(/images/alpha.png) no-repeat center;width:100%;height:auto;min-hight:500px;min-width:1200px;" src="/images/banner4.jpg" />
+                </a>
+            </li>  -->
+            <li>
+                <a title="" href="/smart.html">
+                    <img alt="" style="background: url(/images/alpha.png) no-repeat center;width:100%;height:auto;min-hight:500px;min-width:1200px;" src="/images/banner1.jpg" />
+                </a>
+            </li>
+            <li style="min-width:1200px;">
+                 <a title="" href="/message"> 
+                     <img alt="" style="background: url(images/合伙人招募.jpg) no-repeat center;width:100%;height:auto;min-hight:500px;min-width:1200px;"src="/images/合伙人招募.jpg" /> 
+                   	<div style="padding: 6px 1px; top:75%;left:48%;display: block;position:absolute;width:16.7%;height:auto">
+                       <a href="javascript:;">
+                    <img src="/images/h.png"  onclick="location.href = '/docs/克洛斯威合作伙伴申请表.xlsx'"  style="width: 98px;margin-top:60px;; height: 99px; z-index: 99;"/>
+                    </a>  
+                  </div>
+                 </a>  
+            </li>
+             <li>
+                <a title="" href="/mall">
+                    <img alt="" style="background: url(/images/alpha.png) no-repeat center;width:100%;height:auto;min-hight:500px;min-width:1200px;" src="/images/gb.jpg" />
+                </a>
+            </li>           
+
+        </ul>
+        <ul class="flex-direction-nav">
+            <li><a class="flex-prev" href="javascript:;">Previous</a></li>
+            <li><a class="flex-next" href="javascript:;">Next</a></li>
+        </ul>
+        <ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+            <li><a>1</a></li>
+            <li><a>2</a></li>
+            <li><a>3</a></li>
+        <!--     <li><a>4</a></li>  -->     
+        </ol>
+    </div>
+<script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var bannerSlider = new Slider($('#banner_tabs'), {
+            time: 5000,
+            delay: 400,
+            event: 'hover',
+            auto: true,
+            mode: 'fade',
+            controller: $('#bannerCtrl'),
+            activeControllerCls: 'active'
+        });
+        $('#banner_tabs .flex-prev').click(function() {
+            bannerSlider.prev()
+        });
+        $('#banner_tabs .flex-next').click(function() {
+            bannerSlider.next()
+        });
+        /* if ($(document).scrollTop() > 0 ) {
+            if(!$('.navhead').hasClass('shadow')){
+                $('.navhead').addClass('shadow');
+            }
+        } */
+        if($(window).width()>1200){
+            $('.flexslider').height($('.flexslider li:visible img').height());
+        }else{
+            $('.flexslider').height(500);
+        }
+        
+        $(window).resize(function(){
+            if($(window).width()>1200){
+                $('.flexslider').height($('.flexslider li:visible img').height());
+            }else{
+                $('.flexslider').height(500);
+            }
+        })
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 0 ) {
+                if(!$('.navhead').hasClass('shadow')){
+                    $('.navhead').addClass('shadow');
+                }
+            }else{
+                $('.navhead').removeClass('shadow');
+            }
+
+            });	
+        });
+
+    </script>
+
+<div class="bodyBottom">
+        <dl class="quickLink">
+            <dd class="listBorder" style="border:none;">
+                <a   href="/smart.html" class="advan">
+                    
+                    <p class="quickLinkText">产品特点</p>
+                </a>
+            </dd>
+            <dd class="listBorder">
+                <a href="/mall" class="character">
+                    
+                    <p class="quickLinkText">在线商城</p>
+                </a>
+            </dd>
+              <dd class="listBorder">
+                <a  href="/news" class="icloud">
+                    
+                    <p class="quickLinkText">新闻动态</p>
+                </a>
+            </dd>
+            <dd class="listBorder">
+                <a   href="/explain.html" class="instruct">
+                    
+                    <p class="quickLinkText">使用说明</p>
+                </a>
+            </dd>
+          
+        </dl>
+    </div>
+
+<div class="footnav" >
+
+     <div class="flash-bar">
+     	<ul class="service-block">
+	        <li><img src="/images/lightning.png" /><br />免运费闪电发货</li>                 
+	        <li><img src="/images/seven.png" /><br />7天无理由退货</li>
+	        <li><img src="/images/fifteen.png" /><br />15天换货保障</li>                                                   
+	        <li style="margin-right:0px;"><img src="/images/years.png" /><br />365天免费保修</li>                 
+        </ul>
+	</div>
+    <div class="bn-content"style=" position:relative">
+    		    	<a id="b" href="#" style="display: none; position:absolute; right:315px; top:128px; z-index:999;"><img src="/images/威客二维码.png" /></a>     
+    
+		<ul class="nav-block" >
+		
+	        <li style=" margin-right:150px;">
+	            <span>帮助中心</span>
+	            <p><a href="/notice.html#gouwuzhinan">购物指南</a></p>
+	            <p><a href="/notice.html#zhifufangshi">支付方式</a></p>
+	            <p><a href="/notice.html#peisongfangshi">配送方式</a></p>
+	        </li>
+	         <li style=" margin-right:150px;">
+	             <span>服务支持</span>
+	             <p><a href="/notice.html#shouhoufuwuzongze">售后政策</a></p>
+	             <p><a href="/inquiry.html">网点查询</a></p>
+	         </li>
+	        <li style=" margin-right:90px;">
+	            <span>媒体中心</span>
+	            <p><a href="/news">新闻动态</a></p>
+	            <p><a href="javascript:;">媒体评测</a></p>
+	        </li>
+	        <li style=" margin-right:20px;">
+	            <span>官方微信</span>
+	            <p><img src="/images/qrb.jpg" style="width:103px;"/>  </p>
+	        </li>
+	        <li style=" margin-right:76px;">
+	            <span>官方微博</span>
+	            <p><img src="/images/qra.png" style="width:103px;"/>  </p>
+	        </li>                
+            <li style="width:100px; background:url(/images/bottom_tele.png) left center no-repeat; padding-left:45px;">                
+		          <div class="telephone" style="width:180px; font-size:14px;">
+		                                            加盟合作
+		                <p style=" margin-bottom:12px;">400-8080-218转1</p>
+		                                           售后服务
+		                <p>400-8080-218转2</p>
+		       	  </div>
+            </li>                                         
+		</ul>
+	</div>
+	
+    <div class="cpr-content">
+    
+		<span class="copyright" style=" margin-top:20px;">       
+            <a href="http://m.klsw.com">手机官网</a>
+            <span style="padding:0px 20px;">|</span>
+            <a href="/message">联系我们</a>
+            <span style="padding:0px 20px;">|</span>
+            <a href="/aboutus.html">企业简介</a>
+            <span style="padding:0px 20px;">|</span>
+            <a href="/joinus.html">加入我们</a> 
+            <span style="padding:0px 20px;">|</span>
+            <a id="a" href="#">威客空间</a> <!-- style="display: none;" -->
+           
+        </span>
+         
+        <span class="copyright">       
+                Copyright©2016 KLSW.COM &nbsp;安徽克洛斯威智能乐器科技有限公司&nbsp; All rights reserved. ICP证：皖ICP备15021161号-1               
+       	</span>
+    </div>
+</div>
+
+  <style type="text/css">
+        .copyright a {
+            text-decoration: none;
+            color: #787878;
+            transition: color .2s ease-out;
+            -webkit-transition: color .2s ease-out;
+        }
+
+        .copyright a:hover {
+            color: #fff;
+        }
+    </style>
+    <style type="text/css">
+        .copyright a {
+            text-decoration: none;
+            color: #787878;
+            transition: color .2s ease-out;
+            -webkit-transition: color .2s ease-out;
+        }
+
+        .copyright a:hover {
+            color: #fff;
+        }
+    </style>
+    <!-- 
+    <div id="klswQqServiceDiv" style="height: 40px; width: 120px; overflow: hidden; text-align: left; position: fixed; border-width: 1px 1px 0px; border-style: solid; border-color: rgb(230, 134, 0); z-index: 999; box-shadow: rgba(0, 0, 0, 0.14902) 0px 0px 16px; visibility: visible; bottom: 0px; right: 246px; background-color: rgb(255, 149, 0);">
+        <a style="color:white; font-size:14px; height:40px; width:160px;" href="tencent://message/?uin=3408878658&amp;Site=qq&amp;Menu=yes">
+            <img height="41" width="41" alt="" src="/images/qqhead.png" /><span style="position:absolute; height:40px; line-height:41px; margin-left:10px; font-size:16px;">QQ咨询</span>
+        </a>
+    </div>
+	 -->
+ 	 <!-- cnzz网站统计资料 -->
+    <div style="display: none;">
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259402058'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/stat.php%3Fid%3D1259402058' type='text/javascript'%3E%3C/script%3E"));</script>
+	</div>
+    <script type="text/javascript">
+        // 导航按钮颜色
+        function showshow(obj) {
+            $(".nav-list li a").each(function (index) {
+                $this = $(this);
+                if (index == obj) {
+                    $this.addClass("orange");
+                }
+            });
+        }
+    </script>
+    <!-- 
+ 	<script type="text/javascript">
+        (function (m, ei, q, i, a, j, s) {
+            m[a] = m[a] || function () {
+                (m[a].a = m[a].a || []).push(arguments)
+            };
+            j = ei.createElement(q),
+                s = ei.getElementsByTagName(q)[0];
+            j.async = true;
+            j.charset = 'UTF-8';
+            j.src = i + '?v=' + new Date().getUTCDate();
+            s.parentNode.insertBefore(j, s);
+        })(window, document, 'script', '//eco-api.meiqia.com/dist/meiqia.js', '_MEIQIA');
+        _MEIQIA('entId', 14946);
+        _MEIQIA('allSet', handleAllSet);
+
+        function handleAllSet() {
+            // 传递顾客信息
+            _MEIQIA._SENDMETADATA({
+                商城用户名: '游客595119', // 自定义字段
+                name: '游客595119',
+            });
+        }
+    </script>
+     -->
+</body>
+</html>

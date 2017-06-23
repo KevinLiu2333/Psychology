@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登陆 克洛斯威智能钢琴</title>
+<link type="text/css"  href="/css/bootstrap.css" rel="stylesheet"/>
+<link type="text/css"  href="/css/css.css" rel="stylesheet"/>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">	
+</script>
+</head>
+<body>
+<div class="tit"><img src="/bgimg/tit.png" width="400" height="60" /></div>
+<div class="login-wrap">
+	<form action="/manage/login" method="post">
+	  	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	    	<tr>
+	      	<td height="25" valign="bottom">用户名：</td>
+	    	</tr>
+	    	<tr>
+	      		<td><input name="userName" type="text" class="login_input login_user" value="" 
+	      			required/></td>
+	    	</tr>
+	    	<tr>
+	      		<td height="35" valign="bottom">密  码：</td>
+	   	 	</tr>
+	    	<tr>
+	      		<td><input type="password" name="password" class="login_input login_password" value="" 
+	      			required/></td>
+	    	</tr>
+	    	<tr>
+	      		<td height="60" valign="bottom"><input type="submit" class="btn btn-block btn-login" value="登录"/></td>
+	    	</tr>
+		</table>
+		<div th:text="${msg}" style="color:red; text-align:center"></div>
+	</form>
+</div>
+</body>
+
+</html>

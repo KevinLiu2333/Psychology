@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.common.mall.mapper.TMallProductMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.common.mall.model.TMallProduct" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="serial" property="serial" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="seriesId" property="seriesid" jdbcType="INTEGER" />
+    <result column="attributeGroupId" property="attributegroupid" jdbcType="INTEGER" />
+    <result column="price" property="price" jdbcType="DOUBLE" />
+    <result column="imgUrl" property="imgurl" jdbcType="VARCHAR" />
+    <result column="color" property="color" jdbcType="VARCHAR" />
+    <result column="stock" property="stock" jdbcType="INTEGER" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="ctime" property="ctime" jdbcType="TIMESTAMP" />
+    <result column="ltime" property="ltime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <select id="selectByProduct" parameterType="java.lang.String" resultType="com.klsw.common.mall.model.TMallProduct">
+     SELECT * FROM t_mall_product  WHERE name LIKE CONCAT('%',#{name},'%');
+  </select>
+</mapper>

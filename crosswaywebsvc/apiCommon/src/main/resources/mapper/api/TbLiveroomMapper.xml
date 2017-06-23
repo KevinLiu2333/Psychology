@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper.TbLiveroomMapper">
+    <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model.TbLiveroom">
+        <!--
+          WARNING - @mbggenerated
+        -->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="anchorId" jdbcType="INTEGER" property="anchorid"/>
+        <result column="createTime" jdbcType="TIMESTAMP" property="createtime"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="startTime" jdbcType="TIMESTAMP" property="starttime"/>
+        <result column="endTime" jdbcType="TIMESTAMP" property="endtime"/>
+        <result column="duration" jdbcType="INTEGER" property="duration"/>
+        <result column="audienceNum" jdbcType="INTEGER" property="audiencenum"/>
+        <result column="interactNum" jdbcType="INTEGER" property="interactnum"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+        <result column="interactUser" jdbcType="VARCHAR" property="interactuser"/>
+        <result column="appointNum" jdbcType="INTEGER" property="appointnum"/>
+        <result column="anchorName" jdbcType="VARCHAR" property="anchorname"/>
+        <result column="level" jdbcType="INTEGER" property="level"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="price" jdbcType="INTEGER" property="price"/>
+    </resultMap>
+    <select id="selectLivingDate" resultType="java.lang.String">
+        SELECT DATE_FORMAT(startTime, "%Y-%m-%d") AS dates
+        FROM tb_LiveRoom
+        WHERE status = 0
+              AND startTime &gt; current_date
+        GROUP BY day(startTime)
+        ORDER BY dates ASC
+    </select>
+    <select id="selectLiveroomByDate" parameterType="java.lang.String"
+            resultType="com.klsw.apiCommon.api.model.TbLiveroom">
+        SELECT *
+        FROM tb_LiveRoom
+        WHERE DATE_FORMAT(startTime, "%Y-%m-%d") = #{0}
+              AND status = 0
+    </select>
+    <select id="selectAppointLiveroom" parameterType="java.lang.Integer"
+            resultType="com.klsw.apiCommon.api.model.TbLiveroom">
+        SELECT a.*
+        FROM tb_LiveRoom a, tb_LiveAppoint b
+        WHERE b.liveroomId = a.id AND b.userId = #{1}
+              AND a.status = #{2}
+
+    </select>
+    <select id="selectAppointLiveroom2" parameterType="java.lang.Integer"
+            resultType="com.klsw.apiCommon.api.model.TbLiveroom">
+        SELECT a.*
+        FROM tb_LiveRoom a, tb_LiveAppoint b
+        WHERE b.liveroomId = a.id AND b.userId = #{1}
+    </select>
+    <select id="selectAppointLiveroomCount" parameterType="java.lang.Integer" resultType="int">
+        SELECT count(*)
+        FROM tb_LiveRoom a, tb_LiveAppoint b
+        WHERE b.liveroomId = a.id AND b.userId = #{1}
+              AND a.status = #{2}
+
+    </select>
+    <select id="selectLiveroomList" parameterType="com.klsw.apiCommon.api.model.TbLiveroom"
+            resultType="com.klsw.apiCommon.api.model.TbLiveroom">
+        SELECT
+            a.*,
+            b.fFavicon AS teacherFavicon
+        FROM tb_LiveRoom a LEFT JOIN tb_CWK b ON a.anchorId = b.ID
+        WHERE (isnull(#{status}) OR a.status = #{status}) AND (isnull(#{level}) OR a.level = #{level})
+    </select>
+    <select id="selectByTeacherId" parameterType="java.lang.Integer" resultType="com.klsw.apiCommon.api.model.TbLiveroom">
+        SELECT *
+        FROM tb_LiveRoom
+        WHERE anchorId = #{1} AND status != 2
+    </select>
+</mapper>

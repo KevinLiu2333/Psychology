@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>订单管理</title>
+<link rel="stylesheet" href="/css/bootstrap.css" />
+<link rel="stylesheet" href="/css/css.css" />
+<link href="/css/zzsc.css" type="text/css" rel="stylesheet"/>
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script src="/js/tabletoExcel.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+	
+	$("#go").click(function go() {
+		var pageNum = document.getElementById("pageNum").innerHTML;
+		var total = document.getElementById("total").innerHTML;
+		var goToPage = document.getElementById("goToPage").value;
+		if(goToPage<=0 || goToPage > total) {
+			window.location.href ='/manage/order/orderManage?pageNum='+pageNum;
+		} else {
+			window.location.href = '/manage/order/orderManage?pageNum='+goToPage;
+		}	
+	});
+});
+</script>
+<script type="text/javascript">
+	$(function(){
+	     /*  $(".tj").css("display","none");
+	      var send = $("#send_hidden").val();
+	      if(send == "true") {
+	    	   var index = $("#index_hidden").val();
+		       $(".tj").eq(index).css("display","block");
+	      }; */
+	      
+	      $(".receiptSubmit").click(function() {
+	    	  var receiptSerial = $(this).prev().val();
+	    	  if(receiptSerial == null || receiptSerial == "") {
+	    		  alert("发票物流不能为空");
+	    		  return;
+	    	  }
+	    	  $(this).parent().submit();
+	      });
+	});
+</script>
+</head>
+<body>
+ <input id="authority_hidden" type="hidden" th:value="${authority}"/>
+ <input id="send_hidden" type="hidden" th:value="${send}" th:if="${send} != null"/>
+ <input id="pageSize_hidden" type="hidden" th:value="${page.pageSize}"/>
+ <input id="pageNum_hidden" type="hidden" th:value="${page.pageNum}"/>
+ <input id="pages_hidden" type="hidden" th:value="${page.pages}"/>
+ <input id="index_hidden" type="hidden" th:value="${index}" th:if="${index} !=null"/>
+	<div th:include="background/bg_common/bg_head"></div>
+<!-- 顶部 -->              
+<div id="middle">
+     <div class="left">
+<!-- 代码 开始 -->
+	<div th:include="background/bg_common/bg_nav"></div>
+<!-- 代码 结束 -->
+     </div>
+
+     <div class="right"  id="mainFrame">
+     <div class="right_cont">
+ <ul class="breadcrumb" style=" margin-bottom:20px;">当前位置：订单操作</ul> 
+ <input type="button" value="订单导出" onclick="tabletoExcel();"/> 
+  	<table id="tb2" class="table table-bordered table-hover">
+    	<tbody>
+      	<tr align="center" style="background-color:#f1f1f1;">
+         <th width="45%" height="31" nowrap="nowrap">订单信息</th>
+         <th width="15%" nowrap="nowrap">收货人</th>                  
+         <th width="13%" nowrap="nowrap">金额</th>           
+         <th width="14%" nowrap="nowrap">状态</th>           
+         <th width="13%" nowrap="nowrap">操作</th>                            
+         </tr>
+         <!-- 订单循环开始 -->
+       <tr align="center" th:each="order,orderStat:${bgOrderList.list}"  th:if="${order} != null">
+    	 <!-- 订单详情开始 -->	
+         <td nowrap="nowrap">
+         	<div style="background-color:#fafafa;">
+         		<div align="left" style="font-weight:700;"th:text="'日期：'+${#dates.format(order.ctime,'yyyy年MM月dd日')}"></div>
+         		<b  style=" margin-left:10px;" th:text="'订单号：'+${order.orderSerial}"></b>
+         		 
+
+         	      <a th:href="'/manage/order/orderDetail?orderSerial='+${order.orderSerial}" >订单详情</a> 
+         	            	  
+         	</div>
+         	<!-- 订单图片循环开始 -->
+          	<div class="order_menu">
+            	<ul>
+          			<li th:each="orderProduct:${order.orderProductList}">
+                		<div class="order_pic"><img  style="height:66px;width:66px" th:src="${orderProduct.productImg}"/></div>
+                		<div class="order_text" th:text="${orderProduct.productname}+' '+${orderProduct.productColor}+'*'+${orderProduct.productcount}"></div>
+               		</li>                                                           
+         		</ul>
+      		</div>
+      		<!-- 订单图片循环结束 -->
+	        </td>
+	        <!-- 订单详情结束 -->
+	        <!-- 其他订单信息 -->
+	        <td nowrap="nowrap" th:text="${order.receiver}"></td>
+	        <td nowrap="nowrap" th:text="'总额￥'+${order.totalPrice}"><span style="display:block">在线支付</span></td>
+	        <td nowrap="nowrap" th:switch="${order.status}">
+	          <div style="text-align:center; color:#a1a1a1;" th:case="1">订单已提交</div>
+	          <div style="text-align:center; color:#a1a1a1;" th:case="2">付款成功</div>
+	         	<div style="text-align:center; color:#a1a1a1;" th:case="3">货款到账</div>
+	         	<div style="text-align:center; color:#a1a1a1;" th:case="4">商品出库</div>
+	         	<div style="text-align:center; color:#a1a1a1;" th:case="5">已经签收</div>
+	         	<div style="text-align:center; color:#a1a1a1;" th:case="20">订单完成</div>
+	        </td>
+	        <td nowrap="nowrap">
+	            <a href="#" th:if="${order.status==1}">订单已提交<br/></a>
+	            <a id="checkOrder" th:href="'/manage/order/checkOrder?orderSerial='+${order.orderSerial}" th:if="${order.comment != '订单已审核' && order.status == 2}">审核订单<br/></a>
+		        <a id="confirmAccount" th:href="'/manage/order/comfirmToAccount?orderSerial='+${order.orderSerial}" th:if="${order.comment == '订单已审核' && order.status==2}">确认到账<br/></a>
+		        <a href="#" th:if="${order.status==3}">已到账<br/></a>
+		        <a href="#" th:if="${order.status==4}">已发货<br/></a>
+		        <a href="#" th:if="${order.comment != '发票物流已编辑' && order.status==4}">发票物流<br/></a>
+		        <a href="#" th:if="${order.status==5}">已签收<br/></a>
+		        <a href="#" th:if="${order.status==20}">订单完成<br/></a>
+		        
+		        <span class="delivery" style="display:block;">
+		           <a class="fa" th:href="'/manage/order/delivery?pageNum='+${page.pageNum}+'&index='+${orderStat.index}" th:if="${order.status==3}">发货</a>
+		        </span>
+		        <div th:if="${order.comment != '发票物流已编辑' && order.status==4}">
+		        	<form th:action="'/manage/order/receipt?orderSerial='+${order.orderSerial}" method="post">
+		           		<input type="text" value="" name="receiptSerial" />
+		           		<input type="button" value="确认" class="receiptSubmit"/>  
+		           </form> 
+		        </div>
+		        <div  class ="tj" th:if="${order.status == 3}">
+		          <form  action="/manage/order/logistics" method="post" id="tijiao">
+		        	<input type="hidden" th:value='${order.orderSerial}' name="orderSerial"   />
+		        	 <label>物流公司</label>&nbsp;
+		        	 <input type="text" value="" name="logisticscompany" /><br/>
+		        	<label>物流单号</label>&nbsp;
+		        	 <input type="text" value="" name="logisticsSerial" /><br/>
+		        	 <label>发货人姓名</label>
+		        	 <input type="text" value="" name="logisticsName" /><br/>
+		        	
+		        	 <div class="submit">
+						 <button id="sub" type="submit" tabindex="5" >提交</button>
+					 </div>
+		         </form>
+		        </div>
+	         </td>
+         </tr> 
+         <!-- 订单循环结束 -->                                  
+     </tbody>
+   </table>
+<div class="fan"><a th:href="'/manage/order/orderManage?pageNum='+${bgOrderList.firstPage}">首页</a>&nbsp;&nbsp;&nbsp;
+				<a th:href="'/manage/order/orderManage?pageNum='+${page.pageNum-1}">上一页</a>&nbsp;&nbsp;&nbsp;
+				<a th:href="'/manage/order/orderManage?pageNum='+${page.pageNum+1}">下一页</a>&nbsp;&nbsp;&nbsp;
+				<a th:href="'/manage/order/orderManage?pageNum='+${page.pages}">尾页</a>
+					&nbsp;&nbsp;&nbsp;页次：
+					<span id="pageNum" th:text="${page.pageNum}"></span>/
+					<span id="total" th:text="${page.pages}"></span>
+					&nbsp;&nbsp;&nbsp;转到:
+					<input id="goToPage" name="goToPage" type="number" min="1" 
+						th:max="${page.pages}" th:value="${page.pageNum}" class="fan_text"/>&nbsp;页&nbsp;&nbsp;&nbsp;
+					<input id="go" name="go" type="button" value="GO" onclick="go();"/>
+					</div>   
+     </div>     
+     </div>
+    </div>
+    
+    	<script type="text/javascript">
+		  //导出Excel表格,mytable参数是待导出的table的id
+		  var mytable = tb2;
+		  function tabletoExcel(mytable) {
+		      // getExplore()返回1，说明是不是Google Chrome、Firefox、Opera、Safari，那么就认为是IE了。
+		  	if (getExplorer() == 1) {
+		  	    //是IE的话，就调用toExcel()方法来导出Excel表格，不依赖微软的Excel产品。(toExcel()方法的定义见下面)
+		  		toExcel(mytable, '');
+		  		return;
+		  	}
+		  	
+		  	// 不是IE的话就调用下面的代码导出Excel文件
+		  	//获得id为mytable的table的html元素
+		  	//var table=$("#tb2");
+		  	var table = $("#tb2");
+		  	// 克隆（复制）此table元素，这样对复制品进行修改（如添加或改变table的标题等），导出复制品，而不影响原table在浏览器中的展示。
+		  	/* table = table.cloneNode(true); */
+		  	//下面五行代码就是用来改变table中的某些信息的，不需要的话可以注释，或修改。
+		  /* 	var name=$("#cur_title_date").text()+"XXX信息统计表";
+		  	var caption_orig = table.getElementsByTagName("caption");
+		  	$(caption_orig).text(name);
+		  	var th_first_ele = table.getElementsByTagName("th")[0];
+		  	th_first_ele.innerHTML="XXX的编号"; */
+		  	
+		  	// 下面的代码才是真正用来将html table导出Excel表格（我从stackoverflow上看到的，修改了一点点，不会再有中文乱码问题了。）
+		  	var uri = 'data:application/vnd.ms-excel;base64,'
+		  		  , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><?xml version="1.0" encoding="UTF-8" standalone="yes"?><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table style="vnd.ms-excel.numberformat:@">{table}</table></body></html>'
+		  		  , base64 = function (s) { return window.btoa(unescape(encodeURIComponent(s))); }
+		  		  , format = function (s, c) { return s.replace(/{(\w+)}/g, function (m, p) { return c[p]; }); };
+		  		var ctx = { worksheet: name || 'Worksheet', table: table.html()};
+		  		window.location.href = uri + base64(format(template, ctx));
+		  }
+		
+		
+		  // 判断浏览器类型 返回1表示IE
+		  function getExplorer() {
+		  	var explorer = window.navigator.userAgent;
+		  	if (explorer.indexOf("MSIE") >= 0) {
+		  		return 1;
+		  	} else if (explorer.indexOf("Firefox") >= 0) {
+		  		return 0;
+		  	} else if (explorer.indexOf("Chrome") >= 0) {
+		  		return 0;
+		  	} else if (explorer.indexOf("Opera") >= 0) {
+		  		return 0;
+		  	} else if (explorer.indexOf("Safari") >= 0) {
+		  		return 0;
+		  	} else {
+		  		return 1;
+		  	}
+		  }
+		
+		
+	</script>
+</body>
+</html>

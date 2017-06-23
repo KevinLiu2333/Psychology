@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>资料库</title>
+<link rel="stylesheet" href="/css/database.css" />
+<link rel="stylesheet" href="/css/opern.css" />
+</head>
+
+<body>
+<div class="header">
+	 <div class="logo"><span>克洛斯威资料库后台管理</span></div>
+     
+				<div class="header-right">
+                <i class="icon-off icon-white"></i> <a id="modal-973558" href="#modal-container-973558" role="button" data-toggle="modal">退出</a> 
+				</div>
+                <div class="top_admin">欢迎<span>暖阳</span>！</div>
+
+</div>
+<!-- 顶部 -->              
+<div id="middle">
+<div class="left">
+<div class="sdmenu">
+	<div>
+		<a href="/database/templetList" class="current">模板</a>
+	</div>
+	<div>
+		<a href="/database/subjectList">分类</a>
+	</div>
+	  
+	<div>
+		<a href="/database/sonSubjectList">子分类</a>
+	</div>
+    <div>
+		<a href="/database/bookList">书</a>
+	</div>
+	<div>
+		<a href="/database/pressList">出版社</a>
+	</div> 
+    <div>
+		<a href="/database/opernList">曲谱</a>
+	</div> 
+</div> 
+</div>
+
+<div class="right"  id="mainFrame"> 
+<div class="right_cont"> 
+
+  <div class="right_cont">
+<ul class="breadcrumb">当前位置：
+  曲谱列表
+</ul>
+<a href="/database/toAddTemplet"><img width="100" height="50"  style="margin-left:40%; margin-top:20px;" src="/img/模板.png" /></a>   
+
+   <table class="table table-bordered table-striped table-hover" style="font-size: 15px; line-hight:5px;">
+     <tbody>
+       <tr align="center">
+         <td width="10%" nowrap="nowrap"><strong>模板</strong></td>
+         <td width="10%" nowrap="nowrap"><strong>分类</strong></td>
+         <td width="10%" nowrap="nowrap"><strong> 子分类 </strong></td>     
+         <td width="20%" nowrap="nowrap"><strong> 书 </strong></td> 
+         <td width="10%" nowrap="nowrap"><strong> 出版社 </strong></td>
+         <td width="10%" nowrap="nowrap"><strong> 添加时间 </strong></td> 
+         <td width="10%" nowrap="nowrap"><strong> 修改时间 </strong></td>  
+         <td width="10%" nowrap="nowrap"><strong> 操作 </strong></td>                     
+         </tr>
+   
+       <tr align="center" th:each="templet:${templetList}" th:if="${templet}">
+         <td nowrap="nowrap" th:text="${templet.name}"></td>
+         <td nowrap="nowrap" th:text="${templet.subject}">12</td>
+         <td nowrap="nowrap" th:text="${templet.sonsubject}">12</td>
+         <td nowrap="nowrap" th:text="${templet.book}">12</td> 
+         <td nowrap="nowrap" th:text="${templet.press}">12</td>
+         <td nowrap="nowrap" th:text="${templet.addtime==null?' ':#dates.format(templet.addtime,'yyyy-MM-dd')}">12</td>
+         <td nowrap="nowrap" th:text="${templet.modifytime==null?' ':#dates.format(templet.modifytime,'yyyy-MM-dd')}">12</td>
+         <td nowrap="nowrap">
+         	<a th:href="'/database/toEditTemplet?templetId='+${templet.id}">修改</a>
+         	&nbsp;&nbsp;&nbsp;&nbsp;
+         	<a th:href="'/database/deleteTemplet?templetId='+${templet.id}">删除</a></td>
+         </tr>
+       
+     </tbody>
+   </table>
+   <div class="fan"><a href="#">首页</a>&nbsp;&nbsp;&nbsp;<a href="#">上一页</a>&nbsp;&nbsp;&nbsp;<a href="#">下一页</a>&nbsp;&nbsp;&nbsp;<a href="#">尾页</a>&nbsp;&nbsp;&nbsp;页次：1/1&nbsp;&nbsp;&nbsp;转到：<input name="" type="text" class="fan_text"/>&nbsp;页&nbsp;&nbsp;&nbsp;<input name="" type="button" value="GO" /></div>
+     </div>     
+</div>
+</div> 
+</div>
+</body>
+</html>

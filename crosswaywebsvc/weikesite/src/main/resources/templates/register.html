@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>威客</title>
+<link href="/css/login1.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var msg = $("#message").val();
+		if(msg != null) {
+			alert(msg);
+		}
+		$("#back").click(function() {
+			window.history.back();
+		})
+		
+	 function countDown($el) {
+            var i = 120;
+            $el.prop('disabled', true).val('重新发送('+ i + '秒)');
+            var interval = setInterval(function () {
+                i--;
+                $el.val('重新发送('+ i + '秒)');
+                if (i <= 0) {
+                    clearInterval(interval);
+                    interval = undefined;
+                    $('#getPhoneCaptcha').prop('disabled', false).val('发送验证码');
+                }
+            }, 1000);
+        }
+       
+		$("#getPhoneCaptcha").click(function(){
+			var phone = $("#phone").val();
+			var rolename = $(".rolename:selected").text();
+			var pwd= $("#password").val();
+			var pwd2= $("#password2").val();
+		 	var reg = /^\s*$/g;
+            if(reg.test(phone)) {
+            	alert('请先填写手机号码');
+            	return false;
+            }
+            if(!(/^1[3|4|5|7|8]\d{9}$/.test(phone))){ 
+            	alert("手机号码有误"); 
+                return false; 
+            }
+			if(rolename == "请选择你的角色") {
+				alert("角色还未选择");
+				return false;
+			} else if(rolename == "教师") {
+				rolename = "tea";
+			} else {
+				rolename = "stu";
+			}
+			if(reg.test(pwd)){
+				alert("密码不能为空");
+				return false;
+			}
+			if(!/^[A-Za-z0-9_-]{6,12}$/.test(pwd)) {
+				alert("密码格式有误");
+				return false;
+			}
+			if(reg.test(pwd2)){
+				alert("确认密码不能为空");
+				return false;
+			}
+			if(pwd!=pwd2){
+				alert("两次输入密码不一致");
+				return false;
+			}
+			var obj = $(this);
+			
+			$.ajax({
+				url:'/getPhoneCaptcha?username='+phone+'&type='+rolename+'&type='+rolename,
+				type:"GET",
+				dataType:"JSON",
+				success:function(data){
+					switch (data.status) {
+	    			case "S":
+	    				countDown(obj);
+	    				break;
+	    			default:
+	    				alert(data.message);
+	    			}
+				},
+				error:function(data){
+					alert("获取手机验证码失败")
+				}
+			});
+		});
+	})
+	
+</script>
+<script type="text/javascript">
+	$(function(){
+		$("#btnsub").removeClass("btnf2");   
+	    $("#btnsub").addClass("btnf1");
+	  
+	  $("#ys").change(function(){
+		 var phone=$("#phone").val(); 
+		 var pwd=$("#password").val();
+		 var pwd2=$("#password2").val();
+		 var phoneCaptcha=$("#phoneCaptcha").val();
+	   if(phone=="" || pwd=="" || pwd2=="" || phoneCaptcha==""){
+		  $("#btnsub").removeClass("btnf2");  
+		  $("#btnsub").addClass("btnf1");
+	   }else{
+		   $("#btnsub").removeClass("btnf1");   
+		   $("#btnsub").addClass("btnf2");  
+	  }
+	 });
+	  
+	$("#btnsub").click(function(){
+		  if($("#btnsub").hasClass("btnf2")){ 
+			 $("#submitForm").submit();
+		  }  
+	});
+	})
+</script>
+</head>
+<body style="background-color:#eee;">
+<input id="message" type="hidden" th:value="${msg}" th:if="${msg}"/>
+  <div class="public_top">
+      <div class="public_back"><img id="back"  src="/images/back_c.png"></div>
+      <div class="select_name">注册</div>
+      <div class="select-icon"></div>
+  </div>  
+<div class="blank_t"></div>
+	<form action="/doRegister" id="submitForm" method="post" >
+       <div class="submit_out" id="ys">                                            
+				<div class="flex-box">
+				<i>手机号码</i> 
+				<input type="text" id="phone" name="username" placeholder="+86 请输入手机号码" class="inputa inputw" required="required"/>
+				</div>
+                   <div class="flex-box">
+					<i style=" float:left;">用户类型</i>
+	                <div class="parent">
+						<select  name="type">
+	                         <!-- <option value="1">学生</option>
+							 <option value="2">教师</option> -->
+							 <option class="rolename" value="stu" selected="selected">学生</option>
+						</select>
+					</div> 
+                </div>
+				<div class="flex-box">
+				<i>设置密码</i> 
+				<input type="password" id="password" name="password" placeholder="请设置您的密码6-12位数字或字母" class="inputa inputw" required="required"/>
+				</div>
+ 				<div class="flex-box">
+				<i>确认密码</i>
+				<input type="password" id="password2" name="password2" placeholder="请设置您的密码6-12位数字字母" class="inputa inputw" required="required"/>
+				</div>               
+				<div class="flex-box">
+				<i>验证码</i>
+				<input type="text" id="phoneCaptcha" name="phoneCaptcha" placeholder="请输入手机验证码"  class="inputa inputb"/>
+				<input type="button" id="getPhoneCaptcha"  class="buttona" value="获取验证码"/>
+				</div>                                                             
+                </div>
+             <div class="submit_n"><button id="btnsub" class="formBtn btnf1" type="button">注册</button></div>   
+             <!--  class="formBtn btnf2" -->
+			</form>
+  <div style=" float:left; text-align:center; width:100%; display:block; margin-top:40px; margin-bottom:20px; color:#959595; line-height:40px;">威客空间 克洛斯威智能钢琴版权所有</div>
+</body>
+</html>

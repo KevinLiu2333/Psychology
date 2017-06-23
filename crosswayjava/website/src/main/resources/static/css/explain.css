@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+.miaodian{width:100%; float:left;  padding-bottom:10px; padding-top:10px; background-color:#fafafa; margin-top:80px; border-bottom:1px solid #d9d9d9;}
+.miaodian ul{width:1200px; margin:0 auto;}
+.miaodian ul li{width:120px; float:left; height:35px; line-height:35px; text-align:center; }
+.miaodian ul li a{color:#333333; display:block; width:120px; height:35px; font-size:14px; }
+.miaodian ul li a:hover{  display:block; width:120px; height:35px; text-decoration:none; color:#00a0e9;}
+.dingju{width:1200px; margin:0 auto;}
+/*产品说明*/
+.proshuo{width:100%; float:left; background:url(../images/jiajuc.jpg) no-repeat top center; color:#00a0e9; font-size:40px; line-height:97px; text-align:center; margin-top:10px;}
+.separa{width:420px; float:left; font-size:14px; line-height:25px; color:#333333; padding-right:50px;}
+.unsepara{width:720px; float:right; font-size:14px; line-height:25px; color:#333333;}
+.qinchi{width:649px; float:left;}
+.qinchizi{width:425px; float:right; font-size:14px; line-height:25px; color:#333333; padding-top:60px;}
+.qincao{width:401px; float:left; font-size:14px; line-height:25px; color:#333333; padding-left:119px; padding-right:150px; margin-top:5px;}
+.qinzuo{width:520px; float:right; font-size:14px; line-height:25px; color:#333333;}
+.qindeng{width:100%; float:left; font-size:14px; line-height:25px; color:#333333;}
+.qindeng span{font-size:36px;}
+.qindel{width:595px; float:left; font-size:14px; line-height:25px; color:#333333; text-align:center; }
+.qinder{width:595px; float:right; font-size:14px; line-height:25px; color:#333333; text-align:center;}
+.userl{width:698px; float:left; font-size:14px; line-height:25px; color:#333333; margin-top:10px;}
+.userr{width:387px; float:right; font-size:14px; line-height:25px; color:#333333;}
+.userr p{color:#333333;}
+.zishil{width:625px; float:left; margin-top:20px;}
+.pingmuchi{width:740px; float:left; margin-top:20px;}

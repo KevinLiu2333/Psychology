@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> 添加序列号对应关系  </title>
+<link rel="stylesheet" href="/css/bootstrap.css" />
+<link rel="stylesheet" href="/css/css.css" />
+<link href="/css/zzsc.css" type="text/css" rel="stylesheet"/>
+<style>
+.ab-box{
+	padding: 20px 0; background-color:#FFF; 
+}
+.fileshow{width:240px;  height:25px; border:1px solid #d9d9d9;}
+        .ctrl-file {
+            height: 25px;
+            width: 65px;
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            overflow: hidden;
+            position: absolute; top:0px; left:250px;
+        }
+
+            .ctrl-file .filehide {
+                position: absolute;
+                z-index: 10;
+                opacity: 0;
+                filter: alpha(opacity = 0);
+                width: 65px;
+                height: 25px;
+                left: 0;
+                top: 0;
+            }
+
+            .ctrl-file a { float:left;
+                width: 65px;
+                line-height: 25px;
+                height: 25px;
+                display: block;
+                color: #000;
+                font-size: 12px;
+                text-align: center;
+                text-decoration: none;
+                border-radius: 5px; background-color:#d9d9d9;
+            }
+        .submit-file {position: absolute; 
+                top:0px; left:320px;             
+                 width: 65px;
+                height: 25px;
+                display: block;
+                background: #d9d9d9;
+                color: #000;
+                font-size: 12px;
+                text-align: center;
+                text-decoration: none;
+                border-radius: 5px; outline:none; border:none;
+        }                
+
+</style>
+</head>
+
+<body>
+<div th:include="agency_manage/agency_head"></div>
+<!-- 顶部 -->              
+<div id="middle">
+<div th:include="agency_manage/agency_nav"></div>
+
+     <div class="right"  id="mainFrame">
+     
+     <div class="right_cont">
+<ul class="breadcrumb">当前位置：
+ 添加序列号对应关系  
+</ul>
+   <div style="width:1100px; margin:auto; margin-top:100px;">
+    <form action="/agency/addSN" method="post">
+   <table class="table table-bordered" >
+     <tr>
+       <td width="20%" height="39" align="right" nowrap="nowrap" bgcolor="#f1f1f1"><b>序列号</b></td>
+       <td width="80%"><input type="text" name="sn" id="sn" class="span1-1"  />（16位，不能重复，部分旧序列号为12-16位，请不要输入短横线,如EB14HJ89）</td>
+     </tr>
+     <tr>
+       <td width="20%" height="39" align="right" nowrap="nowrap" bgcolor="#f1f1f1"><b>产品编号</b></td>
+       <td width="80%"><input type="text" name="pid" id="pid" class="span1-1"  />（最多18位，不能重复，包括短横线，如DSG-EBD-RTU）</td>
+     </tr>  
+     <tr>
+       <td width="20%" height="39" align="right" nowrap="nowrap" bgcolor="#f1f1f1"><b>渠道号</b></td>
+       <td width="80%"><input type="text" name="sid" id="sid" class="span1-1"  value="" />（最多6位，如C101）</td>
+     </tr>     
+     <tr>
+       <td width="20%" height="39" align="right" nowrap="nowrap" bgcolor="#f1f1f1"><b>添加日期</b></td>
+       <td width="80%"><input class="laydate-icon" name="addtime" onClick="laydate()" style=" width:227px;"/></td>
+     </tr>     
+     <tr>
+       <td width="20%" height="39" align="right" nowrap="nowrap" bgcolor="#f1f1f1"><b>备注</b></td>
+       <td width="80%"><textarea name="remark" cols="" rows="" class="span1-1" style=" width:248px; height:100px;"></textarea>（500字以内）</td>
+     </tr>      
+   </table>
+   <table  class="margin-bottom-20 table  no-border" >
+        <tr>
+     	<td class="text-center"><input type="submit" value="保存" class="btn btn-info " style="width:80px;" /></td>
+     </tr>
+ </table>
+ </form>
+   </div> 
+     </div>     
+     </div>
+    </div>
+<script src="/laydate/laydate.js"></script>
+<script>
+;!function(){
+laydate({
+   elem: '#demo'
+})
+}();
+</script>
+</body>
+</html>

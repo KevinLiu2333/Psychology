@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>编辑个人信息</title>
+<link href="css/share.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#uploadImage").hide();
+		$("#edit").click(function(){
+			$("#uploadImage").toggle();
+		});
+		
+		/* var type = $("#type_hidden").val();
+		if(type == "stu") {
+			$("#myEmail").hide();
+		} */
+		$("#myEmail").hide();
+	}) 
+</script>
+</head>
+
+<body>
+<div th:include="common/head1"></div>
+<div class="ab_bg"><img src="/images/ab.png"><div class="ab_text"><a id="edit" href="#"><img src="/images/edit.png"><span style=" display:block;">编辑</span></a></div>
+<div class="ab_pic">
+<div class="ab_yuanpc" id="originalImage">
+						<a href="#">
+							<i class="mask">
+								<img src="/images/picture.jpg" th:if="${user.ffavicon} == null">
+								<img th:src="'http://wk-static.klsw.com'+${user.ffavicon}" th:if="${user.ffavicon} != null">
+	    					</i>
+    					</a> 
+    </div>
+ <div class="ab_account" th:text="${user.name}">17755143926</div>   
+ </div>       
+ </div>
+ <form action="/uploadImage" method="post" enctype="multipart/form-data">
+ 	<div class="ab-box" id="uploadImage" style=" padding-bottom:0px;margin-left:15px; margin-top:20px; height:73px; position:relative;">
+		<i><img src="/images/ab_login.png">我的头像</i>
+        <div style=" position:absolute; left:92px; top:0px;">
+			<div class="picshow">
+               	<img src="" id="imgview" style="display:none;" alt="">
+            </div>
+            <div class="img_name"></div>
+        	<span class="ctrl-file">
+        		<input type="file" class="filehide" name="uploadImage" onChange="filechange(this)">
+        		<a href="javascript:;" id="sub" style="display:block;">点击上传</a>
+    		</span>
+           	<button class="submit-file" type="submit">提交</button>
+        </div>
+	</div>
+ </form>
+<form action="/modifyInfo" method="post">
+	<div class="submit_out">
+				<div class="ab-box">
+					<i><img src="/images/ab_login.png">我的昵称:</i>
+					<input type="text" id="" name="nickName" th:value="${user.nickname}" class="inputa" required="required"/>
+				</div>
+				<div class="ab-box" id="myEmail">
+					<i><img src="/images/ab_email.png">我的邮箱:</i>
+		  			<input type="text" name="email" th:value="${user.email}" placeholder="填写邮箱可以及时收到消息" class="inputa"/>
+		  			<input type="hidden" id="type_hidden" th:value="${user.type}"/>
+				</div>
+				<div class="ab-box">
+					<i><img src="/images/ab_abstract.png">个人简介:</i>
+					<input type="text" id="" name="details" th:value="${user.details}" class="inputa inputw"/>
+				</div>                                                                           
+				<div style=" margin:0 auto; text-align:center;"><button class="submitBtn" type="submit" style="outline:none;">保存</button></div>
+	</div>
+</form>
+
+<script type="text/javascript">
+
+    function filechange(file) {
+        if (file.files && file.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (evt) {
+                showimg(evt.target.result);
+            };
+            reader.readAsDataURL(file.files[0]);
+        } else {
+            file.select();
+            var src = document.selection.createRange().text;
+            showimg(src);
+        }
+    }
+
+    function showimg(src) {
+        var img = document.getElementById("imgview");
+        img.src = src;
+        img.style.display = 'block';
+        
+        var sub = document.getElementById("sub");
+        sub.style.display = "none";
+    }
+</script>
+</body>
+</html>

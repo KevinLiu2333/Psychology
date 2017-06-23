@@ -1,0 +1,434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>在线商城 克洛斯威智能钢琴</title>
+<link href="/css/base.css" rel="stylesheet" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/css/info.css" rel="stylesheet" type="text/css" />
+<link href="/css/smart.css" rel="stylesheet" type="text/css" /> 
+<meta name="description"
+	content="安徽克洛斯威智能乐器科技有限公司正式成立于2014年，是中国科学技术大学先进技术研究院孵化企业。公司专注于智能乐器研
+
+发、生产、销售以及构建互联网在线教育生态体系的创新型科技企业。" />
+<meta name="keywords"
+	content="克洛斯威,Crossway,klsw,钢琴侠,智能钢琴,互联网钢琴,电钢琴,音乐教育,一体机,一体钢琴,熊世林,keluosiwei" />
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/jquery.jqzoom.js"></script>
+<script type="text/javascript" src="/js/base.js"></script>
+<script type="text/javascript" src="/js/slider.js"></script>
+<script type="text/javascript" src="/js/bdstat.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+	/* 	$(".version_datea li").removeClass("selected"); */
+	/* 	$("#ys").show(); */
+		
+		$("#putong").click(function(){
+			 
+			$("#putong").addClass("selected");
+			$("#shuijing").removeClass("selected");
+			$("#ys").show();
+			 
+		})
+	  /* 	$("#shuijing").click(function(){
+			$("#putong").removeClass("selected");
+			$("#shuijing").addClass("");
+			$("#ys").hide();
+			
+		})   */
+/* 		
+	  	$("#se").click(function(){
+		     
+ 		    $(".select .selected").removeClass("selected");		
+ 		     $(this).addClass("selected");
+		})  */
+		 
+		
+	})	
+	
+</script>
+</head>
+
+<body> 
+	<div th:include="common/head"></div>
+	<div class="pro_info">
+	<div class="piano_model">
+<ul>
+ <li th:class="${product.name} == '智能钢琴-立式款' ? select : ''" ><a href="javascript:;">智能钢琴-立式款</a></li>
+ <li th:class="${product.name} == '克洛斯威智能钢琴卧式款' ? select : ''">
+ 	<a th:href="${product.name} == '克洛斯威智能钢琴卧式款' ?'/product/'+${product.serial}:'/product/'+${SProduct.serial}">智能钢琴-卧式款</a>
+ </li>
+ <li th:class="${product.name} == '克洛斯威智能钢琴三角琴' ? select : ''">
+ 	<a th:href="${product.name} == '克洛斯威智能钢琴三角琴' ?'/product/'+${product.serial}:'/product/'+${SProduct.serial}">智能三角钢琴</a>
+ </li>
+</ul>
+</div>
+<div class="pucstu">
+        <div class="right-extra" style="width:550px;">
+            <div id="preview" class="spec-preview"> <span class="jqzoom" th:if="${not #lists.isEmpty(product.imageList)}" >
+            <img style="width: 500px; height: 500px;" th:src="${product.imgurl}" alt="" /></span> </div>
+            <!--缩图开始-->
+         		<div class="spec-scroll">
+					<a class="prev"> </a> <a class="next"> </a>
+					<div class="items">
+						<ul th:if="${not #lists.isEmpty(product.imageList)}">
+							<li th:each="item,stat : ${product.imageList}"><img alt=""
+								th:src="${item.imgurl}" onMouseMove="preview(this);" />
+							</li>
+						</ul>
+					</div>
+				</div>
+            <!--缩图结束-->
+        </div>
+    </div>
+     
+    
+<div class="pusri">
+<div class="pustitle">克洛斯威智能钢琴<span>拥有大脑的钢琴 匠心独具 零基础 轻松弹奏</span></div>
+<div class="version">
+<ul>
+  <li>
+     <div class="version_titlea">售价</div>
+     <div class="version_paya" th:text="'￥' + ${#numbers.formatDecimal(product.price,3,2)}"> <span style="font-size:14px; 
+
+color:#bfbfbf">（根据选择的不同颜色或款式自动变化）</span></div>
+  </li>
+  <li>
+    <div class="version_titlea">版本</div>
+    <div class="version_datea">
+     <ul>
+       <li class="selected" id="putong">普通版</li>         
+       <li id="shuijing">水晶版</li>
+     </ul>
+    </div>
+  </li> 
+    <li id="ys">
+	    <span id="serialHidden" hidden="hidden" th:value="${product.serial}"></span>
+	    <div class="version_titlea">颜色</div>
+	    <div class="version_datea" > 
+	     	<ul >
+	     		<a th:each="series : ${product.seriesProductList}" th:href="${series.color == product.color} ? '#' : '/product/' + ${series.serial}"> 
+				 <li  th:class="${series.serial == product.serial} ? selected : ''"  >
+					<span th:text="${series.color}" style="color:#3e3a39;"></span>						 
+				 </li> 
+				</a>  
+			</ul>
+	     </div> 
+     </li> 
+     <li>
+	    <div class="version_titlea">服务
+	    </div>
+	    <div class="version_datea">
+		     <ul>
+		       <li style="width:458px; background:url(/images/redsana.png) left top no-repeat; border:0px; height:46px;">7天无理由退货 &nbsp; 15天换货 &nbsp; 1年免费维修
+		       </li>         
+		     </ul>
+	    </div>   
+  	</li>   
+	<li>
+     <div class="version_titlea"  style=" line-height:50px;">数量
+     </div>
+     <form th:action="@{/order/confirm}" method="post">
+      	 <div class="jiajian">
+         	<ul>
+           	   <li>
+	           	   <a ><img class="J_jian" src="/images/des.jpg"/>
+	           	   </a>
+           	   </li>
+	           <li>
+	             <input  name="count"  type="text" onkeypress='return /^\d$/.test(String.fromCharCode(event.keyCode||event.keycode||event.which))'
+	                                       oninput='this.value = this.value.replace(/\D+/g, "")'
+	                                       onpropertychange='if(!/\D+/.test(this.value)){return;};this.value=this.value.replace(/\D+/g, "")'
+	                                       onblur='this.value = this.value.replace(/\D+/g, "")' th:max="${product.stock}" readonly="readonly" class="jiate" value="1"/>
+	             <input type="hidden" th:value="${product.serial}" name="serial" />
+			     <input type="hidden" value="pro" name="from" />
+	           </li>
+	          <li>
+		          <a >
+		          	<img class="J_jia" src="/images/add.jpg"/>
+		          </a>
+	          </li>
+         	</ul> 
+    	</div>
+    </form>
+  </li>  
+</ul>
+</div>
+	<div class="sele_pro">
+		<span style="display:block; font-size:16px;">您选择了以下产品：</span> 
+		<span th:text="${product.name}"> </span> 
+		<span th:text="${product.version}"></span> 
+		<span th:text="${product.color}"></span>
+		<span th:text="'￥' + ${#numbers.formatDecimal(product.price,3,2)}"></span> 
+		<span style="color:#bfbfbf; font-size:11px;"></span>
+	</div>
+	<div class="pusbutt">
+		<ul>
+			<li class="pumai">
+				<a href="#" id="buyNow">立即购买
+				</a>
+			</li>
+		  	<li class="pugou">
+			  	<a id="addToShoppingCart"  href="javascript:void(0);">
+			  		<i>
+			  			<img src="/images/add_cart.png" width="22" height="18" />
+			  		</i>加入购物车
+			  	</a>
+		  	</li>  
+		</ul>
+	</div>
+</div>
+</div>
+	<div class="miaodian">
+		<ul>
+			<li><a class="select" href="#information">商品详情</a></li>
+			<li ><a href="#ggcs">规格参数</a></li>
+			<li ><a href="#cpjh" >常见问题</a></li>
+			<li ><a href="#shfw">售后服务</a></li>
+		</ul>
+	</div>
+	<!-- 卧式款详情页图片开始 -->
+	<div class="pro_info">
+		<div class="smart_banner"  th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_01.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_02.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_03.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/卧式 - PC.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_05.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_06.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_07.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_08.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_09.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_10.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_11.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_12.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_13.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_14.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_15.jpg" style="width: 100%;" />
+		</div>  
+		<div class="smart_banner"  th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_16.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_17.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_18.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner" id="ggcs" th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_19.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_20.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_21.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner" id="cpjh" th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_22.jpg" style="width: 100%;" />
+		</div>  
+		<div class="smart_banner" id="shfw" th:if="${product.seriesid == 1}">
+			<img src="/smartpiano/1200切片_23.jpg" style="width: 100%;" />
+		</div>
+		<!-- 卧式款详情页图片结束 -->
+		
+		<!-- 三角琴详情页图片开始 -->
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_01.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_02.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_03.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_04.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/三角琴 - PC.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_06.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_07.jpg" style="width: 100%;" />
+		</div>  	
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_08.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_09.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_10.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_11.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_12.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_13.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_14.jpg" style="width: 100%;" />
+		</div>  	
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_15.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_16.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_17.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_18.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_19.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_20.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_21.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_22.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner" id="ggcs" th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/三角琴 - PC (2).jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_24.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner"  th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_25.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner" id="cpjh" th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_26.jpg" style="width: 100%;" />
+		</div>
+		<div class="smart_banner" id="shfw" th:if="${product.seriesid == 2}">
+			<img src="/smartpiano/3j_27.jpg" style="width: 100%;" />
+		</div>
+		<!-- 三角琴详情页图片结束 -->   	
+	</div>
+	<div th:include="common/foot"></div>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+    $("#buyNow").click(function(){
+        var  count = $(".jiate").val();
+        var serial = $("#serialHidden").attr("value");
+        location.href="/order/confirm?from=pro&serial="+serial+"&count="+count;
+    	
+    });	
+  
+   	$("#addToShoppingCart").click(function () {
+    		
+            var  num = $(".jiate").val();
+            
+            var serial = $("#serialHidden").attr("value");
+            
+            $.get("/cart/product/incr/" + serial + "/"+num, function (data) {
+                switch (data) {
+                    case "ok":
+                        if (confirm("添加成功，前往购物车查看 >")) {
+                            window.location.href = "/cart";
+                        }
+                        break;
+                    case "fail":
+                    	alert("添加失败，请重试。");
+                        break;
+                    default:
+                        alert("添加失败，请重试。");
+                }
+            });
+
+        });
+    	
+        /* 	$("#toAppoint").click(function(){
+            var count = $(".shuliang").val();
+            var serial = $("#serialHidden").attr("value");
+			window.location.href="/order/toAppoint?count="+count+"&serial="+serial;    		
+    		
+    	});   */
+
+        var add, reduce, num, num_txt;
+        add = $(".J_jia");//添加数量
+        reduce = $(".J_jian");//减少数量
+        num = "";//数量初始值
+        num_txt = $(".jiate");//接受数量的文本框
+        //var num_val=num_txt.val();//给文本框附上初始值
+
+        /*添加数量的方法*/
+        add.click(function () {
+            num = $(".jiate").val(); 
+            if(593>num)
+            {
+                num++;
+                num_txt.val(num);
+            }
+            //ajax代码可以放这里传递到数据库实时改变总价
+        });
+
+        /*减少数量的方法*/
+        reduce.click(function () {
+            //如果文本框的值大于0才执行减去方法
+            num = $(".jiate").val();
+            if (num > 1) {
+                //并且当文本框的值为1的时候，减去后文本框直接清空值，不显示0
+                if (num == 1) {
+                    num--;
+                    num_txt.val("");
+                }
+                    //否则就执行减减方法
+                else {
+                    num--;
+                    num_txt.val(num);
+                }
+            }
+        });
+
+    })
+</script>
+ 
+ 
+  
+
+ 

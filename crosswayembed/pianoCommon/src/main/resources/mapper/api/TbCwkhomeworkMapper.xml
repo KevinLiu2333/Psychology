@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.pianoCommon.api.mapper.TbCwkhomeworkMapper">
+    <resultMap id="BaseResultMap" type="com.klsw.pianoCommon.api.model.TbCwkhomework">
+        <!--
+          WARNING - @mbggenerated
+        -->
+        <id column="ID" jdbcType="INTEGER" property="id"/>
+        <result column="type" jdbcType="INTEGER" property="type"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="contents" jdbcType="VARCHAR" property="contents"/>
+        <result column="img" jdbcType="VARCHAR" property="img"/>
+        <result column="TeacherID" jdbcType="INTEGER" property="teacherid"/>
+        <result column="StudentID" jdbcType="INTEGER" property="studentid"/>
+        <result column="HomeworkID" jdbcType="INTEGER" property="homeworkid"/>
+        <result column="SignID" jdbcType="INTEGER" property="signid"/>
+        <result column="addtime" jdbcType="TIMESTAMP" property="addtime"/>
+        <result column="TeacherTime" jdbcType="TIMESTAMP" property="teachertime"/>
+        <result column="GradeIMGPath" jdbcType="VARCHAR" property="gradeimgpath"/>
+        <result column="TeacherName" jdbcType="VARCHAR" property="teachername"/>
+        <result column="GradeLevImg" jdbcType="VARCHAR" property="gradelevimg"/>
+        <result column="video" jdbcType="VARCHAR" property="video"/>
+        <result column="MIDIMGPath" jdbcType="VARCHAR" property="midimgpath"/>
+        <result column="MP3Path" jdbcType="VARCHAR" property="mp3path"/>
+        <result column="MDIPortfolio" jdbcType="VARCHAR" property="mdiportfolio"/>
+        <result column="TeacherComment" jdbcType="LONGVARCHAR" property="teachercomment"/>
+    </resultMap>
+
+    <select id="selectGradeCount" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+    SELECT COUNT(*) FROM tb_CWKHomework
+    WHERE HomeworkID = #{0}
+    AND TeacherTime IS NOT NULL
+  </select>
+    <select id="homeworkInfolist" parameterType="java.lang.Integer"
+            resultType="com.klsw.pianoCommon.api.model.TbCwkhomework">
+        SELECT * FROM tb_CWKHomework
+        WHERE HomeworkID = #{homeworkId}
+        and teachertime IS NOT NULL
+    </select>
+</mapper>
+
+

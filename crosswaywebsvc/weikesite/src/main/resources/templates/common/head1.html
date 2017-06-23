@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="application/javascript" src="/js/clickuser.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#back").click(function(){
+			window.history.back();
+		})
+	})
+</script>
+</head>
+<body>
+<div class="share_top">
+<div class="share_logo"><img id="back" src="/images/back.png"></div>
+<div id="clickUser" class="center-icon"><img src="/images/center.png"></div>
+<div class="login_name" th:text="${session.user.nickname}">lujun3287715</div>
+<div class="exit_menu">
+<ul id="personal" style="display: none;">
+	<li><a href="/toModify"><img src="/images/set.png">个人设置</a></li>
+	<li><a href="/toSetting"><img src="/images/set.png">设置</a></li>
+   <!--  <li><a href="/exit"><img src="/images/exit.png">退出账号</a></li> -->
+</ul>
+</div>
+</div>
+</body>
+</html>

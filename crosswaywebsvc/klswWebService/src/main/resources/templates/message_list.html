@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新闻主页</title>
+<link rel="stylesheet" href="/css/bootstrap.css" />
+<link rel="stylesheet" href="/css/css.css" />
+<link href="/css/zzsc.css" type="text/css" rel="stylesheet"/>
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+$(".subNav").click(function(){
+			$(this).toggleClass("currentDd").siblings(".subNav").removeClass("currentDd")
+			$(this).toggleClass("currentDt").siblings(".subNav").removeClass("currentDt")
+			
+		/*	// 修改数字控制速度， slideUp(500)控制卷起速度
+			$(this).next(".navContent").slideToggle(500).siblings(".navContent").slideUp(500);*/
+	});
+})
+</script> 
+ <script type="text/javascript">
+	$(function(){
+		$("#goto").click(function(){
+			var pageNum = $("#pageNum").val();	
+   
+			var count = $("#count").html();
+ 
+			var pageSize = $("#pageSize").html();
+ 
+			var totalPages = (count%pageSize == 0) ? count/pageSize : (count/pageSize+1); 
+ 
+			  if(pageNum>0 && pageNum<=totalPages) {
+				location.href = "/manage/messageList?pageNum="+pageNum;
+			}  
+		});
+		
+		$("#addMessage").click(function(){
+			window.location.href = "/manage/toAddMessage";
+		});
+	});
+</script> 
+</head>
+
+<body>
+<!-- 顶部 -->
+<div th:include="common/head"></div>
+<div id="middle">
+    <div th:include="common/left"></div>
+
+     <div class="right"  id="mainFrame">
+     
+     <div class="right_cont">
+ <ul class="breadcrumb">当前位置：
+  新闻列表
+</ul>
+<div class="serch_right" style=" padding:20px 0;"><input id="addMessage" type="button" value="添加消息+" class="btn btn-info " style="width:80px; float:left; " /></div>  
+   <table class="table table-bordered table-striped table-hover">
+     <tbody>
+       <tr align="center">
+         <th width="8%" nowrap="nowrap">消息类型</th>
+         <th width="10" nowrap="nowrap">消息标题</th>                
+         <th width="40%" nowrap="nowrap">消息内容</th>           
+         <th width="14%" nowrap="nowrap">发布时间</th>        
+         <th width="20%" nowrap="nowrap">消息地址</th>           
+         <th width="8%" nowrap="nowrap">操作</th>                            
+         </tr>
+       
+       <tr align="center" th:each="news:${messageList.list}"   th:if="${messageList}">
+         <td nowrap="nowrap" th:text="${news.messagetype == '0'?'个人消息':'系统消息'}"></td>  
+         <td nowrap="nowrap" th:text="${news.title}"> </td>
+         <td nowrap="nowrap" th:text="${news.message}"> </td>
+         <td nowrap="nowrap" th:text="${news.addtime == null ?null:#dates.format(news.addtime, 'yyyy-MM-dd')}"> </td>
+         <td nowrap="nowrap" th:text="${news.address}"></td>
+         <td nowrap="nowrap"><a th:href="'/manage/toEditMessage?messageId='+${news.id}">编辑</a>&nbsp;&nbsp;<a th:href="'/manage/deleteMessage?messageId='+${news.id}">删除</a></td>
+       </tr>    
+                                   
+     </tbody>
+   </table>
+<div class="fan"><a class="fenye" th:href="'/manage/messageList?pageNum='+${messageList.firstPage}">首页</a>
+       &nbsp;&nbsp;&nbsp;<a class="fenye" th:href="'/manage/messageList?pageNum='+${messageList.pageNum-1}">上一页</a>
+       &nbsp;&nbsp;&nbsp;<a class="fenye" th:href="'/manage/messageList?pageNum='+${messageList.pageNum+1}">下一页</a>
+       &nbsp;&nbsp;&nbsp;<a class="fenye" th:href="'/manage/messageList?pageNum='+${messageList.lastPage}">尾页</a>
+  		 共
+		<span id="count" th:text="${messageList.total}"></span>
+				条&nbsp;&nbsp;&nbsp;页次：
+		<span th:text="${messageList.pageNum}+'/'+${messageList.pages}"></span>
+				&nbsp;&nbsp;&nbsp;转到：
+		<input id="pageNum" type="text" size="3"/>
+				&nbsp;页&nbsp;&nbsp;&nbsp;
+		<input id="goto" type="button" value="GO" /></div>   
+     </div>     
+     </div>
+    </div>
+</body>
+</html>
+ 

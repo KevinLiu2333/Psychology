@@ -1,0 +1,72 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>威客</title>
+<link href="/css/login1.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script th:inline="javascript">
+		var msg = [[${msg}]];
+		var username = [[${username}]];
+		var password = [[${password}]];
+		if (msg != null) {
+			alert(msg);
+			if("注册成功"==msg){
+				window.location.href="/login?username="+username+"&password="+password;				
+			}
+		} 
+</script>
+<script type="text/javascript">
+	$(function(){
+		$("#btnsub").removeClass("btnf2");   
+	    $("#btnsub").addClass("btnf1");
+	  
+	  $("#ys").change(function(){
+		 var username=$("#username").val();
+		 var userpwd=$("#userpwd").val();
+	   if(username=="" || userpwd==""){
+		  $("#btnsub").removeClass("btnf2");  
+		  $("#btnsub").addClass("btnf1");
+	   }else{
+		   $("#btnsub").removeClass("btnf1");   
+		   $("#btnsub").addClass("btnf2");  
+	  }
+	 });
+	  
+	$("#btnsub").click(function(){
+		  if($("#btnsub").hasClass("btnf2")){ 
+			 $("#submitForm").submit();
+		  }  
+	});
+	})
+</script>
+</head>
+
+<body style="background-color:#eee;">
+<div class="login_top">登录威客</div>
+<div class="login_bg"><img src="/images/login_logo.png"></div>
+
+	<form action="/login" id="submitForm" method="post">
+       <div class="submit_out" id="ys">                                            
+				<div class="flex-box">
+				<i>账号</i>
+				<input type="text" id="username" name="username" placeholder="手机号码/用户名"   class="inputa"/>
+				</div>
+				<div class="flex-box">
+				<i>登录密码</i>
+				<input type="password" id="userpwd" name="password"   placeholder="请输入密码" class="inputa"/>
+				</div>                                                          
+				
+      </div>
+        <div class="submit_n" > <button  id="btnsub"  class="formBtn btnf1" type="button">登录</button></div> 
+        <!--  class="formBtn btnf2"  background-color: #eb6100;-->
+        <div style="text-align: center; color: red;" th:text="${msg}"></div>       
+   </form>
+ <div class="login_text"><a href="/toVerify">忘记密码</a></div>
+       <div class="re_btn"><a href="/register">免费注册</a></div>                                     
+  <div style=" float:left; text-align:center; width:100%; display:block; margin-top:40px; margin-bottom:20px; color:#959595; line-height:40px;">威客空间 克洛斯威智能钢琴版权所有</div>
+ 
+</body>
+</html>
+

@@ -1,0 +1,553 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>收货地址管理 克洛斯威智能乐器</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="/css/order.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="/js/jquery.js"/>
+<script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/js/bdstat.js"></script>
+<style>
+.moren{width:100%; float:left; margin-top:20px; font-size:14px;}
+.mobg{width:100%; float:left;  line-height:35px; text-align:right;}
+.mobg a{color:#b2b2b2;}
+.mobg a:hover{color:#00a0e9;}
+.add_mobg{background:url(/images/moren.jpg) no-repeat left top;}
+.mober{width:968px; float:left; border:1px solid #d9d9d9; padding-left:20px;}
+.mober dl{width:100%; float:left;}
+.mober dl dt{width:100%; line-height:25px; color:#b2b2b2; float:left;}
+.mober dl dd{width:100%; float:left; margin-bottom:10px; color:#2b2b2b;}
+.addptu{width:185px; float:right; height:65px; padding-right:300px; padding-top:35px;}
+.closmenu{width:100%; float:left; background:url(/images/xinjian.jpg) no-repeat left top; line-height:35px; text-align:right; margin-top:20px;}
+.closmenu a{color:#b2b2b2;}
+.closmenu a:hover{color:#00a0e9;}
+.clostian{ width:988px; float:left; border:1px solid #d9d9d9; padding-top:30px; margin-bottom:20px;}
+.addr_xin{width:185px; float:left; height:65px;  padding-top:35px; margin-left:20px;}
+.changeword{width:430px; height:26px; background:url(/images/wordpass.jpg) no-repeat; border:none; padding-left:3px; line-height:26px; padding:5px;}
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#addDiv").hide();
+        $("#EditDiv").hide();
+        GetByJquery();
+        $("#ddlProvince").change(function() { GetCity()  });
+        $("#ddlCity").change(function() { GetDistrict() });
+        $(".edita").click(function() {
+            OpenDialog2($(this).attr("adid"));
+        })
+
+        //验证添加地址表单
+        $.formValidator.initConfig(
+          {
+              theme: "baidu",
+              formID: "Registerform",
+
+              onError: function (msg)
+              {
+                  alert("校验没有通过，"+msg)
+              }
+          });
+
+
+        $("#ZCode").formValidator({
+            onShow: "请输入邮编",
+            empty: "true",
+            onfocus: "6位数字组成的哦",
+            onCorrect: "谢谢你的合作，你的邮编正确"
+        }).regexValidator({
+            regExp: "zipcode",
+            dataType: "enum",
+            onError: "邮编格式不正确"
+        });
+
+        $("#Email").formValidator(
+            {
+                onShow: "请输入你的email",
+                empty: "true",
+                onfocus: "请注意你输入的email格式",
+                onCorrect: "email格式正确"
+            })
+            .regexValidator(
+            {
+                regExp: "email",
+                dataType: "enum",
+                onError: "email格式不正确"
+            })
+
+        $("#ReceiptName").formValidator(
+            {
+                onShow: "收货人姓名",
+                onFocus: "姓名为2-10个字符",
+                onCorrect: "收货人姓名"
+            }).inputValidator(
+            {
+                min: 2, max: 10, onError: "输入的收货人姓名非法,请确认"
+            }
+            )
+
+        $("#ReceiptAddress").formValidator(
+          {
+              onShow: "请输入详细地址",
+              onFocus: "地址为6-50个字符",
+              onCorrect: "详细地址可用"
+          }).inputValidator(
+          {
+              min: 6, max:50, onError: "输入的详细地址非法,请确认"
+          }
+          )
+
+        $("#PhoneNO").formValidator({ onShow: "请输入数字", onCorrect: "" }).inputValidator(
+         {
+             min: 6, max: 20, onError: "请输入6-20位数字"
+         }
+         ).regexValidator({ regExp: "num1", dataType: "enum", onError: "请输入数字" });
+    });//end   $(document).ready
+
+    function showAddDiv()
+    {
+        if(1>=5){
+            alert("一个账号只能添加5个地址");
+            return;
+        }
+        var temp = $("#addDiv").is(":hidden");
+        if (temp == true)
+            $("#addDiv").show();
+        else
+            $("#addDiv").hide();
+    }
+
+    function hideAddDiv() {
+        $("#addDiv").hide();
+    }
+
+    function hideEditDiv()
+    {
+        $("#EditDiv").hide();
+    }
+
+    function GetByJquery() {
+        $("#ddlProvince").empty(); //清空省份SELECT控件
+        $.getJSON("/Confirmation/GetProvinceList", function (data) {
+            $.each(data, function (i, item) {
+                $("<option></option>")
+                    .val(item["ProvinceID"])
+                    .text(item["ProvinceName"])
+                    .appendTo($("#ddlProvince"));
+            });
+            GetCity();
+        });
+    }
+
+
+    function GetCity() {
+        $("#ddlCity").empty(); //清空城市SELECT控件
+        var url ="/Confirmation/GetCityList/" + $("#ddlProvince").val();
+        $.getJSON(url, function(data) {
+            $.each(data, function(i, item) {
+                $("<option></option>")
+                    .val(item["CityID"])
+                    .text(item["CityName"])
+                    .appendTo($("#ddlCity"));
+            });
+            GetDistrict();
+        });
+    }
+
+    function GetDistrict() {
+        $("#ddlDistrict").empty(); //清空市区SELECT控件
+        var url = "/Confirmation/GetDistrictList/" + $("#ddlCity").val();
+
+        $.getJSON(url, function(data) {
+            $.each(data, function(i, item) {
+                $("<option></option>")
+                    .val(item["DistrictID"])
+                    .text(item["DistrictName"])
+                    .appendTo($("#ddlDistrict"));
+            });
+        });
+    }
+
+
+    function ChangeProvince(PID)//更改省份事件
+    {
+        $("#ddlCity2").empty(); //清空城市SELECT控件
+        var url ="/Confirmation/GetCityList/" + PID;
+        $.getJSON(url, function(data) {
+            $.each(data, function(i, item) {
+                $("<option> </option>")
+            .val(item["CityID"])
+            .text(item["CityName"])
+            .appendTo($("#ddlCity2"));
+            });
+        });
+    }
+
+    function ChangeCity(CID)//更改省份事件
+    {
+        $("#ddlDistrict2").empty(); //清空市区SELECT控件
+        var url = "/Confirmation/GetDistrictList/" + CID;
+        $.getJSON(url, function(data) {
+            $.each(data, function(i, item) {
+                $("<option> </option>")
+                    .val(item["DistrictID"])
+                    .text(item["DistrictName"])
+                    .appendTo($("#ddlDistrict2"));
+            });
+        });
+    }
+
+
+    function GetProvince2(PID) {
+        $("#ddlProvince2").empty(); //清空省份SELECT控件
+        $.getJSON("/Confirmation/GetProvinceList", function (data) {
+            $.each(data, function (i, item) {
+                if(item["ProvinceID"]==PID)
+                {
+                    $("<option selected='selected'> </option>")
+                        .val(item["ProvinceID"])
+                        .text(item["ProvinceName"])
+                        .appendTo($("#ddlProvince2"));
+                }
+                else
+                {
+                    $("<option></option>")
+                        .val(item["ProvinceID"])
+                        .text(item["ProvinceName"])
+                        .appendTo($("#ddlProvince2"));
+                }
+            });
+        });
+    }
+
+    function GetCity2(CID,PID) {
+
+        $("#ddlCity2").empty(); //清空城市SELECT控件
+        var url ="/Confirmation/GetCityList/" + PID;
+        $.getJSON(url, function(data) {
+            $.each(data, function(i, item) {
+                if(item["CityID"]==CID)
+                {
+                    $("<option selected='selected'> </option>")
+                        .val(item["CityID"])
+                        .text(item["CityName"])
+                        .appendTo($("#ddlCity2"));
+                }
+                else
+                {
+                    $("<option> </option>")
+
+                .val(item["CityID"])
+                .text(item["CityName"])
+                .appendTo($("#ddlCity2"));
+                }
+            });
+        });
+    }
+
+    function GetDistrict2(DID,CID) {
+        var url = "/Confirmation/GetDistrictList/" + CID;
+
+        $.getJSON(url, function(data) {
+            $.each(data, function(i, item) {
+                if(item["DistrictID"]==DID)
+                {
+                    $("<option selected='selected'> </option>")
+                        .val(item["DistrictID"])
+                        .text(item["DistrictName"])
+                        .appendTo($("#ddlDistrict2"));
+                }
+                else
+                {
+                    $("<option> </option>")
+                        .val(item["DistrictID"])
+                        .text(item["DistrictName"])
+                        .appendTo($("#ddlDistrict2"));
+                }
+            });
+        });
+    }
+
+    function VailEdit()
+    {
+        //收件人姓名
+        if($("#EReceiptName").val().length<2||$("#EReceiptName").val().length>10)
+        {
+            alert("姓名为2-10个字符");
+            $('#EReceiptName').focus();
+            return false;
+        }
+
+        if($("#EReceiptAddress").val().replace(/[^\x00-\xff]/g,"01").length < 6 || $("#EReceiptAddress").replace(/[^\x00-\xff]/g,"01").val().length > 50)
+        {
+            alert("地址为6-50个字符");
+            $('#EReceiptAddress').focus();
+            return false;
+        }
+
+        //邮编验证
+        var checkEZCode = /[1-9]\d{5}(?!\d)/;
+        if($("#EZCode").val() != "" && !checkEZCode.test($("#EZCode").val()))//非邮编格式
+        {
+            alert("请输入正确的邮编");
+            $('#EZCode').focus();
+            return false;
+        }
+
+        //邮箱验证
+        var  checkEEmail=/\w@\w*\.\w/;
+        if($("#EEmail").val() != "" && !checkEEmail.test($("#EEmail").val()))
+        {
+            alert("请输入正确的邮箱地址");
+            $('#EEmail').focus();
+            return false;
+        }
+
+        //手机验证
+        if($("#EPhoneNO").val().length<6||$("#EPhoneNO").val().length>20)
+        {
+            alert("请输入真实的手机号码");
+            $("#EPhoneNO").focus();
+            return false;
+        }
+        var checkEPhoneNo=/^[1-9]\d*$/;
+        if(!checkEPhoneNo.test($("#EPhoneNO").val()))
+        {
+            alert("请输入真实的手机号码");
+            $("#EPhoneNO").focus();
+            return false;
+        }
+    }
+</script>
+</head>
+
+<body>
+<div class="navhead" style="border-bottom:1px solid #ddd;">
+    <nav class="index-nav">
+        <div class="logo">
+            <a href="/"><img src="/images/logo.png"/></a>
+        </div>
+
+        <div class="shopcart">
+        <a href="/cart"> </a>
+        </div>
+        <div class="login">
+        <a href="/order/list"></a>
+       </div>
+        <ul class="nav-list">
+            
+            <li class="nav-item ">
+                <a href="/" class="orange">首页</a>                
+            </li>
+            
+            <li class="nav-item">
+                <a href="/smart.html">智能钢琴</a>
+                
+</li>
+            
+            <li class="nav-item">
+                <a href="/mall">在线商城</a>
+                
+</li>
+            
+            <li class="nav-item">
+                <a href="/service.html">服务中心</a>               
+                
+</li>
+            
+            <li class="nav-item">
+                <a href="/aboutus.html">关于我们</a>
+                
+            </li>
+            
+        </ul>
+   </nav>
+</div>
+<div class="order_info"> 
+  <div class="order_infol">
+        <ul>
+            <li><a href="javascript:;">个人中心</a></li>
+            <li><a href="/order/list">我的订单</a></li>
+            <li><a href="/cart">我的购物车</a></li>
+            <li><a href="/Address.html"  class="aox">收货地址管理</a></li>
+            <li><a href="/password.html">修改密码</a></li>
+        </ul>
+    </div>
+<div class="order_infor">
+<div class="my_box">收货地址管理</div>
+<div class="moren">
+<div class="mobg add_mobg">
+<a href="#">[编辑]</a>&nbsp;&nbsp;<a href="#">[删除]</a>
+</div>
+<div class="mober">
+<dl>
+				<dt>收件人:</dt>
+				<dd>张三（收）</dd>
+		</dl>
+			<dl>
+				<dt>地址：</dt>
+				<dd>安徽省合肥市包河区芜湖路409号</dd>
+			</dl>
+			<dl>
+				<dt>楼层：</dt>
+				<dd>有电梯</dd>
+			</dl>
+			<dl>
+				<dt>送货时间：</dt>
+				<dd>双休</dd>
+			</dl>            
+			<dl>
+				<dt>邮政编码：</dt>
+				<dd>230000</dd>
+			</dl>                        
+			<dl>
+				<dt>联系电话：</dt>
+				<dd>18949094509(手机)</dd>
+			</dl>
+	
+			<dl>
+				<dt>电子邮箱</dt>
+			  <dd>231097345@qq.com</dd>
+			</dl>
+</div>
+</div>
+<div class="moren">
+<div class="mobg">
+<a href="#">[编辑]</a>&nbsp;&nbsp;<a href="#">[删除]</a>
+</div>
+<div class="mober">
+<dl>
+				<dt>收件人:</dt>
+				<dd>张三（收）</dd>
+		</dl>
+			<dl>
+				<dt>地址：</dt>
+				<dd>安徽省合肥市包河区芜湖路409号</dd>
+			</dl>
+			<dl>
+				<dt>楼层：</dt>
+				<dd>有电梯</dd>
+			</dl>
+			<dl>
+				<dt>送货时间：</dt>
+				<dd>双休</dd>
+			</dl>            
+			<dl>
+				<dt>邮政编码：</dt>
+				<dd>230000</dd>
+			</dl>                        
+			<dl>
+				<dt>联系电话：</dt>
+				<dd>18949094509(手机)</dd>
+			</dl>
+	
+			<dl>
+				<dt>电子邮箱</dt>
+			  <dd>231097345@qq.com</dd>
+			</dl>
+</div>
+</div>
+<!-- <div class="order_add"><a href="#">添加收货地址</a></div> -->
+  <div class="addptu"><a onclick="return showAddDiv()"><img src="/images/addpic.jpg" width="185" height="65" /></a></div>
+<div style=" float:left; font-size:14px; width:100%;">
+ <div id="addDiv">
+<div class="closmenu"><a  onclick="return hideAddDiv()">[关闭]</a></div>
+<div class="clostian"><form action="" method="get"><table width="775" border="0">
+  <tr>
+    <td width="121" height="42" align="right"><span style="color:#F00">*</span>&nbsp;收货人姓名：</td>
+    <td height="42" colspan="3"><label>
+      <input type="text" name="textfield" id="textfield" class="changeword" />
+    </label></td>
+  </tr>
+  <tr>
+    <td height="42" align="right"><span style="color:#F00">*</span>&nbsp;地址：</td>
+    <td width="100" height="42"><label>
+      <select name="select2" id="select">
+        <option>请选择</option>
+        <option selected="selected">安徽省</option>
+        <option>湖北省</option>
+        <option>河北省</option>
+        <option>广东省</option>
+        <option>甘肃省</option>
+        <option>湖南省</option>
+        <option>河南省</option>
+        <option>吉林省</option>
+      </select>
+    </label></td>
+    <td width="100"><label>
+      <select name="select3" id="select2">
+        <option>请选择</option>
+      </select>
+    </label></td>
+    <td width="425"><label>
+      <select name="select4" id="select3">
+        <option>请选择</option>
+      </select>
+    </label></td>
+  </tr>
+  <tr>
+    <td width="121" height="42" align="right"><span style="color:#F00">*</span>&nbsp;详细地址：</td>
+    <td height="42" colspan="3"><label>
+      <input type="text" name="textfield2" id="textfield2" class="changeword" />
+    </label></td>
+  </tr>
+  <tr>
+    <td height="42" align="right"><span style="color:#F00">*</span>&nbsp;楼层：</td>
+    <td height="42" colspan="3"><label>
+      <select name="select5" id="select4">
+        <option>是否有电梯</option>
+        <option>有电梯</option>
+        <option>无电梯</option>
+      </select>
+    </label></td>
+  </tr>
+   <tr>
+    <td height="42" align="right">送货时间：</td>
+    <td height="42" colspan="3"><label>
+      <select name="select6" id="select5">
+        <option>工作日</option>
+        <option>双休日</option>
+        <option>两者都可</option>
+      </select>
+    </label></td>
+  </tr>
+  <tr>
+    <td width="121" height="42" align="right"><span style="color:#F00">*</span>&nbsp;邮政编码：</td>
+    <td height="42" colspan="3"><label>
+      <input type="text" name="textfield3" id="textfield3" class="changeword" />
+    </label></td>
+  </tr>
+  <tr>
+    <td width="121" height="42" align="right"><span style="color:#F00">*</span>&nbsp;手机：</td>
+    <td height="42" colspan="3"><label>
+      <input type="text" name="textfield4" id="textfield4" class="changeword" />
+    </label></td>
+  </tr>
+  <tr>
+    <td width="121" height="42" align="right"><span style="color:#F00">*</span>&nbsp;邮箱：</td>
+    <td height="42" colspan="3"><label>
+      <input type="text" name="textfield5" id="textfield5" class="changeword"/>
+    </label></td>
+  </tr>
+  <tr>
+    <td width="121" height="42" align="right">&nbsp;</td>
+    <td height="42" colspan="3"><label>
+      <input type="checkbox" name="checkbox" id="checkbox" />
+    设置为默认地址</label></td>
+  </tr>
+  <tr>
+    <td width="121" height="42" align="right">&nbsp;</td>
+    <td height="42" colspan="3"><a href="#"><img src="images/baocun.jpg" width="122" height="39" /></a></td>
+  </tr>
+</table>
+</form>
+</div>
+</div>
+</div>
+
+</div>    
+</div>    
+<div th:include="common/foot"></div>                   
+</body>
+</html>

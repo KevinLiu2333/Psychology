@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>威客</title>
+    <link href="/css/index.css" rel="stylesheet">
+    <link href="/css/add.css" rel="stylesheet">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script>
+        $(function () {
+        	$("#back").click(function(){
+        		window.location.href="/my/account";
+        	});
+        	
+            $("#submit").click(function () {
+                if ($("#price").val() <= 0) {
+                    alert("请输出充值金额");
+                    return;
+                }
+                $("#form1").submit();
+
+            });
+
+        })
+
+
+    </script>
+</head>
+<body style=" background-color:#eee;">
+<div class="public_top">
+    <div class="public_back"><a href="#"><img id="back" src="/images/back_c.png"></a></div>
+    <div class="select_name">账户充值</div>
+    <div class="select-icon"></div>
+</div>
+<div class="recharge">威豆：<span style="color:#e70012; font-weight:bold;" th:text="${session.user.cwkbeancount}">0</span>
+</div>
+<div class="rech_notify"><span style=" margin-left:20px; margin-right:20px; display:block;">提示：1元=100威豆</span></div>
+<div class="money">
+    <form action="/order/topUpBean" id="form1" method="post">
+        <div class="flex-box">
+            <i>金额</i>
+            <input type="number" min="0" value="0" id="price" name="price" placeholder="请输入充值金额"/>
+        </div>
+    </form>
+</div>
+<div class="rech_notify"><span style=" margin-left:20px; margin-right:20px; display:block;">选择支付方式</span></div>
+<div class="pay_wechat">
+    <div class="we_icon"><img src="/images/paybao.png" class="img"></div>
+    <div class="we_text">支付宝</div>
+    <div class="we_select">
+                    <span>
+                       <input type="radio" id="" checked="checked" name="" value="">
+                       <label name="" class="checked" for=""></label>   
+                   </span>
+    </div>
+</div>
+<!--<div class="pay_wechat">-->
+<!--<div class="we_icon"><img src="/images/wechat.png" class="img"></div>-->
+<!--<div class="we_text">微信支付</div>-->
+<!--<div class="we_select">-->
+<!--<span>-->
+<!--<input type="radio" id="" checked="checked" name="" value="">-->
+<!--<label name="" class="checked1" for=""></label>-->
+<!--</span>-->
+<!--</div>-->
+<!--</div>-->
+<div class="pay_sure">
+    <button class="pay_formBtn" id="submit" type="submit">充值</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.pianoCommon.api.mapper.TbMidMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.pianoCommon.api.model.TbMid">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="MIDID" jdbcType="INTEGER" property="midid" />
+    <result column="MIDName" jdbcType="VARCHAR" property="midname" />
+    <result column="MIDAuthor" jdbcType="VARCHAR" property="midauthor" />
+    <result column="Portfolio" jdbcType="VARCHAR" property="portfolio" />
+    <result column="MIDPath" jdbcType="VARCHAR" property="midpath" />
+    <result column="MIDSize" jdbcType="VARCHAR" property="midsize" />
+    <result column="AddTime" jdbcType="TIMESTAMP" property="addtime" />
+    <result column="Downloads" jdbcType="INTEGER" property="downloads" />
+    <result column="MIDClassify" jdbcType="VARCHAR" property="midclassify" />
+  </resultMap>
+  
+  <select id="selectByNotNull" resultType="com.klsw.pianoCommon.api.model.TbMid">
+  	SELECT * FROM tb_MID t WHERE t.MIDClassify is not null ORDER BY t.AddTime DESC
+  </select>
+</mapper>

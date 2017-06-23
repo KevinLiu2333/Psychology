@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.pianoCommon.api.mapper.TbClasstypeMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.pianoCommon.api.model.TbClasstype">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" jdbcType="INTEGER" property="id" />
+    <result column="TypeName" jdbcType="VARCHAR" property="typename" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+    <result column="isfree" jdbcType="TINYINT" property="isfree" />
+    <result column="price" jdbcType="DECIMAL" property="price" />
+    <result column="auditing" jdbcType="TINYINT" property="auditing" />
+    <result column="cwkuserid" jdbcType="VARCHAR" property="cwkuserid" />
+  </resultMap>
+</mapper>

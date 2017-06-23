@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>威客</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link href="/css/share.css" rel="stylesheet">
+    <link href="/css/index.css" rel="stylesheet">
+    <link href="/css/add.css" rel="stylesheet">
+    <link href="http://vjs.zencdn.net/c/video-js.css" rel=”stylesheet”>
+    <script src="http://vjs.zencdn.net/c/video.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jcanvas.min.js"></script>
+    <script th:inline="javascript">
+        var maxX = -1;
+        var maxY = -1;
+        var minX = 99999;
+        var minY = 99999;
+        var scale = 1;
+        function scaleCanvas(s) {
+            scale *= s;
+            var canvas = document.getElementById("mycanvas");
+            var img = document.getElementById("tulip");
+            var div = document.getElementById("divcanvas");
+            canvas.style.MozTransform = 'scale(' + scale + ')';
+            canvas.style.WebkitTransform = 'scale(' + scale + ')';
+            canvas.style.OTransform = 'scale(' + scale + ')';
+            canvas.style.marginTop = (scale - 1) * 0.5 * img.height + 'px';
+            canvas.style.marginLeft = (scale - 1) * 0.5 * img.width + 'px';
+            div.style.height = (img.height * scale) + 'px';
+        }
+        $(function () {
+
+            $("#back").click(function () {
+                window.history.back();
+            });
+
+            var status = [[${status}]];
+            var midimgpath = [[${homework.midimgpath}]];
+            var gradeimgpath = [[${homework.gradeimgpath}]];
+            var obj = $('canvas');
+            var c = document.getElementById("mycanvas");
+            var ctx = c.getContext("2d");
+            ctx.lineCap = "round";　　//设置线条两端为圆弧
+            ctx.lineJoin = "round";　　//设置线条转折为圆弧
+            var img = document.getElementById("tulip");
+            c.width = img.width;
+            c.height = img.height;
+            ctx.drawImage(img, 10, 10);
+            $("#totulip").hide();
+            $("#panrange").val(4);
+            $("#panrangeval").val(4);
+
+
+            $("#clearup").on("click", function () {
+
+                maxX = -1;
+                maxY = -1;
+                minX = 99999;
+                minY = 99999;
+                obj.clearCanvas();
+
+                var c = document.getElementById("mycanvas");
+                var ctx = c.getContext("2d");
+                var img = document.getElementById("tulip");
+                c.width = img.width;
+                c.height = img.height;
+                ctx.drawImage(img, 10, 10);
+                $("#totulip").hide();
+            });
+
+        });
+        var verify = true;
+        var maxFileSize = 5 * 1024 * 1024;
+        var errorMessage;
+        function filechange(file) {
+            var fileSize = file.files[0].size;
+            if (fileSize > maxFileSize) {
+                errorMessage = "上传文件过大";
+                alert(errorMessage);
+                verify = false;
+                return;
+            }
+            var filePath = $(file).val();
+            var fileName = filePath.substr(filePath.lastIndexOf("\\") + 1);
+            var suffix = fileName.substr(fileName.lastIndexOf(".") + 1);
+            var suffixArray = ["swf", "flv", "mp3", "wav", "wma", "wmv", "mid", "avi", "mpg", "asf", "rm", "rmvb", "mp4", "mov"];
+            if ($.inArray(suffix, suffixArray) == -1) {
+                errorMessage = "上传文件类型错误";
+                alert(errorMessage);
+                verify = false;
+                return;
+            }
+            verify = true;
+            $(".img_name").eq(0).html(fileName);
+
+        }
+        $(function () {
+            var homeworkId = [[${homework.id}]];
+            $("#submitMedia").click(function () {
+                if ($("#file").val() == null || $("#file").val() == "") {
+                    alert("请选择文件");
+                    return;
+                }
+                ;
+                if (verify == false) {
+                    alert(errorMessage);
+                    return;
+                }
+                var formData = new FormData($("#uploadForm")[0]);
+                $.ajax({
+                    url: '/homework/uploadMedia?homeworkId=' + homeworkId,
+                    type: 'POST',
+                    data: formData,
+                    dataType: 'json',
+                    async: false,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (result) {
+                        if ("S" == result.status) {
+                            alert("上传视频成功");
+                            $("#myvideo").removeAttr("hidden");
+                            var videoPath = "http://wk-static.klsw.com" + result.data;
+                            $("#myvideo").attr("src", videoPath);
+                        } else {
+                            alert(result.message);
+                        }
+                    },
+                    error: function (result) {
+                        alert("上传视频失败");
+                    }
+                });
+            });
+        })
+    </script>
+</head>
+<body>
+<!-- <div th:include="common/head1"></div> -->
+<div class="public_top">
+    <div class="public_back">
+        <img id="back" src="/images/back_c.png">
+    </div>
+    <div class="select_name">提交作业</div>
+    <div class="select-icon"></div>
+</div>
+<div class="contain_wrap">
+    <div class="contain_sub">
+        <div class="logo">
+            <img src="/images/logo.png" class="lgpic">
+        </div>
+        <span class="title"><span style="margin-right: 3px;"
+                                  th:text="${session.user.name}">（李东）</span> 上传了 <span
+                style="margin-left: 5px;" th:text="${homework.title}">老麦克唐纳</span></span> <span
+            class="author" th:text="'曲谱:'+${homework.mdiportfolio}">曲谱：约翰&#8226;汤普森简易钢琴教程1</span>
+        <span class="author"
+              th:text="'上传时间：'+${#calendars.format(homework.studenttime,'yyyy/MM/dd HH:mm:ss')}"
+              th:if="${status==0}">上传时间：2016/7/4 17:06:28</span> <span
+            class="author"
+            th:text="'提交时间：'+${#calendars.format(homework.addtime,'yyyy/MM/dd HH:mm:ss')}"
+            th:if="${status==1}">提交时间：2016/7/4 17:06:28</span>
+    </div>
+    <div class="contain_pic">
+        <audio id="myaudio" style="width: 75%"
+               th:src="'http://piano-static.klsw.com'+${homework.mp3path}"
+               controls="controls"> 你的浏览器不支持该类型音乐播放
+        </audio>
+    </div>
+    <div class="answer_wrap" th:if="${status>=1}">
+        <div class="sinus">
+            <div class="yuanpc">
+                <a href="#"><i class="mask"></i></a> <img
+                    th:src="(${teacher.ffavicon}==null)?'/images/default_image.png':'http://wk-static.klsw.com'+${teacher.ffavicon}">
+            </div>
+            <div class="othuse">
+                <b th:text="${teacher.nickname}">张老师</b><img
+                    src="/images/star_three.png"><span
+                    th:text="${teacher.orgname}">克洛斯威</span>
+            </div>
+        </div>
+        <div class="answer_info" th:if="${status==1}">等待批改中...</div>
+        <div class="answer_info" style="font-family: '楷体';font-size: 20px;color:red"
+             th:text="${homework.teachercomment}"
+             th:if="${status>=2}">张老师批改回复：节奏感不错，非常好，除了二连音有点问题不准确，其他都非常好，请继续保持，多加练习。再弹一首别的曲目发给我。注意跟着感觉走，需要有感情地投入。
+        </div>
+        <!-- <div class="answer_info" th:text="${teacher.name}+'批改回复:'+${homework.teachercomment}" th:if="${status>=2}">张老师批改回复：节奏感不错，非常好，除了二连音有点问题不准确，其他都非常好，请继续保持，多加练习。再弹一首别的曲目发给我。注意跟着感觉走，需要有感情地投入。</div> -->
+    </div>
+    <div style="text-align: center;">
+        <button id="clearup"
+                style="background-color: transparent; color: #0094ff; margin-bottom: 5px; font-size: 16px;">重新加载
+        </button>
+    </div>
+    <div
+            style="text-align: center; background-color: transparent; color: #888; margin-left: 3%; margin-bottom: 5px; font-size: 16px;">
+        &nbsp;-&nbsp;如果曲谱未显示请点击重新加载
+    </div>
+
+    <div
+            style="border: 2px dashed #aaa; width: 94%; overflow: auto; margin: 0 auto;"
+            id="divcanvas">
+        <canvas id="mycanvas"></canvas>
+    </div>
+    <div id="totulip" style="margin-left: 15px;">
+        <img alt=""
+             th:src="(${status==0 or status==1})?'http://piano-static.klsw.com'+${homework.midimgpath}:'http://piano-static.klsw.com'+${homework.gradeimgpath}"
+             id="tulip"/>
+    </div>
+</div>
+<div
+        style="z-index=99;position: fixed; right: 15px; top: 40%; width: 70px; text-align: center;">
+    <div>
+        <a onclick="scaleCanvas(1.25);"><img src="/images/scale_up.png"
+                                             style="height: 50px; width: 50px;" alt=""/></a>
+    </div>
+    <div>
+        <a onclick="scaleCanvas(0.8);"><img src="/images/scale_down.png"
+                                            style="height: 50px; width: 50px;" alt=""/></a>
+    </div>
+</div>
+<!-- 未批改 -->
+<form enctype="multipart/form-data" id="uploadForm"
+      th:if="${status==0}">
+    <div class="ab-box" style=" padding-bottom:0px; margin-top:20px; height:73px; position:relative;">
+        <i style=" margin-left:20px;">上传视频</i>
+        <div style=" position:absolute; left:90px; top:0px;">
+            <div class="picshow">
+                <img src="" id="imgview" style="display:none;" alt="">
+            </div>
+            <div class="img_name">1.mp4</div>
+            <span class="ctrl-file">
+                    <input type="file" id="file" class="filehide" name="file" onchange="filechange(this)">
+                    <a href="#"></a>
+                  </span>
+            <input type="button" readonly="readonly" id="submitMedia" class="submit-file"
+                   value="上传"/>
+        </div>
+    </div>
+    <!-- <a style="font-size:16px; margin:30px 0px;" href="'/homework/uploadMedia?homeworkId='+${homework.id}">上传视频:&nbsp;&nbsp;<input type="file" name="file"/>(可以不上传)</a> -->
+</form>
+<div style="margin: 0 auto; text-align: center;">
+    <!-- 	<form enctype="multipart/form-data" id="uploadForm"
+            th:if="${status==0}">
+            <div class="ab-box"
+                style="padding-bottom: 0px; margin-top: 20px; height: 73px; position: relative;">
+                <i style=" margin-left:20px;">上传视频</i>
+                <div style="position: absolute; left: 90px; top: 0px;">
+                    <div class="picshow">
+                        <img src="" id="imgview" style="display: none;" alt="">
+                    </div>
+                    <div class="img_name"></div>
+                    <span class="ctrl-file"><input
+                        readonly unselectable="on" type="file" class="filehide" id="file"
+                        name="file" onchange="filechange(this)"><a
+                        style="text-align: canter; font-family: 'Microsoft YaHei';"
+                        href="#"></a>
+                    </span> <input readonly="readonly" id="submitMedia" class="submit-file"
+                        value="提交" />
+                </div>
+            </div>
+            <b style="text-align: canter; font-family: 'Microsoft YaHei';">建议上传mp4格式,最大5mb的视频。请您将视频压缩后上传<br>(每个作业支持上传一个视频)
+            </b>
+            <a style="font-size:16px; margin:30px 0px;" href="'/homework/uploadMedia?homeworkId='+${homework.id}">上传视频:&nbsp;&nbsp;<input type="file" name="file"/>(可以不上传)</a>
+        </form> -->
+    <b style="text-align: center; font-family: 'Microsoft YaHei';">建议上传mp4格式,最大5mb的视频。请您将视频压缩后上传<br>(每个作业支持上传一个视频)
+    </b>
+    <div class="vid-wrappper">
+        <video id="myvideo" hidden="hidden" style="width: 94%; height: auto"
+               src="" controls="controls"></video>
+        <!-- homework.img上传视频路径参数 -->
+        <video style="width: 94%; height: auto; border: 10px"
+               controls="controls" th:src="'http://wk-static.klsw.com'+${homework.img}"
+               th:if="${status!=0 and homework.img!=null}"></video>
+    </div>
+    <br/><!--  <a
+        th:href="'/teacherList?homeworkId='+${homework.id}+'&pageNum=1'"> -->
+    <a th:href="'/student/toSelectSignedTeacher?homeworkId='+${homework.id}">
+        <button id="submit" class="submitBtn" type="submit"
+                style="outline: none;" th:if="${status==0}">提交给老师
+        </button>
+    </a>
+    <!-- <form th:action="'/teacherList?homeworkId='+${homework.id}+'&pageNum=1'" enctype="multipart/form-data" th:if="${status == 0}">
+    <a style="font-size:16px; margin:30px 0px;">上传视频:&nbsp;&nbsp;<input type="file" name="file"/></a><br/>
+    <video id=”my_video_1″ class=”video-js vjs-default-skin” controls preload=”auto” width=”640″ height=”264″ poster=”my_video_poster.png” data-setup=”{}” style="margin:50px 0px;">
+        <source src=”″ type=’video/mp4′>
+        <source src=”” type=’video/webm’>
+    </video><br/>
+    <button type="submit" style="outline:none;margin:80px;">提交给老师</button>
+</form> -->
+</div>
+<!-- 已批改 -->
+</body>
+</html>

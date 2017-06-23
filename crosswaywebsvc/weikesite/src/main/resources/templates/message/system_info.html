@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>威客</title>
+<link href="css/index.css" rel="stylesheet">
+<link href="css/add.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#back").click(function() {
+			window.history.back();
+		})
+	})
+</script>
+</head>
+
+<body>
+  <div class="public_top">
+      <div class="public_back"><a href="#"><img id="back" src="images/back_c.png"></a></div>
+      <div class="select_name">系统通知</div>
+      <div class="select-icon"></div>
+  </div>
+               <div class="system_info">
+                  <h3 th:text="${messageInfo.title}">2016克洛斯威智能钢琴逐梦大会圆满成功</h3>
+                 <span th:text="${messageInfo.addtime == null?null:#dates.format(messageInfo.addtime,'yyyy-MM-dd')}">2016-12-28 17：00</span>
+                 <p th:utext="${messageInfo.message}"></p>
+               </div>  
+</body>
+</html>

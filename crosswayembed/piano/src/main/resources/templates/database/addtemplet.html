@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>资料库管理系统</title>
+<link rel="stylesheet" href="/css/database.css" />
+<link rel="stylesheet" href="/css/opern.css" />
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		 addSonsubject();
+	})
+	
+	function addSonsubject(){
+			 var subjectName = $("#select_k1").val();
+			 $.ajax({
+				 url: "/database/getSonSubjectList",
+				 method: "post",
+				 dataType: "json",
+				 data: {"subjectName" : subjectName},
+				 success: function(ret) {
+					 var sel= document.getElementById("select_k2");
+					 sel.innerHTML = "";
+					 var data = ret.data;
+					 if(ret.status == "S") {
+						 if(data.length > 0) {
+							 for(var i=0; i<data.length; i++) {
+								 var sonSubjectName = data[i].sonSubjectName;
+								 sel.options.add(new Option(sonSubjectName, sonSubjectName));
+							 }
+						 } else {
+							 var value = "";
+							 var text = "该分类暂无子分类";
+							 sel.options.add(new Option(text, value));
+						 }
+					 } 
+				 }
+			 })
+		 }
+</script>
+<!-- <script>
+        $(function(){
+            var $inputwrapper = $('#lia-body .lia-content .inputwrapper');
+            $inputwrapper.find('input').on('input propertychange',function(){
+                var result = $(this).val();
+                console.log(result);
+                $inputwrapper.find('.result').html(result);
+            });
+        })
+</script> -->
+</head>
+
+<body>
+	<div class="header">
+		<div class="logo">
+			<span>资料库后台管理系统</span>
+		</div>
+
+		<div class="header-right">
+			<i class="icon-off icon-white"></i> <a href="#" role="button"
+				data-toggle="modal">退出</a>
+		</div>
+		<div class="top_admin">
+			欢迎<span>暖阳</span>！
+		</div>
+	</div>
+	<!-- 顶部 -->
+	<div id="middle">
+		<div class="left">
+
+			<div id="my_menu" class="sdmenu">
+				<div>
+					<a href="/database/templetList" class="current">模板</a>
+				</div>
+				<div>
+					<a href="/database/subjectList">分类</a>
+				</div>
+
+				<div>
+					<a href="/database/sonSubjectList">子分类</a>
+				</div>
+				<div>
+					<a href="/database/bookList">书</a>
+				</div>
+				<div>
+					<a href="/database/pressList">出版社</a>
+				</div> 
+				<div>
+					<a href="/database/opernList">曲谱</a>
+				</div>
+			</div>
+		</div>
+		<div class="right" id="mainFrame">
+
+			<div class="right_cont">
+				<ul class="breadcrumb">当前位置： 添加模板
+				</ul>
+				<div style="width: 900px; margin: auto; margin-top: 100px;">
+					<form action="/database/addTemplet" method="post">
+						<table class="table table-bordered" style="font-size: 15px; line-hight:5px;">
+							<tr>
+								<td width="12%" height="39" align="right" nowrap="nowrap"
+									bgcolor="#f1f1f1">模板：</td>
+								<td><input type="text" name="name" id="input2"
+									class="book_text" /></td>
+							</tr>
+							<tr>
+								<td height="38" align="right" nowrap="nowrap" bgcolor="#f1f1f1">分类：</td>
+
+								<td width="38%"><select name="subject" id="select_k1"
+									class="xla_k" onchange="addSonsubject();">
+										<option th:each="subject:${subjectList}"
+											th:value=${subject.subjectName}
+											th:text=${subject.subjectName}></option>
+								</select>
+								 <a href="/database/toAddSubject"><input class="zfl"
+										type="button" value="添分类+" /></a>
+								</td>
+							</tr>
+
+							<tr>
+								<td width="12%" height="39" align="right" nowrap="nowrap"
+									bgcolor="#f1f1f1">子分类：</td>
+								<td width="38%"><select name="sonSubject" id="select_k2"
+									class="xla_k">
+								</select> <a href="/database/toAddSonSubject"><input class="zfl"
+										type="button" value="添加子分类+" /></a></td>
+							</tr>
+							<tr>
+								<td width="12%" height="39" align="right" nowrap="nowrap"
+									bgcolor="#f1f1f1">书：</td>
+								<td width="38%"><input type="text" name="book" id="input2"
+									class="book_text" /><a href="/database/toAddBook"><input
+										class="zfl" type="button" value="添加书+" /></a></td>
+							</tr>
+							<tr>
+								<td width="12%" height="39" align="right" nowrap="nowrap"
+									bgcolor="#f1f1f1">出版社名：</td>
+								<td width="38%"><input type="text" name="press" id="input2"
+									class="book_text" /></td>
+							</tr>
+
+						</table>
+						<table class="margin-bottom-20 table  no-border">
+							<tr>
+								<td class="text-center"><input type="submit" value="提交"
+									class="btn btn-info " style="width: 80px;" /></td>
+							</tr>
+						</table>
+					</form>
+					
+								
+   <table class="table table-bordered table-striped table-hover">
+     <tbody>
+       <tr align="center">
+         <td width="5%" nowrap="nowrap"><strong>模板</strong></td>
+         <td width="5%" nowrap="nowrap"><strong>分类</strong></td>
+         <td width="5%" nowrap="nowrap"><strong> 子分类 </strong></td>     
+         <td width="5%" nowrap="nowrap"><strong> 书 </strong></td> 
+         <td width="5%" nowrap="nowrap"><strong> 出版社 </strong></td>                    
+         </tr>
+   
+       <tr align="center" >
+         <td nowrap="nowrap" ></td>
+         <td nowrap="nowrap" >12</td>
+         <td nowrap="nowrap" >12</td>
+         <td nowrap="nowrap" >12</td> 
+         <td nowrap="nowrap" >12</td> 
+         </tr>
+       
+     </tbody>
+   </table>
+				</div>
+				
+	
+			</div>
+		</div>
+	</div>
+</body>
+</html>

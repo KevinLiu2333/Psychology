@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>威客</title>
+    <link href="/css/index.css" rel="stylesheet">
+    <link href="/css/add.css" rel="stylesheet">
+    <script type="text/javascript" src="/js/jquery.js"></script>
+</head>
+<script th:inline="javascript">
+    var msg = [[${msg}]];
+    if (msg != null) {
+        alert(msg);
+    }
+
+    $(function () {
+        $("#back").click(function () {
+            window.location.href="/my/index";
+        });
+
+        var branch = $("#branch").val();
+        $(".displayPage").hide();
+        if(branch == "0") {
+        	$(".branch").eq(0).addClass("hda");
+        	$(".displayPage").eq(0).show();
+        }
+        if(branch == "1") {
+        	$(".branch").eq(1).addClass("hda");
+        	$(".displayPage").eq(1).show();
+        }
+        
+        $(".branch").click(function(){
+        	$(".displayPage").hide();
+        	$(".branch").removeClass("hda");
+        	$(this).addClass("hda");
+        	$(".displayPage").eq($(this).index(".branch")).show();
+        });
+       
+    })
+
+</script>
+<body>
+<div class="public_top">
+    <div class="public_back"><a href="javascript:void(0);" id="back"><img src="/images/back_c.png"></a></div>
+    <div class="select_name">签约管理</div>
+    <div class="select-icon"></div>
+</div>
+<div class="pro_detail">
+	<input type="hidden" id="branch" th:value="${branch}"/>
+    <ul>
+        <li class="branch"><a href="/sign/toSignList?branch=0">签约老师</a></li>
+        <li class="branch"><a href="/sign/toSignList?branch=1">签约记录</a></li>
+    </ul>
+</div>
+<div class="displayPage" style="display: none">
+    <div th:if="${pageInfo.list}">
+        <div class="sign_teali" th:each="sign:${pageInfo.list}">
+            <span style=" margin-left:20px;" th:text="${sign.nickname}">张老师</span>
+            <span class="sign_mixture" th:if="${sign.type==1}">试用<a
+                    href="javascript:void(0);">签约</a></span>
+            <span class="sign_mixture" th:if="${sign.type==0 && sign.isoverdue==true}">已到期<a
+                    href="javascript:void(0);">续签</a></span>
+            <span class="sign_mixture sign_c1" th:if="${sign.type==0 && sign.isoverdue==false}">已签约</span>
+        </div>
+    </div>
+    <div class="sign_teacher" th:if="${pageInfo.list==null}">暂无签约老师！</div>
+    <div class="find-teacher"><a href="/student/toSelectNotSignedTeacher"><img src="/images/find_teacher.png"></a></div>
+</div>
+<div class="displayPage">
+    <div class="payment-menu">
+        <ul>
+            <li style=" width:23.4%;">签约日期</li>
+            <li style=" width:19%;">签约老师</li>
+            <li style=" width:18.6%;">签约方式</li>
+            <li style=" width:23%;">有效期</li>
+            <li style=" width:16%;">备注</li>
+        </ul>
+    </div>
+    <div class="payment-detail">
+        <ul th:if="${pageInfo}">
+            <li th:each="sign:${pageInfo.list}">
+                <span style=" width:23.4%; line-height:17px;" th:text="${#dates.format(sign.addtime,'yyyy-MM-dd')}" th:if="${sign.addtime}">2016-11-23 11:00</span>
+                <span style=" width:19%;" th:text="${sign.nickname}">张老师</span>
+                <span style=" width:18.6%;" th:if="${sign.type==1}"
+                      th:text="${sign.usedcount==0}?'未使用':'已使用'">按月1次</span>
+                <!-- TO FIXED-->
+                <span style=" width:18.6%;" th:if="${sign.type==0}"
+                      th:text="'共'+${sign.months}+'月,每日'+${sign.timesperday}+'次'">按月1次</span>
+                <span style=" width:23%; line-height:17px;"><span
+                        th:text="${#dates.format(sign.addtime,'yyyy-MM-dd')}" th:if="${sign.addtime}">2016-11-23</span><br><span
+                        th:text="${sign.endtime}" th:if="${sign.endtime}">2016-11-23</span></span>
+                <span style=" width:16%;" th:if="${sign.type==1}" th:text="试用">续签</span>
+                <span style=" width:16%;" th:if="${sign.type==0 && sign.isfirstsign==0}" th:text="首签">首签</span>
+                <span style=" width:16%;" th:if="${sign.type==0 && sign.isfirstsign==1}" th:text="续签">续签</span>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

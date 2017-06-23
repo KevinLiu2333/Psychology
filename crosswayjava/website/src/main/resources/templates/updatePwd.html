@@ -1,0 +1,70 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>密码修改</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css " />
+<link href="/css/login.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+
+		var passwordMsg = $("#passwordMsg").val();
+		if(passwordMsg != null && passwordMsg != "") {
+			alert(passwordMsg);
+		}
+	})
+</script>
+</head>
+
+<body>
+	<div th:include="common/head"></div>
+	<div id="login_bg">
+		<div class="content">
+			<div class="register-box">
+				<div class="register-title">修改密码页面</div>
+				<div class="register-pic">
+					<img src="images/login_logo.png" width="122" height="75" />
+				</div>
+				<div class="no-account"
+					style="text-align: center; font-size: 14px; margin: 20px 0 10px 0; color: #EA5514;">您的验证信息已通过，请在下面完成密码修改</div>
+				<input type="hidden" id="passwordMsg" th:value="${passwordMsg}"
+					th:if="${passwordMsg}" />
+				<form action="/updatePwd" method="post">
+					<div class="reg_form reg_form_step1">
+						<input type="hidden" id="mobile" name="phone" th:value="${phone}"
+							th:if="${phone}" />
+						<dl>
+							<dt class="label">新密码</dt>
+							<dd>
+								<input class="r_input input_l" autocomplete="off"
+									type="password" name="pwd" id="userPassword1"
+									placeholder="8-20位字母、数字和符号" />
+							</dd>
+						</dl>
+						<dl style="margin-bottom: 30px;">
+							<dt class="label">新密码确认</dt>
+							<dd>
+								<input class="r_input input_l" type="password" name="pwd2"
+									id="rePassword1" placeholder="再次输入密码" />
+							</dd>
+						</dl>
+						<dl>
+							<dt class="label">&nbsp;</dt>
+							<dd>
+								<div class="submit">
+									<button type="submit" tabindex="5" id="J_SubmitStatic">保存</button>
+								</div>
+							</dd>
+						</dl>
+					</div>
+
+				</form>
+			</div>
+			<div class="foot_bei">2016 © chinacrossway.com 安徽克洛斯威智能乐器科技有限公司
+				| ICP证：皖ICP备15021161号-1</div>
+		</div>
+	</div>
+</body>
+</html>

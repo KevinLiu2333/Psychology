@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>威客</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<link href="/css/homework.css" rel="stylesheet">
+<link href="/css/add.css" rel="stylesheet">
+
+</head>
+
+<body style=" background-color:#f1f1e7;">
+  <div class="public_top">
+      <div class="public_back"><a href="#"><img src="/images/back_c.png"></a></div>
+      <div class="select_name">作业详情</div>
+      <div class="select-icon"></div>
+  </div>  
+	<div class="contain_wrap">
+	         <div class="contain_sub">
+	           <div class="logo"><img src="/images/logo.png" class="lgpic"></div>
+               <span class="title">上传者：<span style=" margin-left:5px;" th:text="${homework.studentnickname}">Jason</span></span>
+               <span class="author" th:text="'曲谱:'+${homework.title}">曲谱：车尔尼599</span>  
+                <span class="author" th:text="'上传时间：'+${#calendars.format(homework.studenttime,'yyyy/MM/dd HH:mm:ss')}"
+				th:if="${status==0}">上传时间：2016/7/4 17:06:28</span>
+				<span class="author" th:text="'提交时间：'+${#calendars.format(homework.addtime,'yyyy/MM/dd HH:mm:ss')}"
+				th:if="${status==1}">提交时间：2016/7/4 17:06:28</span>                             
+	         </div>    
+		<div class="contain_pic">
+			<audio id="myaudio" style="width: 75%"
+				th:src="'http://piano-static.klsw.com'+${homework.mp3path}"
+				controls="controls">
+			</audio>
+		</div>
+    <div id="picAnswer" th:if="${homework.teachertime} == null">
+			<div class="top"
+				style="padding: 0px 3%; margin-top: 30px; text-align: center">
+				<div id="color">
+					画笔颜色： <input type="radio" name="rcolor" value="#FF0000"
+						checked="checked" /> <input class="i1" type="button"
+						style="background-color: #ff0000" /> &nbsp;&nbsp; <input
+						type="radio" name="rcolor" value="#00FF00" /> <input class="i2"
+						type="button" style="background-color: #00ff00" /> &nbsp;&nbsp; <input
+						type="radio" name="rcolor" value="#0000FF" /> <input class="i3"
+						type="button" style="background-color: #0000ff" />
+				</div>
+			</div>
+			<div class="font" id="font"
+				style="padding: 0px 3%; text-align: center">
+				画笔粗细： <input type="text" id="panrangeval" value=""
+					readonly="readonly"
+					style="width: 20px; background-color: transparent;" /> <input
+					type="range" id="panrange" value="4" min="1" max="8"
+					style="width: 150px; height: 30px;" onChange="changerange()" />
+			</div>
+			<div style="text-align: center;">
+				<button id="clearup" style="background-color: transparent; color: #0094ff; margin-bottom: 20px; font-size: 16px;">清除画布</button>
+			</div>
+			<div
+				style="text-align: center; background-color: transparent; color: #888; margin-left: 3%; margin-bottom: 20px; font-size: 16px;">&nbsp;-&nbsp;如果曲谱未显示请点击清除画布重试</div>
+		</div>
+		<div
+			style="border: 2px dashed #aaa; width: 94%; overflow: auto; margin: 0 auto;"
+			id="divcanvas">
+			<canvas id="mycanvas"></canvas>
+		</div>
+		<div>
+			<img th:src="${homework.midimgpath}" alt="" id="tulip"
+				hidden="hidden" th:if="${homework.teachertime} == null" />
+			<img th:src="'http://wk-static.klsw.com'+${homework.gradeimgpath}" alt=""
+				id="tulip" hidden="hidden" th:if="${homework.teachertime} != null" />
+		</div>
+	</div>
+	<div id="edit"
+		style="z-index=99;position: fixed; right: 15px; top: 40%; width: 70px; text-align: center;">
+		<div>
+			<a onclick="scaleCanvas(1.25);"><img src="/images/scale_up.png"
+				style="height: 50px; width: 50px;" alt="" /></a>
+		</div>
+		<div>
+			<a onclick="scaleCanvas(0.8);"><img src="/images/scale_down.png"
+				style="height: 50px; width: 50px;" alt="" /></a>
+		</div>
+		<div th:if="${homework.teachertime} == null">
+			<div>
+				<a onclick="setIsEdit(false)"><img id="imgNotEdit"
+					src="/images/move_select.png" style="height: 50px; width: 50px;"
+					alt="" />
+				</a>
+			</div>
+			<div>
+				<a onclick="setIsEdit(true)"><img id="imgEdit"
+					src="/images/pen.png" style="height: 50px; width: 50px;" alt="" />
+				</a>
+			</div>
+		</div>
+	</div>
+    <div class="add_video"><span class="hw-b1">视频附件</span></div>
+	<video id="video" class="showVideo" th:src="'http://wk-static.klsw.com'+${homework.img}" 
+		controls="controls" style="width: 100%;height: auto;" th:if="${homework.img} != null">
+		您的浏览器不支持该标签</video>
+                      
+    <div class="te_evaluate"><span>老师点评</span></div>
+   		<div class="eva_content">
+			<form action="" method="post">
+				<div class="flex-box">
+                <textarea name="" cols="" rows="" placeholder="请在此填写您的评价！">弹的不错，有待提高！</textarea>
+				</div>
+			</form>
+            <div class="eva_record"><img src="/images/luyina.png"></div>
+	    </div>
+
+
+      <div class="evaluate-con">
+                  <span>得分：<input name="" type="text">分</span>（满分：10分）
+        </div>   
+
+  <div class="eva-bar"><a href="#" class="evabar-b1">作业批改</a></div>     
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.jplayer.min.js"></script>
+<script src="js/jplayer.playlist.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

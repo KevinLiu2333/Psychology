@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>克洛斯威后台管理系统</title>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            padding: 0 !important;
+            width: 100%;
+        }
+
+        .subRemarks {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 12%;
+        }
+
+        .subRemarks textarea {
+            width: 450px;
+            height: 180px;
+            border-radius: 10px;
+            border: 0px;
+            background-color: #FFF;
+            resize: none;
+            font-size: 18px;
+            color: #a68282;
+            font-family: KaiTi,serif;
+        }
+
+        .btn {
+            width: 125px;
+            height: 30px;
+            background-color: #1997fe;
+            margin-top: 20px;
+            border: 0px;
+            color: #FFF;
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+<body style="background-color:#e6e1e1;">
+
+<form action="/Log/remark">
+    <div class="subRemarks">
+        <div>
+            <label>
+                <textarea name="remarks" th:text="${remarks}">dfdaddsfds</textarea>
+            </label>
+            <input type="hidden" name="id" th:value="${id}">
+        </div>
+        <button class="btn" type="submit">保存</button>
+    </div>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>克洛斯威威客后台管理系统</title>
+    <link href="/css/UserStyle.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="login_20141215">
+    <div class="logo">
+       <!--  <a href="/user/toLogin" target="_blank"></a> -->
+    </div>
+    <p class="pageTitle_20141215">欢迎登录</p>
+    <div class="clear"></div>
+</div>
+<form action="/manage/login" method="post"><input type="hidden" name="h_ReturnUrl"/>
+    <div class="column_wrapper_1215">
+        <div class="bg_20141215">
+            <div class="col_616">
+                <div class="img_l_20141215">
+                    <img src="/img/012901.jpg" width="615" height="480"/>
+                </div>
+            </div>
+
+            <div class="col_384">
+                <div class="txt_r_20141215">
+                    <div class="input_20141215" id="name_text">
+                        <p class="">用户名</p>
+                        <input id="username" type="text" placeholder="" class="text" name="username"/>
+                        <i class="icon"></i>
+                        <label class="error">用户名</label>
+                    </div>
+
+                    <div class="input_20141215" id="password_text">
+                        <p>密码</p>
+                        <input id="password" type="password" class="text" name="password"/>
+                        <i class="icon"></i>
+                        <label id="errorpass" class="error">请输入密码</label>
+                    </div>
+                    <div class="vspace"></div>
+                    <div class="input_20141215" style="height: 23px;">
+                        <label style="font-size: 14px; font-family: Arial,&#39;微软雅黑&#39;,&#39;Microsoft Yahei&#39;,Lucida,Verdana,Helvetica,sans-serif;"><a
+                                href="http://www.tan8.com/codeindex.php?c=member&amp;m=searchpw0" class=""
+                                style="color: #666666;"></a></label>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="vspace"></div>
+                    <div class="btn_20141215">
+                        <input id="login_btn" type="submit" class="btn" value="登  录"/>
+                    </div>
+                    <div class="vspace" style="height: 29px;"></div>
+
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>

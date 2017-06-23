@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>留言列表</title>
+<link rel="stylesheet" href="/css/bootstrap.css" />
+<link rel="stylesheet" href="/css/css.css" />
+<link href="/css/zzsc.css" type="text/css" rel="stylesheet"/>
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+$(".subNav").click(function(){
+			$(this).toggleClass("currentDd").siblings(".subNav").removeClass("currentDd")
+			$(this).toggleClass("currentDt").siblings(".subNav").removeClass("currentDt")
+			 
+	})	
+})
+</script>
+ <script type="text/javascript">
+	$(function(){
+		$("#goto").click(function(){
+			var pageNum = $("#pageNum").val();	
+   
+			var count = $("#count").html();
+ 
+			var pageSize = $("#pageSize").html();
+ 
+			var totalPages = (count%pageSize == 0) ? count/pageSize : (count/pageSize+1); 
+ 
+			  if(pageNum>0 && pageNum<=totalPages) {
+				location.href = "/manage/order/messageList?pageNum="+pageNum;
+			}  
+		});
+		 
+	});
+</script> 
+</head>
+
+<body> 
+	<div th:include="background/bg_common/bg_head"></div>
+<!-- 顶部 -->              
+<div id="middle">
+     <div class="left">
+<!-- 代码 开始 -->
+<div th:include="background/bg_common/bg_nav"></div>
+<!-- 代码 结束 -->
+
+
+     </div>
+
+     <div class="right"  id="mainFrame">
+     
+     <div class="right_cont">
+ <ul class="breadcrumb" style=" margin-bottom:20px;">当前位置：
+  留言列表
+</ul>
+   <table class="table table-bordered table-hover">
+     <tbody>
+       <tr align="center" style="background-color:#f1f1f1;">                 
+         <th width="9%" nowrap="nowrap">性质</th>
+         <th width="11%" nowrap="nowrap">公司名称</th>
+         <th width="10%" nowrap="nowrap">区域</th>
+         <th width="8%" nowrap="nowrap">姓名</th>           
+         <th width="13%" nowrap="nowrap">电话</th>
+         <th width="14%" nowrap="nowrap">邮箱</th>
+         <th width="10%" nowrap="nowrap">需求类别</th>
+         <th width="17%" nowrap="nowrap">留言内容</th>           
+         <th width="8%" nowrap="nowrap">操作</th>                            
+         </tr>
+      <span th:each="message:${messageList.list}" th:if="${message} != null">
+        <tr align="center" style="background-color:#fafafa;"  >
+           <td colspan="9" nowrap="nowrap"><div align="left" th:text="${#dates.format(message.ctime,'yyyy年MM月dd日')}">留言时间：2016/6/18 16:58:22 </div></td>
+        </tr> 
+                
+       <tr align="center"> 
+         <td th:text="${message.nature}">个人</td>
+         <td th:text="${message.firmname}">公司名称</td>
+         <td><span th:text="${message.province}">安徽省</span> <span th:text="${message.city}">合肥市</span></td>
+         <td th:text="${message.name}">张三</td>
+         <td th:text="${message.phone}">18568902627</td>
+         <td th:text="${message.email}">张三@chinacrossway.com</td>
+         <td th:text="${message.demandclass}">商务合作</td>
+         <td><div style="word-wrap: break-word;word-break:break-all;" th:text="${message.content}">你好！我想买一台红色的钢琴你好！</div></td>
+         <td><a href="#">删除</a></td>
+         </tr>          
+        </span>
+     </tbody>
+   </table>
+    <div class="fan"><a th:href="'/manage/order/messageList?pageNum='+${messageList.firstPage}">首页</a>
+        &nbsp;&nbsp;&nbsp;<a th:href="'/manage/order/messageList?pageNum='+${messageList.pageNum-1}">上一页</a>
+       &nbsp;&nbsp;&nbsp;<a th:href="'/manage/order/messageList?pageNum='+${messageList.pageNum+1}">下一页</a>
+       &nbsp;&nbsp;&nbsp;<a th:href="'/manage/order/messageList?pageNum='+${messageList.lastPage}">尾页</a>
+  		 共
+		<span id="count" th:text="${messageList.total}"></span>
+				条&nbsp;&nbsp;&nbsp;页次：
+		<span th:text="${messageList.pageNum}+'/'+${messageList.pages}"></span>
+				&nbsp;&nbsp;&nbsp;转到：
+		<input id="pageNum" type="text" size="3"/>
+				&nbsp;页&nbsp;&nbsp;&nbsp;
+		<input id="goto" type="button" value="GO" />
+	</div>  
+     </div>     
+     </div>
+    </div>
+</body>
+</html>

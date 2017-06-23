@@ -1,0 +1,586 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>威客</title>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<link href="/css/homework.css" rel="stylesheet">
+<link href="/css/add.css" rel="stylesheet">
+<style>
+.star_bg {
+    width: 150px; height: 25px; background:url(/images/star.png) left top repeat-x!important; position: relative;
+    overflow: hidden; margin:0 auto;
+}
+.star {
+    height: 100%; width: 30px;
+    line-height: 6em;
+    position: absolute;
+    z-index: 3;
+}
+.star:hover {    
+background:url(/images/star.png) repeat-x 0 -30px!important;    left: 0; z-index: 2;
+}
+.star_1 { left: 0; }
+.star_2 { left: 30px; }
+.star_3 { left: 60px; }
+.star_4 { left: 90px; }
+.star_5 { left: 120px; }
+.star_1:hover { width: 30px; }
+.star_2:hover { width: 60px; }
+.star_3:hover { width: 90px; }
+.star_4:hover { width: 120px; }
+.star_5:hover { width: 150px; }
+
+label { 
+    display: block; _display:inline;
+    height: 100%; width: 100%;
+    cursor: pointer;
+}
+
+/* 单选按钮 */
+.score { position: absolute; clip: rect(0 0 0 0); }
+.score:checked + .star {    
+background:url(/images/star.png) repeat-x 0 -30px!important;    left: 0; z-index: 1;
+}
+.score_1:checked ~ .star_1 { width: 30px; }
+.score_2:checked ~ .star_2 { width: 60px; }
+.score_3:checked ~ .star_3 { width: 90px; }
+.score_4:checked ~ .star_4 { width: 120px; }
+.score_5:checked ~ .star_5 { width: 150px; }
+
+.star_bg:hover .star {  background-image: none; }
+
+/* for IE6-IE8 JS 交互 */
+.star_checked {    
+background:url(images/star.png) repeat-x 0 -30px!important;    left: 0; z-index: 1;
+}
+</style>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery.jplayer.min.js"></script>
+<script src="/js/jplayer.playlist.min.js"></script>
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+<script src="/js/index.js"></script>
+<script type="text/javascript">
+	$(function() {
+		/******** 控制后退按钮   ********/
+		$("#back").click(function() {
+			window.location.href = "/homework/student?pageNum=1&status=10";
+		});
+
+		/******** 控制曲谱详情和添加视频的展开与折叠   ********/
+		$(".folder").removeClass("hw-b1");
+		$(".folder").addClass("hw-b2");
+		$(".homework-pic").hide();
+		$(".ab-con").hide();
+		$("#submitDiv").hide();
+		$(".folder").click(function() {
+			if ($(this).hasClass("hw-b1")) {
+				$(this).removeClass("hw-b1");
+				$(this).addClass("hw-b2");
+			} else {
+				$(this).removeClass("hw-b2");
+				$(this).addClass("hw-b1");
+			}
+			if ($(this).index(".folder") == 0) {
+				$(".homework-pic").toggle();
+			} else {
+				$(".ab-con").toggle();
+				$("#submitDiv").toggle();
+			}
+		});
+
+		/******** 控制上传视频按钮   ********/
+
+		$(".submitBtn").hover(function() {
+
+		});
+
+		/********  动态控制签约老师列表展示    *********/
+		var imgPaths = [];
+		var teacherIds = [];
+		var realnames = [];
+		var total;
+		var middle;
+		$("#submitToTeacher").click(function() {
+			$.ajax({
+				url : "/student/toSelectSignedTeacher",
+				success : function(ret) {
+					if (ret.status == "S") {
+						$(".delete_bg").css("display","block");
+						$(".se_teacher").css("display","block");
+						total = ret.data.length;
+						if (total % 2 == 0) {
+							middle = total / 2;
+						} else {
+							middle = (total - 1) / 2;
+						}
+						$.each(ret.data,function(index,teacher) {
+							teacherIds[index] = teacher.id;
+							realnames[index] = teacher.realname;
+							if (teacher.ffavicon == "") {
+								imgPaths[index] = "/images/setepic.png";
+							} else {
+								imgPaths[index] = "http://wk-static.klsw.com" + teacher.ffavicon;
+							}
+						});
+						$(".sliding img").eq(1).attr("src",imgPaths[middle]);
+						$(".sliding span").eq(1).text(realnames[middle]);
+						if(middle < 1) {
+							$(".sliding img").eq(0).attr("src","");
+							$(".sliding span").eq(0).text("");
+							$(".sliding img").eq(2).attr("src","");
+							$(".sliding span").eq(2).text("");
+						} else if(middle > total - 2) {
+							$(".sliding img").eq(0).attr("src",imgPaths[middle-1]);
+							$(".sliding img").eq(2).attr("src","");
+							$(".sliding span").eq(2).text("");
+						} else {
+							$(".sliding img").eq(0).attr("src",imgPaths[middle-1]);
+							$(".sliding span").eq(0).text(realnames[middle-1]);
+							$(".sliding img").eq(2).attr("src",imgPaths[middle+1]);
+							$(".sliding span").eq(2).text(realnames[middle+1]);
+						}
+						$("input[name='teacherId']").val(teacherIds[middle]);
+					}
+				}
+			});
+		});
+
+		/********  控制签约老师列表、评价老师隐藏    *********/
+		$(".dele_icon").click(function() {
+			$(".delete_bg").css("display", "none");
+			$(".se_teacher").css("display", "none");
+		});
+
+		/********  上传作业控制    *********/
+		$("#submitHomework").click(function(){
+			var teacherId = $("input[name='teacherId']").val();
+			var homeworkId = $("input[name='homeworkId']").val();
+			$.post("/homework/upload",{teacherId:$("input[name='teacherId']").val(),
+				homeworkId:$("input[name='homeworkId']").val()},function(ret){
+					if(ret.status == "S") {
+						alert(ret.message);
+						window.location.href = '/homework/student?pageNum=1&&status=10';
+					}
+				},"json");
+		});
+		
+		/********  选老师左右箭头控制    *********/
+		var imgs = $(".sliding img");
+		var spans = $(".sliding span");
+		$(".n_prev").click(function() {
+			var indexArray = leftArrow(total,middle);
+			middle = indexArray[1];
+ 			for (var i = 0; i < imgs.length; i++) {
+ 				var m = indexArray[i];
+				if (m == -1 ) {
+					imgs.eq(i).attr("src","");
+					spans.eq(i).text("");
+				}
+				if(m >= 0){
+					imgs.eq(i).attr("src",imgPaths[m]);
+					spans.eq(i).text(realnames[m]);
+				}
+			}
+			$("input[name='teacherId']").val(teacherIds[middle]); 
+		});
+		
+		$(".n_next").click(function() {
+			var indexArray = rightArrow(total,middle);
+			middle = indexArray[1];
+			for (var i = 0; i < imgs.length; i++) {
+				var j = indexArray[i];
+				if (indexArray[i] == -1 ) {
+					imgs.eq(i).attr("src","");
+					spans.eq(i).text("");
+				}
+				if(indexArray[i] >= 0){
+					imgs.eq(i).attr("src",imgPaths[j]);
+					spans.eq(i).text(realnames[j]);
+				}
+			}
+			$("input[name='teacherId']").val(teacherIds[middle]);
+		});
+		
+		/********  控制评价老师显示    *********/
+		$("#commentForTeacher").click(function(){
+			$(".delete_bg").css("display","block");
+			$(".se_teacher").css("display","block");
+		});
+		
+		/********  提交评价表单控制    *********/
+		$("#submitComment").click(function(){
+			var teacherId = $("#comment_teacherId").val();
+			var homeworkId = $("#comment_homeworkId").val();
+			var teacherScore = $("input:radio[name='teacherScore']:checked").val();
+			$.post("/student/commentTeacher",{teacherId:$("#comment_teacherId").val(),
+				homeworkId:$("#comment_homeworkId").val(),teacherScore:$("input:radio[name='teacherScore']:checked").val()},
+				function(ret){
+					if(ret.status == "S") {
+						alert("给老师打分成功");
+						$(".delete_bg").css("display", "none");
+						$(".se_teacher").css("display", "none");
+					}
+				},"json");
+		});
+	})
+	
+	function leftArrow(x,y) {
+		var indexArray = [];
+		if(x == 1) {
+			indexArray[0] = -1;
+			indexArray[1] = 0;
+			indexArray[2] = -1;
+		}
+		if(x == 2) {
+			if(y == 1 ) {
+				indexArray[0] = 1;
+				indexArray[1] = 0;
+				indexArray[2] = -1;
+			} else {
+				indexArray[0] = 0;
+				indexArray[1] = 1;
+				indexArray[2] = -1;
+			}
+		}
+		if(x > 2) {
+			if(y == x - 2 ) {
+				indexArray[0] = x - 2;
+				indexArray[1] = x - 1;
+				indexArray[2] = 0;
+			} else if(y == x - 1) {
+				indexArray[0] = x - 1;
+				indexArray[1] = 0;
+				indexArray[2] = 1;
+			} else {
+				indexArray[0] = y;
+				indexArray[1] = y + 1;
+				indexArray[2] = y + 2;
+			}			
+		}
+		return indexArray;
+	}
+	
+	function rightArrow(x,y) {
+		var indexArray = [];
+		if(x == 1) {
+			indexArray[0] = -1;
+			indexArray[1] = 0;
+			indexArray[2] = -1;
+		}
+		if(x == 2) {
+			if(y == 1 ) {
+				indexArray[0] = 0;
+				indexArray[1] = 1;
+				indexArray[2] = -1;
+			} else {
+				indexArray[0] = 1;
+				indexArray[1] = 0;
+				indexArray[2] = -1;
+			}
+		}
+		if(x > 2) {
+			if(y == 0 ) {
+				indexArray[0] = x - 2;
+				indexArray[1] = x - 1;
+				indexArray[2] = 0;
+			} else if(y == 1) {
+				indexArray[0] = x - 1;
+				indexArray[1] = 0;
+				indexArray[2] = 1;
+			} else {
+				indexArray[0] = y - 2;
+				indexArray[1] = y - 1;
+				indexArray[2] = y;
+			}			
+		}
+		return indexArray;
+	}
+</script>
+<script th:inline="javascript">
+	var verify = true;
+	var maxFileSize = 5 * 1024 * 1024;
+	var errorMessage;
+	function filechange(file) {
+		 var fileSize = file.files[0].size;
+         if (fileSize > maxFileSize) {
+             errorMessage = "上传文件过大";
+             alert(errorMessage);
+             verify = false;
+             return;
+         }
+         var filePath = $(file).val();
+         var fileName = filePath.substr(filePath.lastIndexOf("\\") + 1);
+         var suffix = fileName.substr(fileName.lastIndexOf(".") + 1);
+         var suffixArray = ["swf", "flv", "mp3", "wav", "wma", "wmv", "mid", "avi", "mpg", "asf", "rm", "rmvb", "mp4", "mov"];
+         if ($.inArray(suffix, suffixArray) == -1) {
+             errorMessage = "上传文件类型错误";
+             alert(errorMessage);
+             verify = false;
+             return;
+         }
+         if(verify) {
+        	 $("#submitMedia").removeClass("vedio-c1");
+        	 $("#submitMedia").addClass("vedio-c2");
+         }
+         $(".img_name").eq(0).html(fileName);
+/* 		if (file.files && file.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function(evt) {
+				showimg(evt.target.result);
+			};
+			reader.readAsDataURL(file.files[0]);
+		} else {
+			file.select();
+			var src = document.selection.createRange().text;
+			showimg(src);
+		} */
+	}
+/* 
+	function showimg(src) {
+		var img = document.getElementById("imgview");
+		img.src = src;
+		img.style.display = 'block';
+
+		var sub = document.getElementById("sub");
+		sub.style.display = "none";
+	} */
+    $(function () {
+        var homeworkId = [[${homework.id}]];
+        $("#submitMedia").click(function () {
+            if ($("#file").val() == null || $("#file").val() == "") {
+                alert("请选择文件");
+                return;
+            }
+            ;
+            if (verify == false) {
+                alert(errorMessage);
+                return;
+            }
+            var formData = new FormData($("#uploadForm")[0]);
+            $.ajax({
+                url: '/homework/uploadMedia?homeworkId=' + homeworkId,
+                type: 'POST',
+                data: formData,
+                dataType: 'json',
+                async: false,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (result) {
+                    if ("S" == result.status) {
+                        alert("上传视频成功");
+                        $("#myvideo").removeAttr("hidden");
+                        var videoPath = "http://wk-static.klsw.com" + result.data;
+                        $("#myvideo").attr("src", videoPath);
+                    } else {
+                        alert(result.message);
+                    }
+                },
+                error: function (result) {
+                    alert("上传视频失败");
+                }
+            });
+        });
+    })
+</script>
+</head>
+
+<body style="background-color: #f1f1e7;">
+	<div class="public_top">
+		<div class="public_back">
+			<a href="javascript:void(0);"><img id="back"
+				src="/images/back_c.png"></a>
+		</div>
+		<div class="select_name">作业详情</div>
+		<div class="select-icon"></div>
+	</div>
+	<div class="contain_wrap">
+		<div class="contain_sub">
+			<div class="logo">
+				<img src="/images/logo.png" class="lgpic">
+			</div>
+			<span class="title">上传者：<span style="margin-left: 5px;"
+				th:text="${session.user.name}">Jason</span></span> <span class="author"
+				th:text="'曲谱:'+${homework.title+'&#8226;'+homework.mdiportfolio}">曲谱：车尔尼599</span>
+			<span class="author"
+              th:text="'上传时间：'+${#calendars.format(homework.studenttime,'yyyy/MM/dd HH:mm:ss')}"
+              th:if="${status==0}">上传时间：2016/7/4 17:06:28</span> <span
+            class="author"
+            th:text="'提交时间：'+${#calendars.format(homework.addtime,'yyyy/MM/dd HH:mm:ss')}"
+            th:if="${status==1}">提交时间：2016/7/4 17:06:28</span>
+		</div>
+		<div class="contain_pic">
+			<audio id="myaudio" style="width: 75%"
+				th:src="'http://piano-static.klsw.com'+${homework.mp3path}"
+				controls="controls"> 你的浏览器不支持该类型音乐播放
+			</audio>
+			<!-- 			<div class="music-player">
+				<div style="background-image: url(http://i.imgur.com/yqB0erk.jpg);" class="album"></div>
+				<div class="progress-pic">
+					<img src="/images/progress-pic.png">
+				</div>
+				<div class="info">
+
+					<div class="center">
+						<div class="jp-playlist">
+							<ul>
+								<li></li>
+							</ul>
+						</div>
+
+					</div>
+
+
+					<div class="progress jp-seek-bar">
+						<span class="jp-play-bar" style="width: 0%"></span>
+					</div>
+				</div>
+
+				<div class="controls">
+					<div class="current jp-current-time">00:00</div>
+					<div class="play-controls">
+						<a href="javascript:;" class="icon-previous jp-previous"
+							title="previous"></a> <a href="javascript:;"
+							class="icon-play jp-play" title="play"></a> <a
+							href="javascript:;" class="icon-pause jp-pause" title="pause"></a>
+						<a href="javascript:;" class="icon-next jp-next" title="next"></a>
+					</div>
+				</div>
+				<div id="jquery_jplayer" class="jp-jplayer"></div>
+			</div> -->
+		</div>
+
+	</div>
+	<div class="add_video">
+		<span class="hw-b1  folder">曲谱详情</span>
+	</div>
+	<div class="homework-pic">
+		<div class=" zoom-out">
+			<img src="/images/zoom-out.png">
+		</div>
+		<div class=" zoom-in">
+			<img src="/images/zoom-in.png">
+		</div>
+		<img src="/images/homework-qupu.png">
+	</div>
+
+	<div class="add_video">
+		<span class="hw-b1 folder">添加视频附件（可选）</span>
+	</div>
+	<form enctype="multipart/form-data" id="uploadForm"
+		th:if="${status==0}">
+		<div class="ab-con">
+			<div class="ab-box">
+				<div class="video-show">
+					<img src="" id="imgview" style="display: none;" alt="">
+				</div>
+				<div class="img_name">最多一个视频</div>
+				<span class="ctrl-file1"> <input type="file"
+					class="filehide1" id="file" name="file"
+					onChange="filechange(this);" /> <a href="javascript:void(0);"></a>
+				</span>
+			</div>
+			<span>建议上传MP4格式，最大支持大小为5MB的视频，请您将视频压缩后上传！</span>
+
+		</div>
+
+
+		<div id="submitDiv"
+			style="margin: 0 auto; text-align: center; width: 100%; float: left;">
+			<button class="submitBtn vedio-c1" type="button" id="submitMedia"
+				style="outline: none;">上传视频</button>
+		</div>
+	</form>
+	<div class="vid-wrappper">
+		<video id="myvideo" hidden="hidden" style="width: 94%; height: auto"
+			src="" controls="controls"></video>
+		<!-- homework.img上传视频路径参数 -->
+		<video style="width: 94%; height: auto; border: 10px"
+			controls="controls"
+			th:src="'http://wk-static.klsw.com'+${homework.img}"
+			th:if="${status!=0 and homework.img!=null}"></video>
+	</div>
+	<br />
+	<div id="teacherComment" th:if="${status >= 2}">
+		<div class="te_evaluate"><span>老师点评</span></div>
+   		<div class="eva_content">
+			<form action="" method="post">
+				<div class="flex-box">
+                <textarea name="teachercomment" cols="" rows="" placeholder="请在此填写您的评价！" th:text="${homework.teachercomment}">very good</textarea>
+				</div>
+			</form>
+            <div class="eva_record"><img src="/images/luyin.png"></div>
+	    </div>
+
+
+      <div class="evaluate-con">
+                  <span>得分：<span style=" font-size:18px; padding:0px;" th:text="${homework.gradelevel}">8</span>分</span>（满分：10分）
+        </div>   
+	</div>
+
+  <div id="commentForTeacher" class="eva-bar"  th:if="${status >= 2 && homework.teacherscore == 0}"><a href="javascript:void(0);" class="evabar-b1">评价老师</a></div>
+  <div class="eva-bar"  th:if="${status == 1}"><a href="javascript:void(0);" class="evabar-b2">评价老师</a></div>  
+	<div class="pay-bar"  th:if="${status == 0}">
+		<a id="submitToTeacher" href="javascript:void(0);">提交给老师</a>
+	</div>
+
+	<div class="delete_bg" style="display: none;" th:if="${status == 0}"></div>
+	<div class="se_teacher" style="display: none;" th:if="${status == 0}">
+		<div class="dele_wrap">
+			<div class="dele_shan">签约老师</div>
+			<div class="dele_icon">
+				<a href="javascript:void(0);"><img src="/images/te-delete.png"></a>
+			</div>
+		</div>
+		<div class="sliding">
+			<ul>
+				<li><img src="/images/setepic.png"/><span>何老师</span></li>
+				<li class=" sliding_center"><img src="/images/setepic.png"
+					class="sliding_opa"/><span class="sliding_name">何老师</span></li>
+				<li><img src="/images/setepic.png"/><span>何老师</span></li>
+			</ul>
+			<div class="n_prev"></div>
+			<div class="n_next"></div>
+		</div>
+		<form id="uploadHomeworkForm" action="/homework/upload" method="post">
+			<div class="dele_ban" style="position: relative;">
+				<input type="hidden" value="" name="teacherId" /> <input
+					type="hidden" th:value="${homework.id}" name="homeworkId" /> <input
+					name="" type="button" value="确认提交" class="te_button"
+					id="submitHomework" />
+				<div class="te_find">
+					<a href="/student/toSelectNotSignedTeacher">我要找老师></a>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="delete_bg" style="display: none;" th:if="${status == 1}"></div>
+	 	<div class="se_teacher" style="display: none;" th:if="${status == 1}">
+	 		  <input type="hidden" id="comment_homeworkId" th:value="${homework.id}"/>
+	 		  <input type="hidden" id="comment_teacherId" th:value="${homework.teacherid}"/>
+	           <div class="dele_wrap">
+	               <div class="dele_shan">评价老师</div>
+	                <div class="dele_icon"><a href="javascript:void(0);"><img src="/images/te-delete.png"></a></div>
+	           </div>     
+	           <div id="starBg" class="star_bg">                    	
+	                  <input type="radio" id="starScore1" class="score score_1" value="1" name="teacherScore">
+	                  <a href="#starScore1" class="star star_1" title="差"><label for="starScore1">差</label></a>
+	                  <input type="radio" id="starScore2" class="score score_2" value="2" name="teacherScore">
+	                  <a href="#starScore2" class="star star_2" title="较差"><label for="starScore2">较差</label></a>
+	                  <input type="radio" id="starScore3" class="score score_3" value="3" name="teacherScore">
+	                  <a href="#starScore3" class="star star_3" title="普通"><label for="starScore3">普通</label></a>
+	                  <input type="radio" id="starScore4" class="score score_4" value="4" name="teacherScore">
+	                  <a href="#starScore4" class="star star_4" title="较好"><label for="starScore4">较好</label></a>
+	                  <input type="radio" id="starScore5" class="score score_5" value="5" name="teacherScore">
+	                  <a href="#5" class="star star_5" title="好"><label for="starScore5">好</label></a>
+	             </div>
+	               <div class="te_que"><span style=" padding:0px 4px;">请从老师批改的专业性、及时性方面进行综合点评！</span></div>
+	               <div class="dele_bao" style=" position:relative;">
+	                  <input id="submitComment" type="button" value="提交评价" class="te_button" />
+	               </div>
+	  	</div>
+</body>
+</html>

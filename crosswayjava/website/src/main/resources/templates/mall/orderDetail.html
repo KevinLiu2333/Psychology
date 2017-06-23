@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的订单  克洛斯威智能乐器</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/css/order.css" rel="stylesheet" type="text/css" />  
+<script type="text/javascript" src="/js/jquery.js"></script>
+ 
+<script type="text/javascript">
+    $(function() {
+        if ($(document).scrollTop() > 0 ) {
+            if(!$('.navhead').hasClass('shadow')){
+                $('.navhead').addClass('shadow');
+            }
+        }
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 0 ) {
+                if(!$('.navhead').hasClass('shadow')){
+                    $('.navhead').addClass('shadow');
+                }
+            }else{
+                $('.navhead').removeClass('shadow');
+            }
+        });
+
+		var dts = $(".progress dt");
+		var status = $("#status").val();
+		dts.removeClass().addClass("unarrive");
+		for(var i=0;i<dts.length;i++) {
+			var step = dts.eq(i).text();
+			if(step <= status) {
+				dts.eq(i).removeClass().addClass("arrive");
+			}
+		}
+    })
+</script>
+</head>
+
+<body>
+<div class="navhead" style="border-bottom:1px solid #ddd;">
+	<nav class="index-nav">
+		<div class="logo">
+			<a href="/index.html"><img src="/images/logo.png" /></a>
+		</div>
+		<div class="shopcart">
+			<a href="/cart"> </a>
+		</div>
+        <div class="exit" th:if="${session.klsw_user }">
+			<a href="/logout">退出</a>
+		</div>
+		<div class="login">
+			<a href="/order/list"></a>
+		</div>
+		<ul class="nav-list">
+
+			<li class="nav-item"><a href="/">首页</a></li>
+
+			<li class="nav-item"><a href="/smart.html">智能钢琴</a></li>
+
+			<li class="nav-item"><a href="/mall" class="orange">在线商城</a></li>
+
+			<li class="nav-item"><a href="/service.html">服务中心</a></li>
+
+			<li class="nav-item"><a href="/aboutus.html">关于我们</a></li>
+
+		</ul>
+	</nav>
+</div>
+ <div class="order_info">
+<div class="order_infor">
+<div class="my_box" style="margin-top: 95px;">订单详情</div>
+<div class="progress">
+	<input id="status" type="hidden" th:value="${tMallOrder.status}" th:if="${tMallOrder}"/>
+	<dl>
+		<dt class="arrive">1</dt>
+		<dd>提交订单<span>2016-2-13</span></dd>
+	</dl>
+	<dl>
+		<dt class="unarrive">2</dt>
+		<dd>2.订单确认</dd>
+	</dl>
+	<dl>
+		<dt class="unarrive">3</dt>
+		<dd>3.配货中</dd>
+	</dl>
+	<dl>
+		<dt class="unarrive">4</dt>
+		<dd>4.已发货</dd>
+	</dl>
+	<dl>
+		<dt class="unarrive">5</dt>
+		<dd>5.已收货</dd>
+	</dl>
+</div>
+<div class="cart_con">
+<div class="my_list">
+<div class=" product_name" >订单号：<span th:text="${orderAddress.orderserial}"></span></div>
+<div class="product_price">单价</div>
+<div class="shop_quantity">数量</div>
+
+<div class="shop_total">合计</div>
+</div>
+<div class="product_show" th:each="orderproduct:${orderproducts}" th:if="${orderproducts}">
+<div class=" product_name"><img th:src="${orderproduct.productImg}" class="img"/><span class="big"  th:text="${orderproduct.productname}">克洛斯威智能卧式钢琴PLUS1</span><span class="small" >颜色：<span th:text="${orderproduct.productColor}">骑士黑</span></span></div>
+<div class="product_price" style="margin-top:35px; text-align:center" th:text="'￥'+${orderproduct.productprice}">¥8889.00</div>
+<div class="shop_price" style="margin-top:35px;" th:text="${orderproduct.productcount}">1</div>
+
+<div class="shop_total" style="margin-top:35px;" th:text="'￥'+${orderproduct.productprice * orderproduct.productcount}">¥8889.00</div>
+
+</div>
+</div>
+<div class="product_total">应付金额：&nbsp;&nbsp;<span th:text="'￥'+${tMallOrder.totalprice}">元</span></div>
+<div class="my_box1"></div>
+<div class="get_information" style="width:990px;margin-left:0px;">
+	<div style="width:330px;width:330px;float:left;" th:if="${orderAddress}">
+		<dl style="width:330px;float:left;margin-bottom:5px;">
+			<dt style="font-size:16px;font-family: 'Microsoft YaHei', '微软雅黑';color: #3e3a39;"><b>收货信息：</b></dt>
+		</dl>
+		<dl style="width:330px;float:left;">
+			<dt><b>收货地址:</b></dt>
+			<dd style="width:220px;" th:text="${orderAddress.useraddress}">北京市 北京市 东城区</dd>
+		</dl>
+		<dl style="width:330px;float:left;">
+			<dt><b>收件人:</b></dt>
+			<dd style="width:220px;" th:text="${orderAddress.username}">张三</dd>
+		</dl>
+		<dl style="width:330px;float:left;">
+			<dt><b>联系电话:</b></dt>
+			<dd style="width:220px;" th:text="${orderAddress.userphone}">17854152526</dd>
+		</dl>
+		<dl style="width:330px;float:left;">
+			<dt><b>支付方式:</b></dt>
+			<dd style="width:220px;">在线付款</dd>
+		</dl>
+		<!-- <dl style="width:330px;float:left;">
+			<dt><b>发票抬头:</b></dt>
+			<dd style="width:220px;">不开发票</dd>
+		</dl> -->
+	</div>
+	<div style="width:330px;width:330px;float:left;" th:if="${logistics}">
+		<dl style="width:330px;float:left;margin-bottom:5px;">
+			<dt style="font-size:16px;font-family: 'Microsoft YaHei', '微软雅黑';color: #3e3a39;"><b>发货信息：</b></dt>
+		</dl>
+		<dl style="width:330px;float:left;">
+			<dt><b>发货时间:</b></dt>
+			<dd style="width:220px;" th:text="${#dates.format(logistics.ctime,'YYYY-MM-dd HH:mm:ss')}"></dd>
+		</dl>
+		<dl style="width:330px;float:left;">
+			<dt><b>发货人:</b></dt>
+			<dd style="width:220px;" th:text="${logistics.logisticsname}">李四</dd>
+		</dl>
+	</div>
+	<div style="width:330px;float:left;width:330px;" th:if="${logistics}">
+		<dl style="width:330px;float:left;margin-bottom:5px;">
+			<dt style="font-size:16px; font-family: 'Microsoft YaHei', '微软雅黑'; color: #3e3a39;"><b>物流信息：</b></dt>
+		</dl>
+		<dl style="width:330px;float:left;margin-bottom:5px;">
+			<dt><b>物流公司:</b></dt>
+			<dd style="width:220px;" th:text="${logistics.logisticscompany}">顺丰物流</dd>
+		</dl>
+		<dl style="width:330px;float:left;margin-bottom:5px;">
+			<dt><b>物流编号:</b></dt>
+			<dd style="width:220px;" th:text="${logistics.logisticsserial}">12345678</dd>
+		</dl>
+	</div>
+</div>
+</div>    
+</div>
+<div th:include="common/foot"></div>
+</body>
+</html>

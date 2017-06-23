@@ -27,7 +27,7 @@
         <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetJavaProject}"
                              type="XMLMAPPER"/>
 
-        <table tableName="%">
+        <table tableName="tb_update_history">
             <generatedKey column="ID" sqlStatement="mysql" identity="true"/>
         </table>
     </context>

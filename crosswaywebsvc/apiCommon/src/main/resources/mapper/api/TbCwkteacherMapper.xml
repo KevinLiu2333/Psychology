@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper.TbCwkteacherMapper">
+    <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model.TbCwkteacher">
+        <!-- WARNING - @mbggenerated -->
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="cwkid" property="cwkid" jdbcType="INTEGER"/>
+        <result column="graduated_university" property="graduatedUniversity"
+                jdbcType="VARCHAR"/>
+        <result column="teach_grade" property="teachGrade" jdbcType="VARCHAR"/>
+        <result column="average_score" property="averageScore"
+                jdbcType="REAL"/>
+        <result column="isauthentication" property="isauthentication"
+                jdbcType="BIT"/>
+        <result column="teach_experience" property="teachExperience"
+                jdbcType="TINYINT"/>
+        <result column="certificate_path" property="certificatePath"
+                jdbcType="VARCHAR"/>
+        <result column="authentication_process" property="authenticationProcess"
+                jdbcType="INTEGER"/>
+        <result column="correcting_times" property="correctingTimes"
+                jdbcType="INTEGER"/>
+        <result column="identity_card" property="identityCard" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <resultMap type="java.util.HashMap" id="TeaMap">
+        <id column="ID" jdbcType="INTEGER" property="id"/>
+        <result column="type" jdbcType="VARCHAR" property="type"/>
+        <result column="userid" jdbcType="VARCHAR" property="userid"/>
+        <result column="fFavicon" jdbcType="VARCHAR" property="ffavicon"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="pwd" jdbcType="VARCHAR" property="pwd"/>
+        <result column="nickname" jdbcType="VARCHAR" property="nickname"/>
+        <result column="orgID" jdbcType="INTEGER" property="orgid"/>
+        <result column="orgName" jdbcType="VARCHAR" property="orgname"/>
+        <result column="split" jdbcType="REAL" property="split"/>
+        <result column="price" jdbcType="REAL" property="price"/>
+        <result column="priceWithMonth" jdbcType="REAL" property="pricewithmonth"/>
+        <result column="IsSign" jdbcType="BIT" property="issign"/>
+        <result column="CWKBeanCount" jdbcType="INTEGER" property="cwkbeancount"/>
+        <result column="token" jdbcType="VARCHAR" property="token"/>
+        <result column="locktime" jdbcType="TIMESTAMP" property="locktime"/>
+        <result column="loginfail" jdbcType="INTEGER" property="loginfail"/>
+        <result column="PhoneNO" jdbcType="VARCHAR" property="phoneno"/>
+        <result column="RegistTime" jdbcType="DATE" property="registtime"/>
+        <result column="ticket" jdbcType="VARCHAR" property="ticket"/>
+        <result column="email" jdbcType="VARCHAR" property="email"/>
+        <result column="lastLoginTime" jdbcType="TIMESTAMP" property="lastlogintime"/>
+        <result column="loginTimeStamp" jdbcType="BIGINT" property="logintimestamp"/>
+        <result column="details" jdbcType="LONGVARCHAR" property="details"/>
+        <result column="sex" jdbcType="VARCHAR" property="sex"/>
+        <result column="birthday" jdbcType="TIMESTAMP" property="birthday"/>
+        <result column="message_button" jdbcType="BIT" property="messageButton"/>
+        <result column="system_button" jdbcType="BIT" property="systemButton"/>
+        <result column="region" jdbcType="VARCHAR" property="region"/>
+        <result column="teach_grade" jdbcType="VARCHAR" property="teachGrade"/>
+        <result column="average_score" jdbcType="FLOAT" property="averageScore"/>
+        <result column="graduated_university" jdbcType="VARCHAR"
+                property="graduatedUniversity"/>
+        <result column="isauthentication" jdbcType="BIT" property="isauthentication"/>
+        <result column="teach_experience" jdbcType="VARCHAR" property="teachExperience"/>
+        <result column="certificate_path" jdbcType="VARCHAR" property="certificatePath"/>
+        <result column="age" jdbcType="INTEGER" property="age"/>
+        <result column="realname" jdbcType="VARCHAR" property="realname"/>
+    </resultMap>
+
+    <select id="selectId" parameterType="java.lang.Integer"
+            resultType="int">
+		SELECT id FROM tb_CWKTeacher WHERE cwkid = #{0}
+	</select>
+
+    <select id="selectTeacherInfo" parameterType="java.lang.Integer"
+            resultMap="TeaMap">
+		SELECT
+		t2.*,t1.graduated_university,t1.teach_grade,t1.average_score,t1.isauthentication,t1.teach_experience,t1.certificate_path,t1.authentication_process
+		FROM tb_CWKTeacher t1,tb_CWK t2
+		WHERE t2.ID = #{0} AND t1.cwkid = t2.ID
+	</select>
+
+    <select id="selectTeacherList" resultType="com.klsw.apiCommon.api.model.WKTeacher">
+		SELECT
+		t2.*,t1.graduated_university,t1.teach_grade,t1.average_score,t1.isauthentication,t1.teach_experience,t1.certificate_path,t1.authentication_process
+		FROM tb_CWKTeacher t1,tb_CWK t2
+		WHERE t2.`type` = 'tea' AND t2.ID = t1.cwkid
+	</select>
+</mapper>

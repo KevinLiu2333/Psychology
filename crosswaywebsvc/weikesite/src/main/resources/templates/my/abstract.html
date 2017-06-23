@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>个人信息修改</title>
+<link href="/css/index.css" rel="stylesheet">
+<link href="/css/add.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+        $(function () {
+            $("#back").click(function () {
+                window.history.back();
+            })
+        })
+</script>
+</head>
+
+<body style="background-color: #eee;">
+	<input type="hidden" id="type_hidden" th:value="${user.type}"/>
+	<div class="public_top">
+		<div class="public_back">
+			<img id="back" src="/images/back_c.png">
+		</div>
+		<div class="select_name">个人设置</div>
+		<div class="select-icon"></div>
+	</div>
+	<div class="pe_setting" style="height: 80px; line-height: 80px;">
+		<a href="/my/toModifyInfo?type=ffavicon">
+			<span style="margin-left: 20px;">头像</span> <span class="pe_mixture">
+				<img src="/images/setepic.png" th:if="${user.ffavicon} == ''">
+				<img th:src="'http://wk-static.klsw.com'+${user.ffavicon}"
+				th:if="${user.ffavicon} != ''">
+		</span>
+
+		</a>
+	</div>
+	<div class="pe_setting">
+		<a
+			href="/my/toModifyInfo?type=nickname">
+			<span style="margin-left: 20px;">昵称</span> <span
+			class="pe_mixture" th:text="${user.nickname}"> </span>
+		</a>
+	</div>
+	<div class="pe_setting">
+		<a href="/my/toModifyInfo?type=realname">
+			<span style="margin-left: 20px;">真实姓名</span> <span class="pe_mixture"
+			th:text="${user.realname}" disabled="disabled">钱星</span>
+		</a>
+	</div>
+	<div class="pe_setting">
+		<a href="/my/toModifyInfo?type=region">
+			<span style="margin-left: 20px;">所在地区</span> <span class="pe_mixture"
+			th:text="${user.region}">安徽合肥</span>
+		</a>
+	</div>
+	<div class="pe_setting">
+		<a href="/my/toModifyInfo?type=sex"> <span
+			style="margin-left: 20px;">性别</span> <span class="pe_mixture"
+			th:text="${user.sex}">男</span>
+		</a>
+	</div>
+	<div class="pe_setting">
+		<a
+			href="/my/toModifyInfo?type=birthday">
+			<span style="margin-left: 20px;">生日</span> <span class="pe_mixture"
+			th:text="${user.birthday == null?null:#dates.format(user.birthday,'YYYY-MM-dd')}">1990-01-10
+		</span>
+
+
+
+		</a>
+	</div>
+	<div class="pe_setting" th:if="${user.type == 'stu'}">
+		<a
+			href="/my/toModifyInfo?type=pianoGrade">
+			<span style="margin-left: 20px;">钢琴级别</span> <span class="pe_mixture"
+			th:text="${user.pianoGrade}"></span>
+		</a>
+	</div>
+	<div class="pe_setting" th:if="${user.type == 'tea'}">
+		<a
+			href="/my/toModifyInfo?type=teachGrade">
+			<span style="margin-left: 20px;">所教级别</span> <span class="pe_mixture"
+			th:text="${user.teachGrade}"></span>
+		</a>
+	</div>
+</body>
+</html>
+

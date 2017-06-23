@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>预约购买 克洛斯威智能钢琴</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/css/login.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/bdstat.js"></script>
+<body>
+<div th:include="common/head1"></div>
+<div id="login_bg">
+<div class="content">
+<div class="register-box">
+<div class="register-title" style=" font-size:24px; text-align:center; margin-bottom:15px;">预约购买</div>
+<form action="/order/appoint" method="post" ng-app="" name="form">
+<div class="reg_form reg_form_step1">
+                    <dl id="inputMobile" style="display: block;">
+                        <dt  class="label">姓名</dt>
+                        <dd>
+                            <input class="r_input input_l" type="text" id="name" name="name" placeholder="可用作收货姓名" 
+                            	required oninvalid="setCustomValidity('请输入姓名')" oninput="setCustomValidity('')" />
+                        </dd>          
+                    </dl>
+                    <dl>
+                        <dt  class="label">手机号码</dt>                        <dd>
+                            <input readonly th:value="${session.klsw_user.mobile}" class="r_input input_l" type="text" id="telephone" name="telephone" placeholder="请填写11位手机号码"/>
+                      </dd>
+                    </dl>
+                    <dl>
+                        <dt  class="label">邮箱</dt>
+                        <dd>
+                            <input class="r_input input_l" type="email" name="email" ng-model="text" placeholder="请填写注册时的邮箱" 
+                            	required oninvalid="setCustomValidity('请输入正确的邮箱地址')" oninput="setCustomValidity('')"/>
+                        </dd>
+                    
+                    </dl>
+                    <dl>
+                        <dt  class="label">收货地址</dt>
+                        <dd>
+                            <input class="r_input input_l" type="text" id="address" name="address" placeholder="请填写收货地址" 
+                            required required required oninvalid="setCustomValidity('请输入收货地址')" oninput="setCustomValidity('')"/>
+                        </dd>
+                    </dl>
+                    <div th:text="${msg}" style="color:red; text-align:center"></div>
+                    <dl style=" padding-top:35px;">
+                        <dt class="label">&nbsp;</dt>
+                        <dd>
+                                   <div class="submit" id="submit">
+                                   <button type="submit" tabindex="5" id="check_submit">立即预约</button>  
+                                   </div> 
+                       </dd>   
+                    </dl>            
+        </div>
+</form>            
+</div>
+</div>
+</div>
+<div th:include="common/foot"></div>
+</body>
+</html>

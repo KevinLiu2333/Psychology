@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>威客</title>
+<link href="/css/login.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+			var msg = $("#message").val();
+			if(msg != null) {
+				alert(msg);
+			}
+		
+			function countDown($el) {
+			    var i = 120;
+			    $el.prop('disabled', true).val('重新发送('+ i + '秒)');
+			    var interval = setInterval(function () {
+			        i--;
+			        $el.val('重新发送('+ i + '秒)');
+			        if (i <= 0) {
+			            clearInterval(interval);
+			            interval = undefined;
+			            $el.prop('disabled', false).val('发送验证码');
+			        }
+			    }, 1000);
+			}
+			
+			$("#phoneCaptcha").click(function(){
+				var obj = $(this);
+				var phoneNum = $("#phoneNum").val();
+				if(phoneNum == "") {
+					alert("请先填写手机号");
+					return false;
+				} 
+				$.ajax({
+					url:"/verifyIdentity?phoneNum="+phoneNum,
+					type:"GET",
+					dataType:"JSON",
+					success:function(data) {
+						if(data.status == "S") {
+							$.ajax({
+								url:'/getPhoneCaptcha?username='+phoneNum,
+								type:"GET",
+								dataType:"JSON",
+								success:function(data2){
+									switch (data2.status) {
+					    			case "S":
+					    				countDown(obj);
+					    				break;
+					    			default:
+					    				alert(data2.message);
+					    			}
+								},
+								error:function(data2){
+									alert("获取手机验证码失败")
+								}
+							});
+						}  
+					},
+					error:function(data) {
+						alert(data.status); 
+					}
+				});
+			});
+	})
+</script>
+</head>
+
+<body>
+<input id="message" type="hidden" th:value="${msg}" th:if="${msg}"/>
+<div class="login_top"><img src="/images/regin_LOGO.png"></div>
+<div class="login_bg"><img src="/images/verify.png"><div class="login_text"><a href="login.html">取消验证</a></div></div>
+
+	<form action="/toModifyPwd" method="post">
+<div class="submit_out">                                            
+				<div class="flex-box">
+				<i><img src="/images/ICON1.png"></i>
+				<input type="text" id="phoneNum" name="phoneNum" placeholder="请输入手机号" class="inputa"/>
+				</div>
+				<div class="flex-box">
+				<i><img src="/images/ICON2.png"></i>
+				<input type="text" id="" name="phoneCaptcha" placeholder="请输入验证码" class="inputa inputb"/>
+				<input type="button" id="phoneCaptcha" class="buttona" value="点击获取验证码"/>
+				</div>                                                           
+				<button class="formBtn" type="submit">下一步</button>
+                </div>
+			</form>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+
+/.settings
+
+/hades-web/.settings
+
+/wk-hades-service/.settings
+
+/wk-hades-dao/.settings
+
+/wk-hades-web/.settings
+/*/target
+/*.idea
+/*.iml
+/*/*.iml
+/wk-hades-dao/target
+/wk-hades-dao/*.iml

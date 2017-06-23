@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>威客</title>
+<link href="/css/index.css" rel="stylesheet">
+<link href="/css/add.css" rel="stylesheet">
+<style>
+.gender {
+	width: 100%;
+	float: left;
+	background-color: #FFF;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+.gender .we_text {
+	width: auto;
+	float: left;
+	font-size: 14px;
+	color: #535353;
+	line-height: 35px;
+	padding: 8px 0 8px 14px;
+}
+
+.gender_select {
+	width: auto;
+	float: right;
+	margin: 8px 20px 4px 0px;
+}
+
+.gender_select span {
+	display: inline-block !important;
+	padding: 5px 0px 0px 20px !important;
+}
+
+.gender_select input[type="radio"] {
+	margin: 3px 3px 0px 0px;
+	padding-left: 20px;
+	display: none;
+}
+
+.gender_select label {
+	padding-left: 25px;
+	cursor: pointer;
+	height: 30px !important;
+	display: inline-block;
+}
+
+.gender_select label.checked {
+	background-position: left center;
+	background: url(/images/gender_se.png) left top no-repeat;
+}
+</style>
+<script src="/js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$(".screen").hide();
+
+		$("#back").click(function() {
+			window.location.href="/my/account";
+		});
+
+		var myIndex = $("#index_hidden").val();
+		$("#payment").click(function() {
+			$("label").removeClass("checked");
+			$("label").eq(myIndex).addClass("checked");
+			$("input[name='gender']").eq(myIndex).attr("checked",
+			"checked"); 
+			if ($(this).hasClass("payment_show")) {
+				$(this).removeClass("payment_show");
+				$(this).addClass("payment_fold");
+			} else {
+				$(this).removeClass("payment_fold");
+				$(this).addClass("payment_show");
+			}
+			$(".screen").toggle();
+		});
+
+		$(".gender").click(
+				function() {
+					$("label").removeClass("checked"); 
+					var index = $(this).index();
+					var tradeType = $("input[name='gender']").eq(index).val();
+					$("label").eq(index).addClass("checked"); 
+					$("input[name='gender']").eq(index).attr("checked",
+							"checked"); 
+					window.location.href = "/my/balance?pageNum=1&tradeType="
+							+ tradeType; 
+				});
+	})
+</script>
+</head>
+
+<body>
+	<input type="hidden" id="index_hidden" value="${index}"
+			th:if="${index}" />
+	<div class="public_top">
+		<div class="public_back">
+			<a href="#" id="back"><img src="/images/back_c.png"></a>
+		</div>
+		<div class="select_name">威豆收支明细</div>
+		<div class="select-icon"></div>
+	</div>
+
+	<div class="payment_view">
+		<a href="javascript:void(0);"><span class="payment_show"
+			id="payment">收支筛选查看</span></a>
+	</div>
+	<div class="expense_tra" class="screen"></div>
+	<div class="filt-screen screen">
+		<div class="gender">
+			<div class="we_text">全部</div>
+			<div class="gender_select">
+				<span> <input type="radio" id="gender1" name="gender"
+					value="2"> <label for="gender1"></label>
+				</span>
+			</div>
+		</div>
+		<div class="gender">
+			<div class="we_text">收入</div>
+			<div class="gender_select">
+				<span> <input type="radio" id="gender2" name="gender"
+					value="1"> <label for="gender2"></label>
+				</span>
+			</div>
+		</div>
+		<div class="gender">
+			<div class="we_text">支出</div>
+			<div class="gender_select">
+				<span> <input type="radio" id="gender3" name="gender"
+					value="0"> <label for="gender3"></label>
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="payment-menu">
+		<ul>
+			<li style="width: 23.4%;">日期</li>
+			<li style="width: 19.3%;">支出/收入</li>
+			<li style="width: 18.6%;">威豆</li>
+			<li style="width: 19.3%;">备注</li>
+			<li style="width: 19.4%;">威豆余额</li>
+		</ul>
+	</div>
+	<div class="payment-detail">
+		<ul th:if="${beansList}">
+			<li th:each="tbCwkbean:${beansList.list}"><span
+				style="width: 23.4%; line-height: 17px;"
+				th:text="${#calendars.format(tbCwkbean.addtime,'yyyy-MM-dd HH:mm:ss')}">2016-11-23
+					11:00</span> <span style="width: 19.3%;"
+				th:text="${tbCwkbean.changetype == 0?'支出':'收入'}">收入</span> <span
+				style="width: 18.6%;" th:text="${tbCwkbean.changenumber}">20</span>
+				<span style="width: 19.3%;" th:text="${tbCwkbean.describtion}">每日签到</span>
+				<span style="width: 19.4%;" th:text="${tbCwkbean.remainBean}">6935</span>
+			</li>
+		</ul>
+	</div>
+
+
+
+
+</body>
+</html>

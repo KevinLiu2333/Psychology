@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台主页</title>
+<link rel="stylesheet" href="/css/bootstrap.css" />
+<link rel="stylesheet" href="/css/css.css" />
+<link href="/css/zzsc.css" type="text/css" rel="stylesheet"/>
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+$(".subNav").click(function(){
+			$(this).toggleClass("currentDd").siblings(".subNav").removeClass("currentDd")
+			$(this).toggleClass("currentDt").siblings(".subNav").removeClass("currentDt")
+	});
+</script>
+</head>
+<body> 
+	<div th:include="agency_manage/agency_head"></div>
+<!-- 顶部 -->              
+<div id="middle">
+     <div class="left">
+<!-- 代码 开始 -->
+<div th:include="agency_manage/agency_nav"></div>
+<!-- 代码 结束 -->
+     </div>
+     <div class="right"  id="mainFrame">
+     <div class="right_cont">
+ <ul class="breadcrumb">当前位置：
+  首页
+</ul>
+ <div style="font-size: 20px; text-align:center;margin-top:300px;"  >  欢迎使用 克洛斯威  招商/加盟 - 后台管理系统！</div>
+</div>     
+     </div>
+    </div>
+</body>
+</html>
+

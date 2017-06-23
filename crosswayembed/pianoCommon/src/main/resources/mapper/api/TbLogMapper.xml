@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.pianoCommon.api.mapper.TbLogMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.pianoCommon.api.model.TbLog">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" jdbcType="BIGINT" property="id" />
+    <result column="SerialNumber" jdbcType="VARCHAR" property="serialnumber" />
+    <result column="VersionNo" jdbcType="VARCHAR" property="versionno" />
+    <result column="VersionPlatfrom" jdbcType="VARCHAR" property="versionplatfrom" />
+    <result column="Time" jdbcType="TIMESTAMP" property="time" />
+    <result column="LogPath" jdbcType="VARCHAR" property="logpath" />
+  </resultMap>
+</mapper>

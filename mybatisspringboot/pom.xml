@@ -52,6 +52,11 @@
             <artifactId>pagehelper-spring-boot-starter</artifactId>
             <version>1.1.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>RELEASE</version>
+        </dependency>
         <!--持久层依赖-->
         <dependency>
             <groupId>com.kevin</groupId>

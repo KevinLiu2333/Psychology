@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>威客</title>
+<link href="/css/index.css" rel="stylesheet">
+<link href="/css/add.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#back").click(function(){
+			window.location.href="/my/index";
+		});
+		
+        var branch = $("#branch").val();
+        $(".displayPage").hide();
+        if(branch == "0") {
+        	$(".branch").eq(0).addClass("hda");
+        	$(".displayPage").eq(0).show();
+        }
+        if(branch == "1") {
+        	$(".branch").eq(1).addClass("hda");
+        	$(".displayPage").eq(1).show();
+        }
+        
+        $(".branch").click(function(){
+        	$(".displayPage").hide();
+        	$(".branch").removeClass("hda");
+        	$(this).addClass("hda");
+        	$(".displayPage").eq($(this).index(".branch")).show();
+        });
+	})
+</script>
+</head>
+
+<body style="background-color:#eee;">
+  <div class="public_top">
+      <div class="public_back"><a id="back" href="javascript:void(0);"><img src="/images/back_c.png"></a></div>
+      <div class="select_name">签约管理</div>
+      <div class="select-icon"></div>
+  </div>  
+  <div class="pro_detail">
+  	<input type="hidden" id="branch" th:value="${branch}"/>
+    <ul>
+      <li class="branch"><a href="/sign/toSignList?branch=0">签约价格</a></li>
+      <li class="branch"><a href="/sign/toSignList?branch=1">签约记录</a></li>
+    </ul>
+  </div>
+     <div class="displayPage">
+     	 <div class="sign_title"><span style=" margin-left:20px; margin-right:20px; display:block;">试用定价</span></div>
+     <div class="pe_setting">
+         <a href="personal_info.html">
+          <span style=" margin-left:20px;">试用一次</span>
+          <span class="pe_mixture"><span style=" color:#e70012; margin-right:5px;">100</span>威豆</span>
+        </a>
+     </div>
+      <div class="sign_title"><span style=" margin-left:20px; margin-right:20px; display:block;">签约定价（1月期）</span></div>
+     <div class="pe_setting">
+         <a href="personal_info.html">
+          <span style=" margin-left:20px;">1次/日</span>
+          <span class="pe_mixture"><span style=" color:#e70012; margin-right:5px;">1000</span>威豆</span>
+        </a>
+     </div>
+     <div class="pe_setting">
+         <a href="personal_info.html">
+          <span style=" margin-left:20px;">2次/日</span>
+          <span class="pe_mixture"><span style=" color:#e70012; margin-right:5px;">1800</span>威豆</span>
+        </a>
+     </div>
+     <div class="pe_setting">
+         <a href="personal_info.html">
+          <span style=" margin-left:20px;">3次/日</span>
+          <span class="pe_mixture"><span style=" color:#e70012; margin-right:5px;">2500</span>威豆</span>
+        </a>
+     </div>
+
+      <div class="sign_title"><span style=" margin-left:20px; margin-right:20px; display:block;">签约定价（3月期）</span></div>
+     <div class="pe_setting">
+         <a href="personal_info.html">
+          <span style=" margin-left:20px;">1次/日</span>
+          <span class="pe_mixture"><span style=" color:#e70012; margin-right:5px;">3000</span>威豆</span>
+        </a>
+     </div>
+     <div class="pe_setting">
+         <a href="personal_info.html">
+          <span style=" margin-left:20px;">2次/日</span>
+          <span class="pe_mixture"><span style=" color:#e70012; margin-right:5px;">5400</span>威豆</span>
+        </a>
+     </div>
+     <div class="pe_setting">
+         <a href="personal_info.html">
+          <span style=" margin-left:20px;">3次/日</span>
+          <span class="pe_mixture"><span style=" color:#e70012; margin-right:5px;">7500</span>威豆</span>
+        </a>
+     </div>
+
+      <div class="sign_title"><span style=" margin-left:20px; margin-right:20px; display:block;">签约定价（6月期）</span></div>
+     <div class="pe_setting">
+         <a href="personal_info.html">
+          <span style=" margin-left:20px;">1次/日</span>
+          <span class="pe_mixture"><span style=" color:#e70012; margin-right:5px;">6000</span>威豆</span>
+        </a>
+     </div>
+     <div class="pe_setting">
+         <a href="personal_info.html">
+          <span style=" margin-left:20px;">2次/日</span>
+          <span class="pe_mixture"><span style=" color:#e70012; margin-right:5px;">10800</span>威豆</span>
+        </a>
+     </div>
+     <div class="pe_setting">
+         <a href="personal_info.html">
+          <span style=" margin-left:20px;">3次/日</span>
+          <span class="pe_mixture"><span style=" color:#e70012; margin-right:5px;">15000</span>威豆</span>
+        </a>
+     </div>
+
+      <div class="sign_title"><span style=" margin-left:20px; margin-right:20px; display:block;">签约定价（包年）</span></div>
+     <div class="pe_setting">
+         <a href="personal_info.html">
+          <span style=" margin-left:20px;">1次/日</span>
+          <span class="pe_mixture"><span style=" color:#e70012; margin-right:5px;">12000</span>威豆</span>
+        </a>
+     </div>
+     <div class="pe_setting">
+         <a href="personal_info.html">
+          <span style=" margin-left:20px;">2次/日</span>
+          <span class="pe_mixture"><span style=" color:#e70012; margin-right:5px;">21600</span>威豆</span>
+        </a>
+     </div>
+     <div class="pe_setting">
+         <a href="personal_info.html">
+          <span style=" margin-left:20px;">3次/日</span>
+          <span class="pe_mixture"><span style=" color:#e70012; margin-right:5px;">30000</span>威豆</span>
+        </a>
+     </div>
+     </div>
+     <div class="displayPage" style="display: none">
+    <div class="payment-menu">
+        <ul>
+            <li style=" width:23.4%;">签约日期</li>
+            <li style=" width:19%;">签约学生</li>
+            <li style=" width:18.6%;">签约方式</li>
+            <li style=" width:23%;">有效期</li>
+            <li style=" width:16%;">备注</li>
+        </ul>
+    </div>
+    <div class="payment-detail">
+        <ul th:if="${pageInfo}">
+            <li th:each="sign:${pageInfo.list}">
+                <span style=" width:23.4%; line-height:17px;" th:text="${#dates.format(sign.addtime,'yyyy-MM-dd')}" th:if="${sign.addtime}">2016-11-23 11:00</span>
+                <span style=" width:19%;" th:text="${sign.nickname}">张老师</span>
+                <span style=" width:18.6%;" th:if="${sign.type==1}"
+                      th:text="${sign.usedcount==0}?'未使用':'已使用'">按月1次</span>
+                <!-- TO FIXED-->
+                <span style=" width:18.6%;" th:if="${sign.type==0}"
+                      th:text="'共'+${sign.months}+'月,每日'+${sign.timesperday}+'次'">按月1次</span>
+                <span style=" width:23%; line-height:17px;"><span
+                        th:text="${#dates.format(sign.addtime,'yyyy-MM-dd')}" th:if="${sign.addtime}">2016-11-23</span><br><span
+                        th:text="${sign.endtime}" th:if="${sign.endtime}">2016-11-23</span></span>
+                <span style=" width:16%;" th:if="${sign.type==1}" th:text="试用">续签</span>
+                <span style=" width:16%;" th:if="${sign.type==0 && sign.isfirstsign==0}" th:text="首签">首签</span>
+                <span style=" width:16%;" th:if="${sign.type==0 && sign.isfirstsign==1}" th:text="续签">续签</span>
+            </li>
+        </ul>
+    </div>
+</div>
+<div style=" width:100%; float:left; height:60px;"></div>          
+</body>
+</html>

@@ -1,0 +1,129 @@
+body,div,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,iframe,input,textarea,select,label,article,aside,footer,header,menu,nav,section,time,audio,video {	margin:0; padding:0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block;}
+html { font-size: 62.5%; }
+body { font: 1.4rem/2em arial, Microsoft YaHei, Helvetica, STHeiti, Droid Sans Fallback; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-align:justify; text-justify:inter-ideograph; color:#333333; background-color: #fff;}
+textarea { resize: none;}
+iframe, img { border: 0;}
+ul, ol { list-style: none;}
+input, select, textarea { outline: 0;  border-radius: 0;}
+a { text-decoration: none;}
+body, html { width: 100%; position: relative;}
+html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 { -webkit-text-size-adjust:100%; -ms-text-size-adjust: 100%;}
+img{ border:0 none; vertical-align:middle;}
+input,select{vertical-align:middle;}
+table { border-collapse:collapse; border-spacing: 0;}
+address, caption, cite, code, dfn, th, var, optgroup ,em{font-style: inherit;font-weight: inherit;*font-style: normal;}
+h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
+abbr, acronym {border: 0;font-variant: normal;}
+textarea{ resize:none;}
+input,textarea,a,button {outline:none;}
+input::-moz-focus-inner {border:0;}
+input{resize: none;}
+a{ color:#333333; text-decoration:none;}
+a:visited { color:#333333; }
+a:active, a:focus{ color: #0278d2; text-decoration:underline; }
+.fl { float:left; display:inline;}
+.fr { float:right; display:inline;}
+.clearfix:after { content:"."; display:block; height:0; visibility:hidden; clear:both;}
+.clearfix { zoom:1;}
+.clearit { clear:both; height:0; font-size:0; overflow:hidden;}
+.weidou_title{width:100%; float:left; padding-bottom:0.3rem;  text-align:center; line-height:4rem; background:#fff; height:4rem; font-size:1.6rem !important;  color:#333 !important; background-color:#fff; border-bottom:1px solid #d9d9d9;}
+
+
+/**֧��**/
+.login_top{ background-color:#373b3e; height:40px; padding:15px;}
+.login_top img{ width:85px; height:37px;}
+.login_bg{ width:100%; height:100%; position:relative; }
+.login_bg img{width:100%; height:auto;}
+.login_text{ width:auto; position:absolute; color:#FFF; line-height:40px; font-size:14px; right:0px; top:0px; padding-right:15px;}
+.login_text a{ color:#FFF;}
+.flex-box{
+	padding: 15px 0; border-bottom:1px solid #d9d9d9;background-color:#FFF; 
+}
+.flex-box i{ color:#050505; font-size:1.6rem; font-style:normal; width:35px;}
+.flex-box i img{ width:30px; height:30px;}
+.flex-box .inputa{
+	line-height: 20px; border:0px; font-size:1.4rem; padding-left:10px; vertical-align:middle;  color:#999;
+}
+.flex-box .inputw{width: 200px;}
+.flex-box .buttona{
+	line-height: 35px; border:0px; font-size:1.4rem; padding:0 5px;   width:auto; background-color:#3ab070; color:#FFF; 
+}
+
+.flex-box .checkboxa{ background: transparent;
+    border: none;
+    padding-left: 10px;
+    width: 160px;
+    color:#999; 
+	 
+}
+
+.flex-box select{
+    background:url(/images/ICON6.png) right center no-repeat;
+    appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none; 
+    border:none;
+    padding-left:10px;
+    width: 80%;
+    height:100%; color:#999; 
+     
+}
+.submit_out{padding:0 15px; margin-bottom:20px;}
+.formBtn{
+	width: 100%;
+	margin: 20px 0 0;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 1.6rem; border:1px solid #6bc493; 
+	border-radius:6px; color:#6bc493; background-color:#FFF; line-height:40px;
+}
+input[type=checkbox] {
+	visibility: hidden;
+}
+.checkboxFive {
+	width: 20px;
+	position: relative; margin-top:3px; margin-left:2px;
+}
+.checkboxFive label {
+	cursor: pointer;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 0;
+  	left: 0;
+	border:2px solid #8a8a8a; border-radius:4px;
+}
+.checkboxFive label:after {
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 5px;
+	background: transparent;
+	top: 5px;
+	left: 4px;
+	border: 3px solid #333;
+	border-top: none;
+	border-right: none;
+ 
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+/**
+ * Create the hover event of the tick
+ */
+.checkboxFive label:hover::after {
+	opacity: 0;
+}
+ 
+/**
+ * Create the checkbox state for the tick
+ */
+.checkboxFive input[type=checkbox]:checked + label:after {
+	opacity: 0.6;
+}
+

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>威客</title>
+    <link href="/css/index.css" rel="stylesheet">
+    <link href="/css/scrollbar.css" rel="stylesheet">
+    <style type="text/css">
+        .hm-menu li {
+            border-left: 1px solid #e0e0e0;
+            width: 24%;
+            font-size: 12px;
+            text-align: center;
+            line-height: 25px;
+            float: left;
+        }
+    </style>
+    <script type="application/javascript" src="/js/iscroll.js"></script>
+    <script type="application/javascript" src="/js/jquery.js"></script>
+    <script th:inline="javascript">
+        var pageinfo = [[${pageInfo}]];
+        var errorMessage = [[${errorMessage}]];
+        if (errorMessage != null) {
+            alert(errorMessage);
+            window.history.back();
+        }
+
+        var pageNum = [[${pageInfo.pageNum}]];
+        var pages = [[${pageInfo.pages}]];
+        var status = [[${status}]];
+        $(function () {
+            var height = $(window).height() - 229;
+            $("#wrapper").height(height);
+            if (pageNum == pages) {
+                $("#pullUp").css("display", "none");
+            }
+            if (pageNum == 1) {
+                $("#pullDown").css("display", "none");
+
+            }
+            $(".myclick").css("color", "#9e9fa1");
+            if (status == 10) {
+                $(".myclick").eq(0).css("color", "#555");
+            }
+            if (status == 0) {
+                $(".myclick").eq(1).css("color", "#555");
+            }
+            if (status == 1) {
+                $(".myclick").eq(2).css("color", "#555");
+            }
+            if (status == 2) {
+                $(".myclick").eq(3).css("color", "#555");
+            }
+        });
+
+        var myScroll,
+                pullDownEl, pullDownOffset,
+                pullUpEl, pullUpOffset,
+                generatedCount = 0;
+
+        /**
+         * 下拉刷新 （自定义实现此方法）
+         * myScroll.refresh();        // 数据加载完成后，调用界面更新方法
+         */
+        //上一页
+        function pullDownAction() {
+
+            setTimeout(function () {
+                if (pageNum > 1) {
+                    pageNum--;
+                    window.location.href = "/homework/student?pageNum=" + pageNum + "&status=" + status;
+                }
+                myScroll.refresh();
+            }, 1000);
+
+
+        }
+
+        /**
+         * 滚动翻页 （自定义实现此方法）
+         * myScroll.refresh();        // 数据加载完成后，调用界面更新方法
+         */
+        //下一页
+        function pullUpAction() {
+
+            setTimeout(function () {
+                if (pageNum < pages) {
+                    pageNum++;
+                    window.location.href = "/homework/student?pageNum=" + pageNum + "&status=" + status;
+                }
+                myScroll.refresh();
+            }, 1000);
+
+        }
+
+        /**
+         * 初始化iScroll控件
+         */
+        function loaded() {
+            pullDownEl = document.getElementById('pullDown');
+            pullDownOffset = pullDownEl.offsetHeight;
+            pullUpEl = document.getElementById('pullUp');
+            pullUpOffset = pullUpEl.offsetHeight;
+
+            myScroll = new iScroll('wrapper', {
+                scrollbarClass: 'myScrollbar', /* 重要样式 */
+                useTransition: false, /* 此属性不知用意，本人从true改为false */
+                topOffset: pullDownOffset,
+                onRefresh: function () {
+                    if (pullDownEl.className.match('loading')) {
+                        pullDownEl.className = '';
+                        pullDownEl.querySelector('.pullDownLabel').innerHTML = '加载上一页';
+                    } else if (pullUpEl.className.match('loading')) {
+                        pullUpEl.className = '';
+                        pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载下一页';
+                    }
+                },
+                onScrollMove: function () {
+                    if (this.y > 5 && !pullDownEl.className.match('flip')) {
+                        pullDownEl.className = 'flip';
+                        pullDownEl.querySelector('.pullDownLabel').innerHTML = '松手开始更新...';
+                        this.minScrollY = 0;
+                    } else if (this.y < 5 && pullDownEl.className.match('flip')) {
+                        pullDownEl.className = '';
+                        pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+                        this.minScrollY = -pullDownOffset;
+                    } else if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+                        pullUpEl.className = 'flip';
+                        pullUpEl.querySelector('.pullUpLabel').innerHTML = '松手开始更新...';
+                        this.maxScrollY = this.maxScrollY;
+                    } else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+                        pullUpEl.className = '';
+                        pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+                        this.maxScrollY = pullUpOffset;
+                    }
+                },
+                onScrollEnd: function () {
+                    if (pullDownEl.className.match('flip')) {
+                        pullDownEl.className = 'loading';
+                        pullDownEl.querySelector('.pullDownLabel').innerHTML = '加载中...';
+                        pullDownAction();	// Execute custom function (ajax call?)
+                    } else if (pullUpEl.className.match('flip')) {
+                        pullUpEl.className = 'loading';
+                        pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载中...';
+                        pullUpAction();	// Execute custom function (ajax call?)
+                    }
+                }
+            });
+
+            setTimeout(function () {
+                document.getElementById('wrapper').style.left = '0';
+            }, 800);
+        }
+
+        //初始化绑定iScroll控件
+        document.addEventListener('touchmove', function (e) {
+            e.preventDefault();
+        }, false);
+        document.addEventListener('DOMContentLoaded', loaded, false);
+
+    </script>
+    <style type="text/css" media="all">
+        #pullDown, #pullUp {
+            background: #fff;
+            height: 40px;
+            line-height: 40px;
+            padding: 5px 10px;
+            border-bottom: 1px solid #ccc;
+            font-weight: bold;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+    <style type="text/css">
+        .mystyle {
+            background: #000;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body>
+<div th:include="common/head"></div>
+<div class="idx-nav">
+    <ul id="bigTitle">
+        <li th:if="${type} == 'tea'"><a href="/homework/teacher?pageNum=1&status=10"><img
+                src="/images/homeworka.png"><img src="/images/homeworkb.png"><br><span>学生作业</span></a></li>
+        <li th:if="${type} == 'stu'"><a href="/homework/student?pageNum=1&status=10"><img
+                src="/images/homeworka.png"><img src="/images/homeworkb.png"><br><span>我的作业</span></a></li>
+        <li><a href="/friend"><img src="/images/friendsa.png"><img src="/images/friendsb.png"><br><span>朋友圈</span></a>
+        </li>
+        <li><a href="/ask"><img src="/images/questiona.png"><img src="/images/questionb.png"><br><span>有问必答</span></a>
+        </li>
+    </ul>
+</div>
+<div class="hm-menu">
+    <ul>
+        <li style="border:none; width:25%;"><a class="myclick" href="/homework/student?pageNum=1&status=10"><img
+                src="/images/bulea.png">全部作业</a></li>
+        <li><a class="myclick" href="/homework/student?pageNum=1&status=0"><img src="/images/buleb.png">未提交</a></li>
+        <li><a class="myclick" href="/homework/student?pageNum=1&status=1"><img src="/images/bulec.png">已提交</a></li>
+        <li><a class="myclick" href="/homework/student?pageNum=1&status=2"><img src="/images/buled.png">已批改</a></li>
+    </ul>
+</div>
+<div id="wrapper" class="blue-menu" style="width:100%;position:fixed">
+    <div id="scroller">
+        <div id="pullDown">
+            <span class="pullDownIcon"></span><span class="pullDownLabel">加载上一页</span>
+        </div>
+
+        <ul th:if="${pageInfo}" id="thelist">
+            <li th:each="tbHomework : ${pageInfo.list}">
+                <a th:href="'/homework/homeworkDetail?id='+${tbHomework.id}+'&status='+${tbHomework.status}"
+                   th:class="deep_blue" th:if="${tbHomework.status==0}" style="height:95px;">
+                    <span th:text="${tbHomework.mdiportfolio}">贝多芬</span>
+                    <span th:text="${tbHomework.title}">致爱丽丝</span>
+                    <span th:text="${#calendars.format(tbHomework.modifytime,'MM/dd HH:mm')}">12.25 16:04</span>
+                </a>
+                <a th:href="'/homework/homeworkDetail?id='+${tbHomework.id}+'&status='+${tbHomework.status}"
+                   th:class="blue" th:if="${tbHomework.status==1}" style="height:95px;">
+                    <input type="hidden" class="status" th:value="${tbHomework.status}"/>
+                    <span th:text="${tbHomework.mdiportfolio}">贝多芬</span>
+                    <span th:text="${tbHomework.title}">致爱丽丝</span>
+                    <span th:text="${#calendars.format(tbHomework.modifytime,'MM/dd HH:mm')}">12.25 16:04</span>
+                </a>
+                <a th:href="'/homework/homeworkDetail?id='+${tbHomework.id}+'&status='+${tbHomework.status}"
+                   th:class="green" th:if="${tbHomework.status>=2}" style="height:95px;">
+                    <input type="hidden" class="status" th:value="${tbHomework.status}"/>
+                    <span th:text="${tbHomework.mdiportfolio}">贝多芬</span>
+                    <span th:text="${tbHomework.title}">致爱丽丝</span>
+                    <span th:text="${#calendars.format(tbHomework.modifytime,'MM/dd HH:mm')}">12.25 16:04</span>
+                    <div class="no_answer" th:if="${tbHomework.status==2}"><img src="/images/no_answer.png"></div>
+                </a>
+            </li>
+        </ul>
+        <div id="pullUp">
+            <span class="pullUpIcon"></span><span class="pullUpLabel">下拉加载更多...</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

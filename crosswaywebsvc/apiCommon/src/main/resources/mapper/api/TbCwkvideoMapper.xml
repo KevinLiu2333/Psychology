@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper.TbCwkvideoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model.TbCwkvideo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="homeworkId" property="homeworkid" jdbcType="INTEGER" />
+    <result column="CWKID" property="cwkid" jdbcType="INTEGER" />
+    <result column="videoPath" property="videopath" jdbcType="VARCHAR" />
+    <result column="addtime" property="addtime" jdbcType="DATE" />
+    <result column="snapshot" property="snapshot" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

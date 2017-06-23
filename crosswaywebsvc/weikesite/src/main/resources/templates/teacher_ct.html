@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>威客</title>
+<link href="/css/index.css" rel="stylesheet">
+<link href="/css/add.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#back").click(function(){
+			window.location.href = "/my/index";
+		});
+	})
+</script>
+</head>
+
+<body style="background-color:#eee;">
+  <div class="public_top">
+      <div class="public_back"><a id="back" href="javascript:void(0);"><img src="/images/back_c.png"/></a></div>
+      <div class="select_name">老师认证</div>
+      <div class="select-icon"></div>
+  </div>
+  <div class="pe_setting" style=" height:80px; line-height:80px;">
+       <a href="#">
+          <span style=" margin-left:20px;">头像</span>
+          <span class="pe_mixture">
+              <img src="/images/setepic.png">
+          </span>
+        </a>
+  </div>      
+
+<div class="pe_setting">
+       <a href="#">
+          <span style=" margin-left:20px;">真实姓名</span>
+          <span class="pe_mixture" th:text="${teacher.realname}">钱星</span>
+        </a>
+  </div>
+<div class="pe_setting">
+       <a href="personal_info.html">
+          <span style=" margin-left:20px;">授课经验</span>
+          <span class="pe_mixture" th:text="${teacher.teachExperience}">6年</span>
+        </a>
+  </div>  
+    <div class="pe_setting">
+       <a href="#">
+          <span style=" margin-left:20px;">所在地区</span>
+          <span class="pe_mixture" th:text="${teacher.region}">安徽&nbsp;合肥</span>
+      </a>
+  </div> 
+    <div class="pe_setting">
+       <a href="#">
+          <span style=" margin-left:20px;">性别</span>
+          <span class="pe_mixture" th:text="${teacher.sex}">男</span>
+      </a>
+  </div> 
+    <div class="pe_setting">
+       <a href="#">
+          <span style=" margin-left:20px;">生日</span>
+          <span class="pe_mixture" th:text="${#dates.format(teacher.birthday,'yyyy-MM-dd')}">1990-01-10</span>
+      </a>
+  </div> 
+    <div class="pe_setting">
+       <a href="#">
+          <span style=" margin-left:20px;">授课级别</span>
+          <span class="pe_mixture" th:text="${teacher.teachGrade}">5级</span>
+      </a>
+  </div> 
+    <div class="pe_setting">
+       <a href="#">
+          <span style=" margin-left:20px;">毕业院校</span>
+          <span class="pe_mixture" th:text="${teacher.graduatedUniversity}">中央音乐学院</span>
+      </a>
+  </div>   
+  
+    		<div class="fb_phone">
+			<form action="" method="post">
+				<div class="flex-box" style="  height:52px; ">
+				   <i style=" line-height:48px; float:left;">资质证书</i>
+			           <div class="cert_add">
+                          <div class="cert_all">
+                            <ul>
+                               <li><img src="/images/qua_cer.png"></li>
+                               <li><img src="/images/qua_cer.png"></li>
+                            </ul>
+                         </div>
+                         <div style=" position:relative; float:left; margin-left:10px;">
+				              <div class="cert_show"><img src="" id="imgview" style="display:none;" alt=""></div>
+                                <span class="cert-file">
+                                  <input type="file" class="filehide" name="filehide" onChange="filechange(this)">
+                                  <a href="#"></a>
+                                </span>
+                          </div>    
+                       </div>
+				</div>
+			</form>
+	    </div>   
+  
+   		<div class="fb_phone">
+			<form action="" method="post">
+				<div class="flex-box">
+				<i style=" float:left;">个人简介</i>
+				<textarea name="" cols="" rows=""placeholder="请填写您的简介！"></textarea>
+				</div>
+			</form>
+	    </div>  
+ <script type="text/javascript">
+    function filechange(file) {
+        if (file.files && file.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (evt) {
+                showimg(evt.target.result);
+            };
+            reader.readAsDataURL(file.files[0]);
+        } else {
+            file.select();
+            var src = document.selection.createRange().text;
+            showimg(src);
+        }
+    }
+
+    function showimg(src) {
+        var img = document.getElementById("imgview");
+        img.src = src;
+        img.style.display = 'block';
+    }
+</script>       
+</body>
+</html>

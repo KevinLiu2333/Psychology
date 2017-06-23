@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>威客</title>
+<link href="/css/index.css" rel="stylesheet">
+<link href="/css/add.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="application/javascript" src="/js/clickuser.js"></script>
+</head>
+
+<body style="background-color: #eee;">
+	<div th:include="common/head2"></div>
+	<div class="stu_member">
+		<a href="/my/userInfo">
+			<div style="width: auto; float: left; margin-left: 15px;">
+				<img src="/images/setepic.png" th:if="${user.ffavicon} == ''"><img
+					th:src="'http://wk-static.klsw.com'+${user.ffavicon}"
+					th:if="${user.ffavicon} != ''">
+			</div>
+			<div style="width: auto; float: left; margin-left: 8px;">
+				<span style="display: block;" th:text="'手机：'+${user.phoneno}">手机：18255906213</span>
+				<span style="display: block;" th:text="'用户名：'+${user.realname}">用户名：Jason</span>
+				<span class="common_member" th:if="${user.type == 'stu'}">普通会员</span>
+				<span class="common_member" th:if="${user.type == 'tea'}">未认证</span>
+			</div>
+			<div class="stu_icon">个人资料</div>
+		</a>
+	</div>
+	<div class="notify_blank"></div>
+	<div class="member_set">
+		<a href="/sign/toSignList"> <span style="margin-left: 20px;"><img
+				src="/images/hui_mu.png">签约管理</span> <span class="me_mixture"></span>
+		</a>
+	</div>
+	<div class="notify_blank"></div>
+	<div class="member_set" th:if="${user.type == 'tea'}">
+		<a href="/teacher/toAuthenticate"> <span style="margin-left: 20px;"><img
+				src="/images/hui_mu.png">老师认证</span> <span class="me_mixture"></span>
+		</a>
+	</div>
+	<div class="notify_blank" th:if="${user.type == 'tea'}"></div>
+	<div class="member_set">
+		<a href="/my/account"> <span style="margin-left: 20px;"><img
+				src="/images/hui_mu.png">威豆账户</span> <span class="me_mixture"></span>
+		</a>
+	</div>
+	<div class="notify_blank"></div>
+	<div class="add_icon">
+		<ul>
+			<li><a href="/my/toFeedBack"> <img src="/images/hui_mu.png">建议反馈
+			</a></li>
+			<li><a href="/set/toMyMessage?messageType=0"> <img
+					src="/images/hui_mu.png">我的消息
+			</a></li>
+
+		</ul>
+	</div>
+
+
+	<div class="notify_blank"></div>
+	<div class="member_set">
+		<a href="/set/toSet"> <span style="margin-left: 20px;"><img
+				src="/images/hui_mu.png">设置</span> <span class="me_mixture"></span>
+		</a>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper.TbCwkmessageMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model.TbCwkmessage" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="messagetype" property="messagetype" jdbcType="VARCHAR" />
+    <result column="imgpath" property="imgpath" jdbcType="VARCHAR" />
+    <result column="addtime" property="addtime" jdbcType="DATE" />
+    <result column="message" property="message" jdbcType="LONGVARCHAR" />
+    <result column="CWKID" property="cwkid" jdbcType="INTEGER" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="title" property="title" jdbcType="VARCHAR"/>
+  </resultMap>
+  <select id="messageList" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  	SELECT * FROM tb_CWKMessage WHERE  (#{0} = 1 AND messagetype = #{0}) OR (#{0} = 0 AND messagetype = #{0} AND CWKID = #{1})
+  </select>
+   <select id="selectByMessageId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  	SELECT * FROM tb_CWKMessage WHERE  id=#{messageId}
+  </select>
+</mapper>

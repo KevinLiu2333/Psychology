@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>克洛斯威钢琴端后台管理系统</title>
+    <link rel="stylesheet" href="/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/css/css.css"/>
+    <link href="/css/zzsc.css" type="text/css" rel="stylesheet"/>
+    <script src="/js/jquery-1.3.2.js" type="text/javascript"></script>
+</head>
+<body>
+<div th:include="common/head"></div>
+<!-- 顶部 -->
+<div id="middle">
+    <div th:include="common/left"></div>
+    <div class="right" id="mainFrame">
+        <div class="right_cont">
+            <ul class="breadcrumb">当前位置：
+                添加课堂
+            </ul>
+            <div style="width:1100px; margin:auto; margin-top:100px;">
+                <form action="/PM/addClass" method="post">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td width="12%" height="39" align="right" nowrap="nowrap" bgcolor="#f1f1f1"><b>课堂标题</b></td>
+                            <td width="38%"><input required="required" type="text" name="title" id="title" class="span1-1"/></td>
+                        </tr>
+                        <tr>
+                            <td width="12%" height="39" align="right" nowrap="nowrap" bgcolor="#f1f1f1"><b>Midi分类</b>
+                            </td>
+                            <td width="38%">
+                                <select required="required" name="classtype" class="span1-1" style=" height:30px;" id="classtype">
+                                    <option th:each="classtype:${list}" th:value="${classtype.id}"
+                                            th:text="${classtype.typename}">
+                                    </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="12%" height="39" align="right" nowrap="nowrap" bgcolor="#f1f1f1"><b>图片路径</b></td>
+                            <td width="38%"><input required="required" type="text" name="imgpath" id="imgpath" class="span1-1"/></td>
+                        </tr>
+                        <tr>
+                            <td width="12%" height="39" align="right" nowrap="nowrap" bgcolor="#f1f1f1"><b>课堂系列</b></td>
+                            <td width="38%"><input required="required" type="text" name="serices" id="serices" class="span1-1"/></td>
+                        </tr>
+                        <tr>
+                            <td width="12%" height="39" align="right" nowrap="nowrap" bgcolor="#f1f1f1"><b>排序</b>（如:1）
+                            </td>
+                            <td width="38%">
+                                <input required="required" type="number" name="sort" id="sort" autocomplete="off" placeholder=""
+                                       style="margin-left: 0px; margin-right: 0px; padding-top: 2px; padding-bottom: 2px; width:240px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="12%" height="39" align="right" nowrap="nowrap" bgcolor="#f1f1f1"><b>作者</b></td>
+                            <td width="38%"><input required="required" type="text" name="keynote" id="keynote" class="span1-1"/></td>
+                        </tr>
+                        <tr>
+                            <td width="12%" height="39" align="right" nowrap="nowrap" bgcolor="#f1f1f1"><b>特色</b></td>
+                            <td width="38%"><input required="required" type="text" name="characteristic" id="characteristic" class="span1-1"/></td>
+                        </tr>
+                        <tr>
+                            <td width="12%" height="39" align="right" nowrap="nowrap" bgcolor="#f1f1f1"><b>视频路径</b></td>
+                            <td width="38%"><input required="required" type="text" name="videopath" id="videopath" class="span1-1"/></td>
+                        </tr>
+                    </table>
+                    <table class="margin-bottom-20 table  no-border">
+                        <tr>
+                            <td class="text-center"><input type="submit" value="保存" class="btn btn-info "
+                                                           style="width:80px;"/><input onclick="javascript:window.history.go(-1)" type="button" value="返回"
+                                                                                       class="btn btn-info "
+                                                                                       style="width:80px; margin-left:10px;"/>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,379 @@
+1.获取验证码
+接口地址：192.168.1.65:8021/getPhoneCaptcha
+
+支持格式：json
+
+请求方式：
+
+参数名         	类型          必填          			说明
+username       String         是         		用户名，默认为手机号
+type           String         是         		用户类型，stu为学生,tea为教师,org为机构
+
+返回值
+格式：json
+参数名        	类型              	说明
+status			String		"S"为成功,"W"为警告,"E"为错误
+message  		String		返回状态的详细说明
+data 			Object   	具体返回数据
+
+
+
+2.注册
+接口地址：192.168.1.65:8021/getPhoneCaptcha
+
+支持格式：json
+
+请求方式：POST
+
+参数名         			类型          		   必填          			说明
+username       String         是         		用户名，默认为手机号
+type           String         是         		用户类型，tea为学生,stu为教师,org为机构
+password	   String		     是			用户密码
+phoneCatpcha   String		     是			加密后的验证码
+
+返回值
+格式：json
+参数名        			 类型              	说明
+status			String		"S"为成功,"W"为警告,"E"为错误
+message  		String		返回状态的详细说明
+data 			Object   	具体返回数据
+
+
+
+3.获取token
+接口地址：192.168.1.65:8021/getToken
+
+支持格式：json
+
+请求方式：POST
+
+参数名         			类型          		   必填          			说明
+username       String         是         		用户名，默认为手机号
+type           String         是         		用户类型，tea为学生,stu为教师,org为机构
+
+返回值
+格式：json
+参数名        			 类型              	说明
+status			String		"S"为成功,"W"为警告,"E"为错误
+message  		String		返回状态的详细说明
+data 			Object   	具体返回数据
+
+
+
+4.登录
+接口地址：192.168.1.65:8021/login
+
+支持格式：json
+
+请求方式：POST
+
+参数名         			类型          		   必填          			说明
+username       String         是         		用户名，默认为手机号
+type           String         是         		用户类型，tea为学生,stu为教师,org为机构
+password	   String		     是			加密后的密码	
+timestamp	   String		     是			时间戳	
+
+返回值
+格式：json
+参数名        			 类型              		说明
+status			String		"S"为成功,"W"为警告,"E"为错误
+message  		String		返回状态的详细说明
+data 			Object   	具体返回数据
+
+
+
+5.注销
+接口地址：192.168.1.65:8021/logout
+
+支持格式：json
+
+请求方式：POST
+
+参数名         			类型          		   必填          			说明
+username       String         是         		用户名，默认为手机号
+type           String         是         		用户类型，tea为学生,stu为教师,org为机构
+ticket		   String		      是			用户操作的凭据	
+
+返回值
+格式：json
+参数名        			 类型              		说明
+status			String		"S"为成功,"W"为警告,"E"为错误
+message  		String		返回状态的详细说明
+data 			Object   	具体返回数据
+
+
+
+6.上传新闻
+接口地址：192.168.1.65:8021/news/upload
+
+支持格式：json
+
+请求方式：POST
+
+参数名        			 类型          		     必填          	说明
+username       String         是         	用户名，默认为手机号
+type           String         是        	用户类型，tea为老师，stu为学生,org为机构
+ticket		   String		     是		用户发送请求的凭据	
+dirName		   String		     是		用户上传文件类型 image为图片，media为视频，空为无附加	
+contents	   String		     是		用户发送新闻的内容	
+title		   String		     是		用户发送新闻的标题
+file		   File			     否		用户上传的文件		
+返回值：
+
+格式：json
+参数名        			 类型              		说明
+status			String		"S"为成功,"W"为警告,"E"为错误
+message  		String		返回状态的详细说明
+data 			Object   	具体返回数据
+
+
+
+
+7.最热新闻
+接口地址：192.168.1.65:8021/news/hottest
+
+支持格式：json
+
+请求方式：POST
+
+参数名        			 类型          		   必填          	           说明
+pageNum		   String		     是			页数		
+返回值：
+
+格式：json
+参数名        			 类型              		说明
+status			String		"S"为成功,"W"为警告,"E"为错误
+message  		String		返回状态的详细说明
+data 			Object   	具体返回数据
+
+
+
+8.最近新闻
+接口地址：192.168.1.65:8021/news/latest
+
+支持格式：json
+
+请求方式：POST
+
+参数名        			 类型          		     必填          	说明
+pageNum			String		       是			页数	
+返回值：
+
+格式：json
+参数名        			 类型              		说明
+status			String		"S"为成功,"W"为警告,"E"为错误
+message  		String		返回状态的详细说明
+data 			Object   	具体返回数据
+
+
+
+9.收藏新闻
+接口地址：192.168.1.65:8021/news/collectionNews
+
+支持格式：json
+
+请求方式：POST
+
+参数名        			 类型          		    必填          		说明
+username       String         是         	用户名，默认为手机号
+type           String         是        	用户类型，tea为老师，stu为学生,org为机构
+ticket		   String		     是		用户发送请求的凭据	
+newsId		   Integer		     是		新闻编号	
+
+
+
+返回值：
+
+格式：json
+参数名        			 类型              		说明
+status			String		"S"为成功,"W"为警告,"E"为错误
+message  		String		返回状态的详细说明
+data 			Object   	具体返回数据
+
+
+
+10.查询用户收藏的新闻
+接口地址：192.168.1.65:8021/news/favorite
+
+支持格式：json
+
+请求方式：POST
+
+参数名        			 类型          		    必填          		说明
+username       String         是         	用户名，默认为手机号
+type           String         是        	用户类型，tea为老师，stu为学生,org为机构
+ticket		   String		     是		用户发送请求的凭据	
+pageNum		   Integer		     是			页数		
+
+
+返回值：
+
+格式：json
+参数名        			 类型              		说明
+status			String		"S"为成功,"W"为警告,"E"为错误
+message  		String		返回状态的详细说明
+data 			Object   	具体返回数据
+
+
+
+11.修改用户名
+接口地址：192.168.1.65:8021/modifyName
+
+支持格式：json
+
+请求方式：POST
+
+参数名        			 类型          		    必填          		说明
+username       String         是         	用户名，默认为手机号
+type           String         是        	用户类型，tea为老师，stu为学生,org为机构
+ticket		   String		     是		用户发送请求的凭据	
+newname		   String		     是		用户的新名字
+
+返回值：
+
+格式：json
+参数名        			 类型              		说明
+status			String		"S"为成功,"W"为警告,"E"为错误
+message  		String		返回状态的详细说明
+data 			Object   	具体返回数据
+
+
+
+12.上传头像
+接口地址：192.168.1.65:8021/faviconUpload
+
+支持格式：json
+
+请求方式：POST
+
+参数名        			 类型          		    必填          		说明
+username       String         是         	用户名，默认为手机号
+type           String         是        	用户类型，tea为老师，stu为学生,org为机构
+ticket		   String		     是		用户发送请求的凭据	
+file		   File		                是		上传头像的文件，只支持图片格式
+返回值：
+
+格式：json
+参数名        			 类型              		说明
+status			String		"S"为成功,"W"为警告,"E"为错误
+message  		String		返回状态的详细说明
+data 			Object   	具体返回数据
+
+
+
+13.修改密码
+接口地址：192.168.1.65:8021/modifyPassword
+
+支持格式：json
+
+请求方式：POST
+
+参数名        			 类型          		    必填          		说明
+username       String         是         	用户名，默认为手机号
+type           String         是        	用户类型，tea为老师，stu为学生,org为机构
+ticket		   String		     是		用户发送请求的凭据	
+password	   String		     是		加密后的密码
+timestamp 	   String		     是		时间戳
+newPassword    String		     是		新密码
+
+返回值：
+
+格式：json
+参数名        			 类型              		说明
+status			String		"S"为成功,"W"为警告,"E"为错误
+message  		String		返回状态的详细说明
+data 			Object   	具体返回数据
+
+
+
+
+13.新闻详情
+接口地址：192.168.1.65:8021/news/detail
+
+支持格式：json
+
+请求方式：POST
+
+参数名        			 类型          		    必填          		说明
+username       String         是         	用户名，默认为手机号
+type           String         是        	用户类型，tea为老师，stu为学生,org为机构
+ticket		   String		     是		用户发送请求的凭据
+newsId		   String 		     是		新闻id	
+
+返回值：
+
+格式：json
+参数名        			 类型              		说明
+status			String		"S"为成功,"W"为警告,"E"为错误
+message  		String		返回状态的详细说明
+data 			Object   	具体返回数据
+
+14.教师学生签约
+接口地址：192.168.1.65:8021/homework/sign
+
+支持格式：json
+
+请求方式：POST
+
+参数名        			 类型          		    必填          		说明
+username       String         是         	发起签约者的用户名
+type           String         是        	发起签约者的用户类型，tea为老师，stu为学生,org为机构
+ticket		   String		     是		用户发送请求的凭据
+CWKId		   Integer 		     是		签约目标的用户id
+signType	   Integer		     是		签约类型 0为按次数，1为包月
+signCount	   Integer		     是		签约数量，如果按次数就是次数；如果按月数就是月数
+测试的时候可以用学生账号签约CWKId=5的老师
+
+返回值：
+
+格式：json
+参数名        			 类型              		说明
+status			String		"S"为成功,"W"为警告,"E"为错误
+message  		String		返回状态的详细说明
+data 			Object   	具体返回数据
+
+15.修改用户名
+接口地址：192.168.1.65:8021/modifyName
+
+支持格式：json
+
+请求方式：POST
+
+参数名        			 类型          		    必填          		说明
+username       String         是         	发起签约者的用户名
+type           String         是        	发起签约者的用户类型，tea为老师，stu为学生,org为机构
+ticket		   String		     是		用户发送请求的凭据
+newName		   String		     是		新用户名
+测试的时候可以用学生账号签约CWKId=5的老师
+
+返回值：
+
+格式：json
+参数名        			 类型              		说明
+status			String		"S"为成功,"W"为警告,"E"为错误
+message  		String		返回状态的详细说明
+data 			Object   	具体返回数据
+
+
+16.教师列表
+接口地址：192.168.1.65:8021/teacherList
+
+支持格式：json
+
+请求方式：POST
+
+参数名        			 类型          		    必填          		说明
+username       String         是         	发起签约者的用户名
+type           String         是        	发起签约者的用户类型，tea为老师，stu为学生,org为机构
+ticket		   String		     是		用户发送请求的凭据
+pageNum		   Integer		     是		页数				  	
+测试的时候可以用学生账号签约CWKId=5的老师
+
+返回值：
+
+格式：json
+参数名        			 类型              		说明
+status			String		"S"为成功,"W"为警告,"E"为错误
+message  		String		返回状态的详细说明
+data 			Object   	具体返回数据
+

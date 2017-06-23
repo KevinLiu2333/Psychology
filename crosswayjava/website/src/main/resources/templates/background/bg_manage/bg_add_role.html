@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>添加/修改  角色</title>
+	<link rel="stylesheet" href="/css/bootstrap.css" />
+	<link rel="stylesheet" href="/css/css.css" />
+	<link href="/css/zzsc.css" type="text/css" rel="stylesheet"/>
+	<script src="/js/jquery.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(function(){
+			 $(".subNav").click(function(){
+				$(this).toggleClass("currentDd").siblings(".subNav").removeClass("currentDd");
+				$(this).toggleClass("currentDt").siblings(".subNav").removeClass("currentDt");				
+			});
+			
+			/* 下面是页面变为修改角色权限时，将该角色原有权限对应的input都变为checked */
+			var breadcrumb = $(".breadcrumb").text(); //获取页面当前状态(添加角色、修改角色)
+			if(breadcrumb == "当前位置：修改角色") {//当页面状态为修改角色时进行下面的操作
+				var original_roleId = $("#original_roleId").val();
+				var original_roleName = $("#original_roleName").val();
+				var original_roleAuthority = $("#original_roleAuthority").val();
+				var authority_array = original_roleAuthority.split(",");
+				$("#roleName").val(original_roleName);
+				$("#roleName").attr("readonly","readonly");
+				var inputAll = $(".add_list input");//获取所有dt和dd中的input
+				for(var i=0;i<inputAll.length;i++) {
+					var inputValue = inputAll.eq(i).val();
+					var inputSub = inputValue.substring(0,2);
+					if($.inArray(inputValue,authority_array)>=0 || $.inArray(inputSub,authority_array)>=0) {
+						inputAll.eq(i).attr("checked",true);
+					}
+				}
+			}
+		});
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			/*该单击事件功能：当大权限被选中时，小权限默认都选中 */
+			$(".bigName").click(function(){
+			  var ddName= $(this).parent().siblings();
+			  for(var i=0; i<ddName.length;i++){
+					 var son= ddName.eq(i).children();
+				  if($(this).attr("checked")){
+					  son.attr("checked",true);
+					 
+					 }else{
+					  son.attr("checked",false);
+				  }
+			  }
+			});
+		
+			/*该单击事件功能：当某个大权限对应的所有子权限都被选中时，大权限也会被选中  */
+			$(".nameThree").click(function(){
+				var inputName=$(this).parent().siblings();//所有的除了本身之外的dd和dt其中第一个为dt
+				if($(this).attr("checked")){//判断当前input是否是checked
+					var flag=true;//定义一个开关变量
+					for(var i=0; i<inputName.length-1;i++){//遍历每一个选中的dd（去掉了dt）				
+						var names= inputName.eq(i+1).children().eq(0);//取到当前dd中的input
+						if(!names.attr("checked")){//判断该input是否为checked，不为真的话，改变开关变量的值
+			 			   flag=false;
+							break;
+						}
+					}
+					/* 下面判断dt中的input是否需要被修改为checked */
+					if(flag){
+						 
+						var first = inputName.eq(0).children();
+						if(first.attr("checked")){
+							
+						} else {
+							first.attr("checked",true);
+						}
+					}
+				}
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		function formSubmit(){
+			var authorityName=$("#authorityNameOne").val();
+			authorityName="";
+			var inputs=$("input:checked");
+			for(var i=0;i<inputs.length;i++){
+				var inputParent=inputs.eq(i).parent();
+				var inputValue=inputParent.text();
+				authorityName+=inputValue+',';
+			} 
+			$("#authorityNameOne").val(authorityName);
+		   	document.forms[0].submit();
+		}
+	</script>
+	<script type="text/javascript">
+	$(function(){
+		
+		var msg = $("#input_hidden").val();
+		if(msg != null) {
+			alert(msg);
+		}
+	});
+	</script>
+</head>
+<body>
+ <input id="input_hidden" type="hidden" th:value="${msg}" th:if="${msg} != null"/>
+	<div th:include="background/bg_common/bg_head">
+	</div>
+	<!-- 顶部 -->              
+	<div id="middle">
+	     <div class="left">
+			<!-- 代码 开始 -->
+			<div th:include="background/bg_common/bg_nav">
+			</div>
+			<!-- 代码 结束 -->
+     	 </div>
+	     <div class="right"  id="mainFrame">
+		     <div class="right_cont">
+				<ul class="breadcrumb" th:if="${bgRole} == null">当前位置：添加角色</ul>
+				<ul class="breadcrumb" th:if="${bgRole} != null">当前位置：修改角色</ul>
+		   		<div style="width:900px; margin:auto; margin-top:100px;">
+				    <form action="/manage/order/addRole" method="post">
+					    <!-- 修改角色权限状态下使用     开始 -->
+					   	<div th:if="${bgRole} != null">
+					   		<input name="original_roleId" id="original_roleId" type="text" style="display:none;" th:value="${bgRole.roleid}"/>
+							<input name="original_roleName" id="original_roleName" type="text" style="display:none;" th:value="${bgRole.rolename}"/>
+							<input name="original_roleAuthority" id="original_roleAuthority" type="text" style="display:none;" th:value="${bgRole.roleauthority}"/>
+					   	</div>
+					    <!-- 修改角色权限状态下使用     结束 -->
+		   
+		   				<input  name="authorityNameOne" id="authorityNameOne" type="text" style="display:none;"/>
+		   				<table class="table table-bordered" >
+					     <tr>
+					       <td width="12%" height="39" align="right" nowrap="nowrap" bgcolor="#f1f1f1">角色名称：</td>
+					       <td width="38%"><input type="text" name="roleName" id="roleName" class="pawd_text"  /></td>
+					     </tr>
+					     <tr>
+					       <td height="38" align="right" nowrap="nowrap" bgcolor="#f1f1f1">角色权限：</td>
+					       <td>
+						       <div class="add_list">
+						           <dl class="nameTy" th:each="roleAuthority:${roleAuthorityList}">
+						             <dt  class="nameOne" >
+						             	<input class="bigName" name="authorityName" type="checkbox" th:value="${roleAuthority.bgAuthority.authorityid}" th:text="${roleAuthority.bgAuthority.authorityname}"></input>
+						             </dt>
+						             <dd class="nameTwo" th:each="authority:${roleAuthority.bgAuthorityList}">
+						             	<input class="nameThree"  name="roleAuthority" type="checkbox" th:value="${authority.authorityid}"  th:text="${authority.authorityname}"/>	             	 
+						             </dd>
+						           </dl>
+						       </div>
+					       </td>       
+					     </tr>     
+		   				</table>
+					    <table  class="margin-bottom-20 table  no-border" >
+					        <tr>
+					     		<td class="text-center"><a href="javascript:;" onclick="formSubmit();"><input type="text" value="确定" class="btn btn-info " style="width:80px;" /></a></td>
+					        </tr>
+					    </table>
+		   			</form>
+			   	</div> 
+	     	</div>     
+	     </div>    
+    </div>
+</body>
+</html>

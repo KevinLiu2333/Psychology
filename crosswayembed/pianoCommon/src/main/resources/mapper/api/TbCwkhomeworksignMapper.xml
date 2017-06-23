@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.pianoCommon.api.mapper.TbCwkhomeworksignMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.pianoCommon.api.model.TbCwkhomeworksign">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" jdbcType="INTEGER" property="id" />
+    <result column="Type" jdbcType="INTEGER" property="type" />
+    <result column="Months" jdbcType="INTEGER" property="months" />
+    <result column="CWKStudentID" jdbcType="INTEGER" property="cwkstudentid" />
+    <result column="CWKTeacherID" jdbcType="INTEGER" property="cwkteacherid" />
+    <result column="HomeworkCount" jdbcType="INTEGER" property="homeworkcount" />
+    <result column="UsedCount" jdbcType="INTEGER" property="usedcount" />
+    <result column="AddTime" jdbcType="TIMESTAMP" property="addtime" />
+    <result column="IsTeacherAgree" jdbcType="BIT" property="isteacheragree" />
+    <result column="IsStudentAgree" jdbcType="BIT" property="isstudentagree" />
+    <result column="AgreeTime" jdbcType="TIMESTAMP" property="agreetime" />
+    <result column="OnePrice" jdbcType="REAL" property="oneprice" />
+    <result column="Score" jdbcType="REAL" property="score" />
+  </resultMap>
+</mapper>

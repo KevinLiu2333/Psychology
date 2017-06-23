@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,iframe,input,textarea,select,label,article,aside,footer,header,menu,nav,section,time,audio,video {	margin:0; padding:0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block;}
+html { font-size: 62.5%; line-height: 1.5rem;}
+body { font-size: 1.4rem/2em; font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-align:justify; text-justify:inter-ideograph; color:#333333; background-color: #fff;}
+textarea { resize: none;}
+iframe, img { border: 0;}
+ul, ol { list-style: none;}
+input, select, textarea { outline: 0; -webkit-user-modify: read-write-plaintext-only; border-radius: 0;}
+a { text-decoration: none;}
+body, html { width: 100%; position: relative;}
+html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 { -webkit-text-size-adjust:100%; -ms-text-size-adjust: 100%;}
+img{ border:0 none; vertical-align:middle;} 
+p{ text-indent:2em; font-family:"微软雅黑";}
+.contain_wrap{
+	width:100%;
+	margin-top:1.2rem;  font-weight:normal;
+	}
+.contain_wrap .qupu{padding:3rem 5rem 3rem 5rem;}
+.contain_wrap .qupu img{width:100%;}
+.radio_photo{
+	text-align:center;
+	margin-bottom:1px; position:relative;
+	}
+img.topic{
+	width:120px;
+}
+.push{ float:right; width:100%;
+	text-align:right;
+	margin-bottom:1px; 
+	}
+img.pspic{
+	width:100px; margin-right:2rem; margin-bottom:3rem;
+}
+.contain_sub{
+	color:#9a896d;
+	text-decoration:none;
+	padding:0.7rem 2rem; text-align:center;
+	font-size:1.6rem;
+	}	
+ .logo{
+	text-align:center;
+	margin-bottom:1px;
+	}
+img.lgpic{
+	width:120px;
+}   
+.contain_sub h1{font-size:2.8rem; line-height:4rem; color:#877659;}	
+.contain_sub .title{font-size:18px; color:#9a896d; font-weight:bold; display:block;line-height:28px; margin-top:12px;}
+.contain_sub .author{font-size:1.6rem; display:block;color:#877659; line-height:28px;}
+.contain_pic{
+	text-align:center;
+	margin-bottom:1px; margin-top:2rem;
+	}	
+

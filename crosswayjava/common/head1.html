@@ -1,0 +1,62 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<div class="navhead">
+	<nav class="index-nav">
+		<div class="logo">
+			<a href="/index.html"><img src="/images/logo.png" /></a>
+		</div>
+
+		<div class="shopcart">
+			<a href="/cart"> </a>
+		</div> 
+ 	  <!-- <span th:if="${product.price lt 100}" class="offer">Special offer!</span>   -->
+		<!--  <div class="exit" th:if="${session.klsw_user }">
+		    <a href="/logout">退出</a>
+		 </div> -->
+		<div class="login">
+			<a href="/order/list"></a>
+		</div>
+		<ul class="nav-list">
+
+			<li class="nav-item"><a href="/">首页</a></li>
+
+			<li class="nav-item"><a href="/smart.html">智能钢琴</a></li>
+
+			<li class="nav-item"><a href="/mall" class="orange">在线商城</a></li>
+
+			<li class="nav-item"><a href="/service.html">服务中心</a></li>
+
+			<li class="nav-item"><a href="/aboutus.html">关于我们</a></li>
+
+		</ul>
+	</nav>
+</div>
+
+</body>
+
+<script type="text/javascript">
+		$(function() {
+	       if ($(document).scrollTop() > 0 ) {
+	            if(!$('.navhead').hasClass('shadow')){
+	                $('.navhead').addClass('shadow');
+	            }
+	        }
+	        $(window).scroll(function() {
+	            if ($(document).scrollTop() > 0 ) {
+	                if(!$('.navhead').hasClass('shadow')){
+	                    $('.navhead').addClass('shadow');
+	                }
+	            }else{
+	                $('.navhead').removeClass('shadow');
+	            }
+	        }); 
+	    
+	    })
+	    
+	    
+</script>
+</html>

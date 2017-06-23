@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>MID下载</title>
+<link  href="/css/load.css" rel="stylesheet" />
+<link href="/css/jquery.datetimepicker.css" rel="stylesheet"/>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script src="/js/jquery.datetimepicker.full.js"></script>
+<script type="text/javascript">
+    $(function(){
+    	var logic = function( currentDateTime ){
+    		if (currentDateTime && currentDateTime.getDay() == 6){
+    			this.setOptions({
+    				minTime:'11:00'
+    			});
+    		}else
+    			this.setOptions({
+    				minTime:'8:00'
+    			});
+    	};
+    	  
+    	$('#datetimepicker7').datetimepicker({
+    		      language:"ch", //语言选择中文 注：旧版本 新版方法：$.datetimepicker.setLocale('ch');
+    		      format:"Y-m-d h:i:s",      //格式化日期
+    			  onChangeDateTime:logic,
+    			  onShow:logic
+    		    
+    		}); 
+     $('#datetimepicker8').datetimepicker({
+    		      language:"ch", //语言选择中文 注：旧版本 新版方法：$.datetimepicker.setLocale('ch');
+    		      format:"Y-m-d h:i:s",      //格式化日期
+			  onChangeDateTime:logic,
+			  onShow:logic
+    		}); 
+     var msg = $("#errorMsg").val();
+     if(msg==""){  
+     }else{
+    	 alert(msg);
+    	 }
+
+});
+</script> 
+</head>  
+<body style="background-color:#CCC;">  
+
+<div class="down">
+<input type="hidden" id="errorMsg" th:value="${error}"/>
+<div style=" width:80%; height:215px; margin-left:55px; padding-top:45px;  margin-top:30px;"> 
+<form method="post" action="/load/downLoad">
+<span>请输入MID名称：<input type="text" name="MIDName"/></span>
+<span>请输入钢琴名称：<input type="text" name="StudentName"/></span>
+<span style="display:block;">请输入开始时间：	<input type="text" id="datetimepicker7" name="studentTime"/></span>
+<span style="display:block;">请输入结束时间：<input type="text" id="datetimepicker8" name="endTime"/></span>
+ <input class="btn" id="subBtn"  type="submit" value="提交" />   
+</form>
+</div> 
+</div> 
+</body>  
+</html> 

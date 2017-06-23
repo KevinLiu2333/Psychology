@@ -1,0 +1,151 @@
+html, body { padding: 0px!important; padding: 100px 0px; width: 100%; height: 100%; overflow: hidden; }
+.header { position: absolute!important; position: relative; _top: -200px; width: 100%; height: 60px; background-color:#0081c2; }
+#middle { position: absolute!important; top: 60px!important; height: auto!important; position: relative; top: -160px; _top: -200px; height: 100%; bottom: 0px; width: 100%; background: #fff;/* overflow: hidden; */}
+.left { float: left; width: 220px; background: #fff url(../img/left_bg.png)  repeat-y  right; overflow-x:hidden;overflow-y:auto; height: 100%; position: relative; }
+.right { background: #fff; overflow-y: auto;overflow-x: auto; height:100%; position:relative; }
+.right_cont{ padding:10px; width:auto;}
+.tab_right_bottom{    background:#fff; position:absolute; bottom:20px; left:10px; right:10px; border:2px solid #ddd; border-top:none;}
+.tab_right_bottom .tabs-below  .nav-tabs {border-top: 1px solid #ddd; background:#f3f3f3;}
+.tab_right_bottom .tabs-below  .nav-tabs li{ border-left:1px solid #ddd; border-right:1px solid #ddd; margin-left:-1px}
+.tab_right_bottom .nav-tabs  .active > a,.tab_right_bottom .nav-tabs  .active  a:hover, .tab_right_bottom .nav-tabs  .active  a:focus {background-color: #fff;border: 0px solid #ddd;border-bottom: 2px solid #06C; color:#333;}
+ .Switch { float: left; width: 5px; height: 100%; background: #fff url(../img/Switch.png) no-repeat center center; cursor: pointer; }
+#footer { position: absolute; bottom: 0; width: 100%; height: 0px; background: #666464; line-height: 30px; text-align: center; color: #ccc; }
+.logo { float: left;
+    padding-left: 10px;
+    font-size: 22px;
+    line-height: 50px;
+    float: left;
+    height: 50px;
+    padding-right: 10px;
+    color:#FFF; font-weight:bold;
+    }
+.header-m { float: right; height: 50px; line-height: 50px; }
+.header-m .btn { border: 0; padding-left: 8px; padding-right: 8px; }
+.header-right { float: right; padding-left:30px; padding-right:20px;}
+.header-right a { color: #fff; line-height: 60px; margin-right: 20px; }
+.fixed-bottom { position: absolute; bottom: 0; margin-bottom: 0; }
+.nav-tabs > li { margin-bottom: -1px; width: 130px; text-align: center; font-size: 14px; font-family: "microsoft yahei"; font-weight: bold; }
+ 
+
+.scroll{   position: absolute!important; top: 0px!important; height: auto!important; position: relative; top: -100px; _top: 0px; height: 100%; bottom: 30px; width:260px;}
+.car_icon li ul li a{ font-size:12px; background:url(../img/car_icon.png) no-repeat left center; padding-left:18px;}
+ 
+.fixed{ position: fixed; top:50px; left:0px; width:232px;}
+.btn-mini{ padding:6px 8px;}
+.weizhang_img{ border:1px solid #ddd; padding:2px; width:120px;}
+.sx{ padding:10px; background:#f9f9f9; margin-bottom:10px;}
+.sx ul{ margin:10px;}
+.sx ul li{  height:30px; line-height:30px; padding:0 15px; background:#eee; display:inline-block;  margin-right:10px; margin-bottom:5px; cursor:pointer;}
+.sx ul li:hover{ background:#e1e1e1;}
+.sx ul li.select{ background:#F60 url(../img/select.png) no-repeat 9px center; padding-left:24px; color:#fff;}
+
+
+div.sdmenu{ font-size:12px;background:#ccc;color:#fff;}
+div.sdmenu div{overflow:hidden; margin-top:-1px; height:40px; border-bottom:2px solid #d9d9d9;}
+div.sdmenu div{background:#fff url(../img/left_bg.png) repeat-y right;  }
+div.sdmenu div a{display:block;color:#066; background:url(../img/171.png) no-repeat 30px 15px; text-indent:50px; padding:2px 0; height:40px; line-height:40px;}
+div.sdmenu div a.current{ background:#666 url(../img/171.png) no-repeat 27px 15px; border-left:3px solid #F65241; color:#fff;}
+div.sdmenu div a:hover{background-color:#e2e2e2;color:#333;text-decoration:none;}
+div.sdmenu div a.current:hover{background:#666 url(../img/171.png) no-repeat 27px 15px; border-left:3px solid #F65241; color:#fff;}
+
+.title_right{ font-size:12px;font-family:"microsoft yahei"; border-bottom:1px solid #ddd; margin-bottom:20px; line-height:30px;}
+.title_right strong{ border-bottom:1px solid #F60;line-height:30px; display:inline-block; padding:0 10px; margin-bottom:-1px;}
+.breadcrumb{ margin:-10px -10px 5px -30px; padding-left:35px;}
+.top_admin{ width:auto; float:right; color:#FFF; line-height:60px; color:#fff; font-size:14px; letter-spacing:2px;}
+.top_admin span{color:#f8ac00; line-height:50px; font-weight:bold; }
+.fan{width:auto;   float:right; margin-right:30px; margin-top:10px;}
+.fan_text{width:40px;}
+
+.per_intro{width:200px; float:left;}
+
+.serch_right{ width:100%; font-size:12px;font-family:"microsoft yahei"; border-bottom:1px solid #ddd; margin-bottom:20px; line-height:30px; float:right; text-align:right; padding-bottom:5px;}
+.serch_text {width: 200px; height:22px !important; line-height:22px !important;}
+.pawd_text{width:120px !important; height:24px !important;}
+.select_text{width:120px !important; height:30px !important;}
+
+
+.delete_bor{width:340px; height:130px; background:#fff; margin:auto; margin-top:15%; border:1px solid #d9d9d9; padding:20px;}
+.dele_shan{ width:150px; float:left; line-height:30px; color:#3c3c3c; font-weight:bold; font-size:14px;}
+.dele_icon{width:18px; float:right; height:20px;}
+.dele_que{ width:100%; float:left; line-height:30px; color:#3c3c3c; font-size:12px; margin-top:10px;}
+.dele_bao{width:100%; float:left; margin-top:15px; text-align:center;}
+.dele_button{width:62px !important;}
+
+
+
+.role_list{ width:auto; float:left;border-bottom:1px solid #d9d9d9;padding:10px 0;}
+.role_title{width:100px; float:left; color:#EB5405; line-height:30px; font-weight:bold;}
+.role_evli{width:600px; float:left;}
+.role_evli ul li{width:auto; float:left;line-height:30px; text-align:left; margin-right:10px;}
+
+
+.order_menu{width:100%; float:left;}
+.order_menu ul li{width:100%; float:left; margin-bottom:13px;}
+.order_pic{width:60px; height:60px; float:left; border:1px solid #d9d9d9;}
+.order_pic img{width:60px; height:60px;}
+.order_text{ width:auto; height:60px; line-height:60px; text-align:left; float:left; padding-left:10px;}
+
+
+.add_list dl{ width:100%; float:left;border-bottom:1px solid #d9d9d9;padding:10px 0;}
+.add_list dl dt{width:100%; float:left; color:#EB5405;}
+.add_list dl dd{width:auto; float:left;line-height:30px; text-align:left; margin-right:5px;}
+
+/*订单详情样式*/
+.page-content {
+    background: #fff;
+    margin: 0;
+    padding: 8px 20px 24px;
+}
+.page-header {
+    margin: 0 0 12px;
+    border-bottom: 1px dotted #e2e2e2;
+    padding-bottom: 16px;
+    padding-top: 7px;
+}
+.row { margin:0 auto;
+}
+.row:before, .row:after {
+    display: table;
+    content: " ";
+}
+.col-xs-12 {
+    width: 100%;
+}
+.text-left {
+    text-align: left;
+}
+.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    float: left;
+}
+.row h3 {
+    font-size: 14px ;
+    font-weight: bold;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.col-xs-6 {
+    width: 50%; float:left;
+}
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.hr-double.dotted { border-bottom:1px solid #d9d9d9; float:left;
+}
+
+.total{ width:100%; float:left; border-bottom:1px dotted #d9d9d9; color:#404040; text-align:right; font-size:14px; line-height:60px; margin-bottom:20px;}
+.total span{ color:#ff5500; font-size:20px; font-weight:bold;}
+
+
+/*新增样式*/
+.welcome{padding:20px 20px 20px 54px; font-size:20px; color:#000; border:1px solid #d9d9d9;  background:url(../img/loginbg.png) left center no-repeat;background-color:#f5f5f5; margin-top:20px; }
+.com_title{padding:10px; font-size:16px; color:#000; border:1px solid #d9d9d9;  background-color:#f5f5f5; margin-top:20px; }
+.com_li{ font-size:16px; color:#000; border-left:1px solid #d9d9d9; border-right:1px solid #d9d9d9; border-bottom:1px solid #d9d9d9; background-color:#f5f5f5; }
+.com_li ul li{ width: auto; padding:20px; color:#00a0e9; font-size:18px; display:inline-block;}
+.com_li ul li a:hover{ color:#EB5405;}
+.information{ font-size:16px; color:#000; border-left:1px solid #d9d9d9; border-right:1px solid #d9d9d9; border-bottom:1px solid #d9d9d9; background-color:#f5f5f5; padding:20px;}
+.information ul li{ width: auto; line-height:30px; color:#292929; font-size:14px;}
+.information ul li span{ color:#EB5405; font-weight:bold; font-size:16px;}

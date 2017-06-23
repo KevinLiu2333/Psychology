@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>克洛斯威钢琴端后台管理系统</title>
+<link rel="stylesheet" href="/css/bootstrap.css" />
+<link rel="stylesheet" href="/css/css.css" />
+<link href="/css/zzsc.css" type="text/css" rel="stylesheet" />
+<script src="/js/jquery-1.3.2.js" type="text/javascript"></script>
+<script type="text/javascript">
+function tg() {
+	var r = confirm("确定通过认证么？")
+	if (r == true) {
+		var tg= $("input[name='tgrz']") .val(); 
+			  $("#tgrztg").val(tg); 
+			  $("#submitButton").submit();
+	} else {
+		return;
+	}
+}
+
+  function btg() {
+	var r = confirm("确定不通过认证么？") 
+	if (r == true) {
+		var btg= $("input[name='btgrz']") .val(); 
+			  $("#tgrztg").val(btg); 
+			  $("#submitButton").submit();
+	} else {
+		return;
+	}
+} 
+</script>
+</head>
+<body>
+	<div th:include="common/head"></div>
+	<!-- 顶部 -->
+	<div id="middle">
+		<div th:include="common/left"></div>
+		<div class="right" id="mainFrame">
+			<div class="right_cont">
+				<ul class="breadcrumb">当前位置： 老师详细信息
+				</ul>
+				<div style="width: 900px; margin: auto; margin-top: 100px;">
+					<form action="/manage/teacherAuthenticationr"  id="submitButton" method="post"  >
+						<input type="hidden" name="isauthentication" th:value="${wkTeacher.isauthentication}"> 
+					    <input type="hidden" name="teacherProcess" th:value="${wkTeacher.authenticationProcess}"> 
+						<input type="hidden" name="teacherID" th:value="${wkTeacher.id}">
+						<table class="table table-bordered">
+							<tr>
+								<td width="12%" height="39" align="right" nowrap="nowrap"
+									bgcolor="#f1f1f1">老师名称：</td>
+								<td width="38%" th:text="${wkTeacher.nickname}">李老师</td>
+							</tr>
+							<tr>
+								<td height="41" align="right" nowrap="nowrap" bgcolor="#f1f1f1">真实姓名：</td>
+								<td th:text="${wkTeacher.realname}">克洛斯威钢琴教育机构</td>
+							</tr>
+							<tr>
+								<td height="38" align="right" nowrap="nowrap" bgcolor="#f1f1f1">性别：</td>
+								<td style="word-break: break-all;" th:text="${wkTeacher.sex}">暂无</td>
+							</tr>
+							<tr>
+								<td height="38" align="right" nowrap="nowrap" bgcolor="#f1f1f1">生日：</td>
+								<td style="word-break: break-all;"
+									th:text="(${wkTeacher.birthday} == null ? null:${#dates.format(wkTeacher.birthday,'yyyy-MM-dd')})">暂无</td>
+							</tr>
+							<tr>
+							
+								<td height="38" align="right" nowrap="nowrap" bgcolor="#f1f1f1">所在地区：</td>
+								<td style="word-break: break-all;" th:text="${wkTeacher.region}">暂无</td>
+							</tr>
+							<tr>
+								<td height="38" align="right" nowrap="nowrap" bgcolor="#f1f1f1">授课经验：</td>
+								<td style="word-break: break-all;" th:text="${wkTeacher.teachExperience}">暂无</td>
+							</tr>
+							<tr>
+								<td height="38" align="right" nowrap="nowrap" bgcolor="#f1f1f1">授课级别：</td>
+								<td style="word-break: break-all;" th:text="${wkTeacher.teachGrade}">暂无</td>
+							</tr>
+							<tr>
+								<td height="38" align="right" nowrap="nowrap" bgcolor="#f1f1f1">毕业院校：</td>
+								<td style="word-break: break-all;" th:text="${wkTeacher.graduatedUniversity}">暂无</td>
+							</tr>
+							<tr>
+								<td height="38" align="right" nowrap="nowrap" bgcolor="#f1f1f1">资质证书：</td>
+								<td style="word-break: break-all;">暂无</td>
+							</tr>
+							<tr>
+								<td height="38" align="right" nowrap="nowrap" bgcolor="#f1f1f1">个人简介：</td>
+								<td style="word-break: break-all;" th:text="${wkTeacher.details}">暂无</td>
+							</tr>
+						</table>
+						<div style="padding-left: 270px;">
+						  <input type="hidden" id="tgrztg" name="tgrztg" />
+						  
+							<span style="margin-right: 253px;" onclick="return tg()">
+								  <input class="btn btn-info " type="button" name="tgrz" value="通过认证" style="width: 80px;">  
+							</span> 
+							<span onclick="return btg()"> 
+					 			<input class="btn btn-info " type="button" name="btgrz" value="不通过认证" style="width: 80px;">  
+					 			 <!--  <input type="hidden" id="tgrzbtg" name="tgrztg" /> -->
+							</span>
+						</div>
+					</form>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>

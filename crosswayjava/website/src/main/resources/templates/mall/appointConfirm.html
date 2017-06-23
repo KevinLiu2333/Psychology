@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>预约确认页面</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="/css/login.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/bdstat.js"></script>
+<style type="text/css">
+body{ font-family:"微软雅黑";}	
+.wrapa{ float:left;
+	width:288px; border:1px solid #d9d9d9; overflow:hidden; margin-top:130px; margin-left:400px; padding:30px;box-shadow: 0 2px 2px #e0e0e0; margin-bottom:30px;
+	}
+
+.logoa p{
+	color:#3e3a39;
+	font-size:20px;
+	margin-top:1px;
+	text-align:center; font-family:"微软雅黑";}	
+.logoa p span{
+	color:lightgreen;}	
+	
+.suba a{
+	color:#fff;
+	background:#eb5405;
+	text-decoration:none;
+	padding:7px 20px;
+	font-size:13px;
+	font-family:"微软雅黑";
+	font-weight:bold; line-height:30px;
+	}	
+</style>
+</head>
+
+<body>
+<div th:include="common/head"></div>
+
+<div id="login_bg">
+<div class="content">
+	<div class="wrapa">
+		<div class="logoa">
+		  <p th:text="${msg}"></p>
+		   <div class="suba" style=" margin-top:30px;">
+		     <p><a href="/mall">确定</a></p>
+		    </div>
+		</div>
+	</div>
+    <div class="foot_bei" style=" margin-top:130px">
+                2016 © chinacrossway.com 安徽克洛斯威智能乐器科技有限公司 | ICP证：皖ICP备15021161号-1
+     </div>
+</div>
+</div>
+</body>
+</html>

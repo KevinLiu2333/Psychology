@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>用户名设置</title>
+<link href="/css/index.css" rel="stylesheet">
+<link href="/css/add.css" rel="stylesheet">
+<link href="/css/share.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$(".myclass").hide();
+
+		//设置标题及要修改信息的输入框
+		var defaultValue = $("#defaultValue").val();
+		var titleType = $("#titleType").val();
+		var titleName = "";
+		if (titleType == "nickname") {
+			titleName = "昵称";
+			$("#myNickName").show();
+		}
+		if (titleType == "sex") {
+			titleName = "性别";
+			$("#mySex").show();
+		}
+		if (titleType == "pianoGrade") {
+			titleName = "钢琴级别";
+			$("#myPianoGrade").show();
+		}
+		if (titleType == "realname") {
+			titleName = "真实姓名";
+			$("#myRealName").show();
+		}
+		if (titleType == "ffavicon") {
+			titleName = "头像";
+			$("#myHeadPicture").show();
+		}
+		if (titleType == "birthday") {
+			titleName = "生日";
+			$("#myBirthday").show();
+		}
+		if (titleType == "region") {
+			titleName = "所在地区";
+			$("#myRegion").show();
+		}
+		if (titleType == "teachGrade") {
+			titleName = "所教级别";
+			$("#myTeachGrade").show();
+		}
+		$("#titleName").html(titleName);
+
+		$("#back").click(function() {
+			window.history.back();
+		});
+		
+		/***** 控制初始性别设置  ******/
+		var sex = $("#sex_hidden").val();
+		$("label").removeClass("checked");
+		if(sex == 'true') {
+			$("#male_label").addClass("checked");
+		} else {
+			$("#female_label").addClass("checked");
+		}
+		
+		/**** 控制单击时性别选择   ****/
+		$(".gender").click(function(){
+			var index = $(this).index();
+			var inputs = $("input[name='sex']");
+			var labels = $("label");
+			inputs.eq(index).attr("checked","checked");
+			labels.removeClass("checked");
+			labels.eq(index).addClass("checked");
+		});
+	})
+</script>
+<style>
+.gender {
+	width: 100%;
+	float: left;
+	background-color: #FFF;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+.gender .we_text {
+	width: auto;
+	float: left;
+	font-size: 16px;
+	color: #535353;
+	line-height: 35px;
+	padding: 8px 0 8px 14px;
+}
+
+.gender_select {
+	width: auto;
+	float: right;
+	margin: 8px 20px 8px 0px;
+}
+
+.gender_select span {
+	display: inline-block;
+	padding: 5px 0px 15px 20px;
+}
+
+.gender_select input[type="radio"] {
+	margin: 3px 3px 0px 0px;
+	padding-left: 20px;
+	display: none;
+}
+
+.gender_select label {
+	padding-left: 25px;
+	cursor: pointer;
+	height: 30px;
+}
+.checked {
+  background-position: left center; background:url(/images/gender_se.png) left top no-repeat; 
+} 
+</style>
+</head>
+
+<body>
+
+	<input type="hidden" th:value="${values}" id="defaultValue" />
+	<input type="hidden" th:value="${type}" id="titleType" />
+	<input type="hidden" th:value="${user.sex}" id="sex_hidden" />
+	
+	<form action="/my/modifyInfo" method="post"
+		enctype="multipart/form-data">
+		<div class="public_top">
+			<div class="public_back">
+				<img id="back" src="/images/back_c.png">
+			</div>
+			<div class="select_name" id="titleName">用户名设置</div>
+			<div class="select-icon">
+				<input type="submit" name="" id="submit"
+					style="color: #535353; display: block; width: 80px; float: right; margin-top: -3px; border: 0px; background-color: #eee;"
+					value="确定" />
+
+			</div>
+		</div>
+		<div class="pe_setting myclass" id="myNickName">
+			<span style="margin-left: 20px;"> <input name="nickname"
+				type="text" th:value="${user.nickname}"
+				style="padding-left: 5px; border: 0px; border: 0px; font-size: 12px; line-height: 25px;">
+			</span>
+		</div>
+
+
+		<div class="pe_setting myclass" id="myRealName">
+			<span style="margin-left: 20px;"> <input name="realname"
+				type="text" th:value="${user.realname}"
+				style="padding-left: 5px; border: 0px; border: 0px; font-size: 12px; line-height: 25px;">
+			</span>
+		</div>
+
+
+		<div class="pe_setting myclass" id="mySex">
+			<div class="gender">
+				<div class="we_text">男</div>
+				<div class="gender_select">
+					<span> <input type="radio" id="male" name="sex"
+						value="1"> <label id="male_label" class="checked" for="male"></label>
+					</span>
+				</div>
+			</div>
+			<div class="gender">
+				<div class="we_text">女</div>
+				<div class="gender_select">
+					<span> <input type="radio" id="female" name="sex"
+						value="0"> <label id="female_label" for="female"></label>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="myclass" id="myHeadPicture">
+			<div class="ab-box"
+				style="padding-bottom: 0px; margin-left: 15px; margin-top: 20px; height: 73px; position: relative;">
+				<!-- <i><img id="imgview" src="/images/setepic.png" th:if="${user.ffavicon} == ''" style="width:65px;height: 100%;margin-top: -14px;"/>
+				<img id="imgview" th:src="'http://wk-static.klsw.com'+${user.ffavicon}"
+					th:if="${user.ffavicon} != ''" style="width:65px;height: 100%;margin-top: -14px;"/>
+				</i> -->
+				<div style="position: absolute; left: 90px; top: 0px;">
+					<div class="picshow">
+						<img src="" id="imgview" style="display: none;" alt="">
+					</div> 
+					<div class="img_name"></div>
+					<span class="ctrl-file"> <input type="file" class="filehide"
+						id="uploadImage" name="file" onChange="filechange(this)">
+						<a href="javascript:;" id="sub" style="display: block;">点击上传</a>
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="pe_setting myclass mess_change" id="myBirthday">
+			<input type="date" id="birthday" name="birthday"
+				th:value="${user.birthday == null?null:#dates.format(user.birthday,'YYYY-MM-dd')}" />
+		</div>
+		<div class="pe_setting myclass" id="myPianoGrade"
+			th:if="${user.type == 'stu'}">
+			<select id="pianoGrade" name="pianoGrade" style="margin-left: 15px;">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</select>
+		</div>
+		<div class="pe_setting myclass" id="myTeachGrade"
+			th:if="${user.type == 'tea'}">
+			<select id="teachGrade" name="teachGrade" style="margin-left: 15px;">
+				<option value="0-5">0-5</option>
+				<option value="6-10">6-10</option>
+				<option value="0-10">0-10</option>
+			</select>
+		</div>
+		<div class="pe_setting myclass" id="myRegion">
+			<span style="margin-left: 20px;"> <input name="region"
+				type="text" id="region" th:value="${user.region}"
+				style="padding-left: 5px; border: 0px; border: 0px; font-size: 12px; line-height: 25px;">
+			</span>
+		</div>
+	</form>
+
+
+	<script type="text/javascript">
+		function filechange(file) {
+			if (file.files && file.files[0]) {
+				var reader = new FileReader();
+				reader.onload = function(evt) {
+					showimg(evt.target.result);
+				};
+				reader.readAsDataURL(file.files[0]);
+			} else {
+				file.select();
+				var src = document.selection.createRange().text;
+				showimg(src);
+			}
+		}
+
+		function showimg(src) {
+			var img = document.getElementById("imgview");
+			img.src = src;
+			img.style.display = 'block';
+
+			var sub = document.getElementById("sub");
+			sub.style.display = "none";
+		}
+	</script>
+
+</body>
+</html>

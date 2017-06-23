@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.pianoCommon.api.mapper.TbAgencyMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.pianoCommon.api.model.TbAgency">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="addtime" jdbcType="DATE" property="addtime" />
+    <result column="SID" jdbcType="VARCHAR" property="sid" />
+    <result column="SN" jdbcType="VARCHAR" property="sn" />
+    <result column="PID" jdbcType="VARCHAR" property="pid" />
+    <result column="remark" jdbcType="VARCHAR" property="remark"/>
+  </resultMap>
+  
+  <select id="selectByLikeName" parameterType="java.lang.String" resultType="com.klsw.pianoCommon.api.model.TbAgency">
+  	SELECT * FROM tb_Agency t 
+  	WHERE (t.SN LIKE CONCAT(CONCAT("%",#{0}),"%"))
+  	OR (t.SID LIKE CONCAT(CONCAT("%",#{0}),"%"))
+  	OR (t.PID LIKE CONCAT(CONCAT("%",#{0}),"%"))
+  	OR (t.remark LIKE CONCAT(CONCAT("%",#{0}),"%")) 
+  </select>
+</mapper>

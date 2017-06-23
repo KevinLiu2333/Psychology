@@ -1,0 +1,371 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>教师批改作业</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<link href="/css/share.css" rel="stylesheet">
+<link href="/css/skin.css" rel="stylesheet">
+<script src="/js/jquery.min.js"></script>
+<script src="/js/jcanvas.min.js"></script>
+<style type="text/css">
+        .top #color input {
+            width: 21px;
+            height: 21px;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            background: #ddd;
+        }
+
+        input[type=range] {
+            -webkit-appearance: none;
+            margin: 18px 0;
+            width: 100%;
+            background-color: transparent;
+        }
+
+        input[type=range]:focus {
+            outline: none;
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 18.4px;
+            cursor: pointer;
+            animate: 0.2s;
+            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+            background: #0094ff;
+            border-radius: 1.3px;
+            border: 0.2px solid #010101;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+            border: 1px solid #000000;
+            height: 46px;
+            width: 46px;
+            border-radius: 3px;
+            background: #ffffff;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -15px;
+        }
+
+        input[type=range]:focus::-webkit-slider-runnable-track {
+            background: #0094ff;
+        }
+
+        input[type=range]::-moz-range-track {
+            width: 100%;
+            height: 18.4px;
+            cursor: pointer;
+            animate: 0.2s;
+            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+            background: #0094ff;
+            border-radius: 1.3px;
+            border: 0.2px solid #010101;
+        }
+
+        input[type=range]::-moz-range-thumb {
+            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+            border: 1px solid #000000;
+            height: 46px;
+            width: 46px;
+            border-radius: 3px;
+            background: #ffffff;
+            cursor: pointer;
+        }
+
+        input[type=range]::-ms-track {
+            width: 100%;
+            height: 18.4px;
+            cursor: pointer;
+            animate: 0.2s;
+            background: transparent;
+            border-color: transparent;
+            border-width: 16px 0;
+            color: transparent;
+        }
+
+        input[type=range]::-ms-fill-lower {
+            background: #2a6495;
+            border: 0.2px solid #010101;
+            border-radius: 2.6px;
+            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        }
+
+        input[type=range]::-ms-fill-upper {
+            background: #3071a9;
+            border: 0.2px solid #010101;
+            border-radius: 2.6px;
+            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        }
+
+        input[type=range]::-ms-thumb {
+            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+            border: 1px solid #000000;
+            height: 46px;
+            width: 46px;
+            border-radius: 3px;
+            background: #ffffff;
+            cursor: pointer;
+        }
+
+        input[type=range]:focus::-ms-fill-lower {
+            background: #0094ff;
+        }
+
+        input[type=range]:focus::-ms-fill-upper {
+            background: #0094ff;
+        }
+    </style>
+<script type="text/javascript">
+
+        //function load() {
+
+        //    document.addEventListener('touchstart', touch, false);
+        //    document.addEventListener('touchmove', touch, false);
+        //    document.addEventListener('touchend', touch, false);
+
+        //    function touch(event) {
+        //        var event = event || window.event;
+        //        var oInp = document.getElementById("inp");
+
+        //        //switch (event.type) {
+        //        //    case "touchstart":
+        //        //        oInp.innerHTML = "Touch started (" + event.touches[0].clientX + "," + event.touches[0].clientY + ")";
+        //        //        break;
+        //        //    case "touchend":
+        //        //        oInp.innerHTML = "<br>Touch end (" + event.changedTouches[0].clientX + "," + event.changedTouches[0].clientY + ")";
+        //        //        break;
+        //        //    case "touchmove":
+        //        //        event.preventDefault();
+        //        //        oInp.innerHTML = "<br>Touch moved (" + event.touches[0].pageX + "," + event.touches[0].pageY + ")";
+        //        //        break;
+        //        //}
+        //    }
+        //}
+        //window.addEventListener('load', load, false);
+
+        var isEdit = true;
+        function setIsEdit(is) {
+            isEdit = is;
+            if (isEdit) {
+                document.getElementById("imgEdit").src = "/static/images/homework/pen_select.png";
+                document.getElementById("imgNotEdit").src = "/static/images/homework/move.png";
+            }
+            else {
+                document.getElementById("imgEdit").src = "/static/images/homework/pen.png";
+                document.getElementById("imgNotEdit").src = "/static/images/homework/move_select.png";
+            }
+        }
+
+        var scale = 1;
+        function scaleCanvas(s) {
+            scale *= s;
+            var canvas = document.getElementById("mycanvas");
+            var img = document.getElementById("tulip");
+            var div = document.getElementById("divcanvas");
+            canvas.style.MozTransform = 'scale(' + scale + ')';
+            canvas.style.WebkitTransform = 'scale(' + scale + ')';
+            canvas.style.OTransform = 'scale(' + scale + ')';
+            canvas.style.marginTop = (scale - 1) * 0.5 * img.height + 'px';
+            canvas.style.marginLeft = (scale - 1) * 0.5 * img.width + 'px';
+            div.style.height = (img.height * scale) + 'px';
+        }
+
+        $(function () {
+            var c = document.getElementById("mycanvas");
+            var ctx = c.getContext("2d");
+            ctx.lineCap = "round";　　//设置线条两端为圆弧
+            ctx.lineJoin = "round";　　//设置线条转折为圆弧
+            var img = document.getElementById("tulip");
+            c.width = img.width;
+            c.height = img.height;
+            ctx.drawImage(img, 10, 10);
+            $("#totulip").hide();
+            $("#panrange").val(4);
+            $("#panrangeval").val(4);
+        });
+
+        function changerange() {
+            $("#panrangeval").val($("#panrange").val());
+        };
+
+        var maxX = -1;
+        var maxY = -1;
+        var minX = 99999;
+        var minY = 99999;
+
+        function checkData(event) {
+            var x = event.pageX - $('canvas').offset().left;
+            var y = event.pageY - $('canvas').offset().top;
+            if (x > maxX) {
+                maxX = x;
+            } else if (x < minX) {
+                minX = x;
+            }
+            if (y > maxY) {
+                maxY = y;
+            } else if (y < minY) {
+                minY = y;
+            }
+        }
+
+        $(function () {
+            var obj = $('canvas');
+            var temp_e;
+            var temp_draw = false;
+            var panval = $("#panrange").val();
+            var x = 0;
+            var y = 0;
+
+            obj.on({
+                mousedown: function (e) {
+                    temp_e = e;
+                    temp_draw = true;
+                    checkData(e);
+                },
+                touchstart: function (e) {
+                    temp_e = e.originalEvent.targetTouches[0];
+                    x = e.originalEvent.touches[0].pageX;
+                    y = e.originalEvent.touches[0].pageY;
+                    temp_draw = true;
+                    checkData(temp_e);
+                },
+                mousemove: function (e) {
+                    if (temp_draw) {
+                        obj.drawLine({
+                            strokeStyle: $("input[name='rcolor']:checked").val(),
+                            strokeWidth: $("#panrange").val(),
+                            x1: (temp_e.pageX - $('canvas').offset().left) / scale,
+                            y1: (temp_e.pageY - $('canvas').offset().top) / scale,
+                            x2: (e.pageX - $('canvas').offset().left) / scale,
+                            y2: (e.pageY - $('canvas').offset().top) / scale,
+                        });
+                    }
+                    temp_e = e;
+                    checkData(e);
+                },
+                touchmove: function (e) {
+                    if (!isEdit)
+                        return;
+
+                    e.preventDefault();
+                    //此处使用temp_e在iphone，ipad上Safari会造成new_e和temp_e坐标相同。
+                    //document.getElementById('inp').innerHTML = "<br>(" + e.originalEvent.touches[0].pageX + "," + event.touches[0].pageY + ")";
+                    //document.getElementById('inp').innerHTML += "<br>(" + x + "," + y + ")";
+                    var new_e = e.originalEvent.touches[0];
+                    if (temp_draw) {
+                        obj.drawLine({
+                            strokeStyle: $("input[name='rcolor']:checked").val(),
+                            strokeWidth: $("#panrange").val(),
+                            x1: (x - $('canvas').offset().left) / scale,
+                            y1: (y - $('canvas').offset().top) / scale,
+                            x2: (new_e.pageX - $('canvas').offset().left) / scale,
+                            y2: (new_e.pageY - $('canvas').offset().top) / scale,
+                        });
+                    }
+                    temp_e = new_e;
+                    x = e.originalEvent.touches[0].pageX;
+                    y = e.originalEvent.touches[0].pageY;
+                    checkData(temp_e);
+                },
+                mouseup: function (e) {
+                    temp_e = null;
+                    temp_draw = false;
+                    checkData(e);
+                },
+                touchend: function (e) {
+                    temp_e = null;
+                    temp_draw = false;
+                    checkData(e.originalEvent);
+                },
+                mouseout: function () {
+                    temp_e = null;
+                    temp_draw = false;
+                }
+            });
+
+            $("#clearup").on("click", function () {
+
+                maxX = -1;
+                maxY = -1;
+                minX = 99999;
+                minY = 99999;
+                obj.clearCanvas();
+
+                var c = document.getElementById("mycanvas");
+                var ctx = c.getContext("2d");
+                var img = document.getElementById("tulip");
+                c.width = img.width;
+                c.height = img.height;
+                ctx.drawImage(img, 10, 10);
+                $("#totulip").hide();
+
+            });
+
+//			$("#save").on("click", function () {
+//				var image2 = obj.getCanvasImage("png");
+//				$("#GradeIMGBase64").val(image2);
+//				document.getElementById("staffForm").submit();
+//			});
+
+
+        });
+    </script>
+</head>
+<body>
+<div th:include="common/head1"></div>
+<div class="contain_wrap">
+	<div class="contain_sub">
+	   	<div class="logo"><img src="/images/logo.png" class="lgpic"></div>
+     	<span class="title"><span style=" margin-right:3px;" th:text="${homework.studentnickname}">（李东）</span> 上传了
+     	<span style=" margin-left:5px;" th:text="${homework.title}">老麦克唐纳</span></span>
+      	<span class="author" th:text="'曲谱:'+${homework.mdiportfolio}">曲谱：约翰&#8226;汤普森简易钢琴教程1</span>  
+     	<span class="author" th:text="'上传时间：'+${#calendars.format(homework.studenttime,'yyyy/MM/dd HH:mm:ss')}" th:if="${status==0}">上传时间：2016/7/4 17:06:28</span>                             
+      	<span class="author" th:text="'提交时间：'+${#calendars.format(homework.addtime,'yyyy/MM/dd HH:mm:ss')}" th:if="${status==1}">提交时间：2016/7/4 17:06:28</span>                             
+	</div>    
+	<div class="contain_pic">
+		<audio id="myaudio" style="width:75%" th:src="'http://piano-static.klsw.com'+${homework.mp3path}" controls="controls">
+		</audio>
+	</div>
+	    <div class="top" style=" padding:0px 3%; margin-top:30px; text-align:left;">
+        <div id="color">
+            画笔颜色：
+            <input type="radio" name="rcolor" value="#FF0000" checked="checked" />
+            <input class="i1" type="button" style="background-color:#ff0000" />
+            &nbsp;&nbsp;
+            <input type="radio" name="rcolor" value="#00FF00" />
+            <input class="i2" type="button" style="background-color:#00ff00" />
+            &nbsp;&nbsp;
+            <input type="radio" name="rcolor" value="#0000FF" />
+            <input class="i3" type="button" style="background-color:#0000ff" />
+        </div>
+    </div>
+    <div class="font" id="font" style=" padding:0px 3%; text-align:left;">
+        画笔粗细：
+        <input type="text" id="panrangeval" value="" readonly="readonly" style="width:20px; background-color:transparent;" />
+        <input type="range" id="panrange" value="4" min="1" max="8" style="width:150px; height: 60px;" onChange="changerange()" />
+    </div>
+    <input id="clearup" type="button" style="background-color:transparent; color:#0094ff; margin-left:3%; margin-bottom:20px; font-size:16px;" value="清除画布" />
+    <div style="border:2px dashed #aaa; width:94%; overflow:auto; margin:0 auto;" id="divcanvas">
+        <canvas id="mycanvas"></canvas>
+    </div>
+    <div id="totulip" style="margin-left:15px;">
+        <img src="http://piano-static.klsw.com/static/PM/HomeWork/20160603130736077/score.png" alt="" id="tulip" />
+        <img src="http://piano-static.klsw.com/static/PM/HomeWork/20160603130736077/score.png" alt="" id="tulip" />
+    </div>
+</div>
+<div style=" margin:0 auto; text-align:center;" th:if="${homework.teachertime} == null">
+	<form action="/homework/answer" method="get">
+   	<textarea name="teachercomment" cols="" rows="" class="area" placeholder="请输入对学生作业的批改回复"></textarea>
+   		<input name="homeworkid" type="hidden" th:value="${homework.id}" />
+       	<div style=" margin:0 auto; text-align:center;">
+        	<button class="submitBtn" type="submit" style="outline:none;">提交回复</button>
+       	</div>
+   	</form>
+</div>
+<div class="answer_info" th:text="${homework.teachercomment}" th:if="${homework.teachertime} != null">张老师批改回复：节奏感不错，非常好，除了二连音有点问题不准确，其他都非常好，请继续保持，多加练习。再弹一首别的曲目发给我。注意跟着感觉走，需要有感情地投入。</div>
+</body>
+</html>

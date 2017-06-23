@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="/css/order.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<style>
+.moren{width:100%; float:left; margin-top:20px; font-size:14px;}
+.mobg{width:100%; float:left;  line-height:35px; text-align:right;}
+.mobg a{color:#b2b2b2;}
+.mobg a:hover{color:#00a0e9;}
+.add_mobg{background:url(images/moren.png) no-repeat left top;}
+.mober{width:968px; float:left; border:1px solid #d9d9d9; padding-left:20px;}
+.mober dl{width:100%; float:left;}
+.mober dl dt{width:100%; line-height:25px; color:#b2b2b2; float:left;}
+.mober dl dd{width:100%; float:left; margin-bottom:10px; color:#2b2b2b;}
+.addptu{width:185px; float:right; height:65px; padding-right:300px; padding-top:35px;}
+.closmenu{width:100%; float:left; background:url(images/xinjian.png) no-repeat left top; line-height:35px; text-align:right; margin-top:20px;}
+.closmenu a{color:#b2b2b2;}
+.closmenu a:hover{color:#00a0e9;}
+.clostian{ width:988px; float:left; border:1px solid #d9d9d9; padding-top:30px; margin-bottom:20px;}
+.addr_xin{width:185px; float:left; height:65px;  padding-top:35px; margin-left:20px;}
+.changeword{width:430px; height:26px; background:url(images/wordpass.jpg) no-repeat; border:none; padding-left:3px; line-height:26px; padding:5px;}
+</style>
+</head>
+
+<body>
+<div th:include="common/head"></div>
+<div class="order_info"> 
+<div class="order_infol" style="margin-top:80px;">
+<ul>
+<li><a href="javascript:;">个人中心</a></li>
+<li><a href="myorder.html">我的订单</a></li>
+<li><a href="javascript:;">未支付订单</a></li>
+<li><a href="javascript:;">已支付订单</a></li>
+<li><a href="#">我的购物车</a></li>
+<li><a href="address.html" class="aox">收货地址管理</a></li>
+<li><a href="password.html">修改密码</a></li>
+</ul>
+</div>
+<div class="order_infor" style="margin-top:80px;">
+<div class="my_box">收货地址管理</div>
+<div class="moren">
+<div class="mobg add_mobg">
+<a href="#">[编辑]</a>&nbsp;&nbsp;<a href="#">[删除]</a>
+</div>
+
+				
+<div class="mober">
+<dl>
+
+				<dt>收件人:</dt>
+				<dd>张三（收）</dd>
+		</dl>
+			<dl>
+				<dt>地址：</dt>
+				<dd>安徽省合肥市包河区芜湖路409号</dd>
+			</dl>
+			<dl>
+				<dt>楼层：</dt>
+				<dd>有电梯</dd>
+			</dl>
+			<dl>
+				<dt>送货时间：</dt>
+				<dd>双休</dd>
+			</dl>            
+			<dl>
+				<dt>邮政编码：</dt>
+				<dd>230000</dd>
+			</dl>                        
+			<dl>
+				<dt>联系电话：</dt>
+				<dd>18949094509(手机)</dd>
+			</dl>
+	
+			<dl>
+				<dt>电子邮箱</dt>
+			  <dd>231097345@qq.com</dd>
+			</dl>
+			<span style="margin-left:200px;">默认地址</span>
+			<span style="margin-left:200px;">设置为地址</span>
+</div>
+</div>
+ 
+<div class="order_add"><a href="javascript:;" onclick="$('#address-dialog').fadeIn(200);">添加收货地址</a></div>
+ 
+ <form action="/information/addAddress" method="post">
+ 
+ 
+                <!-- <input type="hidden" id="address_provinceid" name="provinceid" value="" />
+				<input type="hidden" id="address_cityid" name="cityid" value="" />
+				<input type="hidden" id="address_areaid" name="areaid" value="" />
+				<input type="hidden" id="address_street" name="street" value="" />
+				<input type="hidden" id="address_useraddress" name="useraddress" value="" />
+				<input type="hidden" id="address_username" name="username" value="" />
+				<input type="hidden" id="address_userphone" name="userphone" value="" />
+				<input type="hidden" id="address_elevator" name="elevator" value="" />
+				<input type="hidden" id="address_floor" name="floor" value=""/>  -->
+ <div id="address-dialog" class="dialog-wrapper"
+         style="display:none;position:fixed;left:0;right:0;bottom:0;top:0;background-color:rgba(0,0,0,.3);z-index: 9999;">
+         
+        <div class="shanbora"
+             style="width:788px;background:#fff;float: none;height: 500px;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;">
+            <div class="order_box" style="width: 788px;float:none;">
+                <div class="order_biaoti">收货人信息</div>
+                
+                <div class="chacha"><a href="javascript:" onclick="$('#address-dialog').fadeOut(300);"><img
+                        src="/images/graycha.png" width="17" height="16"/></a>
+                </div>
+            </div>
+            <div class="get_address" style="width:788px; float
+            :none;padding:30px;">
+                    <table width="775" border="0">
+                        <tr>
+                            <td width="121" height="42" align="right"><span style="color:#F00">*</span>&nbsp;收货人姓名：</td>
+                            <td height="42" colspan="3"><label>
+                                <input type="text" name="name" id="name" class="order_text"/>
+                            </label></td>
+                        </tr>
+                        <tr>
+                            <td height="42" align="right"><span style="color:#F00">*</span>&nbsp;地址：</td>
+                            <td width="100" height="42"><label>
+                                <select name="province" id="province">
+                                </select>
+                            </label>
+                            </td>
+                            <td width="100" height="42"><label>
+                                <select name="city" id="city">
+                                </select>
+                            </label></td>
+                            <td width="425" height="42"><label>
+                                <select name="district" id="district">
+                                </select>
+                            </label></td>
+                        </tr>
+                        <tr>
+                            <td width="121" height="42" align="right"><span style="color:#F00">*</span>&nbsp;详细地址：</td>
+                            <td height="42" colspan="3"><label>
+                                <input type="text" name="address" id="address" class="order_text"/>
+                            </label></td>
+                        </tr>
+                        <tr>
+                            <td width="121" height="48" align="right"><span style="color:#F00">*</span>&nbsp;手机：</td>
+                            <td height="48" colspan="3"><label>
+                                <input type="text" name="mobile" id="mobile" class="order_text"/>
+                            </label></td>
+                        </tr>
+                        <tr>
+                            <td height="42" align="right"><span style="color:#F00">*</span>&nbsp;有无电梯：</td>
+                            <td width="100" height="42">
+                            <label>
+                                <select name="hasElevator" id="hasElevator" onchange="index(this)" class="selecta">
+                                    <option selected="selected">有电梯</option>
+                                    <option>无电梯</option>
+                                </select>
+                            </label>
+                            </td>
+                        </tr>
+                         <tr id="louceng">
+                            <td width="121" height="48" align="right"><span style="color:#F00">*</span>&nbsp;楼层：</td>
+                            <td height="48" colspan="3">
+	                            <label>
+	                                <input type="text" name="floor" id="floor" class="order_text"/>
+	                            </label>
+                            </td>
+                        </tr>
+                        <!--<tr>
+                            <td width="121" height="48" align="right"><span style="color:#F00">*</span>&nbsp;邮箱：</td>
+                            <td height="48" colspan="3"><label>
+                                <input type="text" name="email" id="email" class="order_text"/>
+                            </label></td>
+                        </tr>
+
+                           <tr>
+                            <td width="121" height="42" align="right">&nbsp;</td>
+                            <td height="42" colspan="3"><label>
+                              <input type="checkbox" name="checkbox" id="checkbox" />
+                            设置为默认地址</label></td>
+                          </tr> -->
+                    </table>
+            </div>
+            <div class="save"><input type="submit" onclick="addAddress()"/>保存地址 </div>
+        </div>
+    </div> 
+    </form>
+</div>    
+</div>    
+<div th:include="common/foot"></div>
+<script type="text/javascript" src="/js/areaData.js"></script>
+<script type="text/javascript">
+$(function(){
+	 function getProvinces() {
+         var provinces = areaData.filter(function(area){
+             return area.level == 1;
+         });
+         $('#province').html(provinces.map(function(province){
+             return '<option value="'+province.name+'" data-id="'+province.id+'">' + province.name + '</option>';
+         }).join(''));
+         getCities($('#province').find('option:first').prop('selected', true).data('id'));
+     }
+     function getCities(provinceId) {
+         var cities = areaData.filter(function(area){
+             return area.parentId == provinceId;
+         });
+         $('#city').html(cities.map(function(city){
+             return '<option value="'+city.name+'" data-id="'+city.id+'">' + city.name + '</option>';
+         }).join(''));
+         getDistricts($('#city').find('option:first').prop('selected', true).data('id'));
+     }
+     function getDistricts(cityId) {
+         var districts = areaData.filter(function(area){
+             return area.parentId == cityId;
+         });
+         $('#district').html(districts.map(function(district){
+             return '<option value="'+district.name+'" data-id="'+district.id+'">' + district.name + '</option>';
+         }).join(''));
+         $('#district').find('option:first').prop('selected', true);
+     }
+
+     getProvinces();
+
+     $('#province').on('change', function() {
+         var provinceId = $(this).find(':selected').data('id');
+         getCities(provinceId);
+     });
+     $('#city').on('change', function() {
+         var cityId = $(this).find(':selected').data('id');
+         getDistricts(cityId);
+     });
+	
+});
+function addAddress() {
+	
+
+	var reg = /^\s*$/g;
+	
+	var username = $('#name').val();
+	var street = $('#address').val();
+	var mobile = $('#mobile').val();
+	var hasElevator = $('#hasElevator').val();
+	var floor=$("#floor").val();
+	
+	if(reg.test(username)) {
+		alert("请填写收货人姓名！");
+		return;
+	}
+	if(reg.test(street)) {
+		alert("请填写收货地址！");
+		return;
+	}
+	if(reg.test(mobile)) {
+		alert("请填写详细地址！");
+		return;
+	}
+ 	/* 
+	$('#address_provinceid').attr('value', $("#province").find("option:selected").attr('data-id'));
+	$('#address_cityid').attr('value', $('#city').find("option:selected").attr('data-id'));
+	$('#address_areaid').attr('value', $("#district").find("option:selected").attr('data-id'));
+	$('#address_street').attr('value', street);
+	$('#address_useraddress').attr('value', $('#province').val() + $('#city').val() + $('#district').val() + street);
+	$('#address_username').attr('value', username);
+	$('#address_userphone').attr('value', mobile);
+	$('#address_elevator').attr('value', hasElevator);
+	$("#address_floor").attr('value',floor); */  
+};
+</script>          
+</body>
+</html>

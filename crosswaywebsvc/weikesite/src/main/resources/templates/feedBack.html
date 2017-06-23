@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>威客</title>
+<link href="/css/index.css" rel="stylesheet">
+<link href="/css/add.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#back").click(function() {
+			window.history.back();
+		});
+		
+		var inputs = $(".problemType");
+		var labels = $(".problem");
+		
+		$(".feedback1").click(function() {
+			var index = $(this).index(".feedback1");
+			inputs.eq(index).attr("checked","checked");
+			
+			labels.removeClass("checked");
+			labels.addClass("checked1");
+			labels.eq(index).removeClass("checked1");
+			labels.eq(index).addClass("checked");
+			if(inputs.eq(index).val() == '其他问题') {
+				$("#uploadImage").hide();
+			} else {
+				$("#uploadImage").show();
+			}
+		}); 
+	})
+</script>
+<script type="text/javascript">
+	function filechange(file) {
+		if (file.files && file.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function(evt) {
+				showimg(evt.target.result);
+			};
+			reader.readAsDataURL(file.files[0]);
+		} else {
+			file.select();
+			var src = document.selection.createRange().text;
+			showimg(src);
+		}
+	}
+
+	function showimg(src) {
+		var img = $('#imgview');
+		img.attr("src", src);
+		img.css("display", "block");
+	}
+</script>
+</head>
+
+<body>
+	<form action="/my/feedBack" method="post" enctype="multipart/form-data">
+		<div class="public_top">
+			<div class="public_back">
+				<img id="back" src="/images/back_c.png">
+			</div>
+			<div class="select_name">建议反馈</div>
+			<div class="select-icon"></div>
+		</div>
+		<div class="feedback_title">
+			<span style="margin-left: 20px; margin-right: 20px; display: block;">问题类型</span>
+		</div>
+
+
+		<div class="feedback1">
+			<span> <input type="radio" id="software" class="problemType"
+				name="suggestionType" checked="checked" value="威客软件问题"> <label
+				class="checked problem" for="software">威客软件问题</label>
+			</span>
+		</div>
+		<div class="feedback1">
+			<span> <input type="radio" id="other" name="suggestionType" class="problemType"
+				value="其他问题"> <label class="checked1 problem" for="other">其他问题</label>
+			</span>
+		</div>
+		<div class="notify_blank" style="border-top: 1px solid #dcdcdc;"></div>
+		<div class="feedback_title">
+			<span style="margin-left: 20px; margin-right: 20px; display: block;">反馈内容</span>
+		</div>
+		<div class="fb_content">
+			<div class="flex-box">
+				<textarea name="suggestion" cols="" rows=""
+					placeholder="请在此填写您的问题或建议！"></textarea>
+			</div>
+		</div>
+		<div class="notify_blank"></div>
+	  <div id="uploadImage">
+			<div class="feedback_title">
+				<span style="margin-left: 20px; margin-right: 20px; display: block;">添加图片/截图</span>
+			</div>
+			<div class="fb_content"
+				style="position: relative; display: block; height: 97px;">
+				<div style="position: absolute; left: 40px; top: 5px;">
+					<div class="picshow">
+						<img src="" id="imgview" style="display: none;" alt="">
+					</div>
+					<span class="ctrl-file"> <input type="file" id="filehide" multiple
+						class="filehide" name="filehide" onChange="filechange(this)">
+						<a href="#"></a>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="notify_blank"></div>
+
+		<div class="fb_phone">
+			<div class="flex-box">
+				<i>您的联系方式</i> <input type="text" id="" name="phone"
+					placeholder="请在此填写您联系电话！" />
+			</div>
+		</div>
+		<div class="notify_blank"></div>
+		<div class="pay_sure" id="submit">
+			<button class="pay_formBtn" type="submit">提交反馈</button>
+		</div>
+	</form>
+</body>
+</html>

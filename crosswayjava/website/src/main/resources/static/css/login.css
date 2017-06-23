@@ -1,0 +1,269 @@
+@charset "utf-8";
+/* CSS Document */
+#login_bg {
+    width: 100%; float:left;
+	height:800px; background-color:#FFFFFF; margin-top:80px;
+}
+.content {
+    width: 1200px;
+    padding: 170px 0 10px 0;
+    margin: 0 auto;
+    overflow: auto;
+}
+.login-box {
+    width: 380px;
+    color: #6c6c6c;
+    position: relative;
+    margin: 0 auto;
+}
+.login-box a {
+    color: #6c6c6c;
+}
+.login-title {
+    height: 18px;
+    line-height: 18px;
+    font-size: 18px;
+    color: #3E3A39;
+    margin-top: 9px;
+    padding-bottom: 8px;
+    text-align:left;
+	font-family: 'Microsoft YaHei',"微软雅黑"; 
+
+}
+.login-pic{
+    height: 75px;
+    line-height: 18px;
+    font-size: 18px;
+    color: #3E3A39;
+    margin-top: 9px;
+    text-align:center;
+	font-family: 'Microsoft YaHei',"微软雅黑";
+
+}
+.no-account {
+    height: 18px;
+    line-height: 18px;
+    font-size: 12px;
+    color: #3E3A39;
+    margin-top: 9px;
+    padding-bottom: 8px;
+    text-align:left;
+	font-family:"新宋体"; text-align:right;
+	margin-right: 110px;
+
+}
+.no-account a{ color:#EA5514;}
+.ke-input {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 12px;width: 371px; background:url(../images/input_bg.png) left top no-repeat; height:42px;
+}
+.ke-input input {
+    border: 0;
+    float: right;
+    height: 37px;
+    line-height: 16px;
+    overflow: hidden;
+    outline: 0;
+    padding: 0;
+	width: 323px;
+	font-size: 12px; margin-top:1px; margin-right:5px;
+}
+.account-input i {
+    display: block;
+    width: 40px;
+    height: 39px;
+    float: left; background:url(../images/login_icon.png) no-repeat center;   
+   
+}
+.pwd-input i {
+    display: block;
+    width: 40px;
+    height: 39px;
+    float: left; background:url(../images/password_icon.png) no-repeat center;   
+    
+}
+
+
+.pwd-field label {
+    background-position: 50% -30px;
+}
+
+.login-links {
+    margin-top: 12px;
+    overflow: hidden;
+    line-height: 14px; font-size:12px;font-family:"新宋体";
+    width: 100%;
+}
+.login-links .forget-pwd {
+    float: left; color:#3E3A39;
+}
+.login-links .register {
+    float: right; color:#EB5405; margin-top:2px;
+}
+.login-links input, .login-links label {
+    float: left;
+}
+.cro-checkbox {
+    display: inline-block; 
+}
+.checkbox-lable {
+    font-size: 12px;
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; margin-top:2px; color:#3E3A39;
+}
+.login-box .submit button:hover {
+    background-color: #f52b00;
+}
+.login-box .submit button {
+    width: 100%;
+    height: 42px;
+    border: 0;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    line-height: 42px;
+    font-size: 16px;
+    color: #fff;
+    background: #EA5514;
+    border-radius: 3px;
+    cursor: pointer;
+    zoom: 1; margin-top:25px;font-family: 'Microsoft YaHei',"微软雅黑";
+}
+.foot_bei{width:100%; float:left; text-align:center; font-size:14px; font-family:"新宋体"; color:#3E3A39; line-height:20px; margin-top:80px;}
+
+.register-box {
+    color: #6c6c6c;
+    position: relative;
+    width: 580px; left:310px;
+}
+.register-box .submit button:hover {
+    background-color: #f52b00;
+}
+.register-box .submit button {
+    width: 371px;
+    height: 42px;
+    border: 0;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    line-height: 42px;
+    font-size: 16px;
+    color: #fff;
+    background: #EA5514;
+    border-radius: 3px;
+    cursor: pointer;
+    zoom: 1; margin-top:-20px;font-family: 'Microsoft YaHei',"微软雅黑";
+}
+
+.register-title {
+    height: 18px;
+    line-height: 18px;
+    font-size: 18px;
+    color: #3E3A39;
+    margin-top: 9px;
+    padding-bottom: 15px;
+    text-align:left;
+	font-family: 'Microsoft YaHei',"微软雅黑"; padding-right:50px;
+
+}
+.register-pic{
+    height: 75px;
+    line-height: 18px;
+    font-size: 18px;
+    color: #3E3A39;
+    margin-top: 9px;
+    text-align:center;
+	font-family: 'Microsoft YaHei',"微软雅黑"; margin-left:110px;
+	margin-right: 110px;
+}
+.reg_form dl {
+    clear: both;
+    padding: 6px 0;
+}
+.reg_form dl::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+.reg_form dl.form_space {
+    margin-top: -15px;
+}
+.reg_form dt {
+    float: left;
+    font-family: "新宋体";
+    font-size: 14px;
+    line-height: 41px;
+    margin-right: 10px;
+    text-align: right;
+    width: 88px; color:#3E3A39;
+}
+.reg_form dd {
+    float: left;
+}
+.reg_form .reg_tip {
+    color: #666;
+    font-family: Tahoma;
+    font-size: 14px;
+    line-height: 32px;
+}
+.reg_form dd img {
+    vertical-align: middle;
+}
+.reg_form dd .r_input {
+    vertical-align: middle;
+}
+.reg_form dd .base_label {
+    font-family: "新宋体"; color:#3E3A39; font-size:12px;
+}
+.base_label input {
+    margin: -2px 3px 0 0;
+    width: 12px;
+    height: 12px;
+    overflow: hidden;
+    font-family: Arial;
+    vertical-align: middle;
+}
+.reg_form dd .base_label span {
+    color:#E95504;
+}
+.reg_form_step1 .base_error {
+    clear: both;
+    float: left;
+    margin-left: 98px;
+    margin-top: 0;
+    min-width: 176px;
+    padding-right: 20px;
+    width: auto;
+}
+.reg_form dd .r_input {
+    vertical-align: middle;
+}
+input[type="text"] {
+    border-radius: 0;
+}
+.input_l {
+    width: 361px;
+}
+.input_r {
+    width: 260px;
+}
+.r_input {
+    height: 31px;
+    padding: 5px;
+    line-height: 20px; background:url(../images/input_bg.png) left top no-repeat;
+    font-size: 12px;
+    font-family: Tahoma; border:0px; outline:0px;
+}
+.short_input {
+    height: 31px;
+    padding: 5px;
+    line-height: 20px; background:url(../images/input_bga.png) left top no-repeat;
+    font-size: 14px;
+    font-family: Tahoma; border:0px; outline:0px;
+}

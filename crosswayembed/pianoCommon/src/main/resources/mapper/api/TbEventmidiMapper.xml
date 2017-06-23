@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.pianoCommon.api.mapper.TbEventmidiMapper">
+    <resultMap id="BaseResultMap" type="com.klsw.pianoCommon.api.model.TbEventmidi">
+        <!--
+          WARNING - @mbggenerated
+        -->
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="serialnumber" property="serialnumber" jdbcType="VARCHAR"/>
+        <result column="author" property="author" jdbcType="VARCHAR"/>
+        <result column="timestamp" property="timestamp" jdbcType="BIGINT"/>
+        <result column="midpath" property="midpath" jdbcType="VARCHAR"/>
+        <result column="mp3path" property="mp3path" jdbcType="VARCHAR"/>
+        <result column="versionno" property="versionno" jdbcType="VARCHAR"/>
+        <result column="midname" property="midname" jdbcType="VARCHAR"/>
+        <result column="addtime" property="addtime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+</mapper>

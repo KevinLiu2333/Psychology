@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper.TbLiveteacherMapper">
+    <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model.TbLiveteacher">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="userId" jdbcType="INTEGER" property="userid"/>
+        <result column="graduated_univ" jdbcType="VARCHAR" property="graduatedUniv"/>
+        <result column="teach_grade" jdbcType="VARCHAR" property="teachGrade"/>
+        <result column="isauth" jdbcType="INTEGER" property="isauth"/>
+        <result column="cert_path" jdbcType="VARCHAR" property="certPath"/>
+        <result column="region" jdbcType="VARCHAR" property="region"/>
+    </resultMap>
+</mapper>

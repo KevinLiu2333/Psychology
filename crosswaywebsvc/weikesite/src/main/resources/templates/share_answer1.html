@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>威客</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<link href="css/share.css" rel="stylesheet">
+</head>
+<body>
+<div th:include="common/head"></div>
+	<div class="contain_wrap">
+	         <div class="contain_sub">
+	           <div class="logo"><img src="images/logo.png" class="lgpic"></div>
+               <span class="title"><span style=" margin-right:3px;">（李东）</span> 上传了<span style=" margin-left:5px;">老麦克唐纳</span></span>
+               <span class="author">曲谱：约翰&#8226;汤普森简易钢琴教程1</span>  
+                <span class="author">上传时间：2016/7/4 17:06:28</span>                             
+	         </div>    
+	   <div class="contain_pic">
+       <div class="music-player">
+  <!--<div style="background-image: url(http://i.imgur.com/yqB0erk.jpg);" class="album"></div>-->
+
+  <div class="info">
+    <div class="left">
+      <a href="javascript:;" class="icon-shuffle"></a>
+      <a href="javascript:;" class="icon-heart"></a>
+    </div>
+    <div class="center">
+    <div class="jp-playlist">
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+
+    </div>
+    <div class="right">
+      <a href="javascript:;" class="icon-repeat"></a>
+      <a href="javascript:;" class="icon-share"></a>
+    </div>
+
+    <div class="progress jp-seek-bar">
+      <span class="jp-play-bar" style="width: 0%"></span>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="current jp-current-time">00:00</div>
+    <div class="play-controls">
+      <a href="javascript:;" class="icon-previous jp-previous" title="previous"></a>
+      <a href="javascript:;" class="icon-play jp-play" title="play"></a>
+      <a href="javascript:;" class="icon-pause jp-pause" title="pause"></a>
+      <a href="javascript:;" class="icon-next jp-next" title="next"></a>
+    </div>
+  </div>
+  <div id="jquery_jplayer" class="jp-jplayer"></div>
+</div>
+	    </div>
+    
+</div>
+<div class="answer_wrap">
+<div class="sinus">
+<div class="yuanpc">
+						<a href="otzone.html"><i class="mask"></i></a>
+						<img src="images/picture.jpg">
+    </div>
+<div class="othuse">张老师<img src="images/star_three.png"><span>动力火车钢琴教育培训机构</span></div>
+
+</div>
+<div class="answer_info">张老师批改回复：节奏感不错，非常好，除了二连音有点问题不准确，其他都非常好，请继续保持，多加练习。再弹一首别的曲目发给我。注意跟着感觉走，需要有感情地投入。</div>
+
+
+
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.jplayer.min.js"></script>
+<script src="js/jplayer.playlist.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

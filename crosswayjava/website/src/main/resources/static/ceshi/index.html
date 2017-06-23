@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="JS代码,{keyword},JS广告代码,JS特效代码" />
+<meta name="description" content="此代码内容为{title}，属于站长常用代码，更多{keyword}代码请访问懒人图库JS代码频道。" />
+<title>{title}_懒人图库</title>
+<script type='text/javascript' src='/img/js/jquery-1.7.2.min.js'></script>
+<style>
+/* 焦点图 */
+
+img{border:0}
+#slideshow{position: relative;height: 300px;width: 930px;margin: 0 auto;}
+#slideshow a{float: left;display: inline;}
+#slideshow .img{position: absolute;width: 930px;height: 300px;overflow: hidden}
+#slideshow .img span{position: absolute;width: 19999px;display: block}
+#slideshow .btns{z-index: 10;position: absolute;width: 930px}
+#slideshow .btns b{position: absolute;width: 100px;display: block;height: 14px;overflow: hidden;top: 275px;left: 50%}
+#slideshow .btns b i{width: 10px;background: #414140;float: left;height: 10px;font-size: 0px;overflow: hidden;cursor: pointer;margin-right: 6px;border: #414140 2px solid;-webkit-border-radius: 7px;-moz-border-radius: 7px;border-radius: 7px}
+#slideshow .btns b i: hover{background: #a7a7a6}
+#slideshow .btns b i.on{background: #3cd2f1;cursor: default}
+#slideshow .btns b i.on: hover{background: #3cd2f1;cursor: default}
+#slideshow .btns s{position: absolute;width: 60px;display: none;height: 80px;overflow: hidden;top: 115px;cursor: pointer}
+#slideshow .btns s i{position: absolute;width: 60px;background: url(/img/images/btn_slideshow.png);height: 160px;_filter: progid: dximagetransform.microsoft.alphaimageloader(enabled=true, sizingmethod=scale, src="images/btn_slideshow.png");_background: none;}
+#slideshow .btns s.prev{left: 0px}
+#slideshow .btns s.prev i{top: -80px}
+#slideshow .btns s.next{right: 0px}
+.slideshow-hover#slideshow .btns s{display: block}
+.paging{opacity: 0.5;filter: alpha(opacity=50);-moz-opacity: 0.5;-khtml-opacity: 0.5;height: 300px;position: absolute;background: #000;overflow: hidden}
+.wtit .info,.wtit .tit{float: left;}
+.wtit .info{padding: 35px 0 0 20px;color: #989898;}
+.wtit .info span{margin: 0 8px;}
+</style>
+</head>
+<body>
+
+<div id="slideshow" rel="auto-play">
+  <div class="img"> <span><a href="http://www.lanrentuku.com/" target="_blank"><img src="/img/images/01.jpg" /></a><a href="http://www.lanrentuku.com/" target="_blank"><img src="/img/images/02.jpg" /></a><a href="http://www.lanrentuku.com/" target="_blank"><img src="/img/images/03.jpg" /></a></span>
+    <div class="paging pattern"></div>
+    <div class="paging subpattern"></div> 
+  </div>
+</div>
+<script type='text/javascript' src='/img/js/jquery.slider.js'></script>
+<div style="text-align:center">
+<p>来源：<a href="http://www.cactussoft.cn/" target="_blank">仙人掌软件</a>　代码整理：<a href="http://www.lanrentuku.com/" target="_blank">懒人图库</a>　感谢：<a href="http://www.cactussoft.cn/" target="_blank">大丑</a></p>
+<p>＊尊重他人劳动成果，转载请自觉注明出处！注：此代码仅供学习交流，请勿用于商业用途。</p>
+<p>{download}</p>
+<p>{content}</p>
+<p>{google_729x90}</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper.TbVersionMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model.TbVersion">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VersionID" jdbcType="INTEGER" property="versionid" />
+    <result column="VersionNo" jdbcType="VARCHAR" property="versionno" />
+    <result column="VersionDate" jdbcType="DATE" property="versiondate" />
+    <result column="VersionSize" jdbcType="VARCHAR" property="versionsize" />
+    <result column="VersionPath" jdbcType="VARCHAR" property="versionpath" />
+    <result column="VersionPlatform" jdbcType="VARCHAR" property="versionplatform" />
+    <result column="VersionUpgradeNo" jdbcType="INTEGER" property="versionupgradeno" />
+    <result column="UserName" jdbcType="VARCHAR" property="username" />
+    <result column="IsForceUpgrade" jdbcType="BIT" property="isforceupgrade" />
+    <result column="IsShowInVersionList" jdbcType="BIT" property="isshowinversionlist" />
+    <result column="ParentVersionNo" jdbcType="VARCHAR" property="parentversionno" />
+    <result column="About" jdbcType="VARCHAR" property="about" />
+    <result column="VersionDescription" jdbcType="LONGVARCHAR" property="versiondescription" />
+  </resultMap>
+</mapper>

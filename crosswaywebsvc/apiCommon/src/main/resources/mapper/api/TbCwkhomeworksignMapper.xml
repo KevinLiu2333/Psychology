@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper.TbCwkhomeworksignMapper">
+    <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model.TbCwkhomeworksign" >
+        <!--
+          WARNING - @mbggenerated
+        -->
+        <id column="ID" property="id" jdbcType="INTEGER" />
+        <result column="Type" property="type" jdbcType="INTEGER" />
+        <result column="Months" property="months" jdbcType="INTEGER" />
+        <result column="CWKStudentID" property="cwkstudentid" jdbcType="INTEGER" />
+        <result column="CWKTeacherID" property="cwkteacherid" jdbcType="INTEGER" />
+        <result column="UsedCount" property="usedcount" jdbcType="INTEGER" />
+        <result column="AddTime" property="addtime" jdbcType="DATE" />
+        <result column="OnePrice" property="oneprice" jdbcType="REAL" />
+        <result column="totalPrice" property="totalprice" jdbcType="DOUBLE" />
+        <result column="Score" property="score" jdbcType="REAL" />
+        <result column="TimesPerDay" property="timesperday" jdbcType="INTEGER" />
+        <result column="Endtime" property="endtime" jdbcType="DATE" />
+        <result column="isOverdue" property="isoverdue" jdbcType="BIT" />
+        <result column="isFirstSign" property="isfirstsign" jdbcType="TINYINT" />
+        <result column="TimesToday" property="timestoday" jdbcType="INTEGER" />
+    </resultMap>
+    
+    <resultMap type="java.util.Map" id="SignMap">
+    	<id column="ID" property="id" jdbcType="INTEGER" />
+        <result column="Type" property="type" jdbcType="INTEGER" />
+        <result column="Months" property="months" jdbcType="INTEGER" />
+        <result column="CWKStudentID" property="cwkstudentid" jdbcType="INTEGER" />
+        <result column="CWKTeacherID" property="cwkteacherid" jdbcType="INTEGER" />
+        <result column="UsedCount" property="usedcount" jdbcType="INTEGER" />
+        <result column="AddTime" property="addtime" jdbcType="DATE" />
+        <result column="OnePrice" property="oneprice" jdbcType="REAL" />
+        <result column="totalPrice" property="totalprice" jdbcType="DOUBLE" />
+        <result column="Score" property="score" jdbcType="REAL" />
+        <result column="TimesPerDay" property="timesperday" jdbcType="INTEGER" />
+        <result column="Endtime" property="endtime" jdbcType="DATE" />
+        <result column="isOverdue" property="isoverdue" jdbcType="BIT" />
+        <result column="isFirstSign" property="isfirstsign" jdbcType="TINYINT" />
+        <result column="TimesToday" property="timestoday" jdbcType="INTEGER" />
+        <result column="realname" property="realname" jdbcType="VARCHAR"/>
+    </resultMap>
+    
+    <select id="signedList" parameterType="java.lang.Integer"
+            resultMap="SignMap">
+      SELECT t1.*,t2.realname FROM tb_CWKHomeworkSign t1, tb_CWK t2
+      WHERE (t1.CWKStudentID = #{0} and (t1.CWKTeacherID = t2.ID AND t2.type="tea"))
+      OR (t1.CWKTeacherID = #{0} and (t1.CWKStudentID=t2.ID AND t2.type="stu"))
+      ORDER BY t1.AddTime DESC
+    </select>
+</mapper>

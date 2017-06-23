@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>威客</title>
+<link href="/css/index.css" rel="stylesheet">
+<link href="/css/add.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#back").click(function(){
+			window.location.href="/my/index";
+		});
+		
+		var phone = $("#phone_hidden").val();
+		if(phone != null && phone != "") {
+			var phoneNo = phone.substr(0,3) + "****" + phone.substr(7,4);
+			$("#bindPhone").text(phoneNo);
+		} else {
+			$("#bindPhone").text("");
+		}
+	})
+</script>
+</head>
+
+<body style="background-color:#eee;">
+  <div class="public_top">
+      <div class="public_back"><a href="javascript:void(0);"><img id="back" src="/images/back_c.png"></a></div>
+      <div class="select_name">设置</div>
+      <div class="select-icon"></div>
+  </div>  
+  <div class="pe_setting" style=" height:46px;">
+  	   <input type="hidden" id="phone_hidden" th:value="${tbCwk.phoneno}"/>
+       <a href="/set/toChangePhone">
+          <span style=" margin-left:20px;">绑定手机</span>
+          <span class="phone_mixture" id="bindPhone">181****3103</span>
+       </a>   
+  </div>    
+  <div class="notify_blank"></div>
+  <div class="setting">
+       <a href="/set/toSetSwitch"><span style=" margin-left:20px;">消息设置</span><span style="display:inline-block; float:right; margin-right:20px;"><img src="/images/go_a.png" width="14" height="17"></span></a>
+  </div>  
+  <div class="notify_blank"></div>
+  <div class="setting">
+       <a href="/set/aboutus"><span style=" margin-left:20px;">关于我们</span><span style="display:inline-block; float:right; margin-right:20px;"><img src="/images/go_a.png" width="14" height="17"></span></a>
+  </div> 
+    <div class="notify_blank"></div>
+      <div class="setting_exit">                                            
+				<a href="/exit">退出登录</a>
+      </div>
+</body>
+</html>

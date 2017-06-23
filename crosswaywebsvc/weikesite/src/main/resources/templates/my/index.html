@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>威客</title>
+    <link href="/css/index.css" rel="stylesheet">
+    <link href="/css/add.css" rel="stylesheet">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+</head>
+<body>
+<div th:include="common/head2"></div>
+<div style="margin-left:100px;">
+    <br/><br/><br/>
+    <p><a href="/my/userInfo"><h1>个人资料</h1></a></p>
+    <br/><br/>
+    <p><a href="/sign/toSignList"><h1>签约管理</h1></a></p>
+    <br/><br/>
+    <p><a href="/my/account"><h1>威豆账户</h1></a></p>
+    <br/><br/>
+    <p><a href="/toFeedBack"><h1>建议反馈</h1></a></p>
+    <br/><br/>
+    <p><a href="/toSetting"><h1>我的消息</h1></a></p>
+    <br/><br/>
+    <p><a href="/toMessage"><h1>设置</h1></a></p>
+    <br/><br/>
+    <p><a href="/sign/sign?teacherId=10"><h1>签约</h1></a></p>
+</div>
+</body>
+</html>

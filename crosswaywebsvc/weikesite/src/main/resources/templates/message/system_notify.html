@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>系统通知</title>
+<link href="/css/index.css" rel="stylesheet">
+<link href="/css/add.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#back").click(function() {
+			window.history.back();
+		})
+	})
+</script>
+</head>
+<body>
+	<div class="public_top">
+		<div class="public_back">
+			<img id="back" src="/images/back_c.png">
+		</div>
+		<div class="select_name">我的消息</div>
+		<div class="select-icon"></div>
+	</div>
+	<div class="pro_detail">
+		<ul>
+			<li><a href="/toMessageNotify?messageType=0">消息通知</a></li>
+			<li class="hda"><a href="/toSystemNotify?messageType=1">系统通知</a></li>
+		</ul>
+	</div>
+	<div class="message-lie">
+		<ul th:each="myMessage : ${messageList.list}" th:if="${messageList}">
+			<a th:href="'/set/messageInfo?messageId='+${myMessage.id}">
+				<li>
+					<div style="width: auto; float: left; margin-left: 8px;">
+						<img src="images/music_icon.png">
+					</div>
+					<div style="width: 150px; float: left; margin-left: 8px;">
+						<span style="font-size: 12px; color: #e70012;">小威提醒<span
+							style="color: #535353; display: block; line-height: 16px;" th:utext="${myMessage.title}">克洛斯威荣获2016安徽...</span></span>
+					</div>
+					<div class="wei_notify link_icon">
+						<span  th:text="${#dates.format(myMessage.addtime,'YYYY-MM-dd')}">2016-11-30</span> <br><span th:text="${#dates.format(myMessage.addtime,'HH:mm:ss')}">10:01</span>
+					</div>
+			</li>
+			</a>
+		</ul>
+	</div>
+
+
+</body>
+</html>

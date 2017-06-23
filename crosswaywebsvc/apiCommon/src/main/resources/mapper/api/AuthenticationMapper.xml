@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper.AuthenticationMapper">
+	<resultMap type="com.klsw.apiCommon.api.model.Authentication" id="MyAuthenticationMap">
+		<!-- WARNING - @mbggenerated -->
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="cwkid" property="cwkid" jdbcType="INTEGER"/>
+        <result column="graduated_university" property="graduatedUniversity"
+                jdbcType="VARCHAR"/>
+        <result column="teach_grade" property="teachGrade" jdbcType="VARCHAR"/>
+        <result column="average_score" property="averageScore"
+                jdbcType="REAL"/>
+        <result column="isauthentication" property="isauthentication"
+                jdbcType="BIT"/>
+        <result column="teach_experience" property="teachExperience"
+                jdbcType="TINYINT"/>
+        <result column="certificate_path" property="certificatePath"
+                jdbcType="VARCHAR"/>
+        <result column="authentication_process" property="authenticationProcess"
+                jdbcType="VARCHAR"/>
+        <result column="correcting_times" property="correctingTimes"
+                jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="region" property="region" jdbcType="VARCHAR"/>
+        <result column="sex" property="sex" jdbcType="VARCHAR"/>
+        <result column="identity_card" property="identityCard" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="nickname" property="nickname" jdbcType="VARCHAR"/>
+	</resultMap>
+	
+	<select id="selectAuthentication" resultMap="MyAuthenticationMap">
+		SELECT t1.name,t1.nickname,t1.realname,t1.region,t1.sex,t2.*
+		FROM tb_CWK t1,tb_CWKTeacher t2
+		WHERE t1.ID = t2.cwkid
+	</select>
+</mapper>

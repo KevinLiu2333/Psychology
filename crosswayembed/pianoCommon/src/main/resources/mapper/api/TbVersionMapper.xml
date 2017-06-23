@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.pianoCommon.api.mapper.TbVersionMapper">
+    <resultMap id="BaseResultMap" type="com.klsw.pianoCommon.api.model.TbVersion">
+        <!--
+          WARNING - @mbggenerated
+        -->
+        <result column="VersionID" property="versionid" jdbcType="INTEGER"/>
+        <result column="VersionNo" property="versionno" jdbcType="VARCHAR"/>
+        <result column="VersionDate" property="versiondate" jdbcType="DATE"/>
+        <result column="VersionSize" property="versionsize" jdbcType="VARCHAR"/>
+        <result column="VersionPath" property="versionpath" jdbcType="VARCHAR"/>
+        <result column="VersionPlatform" property="versionplatform" jdbcType="VARCHAR"/>
+        <result column="VersionUpgradeNo" property="versionupgradeno" jdbcType="INTEGER"/>
+        <result column="UserName" property="username" jdbcType="VARCHAR"/>
+        <result column="IsForceUpgrade" property="isforceupgrade" jdbcType="BIT"/>
+        <result column="IsShowInVersionList" property="isshowinversionlist" jdbcType="BIT"/>
+        <result column="ParentVersionNo" property="parentversionno" jdbcType="VARCHAR"/>
+        <result column="About" property="about" jdbcType="VARCHAR"/>
+        <result column="IsTestVersion" property="istestversion" jdbcType="BIT"/>
+        <result column="VersionDescription" property="versiondescription" jdbcType="LONGVARCHAR"/>
+    </resultMap>
+    <select id="selectLaterVersion" parameterType="com.klsw.pianoCommon.api.model.TbVersion" resultMap="BaseResultMap">
+        SELECT * FROM tb_Version
+        WHERE VersionPlatform = #{versionplatform}
+        AND VersionNo >= #{versionno}
+        AND IsShowInVersionList = 1
+        AND (ParentVersionNo =#{parentversionno} OR ParentVersionNo=#{versionno})
+        AND (IsTestVersion = 0 || IsTestVersion is null)
+        ORDER BY VersionNo DESC
+    </select>
+    <select id="selectLaterVersion2" parameterType="com.klsw.pianoCommon.api.model.TbVersion" resultMap="BaseResultMap">
+        SELECT * FROM tb_Version
+        WHERE VersionPlatform = #{versionplatform}
+        AND VersionNo >= #{versionno}
+        AND IsShowInVersionList = 1
+        AND (ParentVersionNo =#{parentversionno} OR ParentVersionNo=#{versionno})
+        ORDER BY VersionNo DESC
+    </select>
+    <select id="selectHistoryVersion" resultType="com.klsw.pianoCommon.api.model.TbVersion">
+        SELECT * FROM tb_Version
+        WHERE IsShowInVersionList = 1
+        AND (IsTestVersion = 0 || IsTestVersion is null)
+        ORDER BY VersionNo DESC
+    </select>
+    <select id="selectHistoryVersion2" resultType="com.klsw.pianoCommon.api.model.TbVersion">
+        SELECT * FROM tb_Version
+        WHERE IsShowInVersionList = 1
+        ORDER BY VersionNo DESC
+    </select>
+</mapper>

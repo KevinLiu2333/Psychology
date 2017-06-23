@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.common.mall.mapper.BgManagerMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.common.mall.model.BgManager" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="userId" property="userid" jdbcType="INTEGER" />
+    <result column="userName" property="username" jdbcType="VARCHAR" />
+    <result column="userPassword" property="userpassword" jdbcType="VARCHAR" />
+    <result column="rollId" property="rollid" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>威客</title>
+<link href="/css/index.css" rel="stylesheet">
+<link href="/css/add.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#back").click(function(){
+			window.history.back();
+		});
+		
+		var phone = $("#phone_hidden").val();
+		if(phone != null && phone != "") {
+			var phoneNo = phone.substr(0,3) + "****" + phone.substr(7,4);
+			$("#bindPhone").text(phoneNo);
+		} else {
+			$("#bindPhone").text("");
+		}
+	})
+</script>
+</head>
+
+<body style="background-color:#eee;">
+  <div class="public_top">
+      <div class="public_back"><a href="javascript:void(0);" id="back"><img src="/images/back_c.png"></a></div>
+      <div class="select_name">绑定手机</div>
+      <div class="select-icon"></div>
+  </div>
+
+<div class="pe_setting">
+		  <input type="hidden" id="phone_hidden" th:value="${tbCwk.phoneno}"/>
+          <span style=" margin-left:20px;">绑定手机</span>
+          <span class="change_phone" id="bindPhone">181****3103</span>
+  </div>    
+     
+
+      <div class="pay_sure">                                            
+				<a href="/set/toGetPhoneCaptcha"><button class="pay_formBtn" type="submit">更换手机号</button></a>
+      </div>
+      
+   
+      
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>售后服务</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/css/center.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var type = "换货";
+		var orderSerial;
+		var productSerial;
+		var indexsq;
+		$("#submitbutton").click(function() {
+			var time = new Date();
+			$("#servicetype").val(type);
+			$("#orderserial").val(orderSerial);
+			$("#productserial").val(productSerial);
+			$("#uploadForm").submit();
+		});
+
+		$(".sq").click(function() {
+			orderSerial = $(this).siblings().eq(0).val();
+			productSerial = $(this).siblings().eq(1).val();
+			var valu = $(this).text();
+			if (valu == "申请") {
+				$("#fw").css("display", "block");
+				indexsq = $(this);
+			}
+		})
+
+		$(".gb").click(function() {
+			$("#fw").css("display", "none");
+		});
+
+		$(".th").click(function() {
+			$(".th").removeClass("selected");
+			$(this).addClass("selected");
+			type = $(this).text();
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="navhead" style="border-bottom: 1px solid #ddd;">
+		<nav class="index-nav">
+			<div class="logo">
+				<a href="/index.html"><img src="/images/logo.png" /></a>
+			</div>
+			<div class="shopcart">
+				<a href="/cart"> </a>
+			</div>
+			<div class="exit" th:if="${session.klsw_user }">
+				<a href="/logout">退出</a>
+			</div>
+			<div class="login">
+				<a href="/order/list"></a>
+			</div>
+			<ul class="nav-list">
+
+				<li class="nav-item"><a href="/">首页</a></li>
+
+				<li class="nav-item"><a href="/smart.html">智能钢琴</a></li>
+
+				<li class="nav-item"><a href="/mall" class="orange">在线商城</a></li>
+
+				<li class="nav-item"><a href="/service.html">服务中心</a></li>
+
+				<li class="nav-item"><a href="/aboutus.html">关于我们</a></li>
+
+			</ul>
+
+		</nav>
+	</div>
+	<div class="center_info">
+
+		<div th:include="common/center"></div>
+
+		<div class="center_infor">
+			<div class="myorder_top" style="margin-bottom: 35px;">售后服务</div>
+
+			<table class="table table-bordered table-hover">
+				<tbody>
+					<tr align="center" style="background-color: #f1f1f1;">
+						<th width="15%" height="31" nowrap="nowrap"
+							style="border-left: 1px solid #ddd;">订单号</th>
+						<th width="45%" nowrap="nowrap">订单商品</th>
+						<th width="25%" nowrap="nowrap">退货/换货/维修</th>
+						<th width="15%" nowrap="nowrap">下单时间</th>
+					</tr>
+					<tr align="center" th:each="item:${tMallOrders}">
+						<td nowrap="nowrap" th:text="${item.serial}">0123456789</td>
+						<td nowrap="nowrap" style="padding: 0px;">
+							<div class="order_menu">
+								<ul>
+									<li th:each="productItem : ${item.productList}">
+										<div class=" center_pic">
+											<img th:src="${productItem.productImg}" />
+										</div>
+										<div class="order_text">
+											<span th:text="${productItem.productname}"></span>*<span
+												th:text="${productItem.productcount}">1</span><br /> <span
+												th:text="${productItem.productColor}"></span>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+						</td>
+						<td nowrap="nowrap" style="padding: 0px;">
+							<div class="order_menu">
+								<ul>
+									<li th:each="productItem : ${item.productList}"
+										style="text-align: center">
+										<div
+											style="width: auto; height: 50px; line-height: 25px; text-align: left; padding-left: 70px; padding-top: 10px; margin-left: 5px;">
+											<a href="javascript:;"
+												style="color: #2180ae; display: block; line-height: 35px;"
+												class="sq" th:text="${productItem.sqstatus==0}?'申请':'已申请'">申请</a>
+												<input type="hidden" th:value="${productItem.orderserial}" />
+												<input type="hidden" th:value="${productItem.productserial}" />
+										</div>
+									</li>
+								</ul>
+							</div>
+
+						</td>
+						<td nowrap="nowrap"
+							th:text="${#dates.format(item.ctime, 'yyyy/MM/dd HH:mm:ss')}"></td>
+					</tr>
+
+				</tbody>
+			</table>
+			<form id="uploadForm" method="post" action="/information/applyService" enctype="multipart/form-data">
+				<input type="hidden" id="servicetype" name="servicetype" value="" />
+				<input type="hidden" id="orderserial" name="orderserial" value="" />
+				<input type="hidden" id="productserial" name="productserial" value="" />
+				<div style="display: none;" id="fw">
+					<div class="institute"></div>
+					<div class="alert_content">
+						<div class="service_title">
+							<div class="service_order">售后服务单</div>
+							<div class="close_service">
+								<a href="javascript:" class="gb"><img
+									src="/images/close_service.png" width="22" height="24" /></a>
+							</div>
+						</div>
+						<div class="repair-steps">
+							<div class="item">
+								<div class="label">
+									<em> * </em> 服务类型：
+								</div>
+								<div class="fl">
+									<ul class="list-type list-type-new">
+										<li class="th"><a href="#">退货 <b></b>
+										</a></li>
+										<li class="th selected"><a href="#">换货 <b></b>
+										</a></li>
+										<li class="th"><a href="#">维修 <b></b>
+										</a></li>
+
+									</ul>
+								</div>
+								<div class="clr"></div>
+							</div>
+							<div class="item">
+								<div class="label">
+									<em> * </em> 问题描述：
+								</div>
+								<div class="fl">
+									<textarea id="desc" class="area" rows="" cols="" name="servicedescribe"></textarea>
+									<div class="ar ftx-03">10-500字</div>
+								</div>
+								<div class="clr"></div>
+							</div>
+							<div class="item">
+								<div class="label">图片信息：</div>
+								<div class="fl">
+									<div class="ctrl-file" style="text-align: left; width: 100%;">
+										<input id="file" type="file" class="filehide" name="file"
+											multiple onchange="filechange(this);" /> <a id="reSelect"
+											href="#">上传图片</a>
+									</div>
+									<div class="mscoll" style="text-align: right;">
+										<div class="mleft" id="scollUp">上一个</div>
+										<div class="mright" id="scollDown">下一个</div>
+										<div class="mslist">
+											<ul class="img-list" style="overflow: hidden;">
+												<!-- <li class="hover"><a href="#" target="_blank"><img class="imgview"
+														src="" /></a><b onclick="">×</b></li> -->
+												<li class=""><a href="#"><img class="imgview"
+														src="" /></a><b onclick="">×</b></li>
+												<li class=""><a href="#"><img class="imgview"
+														src="" /></a><b onclick="">×</b></li>
+												<li class=""><a href="#"><img class="imgview"
+														src="" /></a><b onclick="">×</b></li>
+												<li class=""><a href="#"><img class="imgview"
+														src="" /></a><b onclick="">×</b></li>
+												<li class=""><a href="#"><img class="imgview"
+														src="" /></a><b onclick="">×</b></li>
+											</ul>
+										</div>
+									</div>
+									<span id="img_des" class="msg-text">为了帮助您更好的解决问题，请上传图片</span> <span
+										class="msg-text2">最多可上传5张图片，每张图片大小不超过5M，支持bmp,gif,jpg,png,jpeg格式文件</span>
+									<div class="clr"></div>
+								</div>
+							</div>
+							<div class="btns">
+								<a id="submitbutton" href="javascript:;">确认提交</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+	<div th:include="common/foot"></div>
+	<script type="text/javascript">
+		var imgs = $(".imgview");
+		imgs.attr("src", "");
+		imgs.css("display", "none");
+
+		/* 		var divs = $(".ctrl-file");
+		 divs.css("display","none");
+		 divs.eq(0).css("display","block"); */
+
+		var reader = new FileReader();
+		function filechange(file) {
+			imgs.attr("src", "");
+			imgs.css("display", "none");
+			for (var i = 0; i < file.files.length; i++) {
+				reader = new FileReader();
+				reader.readAsDataURL(file.files[i]);
+				reader.onload = function(evt) {
+					showimg(evt.target.result);
+				}
+			}
+			$("#reSelect").text("重新选择");
+		}
+
+		function showimg(src) {
+			for (var i = 0; i < imgs.length; i++) {
+				if (imgs.eq(i).attr("src") == "") {
+					imgs.eq(i).attr("src", src);
+					imgs.eq(i).css("display", "block");
+					break;
+				} else {
+					continue;
+				}
+			}
+		}
+
+/* 		function checkPic(img) {
+			if (img.fileSize > 5 * 1024 * 1024) {
+				alert
+			}
+		} */
+	</script>
+</body>
+</html>

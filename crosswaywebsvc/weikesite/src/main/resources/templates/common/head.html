@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="application/javascript" src="/js/clickuser.js"></script>
+<style type="text/css">
+	#bigTitle img {
+		height:61.391px;
+	}
+</style>
+<script th:inline="javascript">
+	var index = [[${index}]];
+	$(function(){
+		var imgs = $(".newidx-nav img");
+		for(var i=0;i<imgs.length;i++) {
+			var oldSrc = imgs.eq(i).attr("src");
+			var srcArray = oldSrc.split(".");
+			if(i == index) {
+				imgs.eq(i).attr("src",srcArray[0].substring(0,srcArray[0].length-1)+"a."+srcArray[1]);
+			} else {
+				imgs.eq(i).attr("src",srcArray[0].substring(0,srcArray[0].length-1)+"b."+srcArray[1]);
+			}
+		}
+	})
+</script>
+</head>
+<body>
+<div class="index_top">
+<div class="index_logo">
+<img src="/images/regin_LOGO.png">
+</div>
+<div id="clickUser" class="center-icon"><img src="/images/center.png"></div>
+<div class="login_name" th:text="${session.user.nickname}">lujun3287715</div>
+<div class="exit_menu">
+<ul id="personal" style="display:none;">
+	<li><a href="/toModify"><img src="/images/set.png">个人设置</a></li><!-- 
+    <li><a href="/toMessage"><img src="/images/set.png">消息设置</a></li> -->
+    <li><a href="/toSetting"><img src="/images/set.png">设置</a></li>
+   <!--  <li><a href="/exit"><img src="/images/exit.png">退出账号</a></li> -->
+</ul>
+</div>
+</div>
+</body>
+</html>

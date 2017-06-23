@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="/css/center.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<!-- <style type="text/css">
+
+.center_infol dl dt{
+font-size:18px;
+}
+.center_infol dl dd a{
+font-size:16px;
+}
+.myorder_top{
+ font-size:18px;
+}
+
+.center_infol{
+width:125px;
+}
+</style> -->
+<!-- <script type="text/javascript">
+ $(function(){
+	 
+ 	 $("[name]='ds'").click(function(){   
+		 $("[name]='ds'").removeClass("select");
+		 $(this).addClass("select");  
+		 
+		/*  if($(this).attr("id")=="shfu"){ 
+			 $.ajax({ 
+				 type:"get",
+				 url: "/information/saleService"  
+			 });
+		 } */
+		
+		 
+ 	 }); 
+	  
+ });
+
+</script> -->
+
+<script th:inline="javascript">
+	var index = [[${index}]];
+	$(function(){
+		$('#bigTitle a').removeClass(); 
+		$('#bigTitle a').eq(index).addClass("select"); 
+	})
+</script>
+
+</head>
+
+<body>
+<div class="center_infol" id="bigTitle">
+<dl>
+<dt>交易管理</dt>
+<dd><a href="/order/list" name="ds"   class=" select">我的订单</a></dd>
+</dl>
+<dl>
+<dt>客户服务</dt><!-- <a id="shfu"  name="ds" href="/information/saleService"></a> -->
+<dd><a id="shfu" name="ds" href="/information/saleService">售后服务</a></dd>
+<dd><a  name="ds"  href="/information/serviceList">我的服务单</a></dd>
+</dl>
+<dl>
+<dt>个人中心</dt>
+<dd><a   name="ds"  href="/information/myAccount">我的账户</a></dd>
+<dd><a   name="ds"  href="/information/myCoupons">优惠券</a></dd>
+</dl>
+<dl>
+<dt>账户管理</dt>
+<dd><a   name="ds"  href="/information/toModifyMessage">个人信息</a></dd>
+<dd><a   name="ds"  href="/information/toAddress">收货地址</a></dd>
+<dd><a   name="ds"  href="/information//toPwd">修改密码</a></dd>
+</dl>
+</div>       
+</body>
+</html>

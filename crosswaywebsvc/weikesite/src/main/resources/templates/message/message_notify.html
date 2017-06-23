@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>消息通知</title>
+<link href="/css/index.css" rel="stylesheet">
+<link href="/css/add.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var inputs = $(".message_hidden");
+		var messageArray = [];
+		for(var i=0;i<inputs.length;i++) {
+			messageArray[i] = inputs.eq(i).val().substring(0,6);
+		}
+			
+		$(".messageShow").removeClass("hda");
+		
+		var messageType = $("#messageType_hidden").val();
+		if(messageType == "0") {
+			$(".messageShow").eq(0).addClass("hda");
+		}
+		if(messageType == "1") {
+			$(".messageShow").eq(1).addClass("hda");
+		}
+
+		 
+		$("#back").click(function() {
+			window.location.href = "/my/index";
+		});
+		
+		$(".fold").click(function(){
+			var index = $(this).index(".fold");
+			$(".textShow").eq(index).html(messageArray[index]+"&bull;&bull;&bull;");
+		});
+	})
+</script>
+</head>
+<body>
+	<input type="hidden" id="messageType_hidden" th:value="${messageType}" />
+	<div class="public_top">
+		<div class="public_back">
+			<img id="back" src="/images/back_c.png">
+		</div>
+		<div class="select_name">我的消息</div>
+		<div class="select-icon"></div>
+	</div>
+	<div class="pro_detail">
+		<ul>
+			<li class="messageShow"><a href="/set/toMyMessage?messageType=0">消息通知</a></li>
+			<li class="messageShow"><a href="/set/toMyMessage?messageType=1">系统通知</a></li>
+		</ul>
+	</div>
+
+	<div class="message-lie" id="messageButton" th:if="${messageType == '0' && messageButton}">
+		<ul th:each="myMessage : ${messageList.list}" th:if="${messageList}">
+			<li>
+				<div style="width: auto; float: left; margin-left: 8px;">
+					<img src="/images/music_icon.png">
+				</div>
+				<div style="width: 150px; float: left; margin-left: 8px;">
+					<input type="hidden" class="message_hidden"
+						th:value="${myMessage.message}" /> <span
+						style="font-size: 12px; color: #e70012;">小威提醒<span
+						class="textShow"
+						style="color: #535353; display: block; line-height: 16px;"></span></span>
+				</div>
+				<div class="fold">
+					<div class="wei_notify fold_icon">
+						<span th:text="${#dates.format(myMessage.addtime,'YYYY-MM-dd')}">2016-11-30</span>
+						<br> <span
+							th:text="${#dates.format(myMessage.addtime,'HH:mm:ss')}">10:01</span>
+					</div>
+				</div> <!-- <div style="width: 100%; float: left;" class="xs">
+					<span class="show_text" th:text="${myMessage.message}">
+					</span>
+				</div> -->
+			</li>
+		</ul>
+	</div>
+	
+	<div class="message-lie" th:if="${messageType == '1' && systemButton}">
+		<ul th:each="myMessage : ${messageList.list}" th:if="${messageList}">
+			<a th:href="'/set/messageInfo?messageId='+${myMessage.id}">
+				<li>
+					<div style="width: auto; float: left; margin-left: 8px;">
+						<img src="/images/music_icon.png">
+					</div>
+					<div style="width: 150px; float: left; margin-left: 8px;">
+						<span style="font-size: 12px; color: #e70012;">小威提醒<span
+							style="color: #535353; display: block; line-height: 16px;" th:utext="${myMessage.title}">克洛斯威荣获2016安徽...</span></span>
+					</div>
+					<div class="wei_notify link_icon">
+						<span  th:text="${#dates.format(myMessage.addtime,'YYYY-MM-dd')}">2016-11-30</span> <br><span th:text="${#dates.format(myMessage.addtime,'HH:mm:ss')}">10:01</span>
+					</div>
+			</li>
+			</a>
+		</ul>
+	</div>
+</body>
+</html>

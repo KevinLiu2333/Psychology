@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>威客</title>
+<link href="/css/index.css" rel="stylesheet">
+<link href="/css/add.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#back").click(function() {
+			window.location.href="/set/toSet";
+		})
+	})
+</script>
+</head>
+
+<body style="background-color: #eee;">
+	<div class="public_top">
+		<div class="public_back">
+			<img id="back" src="/images/back_c.png">
+		</div>
+		<div class="select_name">消息设置</div>
+		<div class="select-icon"></div>
+	</div>
+	<div class="notify_switch">
+		<input type="hidden" name="cwkId" /> <span style="margin-left: 20px;">一键消息通知开关</span>
+		<div
+			style="float: right; position: relative; top: 6px; right: 20px; height: 35px;">
+			<div class="btn-switch">
+				<input type="checkbox"> <label for="switch" class="switch"><span></span></label>
+			</div>
+		</div>
+	</div>
+	<div class="notify">
+		<span style="margin-left: 20px; margin-right: 20px; display: block;">若关闭，将同时关闭作业批改通知和系统消息通知；若开启将同时开启作业批改通知和系统消息通知。</span>
+	</div>
+	<div class="notify_switch">
+		<span style="margin-left: 20px;">接收作业批改通知</span>
+		<div
+			style="float: right; position: relative; top: 6px; right: 20px; height: 35px;">
+			<div class="btn-switch">
+				<input type="checkbox"> <label for="switch" class="switch"><span><input
+						type="hidden" id="messButton" th:value="${tbCwk.messageButton}" /></span></label>
+			</div>
+		</div>
+	</div>
+	<div class="notify">
+		<span style="margin-left: 20px; margin-right: 20px; display: block;">若关闭，当你的作业老师完成批改后，你不会收到消息通知。</span>
+	</div>
+	<div class="notify_switch">
+		<span style="margin-left: 20px;">接收系统消息通知</span>
+		<div
+			style="float: right; position: relative; top: 6px; right: 20px; height: 35px;">
+			<div class="btn-switch">
+				<input type="checkbox"> <label for="switch" class="switch"><span><input
+						type="hidden" id="sysButton" th:value="${tbCwk.systemButton}" /></span></label>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			var messButton = $("#messButton").val();
+			if (messButton == "true") {
+				$(".switch:eq(1)").prev().prop("checked", true).addClass(
+						"checked");
+			}
+
+			var sysButton = $("#sysButton").val();
+			if (sysButton == "true") {
+				$(".switch:eq(2)").prev().prop("checked", true).addClass(
+						"checked");
+			}
+
+			if (sysButton == "true" && messButton == "true") {
+				$(".switch:eq(0)").prev().prop("checked", true).addClass(
+						"checked");
+			}
+
+			$(".switch:first").click(
+					function() {
+						if ($(this).prev().prop("checked") == false) {
+							$(".switch").prev().prop("checked", true).addClass(
+									"checked");
+						} else {
+							$(".switch").prev().prop("checked", false)
+									.removeClass("checked");
+
+						}
+					});
+
+			$(".switch:gt(0)")
+					.click(
+							function() {
+								if ($(this).prev().prop("checked")) {
+									$(this).prev().prop("checked", false)
+											.removeClass("checked");
+								} else {
+									$(this).prev().prop("checked", true)
+											.addClass("checked");
+								}
+								if ($(".switch:eq(1)").prev().prop("checked") == true
+										&& $(".switch:eq(2)").prev().prop(
+												"checked") == true) {
+									$(".switch:first").prev().prop("checked",
+											true).addClass("checked");
+								} else {
+									$(".switch:first").prev().prop("checked",
+											false).removeClass("checked");
+								}
+							})
+			$(".switch").click(
+					function() {
+						$.ajax({
+							data : {
+								messageButton : $(".switch:eq(1)").prev().prop(
+										"checked"),
+								systemButton : $(".switch:eq(2)").prev().prop(
+										"checked")
+							},
+							url : "/set/setSwitch",
+						});
+					});
+		})
+	</script>
+</body>
+</html>

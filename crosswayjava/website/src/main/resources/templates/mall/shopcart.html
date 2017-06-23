@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>在线商城  克洛斯威智能钢琴</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/css/order.css" rel="stylesheet" type="text/css" />
+<meta name="description" content="安徽克洛斯威智能乐器科技有限公司正式成立于2014年，是中国科学技术大学先进技术研究院孵化企业。公司专注于智能乐器研发、生产、销售以及构建互联网在线教育生态体系的创新型科技企业。" />
+<meta name="keywords" content="克洛斯威,Crossway,klsw,钢琴侠,智能钢琴,互联网钢琴,电钢琴,音乐教育,一体机,一体钢琴,熊世林,keluosiwei" />
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/bdstat.js"></script>
+</head>
+
+<body>
+<!-- head -->
+<div th:include="common/head"></div>
+<div class="cart_wrap">
+<div class="cart_title">我的购物车</div>
+<div class="cart_con">
+<div class="shop_list">
+<div class=" shop_name">商品</div>
+<div class="shop_price">价格</div>
+<div class="shop_quantity">数量</div>
+<div class="shop_total">总计</div>
+<div class="shop_operation">操作</div>
+</div>
+<div id="chartInfo"></div>
+</div>
+
+</div>
+<div th:include="common/foot"></div>
+</body>
+</html>
+<script type="text/javascript">
+
+	$(function () {
+		$('#chartInfo').load('/cart/info');
+	});
+
+	function good_reduce(obj) {
+		var serial = $(obj).attr("value");
+		var num = $("#" + serial).val();
+		if (num > 1)
+			num--;
+		$("#" + serial).val(num);
+		operateProduct(1, 'decr', serial);
+	}
+
+	function good_add(obj) {
+		var serial = $(obj).attr("value");
+		var num = $("#" + serial).val();
+		num++;
+		$("#" + serial).val(num);
+		operateProduct(1, 'incr', serial);
+	}
+
+	function good_update(input) {
+		var serial = $(input).attr("id");
+		good_change(input);
+		var num = input.value;
+		operateProduct(num, 'set', serial);
+	}
+
+	function good_change(input) {
+		input.value = input.value.replace(/\D+/g, "");
+		if (input.value == "")
+			input.value = 1;
+	}
+
+	function good_delete(obj) {
+		
+		var serial = $(obj).attr("value");
+		
+		operateProduct(0, 'set', serial);
+	}
+
+	function operateProduct(num, operator, serial) {
+		$.get("/cart/product/" + operator + "/" + serial + "/" + num, function(
+				data) {
+			switch (data) {
+			case "ok":
+				$('#chartInfo').load('/cart/info');
+				break;
+			case "fail":
+				alert("操作失败!");
+				break;
+			default:
+				alert("操作失败!");
+			}
+		});
+	}
+</script>

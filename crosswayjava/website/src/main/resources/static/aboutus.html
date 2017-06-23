@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>关于我们  克洛斯威智能钢琴</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/bdstat.js"></script>
+ <script type="text/javascript">
+	$(function(){
+		//鼠标移入
+		$('#a').mouseover(function(){
+		    $('#b').show();
+		});
+		//鼠标移出
+		$('#a').mouseout(function(){
+		$('#b').hide();
+		});
+	});
+</script>
+</head>
+<body>
+<div class="navhead">
+    <nav class="index-nav">
+        <div class="logo">
+            <a href="/"><img src="/images/logo.png" /></a>
+        </div>
+
+        <div class="shopcart">
+        <a href="/cart"> </a>
+        </div>
+        <!-- <div class="exit" th:if="${session.klsw_user }">
+		    <a href="/logout">退出</a>
+		 </div> -->
+        <div class="login">
+        <a href="/order/list"></a>
+       </div>
+        <ul class="nav-list">
+            
+            <li class="nav-item ">
+                <a href="/">首页</a>                
+            </li>
+            
+            <li class="nav-item">
+                <a href="/smart.html">智能钢琴</a>
+                
+      </li>
+            
+            <li class="nav-item">
+              <a href="/mall">在线商城</a>
+                
+      </li>
+            
+            <li class="nav-item">
+                <a href="/service.html">招商加盟</a>               
+                
+      </li>
+            
+            <li class="nav-item">
+                <a href="/service.html" class="orange">关于我们</a>
+                
+            </li>
+            
+        </ul>
+   </nav>
+</div>
+    <script type="text/javascript">
+    $(function() {
+        if ($(document).scrollTop() > 0 ) {
+            if(!$('.navhead').hasClass('shadow')){
+                $('.navhead').addClass('shadow');
+            }
+        }
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 0 ) {
+                if(!$('.navhead').hasClass('shadow')){
+                    $('.navhead').addClass('shadow');
+                }
+            }else{
+                $('.navhead').removeClass('shadow');
+            }
+        });
+
+
+    })
+    </script>
+    <div class="about_banner"><a href="javascript:;"><img src="/images/about.jpg" /></a></div>
+<div class="about_con">
+<div class="about_intro">
+<span>公司简介</span>
+  <p style="line-height: 32px; font-size: 16px;">
+  安徽克洛斯威智能乐器科技有限公司，中国科学技术大学先进技术研究院孵化企业，是一家专注于智能钢琴研发、生产、销售以及构建互联网在线教育生态体系的创新型科技企业。 </p>
+<p style="line-height: 32px; font-size: 16px;">作为全球软硬件一体化智能钢琴开创者，克洛斯威致力于以智能钢琴为教育入口，构建“智能硬件+线上教育平台+线下钢琴教室+音乐教育大数据”为一体的钢琴教育生态，并以“共享钢琴”模式，颠覆传统钢琴及传统钢琴教育，改变未来。</p>
+<p style="line-height: 32px; font-size: 16px;">2016年，克洛斯威智能钢琴获得小米生态链战略领投，顺为资本、华米科技、高新创投跟投。  </p>
+</div>
+<!-- <div class="about_friend">“用科技智造音乐，让音乐触手可及！”</div> -->
+<div  style="margin-top:20px;">
+<div class="contact"><img src="/images/contact.jpg" width="476" height="476" /></div>
+<div class="map" id="dituContent"></div>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.0&services=true"></script>
+<script type="text/javascript">
+ 
+            //创建和初始化地图函数：
+            function initMap() {
+                createMap();//创建地图
+                setMapEvent();//设置地图事件
+                addMapControl();//向地图添加控件
+                addMarker();//向地图中添加marker
+            }
+
+            //创建地图函数：
+            function createMap() {
+                var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+                var point = new BMap.Point(117.218043, 31.846337);//定义一个中心点坐标
+                map.centerAndZoom(point, 18);//设定地图的中心点和坐标并将地图显示在地图容器中
+                window.map = map;//将map变量存储在全局
+            }
+
+            //地图事件设置函数：
+            function setMapEvent() {
+                map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+                map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+                map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+                map.enableKeyboard();//启用键盘上下左右键移动地图
+            }
+
+            //地图控件添加函数：
+            function addMapControl() {
+                //向地图中添加缩放控件
+                var ctrl_nav = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
+                map.addControl(ctrl_nav);
+                //向地图中添加缩略图控件
+                var ctrl_ove = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: 1 });
+                map.addControl(ctrl_ove);
+                //向地图中添加比例尺控件
+                var ctrl_sca = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
+                map.addControl(ctrl_sca);
+            }
+
+            //标注点数组
+            var markerArr = [{ title: "时代数码港", content: "地址：合肥市高新区黄山路599号", point: "117.218043|31.846337", isOpen: 1, icon: { w: 23, h: 25, l: 46, t: 21, x: 9, lb: 12 } }
+            ];
+            //创建marker
+            function addMarker() {
+                for (var i = 0; i < markerArr.length; i++) {
+                    var json = markerArr[i];
+                    var p0 = json.point.split("|")[0];
+                    var p1 = json.point.split("|")[1];
+                    var point = new BMap.Point(p0, p1);
+                    var iconImg = createIcon(json.icon);
+                    var marker = new BMap.Marker(point, { icon: iconImg });
+                    var iw = createInfoWindow(i);
+                    var label = new BMap.Label(json.title, { "offset": new BMap.Size(json.icon.lb - json.icon.x + 10, -20) });
+                    marker.setLabel(label);
+                    map.addOverlay(marker);
+                    label.setStyle({
+                        borderColor: "#808080",
+                        color: "#333",
+                        cursor: "pointer"
+                    });
+
+                    (function () {
+                        var index = i;
+                        var _iw = createInfoWindow(i);
+                        var _marker = marker;
+                        _marker.addEventListener("click", function () {
+                            this.openInfoWindow(_iw);
+                        });
+                        _iw.addEventListener("open", function () {
+                            _marker.getLabel().hide();
+                        })
+                        _iw.addEventListener("close", function () {
+                            _marker.getLabel().show();
+                        })
+                        label.addEventListener("click", function () {
+                            _marker.openInfoWindow(_iw);
+                        })
+                        if (!!json.isOpen) {
+                            label.hide();
+                            _marker.openInfoWindow(_iw);
+                        }
+                    })()
+                }
+            }
+            //创建InfoWindow
+            function createInfoWindow(i) {
+                var json = markerArr[i];
+                var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>" + json.content + "</div>");
+                return iw;
+            }
+            //创建一个Icon
+            function createIcon(json) {
+                var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w, json.h), { imageOffset: new BMap.Size(-json.l, -json.t), infoWindowOffset: new BMap.Size(json.lb + 5, 1), offset: new BMap.Size(json.x, json.h) })
+                return icon;
+            }
+
+            initMap();//创建和初始化地图
+        
+</script>
+<div class="address">
+<dl>
+<dt style="margin-top:4px;"><img src="/images/website_icon.png" width="23" height="23" /></dt>
+<dd>www.klsw.com</dd>
+</dl>
+<dl>
+<dt style="margin-top:5px;"><img src="/images/email_icon.png" width="27" height="21" /></dt>
+<dd>info@klsw.com</dd>
+</dl>
+<dl>
+<dt><img src="/images/tele_icon.png" width="29" height="28" /></dt>
+<dd>400-8080-218，0551-62735668</dd>
+</dl>
+ 
+<dl>
+<dt><img src="/images/position_icon.png" width="24" height="33" /></dt>
+<dd>安徽省合肥市高新区黄山路599号时代数码港3层</dd>
+</dl>
+</div>
+<!-- <div class="about_friend" style=" margin-top:75px;">“群贤毕至”</div>
+<div class="about_we"><a href="#execute">执行专员</a><span>/</span><a href="#hardware">硬件测试工程师</a><span>/</span><a href="#writer">文案</a></div>
+<div class="job"><a name="execute" id="execute"></a>产品经理</div>
+<div class="job_info">
+<dl>
+<dt>岗位职责：</dt>
+<dd>1、根据公司战略，完成相关互联网产品规划，制定产品规划并有效执行</dd>
+<dd>2、根据产品计划，完成阶段产品需求说明书，编写详细的产品设计文档</dd>
+<dd>3、主持阶段性产品评估、产品设计、项目问题解答等相关工作</dd>
+<dd>4、协调推进整个产品周期设计、开发、运营过程，确保各环节正确实施</dd>
+<dd>5、产品问题的收集整理，持续优化所负责的产品线</dd>
+</dl>
+<dl>
+<dt>任职要求：</dt>
+<dd>1、对在线教育怀有热情，乐于学习，对中国互联网用户心理有深刻了解</dd>
+<dd>2、较好的产品敏感度，专注而有耐心，具备极佳的沟通能力，注重细节</dd>
+<dd>3、三年以上互联网产品设计经验，文字功底深厚，较强的创造性思维</dd>
+<dd style=" margin-top:15px;">联系方式：0551-62735691<span>邮箱地址：klswzhaopin@klsw.com</span></dd>
+</dl>
+</div>
+<div class="job"><a name="hardware" id="hardware"></a>连锁运营经理</div>
+<div class="job_info">
+<dl>
+<dt>岗位职责：</dt>
+<dd>1、参与制定加盟连锁体验中心统筹规划，负责体验中心标准化运营体系的设计</dd>
+<dd>2、制定连锁运营标准化手册，分解任务并跟踪各体验中心的标准化实施进度</dd>
+<dd>3、负责各体验中心标准化服务的支持、培训、管理督查、装修验收</dd>
+<dd>4、负责落实总部统一制定的线下营销活动方案，并督导执行</dd>
+<dd>5、负责协调组织各体验中心的统一培训组织安排</dd>
+<dd>6、负责各体验中心日常营运管理、店面营销策略的支持、辅导</dd>
+<dd>7、负责各体验中心的相关信息收集和市场调研工作并提供相关报告说明</dd>
+<dd>8、对线下各体验中心的经营业绩负有相关责任</dd>
+</dl>
+<dl>
+<dt>任职要求：</dt>
+<dd>1、25-35周岁，大专以上学历</dd>
+<dd>2、精通团队管理、客户管理，终端培训、熟悉实体店铺的各项流程的制定、执行</dd>
+<dd>3、三年以上的连锁店面营销工作经验和连锁店务管理经验</dd>
+<dd>4、连锁类企业总部两年以上运营管理经验，培训教育行业经验者优先</dd>
+<dd>5、文字功底强、形象良好,具有较强的沟通能力和亲和力，良好的数据分析能力</dd>
+<dd>6、创新化思维、踏实努力、诚信敬业，具有强烈的事业心和责任感,以帮助客户成功为已任</dd>
+<dd style=" margin-top:15px;">联系方式：0551-62735691<span>邮箱地址：klswzhaopin@klsw.com</span></dd>
+</dl>
+</div>
+<div class="job"><a name="writer" id="writer"></a>钢琴老师</div>
+<div class="job_info">
+<dl>
+<dt>岗位职责：</dt>
+<dd>1、接受客户咨询并根据客户需求结合公司软件音乐教程、课件进行钢琴入门现场指导</dd>
+<dd>2、根据实际需求对现有教学课件提出建议或意见</dd> 
+</dl>
+<dl>
+<dt>任职要求：</dt>
+<dd>1、本科学历，扎实系统的音乐理论基础和专业技能</dd>
+<dd>2、二年以上钢琴类教学经验</dd>
+<dd>3、沟通良好、亲和力强</dd> 
+<dd style=" margin-top:15px;">联系方式：0551-62735691<span>邮箱地址：klswzhaopin@klsw.com</span></dd>
+</dl>
+</div> -->
+</div>
+<div class="vspace"></div>
+
+</div>
+<div class="footnav">
+     <div class="flash-bar">
+     	<ul class="service-block">
+	        <li><img src="/images/lightning.png" /><br />免运费闪电发货</li>                 
+	        <li><img src="/images/seven.png" /><br />7天无理由退货</li>
+	        <li><img src="/images/fifteen.png" /><br />15天换货保障</li>                                                   
+	        <li style="margin-right:0px;"><img src="/images/years.png" /><br />365天免费保修</li>                 
+        </ul>
+	</div>
+    <div class="bn-content"style=" position:relative">
+    	<a id="b" href="#" style="display: none; position:absolute; right:315px; top:128px; z-index:999;"><img src="/images/威客二维码.png" /></a>    
+		<ul class="nav-block">
+	        <li style=" margin-right:150px;">
+	            <span>帮助中心</span>
+	            <p><a href="/notice.html#gouwuzhinan">购物指南</a></p>
+	            <p><a href="/notice.html#zhifufangshi">支付方式</a></p>
+	            <p><a href="/notice.html#peisongfangshi">配送方式</a></p>
+	        </li>
+	         <li style=" margin-right:150px;">
+	             <span>服务支持</span>
+	             <p><a href="/notice.html#shouhoufuwuzongze">售后政策</a></p>
+	             <p><a href="/inquiry.html">网点查询</a></p>
+	         </li>
+	        <li style=" margin-right:90px;">
+	            <span>媒体中心</span>
+	            <p><a href="/news">新闻动态</a></p>
+	            <p><a href="javascript:;">媒体评测</a></p>
+	        </li>
+	        <li style=" margin-right:20px;">
+	            <span>官方微信</span>
+	            <p><img src="/images/qrb.jpg" style="width:103px;"/>  </p>
+	        </li>
+	        <li style=" margin-right:76px;">
+	            <span>官方微博</span>
+	            <p><img src="/images/qra.png" style="width:103px;"/>  </p>
+	        </li>                
+            <li style="width:100px; background:url(/images/bottom_tele.png) left center no-repeat; padding-left:45px;">                
+		          <div class="telephone" style="width:180px; font-size:14px;">
+		                                            加盟合作
+		                <p style=" margin-bottom:12px;">400-8080-218转1</p>
+		                                           售后服务
+		                <p>400-8080-218转2</p>
+		       	  </div>
+            </li>                                         
+		</ul>
+	</div>
+    <div class="cpr-content">
+		<span class="copyright" style=" margin-top:20px;">       
+            <a href="http://m.klsw.com">手机官网</a>
+            <span style="padding:0px 20px;">|</span>
+            <a href="/message">联系我们</a>
+            <span style="padding:0px 20px;">|</span>
+            <a href="/aboutus.html">企业简介</a>
+            <span style="padding:0px 20px;">|</span>
+            <a href="/joinus.html">加入我们</a>
+             <span style="padding:0px 20px;">|</span>
+            <a id="a" href="#">威客空间</a>         
+        </span>
+        <span class="copyright">       
+                Copyright©2016 KLSW.COM &nbsp;安徽克洛斯威智能乐器科技有限公司&nbsp; All rights reserved. ICP证：皖ICP备15021161号-1               
+       	</span>
+    </div>
+</div>
+<style type="text/css">
+        .copyright a {
+            text-decoration: none;
+            color: #787878;
+            transition: color .2s ease-out;
+            -webkit-transition: color .2s ease-out;
+        }
+
+        .copyright a:hover {
+            color: #fff;
+        }
+    </style>
+    <!-- 
+    <div id="klswQqServiceDiv" style="height: 40px; width: 120px; overflow: hidden; text-align: left; position: fixed; border-width: 1px 1px 0px; border-style: solid; border-color: rgb(230, 134, 0); z-index: 999; box-shadow: rgba(0, 0, 0, 0.14902) 0px 0px 16px; visibility: visible; bottom: 0px; right: 246px; background-color: rgb(255, 149, 0);">
+        <a style="color:white; font-size:14px; height:40px; width:160px;" href="tencent://message/?uin=3408878658&amp;Site=qq&amp;Menu=yes">
+            <img height="41" width="41" alt="" src="/images/qqhead.png" /><span style="position:absolute; height:40px; line-height:41px; margin-left:10px; font-size:16px;">QQ咨询</span>
+        </a>
+    </div>
+    
+ 	 -->
+ 	 <!-- cnzz网站统计资料 -->
+    <div style="display: none;">
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259402058'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/stat.php%3Fid%3D1259402058' type='text/javascript'%3E%3C/script%3E"));</script>
+	</div>
+    <script type="text/javascript">
+        // 导航按钮颜色
+        function showshow(obj) {
+            $(".nav-list li a").each(function (index) {
+                $this = $(this);
+                if (index == obj) {
+                    $this.addClass("orange");
+                }
+            });
+        }
+    </script>
+	<!-- 
+    <script type="text/javascript">
+        (function (m, ei, q, i, a, j, s) {
+            m[a] = m[a] || function () {
+                (m[a].a = m[a].a || []).push(arguments)
+            };
+            j = ei.createElement(q),
+                s = ei.getElementsByTagName(q)[0];
+            j.async = true;
+            j.charset = 'UTF-8';
+            j.src = i + '?v=' + new Date().getUTCDate();
+            s.parentNode.insertBefore(j, s);
+        })(window, document, 'script', '/js/meiqia.js', '_MEIQIA');
+        _MEIQIA('entId', 14946);
+        _MEIQIA('allSet', handleAllSet);
+
+        function handleAllSet() {
+            // 传递顾客信息
+            _MEIQIA._SENDMETADATA({
+                商城用户名: '游客595119', // 自定义字段
+                name: '游客595119',
+            });
+        }
+    </script>
+     -->
+</body>
+</html>

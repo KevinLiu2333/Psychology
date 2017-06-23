@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper.TbUserexperienceMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model.TbUserexperience" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" property="id" jdbcType="INTEGER" />
+    <result column="SerialNumber" property="serialnumber" jdbcType="VARCHAR" />
+    <result column="Time" property="time" jdbcType="TIMESTAMP" />
+    <result column="Button" property="button" jdbcType="VARCHAR" />
+    <result column="CurPage" property="curpage" jdbcType="VARCHAR" />
+    <result column="NextPage" property="nextpage" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

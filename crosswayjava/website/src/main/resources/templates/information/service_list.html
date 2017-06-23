@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的服务单</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="/css/center.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="/js/jquery.js"></script>
+</head>
+
+<body>
+<div class="navhead" style="border-bottom:1px solid #ddd;">
+	<nav class="index-nav">
+		<div class="logo">
+			<a href="/index.html"><img src="/images/logo.png" /></a>
+		</div>
+		<div class="shopcart">
+			<a href="/cart"> </a>
+		</div>
+        <div class="exit" th:if="${session.klsw_user }">
+			<a href="/logout">退出</a>
+		</div>
+		<div class="login">
+			<a href="/order/list"></a>
+		</div>
+		<ul class="nav-list">
+
+			<li class="nav-item"><a href="/">首页</a></li>
+
+			<li class="nav-item"><a href="/smart.html">智能钢琴</a></li>
+
+			<li class="nav-item"><a href="/mall" class="orange">在线商城</a></li>
+
+			<li class="nav-item"><a href="/service.html">服务中心</a></li>
+
+			<li class="nav-item"><a href="/aboutus.html">关于我们</a></li>
+
+		</ul>
+	</nav>
+</div>
+
+<div class="center_info">
+<div th:include="common/center"></div>
+<div class="center_infor">
+<div class="myorder_top" style=" margin-bottom:35px;">我的服务单</div>
+
+<table class="table table-bordered table-hover">
+     <tbody>
+       <tr align="center" style="background-color:#f1f1f1;">
+         <th width="15%" height="31" nowrap="nowrap" style=" border-left:1px solid #ddd;">服务单编号</th>
+         <th width="15%" nowrap="nowrap">订单号</th>
+         <th width="25%" nowrap="nowrap">售后商品</th>
+         <th width="15%" nowrap="nowrap">申请时间</th>
+         <th width="15%" nowrap="nowrap">状态</th>
+         <th width="15%" nowrap="nowrap">处理时间</th>
+         </tr>
+       <tr align="center" th:each="tMallService: ${serviceList}" th:if="${serviceList}">
+         <td nowrap="nowrap" th:text="${tMallService.id}">201600003</td>
+         <td nowrap="nowrap"><a href="#" style="color:#2180ae;"  th:text="${tMallService.orderserial}">0123456789</a></td>
+         <td nowrap="nowrap" style="padding:0px;">
+                              <div class="order_menu" >
+                              <ul>
+                              <li>
+                                <div class="order_text" ><a href="#" style="color:#2180ae;"><span th:text="${tMallService.productname}"></span><span style=" font-size:12px; display:block; line-height:20px;" th:text="${tMallService.productcolor}"></span></a></div>
+                               </li>
+                              </ul>
+                              </div>
+
+         </td>
+         <td nowrap="nowrap" th:text="${#dates.format(tMallService.applyTime, 'yyyy/MM/dd HH:mm:ss')}">2016-08-20</td>
+         <td nowrap="nowrap"><span style="color:#eb3b46; line-height:35px;" th:text="${tMallService.servicetype}+${tMallService.servicestatus}">处理中</span></td>
+         <td nowrap="nowrap" th:text="${#dates.format(tMallService.handleTime, 'yyyy/MM/dd HH:mm:ss')}"></td>
+         </tr>
+   <!--     <tr align="center">
+         <td nowrap="nowrap">201600003</td>
+         <td nowrap="nowrap"><a href="#" style="color:#2180ae;">0123456789</a></td>
+         <td nowrap="nowrap" style="padding:0px;">
+                              <div class="order_menu">
+                              <ul>
+                              <li>
+                                <div class="order_text"><a href="#" style="color:#2180ae;">克洛斯威智能钢琴（卧式款）<span style=" font-size:12px; display:block; line-height:20px;">燎原红</span></a></div>
+                               </li>
+                              </ul>
+                              </div>
+
+         </td>
+         <td nowrap="nowrap">2016-08-20</td>
+         <td nowrap="nowrap"><span style="color:#237fb0; line-height:35px;">审核不通过</span></td>
+         <td nowrap="nowrap">2016-08-20</td>
+         </tr>  -->
+  <!--      <tr align="center">
+         <td nowrap="nowrap">201600003</td>
+         <td nowrap="nowrap"><a href="#" style="color:#2180ae;">0123456789</a></td>
+         <td nowrap="nowrap" style="padding:0px;">
+                              <div class="order_menu">
+                              <ul>
+                              <li>
+                                <div class="order_text"><a href="#" style="color:#2180ae;">克洛斯威智能钢琴（卧式款）<span style=" font-size:12px; display:block; line-height:20px;">燎原红</span></a></div>
+                               </li>
+                              </ul>
+                              </div>
+
+         </td>
+         <td nowrap="nowrap">2016-08-20</td>
+         <td nowrap="nowrap"><span style="color:#b3b3b3; line-height:35px;">已完成</span></td>
+         <td nowrap="nowrap">2016-08-20</td>
+         </tr>   -->
+     </tbody>
+   </table>
+</div>
+</div>
+<div th:include="common/foot"></div>
+</body>
+</html>

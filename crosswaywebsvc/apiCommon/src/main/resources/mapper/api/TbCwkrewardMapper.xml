@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper.TbCwkrewardMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model.TbCwkreward" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" property="id" jdbcType="INTEGER" />
+    <result column="CWKID" property="cwkid" jdbcType="INTEGER" />
+    <result column="Title" property="title" jdbcType="VARCHAR" />
+    <result column="Contents" property="contents" jdbcType="VARCHAR" />
+    <result column="Img" property="img" jdbcType="VARCHAR" />
+    <result column="HomeworkID" property="homeworkid" jdbcType="INTEGER" />
+    <result column="Addtime" property="addtime" jdbcType="TIMESTAMP" />
+    <result column="Rewards" property="rewards" jdbcType="REAL" />
+    <result column="BestAnswerID" property="bestanswerid" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>

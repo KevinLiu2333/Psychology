@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>MID下载</title>
+<link  href="/css/load.css" rel="stylesheet" />
+<link href="/css/jquery.datetimepicker.css" rel="stylesheet"/>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script src="/js/jquery.datetimepicker.full.js"></script> 
+</head>  
+<body style="background-color:#CCC;">  
+
+<div id="alert_MID">
+<div class="institute"></div>
+<div class="alert_MIDcontent">
+
+<div class="service_title">
+ <span style="letter-spacing: 1px; color:#1a1a1a; font-size: 18px; line-height:60px;  padding-left: 35px; width: auto; text-align:center;">搜索详情</span><a href="javascript:;" onclick="history.back(); "><span style=" color:#4d4d4d;float:right; margin-right:30px; font-size:16px; margin-top:20px;">返回</span></a>
+ </div>
+  
+
+ <form action="/load/downloadMid" method="post" enctype="multipart/form-data"> 
+
+<div class="detal">
+<span style="display:block; font-size:16px; margin-left:110px; line-height:40px;" th:each="homeworks:${homeworks}">
+<span  th:text="${homeworks.midname}">爷爷的大钟</span>
+<input type="hidden" name="midName" th:value="${homeworks.midname}" />
+<input type="hidden" name="tpurl" th:value="${homeworks.midpath}" />
+   <span style=" margin-left:85px;" th:text="${#dates.format(homeworks.studenttime,'yyyy-MM-dd hh:mm:ss')}">2016-6-8</span> 
+    <input type="submit"  class="loads" value="下载"/>    
+</span> 
+</div> 
+ </form>
+</div> 
+
+</div> 
+ 
+</body>  
+</html> 

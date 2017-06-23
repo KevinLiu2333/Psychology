@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper.TbCwkMapper">
+
+	<!-- 公共用户信息Map -->
+	<resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model.TbCwk">
+		<!-- WARNING - @mbggenerated -->
+		<id column="ID" jdbcType="INTEGER" property="id" />
+		<result column="type" jdbcType="VARCHAR" property="type" />
+		<result column="userid" jdbcType="VARCHAR" property="userid" />
+		<result column="fFavicon" jdbcType="VARCHAR" property="ffavicon" />
+		<result column="name" jdbcType="VARCHAR" property="name" />
+		<result column="pwd" jdbcType="VARCHAR" property="pwd" />
+		<result column="nickname" jdbcType="VARCHAR" property="nickname" />
+		<result column="orgID" jdbcType="INTEGER" property="orgid" />
+		<result column="orgName" jdbcType="VARCHAR" property="orgname" />
+		<result column="split" jdbcType="REAL" property="split" />
+		<result column="price" jdbcType="REAL" property="price" />
+		<result column="priceWithMonth" jdbcType="REAL" property="pricewithmonth" />
+		<result column="IsSign" jdbcType="BIT" property="issign" />
+		<result column="CWKBeanCount" jdbcType="INTEGER" property="cwkbeancount" />
+		<result column="token" jdbcType="VARCHAR" property="token" />
+		<result column="locktime" jdbcType="TIMESTAMP" property="locktime" />
+		<result column="loginfail" jdbcType="INTEGER" property="loginfail" />
+		<result column="PhoneNO" jdbcType="VARCHAR" property="phoneno" />
+		<result column="RegistTime" jdbcType="DATE" property="registtime" />
+		<result column="ticket" jdbcType="VARCHAR" property="ticket" />
+		<result column="email" jdbcType="VARCHAR" property="email" />
+		<result column="lastLoginTime" jdbcType="TIMESTAMP" property="lastlogintime" />
+		<result column="loginTimeStamp" jdbcType="BIGINT" property="logintimestamp" />
+		<result column="details" jdbcType="LONGVARCHAR" property="details" />
+		<result column="sex" jdbcType="VARCHAR" property="sex" />
+		<result column="birthday" jdbcType="TIMESTAMP" property="birthday" />
+		<result column="message_button" jdbcType="BIT" property="messageButton" />
+		<result column="system_button" jdbcType="BIT" property="systemButton" />
+		<result column="region" jdbcType="VARCHAR" property="region" />
+		<result column="age" jdbcType="INTEGER" property="age" />
+		<result column="realname" jdbcType="VARCHAR" property="realname" />
+		<result column="serialNum" jdbcType="VARCHAR" property="serialnum" />
+	</resultMap>
+
+ 	<!-- 教师所有信息Map -->
+	<resultMap id="TeacherMap" type="com.klsw.apiCommon.api.model.WKTeacher">
+		<id column="ID" jdbcType="INTEGER" property="id" />
+		<result column="type" jdbcType="VARCHAR" property="type" />
+		<result column="userid" jdbcType="VARCHAR" property="userid" />
+		<result column="fFavicon" jdbcType="VARCHAR" property="ffavicon" />
+		<result column="name" jdbcType="VARCHAR" property="name" />
+		<result column="pwd" jdbcType="VARCHAR" property="pwd" />
+		<result column="nickname" jdbcType="VARCHAR" property="nickname" />
+		<result column="orgID" jdbcType="INTEGER" property="orgid" />
+		<result column="orgName" jdbcType="VARCHAR" property="orgname" />
+		<result column="split" jdbcType="REAL" property="split" />
+		<result column="price" jdbcType="REAL" property="price" />
+		<result column="priceWithMonth" jdbcType="REAL" property="pricewithmonth" />
+		<result column="IsSign" jdbcType="BIT" property="issign" />
+		<result column="CWKBeanCount" jdbcType="INTEGER" property="cwkbeancount" />
+		<result column="token" jdbcType="VARCHAR" property="token" />
+		<result column="locktime" jdbcType="TIMESTAMP" property="locktime" />
+		<result column="loginfail" jdbcType="INTEGER" property="loginfail" />
+		<result column="PhoneNO" jdbcType="VARCHAR" property="phoneno" />
+		<result column="RegistTime" jdbcType="DATE" property="registtime" />
+		<result column="ticket" jdbcType="VARCHAR" property="ticket" />
+		<result column="email" jdbcType="VARCHAR" property="email" />
+		<result column="lastLoginTime" jdbcType="TIMESTAMP" property="lastlogintime" />
+		<result column="loginTimeStamp" jdbcType="BIGINT" property="logintimestamp" />
+		<result column="details" jdbcType="LONGVARCHAR" property="details" />
+		<result column="sex" jdbcType="VARCHAR" property="sex" />
+		<result column="birthday" jdbcType="TIMESTAMP" property="birthday" />
+		<result column="message_button" jdbcType="BIT" property="messageButton" />
+		<result column="system_button" jdbcType="BIT" property="systemButton" />
+		<result column="region" jdbcType="VARCHAR" property="region" />
+		<result column="teach_grade" jdbcType="VARCHAR" property="teachGrade" />
+		<result column="average_score" jdbcType="FLOAT" property="averageScore" />
+		<result column="graduated_university" jdbcType="VARCHAR"
+			property="graduatedUniversity" />
+		<result column="isauthentication" jdbcType="BIT" property="isauthentication" />
+		<result column="teach_experience" jdbcType="VARCHAR" property="teachExperience" />
+		<result column="certificate_path" jdbcType="VARCHAR" property="certificatePath" />
+		<result column="age" jdbcType="INTEGER" property="age" />
+		<result column="realname" jdbcType="VARCHAR" property="realname" />
+	</resultMap>
+	
+		<!-- 学生所有信息Map -->
+		<resultMap id="StudentInfoMap" type="com.klsw.apiCommon.api.model.WKStudent">
+		<!-- WARNING - @mbggenerated -->
+		<id column="ID" jdbcType="INTEGER" property="id" />
+		<result column="type" jdbcType="VARCHAR" property="type" />
+		<result column="userid" jdbcType="VARCHAR" property="userid" />
+		<result column="fFavicon" jdbcType="VARCHAR" property="ffavicon" />
+		<result column="name" jdbcType="VARCHAR" property="name" />
+		<result column="pwd" jdbcType="VARCHAR" property="pwd" />
+		<result column="nickname" jdbcType="VARCHAR" property="nickname" />
+		<result column="orgID" jdbcType="INTEGER" property="orgid" />
+		<result column="orgName" jdbcType="VARCHAR" property="orgname" />
+		<result column="split" jdbcType="REAL" property="split" />
+		<result column="price" jdbcType="REAL" property="price" />
+		<result column="priceWithMonth" jdbcType="REAL" property="pricewithmonth" />
+		<result column="IsSign" jdbcType="BIT" property="issign" />
+		<result column="CWKBeanCount" jdbcType="INTEGER" property="cwkbeancount" />
+		<result column="token" jdbcType="VARCHAR" property="token" />
+		<result column="locktime" jdbcType="TIMESTAMP" property="locktime" />
+		<result column="loginfail" jdbcType="INTEGER" property="loginfail" />
+		<result column="PhoneNO" jdbcType="VARCHAR" property="phoneno" />
+		<result column="RegistTime" jdbcType="DATE" property="registtime" />
+		<result column="ticket" jdbcType="VARCHAR" property="ticket" />
+		<result column="email" jdbcType="VARCHAR" property="email" />
+		<result column="lastLoginTime" jdbcType="TIMESTAMP" property="lastlogintime" />
+		<result column="loginTimeStamp" jdbcType="BIGINT" property="logintimestamp" />
+		<result column="details" jdbcType="LONGVARCHAR" property="details" />
+		<result column="sex" jdbcType="VARCHAR" property="sex" />
+		<result column="birthday" jdbcType="TIMESTAMP" property="birthday" />
+		<result column="message_button" jdbcType="BIT" property="messageButton" />
+		<result column="system_button" jdbcType="BIT" property="systemButton" />
+		<result column="region" jdbcType="VARCHAR" property="region" />
+		<result column="age" jdbcType="INTEGER" property="age" />
+		<result column="realname" jdbcType="VARCHAR" property="realname" />
+		<result column="serialNum" jdbcType="VARCHAR" property="serialnum" />
+		<result column="piano_grade" jdbcType="INTEGER" property="pianoGrade"/>
+		<result column="average_score" jdbcType="FLOAT" property="averageScore"/>
+	</resultMap>
+
+	<resultMap type="java.util.HashMap" id="StudentMap">
+		<id column="ID" property="id" jdbcType="INTEGER" />
+		<result column="Type" property="type" jdbcType="INTEGER" />
+		<result column="Months" property="months" jdbcType="INTEGER" />
+		<result column="CWKStudentID" property="cwkstudentid" jdbcType="INTEGER" />
+		<result column="CWKTeacherID" property="cwkteacherid" jdbcType="INTEGER" />
+		<result column="UsedCount" property="usedcount" jdbcType="INTEGER" />
+		<result column="AddTime" property="addtime" jdbcType="DATE" />
+		<result column="OnePrice" property="oneprice" jdbcType="REAL" />
+		<result column="totalPrice" property="totalprice" jdbcType="DOUBLE" />
+		<result column="Score" property="score" jdbcType="REAL" />
+		<result column="TimesPerDay" property="timesperday" jdbcType="INTEGER" />
+		<result column="Endtime" property="endtime" jdbcType="DATE" />
+		<result column="isOverdue" property="isoverdue" jdbcType="BIT" />
+		<result column="isFirstSign" property="isfirstsign" jdbcType="TINYINT" />
+		<result column="TimesToday" property="timestoday" jdbcType="INTEGER" />
+		<result column="nickname" jdbcType="VARCHAR" property="nickname" />
+		<result column="piano_grade" jdbcType="INTEGER" property="pianoGrade" />
+		<result column="average_score" jdbcType="FLOAT" property="averageScore" />
+	</resultMap>
+
+	<resultMap type="java.util.HashMap" id="TeachersMap">
+		<id column="ID" property="id" jdbcType="INTEGER" />
+		<result column="Type" property="type" jdbcType="INTEGER" />
+		<result column="Months" property="months" jdbcType="INTEGER" />
+		<result column="CWKStudentID" property="cwkstudentid" jdbcType="INTEGER" />
+		<result column="CWKTeacherID" property="cwkteacherid" jdbcType="INTEGER" />
+		<result column="UsedCount" property="usedcount" jdbcType="INTEGER" />
+		<result column="AddTime" property="addtime" jdbcType="DATE" />
+		<result column="OnePrice" property="oneprice" jdbcType="REAL" />
+		<result column="totalPrice" property="totalprice" jdbcType="DOUBLE" />
+		<result column="Score" property="score" jdbcType="REAL" />
+		<result column="TimesPerDay" property="timesperday" jdbcType="INTEGER" />
+		<result column="Endtime" property="endtime" jdbcType="DATE" />
+		<result column="isOverdue" property="isoverdue" jdbcType="BIT" />
+		<result column="isFirstSign" property="isfirstsign" jdbcType="TINYINT" />
+		<result column="TimesToday" property="timestoday" jdbcType="INTEGER" />
+		<result column="nickname" jdbcType="VARCHAR" property="nickname" />
+	</resultMap>
+
+	<select id="selectId" parameterType="java.lang.String"
+		resultType="java.lang.Integer">
+		SELECT ID
+		FROM tb_CWK
+		WHERE name = #{1} AND type = #{2}
+	</select>
+
+	<select id="selectSignedTeacher" parameterType="java.lang.Integer"
+		resultMap="TeacherMap">
+		SELECT
+		t1.*,
+		t2.teach_grade,
+		t2.graduated_university,
+		t2.average_score,
+		t2.isauthentication,
+		t2.teach_experience,
+		t2.certificate_path
+		FROM tb_CWK t1, tb_CWKTeacher t2
+		WHERE t1.ID IN (SELECT CWKTeacherID
+		FROM
+		tb_CWKHomeworkSign
+		WHERE CWKStudentID = #{studentId} AND ((type = 0 AND
+		Endtime >= CURDATE() AND TimesToday > 0) OR
+		(type = 1 AND UsedCount = 0)))
+		AND t1.ID = t2.cwkid
+		AND t1.type = 'tea'
+		AND t2.authentication_process = 2
+		AND t1.price > 0
+		AND t1.priceWithMonth > 0
+		AND ((#{pianoGrade} &lt; 5 AND (t2.teach_grade = '0-5' OR
+		t2.teach_grade = '0-10')) OR (#{pianoGrade} > 5 AND (t2.teach_grade = '6-10' OR
+		t2.teach_grade = '0-10')) OR #{pianoGrade} = 5)
+	</select>
+
+	<select id="selectNotSignedTeacher" parameterType="com.klsw.apiCommon.api.model.TeacherParam"
+		resultMap="TeacherMap">
+		SELECT
+		t1.*,
+		t2.teach_grade,
+		t2.graduated_university,
+		t2.authentication_process,
+		t2.average_score,
+		t2.isauthentication,
+		t2.teach_experience,
+		t2.certificate_path
+		FROM tb_CWK t1, tb_CWKTeacher t2
+		WHERE t1.ID NOT IN (SELECT CWKTeacherID
+		FROM tb_CWKHomeworkSign
+		WHERE CWKStudentID = #{studentId} AND ((type = 0
+		AND Endtime >= CURDATE()) OR
+		(type = 1 AND UsedCount = 0)))
+		AND t1.ID =
+		t2.cwkid
+		AND t1.type =
+		'tea'
+		AND t2.authentication_process = 2
+		AND
+		((#{pianoGrade} &lt; 5 AND (t2.teach_grade = '0-5' OR t2.teach_grade = '0-10'))
+		OR (#{pianoGrade} > 5 AND (t2.teach_grade = '6-10' OR t2.teach_grade =
+		'0-10'))
+		OR #{pianoGrade} = 5)
+		AND t1.price > 0
+		AND t1.priceWithMonth > 0
+		AND (ISNULL(#{teachGrade}) OR
+		t2.teach_grade = #{teachGrade})
+
+		AND (ISNULL(#{university}) OR
+		t2.graduated_university = #{university})
+		AND
+		(ISNULL(#{region}) OR
+		t1.region LIKE CONCAT(CONCAT("%", #{region}), "%"))
+
+		AND
+		((ISNULL(#{minPrice}) AND (ISNULL(#{maxPrice}) OR
+		t1.priceWithMonth &lt;= #{maxPrice}))
+		OR
+		((ISNULL(#{maxPrice}) AND
+		t1.priceWithMonth >= #{minPrice}) OR
+		(t1.priceWithMonth >= #{minPrice} AND
+		t1.priceWithMonth &lt;= #{maxPrice})))
+	</select>
+
+	<select id="selectStudent" parameterType="java.lang.Integer"
+		resultMap="StudentMap">
+		SELECT
+		t1.*,
+		t2.nickname,
+		t3.piano_grade,
+		t3.average_score
+		FROM
+		tb_CWKHomeworkSign t1, tb_CWK t2, tb_CWKStudent t3
+		WHERE (t1.CWKTeacherID
+		= #{teacherId} AND t1.`Type` = 0 AND t2.ID = t1.CWKStudentID
+		AND t2.ID =
+		t3.cwkid)
+		OR (t1.CWKTeacherID = #{teacherId} AND t1.`Type` = 1 AND
+		t1.CWKStudentID NOT
+		IN (SELECT CWKStudentID
+		FROM tb_CWKHomeworkSign
+		WHERE CWKTeacherID = #{teacherId}
+		AND `Type` = 0) AND t2.ID = t1.CWKTeacherID
+		AND t2.ID = t3.cwkid)
+		ORDER BY t1.AddTime DESC
+	</select>
+
+	<select id="selectTeacher" parameterType="java.lang.Integer"
+		resultMap="TeachersMap">
+		SELECT
+		t.*,
+		t1.nickname
+		FROM tb_CWKHomeworkSign
+		t, tb_CWK t1
+		WHERE (t.CWKStudentID = #{teacherId} AND t.`Type` = 0 AND t1.ID =
+		t.CWKTeacherID)
+		OR (t.CWKStudentID = #{teacherId} AND t.`Type` = 1 AND
+		t.CWKTeacherID NOT
+		IN (SELECT t.CWKTeacherID
+		FROM tb_CWKHomeworkSign t
+		WHERE
+		t.CWKStudentID = #{teacherId} AND t.`Type` = 0) AND t1.ID =
+		t.CWKTeacherID)
+		# warning
+		ORDER BY t1.RegistTime DESC
+	</select>
+
+	<select id="studentSelf" parameterType="java.lang.Integer"
+		resultMap="StudentInfoMap">
+		SELECT
+		t1.*,
+		t2.piano_grade,
+		t2.average_score
+		FROM tb_CWK
+		t1, tb_CWKStudent t2
+		WHERE t1.ID = #{id}
+		AND t1.ID = t2.cwkid
+	</select>
+
+	<select id="teacherSelf" parameterType="java.lang.Integer"
+		resultMap="TeacherMap">
+		SELECT
+		t1.*,
+		t2.teach_grade,
+		t2.graduated_university,
+		t2.average_score,
+		t2.isauthentication,
+		t2.authentication_process,
+		t2.teach_experience,
+		t2.certificate_path
+		FROM tb_CWK t1, tb_CWKTeacher t2
+		WHERE t1.ID = #{id}
+		AND t1.ID = t2.cwkid
+	</select>
+	<select id="selectTeacherListByliveroomInfo" resultType="java.util.HashMap"
+		parameterType="java.lang.Object">
+		SELECT
+		a.ID,
+		a.nickname,
+		a.region,
+		a.realname,
+		a.details,
+		a.sex,
+		a.price,
+		a.priceWithMonth,
+		a.fFavicon,
+		a.age,
+		b.teach_grade,
+		b.certificate_path,
+		b.graduated_university,
+		b.isauthentication
+		FROM tb_CWK a LEFT JOIN tb_CWKTeacher b
+		ON a.id = b.cwkid
+		WHERE a.id IN (SELECT anchorId
+		FROM tb_LiveRoom
+		WHERE (ISNULL(#{level}) OR level = #{level}) AND status != 2
+		GROUP BY anchorId)
+		AND (ISNULL(#{teachGrade}) OR teach_grade = #{teachGrade})
+	</select>
+	<select id="getUserInfo" resultType="java.util.HashMap"
+		parameterType="int">
+		SELECT
+		ID,
+		realname,
+		name,
+		CWKBeanCount,
+		nickname,
+		type,
+		price,
+		priceWithMonth,
+		fFavicon,
+		region,
+		details,
+		sex,
+		birthday,
+		(SELECT count(tb_LiveFollow.id)
+		FROM tb_LiveFollow
+		WHERE tb_LiveFollow.userId = #{userId}) AS follows,
+		(SELECT count(tb_LiveFollow.id)
+		FROM tb_LiveFollow
+		WHERE FollowID = #{userId}) AS fans
+		FROM tb_CWK
+		WHERE id = #{userId}
+	</select>
+	
+	<select id="studentList" resultMap="StudentInfoMap">
+		SELECT t1.*, t2.piano_grade, t2.average_score
+		FROM tb_CWK t1 , tb_CWKStudent t2
+		WHERE t1.ID = t2.cwkid
+	</select>
+
+	<select id="teacherList" resultType="java.util.HashMap"
+		parameterType="java.lang.Object">
+		SELECT
+		a.ID,
+		a.nickname,
+		a.region,
+		a.realname,
+		a.details,
+		a.sex,
+		a.price,
+		a.priceWithMonth,
+		a.fFavicon,
+		a.age,
+		b.teach_grade,
+		b.certificate_path,
+		b.graduated_university,
+		b.isauthentication,
+		b.authentication_process
+		FROM tb_CWK a, tb_CWKTeacher b
+		WHERE
+			<!-- 基本条件筛选 -->
+			a.id = b.cwkid 
+		AND 
+			a.type = 'tea' 
+		AND 
+			b.authentication_process = 2
+		AND
+		
+			<!-- 签约筛选 -->
+			(
+				ISNULL(#{signType}) 
+				OR 
+				(
+					(
+						<!-- 未签约老师 -->
+						#{signType} = 0 
+						AND 
+						(
+							ISNULL(#{studentId}) OR (a.ID NOT IN (
+											SELECT CWKTeacherID
+											FROM tb_CWKHomeworkSign
+											WHERE CWKStudentID = #{studentId} 
+										))
+						)
+					) 
+					OR
+					(
+						<!-- 签约老师 -->
+						#{signType} = 1 
+						AND 
+						(
+							ISNULL(#{studentId}) OR (a.ID IN (
+										SELECT CWKTeacherID
+										FROM tb_CWKHomeworkSign
+										WHERE CWKStudentID = #{studentId} 
+									))
+						)
+					)
+			)
+		)
+		AND
+			<!-- 级别筛选 -->
+			(ISNULL(#{teachGrade}) OR b.teach_grade = #{teachGrade})
+		AND
+			<!-- 服务类型筛选 -->
+			(ISNULL(#{serviceType}) 
+				OR
+				((
+					<!-- 批改服务 -->
+					#{serviceType} = 0 AND 
+					(
+						<!-- 价格筛选 -->
+						a.price > 0 AND a.priceWithMonth > 0
+					)) 
+					OR 
+					(
+						<!-- 直播服务 -->
+						#{serviceType} = 1 AND 
+						(
+							<!-- 直播课等级筛选 -->
+							a.id IN (SELECT anchorId
+									 FROM tb_LiveRoom
+									 WHERE (ISNULL(#{level}) OR level = #{level}) 
+									 AND status != 2
+									 GROUP BY anchorId
+									)
+			   			)
+					))		
+				)
+	</select>
+</mapper>
+
+

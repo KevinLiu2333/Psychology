@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.pianoCommon.api.mapper.TbCwkbeanMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.pianoCommon.api.model.TbCwkbean">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="CWKID" jdbcType="INTEGER" property="cwkid" />
+    <result column="Type" jdbcType="INTEGER" property="type" />
+    <result column="Number" jdbcType="INTEGER" property="number" />
+    <result column="Time" jdbcType="TIMESTAMP" property="time" />
+    <result column="Describe" jdbcType="VARCHAR" property="describe" />
+  </resultMap>
+</mapper>

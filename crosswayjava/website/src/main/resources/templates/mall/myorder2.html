@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的订单  克洛斯威智能乐器</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/css/order.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+	.row { 
+		height:200px;
+		margin:0 auto;
+	}
+	.row:before, .row:after {
+	    display: table;
+	    content: " ";
+	}
+	.row h3 {
+	    font-size: 14px ;
+	    font-weight: bold;
+	    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+	}
+	.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+	    float: left;
+	    margin-bottom:10px;
+	}
+	.col-xs-12 {
+	    width: 100%;
+	}
+</style>
+	 
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/bdstat.js"></script>
+<script type="text/javascript">
+	$(function(){
+		window.setInterval(function(){
+			var orderTime = $(".order_time");
+			var dingShiQi = $(".display_time");
+			var orderSerial=$("#orderSerial_hidden").val();
+			for(var i=0;i<orderTime.length;i++) {
+				var order_time = orderTime.eq(i).val();
+				var display_time = dingShiQi.eq(i);
+				if(order_time != null) {
+					var date1 = Date.parse(order_time);
+					var date = new Date();
+					var date2 = Date.parse(date);
+					
+					var time = 20*1000+date1-date2; 
+					/* var time = 10*24*60*60*1000+date1-date2; */
+					
+					if(time<1000) {
+						window.location.href='/order/receive?orderSerial='+orderSerial;
+					} else {
+						var day = parseInt(time/(24*60*60*1000)); 
+						var remain = time%(24*60*60*1000);
+						
+						var hour =parseInt(remain/(60*60*1000));
+						remain %= 60*60*1000;
+						
+						var minute = parseInt(remain/(60*1000));
+						remain %= 60*1000;
+						
+						var second = parseInt(remain/1000);
+						remain %= 1000;
+						
+						display_time.html("还剩<br/>"+day+"天"+hour+"小时<br/>"+minute+"分钟"+second+"秒");
+					}
+				}
+			}
+		},1000);
+	});
+</script>
+</head>
+
+<body>
+<div class="navhead" style="border-bottom:1px solid #ddd;">
+	<nav class="index-nav">
+		<div class="logo">
+			<a href="/index.html"><img src="/images/logo.png" /></a>
+		</div>
+		<div class="shopcart">
+			<a href="/cart"> </a>
+		</div>
+        <div class="exit" th:if="${session.klsw_user }">
+			<a href="/logout">退出</a>
+		</div>
+		<div class="login">
+			<a href="/order/list"></a>
+		</div>
+		<ul class="nav-list">
+
+			<li class="nav-item"><a href="/">首页</a></li>
+
+			<li class="nav-item"><a href="/smart.html">智能钢琴</a></li>
+
+			<li class="nav-item"><a href="/mall" class="orange">在线商城</a></li>
+
+			<li class="nav-item"><a href="/service.html">服务中心</a></li>
+
+			<li class="nav-item"><a href="/aboutus.html">关于我们</a></li>
+
+		</ul>
+	</nav>
+</div>
+ <style type="text/css">
+    .div_detail a {
+        cursor: pointer;
+        color: #999;
+    }
+    .div_detail a:hover {
+        color: #e95504;
+    }
+</style>
+<script type="text/javascript">
+    $(function () {
+        if ($(document).scrollTop() > 0) {
+            $('#grayline').css('border-bottom', '1px solid transparent');
+        }
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 0) {
+                $('#grayline').css('border-bottom', '1px solid transparent');
+            }
+            else {
+                $('#grayline').css('border-bottom', '1px solid #ddd');
+            }
+        });
+    })
+</script>
+<div id="grayline" style="border-bottom:1px solid #ddd; height:1px; margin-top:79px;"></div>
+<div class="order_info" style="margin-top:40px;">
+    <div class="order_infol">
+        <ul>
+            <!-- <li><a href="javascript:;">个人中心</a></li> -->
+            <li><a href="/order/list" class="aox">我的订单</a></li>
+            <li><a href="/cart">我的购物车</a></li>
+            <li><a href="/information/toAddress">地址管理</a></li>  
+            <li><a href="/information/toPwd">修改密码</a></li>  
+        </ul>
+    </div>
+<div class="order_infor" style="min-height:500px; font-size:14px;">
+        <div class="my_box">
+            <div style="height:45px; line-height:45px; width:410px;" class="shop_name">订单物品</div>
+            <div style="height:45px; line-height:45px; width:135px;" class="shop_quantity">收货人</div>
+            <div style="height:45px; line-height:45px; width:135px;" class="shop_price">金额</div>
+            <div style="height:45px; line-height:45px; width:135px;" class="shop_total">状态</div>
+            <div style="height:45px; line-height:45px; width:135px;" class="shop_total">操作</div>
+        </div>
+
+		<div th:each="item : ${orderList}">
+			<input class="order_time" type="hidden" th:value="${item.ctime}" th:if="${item.status} == 4"/>
+            <div class="my_box" style="height:36px; line-height:36px; margin-top:10px;">
+                <span th:utext="${#dates.format(item.ctime, 'yyyy/MM/dd HH:mm:ss')} + '<span style=margin-left:20px; />订单号：' +  ${item.serial}" />
+            </div>
+            <div class="product_show" style="padding:0px 15px 25px 15px;">
+                    <div style="width:960px; float:left; padding:25px 0px 0px 0px;">
+                        <div class="product_name" style="width:420px;">
+                            <table style="width:420px;">
+                                <tr th:each="productItem : ${item.productList}">
+                                    <td style="width:108px;"><a th:href="'/product/' + ${productItem.productserial}"><img th:src="${productItem.productImg}" class="img" style="height:100px; width:100px; margin:4px;" /></a></td>
+                                    <td style="width:180px; vertical-align:top;">
+                                        <a th:href="'/product/' + ${productItem.productserial}">
+                                            <span class="big" style="margin-top:10px; font-size:15px;" th:text="${productItem.productname}"></span>
+                                            <span class="small" style="font-size:13px;" th:text="${productItem.productColor}"></span>
+                                        </a>
+                                    </td>
+                                    <td style="width:15px;"></td>
+                                    <td style="vertical-align:top;"><span class="small" style="margin-top:10px;" th:text="'x ' + ${productItem.productcount}"></span></td>
+                                    <td style="width:15px;"></td>
+                                    <!-- <td style="vertical-align:top;"><span class="small div_detail" style="margin-top:10px;"><a href="javascript:;">维修/退换货</a></span></td> -->
+                                </tr>
+                            </table>
+                        </div>
+                        <div style="width:135px; line-height:45px; overflow:hidden;" class="shop_quantity">&nbsp;<span th:text="${item.receiver}"/>&nbsp;</div>
+                        <div style="width:135px; line-height:45px;" class="shop_price">
+                            <div>总金额￥<span th:text="${#numbers.formatDecimal(item.totalprice,3,2)}" /></div>
+                            <!-- <div style="line-height:0px;">
+                                    <div style="text-align:center; color:#a1a1a1;">在线支付</div>
+                            </div> -->
+                        </div>
+                        <div style="width:135px; line-height:25px;" class="shop_total" th:switch="${item.status}">
+                                <div style="text-align:center; color:#a1a1a1;" th:case="1">未支付<br/><a th:href="'/order/orderDetail?orderSerial='+${item.serial}" style="color:#eb5405;">订单详情</a><br/><a style="color:#eb5405;">查看物流</a></div>
+                                <div style="text-align:center; color:#a1a1a1;" th:case="2">已支付<br/><a th:href="'/order/orderDetail?orderSerial='+${item.serial}"  style="color:#eb5405;">订单详情</a><br/><a style="color:#eb5405;">查看物流</a></div>
+                                <div style="text-align:center; color:#a1a1a1;" th:case="3">待发货<br/><a th:href="'/order/orderDetail?orderSerial='+${item.serial}" style="color:#eb5405;">订单详情</a><br/><a style="color:#eb5405;">查看物流</a></div>
+                                <div style="text-align:center; color:#a1a1a1;" th:case="4">已发货<br/><a th:href="'/order/orderDetail?orderSerial='+${item.serial}" style="color:#eb5405;">订单详情</a><br/><a style="color:#eb5405;">查看物流</a></div>
+                                <div style="text-align:center; color:#a1a1a1;" th:case="5">已签收<br/><a th:href="'/order/orderDetail?orderSerial='+${item.serial}" style="color:#eb5405;">订单详情</a><br/><a style="color:#eb5405;">查看物流</a></div>
+                                <div style="text-align:center; color:#a1a1a1;" th:case="10">交易关闭<br/><a th:href="'/order/orderDetail?orderSerial='+${item.serial}" style="color:#eb5405;">订单详情</a><br/><a style="color:#eb5405;">查看物流</a></div>
+                        </div>
+                        <div style="width:135px; line-height:45px; text-align:center;" class="shop_total" th:if="${item.status==4}">
+                                    <div class="shop_pay" style="width:100px; height:32px; float:none; margin:6px 0px 0px 20px; padding:0px; line-height:32px;" th:switch="${item.status}">
+                                        <a th:href="'/order/pay/' + ${item.serial}" style="width:100px; height:32px; background-position-x:center; background-size:cover; line-height:32px;" th:case="1">支付</a>
+                                    </div>
+                                    <div   style="width:100px; height:32px; float:none; margin:6px 0px 0px 20px; padding:0px; line-height:24px;" th:switch="${item.status}">
+                                        <input type="hidden" id="orderSerial_hidden" th:value="${item.serial}"/>
+                                        <div class="display_time"  style="color:#a1a1a1;margin-top:-40px;"></div> 
+                                      <div  style="background-color:#66b6ff;"><a th:href="'/order/receive?orderSerial='+${item.serial}" style="background-color:#66b6ff;border-radius:4px; float: right;font-size: 14px ;height:28px;line-height:28px;text-align:center;width:98px;">确认收货</a></div> 
+                                    </div>
+                            <!-- <div class="div_detail" style="width:135px; text-align:center;">
+                                <a href="/Order/OrderDetail/8654cf54-a785-4d7a-92c1-c248eaa2259f?returnURL=/Order/Index" style="font-size:14px;">订单详情</a>
+                                    <span style="font-weight:lighter; color:#666; font-size:14px;">|</span>
+                                    <a onclick="return confirm('您确定要取消订单吗？');" href="/Order/CancelFlag/8654cf54-a785-4d7a-92c1-c248eaa2259f?returnURL=/Order/Index" style="font-size:14px;">取消订单</a>
+                                                                </div> -->
+                        </div>
+                    </div>
+            </div>
+            <!--  <div th:if="${logistics}">
+             	<input id="delivery_time" type="hidden" th:value="${logistics.ctime}"/>
+             	<div class="row" th:if="${item.serial} == ${logistics.orderserial}">
+					<div class="col-xs-12 text-left">
+						<h3>物流信息:</h3>
+					</div>
+				</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+            	<div class="row" th:if="${item.serial} == ${logistics.orderserial}">
+					 <div class="form-group col-xs-12">
+					    <label>发货人:</label>
+					    <span th:text="${logistics.logisticsname}"> </span>
+					 </div>
+					 <div class="form-group col-xs-12">
+					    <label>发货时间:</label>
+					    <span th:text="${#dates.format(logistics.ctime,'yyyy-MM-dd HH:mm:ss')}"> </span>
+					 </div>
+					 <div class="form-group col-xs-12">
+					    <label>物流公司：</label>
+					    <span th:text="${logistics.logisticscompany}"> </span>
+					 </div>	
+					  <div class="form-group col-xs-12">
+					    <label>运单号：</label>
+					     <span th:text="${logistics.logisticsserial}"> </span>
+					 </div>
+					 <div class="form-group col-xs-12">
+					    <label>运送方式：</label>
+					    <span>快递</span>
+					 </div>											 
+				</div>
+             </div> -->
+            </div>
+            <div style="height:240px; text-align:center; line-height:190px;" th:if="${#lists.isEmpty(orderList)}">
+                	没有订单记录哦~&nbsp;&nbsp;<a href="/mall" style="color:#00a0e9">去商城看看 ></a>
+            </div>
+        <div class="fan" style="margin-bottom:20px;">
+        </div>
+    </div>
+</div>
+  
+<div th:include="common/foot"></div>
+</body>
+</html>

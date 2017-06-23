@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>登陆 克洛斯威智能钢琴</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/login.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/bdstat.js"></script>
+</head>
+<body>
+<div th:include="common/head"></div>
+<div id="login_bg">
+    <div class="content" style="padding-top:150px">
+        <div class="login-box">
+            <div class="login-title">登录</div>
+            <div class="login-pic">
+                <img src="/images/login_logo.png" width="122" height="75"/>
+            </div>
+            <form action="/dologin" method="post">
+					<span class="ke-input account-input"> 
+						<i></i>
+                        <!--/*@thymesVar id="phone" type="java.lang.String"*/-->
+						<input type="text" id="phone" name="phone" placeholder="请输入手机号" th:value="${phone}"/>
+                        <!-- <label style="font-size: :15px; color:red;" class="cw" id="phoneerror"></label> -->
+					</span>
+                <span class="ke-input pwd-input">
+						<i></i>
+						<input type="password" id="password" name="password" placeholder="请输入密码"/><label class="cw"
+                                                                                                         id="passworderror"></label>
+					</span>
+                <div class="reg_form reg_form_step1" style=" margin-top:13px;">
+                    <dl id="dl_VerifyCode">
+                        <dd>
+                            <input class="short_input input_r" type="text" id="captcha" name="captcha"
+                                   placeholder="请输入验证码" style="font-size:12px;">
+                            <img onclick="this.src='/code.jpg?' + new Date().getTime()" src="/code.jpg" width="93"
+                                 height="39" style=" border:1px solid #d9d9d9;"/>
+                            <!-- <label class="cw" id="captchaerror"></label> -->
+                        </dd>
+                    </dl>
+                </div>
+                <!--/*@thymesVar id="msg" type="java.lang.String"*/-->
+                <div style="text-align: center;color: red;" th:text="${msg}"></div>
+                <div class="login-links">
+
+                    <a href="/toVerify" class="register">忘记登录密码？</a>
+                </div>
+                <div class="submit">
+                    <button type="submit" tabindex="5" id="J_SubmitStatic">登
+                        录
+                    </button>
+                </div>
+                <div class="no-account" style="margin-right:210px;">
+                    没有账号？
+                    <a href="/register">现在就去注册</a>
+                </div>
+            </form>
+        </div>
+        <div class="foot_bei" style="margin-top: 130px;">
+            2016 © klsw.com 安徽克洛斯威智能乐器科技有限公司 | ICP证：皖ICP备15021161号-1
+        </div>
+    </div>
+</div>
+<!-- 
+	<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fdb7a75599ee5b52297633ce950a71943' type='text/javascript'%3E%3C/script%3E"));
+</script>
+ -->
+</body>
+</html>

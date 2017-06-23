@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>在线报名  克洛斯威智能钢琴</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="/css/login.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/bdstat.js"></script>
+</head>
+
+<body>
+<div th:include="common/head"></div>    
+<div id="login_bg" style="background:url(/images/langlanga.png) center top no-repeat; height:881px;">
+<div style=" width: 1200px;padding: 80px 0px 0px 0px;margin: 0 auto;overflow: auto;">
+<div class="register-box" style="width:530px; background-color:#f0efef; border-radius:8px; margin-top:180px; padding:20px;box-shadow: 0 2px 2px #f2eeee;">
+<div style=" font-size:20px; text-align:center; margin-bottom:15px; line-height:50px; color:#EB5405; text-align:left; padding-left:20px;">“2016郎朗钢琴音乐盛典”暨克洛斯威智能钢琴新品发布会</div>
+<div style=" font-size:24px; text-align:center; margin-bottom:15px;">在线报名</div>
+<form action="/enter" method="post">
+<div class="reg_form reg_form_step1">
+                    <dl id="inputMobile" style="display: block;">
+                        <dt class="label">姓名</dt>
+                        <dd>
+                            <input class="r_input input_l" type="text"  id="name" name="name" placeholder="请填写您的姓名"
+                            	required oninvalid="setCustomValidity('请输入姓名')" oninput="setCustomValidity('')"/>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="label">电话</dt>
+                        <dd>
+                            <input class="r_input input_l" maxlength="11"   name="telephone" type="" id="telephone" placeholder="请填写手机号码"
+                            	pattern="^[1][3,4,5,7,8][0-9]{9}$" required oninvalid="setCustomValidity('请输入正确的手机号码')" oninput="setCustomValidity('')"/>
+                      </dd>
+                    </dl>
+                    <dl>
+                        <dt class="label">所在城市</dt>
+                        <dd>
+                            <input class="r_input input_l" type="text" name="city" id="city" placeholder="请填写您所在的城市"
+                            	required oninvalid="setCustomValidity('请输入您的城市')" oninput="setCustomValidity('')"/>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="label">所在行业</dt>
+                        <dd>
+                            <input class="r_input input_l" type="text" name="career" id="career" placeholder="请填写您从事的行业"
+                            	required oninvalid="setCustomValidity('请输入您的职业')" oninput="setCustomValidity('')"/>
+                        </dd>
+                    </dl>
+                     <div th:text="${msg}" style="color:red; text-align:center"></div>
+                    <dl style=" padding-top:35px;">
+                        <dt class="label">&nbsp;</dt>
+                        <dd>
+                                   <div class="submit">
+                                   <button type="submit" tabindex="5" id="">立即报名</button>  
+                                   </div> 
+                      </dd>   
+                    </dl>  
+                    <div style="text-align:right; font-size:18px; width:auto;  color:#000;"><a href="activity.html" target="_blank" style="color:#000">点击查看活动详情>></a></div>              
+        </div>
+                          
+</form>            
+</div>
+</body>
+</html>

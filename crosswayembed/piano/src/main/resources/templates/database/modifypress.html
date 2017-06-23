@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>资料库管理系统</title>
+<link rel="stylesheet" href="/css/database.css" />
+<link rel="stylesheet" href="/css/opern.css" />
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+ 
+</head>
+
+<body>
+	<div class="header">
+		<div class="logo">
+			<span>资料库后台管理系统</span>
+		</div>
+
+		<div class="header-right">
+			<i class="icon-off icon-white"></i> <a href="#" role="button"
+				data-toggle="modal">退出</a>
+		</div>
+		<div class="top_admin">
+			欢迎<span>暖阳</span>！
+		</div>
+	</div>
+	<!-- 顶部 -->
+	<div id="middle">
+		<div class="left">
+
+			<div id="my_menu" class="sdmenu">
+				<div>
+					<a href="/database/templetList">模板</a>
+				</div>
+				<div>
+					<a href="/database/subjectList" >分类</a>
+				</div>
+
+				<div>
+					<a href="/database/sonSubjectList">子分类</a>
+				</div>
+				<div>
+					<a href="/database/bookList">书</a>
+				</div>
+				<div>
+					<a href="/database/pressList"   class="current">出版社</a>
+				</div> 
+				<div>
+					<a href="/database/opernList">曲谱</a>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="right" id="mainFrame">
+
+			<div class="right_cont">
+				<ul class="breadcrumb">当前位置： 修改出版社
+				</ul>
+				<div style="width: 900px; margin: auto; margin-top: 100px;">
+					<form action="/database/Modifypress" method="post">
+						<table class="table table-bordered" style="font-size: 15px; line-hight:5px;">
+							<input id="pressID" name="pressID" type="hidden" th:value="${dbPress.id}" />
+							<tr>
+								<td width="12%" height="39" align="right" nowrap="nowrap"
+									bgcolor="#f1f1f1">出版社编号：</td>
+								<td width="38%"><input type="text" name="pressno"
+									  id="input2" class="book_text" th:value="${dbPress.pressno}" />
+								</td>
+							</tr>
+							<tr>
+								<td width="12%" height="39" align="right" nowrap="nowrap"
+									bgcolor="#f1f1f1">出版社名称：</td>
+								<td width="38%"><input type="text"  readonly="readonly"  name="name"
+									  id="input2" class="book_text" th:value="${dbPress.name}" />
+								</td>
+							</tr>
+							<tr>
+								<td width="12%" height="39" align="right" nowrap="nowrap"
+									bgcolor="#f1f1f1">出版社简称：</td>
+								<td width="38%"><input type="text" readonly="readonly" name="abbreviation"
+									 id="input2" class="book_text" th:value="${dbPress.abbreviation}" />
+								</td>
+							</tr>
+						</table>
+						<table class="margin-bottom-20 table  no-border">
+							<tr>
+								<td class="text-center"><input type="submit" value="提交"
+									class="btn btn-info " style="width: 80px;" /></td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

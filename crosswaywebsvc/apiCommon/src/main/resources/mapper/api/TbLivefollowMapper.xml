@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper.TbLivefollowMapper">
+    <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model.TbLivefollow">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="userId" jdbcType="INTEGER" property="userid"/>
+        <result column="FollowID" jdbcType="INTEGER" property="followid"/>
+        <result column="ctime" jdbcType="DATE" property="ctime"/>
+    </resultMap>
+    <select id="selectFollows" parameterType="java.lang.Object" resultType="java.util.HashMap">
+        SELECT
+            id,
+            nickname,
+            fFavicon,
+            details
+        FROM tb_CWK
+        WHERE id IN (SELECT FollowID
+                     FROM tb_LiveFollow
+                     WHERE
+                         userId = #{userId}) AND type = #{userType}
+    </select>
+    <select id="selectFans" parameterType="java.lang.Object" resultType="java.util.HashMap">
+        SELECT
+            id,
+            nickname,
+            fFavicon,
+            details
+        FROM tb_CWK
+        WHERE id IN (SELECT userId
+                     FROM tb_LiveFollow
+                     WHERE
+                         FollowID = #{userId}) AND type = #{userType}
+    </select>
+</mapper>

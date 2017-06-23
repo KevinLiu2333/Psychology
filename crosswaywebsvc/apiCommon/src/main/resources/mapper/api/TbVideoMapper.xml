@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper.TbVideoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model.TbVideo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="VideoName" property="videoname" jdbcType="VARCHAR" />
+    <result column="VideoPath" property="videopath" jdbcType="VARCHAR" />
+    <result column="VideoSize" property="videosize" jdbcType="VARCHAR" />
+    <result column="VideoDate" property="videodate" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

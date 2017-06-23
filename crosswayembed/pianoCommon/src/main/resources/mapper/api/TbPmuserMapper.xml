@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.pianoCommon.api.mapper.TbPmuserMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.pianoCommon.api.model.TbPmuser">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="UserID" jdbcType="INTEGER" property="userid" />
+    <result column="UserName" jdbcType="VARCHAR" property="username" />
+    <result column="UserPwd" jdbcType="VARCHAR" property="userpwd" />
+    <result column="NickName" jdbcType="VARCHAR" property="nickname" />
+    <result column="PhoneNO" jdbcType="VARCHAR" property="phoneno" />
+    <result column="Email" jdbcType="VARCHAR" property="email" />
+    <result column="EmailCode" jdbcType="VARCHAR" property="emailcode" />
+    <result column="EmailActivation" jdbcType="BIT" property="emailactivation" />
+    <result column="RegisterTime" jdbcType="TIMESTAMP" property="registertime" />
+    <result column="ReceiptID" jdbcType="VARCHAR" property="receiptid" />
+    <result column="RememberMe" jdbcType="BIT" property="rememberme" />
+    <result column="Name" jdbcType="VARCHAR" property="name" />
+    <result column="Sex" jdbcType="BIT" property="sex" />
+    <result column="AdminFlag" jdbcType="CHAR" property="adminflag" />
+    <result column="IsTeacher" jdbcType="BIT" property="isteacher" />
+    <result column="IsCertificate" jdbcType="BIT" property="iscertificate" />
+  </resultMap>
+  <select id="findByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    SELECT * FROM tb_PMUser
+    WHERE UserName=#{0} or Email=#{0}
+  </select>
+</mapper>

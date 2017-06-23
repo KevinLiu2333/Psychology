@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper.TbUseravailableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model.TbUseravailable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="NewNumber" property="newnumber" jdbcType="VARCHAR" />
+    <result column="AddDateTime" property="adddatetime" jdbcType="TIMESTAMP" />
+    <result column="Nickname" property="nickname" jdbcType="VARCHAR" />
+    <result column="IsActivation" property="isactivation" jdbcType="BIT" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>资料库</title>
+<link rel="stylesheet" href="/css/database.css" />
+<link rel="stylesheet" href="/css/opern.css" />
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function(){ 
+		 
+		$("#goto").click(function(){
+			var pageNum = $("#pageId").val();	
+   
+			var count = $("#count").html();
+ 
+			var pageSize = $("#pageSize").html();
+ 
+			var totalPages = (count%pageSize == 0) ? count/pageSize : (count/pageSize+1); 
+ 
+			  if(pageNum>0 && pageNum<=totalPages) {
+				location.href = "/database/bookList?pageNum="+pageNum;
+			}  
+		});
+		 
+	});
+</script>
+</head>
+
+<body>
+<div class="header">
+	 <div class="logo"><span>克洛斯威资料库后台管理</span></div>
+     
+				<div class="header-right">
+                <i class="icon-off icon-white"></i> <a id="modal-973558" href="#modal-container-973558" role="button" data-toggle="modal">退出</a> 
+				</div>
+                <div class="top_admin">欢迎<span>暖阳</span>！</div>
+
+</div>
+<!-- 顶部 -->              
+<div id="middle">
+<div class="left">
+<div class="sdmenu">
+<div>
+		<a href="/database/templetList" >模板</a>
+	</div>
+	<div>
+		<a href="/database/subjectList">分类</a>
+	</div>
+	  
+	<div>
+		<a href="/database/sonSubjectList">子分类</a>
+	</div>
+    <div>
+		<a href="/database/bookList" class="current">书</a>
+	</div>
+	<div>
+		<a href="/database/pressList">出版社</a>
+	</div> 
+    <div>
+		<a href="/database/opernList">曲谱</a>
+	</div> 
+</div> 
+</div>
+
+<div class="right"  id="mainFrame"> 
+<div class="right_cont"> 
+
+  <div class="right_cont">
+<ul class="breadcrumb">当前位置：
+书列表
+</ul>
+ <a href="/database/toAddBook"><img width="75" height="50" style="margin-top:10px;" src="/img/书.png"/></a>
+   <table class="table table-bordered table-striped table-hover" style="font-size: 15px; line-hight:5px;">
+     <tbody>
+       <tr align="center">
+         <td width="10%" nowrap="nowrap"><strong>书编号</strong></td>
+         <td width="20%" nowrap="nowrap"><strong>书名</strong></td>
+         <td width="20%" nowrap="nowrap"><strong>书标签</strong></td>
+         <td width="20%" nowrap="nowrap"><strong>出版社</strong></td>
+         <td width="10%" nowrap="nowrap"><strong> 添加时间 </strong></td>     
+         <td width="10%" nowrap="nowrap"><strong> 修改时间 </strong></td> 
+         <td width="10%" nowrap="nowrap"><strong> 操作 </strong></td>                     
+         </tr>
+   
+       <tr align="center" th:each="pageInfo:${pageInfo.list}">
+         <td nowrap="nowrap" th:text="${pageInfo.bookNo}">12</td>
+             <td nowrap="nowrap" th:text="${pageInfo.bookName}">12</td>
+             <td nowrap="nowrap" th:text="${pageInfo.bookLabel}">12</td>
+              <td nowrap="nowrap" th:text="${pageInfo.press}">12</td> 
+             <td nowrap="nowrap" th:text="${pageInfo.addTime==null?' ':#dates.format(pageInfo.addTime,'yyyy-MM-dd')}">12</td> 
+             <td nowrap="nowrap" th:text="${pageInfo.modifyTime==null?' ':#dates.format(pageInfo.modifyTime,'yyyy-MM-dd')}">12</td> 
+            
+         <td nowrap="nowrap"><a th:href="'/database/toModifyBook?bookID='+${pageInfo.id}">修改</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">删除</a></td>
+         </tr>
+ 
+     </tbody>
+   </table>
+        <div class="fan"><a class="fenye" th:href="'/database/bookList?pageNum='+${pageInfo.firstPage}">首页</a>
+       &nbsp;&nbsp;&nbsp;<a class="fenye" th:href="'/database/bookList?pageNum='+${pageInfo.pageNum-1}">上一页</a>
+       &nbsp;&nbsp;&nbsp;<a class="fenye" th:href="'/database/bookList?pageNum='+${pageInfo.pageNum+1}">下一页</a>
+       &nbsp;&nbsp;&nbsp;<a class="fenye" th:href="'/database/bookList?pageNum='+${pageInfo.lastPage}">尾页</a>
+  		 共
+		<span id="count" th:text="${pageInfo.total}"></span>
+				条&nbsp;&nbsp;&nbsp;页次：
+		<span th:text="${pageInfo.pageNum}+'/'+${pageInfo.pages}"></span>
+				&nbsp;&nbsp;&nbsp;转到：
+		<input id="pageId" type="text" size="3"/>
+				&nbsp;页&nbsp;&nbsp;&nbsp;
+		<input id="goto" type="button" value="GO" /></div> 
+     </div>     
+</div>
+</div> 
+</div> 
+</body>
+</html>

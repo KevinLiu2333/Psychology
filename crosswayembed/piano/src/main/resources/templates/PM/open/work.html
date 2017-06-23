@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>克洛斯威智能钢琴 演奏分享</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.jplayer.min.js"></script>
+    <script src="/js/jplayer.playlist.min.js"></script>
+    <script src="/js/jweixin-1.0.0.js"></script>
+    <link href="/css/css1.css" rel="stylesheet"/>
+    <script th:inline="javascript">
+        var author = [[${Author}]];
+        var midname = [[${MIDName}]];
+        var mdiportfolio = [[${pageInfo.mdiportfolio}]];
+        var timestamp = [[${timestamp}]];
+        var noncestr = [[${noncestr}]];
+        var signature = [[${signature}]];
+        var fullmp3path = [[${fullmp3path}]];
+        //        console.log("作者：" + author + "曲谱名：" + midname + "作品集:" + mdiportfolio + "时间戳:" + timestamp + "随机串:" + noncestr + "签名:" + signature + "MP3路径" + fullmp3path);
+        wx.config({
+            debug: false,                           // 开启调试模式，调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。*@
+            appId: 'wx8da0e4adbeb68b5a',            // 必填，公众号的唯一标识*@
+            timestamp: timestamp,  // 必填，生成签名的时间戳*@
+            nonceStr: noncestr,          // 必填，生成签名的随机串*@
+            signature: signature,        // 必填，签名*@
+            jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'onMenuShareQZone']
+        });// 必填，需要使用的JS接口列表，所有JS接口列表见附录2*@});
+        wx.ready(function () {
+            // 分享到朋友圈
+            wx.onMenuShareTimeline({
+                title: '克洛斯威智能钢琴 演奏分享 ——(' + author + ')刚刚演奏了' + midname + '，快来帮我听听 :）', // 分享标题
+                link: '', // 分享链接
+                imgUrl: '/img/logo_wx.jpg', // 分享图标
+                success: function () {
+                },
+                cancel: function () {
+                }
+            });
+
+            // 分享给朋友
+            wx.onMenuShareAppMessage({
+                title: '克洛斯威智能钢琴 演奏分享', // 分享标题
+                desc: '克洛斯威智能钢琴 演奏分享 ——(' + author + ')刚刚演奏了' + midname + '-' + mdiportfolio + '，快来帮我听听 :）', // 分享描述
+                link: '', // 分享链接
+                imgUrl: '/img/logo_wx.jpg', // 分享图标
+                type: '', // 分享类型，music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () {
+                },
+                cancel: function () {
+                }
+            });
+
+            // 分享到QQ
+            wx.onMenuShareQQ({
+                title: '克洛斯威智能钢琴 演奏分享', // 分享标题
+                desc: '克洛斯威智能钢琴 演奏分享 ——(' + author + ')刚刚演奏了' + midname + '-' + mdiportfolio + '，快来帮我听听 :）', // 分享描述
+                link: '', // 分享链接
+                imgUrl: '/img/logo_wx.jpg', // 分享图标
+                success: function () {
+                },
+                cancel: function () {
+                }
+            });
+
+            // 分享到腾讯微博
+            wx.onMenuShareWeibo({
+                title: '克洛斯威智能钢琴 演奏分享', // 分享标题
+                desc: '克洛斯威智能钢琴 演奏分享 ——(' + author + ')刚刚演奏了' + midname + '-' + mdiportfolio + '，快来帮我听听 :）', // 分享描述
+                link: '', // 分享链接
+                imgUrl: '/img/logo_wx.jpg', // 分享图标
+                success: function () {
+                },
+                cancel: function () {
+                }
+            });
+
+            // 分享到QQ空间
+            wx.onMenuShareQZone({
+                title: '克洛斯威智能钢琴 演奏分享', // 分享标题
+                desc: '克洛斯威智能钢琴 演奏分享 ——(' + author + ')刚刚演奏了' + midname + '-' + mdiportfolio + '，快来帮我听听 :）', // 分享描述
+                link: '', // 分享链接
+                imgUrl: '/img/logo_wx.jpg', // 分享图标
+                success: function () {
+                },
+                cancel: function () {
+                }
+            });
+        });
+
+        wx.error(function () {
+        });
+
+
+        $(document).ready(function () {
+            var playlist = [{
+                title: "曲谱：" + midname,
+                artist: author,
+                mp3: fullmp3path
+            }];
+            var cssSelector = {
+                jPlayer: "#jquery_jplayer",
+                cssSelectorAncestor: ".music-player"
+            };
+            var options = {
+                playlistOptions: {
+                    autoPlay: true
+                },
+                swfPath: "Jplayer.swf",
+                supplied: "ogv, m4v, oga, mp3"
+            };
+            var myPlaylist = new jPlayerPlaylist(cssSelector, playlist, options);
+        });
+
+    </script>
+</head>
+<body>
+<div class="contain_wrap">
+    <img src="/img/logo_wx.jpg" style="height:0px;" class="topic"/>
+    <div class="radio_photo"><img src="/img/rapic.png" class="topic"/>
+    </div>
+    <div class="push"><img src="/img/us.gif" class="pspic"/></div>
+    <div class="contain_sub">
+        <div class="logo"><img src="/img/logo.png" class="lgpic"/></div>
+        <span class="title" th:text="'分享者:'+${Author}"></span>
+        <span class="author" th:text="'曲谱集:'+${pageInfo.mdiportfolio}"></span>
+        <span th:if=${studenttime} class="author"
+              th:text="'上传时间：'+${#calendars.format(studenttime,'yyyy/MM/dd HH:mm:ss')}"></span>
+    </div>
+    <div class="contain_pic" style="margin:1em;">
+        <div class="music-player">
+            <!--<div style="background-image: url(http://i.imgur.com/yqB0erk.jpg);" class="album"></div>-->
+            <div class="info">
+                <div class="left">
+                    <a href="javascript:;" class="icon-shuffle"></a>
+                    <a href="javascript:;" class="icon-heart"></a>
+                </div>
+                <div class="center">
+                    <div class="jp-playlist">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right">
+                    <a href="javascript:;" class="icon-repeat"></a>
+                    <a href="javascript:;" class="icon-share"></a>
+                </div>
+
+                <div class="progress jp-seek-bar">
+                    <span class="jp-play-bar" style="width: 0%"></span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="current"><span class="jp-current-time">00:00</span>
+                </div>
+                <div class="play-controls">
+                    <a href="javascript:;" class="icon-previous jp-previous" title="previous"></a>
+                    <a href="javascript:;" class="icon-play jp-play" title="play"></a>
+                    <a href="javascript:;" class="icon-pause jp-pause" title="pause"></a>
+                    <a href="javascript:;" class="icon-next jp-next" title="next"></a>
+                </div>
+            </div>
+            <div id="jquery_jplayer" class="jp-jplayer"></div>
+        </div>
+    </div>
+    <div class="qupu"><img th:src="${fullmidimgpath}"
+                           alt=""/>
+    </div>
+    <div class="qupu"><img th:if="${pageInfo.gradeimgpath}!=null"
+                           th:src="'http://wk-static.klsw.com'+${pageInfo.gradeimgpath}"
+                           alt=""/>
+    </div>
+</div>
+</body>
+</html>

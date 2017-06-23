@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的优惠券</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="/css/center.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="/js/jquery.js"></script>
+</head>
+
+<body>
+<div class="navhead" style="border-bottom:1px solid #ddd;">
+	<nav class="index-nav">
+		<div class="logo">
+			<a href="/index.html"><img src="/images/logo.png" /></a>
+		</div>
+		<div class="shopcart">
+			<a href="/cart"> </a>
+		</div>
+        <div class="exit" th:if="${session.klsw_user }">
+			<a href="/logout">退出</a>
+		</div>
+		<div class="login">
+			<a href="/order/list"></a>
+		</div>
+		<ul class="nav-list">
+
+			<li class="nav-item"><a href="/">首页</a></li>
+
+			<li class="nav-item"><a href="/smart.html">智能钢琴</a></li>
+
+			<li class="nav-item"><a href="/mall" class="orange">在线商城</a></li>
+
+			<li class="nav-item"><a href="/service.html">服务中心</a></li>
+
+			<li class="nav-item"><a href="/aboutus.html">关于我们</a></li>
+
+		</ul>
+	</nav>
+</div>
+
+<div class="center_info"> 
+<div th:include="common/center"></div> 
+<div class="center_infor">
+<div class="myorder_top">我的优惠券</div>
+<div class="hm-menu" style=" margin-bottom:10px;">
+<ul>
+	<li style="border:none; padding-left:0px;"><a href="#" class=" select">全部</a>
+	</li><li><a href="#">未使用</a>
+	</li><li><a href="#">已使用</a>
+	</li><li><a href="#">已失效</a></li>
+</ul>
+</div>
+<table class="table table-bordered table-hover">
+     <tbody style="font-size:12px;">
+       <tr align="center" style="background-color:#f1f1f1;">
+         <th width="15%" height="31" nowrap="nowrap" style=" border-left:1px solid #ddd;">优惠券编号</th>
+         <th width="12%" nowrap="nowrap">金额</th>           
+         <th width="17%" nowrap="nowrap">使用条件</th>  
+         <th width="26%" nowrap="nowrap">有效期</th>                           
+         <th width="15%" nowrap="nowrap">使用状态</th>           
+         <th width="15%" nowrap="nowrap">使用订单</th>           
+         </tr>
+       <tr align="center">
+         <td nowrap="nowrap">88800001</td>   
+         <td nowrap="nowrap"><span style="color:#eb3b46; line-height:35px;">&yen;100</span></td>                
+         <td nowrap="nowrap" style="color:#9a9a9a;"><span style=" display:block; line-height:30px;">无门槛</span>可购买商城任意商品</td>
+         <td nowrap="nowrap" style="color:#9a9a9a;">20160820 00:00-20160830 23:59</td>                  
+         <td nowrap="nowrap"><span style="color:#eb3b46; line-height:35px;">未使用</span></td>
+         <td nowrap="nowrap"></td>         
+         </tr>   
+       <tr align="center">
+         <td nowrap="nowrap">88800001</td>   
+         <td nowrap="nowrap"><span style="color:#eb3b46; line-height:35px;">&yen;500</span></td>                
+         <td nowrap="nowrap" style="color:#9a9a9a;"><span style=" display:block; line-height:30px;">无门槛</span>可购买商城任意商品</td>
+         <td nowrap="nowrap" style="color:#9a9a9a;">20160820 00:00-20160830 23:59</td>                  
+         <td nowrap="nowrap"><span style="color:#237fb0; line-height:35px;">已使用</span></td>
+         <td nowrap="nowrap"><a href="#" style="color:#2180ae;">0123456789</a></td>         
+         </tr>                                                                                                 
+     </tbody>
+   </table>
+</div>
+</div>   
+<div th:include="common/foot"></div>          
+</body>
+</html>

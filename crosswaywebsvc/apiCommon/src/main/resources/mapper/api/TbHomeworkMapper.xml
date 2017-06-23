@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper.TbHomeworkMapper">
+    <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model.TbHomework">
+        <!--
+          WARNING - @mbggenerated
+        -->
+        <id column="ID" property="id" jdbcType="INTEGER"/>
+        <result column="MIDName" property="midname" jdbcType="VARCHAR"/>
+        <result column="MDIPortfolio" property="mdiportfolio" jdbcType="VARCHAR"/>
+        <result column="MIDPath" property="midpath" jdbcType="VARCHAR"/>
+        <result column="MP3Path" property="mp3path" jdbcType="VARCHAR"/>
+        <result column="MIDIMGPath" property="midimgpath" jdbcType="VARCHAR"/>
+        <result column="StudentName" property="studentname" jdbcType="VARCHAR"/>
+        <result column="StudentTime" property="studenttime" jdbcType="TIMESTAMP"/>
+        <result column="TeacherTime" property="teachertime" jdbcType="TIMESTAMP"/>
+        <result column="GradeIMGPath" property="gradeimgpath" jdbcType="VARCHAR"/>
+        <result column="TeacherComment" property="teachercomment" jdbcType="VARCHAR"/>
+        <result column="TeacherName" property="teachername" jdbcType="VARCHAR"/>
+        <result column="UID" property="uid" jdbcType="VARCHAR"/>
+        <result column="Title" property="title" jdbcType="VARCHAR"/>
+        <result column="FolderName" property="foldername" jdbcType="VARCHAR"/>
+        <result column="PMPath" property="pmpath" jdbcType="VARCHAR"/>
+        <result column="FileName" property="filename" jdbcType="VARCHAR"/>
+        <result column="GradeLevImg" property="gradelevimg" jdbcType="VARCHAR"/>
+        <result column="CWKID" property="cwkid" jdbcType="INTEGER"/>
+        <result column="Status" property="status" jdbcType="INTEGER"/>
+        <result column="ModifyTime" property="modifytime" jdbcType="TIMESTAMP"/>
+        <result column="SubmitTime" property="submittime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <parameterMap type="map" id="PMmap">
+        <parameter property="cwkid" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+        <parameter property="uid" javaType="java.lang.String" jdbcType="VARCHAR"/>
+    </parameterMap>
+    <parameterMap type="map" id="MIDmap">
+        <parameter property="midname" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <parameter property="studentname" javaType="java.lang.String" jdbcType="VARCHAR"/>
+
+    </parameterMap>
+    <select id="homeworkList" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        SELECT
+            ID,
+            Title,
+            Status,
+            ModifyTime
+        FROM tb_Homework
+        WHERE CWKID = #{CWKID}
+        ORDER BY ModifyTime DESC
+    </select>
+    <select id="corected" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        SELECT *
+        FROM tb_Homework
+        WHERE CWKID = #{CWKID}
+              AND status = 2
+        ORDER BY ModifyTime DESC
+    </select>
+    <select id="PMhomeworkList" parameterMap="PMmap" resultMap="BaseResultMap">
+        SELECT *
+        FROM tb_Homework
+        WHERE (CWKID = #{0} OR UID = #{1})
+        ORDER BY ModifyTime DESC
+    </select>
+    <select id="loadMID" parameterMap="MIDmap" resultMap="BaseResultMap">
+        SELECT *
+        FROM tb_Homework
+        WHERE (MIDName = #{0} OR StudentTime = #{1})
+        ORDER BY StudentTime DESC
+    </select>
+
+</mapper>

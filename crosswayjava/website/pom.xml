@@ -1,0 +1,232 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.3.5.RELEASE</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>website</artifactId>
+    <packaging>jar</packaging>
+    <name>kwsl website</name>
+    <version>0.0.1-SNAPSHOT</version>
+    <url>www.chinacrossway.com</url>
+
+    <!-- <repositories> <repository> <id>spring-milestones</id> <name>Spring
+        Milestones</name> <url>http://repo.spring.io/milestone</url> <snapshots>
+        <enabled>false</enabled> </snapshots> </repository> </repositories> -->
+
+    <properties>
+        <!-- MyBatis Generator -->
+        <!-- Java接口和实体类 -->
+        <targetJavaProject>${basedir}/src/main/java</targetJavaProject>
+        <targetMapperPackage>com.cr.cms.mapper1</targetMapperPackage>
+        <targetModelPackage>com.cr.cms.model1</targetModelPackage>
+        <!-- XML生成路径 -->
+        <targetResourcesProject>${basedir}/src/main/resources</targetResourcesProject>
+        <targetXMLPackage>mapper1</targetXMLPackage>
+        <mysql.version>5.1.29</mysql.version>
+        <!-- jdk -->
+        <java.version>1.7</java.version>
+        <!-- 依赖版本 -->
+        <mybatis.version>3.3.1</mybatis.version>
+        <mapper.version>3.3.8</mapper.version>
+        <pagehelper.version>4.1.1</pagehelper.version>
+        <mybatis.spring.version>1.2.4</mybatis.spring.version>
+    </properties>
+
+    <dependencies>
+        <!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-devtools</artifactId>
+            </dependency> -->
+        <!-- <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency> -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.nekohtml</groupId>
+            <artifactId>nekohtml</artifactId>
+        </dependency>
+        <!--
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-devtools</artifactId>
+                    <optional>true</optional>
+                </dependency> -->
+        <!-- <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>1.1.1</version>
+        </dependency> -->
+        <!-- kindeditor -->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>${mybatis.spring.version}</version>
+        </dependency>
+
+        <!-- mysql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <!-- mybatis -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybatis.version}</version>
+        </dependency>
+        <!-- <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>1.2.3</version>
+        </dependency> -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+        </dependency>
+
+        <!-- druid -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.0.16</version>
+        </dependency>
+
+        <!--分页插件 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>${pagehelper.version}</version>
+        </dependency>
+        <!--通用Mapper -->
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper</artifactId>
+            <version>${mapper.version}</version>
+        </dependency>
+        <!-- guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>19.0</version>
+        </dependency>
+        <!-- oss -->
+        <!-- <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>2.2.1</version>
+        </dependency> -->
+        <!-- httclient -->
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+            <version>3.1</version>
+        </dependency>
+        <!--
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.10-FINAL</version>
+        </dependency> -->
+
+        <!-- <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.10-FINAL</version>
+        </dependency> -->
+        <dependency>
+            <groupId>com.klsw</groupId>
+            <artifactId>common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <!-- <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session</artifactId>
+        </dependency> -->
+    </dependencies>
+
+    <build>
+        <finalName>website-0.0.1-SNAPSHOT</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-maven-plugin</artifactId>
+                <version>1.3.2</version>
+                <configuration>
+                    <configurationFile>${basedir}/src/main/resources/generator/generatorConfig.xml</configurationFile>
+                    <overwrite>true</overwrite>
+                    <verbose>true</verbose>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>${mysql.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>tk.mybatis</groupId>
+                        <artifactId>mapper</artifactId>
+                        <version>${mapper.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>springloaded</artifactId>
+                        <version>1.2.5.RELEASE</version>
+                    </dependency>
+                </dependencies>
+                <!-- <dependencies> <dependency> <groupId>org.springframework</groupId>
+                    <artifactId>springloaded</artifactId> <version>1.2.4.RELEASE</version> </dependency>
+                    </dependencies> -->
+            </plugin>
+
+            <!-- 压缩js和css -->
+            <!-- <plugin> <groupId>net.alchim31.maven</groupId> <artifactId>yuicompressor-maven-plugin</artifactId>
+                <version>1.5.1</version> <executions> <execution> <phase>prepare-package</phase>
+                <goals> <goal>compress</goal> </goals> </execution> </executions> <configuration>
+                <encoding>utf-8</encoding> <gzip>false</gzip> <force>true</force> <excludeResources>false</excludeResources>
+                <nosuffix>true</nosuffix> <linebreakpos>-1</linebreakpos> <excludes> <exclude>**/*min.js</exclude>
+                <exclude>**/*min.css</exclude> </excludes> 压缩文件 <aggregations> &lt;!&ndash;
+                css 文件压缩成一个文件 &ndash;&gt; <aggregation> &lt;!&ndash; 合并每一个文件后插入一新行 &ndash;&gt;
+                <insertNewLine>true</insertNewLine> &lt;!&ndash; 需合并文件的根文件夹 &ndash;&gt; <inputDir>${project.build.directory}/classes/static/app/css</inputDir>
+                &lt;!&ndash; 最终合并的输出文件 &ndash;&gt; <output>${project.build.directory}/classes/static/app/css/pack.css</output>
+                &lt;!&ndash; 把以下js文件合并成一个js文件，是按顺序合并的 &ndash;&gt; <includes> <include>*.css</include>
+                </includes> </aggregation> &lt;!&ndash; js 文件压缩成一个文件 &ndash;&gt; <aggregation>
+                <insertNewLine>true</insertNewLine> <inputDir>${project.build.directory}/classes/static/app/js</inputDir>
+                <output>${project.build.directory}/classes/static/app/js/pack.js</output>
+                <includes> <include>*.js</include> </includes> <excludes> <exclude>**/*.min.js</exclude>
+                <exclude>**/*-min.js</exclude> </excludes> </aggregation> </aggregations>
+                </configuration> </plugin> -->
+        </plugins>
+    </build>
+</project>

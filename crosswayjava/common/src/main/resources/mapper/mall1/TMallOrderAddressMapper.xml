@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.common.mall.mapper1.TMallOrderAddressMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.common.mall.model1.TMallOrderAddress">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="orderId" jdbcType="INTEGER" property="orderid" />
+    <result column="orderSerial" jdbcType="VARCHAR" property="orderserial" />
+    <result column="userId" jdbcType="INTEGER" property="userid" />
+    <result column="userName" jdbcType="VARCHAR" property="username" />
+    <result column="userAddress" jdbcType="VARCHAR" property="useraddress" />
+    <result column="userPhone" jdbcType="VARCHAR" property="userphone" />
+    <result column="elevator" jdbcType="VARCHAR" property="elevator" />
+    <result column="floor" jdbcType="VARCHAR" property="floor" />
+    <result column="provinceId" jdbcType="INTEGER" property="provinceid" />
+    <result column="cityId" jdbcType="INTEGER" property="cityid" />
+    <result column="areaId" jdbcType="INTEGER" property="areaid" />
+    <result column="street" jdbcType="VARCHAR" property="street" />
+    <result column="DefaultAddress" jdbcType="BIT" property="defaultaddress" />
+    <result column="ctime" jdbcType="TIMESTAMP" property="ctime" />
+    <result column="ltime" jdbcType="TIMESTAMP" property="ltime" />
+  </resultMap>
+</mapper>

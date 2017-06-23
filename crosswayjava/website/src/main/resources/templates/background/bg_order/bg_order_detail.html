@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>订单详情</title>
+<link rel="stylesheet" href="/css/bootstrap.css" />
+<link rel="stylesheet" href="/css/css.css" />
+<link href="/css/zzsc.css" type="text/css" rel="stylesheet"/>
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+$(".subNav").click(function(){
+			$(this).toggleClass("currentDd").siblings(".subNav").removeClass("currentDd")
+			$(this).toggleClass("currentDt").siblings(".subNav").removeClass("currentDt")
+			
+		/* 	// 修改数字控制速度， slideUp(500)控制卷起速度
+			$(this).next(".navContent").slideToggle(500).siblings(".navContent").slideUp(500); */
+	})	
+	
+	
+
+})
+</script>
+<script type="text/javascript">
+window.onload= function(){
+				
+		$(".time:first").text("创建时间:");
+		
+		if($(".time").eq(1)){
+			
+			$(".time").eq(1).text("付款时间:");
+	 	
+		}
+		if($(".time").eq(2)) {
+			$(".time").eq(2).text("到账时间");
+		}
+	   if($(".time").eq(3)){
+			
+			$(".time").eq(3).text("发货时间:");
+	 	
+		}
+	}
+ 
+</script>
+
+</head>
+
+<body>
+	<div th:include="background/bg_common/bg_head"></div>
+<!-- 顶部 -->              
+<div id="middle">
+     <div class="left">
+<!-- 代码 开始 -->
+<div th:include="background/bg_common/bg_nav"></div>
+<!-- 代码 结束 -->
+
+
+     </div>
+
+     <div class="right"  id="mainFrame">
+     
+     <div class="right_cont">
+ <ul class="breadcrumb">当前位置：
+  订单详情
+</ul>  
+<div class="page-content">
+						<div class="page-header">
+							
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+                            <!-- <input type="text" name="orderSerial" hidden="hidden" th:value="${order.orderSerial}" />   -->
+								<div class="text-left">
+									<div class="row">
+										<div class="col-xs-12 text-left">
+											<h3>买家信息:</h3>
+										</div>
+									</div>
+									<div class="row" >
+                                         <div class="form-group col-xs-6">
+										    <label>姓名：</label>
+										    <span th:text="${tMallUser.name}"> 张三 </span>
+										 </div>
+										<div class="form-group col-xs-6">
+										    <label>联系电话:</label>
+										    <span th:text="${tMallUser.mobile}">18866778902</span>
+									  </div>
+								</div> 
+	<table class="table table-bordered table-hover" style=" float:left; margin-top:20px;">
+	     <tbody>
+	       <tr align="center" style="background-color:#f1f1f1;">
+	         <th width="30%" nowrap="nowrap">宝贝</th>
+	         
+	         <th width="10%" nowrap="nowrap">状态</th>
+	        
+	         <th width="10%" nowrap="nowrap">单价</th>                  
+	         <th width="10%" nowrap="nowrap">数量</th>           
+	         <th width="10%" nowrap="nowrap">优惠</th>           
+	         <th width="10%" nowrap="nowrap">商品总价</th>                            
+	         </tr>
+	       <tr align="center" th:each="orderli:${orderproduct}">
+	       
+	         <td nowrap="nowrap">                             
+	                          <div class="order_menu">
+	                              <ul> 
+	                              <li>
+	                                <div class=" order_pic"><img th:src="${orderli.productImg}" /></div><div class="order_text"  >
+	                                	<span th:text="${orderli.productname}+${orderli.productColor}+'*'+${orderli.productcount}"></span> </div>
+	                               </li>                                                             
+	                              </ul>
+	                              </div></td>
+	  
+	         
+	          <td  nowrap="nowrap">
+	            	<span  th:if="${tMallOrder.status==2}">已付款</span>  
+	         		<span  th:if="${tMallOrder.status==20}">交易完成 </span>         
+	          		<span  th:if="${tMallOrder.status==1}">待付款 </span> 
+	          		<span th:if="${tMallOrder.status==3}">已到账 </span> 
+	          		<span th:if="${tMallOrder.status==4}">已发货 </span> 
+	          		<span th:if="${tMallOrder.status==5}">已签收 </span>            	 
+	          </td> 
+	   
+	   
+	         <td nowrap="nowrap" th:text="'￥'+${orderli.productprice}"></td>
+	         <td nowrap="nowrap" th:text="${orderli.productcount}"> </td>
+	         <td nowrap="nowrap">--</td>
+	         <td nowrap="nowrap"><span th:text="'￥'+${orderli.productprice * orderli.productcount}+'（快递：0.00）'"></span> </td>
+	         </tr>
+	               
+	     </tbody>
+	   </table>                              
+	 <div class="total"> 订单总价：
+	 	<span th:text="'￥'+${tMallOrder.totalprice}"></span>
+	 </div>  
+
+	<div class="row">
+		 <div class="col-xs-12">
+		    <label>订单编号:</label>
+		    <span th:text="${orderAddress.orderserial }"> </span>
+		 </div>
+	</div>  
+                                     
+	<div th:each="orderHistory:${orderHistoryList}" th:if="${orderHistory} != null">		    
+	<div class="row">
+	     <div class="col-xs-12">
+		    <label class="time">创建时间:</label>
+		    <span th:text="${#dates.format(orderHistory.ctime,'yyyy-MM-dd HH:mm:ss')}"> </span>
+		 </div>
+	   </div>
+	</div>		
+	<div style="margin:10px 0; width:100%; float:left; border-bottom:1px solid #d9d9d9;"></div>                                         
+                                        
+                                           
+                                           
+	<div class="row" th:if="${logistics} != null">
+		<div class="col-xs-12 text-left">
+			<h3>物流信息:</h3>
+		</div>
+	</div>
+									
+									
+	<div class="row" th:if="${logistics} != null">
+		<div class="form-group col-xs-12">
+		    <label>发货人:</label>
+		    <span th:text="${logistics.logisticsname}"> </span>
+		</div>
+		<!-- <div class="form-group col-xs-12">
+		    <label>发货时间:</label>
+		    <span th:text="${#dates.format(logistics.ctime,'yyyy-MM-dd HH:mm:ss')}"> </span>
+			</div> 
+		-->
+			<div class="form-group col-xs-12">
+		    <label>物流公司：</label>
+		    <span th:text="${logistics.logisticscompany}"> </span>
+		 </div>	
+		  <div class="form-group col-xs-12">
+		    <label>运单号：</label>
+		     <span th:text="${logistics.logisticsserial}"> </span>
+		 </div>
+		 
+		 	<div class="form-group col-xs-12">
+		    <label>运送方式：</label>
+		    <span>快递</span>
+		 </div>											 
+	</div>
+                          
+                                                                                                                                 
+	<div class="row">
+		<div class="col-xs-12 text-left">
+			<h3>收货信息:</h3>
+		</div>
+	</div>
+	
+	
+	<div class="row">
+	<div class="form-group col-xs-12">
+		    <label>发票:</label>
+		    <span th:text="${receipt.receiptserial}" th:if="${receipt}"> </span>
+		 </div>
+		<div class="form-group col-xs-12">
+		    <label>收货人:</label>
+		    <span th:text="${orderAddress.username}"> </span>
+		 </div>
+			<div class="form-group col-xs-12">
+		    <label>联系方式：</label>
+		    <span th:text="${orderAddress.userphone}"> </span>
+		 </div>										 
+	</div>
+	
+	
+	<div class="row">
+		<div class="form-group col-xs-12">
+		    <label>收货地址:</label>
+		    <span th:text="${orderAddress.useraddress}">安徽省合肥市高新区黄山路599号时代数码港三层</span>
+		 </div> 									 
+	</div>
+	</div>
+
+<!-- PAGE CONTENT ENDS -->
+</div><!-- /.col -->
+</div><!-- /.row -->
+</div>
+   
+     </div>     
+     </div>
+    </div>
+</body>
+</html>

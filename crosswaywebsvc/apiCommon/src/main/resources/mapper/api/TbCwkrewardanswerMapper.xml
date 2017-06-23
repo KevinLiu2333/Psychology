@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper.TbCwkrewardanswerMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model.TbCwkrewardanswer" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" property="id" jdbcType="INTEGER" />
+    <result column="RewardID" property="rewardid" jdbcType="INTEGER" />
+    <result column="AnswerCWKID" property="answercwkid" jdbcType="INTEGER" />
+    <result column="AnswerTime" property="answertime" jdbcType="TIMESTAMP" />
+    <result column="AnswerIMGPath" property="answerimgpath" jdbcType="VARCHAR" />
+    <result column="Comment" property="comment" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.pianoCommon.api.mapper.TbSerialnumbersMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.pianoCommon.api.model.TbSerialnumbers">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="Number" jdbcType="VARCHAR" property="number" />
+    <result column="IsUsed" jdbcType="BIT" property="isused" />
+    <result column="ActivationDate" jdbcType="TIMESTAMP" property="activationdate" />
+    <result column="AddDatetime" jdbcType="TIMESTAMP" property="adddatetime" />
+    <result column="UsedType" jdbcType="VARCHAR" property="usedtype" />
+    <result column="IsExport" jdbcType="BIT" property="isexport" />
+    <result column="IsOverdue" jdbcType="BIT" property="isoverdue" />
+    <result column="IsLocked" jdbcType="BIT" property="islocked" />
+    <result column="ExportZone" jdbcType="VARCHAR" property="exportzone" />
+  </resultMap>
+  
+   <select id="selectLikeName" parameterType="java.lang.String" resultType="com.klsw.pianoCommon.api.model.TbSerialnumbers">
+	SELECT t1.* FROM (
+		SELECT s1.*,s2.ID AS tb_UserAvailableID,s2.Nickname 
+		FROM tb_SerialNumbers s1 
+			LEFT JOIN tb_UserAvailable s2  
+			ON s1.Number = s2.NewNumber 
+			WHERE ("2" = #{1} 
+				OR s1.IsUsed = #{1}) 
+			ORDER BY s1.AddDatetime DESC
+		) t1
+	WHERE (t1.Number LIKE CONCAT(CONCAT("%",#{0}),"%") 
+	OR t1.ExportZone LIKE CONCAT(CONCAT("%",#{0}),"%") 
+	OR t1.Nickname LIKE CONCAT(CONCAT("%",#{0}),"%"))
+  </select> 
+</mapper>

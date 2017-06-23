@@ -1,0 +1,62 @@
+<script type="text/javascript">
+    $(function () {
+        $(".subNav").click(function () {
+            $(this).toggleClass("currentDd").siblings(".subNav").removeClass("currentDd")
+            $(this).toggleClass("currentDt").siblings(".subNav").removeClass("currentDt")
+            // 修改数字控制速度， slideUp(500)控制卷起速度
+            $(this).next(".navContent").slideToggle(500).siblings(".navContent").slideUp(500);
+        })
+    })
+</script>
+<div class="left">
+    <!-- 代码 开始 -->
+    <div class="subNavBox" style="height: 894px;">
+        <div class="subNav" style="background-image: none">首页</div>
+        <div class="subNav">系统版本</div>
+        <ul class="navContent">
+            <li><a href="/PMVersion/toAddVersion">添加系统版本</a></li>
+            <li><a href="/PMVersion/versionList" class="orange">系统版本列表</a></li>
+        </ul>
+        <div class="subNav">曲谱管理</div>
+        <ul class="navContent">
+            <li><a href="/PM/toUploadMID">上传曲谱</a></li>
+            <li><a href="/PM/PM_MIDList">曲谱列表</a></li>
+            <li><a href="/PM/toSpecialOpern">活动曲谱</a></li>
+        </ul>
+        <div class="subNav currentDd">序列号</div>
+        <ul class="navContent">
+            <li><a href="/serial/index">序列号池</a></li>
+        </ul>
+        <div class="subNav">视频管理</div>
+        <ul class="navContent">
+            <li><a href="/video/toAddVideo">添加视频</a></li>
+            <li><a href="/video/videoList">视频列表</a></li>
+        </ul>
+        <div class="subNav">互动课堂</div>
+        <ul class="navContent">
+            <li><a href="/PM/toAddCategory">添加课堂类别</a></li>
+            <li><a href="/PM/toCategoryList">课堂类别列表</a></li>
+            <li><a href="/PM/toAddClass">添加课堂</a></li>
+            <li><a href="/PM/toClassList">课堂列表</a></li>
+
+        </ul>
+        <div class="subNav">用户体验与系统日志</div>
+        <ul class="navContent">
+            <li><a href="/Log/listUserExperience">用户体验列表</a></li>
+            <li><a href="/Log/logList">系统日志列表</a></li>
+        </ul>
+        <div class="subNav">用户设置</div>
+        <ul class="navContent">
+            <li><a href="/user/toEditSelf">编辑个人资料</a></li>
+            <li><a href="/user/toUpdatePwd">修改密码</a></li>
+        </ul>
+        <div class="subNav">音乐教室</div>
+        <ul class="navContent">
+            <li><a href="/musicClassroom/toAddVersion">上传版本</a></li>
+            <li><a href="/musicClassroom/list">版本列表</a></li>
+        </ul>
+    </div>
+    <!-- 代码 结束 -->
+</div>
+
+ 

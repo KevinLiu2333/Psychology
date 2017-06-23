@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>留言 克洛斯威智能钢琴</title>
+    <meta name="description" content="安徽克洛斯威智能乐器科技有限公司正式成立于2014年，是中国科学技术大学先进技术研究院孵化企业。公司专注于智能乐器研发、生产、销售以及构建互联网在线教育生态体系的创新型科技企业。" />
+    <meta name="keywords" content="克洛斯威,Crossway,klsw,钢琴侠,智能钢琴,互联网钢琴,电钢琴,音乐教育,一体机,一体钢琴,熊世林,keluosiwei" />
+	<link href="/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="/css/login.css" rel="stylesheet" type="text/css"/>
+	 
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/css/login.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<script type="text/javascript" src="/js/bdstat.js"></script> 
+	<script type="text/javascript">
+	$(function(){
+		
+		$("input[type='radio']").click(function(){
+		 
+			var ro=$("[name='nature']:checked").val();
+			if(ro=="个人"){
+				$("#firmname").css("display","none");
+			}else{
+				
+				$("#firmname").css("display","block");
+			}
+			
+		})
+	})
+	
+	</script>
+</head>
+<body >
+<div th:include="common/head"></div>
+ 
+<script type="text/javascript">
+$(function(){
+$("#submit").click(function(){
+  
+    var nature=$("input[name='nature']:checked").val(); 
+	var nature2=$("input[name='nature']:checked").next().text()
+	var Province =$("#Province").val();
+	var City=$("#City").val();
+	var Phone = $("#Phone").val();
+	var name=$("#Name").val();
+	var email=$("#Email").val();
+	var content=$("#Content").val();
+	var Demandclass=$("#demandClass").val();
+	var code = $("#Code").val();
+	var firm=$("#firmname").val();
+	var time=new Date(); 
+
+	var reg = /^\s*$/g;
+	
+	if(reg.test(Province)){
+		alert("请填写省份");
+		return;
+		}
+	if(reg.test(City)){ 
+		alert("请填写城市");
+		return;
+	    }
+	if(reg.test(Phone)){
+		alert("请填写手机号码");
+		return;
+	}
+	if(reg.test(name)){
+		alert("请填名称");
+		return;
+	}
+	if(reg.test(email)){
+		alert("请填写email");
+		return;
+	}
+	if(reg.test(content)){
+		alert("请填写内容");
+		return;
+	}
+	if(reg.test(code)){
+		alert("请填写验证码");
+		return;
+	}
+	 
+ 
+	 $.ajax({
+		type:'POST',
+		url:'/message/add',
+		data:{
+			    nature:nature,
+			    nature:nature2,
+				province:Province,
+				phone:Phone,
+				name:name,
+				city:City,
+				email:email,
+				content:content,
+				demandclass:Demandclass, 
+				ctime:time,
+				firmname:firm,
+				captcha:code
+		},
+/* 	  	dataType:'json',	  */
+		success:function(data){  
+			if(data == 'ok'){			
+                 alert('提交成功!');    			
+				}
+			else{
+				alert(data);
+			}
+			$("input").val("");
+			$("#Content").val("");
+			$("#valiCode").click();
+		}
+		});
+	});
+})
+</script>
+<div id="login_bg">
+        <div class="content" style="padding-top:40px;">
+            <div class="register-box">
+                <div class="register-title" style="margin-top:0px;">商务留言</div>
+                <div class="register-pic"><img style="margin-left:-15px;" src="/images/login_logo.png" width="123" height="75" /></div>
+
+                <div class="reg_form reg_form_step1" style="width: 800px; margin-top:10px;">
+                    <dl id="inputMobile" style="display: block; height:35px;">
+                        <dt class="label" style="height:35px; vertical-align:middle;">* 性质</dt>
+                        <dd style="vertical-align:middle; height:35px;">
+                            <input class="r_input input_l" style="line-height:35px;  vertical-align:middle; width:20px; margin-right:0px; background-image:none;" type="radio"  name="nature"   value="个人" checked="checked" /><label class="r_input input_l" style="line-height:41px; vertical-align:middle; width:30px; margin-left:0px; background-image:none;" for="PropertyA">个人</label>
+                            <input class="r_input input_l" style="line-height:35px; vertical-align:middle; width:20px; margin-right:0px; background-image:none;" type="radio"   name="nature"  value="企业" /><label class="r_input input_l" style="line-height:41px; vertical-align:middle; width:30px; margin-left:0px; background-image:none;" for="PropertyB">企业</label>
+                            <label id="PropertyMsg" style="color:orange;"></label>
+                        </dd>
+                    </dl>
+                    
+                    <dl>
+                        <dt class="label">* 区域</dt>
+                        <dd>
+                            <input class="r_input input_l" style="background:url(/images/inputsmall_bg.png) left top no-repeat; width:178px;" placeholder="省" autocomplete="off" type="text" id="Province" name="province" maxlength="50"/>
+                            <input class="r_input input_l" style="background:url(/images/inputsmall_bg.png) left top no-repeat; width:178px; margin-left:1px;" placeholder="市" autocomplete="off" type="text" id="City" name="city" maxlength="50"/>
+                            <label id="AreaMsg" style="color:orange;"></label>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="label">* 姓名</dt>
+                        <dd>
+                            <input class="r_input input_l" type="text" id="Name" name="name" placeholder="输入您的姓名" maxlength="20" autocomplete="off" />
+                            <label id="NameMsg" style="color:orange;"></label>
+                        </dd>
+                    </dl>
+                     <dl id="firmname" style="display:none">
+                        <dt class="label">* 公司名称</dt>
+                         <dd>
+                            <input class="r_input input_l" type="text"  name="firmname" placeholder="输入您的公司名称" autocomplete="off" />
+                            <label id="firmMsg" style="color:orange;"></label>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="label">* 电话</dt>
+                        <dd>
+                            <input class="r_input input_l" type="text" id="Phone" name="phone" placeholder="输入您的电话" maxlength="11" autocomplete="off" />
+                            <label id="PhoneMsg" style="color:orange;"></label>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="label">邮箱</dt>
+                        <dd>
+                            <input class="r_input input_l" type="text" id="Email" name="email" placeholder="输入您的邮箱" autocomplete="off" maxlength="50"/>
+                            <label id="EmailMsg" style="color:orange;"></label>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="label">需求类别</dt>
+                        <dd>
+                            <div style="width:371px; height:41px; overflow:hidden;">
+                                <input class="r_input input_l" type="text" style="margin:0px;" disabled="disabled" />
+                                <select class="r_input input_l" id="demandClass" name="demandClass" style="height:41px; width:371px;
+                                border-radius:9px; margin-top:-59px; margin-bottom:0px;" autocomplete="off">
+                                    <option style="padding:-4px;" value="招商咨询">招商咨询</option>
+                                    <option style="padding:-4px;" value="商务合作">商务合作</option>
+                                    <option style="padding:-4px;" value="客户服务">客户服务</option>
+                                </select>
+                            </div>
+                            <label id="ClassifyMsg" style="color:orange;"></label>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="label">内容</dt>
+                        <dd>
+                            <textarea maxlength="500" id="Content" name="content" class="r_input input_l" style="width:359px; resize:none; background-image:none; background-color:white;
+                            border:1px solid #bbb; border-radius:6px; height:72px; padding-top:8px;" placeholder="输入您的留言"></textarea>
+                            <label id="ContentMsg" style="color:orange;"></label>
+                        </dd>
+                    </dl>
+                    <dl id="dl_VerifyCode">
+                        <dt class="label">验证码</dt>
+                        <dd>
+                            <input class="short_input input_r" type="text" id="Code" name="Code" autocomplete="off" maxlength="6" />
+                            <img id="valiCode" style="vertical-align:middle;cursor:pointer; border-radius:6px; margin-left:-4px; margin-top:-3px; width:100px; height:39px; color:#666; line-height:39px; vertical-align:central; border:1px solid #b2b2b2;" class="col-md-2 control-label" onclick="this.src='/code.jpg?' + new Date().getTime()" src="/code.jpg"
+                                 alt="验证码" />
+                            
+                            <label id="CodeMsg" style="color:orange;"></label>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="label">&nbsp;</dt>
+                        <dd>
+                            <div class="submit">
+                                <button type="button" tabindex="5" id="submit" name="submit" style="margin-top:0px;">提交留言</button>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div style="color:#777; margin-top:5px; text-align:center; margin-left:90px; font-size:12px;">
+                    您也可以通过邮箱联系我们：<a href="mailto:BD@klsw.com" style="color:#e95504">BD@klsw.com</a>
+                </div>
+                <div style="margin-bottom:-60px; margin-top:20px; color:orange; text-align:center; margin-left:90px;">
+                    <span class="field-validation-valid field-validation-error" data-valmsg-for="WrongMsg" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+            
+            <div class="foot_bei">
+               
+            </div>
+        </div>
+    </div>
+<div th:include="common/foot"></div>
+</body>
+</html>

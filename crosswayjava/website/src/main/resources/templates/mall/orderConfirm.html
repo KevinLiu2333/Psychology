@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>订单结算 克洛斯威智能钢琴</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/order.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/js/bdstat.js"></script>
+    <style type="text/css">
+        .address .order_title {
+            display: none;
+            margin-bottom: 20px;
+        }
+        .order_title a {
+            color: #FFBB00;
+            float: right;
+            opacity: 0;
+            -webkit-transition: opacity .3s ease;
+            transition: opacity .3s ease;
+        }
+        .order_title:hover a {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+<!-- head -->
+<div th:include="common/head"></div>
+<div class="order_wrap">
+	<form action="/order/submit" method="post">
+    <!-- 添加收货地址开始 -->
+    <div class="shanbora address" style="width:100%;">
+        <div class="order_box" style="width:100%;">
+            <div class="order_biaoti">收货人信息</div>
+        </div>
+        <div class="order_title">
+            <label id="addressDetail">
+            </label>
+            <input type="hidden" id="address_provinceid" name="provinceid" value="" />
+				<input type="hidden" id="address_cityid" name="cityid" value="" />
+				<input type="hidden" id="address_areaid" name="areaid" value="" />
+				<input type="hidden" id="address_street" name="street" value="" />
+				<input type="hidden" id="address_useraddress" name="useraddress" value="" />
+				<input type="hidden" id="address_username" name="username" value="" />
+				<input type="hidden" id="address_userphone" name="userphone" value="" />
+				<input type="hidden" id="address_elevator" name="elevator" value="" />
+				<input type="hidden" id="address_floor" name="floor" value=""/>
+				<input type="hidden" id="receipt_header" name="header" value="" />
+				<input type="hidden" id="from" th:value="${from}"/>
+            <a href="javascript:;" onclick="$('#address-dialog').fadeIn(200);">修改</a>
+        </div>
+        <div id="addAddressBtn" class="order_add"><a href="javascript:;" onclick="$('#address-dialog').fadeIn(200);">添加收货地址</a>
+        </div>
+        <!-- <div class="save"><a href="#">保存地址</a></div> -->
+    </div>
+    <!-- 添加收货地址结束 -->
+
+
+    <!-- 微信支付弹窗页面开始 -->
+
+    <!-- 微信支付弹窗页面结束 -->
+
+    <div class="cart_con">
+        <div class="shop_list">
+            <div class=" shop_name" style=" width:630px;">商品信息</div>
+            <div class="shop_quantity">购买数量</div>
+            <div class="shop_price">单价</div>
+            <div class="shop_total">小计</div>
+        </div>
+        <div class="shop_show" th:each="item,stat : ${cart.cart}">
+            <div class=" shop_name" style=" width:630px;"><img th:src="${item.productImgurl}" class="img"/><span
+                    class="big" th:text="${item.productName}"></span><span class="small"
+                                                                           th:text="'颜色' + ${item.productColor}"></span>
+            </div>
+            <div class="shop_price" style="margin-top:35px;" th:text="${item.productCount}"></div>
+            <div class="shop_jiajian" style="margin-top:45px; text-align:center"
+                 th:text="'¥' + ${#numbers.formatDecimal(item.productPrice,3,2)}"></div>
+            <div class="shop_total" style="margin-top:35px;"
+                 th:text="'¥' + ${#numbers.formatDecimal(item.total,3,2)}"></div>
+        </div>
+    </div>
+    <div class="order_append">
+        <ul>
+            <li>
+                <div class="append_titlea">支付方式</div>
+                <div class="append_paya">支付宝支付</div>
+            </li>
+
+        </ul>
+    </div>
+    <!-- <div class="shop_totala" th:text="'应付金额： ' + ${#numbers.formatDecimal(cart.totalM,3,2)} + '元'"></div>
+    <div class="order_pay"><a href="#">提交订单 去支付</a></div> -->
+
+    <!--付款数额-->
+    <div class="shop_totala" style="line-height:30px; margin-right:20px; margin-top:30px;"><span>总商品金额：</span><span
+            style="min-width:120px; display:inline-block;"
+            th:text="'￥' + ${#numbers.formatDecimal(cart.totalM,3,2)} + ' 元'">￥51996.00 元</span></div>
+    <div class="shop_totala" style="line-height:30px; margin-right:20px; margin-top:0px;"><span>　　　   运费：</span><span
+            style="min-width:120px; display:inline-block;">0.00 元</span></div>
+    <div class="shop_totala" style="line-height:30px; margin-right:20px; margin-bottom:20px;"><span>　应付总额：</span><span
+            style="min-width:120px; display:inline-block; color:red;"
+            th:text="'￥' + ${#numbers.formatDecimal(cart.totalM,3,2)} + ' 元'">￥51996.00 元</span></div>
+    <input type="hidden" name="hiddenGoods" th:value="${hiddenGoods}"/>
+    <div class="shop_totala" style="line-height:30px; margin-right:0px;">
+        <div class="order_pay"><a href="javascript:return false;" onclick="formSubmit();">提交订单 去支付</a></div>
+    </div>
+    </form>
+
+
+    <div class="shanbora">
+        <div class="order_box">
+            <div class="order_biaoti">温馨提示</div>
+        </div>
+        <div class="tipcnta">
+            请确认您的预订信息，提交后将不可更改。<br/>
+            本公司合作物流为德邦、中铁物流（不接受指定及其他物流），覆盖区域可免费提供送货上门服务。不包安装。（全国大部分市区均能到达）<br/>
+            1、如送货人员需您引导入内（寻找停车位），请您积极配合。方便尽早把产品安全送达您家中。<br/>
+            2、物流与您约好送货时间后，请如约等待。如送去无人签收，派送费用需自行承担。<br/>
+            如需退款请于订单发货前申请，具体操作请咨询客服或致电：400-8080-218
+        </div>
+    </div>
+
+    <!-- 添加收货地址开始 -->
+    <div id="address-dialog" class="dialog-wrapper"
+         style="display:none;position:fixed;left:0;right:0;bottom:0;top:0;background-color:rgba(0,0,0,.3);z-index: 9999;">
+        <div class="shanbora"
+             style="width:788px;background:#fff;float: none;height: 470px;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;">
+            <div class="order_box" style="width: 788px;float:none;">
+                <div class="order_biaoti">收货人信息</div>
+                <div class="chacha"><a href="javascript:" onclick="$('#address-dialog').fadeOut(300);"><img
+                        src="/images/graycha.png" width="17" height="16"/></a>
+                </div>
+            </div>
+            <div class="get_address" style="width:788px; float:none;padding:30px;">
+                    <table width="775" border="0">
+                    	<tr>
+                            <td width="121" height="42" align="right"><span style="color:#F00">*</span>&nbsp;发票抬头：</td>
+                            <td height="42" colspan="3"><label>
+                                <input type="text" name="receipt" id="receipt" class="order_text"/>
+                            </label></td>
+                        </tr>
+                        <tr>
+                            <td width="121" height="42" align="right"><span style="color:#F00">*</span>&nbsp;收货人姓名：</td>
+                            <td height="42" colspan="3"><label>
+                                <input type="text" name="name" id="name" class="order_text"/>
+                            </label></td>
+                        </tr>
+                        <tr>
+                            <td height="42" align="right"><span style="color:#F00">*</span>&nbsp;地址：</td>
+                            <td width="100" height="42"><label>
+                                <select name="province" id="province">
+                                </select>
+                            </label>
+                            </td>
+                            <td width="100" height="42"><label>
+                                <select name="city" id="city">
+                                </select>
+                            </label></td>
+                            <td width="425" height="42"><label>
+                                <select name="district" id="district">
+                                </select>
+                            </label></td>
+                        </tr>
+                        <tr>
+                            <td width="121" height="42" align="right"><span style="color:#F00">*</span>&nbsp;详细地址：</td>
+                            <td height="42" colspan="3"><label>
+                                <input type="text" name="address" id="address" class="order_text"/>
+                            </label></td>
+                        </tr>
+                        <tr>
+                            <td width="121" height="48" align="right"><span style="color:#F00">*</span>&nbsp;手机：</td>
+                            <td height="48" colspan="3"><label>
+                                <input type="text" name="mobile" id="mobile" class="order_text"/>
+                            </label></td>
+                        </tr>
+                        <tr>
+                            <td height="42" align="right"><span style="color:#F00">*</span>&nbsp;有无电梯：</td>
+                            <td width="100" height="42">
+                            <label>
+                                <select name="hasElevator" id="hasElevator" onchange="index(this)" class="selecta">
+                                    <option selected="selected">有电梯</option>
+                                    <option>无电梯</option>
+                                </select>
+                            </label>
+                            </td>
+                        </tr>
+                         <tr id="louceng">
+                            <td width="121" height="48" align="right"><span style="color:#F00">*</span>&nbsp;楼层：</td>
+                            <td height="48" colspan="3">
+	                            <label>
+	                                <input type="text" name="floor" id="floor" class="order_text"/>
+	                            </label>
+                            </td>
+                        </tr>
+                        <!--<tr>
+                            <td width="121" height="48" align="right"><span style="color:#F00">*</span>&nbsp;邮箱：</td>
+                            <td height="48" colspan="3"><label>
+                                <input type="text" name="email" id="email" class="order_text"/>
+                            </label></td>
+                        </tr>
+
+                           <tr>
+                            <td width="121" height="42" align="right">&nbsp;</td>
+                            <td height="42" colspan="3"><label>
+                              <input type="checkbox" name="checkbox" id="checkbox" />
+                            设置为默认地址</label></td>
+                          </tr> -->
+                    </table>
+            </div>
+            <div class="save"><a href="javascript:;" onclick="addAddress()">保存地址</a></div>
+        </div>
+    </div>
+
+</div>
+<div th:include="common/foot"></div>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/areaData.js"></script>
+ 
+<script  type="text/javascript">
+    $(function() {
+    	$("#louceng").hide();
+        function getProvinces() {
+            var provinces = areaData.filter(function(area){
+                return area.level == 1;
+            });
+            $('#province').html(provinces.map(function(province){
+                return '<option value="'+province.name+'" data-id="'+province.id+'">' + province.name + '</option>';
+            }).join(''));
+            getCities($('#province').find('option:first').prop('selected', true).data('id'));
+        }
+        function getCities(provinceId) {
+            var cities = areaData.filter(function(area){
+                return area.parentId == provinceId;
+            });
+            $('#city').html(cities.map(function(city){
+                return '<option value="'+city.name+'" data-id="'+city.id+'">' + city.name + '</option>';
+            }).join(''));
+            getDistricts($('#city').find('option:first').prop('selected', true).data('id'));
+        }
+        function getDistricts(cityId) {
+            var districts = areaData.filter(function(area){
+                return area.parentId == cityId;
+            });
+            $('#district').html(districts.map(function(district){
+                return '<option value="'+district.name+'" data-id="'+district.id+'">' + district.name + '</option>';
+            }).join(''));
+            $('#district').find('option:first').prop('selected', true);
+        }
+
+        getProvinces();
+
+        $('#province').on('change', function() {
+            var provinceId = $(this).find(':selected').data('id');
+            getCities(provinceId);
+        });
+        $('#city').on('change', function() {
+            var cityId = $(this).find(':selected').data('id');
+            getDistricts(cityId);
+        });
+    });
+    function addAddress() {
+    	
+
+    	var reg = /^\s*$/g;
+    	
+    	var receipt = $('#receipt').val();
+    	var username = $('#name').val();
+    	var street = $('#address').val();
+    	var mobile = $('#mobile').val();
+    	var hasElevator = $('#hasElevator').val();
+    	var floor=$("#floor").val();
+    	
+    	if(reg.test(receipt)) {
+    		alert("请填写发票抬头！");
+    		return;
+    	}
+    	
+    	if(reg.test(username)) {
+    		alert("请填写收货人姓名！");
+    		return;
+    	}
+    	if(reg.test(street)) {
+    		alert("请填写收货地址！");
+    		return;
+    	}
+    	if(reg.test(mobile)) {
+    		alert("请填写详细地址！");
+    		return;
+    	}
+    	
+    	$('#receipt_header').attr('value',receipt);
+    	$('#address_provinceid').attr('value', $("#province").find("option:selected").attr('data-id'));
+    	$('#address_cityid').attr('value', $('#city').find("option:selected").attr('data-id'));
+    	$('#address_areaid').attr('value', $("#district").find("option:selected").attr('data-id'));
+    	$('#address_street').attr('value', street);
+    	$('#address_useraddress').attr('value', $('#province').val() + $('#city').val() + $('#district').val() + street);
+    	$('#address_username').attr('value', username);
+    	$('#address_userphone').attr('value', mobile);
+    	$('#address_elevator').attr('value', hasElevator);
+    	$("#address_floor").attr('value',floor);
+    	
+        var data = [];
+        data.push(username);
+        data.push($('#province').val() + $('#city').val() + $('#district').val() + street);
+        data.push(mobile);
+        data.push(hasElevator);
+        data.push(floor);
+        $('#addressDetail').html(data.join('，'));
+        $('.order_title').show();
+        $('#addAddressBtn').remove();
+        $('#address-dialog').fadeOut(300);
+    }
+    
+    function formSubmit() {
+    	var reg = /^\s*$/g;
+    	var address = $('#addressDetail').text();
+    	if(reg.test(address)) {
+    		alert("请填写收货信息!");
+    		return false;
+    	}
+    	document.forms[0].submit();
+    }
+</script>
+<script type="text/javascript">
+ 
+		function index(osel){ 
+			
+			var index_osel= osel.options[osel.selectedIndex].text;
+			if(index_osel=="有电梯"){
+				
+				$("#louceng").css("display","none");
+				
+			}else{
+				$("#louceng").show();
+			}
+		} 
+</script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>在线商城  克洛斯威智能钢琴</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<meta name="description" content="安徽克洛斯威智能乐器科技有限公司正式成立于2014年，是中国科学技术大学先进技术研究院孵化企业。公司专注于智能乐器研发、生产、销售以及构建互联网在线教育生态体系的创新型科技企业。" />
+<meta name="keywords" content="克洛斯威,Crossway,klsw,钢琴侠,智能钢琴,互联网钢琴,电钢琴,音乐教育,一体机,一体钢琴,熊世林,keluosiwei" />
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/bdstat.js"></script>
+</head>
+
+<body>
+head
+<div th:include="common/head1"></div>
+<div class="store_banner"><a th:href="@{/product/14F70050-71F1-4EA2-BCC3-AF4CBB3C74A7}"><img src="/images/store.jpg" style="margin-bottom:-2px;"/></a></div>
+<div class=" store_wrap">
+<div class=" store_con">
+<div class="store_title">产品中心<span>/ PRODUCT CENTER</span></div>
+<script type="text/javascript">
+		$(function() {
+	        $('.store_list li:nth-child(3n)').css('margin-right',0);
+	    })
+
+</script>
+<div class="store_list">
+<ul>
+  <li th:each="product : ${productList}">
+  <a th:href="'/product/' + ${product.serial}">
+  <img th:src="${product.imgurl}" class="img"/>
+  <p th:text="${product.name}" class="f3">商品名称</p>
+  <p th:text="${product.name} + ' - ' + ${product.color}" class="f2">商品名称 - 颜色</p>  
+  <p th:text="'RMB:' + ${#numbers.formatDecimal(product.price,3,2)} + '元'" class="f1"> RMB:价格</p>
+  </a>
+  </li>
+</ul>
+</div>
+</div>
+ 
+ -->
+ 
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>在线商城  克洛斯威智能钢琴</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<meta name="description" content="安徽克洛斯威智能乐器科技有限公司正式成立于2014年，是中国科学技术大学先进技术研究院孵化企业。公司专注于智能乐器研发、生产、销售以及构建互联网在线教育生态体系的创新型科技企业。" />
+<meta name="keywords" content="克洛斯威,Crossway,klsw,钢琴侠,智能钢琴,互联网钢琴,电钢琴,音乐教育,一体机,一体钢琴,熊世林,keluosiwei" />
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/bdstat.js"></script>
+<script type="text/javascript">
+    $(function() {
+        if ($(document).scrollTop() > 0 ) {
+            if(!$('.navhead').hasClass('shadow')){
+                $('.navhead').addClass('shadow');
+            }
+        }
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 0 ) {
+                if(!$('.navhead').hasClass('shadow')){
+                    $('.navhead').addClass('shadow');
+                }
+            }else{
+                $('.navhead').removeClass('shadow');
+            }
+        });
+		$(".store_list li").css("display","none");
+		$(".store_list ul").eq(0).children().eq(0).css("display","block");
+		$(".store_list ul").eq(0).children().eq(1).css("display","block");
+		$(".store_list ul").eq(1).children().eq(0).css("display","block");
+		$(".store_list ul").eq(1).children().eq(1).css("display","block");
+		$('.store_list li:nth-child(2n)').css('margin-right',0);
+    })
+</script>
+<script type="text/javascript">
+	function slidLeft1(){
+		var first = $(".woshikuan:visible").eq(0);
+		var last = $(".woshikuan:visible").eq(1);
+		var lastest = $(".woshikuan").last();
+		if(last.next().length > 0){
+			first.insertAfter(lastest);
+			first.css("display","none");
+			last.css("display","block");
+			last.css("margin-right",90);
+			last.next().css("display","block");
+			last.next().css("margin-right",0);
+		}else {
+			var insert = $(".woshikuan").first();
+			insert.insertAfter(last);
+			last.css("display","block");
+			last.css("margin-right",90);
+			insert.css("display","block");
+			insert.css("margin-right",0);
+		}
+	}
+	
+	function slidRight1(){
+		var first = $(".woshikuan:visible").eq(0);
+		var last = $(".woshikuan:visible").eq(1);
+		last.css("display","none");
+		var firstest = $(".woshikuan").first();
+		var lastest = $(".woshikuan").last();
+		lastest.insertBefore(firstest);
+		
+		first.css("display","block");
+		first.css("margin-right",0);
+		first.prev().css("display","block");
+		first.prev().css("margin-right",90);
+	}
+	
+	function slidLeft2(){
+		var first = $(".sanjiaoqin:visible").eq(0);
+		var last = $(".sanjiaoqin:visible").eq(1);
+		var lastest = $(".sanjiaoqin").last();
+		if(last.next().length > 0){
+			first.insertAfter(lastest);
+			first.css("display","none");
+			last.css("display","block");
+			last.css("margin-right",90);
+			last.next().css("display","block");
+			last.next().css("margin-right",0);
+		}else {
+			var insert = $(".sanjiaoqin").first();
+			insert.insertAfter(last);
+			last.css("display","block");
+			last.css("margin-right",90);
+			insert.css("display","block");
+			insert.css("margin-right",0);
+		}
+	}
+	
+	function slidRight2(){
+		var first = $(".sanjiaoqin:visible").eq(0);
+		var last = $(".sanjiaoqin:visible").eq(1);
+		last.css("display","none");
+		var firstest = $(".sanjiaoqin").first();
+		var lastest = $(".sanjiaoqin").last();
+		lastest.insertBefore(firstest);
+		
+		first.css("display","block");
+		first.css("margin-right",0);
+		first.prev().css("display","block");
+		first.prev().css("margin-right",90);
+	}
+</script>
+<script type="text/javascript">
+	$(function(){
+		$(".flex-prev").eq(0).children().css("display","none");
+		$(".flex-next").eq(0).children().css("display","none");
+		$(".flex-prev").eq(1).children().css("display","none");
+		$(".flex-next").eq(1).children().css("display","none");
+		$(".store_list").eq(0).hover(
+			function(){
+				$(".flex-prev").eq(0).children().css("display","block");
+				$(".flex-next").eq(0).children().css("display","block");
+			},
+			function(){
+				$(".flex-prev").eq(0).children().css("display","none");
+				$(".flex-next").eq(0).children().css("display","none");
+			}
+		)
+		$(".store_list").eq(1).hover(
+			function(){
+				$(".flex-prev").eq(1).children().css("display","block");
+				$(".flex-next").eq(1).children().css("display","block");
+			},
+			function(){
+				$(".flex-prev").eq(1).children().css("display","none");
+				$(".flex-next").eq(1).children().css("display","none");
+			}
+		)
+		
+	})
+	
+</script>
+<script type="text/javascript">
+	$(function(){
+ 
+		 
+		  $(".mai").mouseover(function(){
+			    $(this).css("color","#FF0000");
+			  });
+		  
+			   $(".mai").mouseout(function(){
+			      $(this).css("color","#ff6801");
+		    }); 
+	})
+
+
+</script>
+</head>
+
+<body>
+	<div th:include="common/head">
+	</div>
+	 
+	<div class="store_banner">
+		<a th:href="@{/product/14F70050-71F1-4EA2-BCC3-AF4CBB3C74A7}">
+			<img src="/images/store.jpg"/>
+		</a>
+	</div>
+	
+	<div class=" store_wrap">
+		<div class=" store_con">
+			<div class="store_title" style=" margin-top:30px;">智能钢琴-卧式款</div>
+			<div class="store_list">
+				<div class="store_pre">
+					<a class="flex-prev" href="javascript:;" onclick="slidLeft1();">
+						<img src="/images/store_pre.jpg" />
+					</a>
+				</div>
+				<ul>
+				   <li th:each="product : ${list}" style="display:block" class="woshikuan">
+				       <a th:href="'/product/' + ${product.serial}">
+					       <img th:src="${product.imgurl}" class="img"/>
+					       <p class="f3">克洛斯威智能钢琴
+						       <span class="f1" th:text="'￥' + ${#numbers.formatDecimal(product.price,3,2)}"></span>
+						       <span class="f2">拥有大脑的钢琴 匠心独具 零基础 轻松弹奏</span>
+					       </p>   
+					       <div  class="f4"><span class="mai">立即购买</span></div>  
+				       </a>
+				  </li>
+				</ul>
+				<div class="store_next">
+			    	<a class="flex-next" href="javascript:;" onclick="slidRight1();">
+			    		<img src="/images/store_next.jpg" />
+			    	</a>
+			    </div>
+			</div>
+		
+			<div class="store_title">智能三角钢琴</div>
+			<div class="store_list">
+				<div class="store_pre">
+					<a class="flex-prev" href="javascript:;" onclick="slidLeft2();">
+						<img src="/images/store_pre.jpg" />
+					</a>
+				</div>
+				<ul>
+					<li th:each="product : ${listTwo}" class="sanjiaoqin">
+				      <a th:href="'/product/' + ${product.serial}">
+					      <img th:src="${product.imgurl}" class="img"/>
+					      <p class="f3">克洛斯威智能钢琴  
+					         <span class="f1" th:text="'￥' + ${#numbers.formatDecimal(product.price,3,2)}"></span>
+					         <span class="f2">拥有大脑的钢琴 匠心独具 零基础 轻松弹奏</span>
+					      </p>
+					      <div class="f4"><span class="mai"> 立即购买</span> </div>  
+				      </a>
+				    </li>  
+				</ul>
+				<div class="store_next">
+					<a class="flex-next" href="javascript:;" onclick="slidRight2();">
+						<img src="/images/store_next.jpg" />
+					</a>
+				</div>
+			</div>
+		 </div>
+	</div> 
+	<style>
+		/* 焦点图 */
+		img{border:0}
+		#slideshow{position: relative;height: 300px;width: 930px;margin: 0 auto;}
+		#slideshow a{float: left;display: inline;}
+		#slideshow .img{position: absolute;width: 930px;height: 300px;overflow: hidden}
+		#slideshow .img span{position: absolute;width: 19999px;display: block}
+		#slideshow .btns{z-index: 10;position: absolute;width: 930px}
+		#slideshow .btns b{position: absolute;width: 100px;display: block;height: 14px;overflow: hidden;top: 275px;left: 50%}
+		#slideshow .btns b i{width: 10px;background: #414140;float: left;height: 10px;font-size: 0px;overflow: hidden;cursor: pointer;margin-right: 6px;border: #414140 2px solid;-webkit-border-radius: 7px;-moz-border-radius: 7px;border-radius: 7px}
+		#slideshow .btns b i: hover{background: #a7a7a6}
+		#slideshow .btns b i.on{background: #3cd2f1;cursor: default}
+		#slideshow .btns b i.on: hover{background: #3cd2f1;cursor: default}
+		#slideshow .btns s{position: absolute;width: 60px;display: none;height: 80px;overflow: hidden;top: 115px;cursor: pointer}
+		#slideshow .btns s i{position: absolute;width: 60px;background: url(images/btn_slideshow.png);height: 160px;_filter: progid: dximagetransform.microsoft.alphaimageloader(enabled=true, sizingmethod=scale, src="images/btn_slideshow.png");_background: none;}
+		#slideshow .btns s.prev{left: 0px}
+		#slideshow .btns s.prev i{top: -80px}
+		#slideshow .btns s.next{right: 0px}
+		.slideshow-hover#slideshow .btns s{display: block}
+		.paging{opacity: 0.5;filter: alpha(opacity=50);-moz-opacity: 0.5;-khtml-opacity: 0.5;height: 300px;position: absolute;background: #000;overflow: hidden}
+		.wtit .info,.wtit .tit{float: left;}
+		.wtit .info{padding: 35px 0 0 20px;color: #989898;}
+		.wtit .info span{margin: 0 8px;}
+	</style>
+	
+	<div th:include="common/foot">
+	</div>
+</body>
+</html>
+ 

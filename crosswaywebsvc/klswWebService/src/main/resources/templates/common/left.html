@@ -1,0 +1,38 @@
+<script type="text/javascript">
+    $(function () {
+        $(".subNav").click(function () {
+            $(this).toggleClass("currentDd").siblings(".subNav").removeClass("currentDd")
+            $(this).toggleClass("currentDt").siblings(".subNav").removeClass("currentDt")
+            // 修改数字控制速度， slideUp(500)控制卷起速度
+            $(this).next(".navContent").slideToggle(500).siblings(".navContent").slideUp(500);
+        })
+    })
+</script>
+<div class="left">
+    <!-- 代码 开始 -->
+    <div class="subNavBox" style="height: 894px;">
+        <div class="subNav" style="background-image: none">首页</div> 
+        <div class="subNav">用户列表</div>
+        <ul class="navContent">
+            <li><a href="/manage/orgList">机构列表</a></li>
+            <li><a href="/manage/teaList" class="orange">教师列表</a></li>
+            <li><a href="/manage/stuList" class="orange">学生列表</a></li>
+        </ul>
+        <div class="subNav">消息管理</div>
+         <ul class="navContent">
+            <li><a href="/manage/messageList" class="oranger">消息列表</a></li>
+            <li><a href="/manage/toAddMessage" class="oranger">添加消息</a></li>
+        </ul>
+         <div class="subNav">反馈管理</div>
+         <ul class="navContent">
+            <li><a href="/manage/suggesstionList" class="oranger">反馈列表</a></li> 
+        </ul>
+        <div class="subNav">认证管理</div>
+         <ul class="navContent">
+            <li><a href="/manage/authenticationList" class="oranger">认证列表</a></li> 
+        </ul>
+    </div>
+    <!-- 代码 结束 -->
+</div>
+
+ 

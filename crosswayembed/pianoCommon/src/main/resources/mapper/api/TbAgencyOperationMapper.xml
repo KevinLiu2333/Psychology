@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.pianoCommon.api.mapper.TbAgencyOperationMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.pianoCommon.api.model.TbAgencyOperation" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="INTEGER" />
+    <result column="agencyID" property="agencyid" jdbcType="INTEGER" />
+    <result column="operationtype" property="operationtype" jdbcType="VARCHAR" />
+    <result column="operationtime" property="operationtime" jdbcType="TIMESTAMP" />
+    <result column="SID" property="sid" jdbcType="VARCHAR" />
+    <result column="SN" property="sn" jdbcType="VARCHAR" />
+    <result column="PID" property="pid" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="userid" property="userid" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>

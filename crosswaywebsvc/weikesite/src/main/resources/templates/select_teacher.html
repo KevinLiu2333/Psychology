@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>威客</title>
+<link href="/css/index.css" rel="stylesheet">
+<link href="/css/add.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#back").click(function() {
+			/* window.location.href="/sign/toSignList"; */
+			window.history.back();
+		});
+
+		/****** 去除教师按月价格小数点及后面部分  ******/
+		var spans = $(".tc-f3");
+		for (var i = 0; i < spans.length; i++) {
+			var text = spans.eq(i).text();
+			spans.eq(i).text(text.substr(0, text.lastIndexOf(".")));
+		}
+		
+		/************ 根据授课价格设置排序  *************/
+		var orderBy = $("#orderBy_hidden").val();
+		if(orderBy == "high") {
+			$("#teachPrice").addClass("price_increase");
+		}
+		if(orderBy == "low") {
+			$("#teachPrice").addClass("price_decrease");
+		}
+		$("#teachPrice").click(function(){
+			if($("#teachPrice").hasClass("price_increase")) {
+				$("#teachPrice").removeClass("price_increase");
+				$("#teachPrice").addClass("price_decrease");
+				window.location.href = "/student/toSelectNotSignedTeacher?orderBy=low";
+			} else if($("#teachPrice").hasClass("price_decrease")) {
+				$("#teachPrice").removeClass("price_decrease");
+				$("#teachPrice").addClass("price_increase");
+				window.location.href = "/student/toSelectNotSignedTeacher?orderBy=high";
+			} else {
+				$("#teachPrice").addClass("price_increase");
+				window.location.href = "/student/toSelectNotSignedTeacher?orderBy=high";
+			}
+		});
+		
+
+		/** 控制筛选条件显示和隐藏  **/
+		$("#filter").addClass("filt_show");
+		$(".filt-menu").hide();
+		$("#filter").click(function() {
+			if ($("#filter").hasClass("filt_show")) {
+				$("#filter").removeClass("filt_show");
+				$("#filter").addClass("filt_fold");
+				$(".filt-menu").show();
+			} else {
+				$("#filter").removeClass("filt_fold");
+				$("#filter").addClass("filt_show");
+				$(".filt-menu").hide();
+			}
+		});
+		
+		/************ 控制授课级别选择  *************/
+		$(".teachGrade").click(function(){
+			$(".teachGrade").removeClass("selected");
+			$(this).addClass("selected");
+			$("#teachGrade").val($(this).text());
+		});
+		
+		/************ 控制毕业院校选择  *************/
+		$(".university").click(function(){
+			$(".university").removeClass("selected");
+			$(this).addClass("selected");
+			$("#university").val($(this).text());
+		});
+		
+		/***  控制筛选条件对应表单发送  ***/
+		$(".sure_icon").click(function(){
+			$("#submitForm").submit();
+		});
+	})
+</script>
+</head>
+
+<body>
+	<div class="public_top">
+		<div class="public_back">
+			<a href="javascript:void(0);"><img id="back"
+				src="/images/back_c.png" /></a>
+		</div>
+		<div class="select_name">选老师</div>
+		<div class="select-icon"></div>
+	</div>
+	<div class="class-nav">
+		<input type="hidden" id="orderBy_hidden" th:value="${orderBy}"/>
+		<ul>
+			<li><a href="/student/toSelectNotSignedTeacher" class="idx-f1">推荐老师</a></li>
+			<li style="width: 30%;"><a id="teachPrice" href="javascript:void(0);" class="filt_price">授课价格</a></li>
+			<li style="width: 17%;"><a
+				href="/student/toSelectNotSignedTeacher">评价</a></li>
+			<li><a id="filter" href="javascript:void(0);">筛选</a></li>
+		</ul>
+	</div>
+	<form id="submitForm" action="/student/toSelectNotSignedTeacher" method="post">
+		<div class="filt-menu">
+			<div class="filt-shou">
+				<input type="hidden" id="teachGrade" name="teachGrade" value=""/>
+				<label>授课级别</label>
+				<ul class="color-list">
+					<a href="javascript:void(0);"><li class="selected teachGrade">0-5</li></a>
+					<a href="javascript:void(0);"><li class="teachGrade">6-10</li></a>
+					<a href="javascript:void(0);"><li class="teachGrade">0-10</li></a>
+				</ul>
+			</div>
+
+			<div class="filt-shou">
+				<label>价格区间</label>
+				<ul class="color-list">
+					<li><input name="minPrice" type="text"></li>
+					<li style="border: 0px; padding: 0px;">—</li>
+					<li><input name="maxPrice" type="text"></li>
+				</ul>
+			</div>
+
+
+			<div class="filt-shou">
+				<input type="hidden" id="university" name="university" value=""/>
+				<label>毕业院校</label>
+				<ul class="color-list">
+					<a href="javascript:void(0);"><li class="selected  university">中央音乐学院</li></a>
+					<a href="javascript:void(0);"><li class="university">上海音乐学院</li></a>
+					<a href="javascript:void(0);"><li class="university">合肥音乐学院</li></a>
+					<a href="javascript:void(0);"><li class="university">南京音乐学院</li></a>
+					<a href="javascript:void(0);"><li class="university">中央音乐学院</li></a>
+					<a href="javascript:void(0);"><li class="university">合肥音乐学院</li></a>
+				</ul>
+			</div>
+
+			<div class="filt-shou">
+				<label>所在地区</label>
+				<ul class="color-list">
+					<li style="border: 0px; padding: 0px;">省份 <select name="region1">
+							<option>安徽</option>
+							<option>河北</option>
+							<option>河南</option>
+							<option>湖北</option>
+					</select>
+					</li>
+					<li style="border: 0px; padding: 0px;">城市 <select name="region2">
+							<option>合肥</option>
+							<option>芜湖</option>
+							<option>亳州</option>
+							<option>阜阳</option>
+					</select>
+					</li>
+				</ul>
+			</div>
+			<div class="sure_icon">确定</div>
+		</div>
+	</form>
+
+	<div class="teacher-menu">
+		<ul>
+			<li th:each="teacher:${notSignedTeacher.list}"
+				th:if="${notSignedTeacher}">
+				<div style="width: auto; float: left; margin-left: 8px;">
+					<img src="/images/setepic.png" th:if="${teacher.ffavicon} == null"><img
+						th:src="'http://wk-static.klsw.com'+${teacher.ffavicon}"
+						th:if="${teacher.ffavicon} != null">
+				</div>
+				<div style="width: auto; float: left; margin-left: 8px;">
+					<span style="display: block; font-size: 14px; line-height: 18px;">老师姓名：<span
+						class="tc-f3" th:text="${teacher.realname}">钱星</span></span> <span
+						style="display: block;">毕业院校：<span class="tc-f3"
+						th:text="${teacher.graduatedUniversity}">中央音乐学院</span></span> <span
+						style="display: block;">授课级别：<span class="tc-f3"
+						th:text="${teacher.teachGrade}">0-10</span>级
+					</span> <span>价格：<span class="tc-f3"
+						th:text="${teacher.pricewithmonth}">1000</span>威豆/月
+					</span>
+				</div>
+				<div class="visa_icon">
+					<a th:href="'/sign/toSign?teacherId='+${teacher.id}">我要签约</a>
+				</div>
+			</li>
+			<!--      <li>
+      <div style="width:auto; float:left; margin-left:8px;"><img src="/images/setepic.png"></div>
+         <div style="width:auto; float:left; margin-left:8px;">
+             <span style="display:block; font-size:14px; line-height:18px;">老师姓名：<span class="tc-f3">钱星</span></span>
+             <span style="display:block;">毕业院校：<span class="tc-f3">中央音乐学院</span></span>
+             <span style="display:block;">授课级别：<span class="tc-f3">0-10</span>级</span>
+             <span>价格：<span class="tc-f3">1000</span>威豆/月</span>
+         </div>
+      <div class="visa_icon"><a href="#">我要签约</a></div>        
+     </li>
+     <li>
+      <div style="width:auto; float:left; margin-left:8px;"><img src="/images/setepic.png"></div>
+         <div style="width:auto; float:left; margin-left:8px;">
+             <span style="display:block; font-size:14px; line-height:18px;">老师姓名：<span class="tc-f3">钱星</span></span>
+             <span style="display:block;">毕业院校：<span class="tc-f3">中央音乐学院</span></span>
+             <span style="display:block;">授课级别：<span class="tc-f3">0-10</span>级</span>
+             <span>价格：<span class="tc-f3">1000</span>威豆/月</span>
+         </div>
+      <div class="visa_icon"><a href="#">我要签约</a></div>        
+     </li> -->
+		</ul>
+	</div>
+</body>
+</html>

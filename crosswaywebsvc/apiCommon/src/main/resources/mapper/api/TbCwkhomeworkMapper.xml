@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper.TbCwkhomeworkMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model.TbCwkhomework">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="contents" jdbcType="VARCHAR" property="contents" />
+    <result column="img" jdbcType="VARCHAR" property="img" />
+    <result column="TeacherID" jdbcType="INTEGER" property="teacherid" />
+    <result column="StudentID" jdbcType="INTEGER" property="studentid" />
+    <result column="HomeworkID" jdbcType="INTEGER" property="homeworkid" />
+    <result column="SignID" jdbcType="INTEGER" property="signid" />
+    <result column="addtime" jdbcType="TIMESTAMP" property="addtime" />
+    <result column="TeacherTime" jdbcType="TIMESTAMP" property="teachertime" />
+    <result column="GradeIMGPath" jdbcType="VARCHAR" property="gradeimgpath" />
+    <result column="TeacherName" jdbcType="VARCHAR" property="teachername" />
+    <result column="GradeLevImg" jdbcType="VARCHAR" property="gradelevimg" />
+    <result column="video" jdbcType="VARCHAR" property="video" />
+    <result column="MIDIMGPath" jdbcType="VARCHAR" property="midimgpath" />
+    <result column="MP3Path" jdbcType="VARCHAR" property="mp3path" />
+    <result column="MDIPortfolio" jdbcType="VARCHAR" property="mdiportfolio" />
+    <result column="gradeLevel" jdbcType="INTEGER" property="gradelevel" />
+    <result column="audio" jdbcType="VARCHAR" property="audio" />
+    <result column="rhythm" jdbcType="INTEGER" property="rhythm" />
+    <result column="accuracyrate" jdbcType="INTEGER" property="accuracyrate" />
+    <result column="musicality" jdbcType="INTEGER" property="musicality" />
+    <result column="teacherScore" jdbcType="REAL" property="teacherscore" />
+    <result column="TeacherComment" jdbcType="LONGVARCHAR" property="teachercomment" />
+    <result column="audiolist" jdbcType="LONGVARCHAR" property="audiolist" />
+  </resultMap>
+    <select id="todayUpload" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  	select * from tb_CWKHomework where to_days(addtime)=to_days(now())
+  	and StudentID = #{studentId}
+  </select>
+
+    <select id="studentHomework" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  	select *
+  	from tb_CWKHomework
+  	where StudentID = #{studentId} 
+  </select>
+    <select id="teacherHomework" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  	select *
+  	from tb_CWKHomework 
+  	where TeacherID = #{teacherId}  
+  </select>
+    <select id="uncommentHomework" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  	select *
+  	from tb_CWKHomework 
+  	where TeacherID = #{teacherId}
+  	and TeacherTime is null
+  </select>
+    <select id="commentHomework" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  	select *
+  	from tb_CWKHomework 
+  	where TeacherID = #{teacherId}
+  	and TeacherTime is not null  
+  </select>
+    <select id="homeworkDetail" parameterType="java.lang.Integer" resultType="com.klsw.apiCommon.api.model.TbCwkhomework">
+  	select a.*,b.nickname as studentnickname
+  	from tb_CWKHomework a ,tb_CWK b
+  	where a.HomeworkID = #{homeworkId}
+  	and a.studentID = b.id;
+  </select>
+    <select id="homeworkInfolist" parameterType="java.lang.Integer" resultType="com.klsw.apiCommon.api.model.TbCwkhomework">
+      SELECT * FROM tb_CWKHomework
+      WHERE HomeworkID = #{homeworkId}
+      and teachertime IS NOT NULL
+    </select>
+    <select id="selectGradeCount" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+      SELECT COUNT(*) FROM tb_CWKHomework
+      WHERE HomeworkID = #{0}
+      AND TeacherTime IS NOT NULL
+    </select>
+
+    <select id="studentHomeworkList" parameterType="java.lang.Integer" resultType="com.klsw.apiCommon.api.model.TbCwkhomework">
+    	SELECT * FROM tb_CWKHomework 
+    	WHERE (#{2}=0 AND StudentID=#{0} AND TeacherID=#{1}) 
+    	OR (#{2}=1 AND StudentID=#{0} AND TeacherID=#{1} AND ISNULL(teachertime))
+    	OR (#{2}=2 AND StudentID=#{0} AND TeacherID=#{1} AND teachertime IS NOT NULL)
+    	ORDER BY TeacherTime DESC , addtime DESC
+    </select>
+</mapper>

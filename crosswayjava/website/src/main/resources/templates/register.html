@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>注册 克洛斯威智能钢琴</title>
+    <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/js/bdstat.js"></script>
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/login.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<div th:include="common/head"></div>
+<div id="login_bg">
+    <div class="content">
+        <div class="register-box">
+            <div class="register-title">注册</div>
+            <div class="register-pic">
+                <img src="/images/login_logo.png" width="122" height="75"/>
+            </div>
+            <div class="no-account">
+                我有账号 现在就去<a href="/login">登录</a>
+            </div>
+            <form action="/doregister" method="post">
+                <div class="reg_form reg_form_step1">
+                    <dl style="display: block;">
+                        <dt class="label">手机号</dt>
+                        <dd>
+                            <input type="text" pattern="^1\d{10}$" class="r_input input_l" required
+                                   name="phone" id="phone" maxlength="11" placeholder="可用作登录名"
+                                   onkeyup="this.value=this.value.replace(/\D/g,'')" th:text=${phone}></input>
+                            <label style="font-size: 15px;color:red;" class="cw" th:text="${phoneMsg}"></label>
+                        </dd>
+                    </dl>
+                    <dl style="display: block;">
+                        <dt class="label">昵称</dt>
+                        <dd>
+                            <input type="text" class="r_input input_l" required
+                                   name="userName" placeholder="昵称" th:text=${userName}></input>
+                            <label style="font-size: 15px;color:red;" class="cw" th:text="${userNameMsg}"></label>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="label">登录密码</dt>
+                        <dd>
+                            <input type="password" class="r_input input_l"
+                                   autocomplete="off" id="userPassword1" required maxlength="20" data-min="8"
+                                   placeholder="8-20位字母、数字和符号" name="password1"/>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="label">确认密码</dt>
+                        <dd>
+                            <input type="password" class="r_input input_l"
+                                   autocomplete="off" id="rePassword1" required maxlength="20" data-min="8"
+                                   name="password2" placeholder="再次输入密码"/>
+                            <label style="font-size: 15px;color:red;" class="cw" th:text="${passwordMsg}"></label>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="label">图片验证码</dt>
+                        <dd>
+                            <input class="short_input input_r" type="text" id="captcha" required maxlength="4"
+                                   data-min="4"
+                                   name="captcha" id="imgCaptcha"/> <img
+                                onclick="this.src='/code.jpg?' + new Date().getTime()"
+                                src="/code.jpg" width="93" height="39"
+                                style="border: 1px solid #d9d9d9;"/>
+                        </dd>
+                    </dl>
+
+
+                    <dl>
+                        <dt class="label">手机验证码</dt>
+                        <dd>
+                            <input class="short_input input_r" type="text" id="phoneCaptcha" required maxlength="6"
+                                   data-min="4" name="phoneCaptcha" th:text=${phoneCaptcha}> </input>
+                            <input type="button" id="btnGetYzm" value="发送验证码"
+                                   tyle="height: 28px; border: 1px solid rgb(119, 119, 119);  "/>
+                            <label style="font-size: 15px;color:red;" class="cw" th:text="${phoneCaptchaMsg}"></label>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt class="label">&nbsp;</dt>
+                        <dd>
+                            <label class="base_label"> <input type="checkbox" required
+                                                              value="1" id="tosCheckBox" checked="checked"/>我已阅读并同意<span
+                                    onclick="showTos()" id="regprotocolShow">&lt;&lt;克洛斯威服务协议&gt;&gt;</span></label>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="label">&nbsp;</dt>
+                        <dd>
+                            <div class="submit">
+                                <button type="submit" tabindex="5" id="J_SubmitStatic">同意协议并注册</button>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </form>
+        </div>
+        <div class="foot_bei">
+            copyright© klsw.com All rights reserved.
+            ICP证：皖ICP备15021161号-1<br/> 安徽克洛斯威智能乐器科技有限公司
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/js/jquery-html5Validate.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("form").html5Validate(function () {
+            this.submit();
+        }, {
+            validate: function () {
+                // 下面这些就是额外的一些特殊验证
+                if ($("#rePassword1").val() !== $("#userPassword1").val()) {
+                    $("#rePassword1").testRemind("前后密码不一致");
+                    return false;
+                }
+                return true;
+            }
+        });
+
+
+        function countDown($el) {
+            var i = 120;
+            $el.prop('disabled', true).val('重新发送(' + i + '秒)');
+            var interval = setInterval(function () {
+                i--;
+                $el.val('重新发送(' + i + '秒)');
+                if (i <= 0) {
+                    clearInterval(interval);
+                    interval = undefined;
+                    $('#btnGetYzm').prop('disabled', false).val('发送验证码');
+                }
+            }, 1000);
+        }
+
+        function checkPhone(phone) {
+            if (!(/^1[3|4|5|7|8]\d{9}$/.test(phone))) {
+                return false;
+            }
+            return true;
+        }
+
+        $('#btnGetYzm').click(function () {
+            var imgCaptcha = $('#imgCaptcha').val();
+            var phone = $('#phone').val();
+            var reg = /^\s*$/g;
+            if (reg.test(phone)) {
+                alert('请先填写手机号码');
+                return false;
+            }
+            if (!checkPhone(phone)) {
+                alert("手机号码有误");
+                return false;
+            }
+            if (reg.test(imgCaptcha)) {
+                alert('请先填写图片验证码');
+                return false;
+            }
+
+            var obj = $(this);
+
+            $.get("/mobile/captcha?imageCaptcha=" + imgCaptcha + "&mobile=" + phone, function (data) {
+                switch (data) {
+                    case "ok":
+                        countDown(obj);
+                        break;
+                    default:
+                        alert(data);
+                }
+            });
+
+
+        });
+    });
+</script>
+<!-- 
+<script type="text/javascript">
+//根据当前页面所使用的传输协议来定义变量_bdhmProtocol值，输出一个js调用代码，结果为
+
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fdb7a75599ee5b52297633ce950a71943' type='text/javascript'%3E%3C/script%3E"));
+</script>
+ -->
+</body>
+</html>

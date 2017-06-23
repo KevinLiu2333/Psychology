@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="application/javascript" src="/js/clickuser.js"></script>
+<style type="text/css">
+#bigTitle img {
+	height: 61.391px;
+}
+</style>
+<script th:inline="javascript">
+	var index = [[${index}]];
+	$(function(){
+		var imgs = $(".newidx-nav img");
+		for(var i=0;i<imgs.length;i++) {
+			var oldSrc = imgs.eq(i).attr("src");
+			var srcArray = oldSrc.split(".");
+			if(i == index) {
+				imgs.eq(i).attr("src",srcArray[0].substring(0,srcArray[0].length-1)+"a."+srcArray[1]);
+			} else {
+				imgs.eq(i).attr("src",srcArray[0].substring(0,srcArray[0].length-1)+"b."+srcArray[1]);
+			}
+		}
+		
+	})
+</script>
+</head>
+<body>
+	<div class="newidx-nav">
+		<ul>
+			<li th:if="${type} == 'stu'"><a href="/homework/student?pageNum=1&status=10"
+				class="idx-f1"><img src="/images/homeworka.png"><br>
+					<span>作业</span></a></li>
+			<li th:if="${type} == 'tea'"><a href="/homework/teacher?pageNum=1&status=10"
+				class="idx-f1"><img src="/images/homeworka.png"><br>
+					<span>作业</span></a></li>
+			<li><a href="/friend/index"><img src="/images/friendsb.png"><br>
+					<span>朋友圈</span></a></li>
+			<li><a href="/shop/index"><img src="/images/weishopb.png"><br>
+					<span>威豆商城</span></a></li>
+			<li><a href="/my/index"><img src="/images/questionb.png"><br>
+					<span>我的</span></a></li>
+		</ul>
+	</div>
+</body>
+</html>

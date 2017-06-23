@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>用戶真实姓名设置</title>
+<link href="/css/index.css" rel="stylesheet">
+<link href="/css/add.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#back").click(function() {
+			window.history.back();
+		})
+	})
+</script>
+	<script type="text/javascript">
+	$(function(){
+		
+		$("input[type='radio']").click(function(){
+		 
+			var ro=$("[name='suggestionType']:checked").val();
+			if(ro=="其他问题"){
+				$("#uploadImage").css("display","none");
+			}else{
+				
+				$("#uploadImage").css("display","block");
+			}
+			
+		})
+	})
+	
+	</script>
+ <script type="text/javascript">
+$(function(){
+	$("#submit").click(function(){
+		  
+  
+    var feedType=$("input[name='suggestionType']:checked").val();  
+	var feedType2=$("input[name='suggestionType']:checked").next().text()
+ 
+	var suggestion=$("#suggestion").val();
+	var phone=$("#phone").val();
+	var addtime=new Date(); 
+	var replytime=new Date();
+	
+	var reg = /^\s*$/g;
+	 
+	if(reg.test(suggestion)){
+		alert("请填写反馈内容");
+		return;
+	}
+	if(reg.test(phone)){
+		alert("请填写您的联系方式");
+		return;
+	}
+/*  
+	 $.ajax({ 
+		type:'POST',
+		url:'/feedBack',
+		data:{
+			    type:type,
+			    type:type2,
+			    suggestion:suggestion,
+			    phone:phone,
+			    addtime:addtime,
+			    replytime:replytime
+				 
+		} */
+		 
+		}); 
+ 
+})
+</script>
+</head>
+
+<body>
+	<div class="public_top">
+		<div class="public_back">
+			<img id="back" src="/images/back_c.png">
+		</div>
+		<div class="select_name">建议反馈</div>
+
+		<div class="select-icon"></div>
+	</div>
+	<form action="/feedBack" method="post">
+	<div>
+		<span>建议类型 </span> 
+		<input class="r_input input_l" style="line-height: 35px;   width: 20px; margin-right: 0px; "
+			type="radio" name="suggestionType" value="威客软件问题" checked="checked" />
+			<label class="r_input input_l" style="line-height: 41px; vertical-align: middle; width: 30px; margin-left: 0px; "
+			for="PropertyA">威客软件问题</label> 
+			<input class="r_input input_l"
+			style="line-height: 35px; vertical-align: middle; width: 20px; margin-right: 0px; background-image: none;"
+			type="radio" name="suggestionType" value="其他问题" />
+			<label
+			class="r_input input_l"
+			style="line-height: 41px; vertical-align: middle; width: 30px; margin-left: 0px; background-image: none;"
+			for="PropertyB">其他问题</label>
+
+	</div>
+	<div class="pe_setting">
+		<span style="margin-left: 20px;">建议内容 
+		<input name="suggestion" id="suggestion" type="text" style="padding-left: 5px; font-size: 12px; line-height: 25px;">
+		</span>
+	</div>
+
+	<div class="ab-box" id="uploadImage"
+		style="padding-bottom: 0px; margin-left: 15px; margin-top: 20px; height: 73px; position: relative;">
+
+		<span class="ctrl-file"> <input type="file" class="filehide"
+			name="uploadImage" onChange="filechange(this)"> <a
+			href="javascript:;" id="sub" style="display: block;">点击上传</a>
+		</span>
+
+	</div>
+	<div class="pe_setting">
+		<span style="margin-left: 20px;"> 联系方式<input name="phone" id="phone"
+			type="text"
+			style="padding-left: 5px; font-size: 12px; line-height: 25px;">
+		</span>
+	</div>
+
+	<div class="dele_bao">
+		<input name="" type="submit" id="submit" value="提交反馈" class="course_button" />
+	</div>
+	</form>
+</body>
+</html>

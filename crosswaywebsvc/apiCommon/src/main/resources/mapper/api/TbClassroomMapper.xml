@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper.TbClassroomMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model.TbClassroom" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" property="id" jdbcType="INTEGER" />
+    <result column="Title" property="title" jdbcType="VARCHAR" />
+    <result column="ClassType" property="classtype" jdbcType="INTEGER" />
+    <result column="Imgpath" property="imgpath" jdbcType="VARCHAR" />
+    <result column="Serices" property="serices" jdbcType="VARCHAR" />
+    <result column="Keynote" property="keynote" jdbcType="VARCHAR" />
+    <result column="VideoPath" property="videopath" jdbcType="VARCHAR" />
+    <result column="sort" property="sort" jdbcType="INTEGER" />
+    <result column="auditing" property="auditing" jdbcType="TINYINT" />
+    <result column="addDatetime" property="adddatetime" jdbcType="TIMESTAMP" />
+    <result column="cwkuserid" property="cwkuserid" jdbcType="VARCHAR" />
+    <result column="Characteristic" property="characteristic" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

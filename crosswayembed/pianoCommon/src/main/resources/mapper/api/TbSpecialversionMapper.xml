@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.pianoCommon.api.mapper.TbSpecialversionMapper">
+    <resultMap id="BaseResultMap" type="com.klsw.pianoCommon.api.model.TbSpecialversion">
+        <!--
+          WARNING - @mbggenerated
+        -->
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="versionno" property="versionno" jdbcType="VARCHAR"/>
+        <result column="eventname" property="eventname" jdbcType="VARCHAR"/>
+    </resultMap>
+</mapper>

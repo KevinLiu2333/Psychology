@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.common.mall.mapper.BgAuthorityMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.common.mall.model.BgAuthority" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="AuthorityID" property="authorityid" jdbcType="VARCHAR" />
+    <result column="AuthorityName" property="authorityname" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

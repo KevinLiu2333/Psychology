@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>威客</title>
+    <link href="/css/index.css" rel="stylesheet">
+    <link href="/css/add.css" rel="stylesheet">
+    <script src="/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#back").click(function () {
+                window.location.href="/my/index";
+            });
+
+            $("#sign_in").click(function () {
+                var signStatus = $(this).children().eq(0).text();
+                if (signStatus == "签到") {
+                    window.location.href = "/my/signIn";
+                }
+            });
+        })
+    </script>
+</head>
+
+<body style="background-color:#eee;">
+<div class="public_top">
+    <div class="public_back"><a href="#" id="back"><img src="/images/back_c.png"></a></div>
+    <div class="select_name">威豆账户</div>
+    <div class="select-icon"></div>
+</div>
+<div class=" weidou_yu">
+    威豆余额<br>
+    <span style=" font-size:32px; " th:text="${tbReceiveBean.remainBean}">100</span>(威豆)
+    <a href="javascript:void(0);" id="sign_in"><span class=" sign_icon" th:text="${signStatus}">签到</span></a>
+    <span style=" font-size:12px;"
+          th:text="'已连续签到 '+${tbReceiveBean.continuous}+' 天,明日签到可以获得 '+${tbReceiveBean.tomorrowBean}+' 威豆！'"
+          th:if="${tbReceiveBean}">已连续签到1天,明日签到可以获得20威豆！</span>
+</div>
+<div class="setting">
+    <a href="/order/toRecharge">
+        <span style=" margin-left:20px;">威豆充值</span><span style="display:inline-block; float:right; margin-right:20px;"><img
+            src="/images/go_a.png" width="14" height="17" style=" margin-top:-4px;"></span>
+    </a>
+</div>
+<div class="notify_blank"></div>
+<div class="setting">
+    <a href="/my/balance">
+        <span style=" margin-left:20px;">威豆收支明细</span><span
+            style="display:inline-block; float:right; margin-right:20px;"><img src="/images/go_a.png" width="14"
+                                                                               height="17"
+                                                                               style=" margin-top:-4px;"></span>
+    </a>
+</div>
+
+<div class="weidou_profile">
+    <span style=" margin:0px 20px; font-size:14px; display:block; line-height:30px;">威豆说明</span>
+    <span style=" margin:0px 20px; display:block;">
+        威豆可用于支付老师签约费用<br>
+        您可以通过充值与自主领取方式获得威豆<br>
+        1元=100威豆
+        </span>
+</div>
+
+</body>
+</html>

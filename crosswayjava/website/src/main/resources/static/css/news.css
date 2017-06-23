@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+.news_wrap { width:1200px; margin:0 auto;padding-top:80px; }
+.metgeda{width:280px; float:right;}
+.anniuge{ width:40px; height:24px;}
+.cavqian{width:120px; float:left; margin-left:60px; border:1px solid #d9d9d9; padding:5px;}
+.cavqian img{width:120px; height:100px;}
+.neli{width:800px; float:left; border-right:1px solid #d9d9d9;  margin-bottom:20px; color:#666; min-height:400px; padding-right:20px; padding-bottom:20px;}
+.neli ul li{width:100%; float:left; border-bottom:1px dashed #d9d9d9;}
+.netie{width:460px; float:left;  line-height:50px; background:url(../images/ikons.png) left 17px no-repeat; padding-left:20px;}
+.netie a{color:#666;  font-size:15px; }
+.netie a:hover{ color:#EB5405;}
+.nedate{width:100px; float:right; color:#999; line-height:40px; font-size:14px;}
+.metconta{width:100%; float:left; background:url(../images/lanhuibg.jpg) left bottom no-repeat; font-size:16px; line-height:35px;color:#0260aa; letter-spacing:2px; color:#333; margin-bottom:40px;}
+.lethne{width:800px; float:left; border-right:1px solid #d9d9d9;  margin-bottom:20px; color:#666; line-height:20px; min-height:400px; padding-right:20px;}
+.lethne img{ max-width:700px; padding:10px 0px;}
+.lethne p{color:#333333; font-size:13px; line-height:22px;text-indent:2em;}
+.ktitle{ color:#333333; font-size:16px;  line-height:40px;}
+.kedate{color:#666; font-size:12px; color:#666; margin-bottom:20px;}
+.leupdh{width:320px; float:right; }
+.optit{ width:100%; float:left; font-size:16px; color:#999; line-height:25px; margin-bottom:20px;}
+.leupdh ul li{width:100%; float:left; border-bottom:1px dashed #d9d9d9;  line-height:20px; padding-bottom:10px; margin-bottom:10px;}
+.leupdh ul li a{ color:#999;font-size:14px;}
+.leupdh ul li a{ text-decoration:none;}
+.leupdh ul li span{color:#999; font-size:12px; display:block;}
+.fan{ width:100%; height:35px; float:left; line-height:24px; text-align:left; margin-top:10px; font-size:14px; color:#666; padding-bottom:40px;}
+.fan a{font-size:14px; color:#EB5405;}
+.fan a:hover{color:#F00;}

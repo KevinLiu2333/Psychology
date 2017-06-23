@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.common.mall.mapper.TMallOrderProductMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.common.mall.model.TMallOrderProduct" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="orderId" property="orderid" jdbcType="INTEGER" />
+    <result column="orderSerial" property="orderserial" jdbcType="VARCHAR" />
+    <result column="userId" property="userid" jdbcType="INTEGER" />
+    <result column="productId" property="productid" jdbcType="INTEGER" />
+    <result column="productSerial" property="productserial" jdbcType="VARCHAR" />
+    <result column="productCount" property="productcount" jdbcType="INTEGER" />
+    <result column="productPrice" property="productprice" jdbcType="DOUBLE" />
+    <result column="productName" property="productname" jdbcType="VARCHAR" />
+    <result column="ctime" property="ctime" jdbcType="TIMESTAMP" />
+    <result column="ltime" property="ltime" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

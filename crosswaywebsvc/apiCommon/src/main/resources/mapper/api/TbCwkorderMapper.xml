@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper.TbCwkorderMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model.TbCwkorder" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="INTEGER" />
+    <result column="orderSerial" property="orderserial" jdbcType="VARCHAR" />
+    <result column="cwkId" property="cwkid" jdbcType="INTEGER" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="totalPrice" property="totalprice" jdbcType="DOUBLE" />
+    <result column="ctime" property="ctime" jdbcType="TIMESTAMP" />
+    <result column="ltime" property="ltime" jdbcType="TIMESTAMP" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

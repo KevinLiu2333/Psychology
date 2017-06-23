@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper.SuggestionMapper">
+	<resultMap id="MySuggestionMap" type="com.klsw.apiCommon.api.model.Suggestion">
+	<id column="id" property="id" jdbcType="INTEGER" />
+    <result column="suggestion" property="suggestion" jdbcType="VARCHAR" />
+    <result column="imgpath" property="imgpath" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="suggestiontype" property="suggestiontype" jdbcType="VARCHAR" />
+    <result column="addtime" property="addtime" jdbcType="DATE" />
+    <result column="proposerid" property="proposerid" jdbcType="INTEGER" />
+    <result column="replytime" property="replytime" jdbcType="DATE" />
+    <result column="nickname" property="nickname" jdbcType="VARCHAR" />
+	</resultMap>
+	 
+	<select id="selectSuggestion" resultMap="MySuggestionMap">
+		SELECT t1.nickname,t2.*
+		FROM tb_CWK t1,tb_CWKSuggestion t2
+		WHERE t1.ID = t2.proposerid
+	</select>
+</mapper>

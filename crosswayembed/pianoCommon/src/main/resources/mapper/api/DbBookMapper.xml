@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.pianoCommon.api.mapper.DbBookMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.pianoCommon.api.model.DbBook" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="book_no" property="bookNo" jdbcType="VARCHAR" />
+    <result column="book_name" property="bookName" jdbcType="VARCHAR" />
+    <result column="book_label" property="bookLabel" jdbcType="VARCHAR" />
+    <result column="add_time" property="addTime" jdbcType="TIMESTAMP" />
+    <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP" />
+    <result column="press" property="press" jdbcType="VARCHAR"/>
+  </resultMap>
+  
+  <select id="searchByBookName" parameterType="java.lang.String" resultMap="BaseResultMap">
+  	SELECT * FROM db_book t 
+  	WHERE t.book_name LIKE CONCAT("%", CONCAT(#{0}, "%"))
+  	ORDER BY t.book_no
+  </select>
+  
+  <select id="searchBySubjectName" parameterType="java.lang.String" resultMap="BaseResultMap">
+  	SELECT * FROM db_book t 
+  	WHERE t.book_label LIKE CONCAT("%", CONCAT(#{0}, "%"))
+  	ORDER BY t.book_no
+  </select>
+</mapper>

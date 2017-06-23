@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.pianoCommon.api.mapper.ConnectstatusMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.pianoCommon.api.model.Connectstatus">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" jdbcType="INTEGER" property="id" />
+    <result column="LastRequestTime" jdbcType="TIMESTAMP" property="lastrequesttime" />
+    <result column="Status" jdbcType="VARCHAR" property="status" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>地址管理</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/css/center.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery.js"></script>
+</head>
+
+<body>
+	<div class="navhead" style="border-bottom: 1px solid #ddd;">
+		<nav class="index-nav">
+		<div class="logo">
+			<a href="/index.html"><img src="/images/logo.png" /></a>
+		</div>
+		<div class="shopcart">
+			<a href="/cart"> </a>
+		</div>
+		<div class="exit" th:if="${session.klsw_user }">
+			<a href="/logout">退出</a>
+		</div>
+		<div class="login">
+			<a href="/order/list"></a>
+		</div>
+		<ul class="nav-list">
+
+			<li class="nav-item"><a href="/">首页</a></li>
+
+			<li class="nav-item"><a href="/smart.html">智能钢琴</a></li>
+
+			<li class="nav-item"><a href="/mall" class="orange">在线商城</a></li>
+
+			<li class="nav-item"><a href="/service.html">服务中心</a></li>
+
+			<li class="nav-item"><a href="/aboutus.html">关于我们</a></li>
+
+		</ul>
+		</nav>
+	</div>
+
+	<div class="center_info">
+		<div th:include="common/center"></div>
+		<div class="center_infor">
+			<div class="myorder_top">收货地址管理</div>
+			<div class="order_add">
+				<a href="javascript:;" onclick="$('#alert').fadeIn(200);">新增收货地址</a>
+			</div>
+			<div class="address_tip">
+				您已创建<span th:text="${addressCount}">2</span>个收货地址，最多可创建<span>20</span>个
+			</div>
+			<div class="address_wrap" th:each="addressList:${addressList}">
+				<div class="address_close">
+					<a th:href="'/information/deleteAddress?id='+${addressList.id}"><img
+						src="/images/close_address.png" width="20" height="19" /></a>
+				</div>
+				<input type="hidden" name="names" id="names" th:value="${addressList.username}"/>
+				<input type="hidden" name="provinces" id="provinces" th:value="${addressList.province}"/>
+				<input type="hidden" name="citys" id="citys" th:value="${addressList.city}"/>
+				<input type="hidden" name="districts" id="districts" th:value="${addressList.district}"/>
+				<input type="hidden" name="phones" id="phones" th:value="${addressList.userphone}"/>
+				<input type="hidden" name="elevators" id="elevators" th:value="${addressList.elevator}"/> 
+				<div class="mober">
+					<dl>
+						<dt>收货人:</dt>
+						<dd th:text="${addressList.username}">钱先生</dd>
+					</dl>
+					<dl>
+						<dt>所在地区：</dt>
+						<dd>
+							<span th:text="${addressList.province}"></span><span
+								th:text="${addressList.city}"></span><span
+								th:text="${addressList.district}"></span>
+						</dd>
+					</dl>
+					<dl>
+						<dt>地址：</dt>
+						<dd th:text="${addressList.useraddress}">黄山路599号时代数码港3层</dd>
+					</dl>
+					<dl>
+						<dt>手机：</dt>
+						<dd th:text="${addressList.userphone}">18656789104</dd>
+					</dl>
+					<dl>
+						<dt>电梯：</dt>
+						<dd th:text="${addressList.elevator}">有</dd>
+					</dl>
+				</div>
+				<div class="address_set"> 
+					<a th:href="'/information/defaultAddress?mrdzid='+${addressList.id}"><input type="hidden" th:text="${addressList.defaultaddress==false}?'设为默认地址':'默认地址'"/></a> 
+					
+					<a href="javascript:void(0);" style="margin-left: 25px;" class="xg">
+						<input type="hidden" th:value="${addressList.id}" class="xgid" />修改
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div style="display: none;" id="alert">
+		<div class="institute"></div>
+		<div class="alert_content">
+			<div class="service_title">
+				<div class="service_order">收货人信息</div>
+				<div class="close_service">
+					<a href="javascript:;" onclick="$('#alert').fadeOut(300);"><img
+						src="/images/close_service.png" width="22" height="24" /></a>
+				</div>
+			</div>
+			<div class="clostian">
+				<form action="/information/addAddress" method="post">
+					<table border="0" style="color: #000;">
+						<tr>
+							<td width="114" height="42" align="right"><span
+								style="color: #F00">*</span>&nbsp;收货人姓名：</td>
+							<td height="56" colspan="3"><label> <input
+									type="text" name="name" id="nameTow" class="changeword" />
+							</label></td>
+						</tr>
+						<tr>
+							<td height="42" align="right"><span style="color: #F00">*</span>&nbsp;地址：</td>
+							<td width="127" height="50"><label> <select
+									name="province" id="province" class="address_sele">
+								</select>
+							</label></td>
+							<td width="127"><label> <select name="city"
+									id="city" class="address_sele">
+								</select>
+							</label></td>
+							<td width="410"><label> <select name="district"
+									id="district" class="address_sele">
+								</select>
+							</label></td>
+						</tr>
+						<tr>
+							<td width="114" height="42" align="right"><span
+								style="color: #F00">*</span>&nbsp;详细地址：</td>
+							<td height="56" colspan="3"><label> <input
+									type="text" name="address" id="addressTow" class="changeword" />
+							</label></td>
+						</tr>
+						<tr>
+							<td width="114" height="42" align="right"><span
+								style="color: #F00">*</span>&nbsp;手机：</td>
+							<td height="56" colspan="3"><label> <input
+									type="text" name="mobile" id="mobileTow" class="changeword" />
+							</label></td>
+						</tr>
+						<tr>
+							<td height="42" align="right"><span style="color: #F00">*</span>&nbsp;有无电梯：</td>
+							<td height="42" colspan="3"><label> <select
+									name="hasElevator" id="hasElevatorTow" class="address_sele">
+										<option>有电梯</option>
+										<option>无电梯</option>
+								</select>
+							</label></td>
+						</tr>
+					</table>
+					<div class="btns">
+						<input type="submit" value="保存地址" onclick="addAddress()" /></a>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- 
+ <form action="" method="post"> -->
+	<div style="display: none;" id="updateAlert">
+		<div class="institute"></div>
+		<div class="alert_content">
+			<div class="service_title">
+				<div class="service_order">收货人信息</div>
+				<div class="close_service">
+					<a href="javascript:;" onclick="$('#updateAlert').fadeOut(300);"><img
+						src="/images/close_service.png" width="22" height="24" /></a>
+				</div>
+			</div>
+			<div class="clostian">
+				<form method="post">
+					<input type="hidden" id="addressid" value="" /> <input
+						type="hidden" id="hid" name="userid" />
+					<table border="0" style="color: #000;">
+						<tr>
+							<td width="114" height="42" align="right"><span
+								style="color: #F00">*</span>&nbsp;收货人姓名：</td>
+							<td height="56" colspan="3"><label> <input
+									type="text" name="username" id="username" class="changeword" />
+							</label></td>
+						</tr>
+
+						<tr>
+							<td height="42" align="right"><span style="color: #F00">*</span>&nbsp;地址：</td>
+							<td width="127" height="50"><label> <select
+									name="province2" id="province2" class="address_sele">
+								</select>
+							</label></td>
+							<td width="127"><label> <select name="city2"
+									id="city2" class="address_sele">
+								</select>
+							</label></td>
+							<td width="410"><label> <select name="district2"
+									id="district2" class="address_sele">
+								</select>
+							</label></td>
+						</tr>
+						<tr>
+							<td width="114" height="42" align="right"><span
+								style="color: #F00">*</span>&nbsp;详细地址：</td>
+							<td height="56" colspan="3"><label> <input
+									type="text" name="useraddress" id="useraddress"
+									class="changeword" />
+							</label></td>
+						</tr>
+						<tr>
+							<td width="114" height="42" align="right"><span
+								style="color: #F00">*</span>&nbsp;手机：</td>
+							<td height="56" colspan="3"><label> <input
+									type="text" name="userphone" id="userphone" class="changeword" />
+							</label></td>
+						</tr>
+						<tr>
+							<td height="42" align="right"><span style="color: #F00">*</span>&nbsp;有无电梯：</td>
+							<td height="42" colspan="3"><label> <select
+									name="hasElevator" id="hasElevator" class="address_sele">
+										<option>有电梯</option>
+										<option>无电梯</option>
+								</select>
+							</label></td>
+						</tr>
+					</table>
+					<div class="btns">
+						<input type="button" value="保存修改" onclick="updateAddress()" /></a>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- -->
+
+	<div th:include="common/foot"></div>
+
+	<script type="text/javascript" src="/js/areaData.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			function getProvinces() {
+				var provinces = areaData.filter(function(area) {
+					return area.level == 1;
+				});
+				$('#province')
+						.html(
+								provinces
+										.map(
+												function(province) {
+													return '<option value="'+province.name+'" data-id="'+province.id+'">'
+															+ province.name
+															+ '</option>';
+												}).join(''));
+				getCities($('#province').find('option:first').prop('selected',
+						true).data('id'));
+			}
+			function getCities(provinceId) {
+				var cities = areaData.filter(function(area) {
+					return area.parentId == provinceId;
+				});
+				$('#city')
+						.html(
+								cities
+										.map(
+												function(city) {
+													return '<option value="'+city.name+'" data-id="'+city.id+'">'
+															+ city.name
+															+ '</option>';
+												}).join(''));
+				getDistricts($('#city').find('option:first').prop('selected',
+						true).data('id'));
+			}
+			function getDistricts(cityId) {
+				var districts = areaData.filter(function(area) {
+					return area.parentId == cityId;
+				});
+				$('#district')
+						.html(
+								districts
+										.map(
+												function(district) {
+													return '<option value="'+district.name+'" data-id="'+district.id+'">'
+															+ district.name
+															+ '</option>';
+												}).join(''));
+				$('#district').find('option:first').prop('selected', true);
+			}
+
+			getProvinces();
+
+			$('#province').on('change', function() {
+				var provinceId = $(this).find(':selected').data('id');
+				getCities(provinceId);
+			});
+			$('#city').on('change', function() {
+				var cityId = $(this).find(':selected').data('id');
+				getDistricts(cityId);
+			});
+
+		});
+	</script>
+
+	<script type="text/javascript">
+		$(function() {
+			function getProvinces() {
+				var provinces = areaData.filter(function(area) {
+					return area.level == 1;
+				});
+				$('#province2')
+						.html(
+								provinces
+								
+										.map(
+												function(province) {
+													return '<option value="'+province.name+'" data-id="'+province.id+'">'
+															+ province.name
+															+ '</option>';
+												}).join(''));
+				getCities($('#province2').find('option:first').prop('selected',
+						true).data('id'));
+			}
+			function getCities(provinceId) {
+				var cities = areaData.filter(function(area) {
+					return area.parentId == provinceId;
+				});
+				$('#city2')
+						.html(
+								cities
+										.map(
+												function(city) {
+													return '<option value="'+city.name+'" data-id="'+city.id+'">'
+															+ city.name
+															+ '</option>';
+												}).join(''));
+				getDistricts($('#city2').find('option:first').prop('selected',
+						true).data('id'));
+			}
+			function getDistricts(cityId) {
+				var districts = areaData.filter(function(area) {
+					return area.parentId == cityId;
+				});
+				$('#district2')
+						.html(
+								districts
+										.map(
+												function(district) {
+													return '<option value="'+district.name+'" data-id="'+district.id+'">'
+															+ district.name
+															+ '</option>';
+												}).join(''));
+				$('#district2').find('option:first').prop('selected', true);
+			}
+
+			getProvinces();
+
+			$('#province2').on('change', function() {
+				var provinceId = $(this).find(':selected').data('id');
+				getCities(provinceId);
+			});
+			$('#city2').on('change', function() {
+				var cityId = $(this).find(':selected').data('id');
+				getDistricts(cityId);
+			});
+
+		});
+	</script>
+
+	<script type="text/javascript">
+		function updateAddress() {
+			var username = $('#username').val();
+			var street = $('#useraddress').val();
+			var mobile = $('#userphone').val();
+			var elevator = $('#hasElevator').val();
+			var province = $("#province2").val();
+			var city = $("#city2").val();
+			var district = $("#district2").val();
+			var userid = $("#hid").val();
+			var id = $("#addressid").val();
+			$.ajax({
+				url : "/information/modifyAddress",
+				type : "post",
+				data : {
+					username : username,
+					useraddress : street,
+					userphone : mobile,
+					elevator : elevator,
+					userid : userid,
+					province : province,
+					city : city,
+					district : district,
+					id : id
+				},
+				success : function() {
+					alert("修改成功");
+					$("#updateAlert").css("display", "none");
+					location.reload();
+				}
+			})
+
+		}
+		function addAddress() {
+
+			var reg = /^\s*$/g;
+
+			var username = $('#nameTow').val();
+			var street = $('#addressTow').val();
+			var mobile = $('#mobileTow').val();
+			var elevator = $('#hasElevatorTow').val();
+			var province = $("#province").val();
+			var city = $("#city").val();
+			var district = $("#district").val();
+
+			if (reg.test(username)) {
+				alert("请填写收货人姓名！");
+				return;
+			}
+			if (reg.test(street)) {
+				alert("请填写收货地址！");
+				return;
+			}
+			if (reg.test(mobile)) {
+				alert("请填写详细地址！");
+				return;
+			}
+
+		};
+
+		$(function() {
+
+			$(".xg").click(function() {
+
+				var id = $(this).children("input").val();
+				$.ajax({
+					url : "/information/toModifyAddress",
+					type : "post",
+					data : {
+						id : id
+					},
+					success : function(data, textstatus) {
+						$("#username").val(data.username);
+						$("#useraddress").val(data.useraddress);
+						$("#userphone").val(data.userphone);
+						$("#hasElevator").val(data.elevator);
+						$("#hid").val(data.userid);
+						$(this).children("input").val(data.id);
+						$("#addressid").val(data.id);
+						$("#province2").val(data.province);
+						$("#city2").val(data.city);
+						$("#district2").val(data.district);
+					}
+				});
+				$("#updateAlert").css("display", "block");
+
+			})
+
+		/* 	$(".mrdz").click(function() {
+				var id = $(this).children("input").val();
+				var userid=$("#hid").val();
+				$.ajax({
+					url : "/information/defaultAddress",
+					type : "post",
+					data : {
+						id : id
+					},
+					success : function() {
+					 
+					}
+				})
+			}) */
+
+		})
+	</script>
+</body>
+</html>

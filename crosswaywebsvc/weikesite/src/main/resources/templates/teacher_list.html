@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>教师列表</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<link href="/css/share.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="application/javascript" src="/js/iscroll.js"></script>
+<script type="application/javascript" src="/js/jquery.js"></script>
+<link href="/css/scrollbar.css" rel="stylesheet">
+<style type="text/css" media="all">
+#pullDown, #pullUp {
+	background:#fff;
+	height:40px;
+	line-height:40px;
+	padding:5px 10px;
+	border-bottom:1px solid #ccc;
+	font-weight:bold;
+	font-size:14px;
+	color:#888;
+}
+</style>
+<script th:inline="javascript">
+var pageNum = [[${pageInfo.pageNum}]];
+var pages = [[${pageInfo.pages}]];
+	$(function(){
+		var height = $(window).height()-197;
+		$("#wrapper").height(height);
+		if(pageNum==pages){
+			$("#pullUp").css("display","none");
+		}
+		if(pageNum==1){
+			$("#pullDown").css("display","none");
+			
+		}
+		
+	});
+	
+	var myScroll,
+	pullDownEl, pullDownOffset,
+	pullUpEl, pullUpOffset,
+	generatedCount = 0;
+
+/**
+ * 下拉刷新 （自定义实现此方法）
+ * myScroll.refresh();		// 数据加载完成后，调用界面更新方法
+ */
+ //上一页
+function pullDownAction () {
+
+	 setTimeout(function(){
+		 if(pageNum>1){
+				pageNum--;
+				window.location.href='/teacherList?homeworkId='+[[${session.homework.id}]]+'&pageNum='+pageNum;
+			 }
+			myScroll.refresh();
+	 },1000);
+
+
+}
+
+/**
+ * 滚动翻页 （自定义实现此方法）
+ * myScroll.refresh();		// 数据加载完成后，调用界面更新方法
+ */
+ //下一页
+function pullUpAction () {
+
+	 setTimeout(function(){
+		 if(pageNum<pages){
+				pageNum++;
+				window.location.href='/teacherList?homeworkId='+[[${session.homework.id}]]+'&pageNum'+pageNum;
+			 }
+			 myScroll.refresh();
+		 
+	 },1000);
+
+}
+
+/**
+ * 初始化iScroll控件
+ */
+function loaded() {
+	pullDownEl = document.getElementById('pullDown');
+	pullDownOffset = pullDownEl.offsetHeight;
+	pullUpEl = document.getElementById('pullUp');	
+	pullUpOffset = pullUpEl.offsetHeight;
+	
+	myScroll = new iScroll('wrapper', {
+		scrollbarClass: 'myScrollbar', /* 重要样式 */
+		useTransition: false, /* 此属性不知用意，本人从true改为false */
+		topOffset: pullDownOffset,
+		onRefresh: function () {
+			if (pullDownEl.className.match('loading')) {
+				pullDownEl.className = '';
+				pullDownEl.querySelector('.pullDownLabel').innerHTML = '加载上一页';
+			} else if (pullUpEl.className.match('loading')) {
+				pullUpEl.className = '';
+				pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载下一页';
+			}
+		},
+		onScrollMove: function () {
+			if (this.y > 5 && !pullDownEl.className.match('flip')) {
+				pullDownEl.className = 'flip';
+				pullDownEl.querySelector('.pullDownLabel').innerHTML = '松手开始更新...';
+				this.minScrollY = 0;
+			} else if (this.y < 5 && pullDownEl.className.match('flip')) {
+				pullDownEl.className = '';
+				pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+				this.minScrollY = -pullDownOffset;
+			} else if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+				pullUpEl.className = 'flip';
+				pullUpEl.querySelector('.pullUpLabel').innerHTML = '松手开始更新...';
+				this.maxScrollY = this.maxScrollY;
+			} else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+				pullUpEl.className = '';
+				pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+				this.maxScrollY = pullUpOffset;
+			}
+		},
+		onScrollEnd: function () {
+			if (pullDownEl.className.match('flip')) {
+				pullDownEl.className = 'loading';
+				pullDownEl.querySelector('.pullDownLabel').innerHTML = '加载中...';				
+				pullDownAction();	// Execute custom function (ajax call?)
+			} else if (pullUpEl.className.match('flip')) {
+				pullUpEl.className = 'loading';
+				pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载中...';				
+				pullUpAction();	// Execute custom function (ajax call?)
+			}
+		}
+	});
+	
+	setTimeout(function () { document.getElementById('wrapper').style.left = '0'; }, 800);
+}
+
+//初始化绑定iScroll控件 
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+document.addEventListener('DOMContentLoaded', loaded, false); 
+
+</script>
+
+<script th:inline="javascript">
+$(function(){
+	//作业id
+	var homeworkId = [[${session.homework.id}]];
+	//用户名
+	var username = [[${session.user.name}]];
+	//用户类型
+	var type = [[${session.user.type}]];
+	//ticket
+	var ticket = [[${session.ticket}]];
+	$(".close").click(function(){
+		$("#institute").css("display","none");
+		$("#alert_content").css("display","none");	
+		
+	});
+	$(".alertBtn").click(function(){
+		var teacherId = $(this).prev().text();
+			$.ajax({  
+			url:'/homework/upload',
+			data:{  
+	      		teacherId : teacherId,
+	      		homeworkId : homeworkId,
+			},  
+			type:'post',  
+			dataType:'json',  
+			success:function(result) {  
+				if("S"==result.status){
+					alert("提交成功");
+					//如果提交成功,返回到提交过的作业页面
+					window.location.href="/homework/student?pageNum=1&status=1";
+				}else{
+					//如果提交失败,刷新页面
+					if("您已经提交过该作业"==result.message){
+						alert(result.message);
+						window.location.href="/homework/student?pageNum=1&status=1";
+					}else{
+					alert(result.message);
+					window.location.href="/homework/student?pageNum=1&status=0";
+					}
+				}
+			},  
+			error : function() {
+				//如果提交失败,刷新页面
+				alert("提交作业失败");
+				window.location.reload();
+			}
+		});
+	
+	});	
+
+	$(".detail").click(function(){
+		//教师头像
+		var ffavicon = $(this).parent().parent().prev().children("img").eq(0).attr("src");
+		//教师id
+		var teacherId = $(this).next().text();
+		//教师名
+		var teacherName = $(this).parent().prev().children("b").eq(0).text();
+		//机构id
+		var orgId = $(this).prev().text();
+		//机构名
+		var orgName = $(this).parent().prev().children("span").eq(0).text();
+  		$.ajax({  
+					url:'/orgInfo',
+					data:{  
+		          		orgId : orgId
+		 				},  
+		 			type:'post',  
+					dataType:'json',  
+					success:function(result) { 
+						if("S"==result.status){
+							$("#teacherName").text(teacherName);
+							$("#orgName").text(orgName);
+							$("#orgSummary").text(result.data);
+							$("#teacherId").text(teacherId);
+							$("#institute").css("display","block");
+							$("#ffavicon").attr("src",ffavicon);
+							$("#alert_content").css("display","block");
+							
+						}else{
+							alert("获取教师信息异常");
+						}					
+					},  
+					error : function() {  
+						alert("获取教师信息异常");
+					}
+				});
+		
+		});	
+		
+});
+
+</script>
+</head>
+<body>
+<div th:include="common/head1"></div>
+<div class="contain_wrap" style=" padding-top:0px; margin-bottom:0px;">
+	<div class="contain_sub">
+      	<span class="title"><span style=" margin-right:3px;" th:text="${session.user.nickname}">（李东）</span> 上传了<span style=" margin-left:5px;" th:text="${session.homework.title}">老麦克唐纳</span></span>
+      	<span class="author" th:text="'曲谱:'+${session.homework.mdiportfolio}">曲谱：约翰&#8226;汤普森简易钢琴教程1</span>  
+    	<span class="author" th:text="'上传时间：'+${#calendars.format(session.homework.studenttime,'yyyy/MM/dd HH:mm:ss')}">上传时间：2016/7/4 17:06:28</span>                             
+	</div>    
+</div>
+<div id="wrapper" style="width:100%;position:fixed" >
+	<div id="scroller">
+		<div id="pullDown">
+			<span class="pullDownIcon"></span><span class="pullDownLabel">加载上一页</span>
+		</div>
+		<ul class="te_wrap" id="thelist" style="overflow:auto; position:relative;float:none">
+			<li class="te_sinus" th:each="teacher : ${pageInfo.list}" style="position:relative">
+				<div class="te_yuanpc">
+					<a href="#"><i class="mask"></i></a>
+					<img th:src="(${teacher.ffavicon}==null)?'/images/default_image.png':'http://wk-static.klsw.com'+${teacher.ffavicon}">
+	    		</div>
+	    		<div style=" width:78%; border-bottom:1px solid #d9d9d9; float:left; margin-left:10px; padding-right:10px;">
+					<div class="te_othuse">
+						<b th:text="${teacher.nickname}">张老师</b>
+						<img src="/images/star_three.png">
+						<span th:text="${teacher.orgname}">克洛斯威......</span>
+					</div>
+					<div class="gou_yuanpc">
+						<span hidden="hidden" th:text="${teacher.orgid}"></span>
+						<a class="detail"></a>
+						<span hidden="hidden" th:text="${teacher.id}"></span>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div id="pullUp">
+			<span class="pullUpIcon"></span>
+			<span class="pullUpLabel">下拉加载更多...</span>
+		</div>
+	</div>
+</div>
+<div class="institute" id="institute" style="display:none"></div>
+<div class="alert_content" id="alert_content" style="display:none">
+	<div class="alert_bg">
+   		<div class="ab_text"><a class="close"><img src="/images/close.png"></a></div>
+   		<div class="alert_pic">
+   			<div class="alert_yuanpc">
+				<a href="#"><i class="mask"></i></a>
+				<img id="ffavicon" src="">
+    		</div>
+    		<div class="alert_account">
+    			<span id="teacherName">张老师</span> 
+    			<span style="display:block;" id="orgName">动力火车教育培训机构</span>
+    			<img src="images/star_three.png">
+    		</div>   
+ 		</div> 
+	</div>
+   	<div class="alert_info">
+   		<span>简介:</span>
+   		<p id="orgSummary">
+   		
+   		</p>
+   	</div>
+   	<div style=" margin:0 auto; text-align:center;">
+   		<span hidden="hidden" id="teacherId"></span>
+   		<button class="alertBtn" type="submit" style="outline:none;">提交</button>
+   	</div>
+</div>
+</body>
+</html>

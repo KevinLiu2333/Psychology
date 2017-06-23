@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>威客</title>
+<link href="/css/index.css" rel="stylesheet">
+<link href="/css/add.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#back").click(function(){
+			window.location.href="/set/toChangePhone";
+		});
+		
+		function countDown($el) {
+		    var i = 120;
+		    $el.prop('disabled', true).val('重新发送('+ i + '秒)');
+		    var interval = setInterval(function () {
+		        i--;
+		        $el.val('重新发送('+ i + '秒)');
+		        if (i <= 0) {
+		            clearInterval(interval);
+		            interval = undefined;
+		            $el.prop('disabled', false).val('发送验证码');
+		        }
+		    }, 1000);
+		}
+		
+		$("#getPhoneCaptcha").click(function(){
+			var obj = $(this);
+			var phoneNum = $("#phoneNum").val();
+			var reg = /^\s*$/g;
+			if(phoneNum == "") {
+				alert("手机号码不能为空");
+				return false;
+			}
+			if(reg.test(phoneNum)) {
+            	alert('请先填写手机号码');
+            	return false;
+            }
+			if(!(/^1[3|4|5|7|8]\d{9}$/.test(phoneNum))){ 
+	            alert("手机号码有误"); 
+	            return false; 
+	        }
+			$.ajax({
+				url:"/bindPhoneCaptcha?phoneNum=" + phoneNum,
+				type:"GET",
+				dataType:"JSON",
+				success:function(data){
+					if(data.status == "S") {
+						countDown(obj);
+					} else {
+						alert(data.message);
+					}
+				}
+			});
+		});
+	})
+</script>
+</head>
+
+<body style="background-color:#eee;">
+  <div class="public_top">
+      <div class="public_back"><a href="javascript:void(0);" id="back"><img src="/images/back_c.png"></a></div>
+      <div class="select_name">更换手机号</div>
+      <div class="select-icon"></div>
+  </div>
+  
+     
+	<form action="/set/changePhone" method="post">
+      <div class="phone_out">  
+ 				<div class="phone-box">
+				<i>手机号码</i>
+				<input type="text" id="phoneNum" name="phoneNum" placeholder="请输入手机号码" class="inputa inputw" />
+				</div>                                         
+				<div class="phone-box">
+				<i>验证码</i>
+				<input type="text" id="" name="phoneCaptcha" placeholder="请输入手机验证码" class="inputa inputb"/>
+				<!-- <button type="button" class="buttona">获取验证码</button> -->
+				<input type="button" id="getPhoneCaptcha" class="buttona" value="获取验证码"/>
+				</div>                                                              
+				
+           </div>
+           <div class="pay_sure">                                            
+				<button class="pay_formBtn" type="submit">确认更换</button>
+      </div>
+			</form>
+</body>
+</html>

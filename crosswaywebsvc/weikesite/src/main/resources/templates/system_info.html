@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>系统消息详情</title>
+<link href="/css/index.css" rel="stylesheet">
+<link href="/css/add.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#back").click(function() {
+			window.history.back();
+		})
+	})
+</script>
+</head>
+<body>
+	<div class="public_top">
+		<div class="public_back">
+			<img id="back" src="/images/back_c.png">
+		</div>
+		<div class="select_name">我的消息</div>
+		<div class="select-icon"></div>
+	</div>
+	<div
+		style="width: 100%; float: left; color: #535353; line-height: 22px; font-size: 12px;">
+		<span style="padding: 10px; display: block; text-indent: 2em;">
+			<p th:text="${messageButton.message}">系统提醒您，您的作业状态已变化，钱星老师已经完成批改，请及时查收。</p>
+		</span>
+	</div>
+</body>
+</html>

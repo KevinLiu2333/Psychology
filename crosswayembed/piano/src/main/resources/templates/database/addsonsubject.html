@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>资料库管理系统</title>
+<link rel="stylesheet" href="/css/database.css" />
+<link rel="stylesheet" href="/css/opern.css" />
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="header">
+	 <div class="logo"><span>资料库后台管理系统</span></div>
+     
+				<div class="header-right">
+                <i class="icon-off icon-white"></i> <a href="#" role="button" data-toggle="modal">退出</a> 
+				</div>
+                <div class="top_admin">欢迎<span>暖阳</span>！</div>
+</div>
+<!-- 顶部 -->              
+<div id="middle">
+     <div class="left">
+
+<div id="my_menu" class="sdmenu">
+	<div>
+		<a href="/database/templetList">模板</a>
+	</div>
+	<div>
+		<a href="/database/subjectList">分类</a>
+	</div>
+	  
+	<div>
+		<a href="/database/sonSubjectList" class="current">子分类</a>
+	</div>
+    <div>
+		<a href="/database/bookList">书</a>
+	</div>
+	<div>
+		<a href="/database/pressList">出版社</a>
+	</div> 
+    <div>
+		<a href="/database/opernList">曲谱</a>
+	</div> 
+</div> 
+     </div> 
+     <div class="right"  id="mainFrame">
+     
+     <div class="right_cont">
+<ul class="breadcrumb">当前位置：
+ 添加子分类
+</ul>
+   <div style="width:900px; margin:auto; margin-top:100px;">
+   <form action="/database/addSonSubject" method="post">
+   <table class="table table-bordered" style="font-size: 15px; line-hight:5px;">
+       <tr>
+       <td width="12%" height="39" align="right" nowrap="nowrap" bgcolor="#f1f1f1">父分类名：</td>
+       <td width="38%"> 
+        <select name="subjectName" id="select_k1" class="xla_k">
+        <option th:each="subject:${subjectList}" th:text="${subject.subjectName}" >模板1</option> 
+        </select>
+       </td>
+     </tr> 
+   
+     <tr>
+       <td height="38" align="right" nowrap="nowrap" bgcolor="#f1f1f1">子分类编号：</td>
+       <td><input type="text" name="sonSubjectNo" id="input2" class="book_text"   /></td>
+       
+     </tr>
+
+ 
+     <tr>
+       <td width="12%" height="39" align="right" nowrap="nowrap" bgcolor="#f1f1f1">子分类名：</td>
+       <td width="38%">
+      
+        <input type="text" name="sonSubjectName" id="input2" class="book_text" />
+       </td>
+     </tr>  
+   </table> 
+   <table  class="margin-bottom-20 table  no-border" >
+        <tr>
+     	<td class="text-center"><input type="submit" value="提交" class="btn btn-info " style="width:80px;" /></td>
+     </tr>
+ </table>
+   </form>   
+   </div> 
+     </div>     
+     </div>
+    </div> 
+</body>
+</html>

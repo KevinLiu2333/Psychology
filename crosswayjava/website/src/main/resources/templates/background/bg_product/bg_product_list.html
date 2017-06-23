@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>商品列表</title>
+<link rel="stylesheet" href="/css/bootstrap.css" />
+<link rel="stylesheet" href="/css/css.css" />
+<link href="/css/zzsc.css" type="text/css" rel="stylesheet"/>
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+$(".subNav").click(function(){
+			$(this).toggleClass("currentDd").siblings(".subNav").removeClass("currentDd")
+			$(this).toggleClass("currentDt").siblings(".subNav").removeClass("currentDt")
+		 
+	})	
+})
+</script>
+
+ <script type="text/javascript">
+	$(function(){
+		
+		var name=$("#namess").val(); 
+		var fenye=$(".fenye");
+		
+		for(var i=0;i<fenye.length;i++){
+			
+		    var hr = fenye.eq(i).attr("href");    
+		    hr+='&name='+name;
+			fenye.eq(i).attr("href",hr);
+		 
+		}
+		 
+		
+		$("#goto").click(function(){
+			var name=$("#namess").val(); 
+			
+			var pageNum = $("#pageNum").val();	
+   
+			var count = $("#count").html();
+ 
+			var pageSize = $("#pageSize").html();
+ 
+			var totalPages = (count%pageSize == 0) ? count/pageSize : (count/pageSize+1); 
+ 
+			  if(pageNum>0 && pageNum<=totalPages) {
+				location.href = "/manage/order/productList?pageNum="+pageNum+"&name="+name;
+			}  
+		});
+ 	
+	 	$("#names").click(function(){
+			var name=$("#namess").val();  
+			 
+			window.location.href='/manage/order/productList?name='+name; 
+		});  
+ 		 
+	});
+</script> 
+<script>
+/*    function cha(){  
+	   
+      var names=$("#namess").val();  
+
+         $.ajax({
+       
+           url: '/manage/order/productList?name='+names,
+       
+           success: function (data) {
+  
+           }
+       });  
+   };
+ */
+</script> 
+</head>
+
+<body>
+	<div th:include="background/bg_common/bg_head"></div>
+<!-- 顶部 -->              
+<div id="middle">
+     <div class="left">
+<!-- 代码 开始 -->
+<div th:include="background/bg_common/bg_nav"></div>
+<!-- 代码 结束 -->
+
+
+     </div>
+
+     <div class="right"  id="mainFrame">
+     
+     <div class="right_cont" th:if="${productList} != null">
+ <ul class="breadcrumb">当前位置：
+  商品列表
+</ul>
+<div class="serch_right" style=" padding:20px 0;"><input type="text" name="namess" th:value="${name}" id="namess"   class=" serch_text" /><input type="button" id="names" onclick="cha();" value="检索" class="btn btn-info " style="width:80px;" /></div>  
+   <table class="table table-bordered table-hover">
+     <tbody>
+       <tr align="center" style="background-color:#f1f1f1;">
+         <th width="21%" height="36" nowrap="nowrap">商品名称</th>                  
+         <th width="15%" nowrap="nowrap">图片</th>
+         <th width="11%" nowrap="nowrap">颜色</th>
+         <th width="7%" nowrap="nowrap">库存</th>           
+         <th width="9%" nowrap="nowrap">市场价格</th>
+         <th width="7%" nowrap="nowrap">是否上架</th>
+         <th width="10%" nowrap="nowrap">添加时间</th>           
+         <th width="20%" nowrap="nowrap">操作</th>                            
+         </tr>       
+       <tr align="center" th:each="product:${productList.list}">
+         <td th:text="${product.name}">克洛斯威智能钢琴 卧式款</td>
+         <td><div style="width:80px;"><img th:src="${product.imgurl}"/></div></td>
+         <td th:text="${product.color}">红色</td>
+         <td th:text="${product.stock}">300</td>
+         <td th:text="'￥'+${product.price}">12999.00</td>
+         <td><span th:if="${product.status==1}">是</span><span th:if="${product.status==2}">否</span></td>
+         <td th:text="${#dates.format(product.ctime,'yyyy年MM月dd日')}">2016/6/18 16:58:22</td>
+         <td><a href="#" style=" margin-right:3px;">图片</a><a href="#" style=" margin-right:3px;">上架</a><a href="#" style=" margin-right:3px;">编辑</a><a href="#" style=" margin-right:3px;">详情</a><a href="#" style="           margin-right:3px;">删除</a></td>
+       </tr>  
+      </tbody>
+   </table>
+    <div class="fan"><a class="fenye" th:href="'/manage/order/productList?pageNum='+${productList.firstPage}">首页</a>
+       &nbsp;&nbsp;&nbsp;<a class="fenye"  th:href="'/manage/order/productList?pageNum='+${productList.pageNum-1}">上一页</a>
+       &nbsp;&nbsp;&nbsp;<a class="fenye" th:href="'/manage/order/productList?pageNum='+${productList.pageNum+1}">下一页</a>
+       &nbsp;&nbsp;&nbsp;<a class="fenye" th:href="'/manage/order/productList?pageNum='+${productList.lastPage}">尾页</a>
+  		 共
+		<span  id="count" th:text="${productList.total}"></span>
+				条&nbsp;&nbsp;&nbsp;页次：
+		<span th:text="${productList.pageNum}+'/'+${productList.pages}"></span>
+				&nbsp;&nbsp;&nbsp;转到：
+		<input id="pageNum" type="text" size="3"/>
+				&nbsp;页&nbsp;&nbsp;&nbsp;
+		<input id="goto" type="button" value="GO" />
+	</div>    
+     </div>     
+     </div>
+    </div>
+</body>
+</html>

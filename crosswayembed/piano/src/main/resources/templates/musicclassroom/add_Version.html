@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>克洛斯威钢琴端后台管理系统</title>
+    <link rel="stylesheet" href="/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/css/css.css"/>
+    <link href="/css/zzsc.css" type="text/css" rel="stylesheet"/>
+    <script src="/js/jquery.min.js"></script>
+</head>
+<script>
+    $(function () {
+        $("#submit").click(function () {
+            var formData = new FormData($("#form1")[0]);
+            $.ajax({
+                url: '/musicClassroom/addVersion',
+                type: 'POST',
+                data: formData,
+                async: false,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (result) {
+                    if (result.status === "S") {
+                        alert("保存成功!");
+                        window.location.reload();
+                    } else {
+                        alert(result.message);
+                        window.location.reload();
+                    }
+                },
+                error: function (result) {
+                    alert("保存失败，请重试!");
+                    window.location.reload();
+                }
+            });
+        })
+    });
+</script>
+<body>
+<div th:include="common/head"></div>
+<!-- 顶部 -->
+<div id="middle">
+    <div th:include="common/left"></div>
+    <div class="right" id="mainFrame">
+        <div class="right_cont">
+            <ul class="breadcrumb">当前位置：
+                添加特殊曲谱
+            </ul>
+            <div style="width:1100px; margin:auto; margin-top:100px;">
+                <form id="form1" enctype="multipart/form-data" method="post">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td width="12%" height="39" align="right" nowrap="nowrap" bgcolor="#f1f1f1"><b>apk版本号</b>
+                            </td>
+                            <td width="38%"><input required="required" type="text" name="apk_version" id="apk_version"
+                                                   class="span1-1"/></td>
+                        </tr>
+                        <tr>
+                            <td width="12%" height="39" align="right" nowrap="nowrap" bgcolor="#f1f1f1"><b>曲谱版本号</b>
+                            </td>
+                            <td width="38%"><input required="required" type="text" name="opern_version"
+                                                   id="opern_version"
+                                                   class="span1-1"/></td>
+                        </tr>
+                        <tr>
+                            <td width="12%" height="39" align="right" nowrap="nowrap" bgcolor="#f1f1f1"><b>曲谱文件</b>
+                            </td>
+                            <td width="38%"><input required="required" type="file" name="opern" id="opern"
+                                                   class="span1-1"/></td>
+                        </tr>
+                        <tr>
+                            <td width="12%" height="39" align="right" nowrap="nowrap" bgcolor="#f1f1f1"><b>版本文件</b></td>
+                            <td width="38%"><input required="required" type="file" name="version" id="version"
+                                                   class="span1-1"/></td>
+                        </tr>
+                        <tr>
+                            <td width="12%" height="39" align="right" nowrap="nowrap" bgcolor="#f1f1f1"><b>是否强制升级</b>
+                            </td>
+                            <td width="38%"><select name="isForceUpdate">
+                                <option value="true" selected>是</option>
+                                <option value="false">否</option>
+                            </select></td>
+                        </tr>
+                    </table>
+                    <table class="margin-bottom-20 table  no-border">
+                        <tr>
+                            <td class="text-center"><input id="submit" value="保存" class="btn btn-info "
+                                                           style="width:80px;"/><input
+                                    onclick="javascript:window.history.go(-1)" type="button" value="返回"
+                                    class="btn btn-info "
+                                    style="width:80px; margin-left:10px;"/>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+</html>

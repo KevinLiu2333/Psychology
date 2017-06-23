@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>View</title>
+</head>
+<body>
+<form action="/PMHomework/GetHomework" method="post">
+    <div class="form-horizontal">
+        <h4>Homework列表</h4>
+        <hr>
+        <div class="form-group">
+            威客用户 <input type="text" name="cwkname" value="li"> cwkname
+        </div>
+        <div class="form-group">
+            　　页码 <input type="text" name="PageId" value="1"> PageId
+        </div>
+        <div class="form-group">
+            　版本号 <input type="text" name="VersionNo" value="2015060500"> VersionNo
+        </div>
+        <div>
+            　　平台 <input type="text" name="VersionPlatform" value="Embedded"> VersionPlatform
+        </div>
+        <div class="form-group">
+            　　　SN <input type="password" name="Uid" value="tmsgyyyxdnsm"> Uid
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="查询" class="btn btn-default">
+            </div>
+        </div>
+    </div>
+</form>
+<div>
+    查看批改详细列表：<a href="/test/pmhomework/gethomeworkinfolist.html">/PMHomework/GetHomeWorkInfoList</a>
+    <br>
+    查看详细信息：<a href="test/pmhomework/gethomeworkview.html.html">/PMHomework/GetHomeWorkView</a>
+</div>
+
+
+</body>
+</html>

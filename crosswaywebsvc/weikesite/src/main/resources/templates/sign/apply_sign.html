@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>威客</title>
+    <link href="/css/index.css" rel="stylesheet">
+    <link href="/css/add.css" rel="stylesheet">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script th:inline="javascript">
+        $(function () {
+            var msg = [[${msg}]];
+            if (msg != null) {
+                alert(msg);
+                window.history.back();
+            }
+            var teacherId = [[${teacher.id}]]
+            var price = [[${teacher.price}]];
+            var pricewithmonth = [[${teacher.pricewithmonth}]];
+            var remain = [[${session.user.cwkbeancount}]];
+            var totalPrice = price;
+            var months;
+            var timesperday;
+            var type = 1;
+            if (price > remain) {
+                $("#balanceInfo").css("display", "block");
+            }
+            $("label").click(function () {
+                $(".checked").eq(0).attr("class", "checked1");
+                $(this).attr("class", "checked");
+                if ($(this).attr("name") == "trail") {
+                    type = 1;
+                    totalPrice = price;
+                    $("#price").html(totalPrice);
+                } else {
+                    type = 0;
+                    months = $(this).data("months");
+                    timesperday = parseInt($(this).parent().next().children().eq(0).val());
+                    totalPrice = pricewithmonth * timesperday * months;
+                    switch (timesperday) {
+                        case 1:
+                            break;
+                        case 2:
+                            totalPrice = totalPrice * 0.9;
+                            break;
+                        case 3:
+                            totalPrice = totalPrice * 0.8;
+                            break;
+                        default:
+                            break;
+                    }
+                    $("#price").html(totalPrice);
+                }
+                if (totalPrice > remain) {
+                    $("#balanceInfo").css("display", "block");
+                } else {
+                    $("#balanceInfo").css("display", "none");
+                }
+            });
+            $("input[type='number']").change(function () {
+                var label = $(this).parent().prev().children().eq(1);
+                if (label.attr("class") == 'checked') {
+                    timesperday = parseInt($(this).val());
+                    months = label.data("months");
+                    totalPrice = pricewithmonth * timesperday * months;
+                    switch (timesperday) {
+                        case 1:
+                            break;
+                        case 2:
+                            totalPrice = totalPrice * 0.9;
+                            break;
+                        case 3:
+                            totalPrice = totalPrice * 0.8;
+                            break;
+                        default:
+                            break;
+                    }
+                    $("#price").html(totalPrice);
+                } else {
+                    return;
+                }
+                if (totalPrice > remain) {
+                    $("#balanceInfo").css("display", "block");
+                } else {
+                    $("#balanceInfo").css("display", "none");
+                }
+            });
+            $("#submit").click(function () {
+
+                if (parseInt($("#price").html()) > parseInt(remain)) {
+                    alert("余额不足");
+                } else {
+                    if (confirm("是否确认支付?")) {
+                        console.log("签约类型:" + type);
+                        console.log("签约月数:" + months);
+                        console.log("每日次数:" + timesperday);
+                        $.ajax({
+                            type: "POST",
+                            url: "/sign/sign",
+                            data: {
+                                "signtype": type,
+                                "months": months,
+                                "timesperday": timesperday,
+                                "teacherId": teacherId
+                            },
+                            success: function (data) {
+                                if ("S" == data.status) {
+                                    alert("签约成功");
+                                    window.history.go(-2);
+                                } else {
+                                    alert(data.message);
+                                    window.location.reload();
+                                }
+                            },
+                            error: function () {
+                                alert("签约失败");
+                            }
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+	    $(function(){
+	    	$("#back").click(function () {
+	        window.history.back();
+	    });
+	    })
+    </script>
+</head>
+<body>
+<div class="public_top">
+    <div class="public_back"><a href="javascript:void(0);" id="back"><img src="/images/back_c.png"></a></div>
+    <div class="select_name">申请签约</div>
+    <div class="select-icon"></div>
+</div>
+<div class="apply_sign">
+    <img src="/images/setepic.png"><span style=" display:block;" th:text="${teacher.nickname}">李祥老师 </span>
+</div>
+<div class="sign_title"><span style=" margin-left:20px; margin-right:20px; display:block;">签约套餐</span></div>
+<div class="sign_select">
+            <span>
+               <input type="radio" name="signtype" value="">
+               <label name="trail" class="checked">试用1次</label>
+              </span>
+</div>
+<div class="sign_select">
+            <span>
+               <input type="radio" name="signtype" value="">
+               <label name="monthly" data-months="1" class="checked1">1个月</label>
+              </span>
+    <span class="cart-field-txt"><input type="number" max="3" min="1" value="1" style="width: 40px">每日可提交次数</span>
+</div>
+<div class="sign_select">
+            <span>
+               <input type="radio" name="signtype" value="">
+               <label name="monthly" data-months="3" class="checked1">3个月</label>
+              </span>
+    <span class="cart-field-txt"><input type="number" max="3" min="1" value="1" style="width: 40px">每日可提交次数</span>
+</div>
+<div class="sign_select">
+            <span>
+               <input type="radio" name="signtype" value="">
+               <label name="monthly" data-months="6" class="checked1">6个月</label>
+              </span>
+    <span class="cart-field-txt"><input type="number" max="3" min="1" value="1" style="width: 40px">每日可提交次数</span>
+</div>
+<div class="sign_select">
+            <span>
+               <input type="radio" name="signtype" value="">
+               <label name="monthly" data-months="12" class="checked1">包年（12个月）</label>
+              </span>
+    <span class="cart-field-txt"><input type="number" max="3" min="1" value="1" style="width: 40px">每日可提交次数</span>
+</div>
+<div class="sign_title">
+    <span style=" margin-left:20px; margin-right:20px; display:block;">威豆余额</span>
+</div>
+<div class="weidou_yue">
+    <span class="wei_f1" th:text="${session.user.cwkbeancount}">0</span>威豆
+    <a href="/order/toRecharge" target="_blank">去充值</a>
+</div>
+<div class="sign_title"><span
+        style=" margin-left:20px; margin-right:20px; display:block; text-align:center;">需支付总额</span></div>
+<div class="weidou_xu"><span th:text="${teacher.price}" id="price">3000</span>威豆</div>
+<div class="no_yue">
+    <span style="display: none; margin-left:20px; margin-right:20px;"
+          id="balanceInfo">您的余额不足，无法完成支付！
+    </span>
+</div>
+<div class="pay-bar">
+    <a href="#" id="submit">立即支付</a>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.common.live.mapper.TbLiveappointMapper">
+    <resultMap id="BaseResultMap" type="com.klsw.common.live.model.TbLiveappoint">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="Id" property="id" jdbcType="INTEGER"/>
+        <result column="userId" property="userid" jdbcType="INTEGER"/>
+        <result column="liveroomId" property="liveroomid" jdbcType="INTEGER"/>
+        <result column="createTime" property="createtime" jdbcType="TIMESTAMP"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+    </resultMap>
+</mapper>

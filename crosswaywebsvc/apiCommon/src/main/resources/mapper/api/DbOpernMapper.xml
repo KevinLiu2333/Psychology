@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper.DbOpernMapper">
+    <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model.DbOpern">
+        <!--
+          WARNING - @mbggenerated
+        -->
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="opern_path" property="opernPath" jdbcType="VARCHAR"/>
+        <result column="author" property="author" jdbcType="VARCHAR"/>
+        <result column="add_time" property="addTime" jdbcType="TIMESTAMP"/>
+        <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP"/>
+        <result column="main_title" property="mainTitle" jdbcType="VARCHAR"/>
+        <result column="assistant_title" property="assistantTitle" jdbcType="VARCHAR"/>
+        <result column="opern_no" property="opernNo" jdbcType="VARCHAR"/>
+        <result column="book_name" property="bookName" jdbcType="VARCHAR"/>
+        <result column="opern_label" property="opernLabel" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <resultMap type="java.util.Map" id="MyResultMap">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="opern_path" property="opernPath" jdbcType="VARCHAR"/>
+        <result column="author" property="author" jdbcType="VARCHAR"/>
+        <result column="add_time" property="addTime" jdbcType="TIMESTAMP"/>
+        <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP"/>
+        <result column="main_title" property="mainTitle" jdbcType="VARCHAR"/>
+        <result column="assistant_title" property="assistantTitle" jdbcType="VARCHAR"/>
+        <result column="opern_no" property="opernNo" jdbcType="VARCHAR"/>
+        <result column="book_name" property="bookName" jdbcType="VARCHAR"/>
+        <result column="opern_label" property="opernLabel" jdbcType="VARCHAR"/>
+        <result column="collection" property="collection" jdbcType="BIT"/>
+    </resultMap>
+
+    <select id="searchOperns" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT
+            t1.*,
+            t2.book_no
+        FROM db_opern t1, db_book t2
+        WHERE t1.main_title LIKE CONCAT("%", CONCAT(#{0}, "%"))
+              AND t1.book_name = t2.book_name
+        ORDER BY t2.book_no, t1.opern_no
+    </select>
+
+    <select id="getCollection" parameterType="java.lang.Integer" resultType="com.klsw.apiCommon.api.model.DbOpern">
+        SELECT *
+        FROM db_opern a LEFT JOIN tb_LiveCollection b ON a.id = b.opernId
+        WHERE b.userId = #{0}
+    </select>
+
+    <select id="getOpernList" parameterType="java.lang.Object" resultMap="MyResultMap">
+        SELECT
+            *,
+            CASE WHEN id IN (SELECT t.opernId
+                             FROM KlswLiveDB.tb_LiveCollection t
+                             WHERE
+                                 t.userId = #{0})
+                THEN TRUE
+            ELSE FALSE END AS collection
+        FROM db_opern
+        WHERE opern_label = #{1}
+    </select>
+</mapper>

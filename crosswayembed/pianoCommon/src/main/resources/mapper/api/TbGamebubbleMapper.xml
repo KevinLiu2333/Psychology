@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.pianoCommon.api.mapper.TbGamebubbleMapper">
+    <resultMap id="BaseResultMap" type="com.klsw.pianoCommon.api.model.TbGamebubble">
+        <!--
+          WARNING - @mbggenerated
+        -->
+        <result column="CWKID" jdbcType="INTEGER" property="cwkid"/>
+        <result column="Score" jdbcType="INTEGER" property="score"/>
+    </resultMap>
+    <select id="selectInfoList" resultType="com.klsw.pianoCommon.api.model.TbGamebubble">
+     SELECT t1.*,t2.name,t2.nickname FROM tb_GameBubble t1 JOIN tb_CWK t2
+      ON t1.CWKID=t2.ID
+      ORDER BY t1.Score DESC limit 0,5
+    </select>
+    <select id="selectRank" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+      SELECT COUNT(*) FROM tb_GameBubble
+      WHERE Score>#{0}
+    </select>
+</mapper>

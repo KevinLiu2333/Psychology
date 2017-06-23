@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.pianoCommon.api.mapper.TbMusicclassroomVersionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.pianoCommon.api.model.TbMusicclassroomVersion" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="apk_version" property="apkVersion" jdbcType="VARCHAR" />
+    <result column="opern_version" property="opernVersion" jdbcType="VARCHAR" />
+    <result column="apk_path" property="apkPath" jdbcType="VARCHAR" />
+    <result column="opern_path" property="opernPath" jdbcType="VARCHAR" />
+    <result column="apk_md5" property="apkMd5" jdbcType="VARCHAR" />
+    <result column="opern_md5" property="opernMd5" jdbcType="VARCHAR" />
+    <result column="isForceUpdate" property="isforceupdate" jdbcType="BIT" />
+    <result column="apk_size" property="apkSize" jdbcType="VARCHAR" />
+    <result column="opern_size" property="opernSize" jdbcType="VARCHAR" />
+  </resultMap>
+  <select id="getVersion" resultMap="BaseResultMap">
+    SELECT * FROM tb_musicclassroom_version ORDER BY id DESC LIMIT 1
+  </select>
+</mapper>

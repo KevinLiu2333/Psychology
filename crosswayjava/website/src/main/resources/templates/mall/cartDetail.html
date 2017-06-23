@@ -1,0 +1,48 @@
+<div th:if="${not #lists.isEmpty(shoppingCart.cart)}">
+	<form th:action="@{/order/confirm}" method="post">
+	<input type="hidden" name="from" value="cart" />
+	<div class="shop_show" th:each="item,stat : ${shoppingCart.cart}">
+		<div class=" shop_name">
+			<a th:href="'/product/' + ${item.productSerial}"><img
+				th:src="${item.productImgurl}" class="img" /><span class="big"
+				th:text="${item.productName}"></span></a><span class="small"
+				th:text="${item.productColor}"></span>
+		</div>
+		<div class="shop_price" style="margin-top: 35px;"
+			th:text="'¥' + ${#numbers.formatDecimal(item.productPrice,3,2)}"></div>
+		<div class="shop_jiajian" style="margin-top: 45px;">
+			<ul>
+				<li><img src="/images/decrease.png" width="37" height="24"
+					th:value="${item.productSerial}"
+					onpropertychange="good_change(this);" onclick="good_reduce(this);" /></li>
+				<li><input th:id="${item.productSerial}" class="shop_jiate"
+					type="text" name="cartNO" th:value="${item.productCount}"
+					onpropertychange="good_change(this);" oninput="good_change(this);"
+					onblur="good_update(this);" maxlength="5" min="1"
+					style="text-align: center" value="1" /></li>
+				<li><img src="/images/increase.png" width="37"
+					th:value="${item.productSerial}" onclick="good_add(this);"
+					height="24" id="jia" /></li>
+			</ul>
+		</div>
+		<div class="shop_total" style="margin-top: 35px;"
+			th:text="'¥' + ${#numbers.formatDecimal(item.total,3,2)}"></div>
+		<div class="shop_operation" style="margin-top: 45px;">
+			<a href="javascript:void(0);" onclick="good_delete(this);" th:value="${item.productSerial}"><img src="/images/delete.png" width="17" height="16" /></a>
+		</div>
+	</div>
+	<div class="shop_totala"
+		th:text="'商品总计：  ' + ${#numbers.formatDecimal(shoppingCart.totalM,3,2)} + ' 元（不含运费）'"></div>
+		</form>
+	<div class="shop_pay">
+		<a href="javascript:document.forms[0].submit();">去结算</a>
+	</div>
+</div>
+<div th:if="${#lists.isEmpty(shoppingCart.cart)}">
+	<div
+		style="font-size: 18px; text-align: center; line-height: 35px; margin-top: 209px; margin-bottom: 130px;">
+		购物车暂时没有商品<br />
+		<a th:href="@{/mall}" style="color: #f52b00; font-size: 12px;">去商城看看
+			&gt;</a>
+	</div>
+</div>

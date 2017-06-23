@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>克洛斯威钢琴端后台管理系统</title>
+<link rel="stylesheet" href="/css/bootstrap.css" />
+<link rel="stylesheet" href="/css/css.css" />
+<link href="/css/zzsc.css" type="text/css" rel="stylesheet" />
+<script src="/js/jquery-1.3.2.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function() {
+		var options = $("option");
+		for(var i=options.length;i>0;i--) {
+			if(options.eq(i).val() == $("#midClassName").val()) {
+				options.eq(i).attr("selected","selected");
+			}
+		}
+		
+		var hmidPath = $("#hmidPath").val();
+		$("#fileshow").text(hmidPath.substr(hmidPath.lastIndexOf("/")+1));
+		$("#turnBack").click(function() {
+			window.location.href = "/PM/PM_MidList";
+		});
+	})
+
+	var fileName;
+	var fileSize;
+	var verify = true;
+	function filechange(file) {
+		verify = false;
+		$("#message").text("");
+		fileSize = file.files[0].size;
+		if(fileSize >= 1024*1024) {
+			fileSize = Math.ceil(fileSize / (1024*1024)) + "MB";
+		} else {
+			fileSize = Math.ceil(fileSize / 1024) +"KB";
+		}
+		$("#midSize").val(fileSize);
+		var filePath = $(file).val();
+		fileName = filePath.substr(filePath.lastIndexOf("\\") + 1);
+		$("#fileshow").text(fileName);
+		$.ajax({
+			url:"/PM/uploadCheck",
+			method:"post",
+			data:{"fileName":fileName},
+			success:function(data) {
+				if(data == "1") {
+					$("#message").text("文件名为空");
+					$("#selectFile").text("请重新选择");
+				} else if(data == "2") {
+					$("#message").text("该文件已经上传");
+					$("#selectFile").text("请重新选择");
+				} else {
+					$("#hmidPath").val(data);
+					$("#message").text("该文件可以上传");
+					$("#message").css("color","blue");
+					$("#selectFile").text("选择文件");
+				} 
+			},
+			error:function(data) {
+				
+			}
+		});
+	}
+	
+	function checkFile() {
+		if(verify) {
+			$("#midClassName").val($("option:selected").val());
+			return true;
+		} else {
+			var suffix = fileName.substr(fileName.lastIndexOf(".") + 1);
+			var suffixArray = [ "tmf", "mid" ];
+			if ($.inArray(suffix, suffixArray) == -1) {
+				alert("上传文件类型错误");
+				return false;
+			}
+			if($("#selectFile").text() == "请重新选择") {
+				alert("请重新选择可以上传的文件");
+				return false;
+			}
+			$("#midClassName").val($("option:selected").val());
+			return true;
+		}
+	}
+</script>
+</head>
+<body>
+	<!-- 顶部 -->
+	<div th:include="common/head"></div>
+	<div id="middle">
+		<div th:include="common/left"></div>
+		<div class="right" id="mainFrame">
+			<div class="right_cont">
+				<ul class="breadcrumb">当前位置： 曲谱编辑
+				</ul>
+				<form action="/PM/editMID" method="post" enctype="multipart/form-data" onsubmit="return checkFile(fileName);">
+				<div style="width: 1100px; margin: auto; margin-top: 100px;">
+					<input type="hidden" id="hmidPath" name="hmidPath" th:value="${tbMid.midpath}"/>
+					<input type="hidden" id="midClassName" name="midClassName" th:value="${tbMid.typename}"/>
+					<input type="hidden" id="midID" name="midID" th:value="${tbMid.midid}"/>
+					<table class="table table-bordered">
+						<tr>
+							<td width="12%" height="39" align="right" nowrap="nowrap"
+								bgcolor="#f1f1f1"><b>曲谱名</b></td>
+							<td width="38%"><input type="text" name="midName" th:value="${tbMid.midname}"
+								class="span1-1" /></td>
+						</tr>
+						<tr>
+							<td width="12%" height="39" align="right" nowrap="nowrap"
+								bgcolor="#f1f1f1"><b>原作者</b></td>
+							<td width="38%"><input type="text" name="midAuthor" th:value="${tbMid.midauthor}"
+								class="span1-1" /></td>
+						</tr>
+						<tr>
+							<td width="12%" height="39" align="right" nowrap="nowrap"
+								bgcolor="#f1f1f1"><b>出自作品集</b></td>
+							<td width="38%"><input type="text" name="portfolio" th:value="${tbMid.portfolio}"
+								class="span1-1" /></td>
+						</tr>
+						<tr>
+							<td width="12%" height="39" align="right" nowrap="nowrap"
+								bgcolor="#f1f1f1"><b>文件大小</b>（如：80kb,1MB等）</td>
+							<td width="38%"><input id="midSize" type="text" name="midSize" readonly="readonly" 
+								th:value="${tbMid.midsize}" class="span1-1" /></td>
+						</tr>
+						<tr>
+							<td width="12%" height="39" align="right" nowrap="nowrap"
+								bgcolor="#f1f1f1"><b>Midi分类</b></td>
+							<td width="38%"><select class="span1-1" name=""
+								style="height: 30px;">
+									<option th:each="tbMidClass : ${tbMidclasses}" th:if="${tbMidclasses}" th:text="${tbMidClass.classname}">古典精选</option>
+							</select></td>
+						</tr>
+						<tr>
+							<td width="12%" height="39" align="right" nowrap="nowrap"
+								bgcolor="#f1f1f1"><b>选择文件</b></td>
+							<td width="38%">
+									<div class="ab-box"
+										style="padding-bottom: 0px; margin-top: 20px; height: 30px; position: relative;">
+										<div style="position: absolute; left: 0px; top: 0px;">
+											<div id="fileshow" class="fileshow"></div>
+											<span class="ctrl-file"> <input type="file"
+												class="filehide" name="file" onchange="filechange(this)"/>
+												<a id="selectFile" href="#">选择文件</a>
+											</span>
+										</div>
+									</div>
+									<span id="message" style="color:red;"></span>
+							</td>
+						</tr>
+					</table>
+					<table class="margin-bottom-20 table  no-border">
+						<tr>
+							<td class="text-center">
+								<input type="submit" value="保存" class="btn btn-info " style="width: 80px;" /> 
+								<input id="turnBack" type="button" value="返回" class="btn btn-info " style="width: 80px; margin-left: 10px;" />
+							</td>
+						</tr>
+					</table>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
