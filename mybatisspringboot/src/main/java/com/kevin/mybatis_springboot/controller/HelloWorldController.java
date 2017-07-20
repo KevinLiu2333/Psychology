@@ -20,7 +20,7 @@ import javax.annotation.Resource;
  * Date: 2017/6/13
  * Time: 10:10
  */
-@Api(value = "swagger测试", description = "swagger测试用例")
+@Api(value = "swagger娴嬭瘯", description = "swagger娴嬭瘯鐢ㄤ緥")
 @RestController
 public class HelloWorldController {
     private final static Logger logger = LoggerFactory.getLogger(HelloWorldController.class);
@@ -30,18 +30,19 @@ public class HelloWorldController {
 
     @Resource
     private TbUpdateHistoryMapper mapper;
-
+    
+    St
     @Resource
     private RestTemplate restTemplate;
 
-    @ApiOperation(value = "第一个接口", notes = "第一个接口")
+    @ApiOperation(value = "绗竴涓帴鍙�", notes = "绗竴涓帴鍙�")
     @RequestMapping(value = "hello", method = RequestMethod.GET)
-    public Object helloWorld(@RequestParam("userId") @ApiParam(name = "userId", value = "用户Id") Integer userId) {
+    public Object helloWorld(@RequestParam("userId") @ApiParam(name = "userId", value = "鐢ㄦ埛Id") Integer userId) {
         TbCwk tbCwk = cwkMapper.selectByPrimaryKey(userId);
         return tbCwk;
     }
 
-    @ApiOperation(value = "下载", notes = "下载apk")
+    @ApiOperation(value = "涓嬭浇", notes = "涓嬭浇apk")
     @RequestMapping(value = "download", method = RequestMethod.GET)
     @ResponseBody
     public Object download() {
