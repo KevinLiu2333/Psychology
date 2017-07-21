@@ -6,6 +6,7 @@
     <display-name>hellonutz</display-name>
     <filter>
         <filter-name>nutz</filter-name>
+        <!--将自己同一个JSP/SERVLET容器挂接-->
         <filter-class>org.nutz.mvc.NutFilter</filter-class>
         <init-param>
             <param-name>modules</param-name>
@@ -18,5 +19,44 @@
         <dispatcher>REQUEST</dispatcher>
         <dispatcher>FORWARD</dispatcher>
     </filter-mapping>
+    <!--附:典型配置-->
+    <!--<filter>-->
+    <!--<filter-name>nutz</filter-name>-->
+    <!--<filter-class>org.nutz.mvc.NutFilter</filter-class>-->
+    <!--<init-param>-->
+    <!--<param-name>modules</param-name>-->
+    <!--<param-value>net.wendal.nutzbook.MainModule</param-value>-->
+    <!--</init-param>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+    <!--<filter-name>nutz</filter-name>-->
+    <!--<url-pattern>/*</url-pattern>-->
+    <!--<dispatcher>REQUEST</dispatcher>-->
+    <!--<dispatcher>FORWARD</dispatcher>-->
+    <!--</filter-mapping>-->
+
+    <!--<filter>-->
+    <!--<filter-name>nutz</filter-name>-->
+    <!--<filter-class>org.nutz.mvc.NutFilter</filter-class>-->
+    <!--<init-param>-->
+    <!--<param-name>modules</param-name>-->
+    <!--<param-value>com.mine.app.MainModule</param-value>-->
+    <!--</init-param>-->
+    <!--<init-param>-->
+    <!--<param-name>ignore</param-name>-->
+    <!--默认ignore`"^(.+[.])(jsp|png|gif|jpg|js|css|jspx|jpeg|swf|ico|map)$"`-->
+    <!--也可以自定义，如下-->
+    <!--<param-value>^(.+[.])(jsp|png|gif|jpg|js|css|jspx|jpeg|swf|ico|map|html)$</param-value>-->
+    <!--</init-param>-->
+    <!--更灵活的忽略模式 exclusions参数-->
+    <!--<param-name>exclusions</param-name>-->
+    <!-- *.XXX 忽略后缀 -->
+    <!-- /XX/* 忽略前缀 -->
+    <!-- /cc   忽略固定路径 -->
+    <!-- 下面的例子忽略了html和ftl后缀, 忽略了/rs/和/druid/前缀,和忽略了固定路径/abc/notaction -->
+    <!--<param-value>*.html,*.ftl,/rs/*,/druid/*,/abc/notaction</param-value>-->
+    <!--</filter>-->
+
+    <!--动作链-->
 </web-app>
         

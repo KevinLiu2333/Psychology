@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>数据中心监控平台</title>
+
+		<meta name="description" content="overview &amp; stats" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/font-awesome/4.2.0/css/font-awesome.min.css" />
+
+		<!-- page specific plugin styles -->
+
+		<!-- text fonts -->
+		<link rel="stylesheet" href="assets/fonts/fonts.googleapis.com.css" />
+
+		<!-- ace styles -->
+		<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+		<![endif]-->
+
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- 引入 ECharts 文件 -->
+        <script src="js/echarts.js"></script>
+        <script type="text/javascript" src="js/fs-charts.js"></script>
+        <script type="text/javascript" src="js/js-charts.js"></script>
+
+		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+		<!--[if lte IE 8]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body class="no-skin">
+		<div id="header"></div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div id="sidebar"></div>
+
+			<div class="main-content" style="width:96%;float:right">
+
+					<div class="page-content">
+
+
+						<h2 class="page-header">交换数量统计(图)</h2>
+
+						<div class="center">
+                            <span class="btn btn-app btn-lg btn-success no-hover" style="width:200px;height:1=90px">
+                                <span class="line-height-1 bigger-150" id="sjjsl">67400<span style="font-size:15px">条</span></span>
+                                <br>
+                                <span class="line-height-1 smaller-90">中心节点数据接收量 </span>
+                            </span>
+                            <span class="btn btn-app btn-lg btn-danger no-hover" style="width:200px;height:1=90px">
+                                <span class="line-height-1 bigger-150" id="sjfsl"> 57800<span style="font-size:15px">条</span>  </span>
+                                <br>
+                                <span class="line-height-1 smaller-90">中心节点数据发送量</span>
+                            </span>
+				        </div>
+				        <p></p>
+				        <div class="col-md-12">
+				        	<div class="col-md-6">
+								<div id = "js-charts" style="height:420px;"></div>
+				        	</div>
+				        	<div class="col-md-6">
+								<div id = "fs-charts" style="height:420px;"></div>
+				        	</div>
+
+				        </div>
+
+			</div>
+			</div>
+			<div id="footer" class="col-md-12"></div>
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script src="assets/js/jquery.2.1.1.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="assets/js/jquery.1.11.1.min.js"></script>
+<![endif]-->
+
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery1x.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+		<script type="text/javascript">
+		    refresh();
+		    function refresh(){
+				$.ajax({
+				url:"json/jhzlt_ss.json",
+				type:"GET",
+				dataType: "text",
+				success:function(data){
+					var data = eval("("+data+")");
+					$("#sjjsl").html(data.sjjsl);
+					$("#sjfsl").html(data.sjfsl);
+                }
+			 });
+			 setTimeout('refresh()',1000*10);
+			}			
+			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<!-- ace scripts -->
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+		// include
+            $("#header").load("include/header.html");
+            $("#sidebar").load("include/sidebar.html",function () {
+                $("#jksy").attr("class","");
+                $("#jhjk").attr("class","active");
+                $("#jhsltj").attr("class","active");
+            });
+            $("#footer").load("include/footer.html");
+		
+			jQuery(function($) {
+				$('.modal.aside').ace_aside();
+
+				$('#aside-inside-modal').addClass('aside').ace_aside({container: '#my-modal > .modal-dialog'});
+
+				$(document).one('ajaxloadstart.page', function(e) {
+					//in ajax mode, remove before leaving page
+					$('.modal.aside').remove();
+					$(window).off('.aside')
+				});
+			})
+		</script>
+		<script type="text/javascript">
+		    $.ajax({
+				url:"json/jhzlt.json",
+				type:"GET",
+				dataType: "text",
+				success:function(data){
+					var data = eval("("+data+")");
+					jsCharts(data.sjjsl);
+                    fsCharts(data.sjfsl);
+                }
+			 });
+        </script>
+	</body>
+</html>

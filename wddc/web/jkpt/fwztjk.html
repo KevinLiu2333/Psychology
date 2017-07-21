@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <title>数据中心监控平台</title>
+
+    <meta name="description" content="overview &amp; stats" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/font-awesome/4.2.0/css/font-awesome.min.css" />
+
+    <!-- page specific plugin styles -->
+
+    <!-- text fonts -->
+    <link rel="stylesheet" href="assets/fonts/fonts.googleapis.com.css" />
+
+    <!-- ace styles -->
+    <link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+
+    <!--[if lte IE 9]>
+			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+		<![endif]-->
+
+    <!--[if lte IE 9]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+    <!-- inline styles related to this page -->
+
+    <!-- ace settings handler -->
+    <script src="assets/js/ace-extra.min.js"></script>
+
+    <script src="js/echarts.js"></script>
+
+    <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+    <!--[if lte IE 8]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+</head>
+
+<body class="no-skin">
+    <div id="header"></div>
+
+    <div class="main-container" id="main-container">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('main-container', 'fixed')
+            } catch (e) {}
+        </script>
+
+        <div id="sidebar"></div>
+
+        <div class="main-content" style="width:96%;float:right">
+
+            <div class="page-content">
+
+                <div class="col-md-12">
+                    <h2 class="page-header" style="margin-top: 5px">服务状态监控
+                        <span style="float: right;padding-right: 10px">
+                    <div class="btn-group">
+                        <select class="chosen-select form-control" data-placeholder="指定监控服务...">
+                            <option value="">所有服务</option>
+                            <option value="">服务1</option>
+                            <option value="">服务2</option>
+                            <option value="">服务3</option>
+                        </select>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-info" type="button" onclick="window.location.href='#'">本日</button>
+                        <button class="btn btn-default" type="button" onclick="window.location.href='#'">本月</button>
+                        <button class="btn btn-default" type="button" onclick="window.location.href='#'">本年</button>
+                    </div>
+               </span>
+                    </h2>
+
+                    <div class="col-md-12" style="border-bottom:1px dashed #ccc;">
+                        <div class="wrapper">
+                            <div class="row jk-info">
+                                <div class="col-md-3">
+                                    <div class="panel red-bg btn-warning">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div align="center">
+                                                    <span id="warning1" class="state-title bigger-300" style="font-size:24px"></span><span style="font-size: 15px">条</span>
+                                                    <h4 id="alertCount">预警量</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="panel blue-bg btn-danger">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div align="center">
+                                                    <span id="error" class="state-title bigger-300" style="font-size:24px"></span><span style="font-size: 15px">条</span>
+                                                    <h4 id="errorCount">错误量</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="panel green-bg btn-success">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div align="center">
+                                                    <span id="transfer" class="state-title bigger-300" style="font-size:24px"></span><span style="font-size: 15px">条</span>
+                                                    <h4 id="usedCount">调用量</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="panel yellow-bg btn-info">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div align="center">
+                                                    <span id="apply" class="state-title bigger-300" style="font-size:24px"></span><span style="font-size: 15px">条</span>
+                                                    <h4 id="appliedCount">申请量</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-12" id="main" style="height:400px;"></div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.page-content -->
+
+        </div>
+    </div>
+    <!-- /.main-content -->
+
+    <div id="footer" class="col-md-12"></div>
+
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
+    </div>
+    <!-- /.main-container -->
+
+    <!-- basic scripts -->
+
+    <!--[if !IE]> -->
+    <script src="assets/js/jquery.2.1.1.min.js"></script>
+
+    <!-- <![endif]-->
+
+    <!--[if IE]>
+<script src="assets/js/jquery.1.11.1.min.js"></script>
+
+    <![endif]-->
+
+    <!--[if !IE]> -->
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='assets/js/jquery.min.js'>" + "<" + "/script>");
+    </script>
+
+    <!-- <![endif]-->
+
+    <!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery1x.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+    <script src="js/countUp.min.js"></script>
+    <script type="text/javascript">
+        if ('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+
+        // include
+        $("#header").load("include/header.html");
+        $("#sidebar").load("include/sidebar.html",function () {
+            $("#jksy").attr("class","");
+            $("#fwjk").attr("class","active");
+            $("#fwztjk").attr("class","active");
+        });
+        $("#footer").load("include/footer.html");
+
+        // serverData
+        $.ajax({
+            type:"get",
+            url:"json/server/serverData.json",
+            dataType:"text",
+            success:function (result) {
+                var data = eval('('+result+')');
+                // 数字滚动
+                var options = {
+                    useEasing : true,
+                    useGrouping : true, // 将数字按位数分开
+                    separator : ',',
+                    decimal : '.',
+                    prefix : '',  //前缀
+                    suffix : '' //后缀
+                };
+                var warning = new CountUp("warning1", 0, data.warning, 0, 3.5, options);  //参数依次为 元素ID 开始值 结束值 小数位数 动画延迟
+                var error = new CountUp("error", 0, data.error, 0, 3.5, options);
+                var transfer = new CountUp("transfer", 0, data.transfer, 0, 3.5, options);
+                var apply = new CountUp("apply", 0, data.apply, 0, 3.5, options);
+                warning.start();
+                error.start();
+                transfer.start();
+                apply.start();
+            }
+        })
+
+        $.ajax({
+            type:"get",
+            url:"json/server/serverChartsData.json",
+            dataType:"text",
+            success:function (result) {
+                var data = eval('('+result+')')
+                console.log(data)
+                var myChart = echarts.init(document.getElementById('main'));
+                // 指定图表的配置项和数据
+                var option = {
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    legend: {
+                        data: ['预警量', '错误量', '调用量', '申请量']
+                    },
+                    xAxis: {
+
+                        type: 'category',
+                        axisLabel: {
+                            'interval': 0,
+                            rotate: 30
+                        },
+                        data: data.serverType[0].dpList
+                    },
+                    yAxis: {
+                        type: 'value',
+                        axisLabel: {
+                            formatter: '{value}'
+                        }
+                    },
+                    color: ['#eea236', '#d15b47', '#87b87f', '#6fb3e0'],
+                    series: [
+                        {
+                            name: '预警量',
+                            type: 'bar',
+                            stack: '总量',
+                            data: data.serverType[0].warningList,
+                            markPoint: {
+                                data: [
+                                    {
+                                        type: 'max',
+                                        name: '最大值',
+                                        valueIndex:1
+                                    },
+                                ]
+                            }
+                        },
+                        {
+                            name: '错误量',
+                            type: 'bar',
+                            stack: '总量',
+                            data: data.serverType[0].errorList,
+                            markPoint: {
+                                data: [
+                                    {type: 'max', name: '最大值'},
+                                ],
+                                // 自定义显示最大值
+                                // label:{
+                                //     normal:{
+                                //         formatter:function(){
+                                //             return Math.max.apply(Math,data.serverType[0].errorList)
+                                //         }
+                                //     },
+                                // }
+                            },
+                        },
+                        {
+
+                            name: '调用量',
+                            type: 'bar',
+                            data: data.serverType[0].transferList,
+                            markPoint: {
+                                data: [
+                                    {type: 'max', name: '最大值'},
+                                ]
+                            }
+                        },
+                        {
+                            name: '申请量',
+                            type: 'bar',
+                            data: data.serverType[0].applyList,
+                            markPoint: {
+                                data: [
+                                    {type: 'max', name: '最大值'},
+                                ]
+                            }
+                        }
+                    ]
+                };
+                // 使用刚指定的配置项和数据显示图表。
+                myChart.setOption(option);
+            }
+        })
+
+    </script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- page specific plugin scripts -->
+    <script type="text/javascript" language="javascript" src="assets/data-tables/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="assets/data-tables/DT_bootstrap.js"></script>
+    <script src="assets/data-tables/dynamic_table_init.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/jquery.dataTables.bootstrap.min.js"></script>
+    <script src="assets/js/dataTables.tableTools.min.js"></script>
+    <script src="assets/js/dataTables.colVis.min.js"></script>
+
+
+    <!-- ace scripts -->
+    <script src="assets/js/ace-elements.min.js"></script>
+    <script src="assets/js/ace.min.js"></script>
+
+
+</body>
+
+</html>

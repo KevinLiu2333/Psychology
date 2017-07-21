@@ -1,0 +1,41 @@
+
+            .dataTables_paginate.paging_bootstrap.pagination li {
+                float: left;
+                margin: 0 1px;
+                border: 1px solid #ddd;
+                list-style: none;
+            }
+
+            .dataTables_paginate.paging_bootstrap.pagination li.disabled a {
+                color: #c7c7c7;
+            }
+
+            .dataTables_paginate.paging_bootstrap.pagination li a {
+                color: #797979;
+                padding: 5px 10px;
+                display: inline-block;
+            }
+
+            .dataTables_paginate.paging_bootstrap.pagination li:hover a, .dataTables_paginate.paging_bootstrap.pagination li.active a {
+                color: #fff;
+                background: #65cea7;
+                text-decoration: none;
+            }
+
+            .dataTables_paginate.paging_bootstrap.pagination li:hover,
+            .dataTables_paginate.paging_bootstrap.pagination li.active {
+                border-color: #65cea7;
+            }
+
+            .dataTables_paginate.paging_bootstrap.pagination li.disabled:hover,
+            .dataTables_paginate.paging_bootstrap.pagination li.disabled:hover a {
+                color: #C7C7C7;
+                background: #fff;
+                border-color: #DDDDDD;
+                cursor: no-drop;
+            }
+
+            .dataTables_paginate.paging_bootstrap.pagination {
+                float: right;
+                margin-bottom: 15px;
+            }

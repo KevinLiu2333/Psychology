@@ -1,0 +1,10 @@
+.box{width:210px;margin:10px auto 0;background:#fff;border:1px solid #d3d3d3;padding:10px 20px 15px;}
+.box pre{font-family:"Consolas","Courier New",Courier,mono;font-size:12px;line-height:20px;}
+.box a{width:60px;height:22px;line-height:22px;background:#f0f0f0;border:1px solid #d2d2d2;text-align:center;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;display:block;margin-top:20px;border-radius:2px;cursor:pointer;font-size:13px;color:#09c;}
+.box a:hover{border-color:#fbcb09;color:#c77405;background:#fdf8df;}
+ 
+h3{color:#333;font-size:14px;width:250px;margin:30px auto 0;}
+.hide_box{width:300px;color:#fff;color:#444;background:#fff;box-shadow:1px 2px 2px #555;display:none;}
+.hide_box h4{height:26px;line-height:26px;overflow:hidden;background:#f7b64b;color:#fff;padding:0 10px;border:1px solid #e78f08;font-size:14px;border-bottom:1px solid #eaa12a;}
+.hide_box h4 a{width:14px;line-height:13px;_line-height:15px;height:13px;font-family:arial;overflow:hidden;display:block;background:#fff;color:#c77405;float:right;text-align:center;text-decoration:none;margin-top:7px;font-size:14px;font-weight:normal;border-radius:2px;_font-size:12px;}
+.hide_box p{padding:30px 10px;font-size:13px;border:1px solid #ccc;}
