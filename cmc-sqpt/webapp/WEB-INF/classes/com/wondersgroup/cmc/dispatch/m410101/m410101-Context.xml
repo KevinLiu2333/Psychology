@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- =================================================================== -->
+	<!-- Action Bean Transaction Proxy Define -->
+	<!-- =================================================================== -->
+
+	<bean id="m410101Action" class="com.wondersgroup.cmc.dispatch.m410101.action.M410101Action"
+		singleton="false">
+		<property name="m410101VS" ref="m410101VS"></property>
+	</bean>
+
+	<!-- =================================================================== -->
+	<!-- VS Bean Transaction Proxy Define -->
+	<!-- =================================================================== -->
+	<bean id="m410101VS" parent="basicTxProxy">
+		<property name="target" ref="m410101VSImpl"></property>
+	</bean>
+
+	<!-- =================================================================== -->
+	<!-- VS Bean Implement Define -->
+	<!-- =================================================================== -->
+	<bean id="m410101VSImpl" class="com.wondersgroup.cmc.dispatch.m410101.service.impl.M410101VSImpl">
+		<property name="messageRouterService" ref="messageRouterService"></property>
+		<property name="jkfwmessageRouterService" ref="jkfwmessageRouterService"></property>
+	</bean>
+</beans>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <jcxx>
+	    <item label="浦东新区界线">pdxqjx.png</item>
+        <item label="街道镇界线">jdzjx.png</item>
+        <item label="隧道、大桥">sddq.png</item>
+        <item label="高速、快速道路">gsksdl.png</item>
+		<item label="主干道路">zgdl.png</item>
+		<item label="次干、支路道路">cgzldl.png</item>
+        <item label="绿地">ld.png</item>
+		<item label="水域">sy.png</item>
+        <item label="建筑物">jzw.png</item>
+        <item label="地铁一号线">gd1hx.png</item>
+        <item label="地铁二号线">gd2hx.png</item>
+        <item label="地铁三号线">gd3hx.png</item>
+        <item label="地铁四号线">gd4hx.png</item>
+        <item label="地铁五号线">gd5hx.png</item>
+		<item label="地铁六号线">gd6hx.png</item>
+		<item label="地铁七号线">gd7hx.png</item>
+		<item label="地铁八号线">gd8hx.png</item>
+		<item label="地铁九号线">gd9hx.png</item>
+		<item label="地铁十三号线">gd13hx.png</item>
+		<item label="磁悬浮">cxf.png</item>
+		<item label="浦东新区驻地">pdxqzd.png</item>
+		<item label="街道镇、居村委驻地">jdzjcwzd.png</item>
+		<item label="委办局">wbj.png</item>
+		<item label="轨道交通站">gdjtz.png</item>
+	    <item label="银行">yh.png</item>
+        <item label="学校">xuexiao.png</item>
+        <item label="医院">yy.png</item>
+		<item label="星级酒店">xjjiudian.png</item>
+        <item label="养老机构">yanglaojg.png</item>
+        <item label="慈善机构">csjg.png</item>
+        <item label="社区文化中心">whzx.png</item>
+        <item label="社区卫生中心">wszx.png</item>
+        <item label="社区事务受理中心">swslzx.png</item>
+        
+
+    </jcxx>
+    <ghxx>
+	     <item label="详细规划范围">xxghfw.png</item>
+	     <item label="单元规划范围">dyghfw.png</item>
+	     <item label="分区规划范围">fqghfw.png</item>
+	     <item label="重叠详规范围">cdxgfw.png</item>
+	     <item label="选址意见">xzyj.png</item>
+	     <item label="用地许可">ydxk.png</item>
+	     <item label="工程许可">gcxk.png</item>
+	     <item label="权属宗地">qszd.png</item>
+	     <item label="104区块">104qk.png</item>
+	     <item label="195区块">195qk.png</item>
+	     <item label="违法用地">wfyd.png</item>
+	     <item label="储备计划">cbjh.png</item>
+	     <item label="储备项目">cbxm.png</item>
+	     <item label="储备出让">cbcr.png</item>
+	     <item label="出让合同">htjg.png</item>
+	     <item label="基地图层">jdtc.png</item>
+	     <item label="小区图层">xqtc.png</item>
+	     
+    </ghxx>
+    <chcg>
+         <item label="建设用地">jsyd.png</item>
+	     <item label="带征地">dzd.png</item>
+	     <item label="规划河道">ghhd.png</item>
+	     <item label="道路绿化">dllh.png</item>
+	     <item label="防汛通道">fxtd.png</item>
+	     <item label="规划道路">ghdl.png</item>
+	     <item label="绿化用地">lhyd.png</item>
+	     <item label="其他">qt.png</item>
+	     <item label="供地">red.png</item>
+	     <item label="征地">green.png</item>
+	     <item label="出让">blue.png</item>
+	     <item label="补充出让">purple.png</item>
+	     <item label="补充租赁">bczl.png</item>
+	     <item label="权证">qz.png</item>
+    </chcg>
+    <dkxx>
+     <item label="行政办公用地">C1.png</item>
+     <item label="商业服务业用地">C2.png</item>
+     <item label="文化用地">C3.png</item>
+     <item label="体育用地">C4.png</item>
+     <item label="医疗卫生用地">C5.png</item>
+     <item label="教育科研设计用地">C6.png</item>
+     <item label="文化古迹用地">C7.png</item>
+     <item label="商务办公用地">C8.png</item>
+     <item label="其他公共设施用地">C9.png</item>
+     <item label="一类住宅组团用地">Rr1.png</item>
+     <item label="二类住宅组团用地">Rr2.png</item>
+     <item label="三类住宅组团用地">Rr3.png</item>
+     <item label="四类住宅组团用地">Rr4.png</item>
+     <item label="五类住宅组团用地">Rr5.png</item>
+     <item label="六类住宅组团用地">Rr6.png</item>
+     <item label="基础教育设施用地">Rs.png</item>
+     <item label="社区级公共设施用地">Rc.png</item>
+     <item label="供应设施用地">U1.png</item>
+     <item label="邮电设施用地">U2.png</item>
+     <item label="环境卫生设施用地">U3.png</item>
+     <item label="施工维修设施用地">U4.png</item>
+     <item label="殡葬设施用地">U5.png</item>
+     <item label="消防设施用地">U6.png</item>
+     <item label="其他市政设施用地">U9.png</item>
+     <item label="一类工业用地">M1.png</item>
+     <item label="二类工业用地">M2.png</item>
+     <item label="三类工业用地">M3.png</item>
+     <item label="四类工业用地">M4.png</item>
+     <item label="铁路用地">T1.png</item>
+     <item label="公路用地">T2.png</item>
+     <item label="管道运输用地">T3.png</item>
+     <item label="港口用地">T4.png</item>
+     <item label="机场用地">T5.png</item>
+     <item label="道路用地">S1.png</item>
+     <item label="管道站线用地">S2.png</item>
+     <item label="社会停车场用地">S3.png</item>
+     <item label="公交场站用地">S4.png</item>
+     <item label="广场用地">S5.png</item>
+     <item label="综合交通枢纽用地">S6.png</item>
+     <item label="其他交通设施用地">S9.png</item>
+     <item label="公共绿地">G1.png</item>
+     <item label="生产防护绿地">G2.png</item>
+     <item label="其他绿地">G9.png</item>
+     <item label="军事用地">D1.png</item>
+     <item label="外事用地">D2.png</item>
+     <item label="保安用地">D3.png</item>
+     <item label="城市发展备用地">X.png</item>
+     <item label="普通仓储用地">W1.png</item>
+     <item label="危险品仓储用地">W2.png</item>
+     <item label="堆场用地">W3.png</item>
+     <item label="物流用地">W4.png</item>
+     <item label="控制用地">K.png</item>
+     <item label="农用地">N.png</item>
+     <item label="水域">E1.png</item>
+     <item label="其他未利用地">E9.png</item>
+    </dkxx>
+</configuration>

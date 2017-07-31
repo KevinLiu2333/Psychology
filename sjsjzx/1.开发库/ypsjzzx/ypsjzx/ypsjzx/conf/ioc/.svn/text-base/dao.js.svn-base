@@ -1,0 +1,41 @@
+var ioc = {
+	dataSource : {
+		type : "org.apache.commons.dbcp.BasicDataSource",
+		events : {
+			depose : 'close'
+		},
+		fields : {
+
+			//url : 'jdbc:mysql://10.1.64.41:23306/suining?useUnicode=true&characterEncoding=utf-8',
+			//url : 'jdbc:mysql://10.1.35.34:3306/wddc?useUnicode=true&characterEncoding=utf-8',
+			//driverClassName : 'com.mysql.jdbc.Driver',
+			//username : 'wddc',
+			//password : 'wddc',
+			// 最简配置
+			driverClassName : 'oracle.jdbc.driver.OracleDriver',
+			url : 'jdbc:oracle:thin:@10.1.35.34:1521:ORCL',
+			username : 'ypsjzx',
+			password : 'ypsjzx',
+			initialSize : 5,
+			maxActive : 30,
+			minIdle : 1,
+			maxIdle : 20
+		}
+	},
+	dao : {
+		type : "org.nutz.dao.impl.NutDao",
+		fields : {
+			dataSource : {
+				refer : 'dataSource'
+			}
+		}
+	},
+	userService : {
+		type : "com.wonders.wdac.jk.WdUserService",
+		fields : {
+			dao : {
+				refer : 'dao'
+			}
+		}
+	}
+};

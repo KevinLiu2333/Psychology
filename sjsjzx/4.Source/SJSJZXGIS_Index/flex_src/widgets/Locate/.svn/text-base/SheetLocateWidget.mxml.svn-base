@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<viewer:BaseWidget xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" 
+				   xmlns:viewer="com.esri.viewer.*" 
+				   layout="absolute"
+				   widgetConfigLoaded="basewidget1_widgetConfigLoadedHandler(event)">
+	
+	<fx:Script>
+		<![CDATA[
+			import com.esri.ags.FeatureSet;
+			import com.esri.ags.Graphic;
+			import com.esri.ags.geometry.Geometry;
+			import com.esri.ags.layers.GraphicsLayer;
+			import com.esri.ags.symbols.SimpleFillSymbol;
+			import com.esri.ags.symbols.SimpleLineSymbol;
+			import com.esri.ags.tools.NavigationTool;
+			import com.esri.ags.tasks.QueryTask;
+			import com.esri.ags.tasks.supportClasses.Query;
+			import com.esri.viewer.utils.UtilsClass;
+			
+			import mx.controls.Alert;
+			import mx.rpc.AsyncResponder;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			import mx.utils.StringUtil;
+			[Bindable]
+			[Embed(source="assets/images/icons/i_redclear.png")]
+			public var Clear:Class;
+			private var outlineSym:SimpleLineSymbol;
+			private var layerService:String="";
+			private var queryfieldsStr:String="";
+			private var queryfieldArr:Array=new Array;
+			private var expr:String="";
+			private var sheetLayer:GraphicsLayer;
+			private var graphicPolySym:SimpleFillSymbol;
+			protected function basewidget1_widgetConfigLoadedHandler(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				if(configXML)
+				{
+					layerService=gisdata_UrlROOT+configXML.layerService||"arcgis/rest/services/dynamic_pdgt2012/MapServer/26";
+					queryfieldsStr=configXML.queryfields||"NAME,CADNAME";
+					queryfieldArr=queryfieldsStr.split(",");
+					expr=configXML.where||"NAME like '%[value]%'";
+					sheetLayer=new GraphicsLayer();
+					map.addLayer(sheetLayer);
+					outlineSym=new SimpleLineSymbol("solid", 0xFF0000, 0.4, 2);
+					graphicPolySym=new SimpleFillSymbol(SimpleFillSymbol.STYLE_NULL, 0xFF0000, 0.2, outlineSym);
+				}
+			}
+			private function  sheetLocate():void
+			{
+				sheetLayer.clear();
+				warnlbl.visible=false;
+				var rowNum:String= StringUtil.trim(sheetRowNum.text);
+				var colNum:String=StringUtil.trim(sheetColNum.text);
+				var Name:String="";
+				if(rowNum==""||colNum=="")
+				{
+					warnlbl.text="行号和列号不能为空，请重新填写";
+					warnlbl.visible=true;
+				}
+				else
+				{
+					Name=Name+rowNum+"_"+colNum;
+					var queryTask:QueryTask=new QueryTask(layerService);
+					var query:Query=new Query();
+					query.outFields=queryfieldArr;
+					query.returnGeometry=true;
+					query.where=expr.replace("[value]",Name);
+					queryTask.showBusyCursor=true;
+					queryTask.execute(query,new AsyncResponder(onResultHandler,onFaultHandler));
+				}
+				
+			}
+			private function onResultHandler(featureSet:FeatureSet, token:Object=null):void
+			{
+				
+				try
+				{
+					if(featureSet.features&&featureSet.features.length>0)
+					{
+						for each (var gra:Graphic in featureSet.features)
+						{
+							switch (gra.geometry.type)
+							{
+								case Geometry.POLYGON:
+								{
+									gra.symbol=graphicPolySym;
+									sheetLayer.add(gra);
+									break;
+								}
+							}
+						}
+					 UtilsClass.zoomToGraphics(map,sheetLayer);
+					}
+					else
+					{
+						warnlbl.text="没有查询到图幅位置，请重新填写";
+						warnlbl.visible=true;
+					}
+				}
+				catch (e:Error)
+				{
+					Alert.show(e.toString());
+				}
+			}
+			private function onFaultHandler(info:Object, token:Object=null):void
+			{
+				Alert.show(info.toString());
+			}
+			private function clear():void
+			{
+				sheetLayer.clear();
+				sheetRowNum.text="";
+				sheetColNum.text="";
+				warnlbl.visible=false;
+			}
+
+			protected function sheetLoacateWidget_closedHandler(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				sheetLayer.clear();
+				setMapNavigation(NavigationTool.PAN, "漫游");
+			}
+			private function queryWidgetOpened():void
+			{
+				setMapNavigation(NavigationTool.PAN, "漫游");
+			}
+			protected function wTemplate_minimizedHandler(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				sheetLoacateWidget.widgetTitle="图幅定位";
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<viewer:WidgetTemplate id="sheetLoacateWidget" 
+						   width="330" 
+						   height="180" 
+						   open="queryWidgetOpened()" 
+						   minimized="wTemplate_minimizedHandler(event)"
+						   closed="sheetLoacateWidget_closedHandler(event)">
+		<mx:VBox width="100%" height="100%" verticalGap="1" horizontalAlign="center"
+				 verticalAlign="middle">
+			<mx:Form  verticalScrollPolicy="off" width="100%" height="100%"  
+					  paddingBottom="4"  paddingTop="2" paddingLeft="20" paddingRight="2" verticalGap="10"  >
+				<mx:FormItem label="行号" styleName="WidgetText" direction="horizontal">
+					<s:TextInput id="sheetRowNum" restrict="0-9\\a-zA-z" />
+				</mx:FormItem>
+				<mx:FormItem label="列号" styleName="WidgetText" direction="horizontal">
+					<s:TextInput id="sheetColNum"  restrict="0-9\\a-zA-z"/>
+				</mx:FormItem>
+				<mx:FormItem styleName="WidgetText" direction="horizontal">
+					<mx:HBox  horizontalAlign="center"  horizontalGap="20">
+						<mx:Button label="定位" click="sheetLocate()" />
+						<mx:Button label="清除" click="clear()" icon="{Clear}"/>
+					</mx:HBox>
+				</mx:FormItem>
+			</mx:Form>
+			<s:Label id="warnlb3" text="示例：行号”I069“ 列号”019“" visible="true"  styleName="WidgetText"/>
+			<s:Label id="warnlbl" text="没有查询到图幅位置，请重新填写" visible="false"  styleName="WidgetText"  color="0xFF0000"/>
+		</mx:VBox>
+	</viewer:WidgetTemplate>
+</viewer:BaseWidget>

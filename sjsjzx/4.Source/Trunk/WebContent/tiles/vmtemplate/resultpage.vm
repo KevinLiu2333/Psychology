@@ -1,0 +1,19 @@
+#foreach($result in $resultList)
+<ul>
+<li class='content_title'>
+#if($result.getProperty('ext')=='RK')<span class='content_ext'>[自然人]</span>#end
+#if($result.getProperty('ext')=='corpinfo')<span class='content_ext'>[法人]</span>#end
+#if($result.getProperty('ext')=='corplicense')<span class='content_ext'>[法人资质信息]</span>#end
+#if($result.getProperty('ext')=='punishnoteenty')<span class='content_ext'>[法人处罚信息]</span>#end
+#if($result.getProperty('ext')=='HTML' || $result.getProperty('ext')=='SHTML')<span class='content_ext'>[网页]</span>#end
+<a href='javaScript:doOnClick("$!result.getProperty('url')","$!result.getProperty('fileType')")'>
+#if($!result.getMatchFragment('title')!="")$!result.getMatchFragment('title')#end
+#if($!result.getMatchFragment('title')==""&&$!result.getProperty('title')!="")$result.getProperty('title')#end
+#if($!result.getMatchFragment('title')==""&&$!result.getProperty('title')=="")$!result.getProperty('name')#end</a>
+</li>
+<li class='content_text'>
+#if($!result.getMatchFragment('content')!='')$!result.getMatchFragment('content')#end
+#if($!result.getMatchFragment('content')=='')$!result.getProperty('title')#end
+</li>
+</ul>
+#end

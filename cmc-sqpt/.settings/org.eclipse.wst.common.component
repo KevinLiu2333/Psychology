@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="cmc-sqpt">
+        <wb-resource deploy-path="/" source-path="/webapp"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/workspace"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/cmc"/>
+        <property name="context-root" value="/cmc-sqpt"/>
+        <property name="java-output-path" value="/cmc-sqpt/webapp/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>

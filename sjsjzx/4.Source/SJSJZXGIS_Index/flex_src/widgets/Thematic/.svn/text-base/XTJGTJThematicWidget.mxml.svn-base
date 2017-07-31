@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<viewer:BaseWidget xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx"
+				   xmlns:viewer="com.esri.viewer.*"
+				   xmlns:esri="http://www.esri.com/2008/ags"
+				   widgetConfigLoaded="init();"
+				   xmlns:circle="com.wonders.circle.*"
+				   xmlns:comp="com.esri.viewer.components.*"
+				   xmlns:Query="widgets.Query.*">
+	<fx:Script>
+		<![CDATA[
+			import com.esri.ags.FeatureSet;
+			import com.esri.ags.Graphic;
+			import com.esri.ags.geometry.Geometry;
+			import com.esri.ags.geometry.MapPoint;
+			import com.esri.ags.geometry.Multipoint;
+			import com.esri.ags.geometry.Polygon;
+			import com.esri.ags.geometry.Polyline;
+			import com.esri.ags.layers.GraphicsLayer;
+			import com.esri.ags.symbols.SimpleFillSymbol;
+			import com.esri.ags.symbols.SimpleLineSymbol;
+			import com.esri.ags.tasks.QueryTask;
+			import com.esri.ags.tasks.supportClasses.Query;
+			import com.esri.ags.utils.JSON;
+			import com.esri.viewer.utils.SymbolFunctionRenderer;
+			import com.esri.viewer.utils.UrlUtil;
+			import com.esri.viewer.utils.UtilsClass;
+			import com.wonders.polygontopoint.PolygonToPointLayer;
+			
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.core.UIComponent;
+			import mx.events.StateChangeEvent;
+			import mx.managers.CursorManager;
+			import mx.rpc.AsyncResponder;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			import mx.rpc.http.HTTPService;
+			
+			import widgets.InfoTemplates.InfoPopupWidget;
+			import widgets.Query.FWSymbol;
+			
+			[Bindable]
+			[Embed(source="assets/images/icons/i_redclear.png")]
+			public var Clear:Class;
+			
+			[Bindable]
+			[Embed(source="assets/images/icons/i_query.png")]
+			public var Search:Class;
+			
+			[Bindable]
+			private var msgVisible:Boolean=false;
+			
+			[Bindable]
+			private var resultVisible:Boolean=false;
+			
+			[Bindable]
+			private var sDate:Date;
+			[Bindable]
+			private var eDate:Date;
+			
+			private var extentUrl:String;
+			private var extentDKUrl:String;
+			
+			[Bindable]
+			private var signString:String;
+			
+			[Bindable]
+			private var startString:String;
+			
+			[Bindable]
+			private var unstartString:String;
+					
+			[Bindable]
+			private var finishString:String;
+			
+			[Bindable]
+			private var warnString:String;
+			
+			
+			private var finishIds:Array=new Array;
+			private var signIds:Array=new Array;
+			private var startIds:Array=new Array;
+			private var unstartIds:Array=new Array;
+			private var warnIds:Array=new Array;
+			private var finishArrCol:ArrayCollection=new ArrayCollection;
+			private var signArrCol:ArrayCollection=new ArrayCollection;
+			private var startArrCol:ArrayCollection=new ArrayCollection;
+			private var unstartArrCol:ArrayCollection=new ArrayCollection;
+			private var warnArrCol:ArrayCollection=new ArrayCollection;
+			
+			private var streetURL:String;
+			private var configStreet:Array;
+			private var typeURL:String;
+			private var configType:Array;
+			
+			private var extentFields:String;
+			private var fwFieldsCNStr:String;
+			private var resultFWFields:Array;
+			private var resultFWFieldsCN:Array;
+
+			private var extentGraphicsLayer:GraphicsLayer;
+			private var resultGraphicsLayer:GraphicsLayer;
+			
+			private var graphicLineSym:SimpleLineSymbol=new SimpleLineSymbol("solid", 0x0a86fd, 0.5, 2);
+			private var signSym:SimpleFillSymbol=new SimpleFillSymbol("solid", 0x0000cd, 0.8, graphicLineSym);
+			private var finishSym:SimpleFillSymbol=new SimpleFillSymbol("solid", 0x00ff00, 0.8, graphicLineSym);
+			private var startSym:SimpleFillSymbol=new SimpleFillSymbol("solid", 0xffa800, 0.8, graphicLineSym);
+			private var unstartSym:SimpleFillSymbol=new SimpleFillSymbol("solid", 0xCCFF66, 0.8, graphicLineSym);
+			private var warnSym:SimpleFillSymbol=new SimpleFillSymbol("solid", 0xFF0000, 0.8, graphicLineSym);
+			
+			private var symbolFunctionRender:SymbolFunctionRenderer=new SymbolFunctionRenderer();
+			private const ICON_URL:String=UrlUtil.URL_DOMAIN + "assets/images/icons/";
+			private var wTitle:String="";
+			private function init():void{
+				
+				extentGraphicsLayer=new GraphicsLayer();
+				resultGraphicsLayer=new GraphicsLayer();
+				resultGraphicsLayer.addEventListener(MouseEvent.CLICK,mouseClickGraphic);
+				extentGraphicsLayer.addEventListener(MouseEvent.CLICK,mouseClickGraphic);
+				extentGraphicsLayer.alpha=0.4;
+				map.addLayer(extentGraphicsLayer);
+				map.addLayer(resultGraphicsLayer);
+				configStreet=new Array();
+				configType=new Array();
+				var date:Date=new Date();
+				eDate=date;
+				date.setFullYear(date.getFullYear(),00,01);
+				sDate=date;
+				if (configXML){
+//					extentUrl =configData.project_UrlROOT+ configXML.queryLayer.url;
+					extentUrl =configXML.queryLayer.url;
+					extentDKUrl= configData.gisdata_UrlROOT+configXML.queryDKLayer.url;
+					extentFields=configXML.queryDKLayer.fields;
+					resultFWFields = extentFields.split(",");
+					fwFieldsCNStr = configXML.queryDKLayer.fieldsCN;
+					resultFWFieldsCN = fwFieldsCNStr.split(",");
+					//初始化街道下拉数据
+					streetURL=configXML.street.url;
+					
+					//初始化类型下拉数据
+					typeURL=configXML.type.url;
+				}
+				//获取地块样式
+				FWSymbol.getInstance();
+				wTemplate.addTitlebarButton(ICON_URL + "i_atquery.png", "出让合同查询", showStateCondition);
+				wTemplate.addTitlebarButton(ICON_URL + "i_spquery.png", "出让合同查询结果", showStateResult);
+			    
+				//街道下拉数据
+				var httpservice:HTTPService=new HTTPService();
+				httpservice.url=streetURL;
+				httpservice.resultFormat="e4x";
+				var object:Object=new Object();
+				httpservice.addEventListener(ResultEvent.RESULT, onResult);
+				object.flag="streetflag";
+				object.requestinfo="";
+				httpservice.send(object);
+				function onResult(event:ResultEvent):void
+				{
+					var street:Object;
+					var layerRts:XML=(XML)(event.result);
+					var streetList:XMLList=layerRts.street;
+					street={label:"所属街道",value:""};
+					configStreet.push(street);
+					for (var j:Number=0; j <streetList.length(); j++)
+					{
+						var streetname:String=streetList[j].name;
+						var streetvalue:String=streetList[j].value;
+						street={label:streetname,value:streetvalue};
+						configStreet.push(street);
+					}
+					streetLocate.dataProvider=configStreet;
+				}
+				
+				//出让方式下拉
+				var typehttpservice:HTTPService=new HTTPService();
+				typehttpservice.url=typeURL;
+				typehttpservice.resultFormat="e4x";
+				var typeobject:Object=new Object();
+				typehttpservice.addEventListener(ResultEvent.RESULT, onResultType);
+				typeobject.flag="streetflag";
+				typeobject.requestinfo="";
+				typehttpservice.send(typeobject);
+				function onResultType(event:ResultEvent):void
+				{
+					var type:Object;
+					var layerRts:XML=(XML)(event.result);
+					var typeList:XMLList=layerRts.type;
+					type={label:"出让方式",value:""};
+					configType.push(type);
+					for (var j:Number=0; j <typeList.length(); j++)
+					{
+						var typename:String=typeList[j].name;
+						var typevalue:String=typeList[j].code;
+						type={label:typename,value:typevalue};
+						configType.push(type);
+					}					
+					typeLocate.dataProvider=configType;
+				}
+			}
+			
+			private function mouseClickGraphic(event:MouseEvent):void
+			{
+				var graphic:Graphic=event.target as Graphic;
+				if(graphic==null){
+					graphic=event.target.parent  as Graphic;
+				}
+				if(graphic!=null){
+					
+					var infoData:Object=graphic.attributes;
+					if(infoData.graphic.geometry is MapPoint){
+					  map.centerAt(infoData.graphic.geometry as MapPoint);
+					  map.scale=32000;
+					}else{
+//						UtilsClass.zoomToGraphics(map,extentGraphicsLayer);	
+				      map.centerAt(infoData.graphic.geometry.extent.center);
+					  map.scale=32000;
+					}
+					this.showInfoWindow(infoData);
+				}
+			}
+			private function queryPlotHandler():void{
+				if (extentDKUrl)
+				{
+					signArrCol.removeAll();
+					startArrCol.removeAll();
+					unstartArrCol.removeAll();
+					finishArrCol.removeAll();
+					warnArrCol.removeAll();
+					extentGraphicsLayer.clear();
+					resultGraphicsLayer.graphicProvider=null;
+					var queryTask:QueryTask=new QueryTask(extentDKUrl);
+					var query:Query=new Query();
+					var expr:String = "1=1";
+					if(startDate.selectedDate!=null){
+						expr += " and MISDATE >= date '" + formatDate.format(startDate.selectedDate) + "'";
+					}
+					if(endDate.selectedDate!=null){
+						expr += " and MISDATE <= date '" + formatDate.format(endDate.selectedDate) + "'";
+					}
+					query.where=expr;
+					query.returnGeometry=true;
+					query.outFields=extentFields.split(",");
+					queryTask.execute(query, new AsyncResponder(ontextResult, ontextFault));
+				}
+			}
+			
+			private function textQuery():void{ 				
+				CursorManager.setBusyCursor();
+				this.showInfoWindow(null);
+				resultVisible=false;
+				extentGraphicsLayer.clear();
+				showMessage("正在查询...",true,true);
+				showStateResults();
+				if (extentUrl&&extentDKUrl)
+				{					
+					var httpservice:HTTPService=new HTTPService();
+					httpservice.url=extentUrl;
+					httpservice.resultFormat="e4x";
+					var object:Object=new Object();
+					httpservice.addEventListener(ResultEvent.RESULT, onQueryResult);
+					httpservice.addEventListener(FaultEvent.FAULT,onQueryFault);
+					if(startDate.selectedDate!=null){
+						object.startdate=formatDate.format(startDate.selectedDate);
+					}
+					if(endDate.selectedDate!=null){
+						object.enddate= formatDate.format(endDate.selectedDate);
+					}
+					if(typeLocate.selectedIndex!=-1&&typeLocate.selectedIndex!=0)
+					{
+						object.bizRemiseType=typeLocate.selectedItem.value;
+					}
+					if(streetLocate.selectedIndex!=-1&&streetLocate.selectedIndex!=0)
+					{
+						object.town=streetLocate.selectedItem.value;
+					}
+					httpservice.send(object);
+				}else
+				{
+					showMessage("查询图层不存在", false,true);
+				}
+				
+			}
+			
+			private function onQueryResult(event:ResultEvent):void{
+				
+				var data:Object=JSON.decode(String(event.result));
+				if(data.datas.finishIds){
+					finishIds=data.datas.finishIds.toString().split(",");
+				}
+				if(data.datas.signIds){
+					signIds=data.datas.signIds.toString().split(",");
+				}
+				if(data.datas.startIds){
+					startIds=data.datas.startIds.toString().split(",");
+				}
+				if(data.datas.warnIds){
+					unstartIds=data.datas.warnIds.toString().split(",");
+				}
+				if(data.datas.unstartIds){
+					warnIds=data.datas.unstartIds.toString().split(",");
+				}
+				signString="新签订合同数量"+signIds.length+"个";
+				startString="新开工合同数量"+startIds.length+"个";
+				unstartString="未开工合同数量"+unstartIds.length+"个";
+				finishString="竣工合同数量"+finishIds.length+"个";
+				warnString="闲置土地数量"+warnIds.length+"个";
+				//释放鼠标				
+				queryPlotHandler();
+				
+			}
+			private function onQueryFault(event:FaultEvent):void{
+				//释放鼠标
+				CursorManager.removeAllCursors();
+			}
+			
+			private function ontextResult(featureSet:FeatureSet, token:Object=null):void{
+				if (featureSet.features.length > 0)
+				{
+					try
+					{			
+						resultVisible=true;
+						showMessage("", false,false);
+						createRecordData(featureSet);
+						UtilsClass.zoomToGraphics(map,extentGraphicsLayer);
+					}
+					catch (error:Error)
+					{
+						showMessage(error.message, false,true);
+					}
+				}
+				else
+				{
+					showMessage("暂无符合条件的记录!", false,true);
+				}
+				//释放鼠标
+				CursorManager.removeAllCursors();
+			}
+			private function ontextFault(info:Object, token:Object=null):void
+			{
+				//Alert.show(info.toString());
+				CursorManager.removeAllCursors();
+				showMessage(info.toString(), false,true);
+				showStateResults();
+			}
+			private function createRecordData(featureSet:FeatureSet):void
+			{
+				for each (var gra:Graphic in featureSet.features)
+				{
+					gra.symbol=FWSymbol.chcgGraphicSymbol;
+					//数据构造部分
+					var obj:Object=gra.attributes;
+					var fld:String="";
+					var value:String="";
+					var content:String="";
+					var point:MapPoint=getGeomCenter(gra);
+					var fldAliases:Object=featureSet.fieldAliases;
+					var misidStr:String="";
+					var temp:String="";
+					var fieldStr:String="";
+					//判断是Title还是Content
+					for (fld in obj)
+					{
+						if(obj[fld]&&obj[fld].toString()!="")
+						{
+							if(obj[fld].toString()=="NULL")
+							{
+								obj[fld]="";
+							}else
+							{
+								value=obj[fld].toString();
+								if (fld.toUpperCase() == "MISID")
+								{
+									misidStr= value;
+								}
+							}
+						}
+					}
+					if(resultFWFieldsCN)
+					{
+						for(var i:int = 0;i < resultFWFieldsCN.length;i++ )
+						{
+							if(resultFWFields[i]&& resultFWFields[i].toString()!=""&&resultFWFields[i].toString()!="NULL")
+							{
+								temp = resultFWFields[i+1].toString();
+								fieldStr=obj[temp]||"";
+								if(temp.toLocaleUpperCase()=="MISDATE"){
+									var date:Date=new Date(obj[temp]);
+									fieldStr=formatDate.format(date);
+									content+=resultFWFieldsCN[i].toString() + ": " + fieldStr+";";
+								}else if(temp.toUpperCase()=="MISAREA"){								
+									
+									if(fieldStr!=""){
+										
+										var areaNum:Number=Number(fieldStr);
+										fieldStr=areaNum.toFixed(2);
+										content+=resultFWFieldsCN[i].toString() + ": " + fieldStr + " 平方米;";
+									}else{
+										content+=resultFWFieldsCN[i].toString() + ": " + fieldStr+";";
+									}
+								}else{
+									fieldStr=obj[temp]||"";
+									content+=resultFWFieldsCN[i].toString() + ": " + fieldStr+";";
+								}
+							}
+							
+						}
+					}
+					content=content.substring(0,content.length-1);
+					var infoData:Object={MISID:misidStr, content: content,  point: point, graphic: gra};
+					gra.attributes=infoData;
+			
+                   if(misidStr!=""){				  
+						if(signIds.toString().search(misidStr)!=-1){	
+							var signGraphic:Graphic=new Graphic(gra.geometry,signSym,gra.attributes);
+							signArrCol.addItem(signGraphic);
+						}
+                        if(finishIds.toString().search(misidStr)!=-1){
+							var finishGraphic:Graphic=new Graphic(gra.geometry,finishSym,gra.attributes);
+							finishArrCol.addItem(finishGraphic);
+						}
+                        if(startIds.toString().search(misidStr)!=-1){
+							var startGraphic:Graphic=new Graphic(gra.geometry,startSym,gra.attributes);
+							startArrCol.addItem(startGraphic);
+						}
+                        if(unstartIds.toString().search(misidStr)!=-1){
+							var unstartGraphic:Graphic=new Graphic(gra.geometry,unstartSym,gra.attributes);
+							unstartArrCol.addItem(unstartGraphic);
+						}
+                        if(warnIds.toString().search(misidStr)!=-1){
+							var warnGraphic:Graphic=new Graphic(gra.geometry,warnSym,gra.attributes);
+							warnArrCol.addItem(warnGraphic);
+						}
+				   }
+					extentGraphicsLayer.add(gra);
+				}
+			}
+			
+			
+			override public function showInfoWindow(infoData:Object):void
+			{
+				if (infoData)
+				{
+					var infoTemplate:InfoPopupWidget=new InfoPopupWidget();
+					map.infoWindow.setStyle("contentBackgroundAlpha", 0.95);
+					map.infoWindow.setStyle("backgroundAlpha", 0.98);
+					map.infoWindow.setStyle("backgroundColor", 0xCBE5FE);
+					map.infoWindow.content = infoTemplate as UIComponent;
+					map.infoWindow.label ="查看地块信息";
+					infoTemplate.data = infoData;
+					map.infoWindow.show(infoData.point);
+				}
+				else
+				{
+					map.infoWindow.hide();
+				}
+			}
+			
+			private function getGeomCenter(gra:Graphic):MapPoint
+			{
+				var pt:MapPoint;
+				switch (gra.geometry.type)
+				{
+					case Geometry.MULTIPOINT:
+					{
+						var multiPoint:Multipoint=Multipoint(gra.geometry);
+						pt=MapPoint(multiPoint.points[0]);
+						break;
+						
+					}
+					case Geometry.MAPPOINT:
+					{
+						pt=gra.geometry as MapPoint;
+						break;
+					}
+						
+					case Geometry.POLYLINE:
+					{
+						var pl:Polyline=gra.geometry as Polyline;
+						var pathCount:Number=pl.paths.length;
+						var pathIndex:int=int((pathCount / 2) - 1);
+						var midPath:Array=pl.paths[pathIndex];
+						var ptCount:Number=midPath.length;
+						var ptIndex:int=int((ptCount / 2) - 1);
+						pt=pl.getPoint(pathIndex, ptIndex);
+						break;
+					}
+						
+					case Geometry.POLYGON:
+					{
+						var poly:Polygon=gra.geometry as Polygon;
+						pt=poly.extent.center;
+						break;
+					}
+						
+				}
+				return pt;
+			}
+			private function showMessage(msg:String, swfVisible:Boolean,boxMessageVisible:Boolean):void
+			{
+				txtMessage.text=msg;
+				swfMessage.visible=swfVisible;
+				msgVisible=boxMessageVisible;
+			}
+			
+			private function showStateResults():void
+			{
+				viewStack.selectedIndex=1;
+				wTemplate.selectedTitlebarButtonIndex=1;
+				wTemplate.widgetTitle="出让合同查询结果";
+				signRbtn.selected=false;
+				finishRbtn.selected=false;
+				startRbtn.selected=false;
+				unstartRbtn.selected=false;
+				warnRbtn.selected=false;
+				this.showInfoWindow(null);
+			}
+			private function clear():void{
+				extentGraphicsLayer.clear();
+				resultGraphicsLayer.clear();
+			}
+			private function clearSelect():void{
+				resultGraphicsLayer.clear();
+				signRbtn.selected=false;
+				finishRbtn.selected=false;
+				startRbtn.selected=false;
+				unstartRbtn.selected=false;
+				warnRbtn.selected=false;
+			}
+			private function showStateCondition():void
+			{
+				viewStack.selectedIndex=0;
+				wTemplate.selectedTitlebarButtonIndex=0;
+				this.showInfoWindow(null);
+				
+			}
+			private function showStateResult():void
+			{
+				viewStack.selectedIndex=1;
+				wTemplate.selectedTitlebarButtonIndex=1;
+				wTemplate.widgetTitle="出让合同查询结果";
+				this.showInfoWindow(null);
+				
+			}
+			
+			protected function startDate_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				if(startDate.selectedDate)
+				{
+					
+					//					startlbl.visible=false;
+				}
+			}
+						
+			protected function endDate_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				if(endDate.selectedDate)
+				{
+					//					endlbl.visible=false;
+				}
+				
+			}
+		
+			protected function signBtnChange(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				if(signRbtn.selected){
+					resultGraphicsLayer.graphicProvider=signArrCol;
+					resultGraphicsLayer.refresh();
+					UtilsClass.zoomToGraphics(map,resultGraphicsLayer);
+				}
+
+			}
+			protected function finishBtnChange(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				if(finishRbtn.selected){
+					
+					map.addLayer(resultGraphicsLayer);
+					resultGraphicsLayer.graphicProvider=finishArrCol;
+					resultGraphicsLayer.refresh();
+					UtilsClass.zoomToGraphics(map,resultGraphicsLayer);
+				}
+								
+			}
+			protected function startBtnChange(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				if(startRbtn.selected){
+					resultGraphicsLayer.graphicProvider=startArrCol;
+					resultGraphicsLayer.refresh();
+					UtilsClass.zoomToGraphics(map,resultGraphicsLayer);
+					
+				}
+				
+			}
+			protected function warnBtnChange(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				if(warnRbtn.selected){
+			
+					resultGraphicsLayer.graphicProvider=warnArrCol;
+					resultGraphicsLayer.refresh();
+					UtilsClass.zoomToGraphics(map,resultGraphicsLayer);
+
+				}
+				
+			}
+			protected function unstartBtnChange(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				if(unstartRbtn.selected){
+				
+					resultGraphicsLayer.graphicProvider=unstartArrCol;
+					resultGraphicsLayer.refresh();
+					UtilsClass.zoomToGraphics(map,resultGraphicsLayer);
+				}
+			}
+
+			protected function wTemplate_closedHandler(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				if(resultGraphicsLayer){
+					resultGraphicsLayer.clear();
+				}
+				if(extentGraphicsLayer){
+					extentGraphicsLayer.clear();
+				}
+				map.infoWindow.hide();
+			}
+			
+			protected function wTemplate_minimizedHandler(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				wTitle=wTemplate.widgetTitle;
+				wTemplate.widgetTitle="出让合同统计";
+			}
+			
+			protected function wTemplate_openHandler(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				if(wTitle!="")
+				{
+					wTemplate.widgetTitle=wTitle;
+				}
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+		<mx:DateFormatter id="formatDate" formatString="YYYY-MM-DD" />
+	</fx:Declarations>
+	<viewer:WidgetTemplate id="wTemplate" closed="wTemplate_closedHandler(event)"  open="wTemplate_openHandler(event)" minimized="wTemplate_minimizedHandler(event)"
+						   height="300" width="300">
+		<mx:ViewStack id="viewStack"
+					  width="100%"
+					  height="100%"
+					  creationPolicy="all">
+			<mx:VBox width="100%"
+					 height="100%"
+					 verticalGap="15"
+					 paddingTop="8"
+					 paddingLeft="25">
+				<mx:VBox horizontalGap="5" verticalAlign="middle">
+					<s:Label text="统计时间" fontSize="14"/>
+					<mx:HBox verticalAlign="top">
+						<mx:Label text="开始时间:" paddingTop="3"
+								  styleName="WidgetText"/>
+						<mx:VBox horizontalAlign="left" >
+							<mx:DateField id="startDate" width="100"
+										  yearNavigationEnabled="true"
+										  click="startDate_clickHandler(event)"
+										  selectedDate="{sDate}"
+										  formatString="YYYY-MM-DD"
+										  dayNames="['日','一','二','三','四','五','六',]"
+										  monthNames="['一','二','三','四','五','六','七','八','九','十','十一','十二']"
+										  selectableRange="{{rangeEnd:new Date()}}"/>
+						</mx:VBox>
+					</mx:HBox>
+					<mx:HBox verticalAlign="top" >
+						<mx:Label text="结束时间:" paddingTop="3"
+								  styleName="WidgetText"/>
+						<mx:VBox horizontalAlign="left"  >
+							<mx:DateField id="endDate"  width="100"
+										  yearNavigationEnabled="true"	
+										  click="endDate_clickHandler(event)"
+										  selectedDate="{eDate}"
+										  formatString="YYYY-MM-DD"
+										  dayNames="['日','一','二','三','四','五','六',]"
+										  monthNames="['一','二','三','四','五','六','七','八','九','十','十一','十二']"
+										  selectableRange="{{rangeStart:startDate.selectedDate,rangeEnd:new Date()}}"/>
+						</mx:VBox>
+					</mx:HBox>
+				</mx:VBox>
+				<mx:HBox  verticalAlign="middle">
+					<s:Label text="出让方式"  fontSize="14"/>
+					<mx:ComboBox id="typeLocate"  width="130" height="22" />
+				</mx:HBox>
+				<mx:HBox  verticalAlign="middle">
+					<s:Label text="所属街镇"  fontSize="14"/>
+					<mx:ComboBox id="streetLocate"   width="130" height="22" />
+				</mx:HBox>
+				<mx:HBox horizontalAlign="center"
+						 paddingTop="10"
+						 width="100%">
+					<mx:Button label="查询"
+							   icon="{Search}"
+							   click="textQuery()"/>
+					<mx:Button label="清除"
+							   icon="{Clear}"
+							   click="clear()"/>
+				</mx:HBox>
+			</mx:VBox>
+			<mx:VBox width="100%"
+					 height="100%"
+					 paddingTop="20">
+				<mx:HBox id="boxMessage"
+						 visible="{msgVisible}"
+						 includeInLayout="{msgVisible}"
+						 horizontalAlign="center"
+						 width="100%"
+						 paddingLeft="10"
+						 paddingTop="15">
+					<mx:SWFLoader id="swfMessage"
+								  source="assets/flash/loader.swf"/>
+					<mx:Text id="txtMessage"
+							 text="正在查询..."
+							 styleName="WidgetText"
+							 width="90%"/>
+				</mx:HBox>
+				<mx:VBox verticalGap="10" paddingLeft="30" includeInLayout="{resultVisible}" visible="{resultVisible}">
+					<mx:HBox >						
+						<s:Label text="统计结果:"  paddingBottom="5" fontSize="16"/>
+					</mx:HBox>
+					<mx:VBox verticalGap="10" paddingLeft="32">
+						<s:RadioButton id="signRbtn" label="{signString}"  selected="false" groupName="class" change="signBtnChange(event)"/>
+						<s:RadioButton id="startRbtn"  label="{startString}"  selected="false" groupName="class" change="startBtnChange(event)"/>
+						<s:RadioButton id="unstartRbtn" label="{unstartString}"  selected="false" groupName="class"  change="unstartBtnChange(event)"/>
+						<s:RadioButton id="finishRbtn" label="{finishString}"  selected="false" groupName="class"  change="finishBtnChange(event)"/>
+						<s:RadioButton id="warnRbtn"  label="{warnString}"  selected="false" groupName="class"  change="warnBtnChange(event)"/>
+					</mx:VBox>
+					<mx:HBox  paddingLeft="70" paddingTop="5">						
+					  <mx:Button label="清除"
+							   icon="{Clear}"
+							   click="clearSelect()"/>
+					</mx:HBox>
+				</mx:VBox>
+			</mx:VBox>
+		</mx:ViewStack>
+	</viewer:WidgetTemplate>
+</viewer:BaseWidget>

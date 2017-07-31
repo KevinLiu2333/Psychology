@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<layers>
+		<extentLayer>
+			<name>出让合同</name>
+			<url>arcgis/rest/services/dynamic_pdgt2012/MapServer/50</url>
+			<fields>CGH,GDPW,MISNO,MISNAME,MISDATE,MISAREA,MISID</fields>
+			<fieldsCN>测绘成果,批复文号,合同编号 ,地块名称,出让时间,出让面积</fieldsCN>
+			<linkURL>/pdgtdbc/common/gisRedirect.jsp?funId=Eg&misid=</linkURL>
+		</extentLayer>
+	</layers>
+	<years>
+	     <url>widgets/Query/years.xml</url>
+	</years>
+</configuration>

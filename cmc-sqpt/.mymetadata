@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="cmc-sqpt"
+  id="myeclipse.1446170328859"
+  context-root="/cmc-sqpt"
+  j2ee-spec="6.0"
+  archive="cmc-sqpt.war">
+  <attributes>
+    <attribute name="webrootdir" value="webapp" />
+  </attributes>
+</project-module>
+

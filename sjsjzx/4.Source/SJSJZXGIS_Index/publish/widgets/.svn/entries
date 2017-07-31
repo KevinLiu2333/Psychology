@@ -1,0 +1,94 @@
+10
+
+dir
+246920
+http://10.1.8.82:1088/svn/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/publish/widgets
+http://10.1.8.82:1088/svn
+
+
+
+2016-01-13T11:14:16.453125Z
+175231
+yangwenxue
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9817e563-51b1-004a-bdbd-08a67d9ca217
+
+Bookmark
+dir
+
+CommenQuery
+dir
+
+Coordinate
+dir
+
+DecisionSupport
+dir
+
+HeaderController
+dir
+
+InfoTemplates
+dir
+
+Interface
+dir
+
+LayerOperation
+dir
+
+Legend
+dir
+
+Locate
+dir
+
+MapMarker
+dir
+
+MapSwitcher
+dir
+
+Measure
+dir
+
+Navigation
+dir
+
+OverviewMap
+dir
+
+Print
+dir
+
+Query
+dir
+
+QueryProject
+dir
+
+Snapshot
+dir
+
+Swipe
+dir
+
+Thematic
+dir
+
+WidgetContainer
+dir
+

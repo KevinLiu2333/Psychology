@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<description>小文件存储</description>
+	<bean name="edataUtils" class="com.wondersgroup.cmc.edata.utils.EdataUtils" init-method="init">
+		<property name="uploadWsdlLocation" value="${edata.upload.wsdlLocation}">
+		</property>
+		<property name="downloadWsdlLocation" value="${edata.download.wsdlLocation}">
+		</property>
+		<property name="timeout" value="${edata.timeout}"></property>
+		<property name="type" value="${edata.type}"></property>
+		<property name="ftpWsdlLocation" value="${edata.ftp.wsdlLocation}"></property>
+	</bean>
+</beans>

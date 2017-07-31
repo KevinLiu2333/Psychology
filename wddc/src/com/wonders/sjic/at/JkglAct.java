@@ -1,13 +1,10 @@
 package com.wonders.sjic.at;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
-
+import com.wonders.sjic.IFCheckUtils;
+import com.wonders.sjic.entity.HttpClientDTO;
+import com.wonders.sjic.entity.InterfaceInfoBo;
+import com.wonders.sjic.entity.InterfaceTransferBo;
+import com.wonders.wddc.tiles.sn.SnCreator;
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
 import org.nutz.ioc.loader.annotation.Inject;
@@ -19,11 +16,7 @@ import org.nutz.mvc.annotation.Ok;
 import org.nutz.mvc.annotation.Param;
 import org.nutz.mvc.view.ServerRedirectView;
 
-import com.wonders.sjic.entity.HttpClientDTO;
-import com.wonders.sjic.entity.InterfaceInfoBo;
-import com.wonders.sjic.entity.InterfaceTransferBo;
-import com.wonders.wddc.tiles.sn.SnCreator;
-import com.wonders.sjic.IFCheckUtils;
+import java.util.*;
 
 /**
  * 接口管理

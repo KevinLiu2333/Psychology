@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<!--
+////////////////////////////////////////////////////////////////////////////////
+//
+// Copyright © 2008 ESRI
+//
+// All rights reserved under the copyright laws of the United States.
+// You may freely redistribute and use this software, with or
+// without modification, provided you include the original copyright
+// and use restrictions.  See use restrictions in the file:
+// <install location>/FlexViewer/License.txt
+//
+////////////////////////////////////////////////////////////////////////////////
+-->
+<configuration>
+	<layers>
+		<extentLayer>
+			<name>违法用地范围</name>
+			<url>arcgis/rest/services/dynamic_pdgt2012/MapServer/17</url>
+			<expression>FID_产业区 like '%[value]%' </expression>
+			<graphicalsearchlabel>从下面选择一种多边形以选定查询范围：</graphicalsearchlabel>
+			<!--fields>PLAN_CODE,PLAN_NUM,START_DATE,PLAN_NAME,END_DATE,TOT_AREA,AUTH_UNIT,APPLY_UNIT,DESGN_UNIT,STATE,POP_SUM,XG_EAST,XG_SOUTH,XG_WEST,XG_NORTH,DISTRICT,REMARK,PLAN_TYPE</fields-->
+			<fields>FID_产业区,二调区县代,二调区县名,控制面积</fields>
+			<fieldsCN>FID_产业区,二调区县代,二调区县名,控制面积</fieldsCN>
+			<titlefield>FID_产业区</titlefield>
+			<linkfield>二调区县代</linkfield>
+			<icon>i_uni1.png</icon>
+		</extentLayer>
+	</layers>
+	<!--excelservice>http://10.1.9.52:8080/EMGIS_Java/servlet/ExcelExport</excelservice-->
+	<linkURL>/page/accumulate/doc_get_fileno.action?二调区县代=</linkURL>
+	<geometryserviceURL>arcgis/rest/services/Geometry/GeometryServer</geometryserviceURL>
+	<excelservice>/EMGIS_Java/servlet/ExcelExport</excelservice>
+	
+</configuration>

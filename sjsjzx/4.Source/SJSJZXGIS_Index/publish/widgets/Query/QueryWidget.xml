@@ -1,0 +1,139 @@
+<?xml version="1.0" ?>
+<configuration>
+	<layers>
+		<layer>
+			<name>主要银行_网点</name>
+			<layerid>2</layerid>
+			<url>arcgis/rest/services/PDGT_TILEMAP2012/MapServer/2</url>
+			<expression>NAME like '%[value]%'</expression>
+			<textsearchlabel>通过设施名称搜索 [ Example: 工商银行 ]</textsearchlabel>
+			<graphicalsearchlabel>从下面选择一种多边形以选定查询范围：</graphicalsearchlabel>
+			<fields>NAME,ADDRESS</fields>
+			<titlefield>NAME</titlefield>
+			<linkfield></linkfield>
+			<icon>zyyh.png</icon>
+		</layer>
+		<layer>
+			<name>委办局</name>
+			<layerid>3</layerid>
+			<url>arcgis/rest/services/PDGT_TILEMAP2012/MapServer/3</url>
+			<expression>NAME like '%[value]%'</expression>
+			<textsearchlabel>通过名称搜索 [ Example: 土地管理署 ]</textsearchlabel>
+			<graphicalsearchlabel>从下面选择一种多边形以选定查询范围：</graphicalsearchlabel>
+			<fields>NAME,SSXT,ADDRESS</fields>
+			<titlefield>NAME</titlefield>
+			<linkfield></linkfield>
+			<icon>wbj.png</icon>
+		</layer>
+		<layer>
+			<name>学校</name>
+			<layerid>4</layerid>
+			<url>arcgis/rest/services/PDGT_TILEMAP2012/MapServer/4</url>
+			<expression>NAME like '%[value]%'</expression>
+			<textsearchlabel>通过学校名称搜索 [ Example: 上海市进才中学 ]</textsearchlabel>
+			<graphicalsearchlabel>从下面选择一种多边形以选定查询范围：</graphicalsearchlabel>
+			<fields>NAME,ADDRESS,XQ,LB</fields>
+			<titlefield>NAME</titlefield>
+			<linkfield></linkfield>
+			<icon>xx.png</icon>
+		</layer>
+		<layer>
+			<name>社区文化中心</name>
+			<layerid>5</layerid>
+			<url>arcgis/rest/services/PDGT_TILEMAP2012/MapServer/5</url>
+			<expression>NAME like '%[value]%'</expression>
+			<textsearchlabel>通过名称搜索 [ Example: 金桥镇 ]</textsearchlabel>
+			<graphicalsearchlabel>从下面选择一种多边形以选定查询范围：</graphicalsearchlabel>
+			<fields>NAME,ADDRESS</fields>
+			<titlefield>NAME</titlefield>
+			<linkfield></linkfield>
+			<icon>sqwhzx.png</icon>
+		</layer>
+		<layer>
+			<name>社区卫生中心</name>
+			<layerid>6</layerid>
+			<url>arcgis/rest/services/PDGT_TILEMAP2012/MapServer/6</url>
+			<expression>NAME like '%[value]%'</expression>
+			<textsearchlabel>通过名称搜索 [ Example: 陆家嘴社区 ]</textsearchlabel>
+			<graphicalsearchlabel>从下面选择一种多边形以选定查询范围：</graphicalsearchlabel>
+			<fields>NAME,ADDRESS,TEL,CODE</fields>
+			<titlefield>NAME</titlefield>
+			<linkfield></linkfield>
+			<icon>sqwszx.png</icon>
+		</layer>
+		<layer>
+			<name>社区事务受理服务中心</name>
+			<layerid>7</layerid>
+			<url>arcgis/rest/services/PDGT_TILEMAP2012/MapServer/7</url>
+			<expression>NAME like '%[value]%'</expression>
+			<textsearchlabel>通过名称搜索 [ Example:曹路镇社区 ]</textsearchlabel>
+			<graphicalsearchlabel>从下面选择一种多边形以选定查询范围：</graphicalsearchlabel>
+			<fields>NAME,ADDRESS,TEL</fields>
+			<titlefield>NAME</titlefield>
+			<linkfield></linkfield>
+			<icon>sqswslzx.png</icon>
+		</layer>
+		<layer>
+			<name>星级酒店</name>
+			<layerid>8</layerid>
+			<url>arcgis/rest/services/PDGT_TILEMAP2012/MapServer/8</url>
+			<expression>NAME like '%[value]%'</expression>
+			<textsearchlabel>通过名称搜索 [ Example:东方滨江大酒店 ]</textsearchlabel>
+			<graphicalsearchlabel>从下面选择一种多边形以选定查询范围：</graphicalsearchlabel>
+			<fields>NAME,ADDRESS,KIND</fields>
+			<titlefield>NAME</titlefield>
+			<linkfield></linkfield>
+			<icon>xjjd.png</icon>
+		</layer>
+		<layer>
+			<name>养老机构</name>
+			<layerid>9</layerid>
+			<url>arcgis/rest/services/PDGT_TILEMAP2012/MapServer/9</url>
+			<expression>NAME like '%[value]%'</expression>
+			<textsearchlabel>通过机构名称搜索 [ Example:张江敬老院 ]</textsearchlabel>
+			<graphicalsearchlabel>从下面选择一种多边形以选定查询范围：</graphicalsearchlabel>
+			<fields>NAME,ADDR</fields>
+			<titlefield>NAME</titlefield>
+			<linkfield></linkfield>
+			<icon>yljg.png</icon>
+		</layer>
+		<layer>
+			<name>轨道交通站点</name>
+			<layerid>10</layerid>
+			<url>arcgis/rest/services/PDGT_TILEMAP2012/MapServer/10</url>
+			<expression>NAME like '%[value]%'</expression>
+			<textsearchlabel>通过名称搜索 [ Example:浦东大道站 ]</textsearchlabel>
+			<graphicalsearchlabel>从下面选择一种多边形以选定查询范围：</graphicalsearchlabel>
+			<fields>NAME,LINE</fields>
+			<titlefield>NAME</titlefield>
+			<linkfield></linkfield>
+			<icon>gdjtzd.png</icon>
+		</layer>
+		<layer>
+			<name>医院</name>
+			<layerid>11</layerid>
+			<url>arcgis/rest/services/PDGT_TILEMAP2012/MapServer/11</url>
+			<expression>NAME like '%[value]%'</expression>
+			<textsearchlabel>通过医院名称搜索 [ Example: 东方医院 ]</textsearchlabel>
+			<graphicalsearchlabel>从下面选择一种多边形以选定查询范围：</graphicalsearchlabel>
+			<fields>NAME,ADDRESS</fields>
+			<titlefield>NAME</titlefield>
+			<linkfield></linkfield>
+			<icon>yy.png</icon>
+		</layer>
+		<layer>
+			<name>标志性建筑</name>
+			<layerid>15</layerid>
+			<url>arcgis/rest/services/PDGT_TILEMAP2012/MapServer/15</url>
+			<expression>NAME like '%[value]%'</expression>
+			<textsearchlabel>通过建筑名称搜索 [ Example: 东方明珠]</textsearchlabel>
+			<graphicalsearchlabel>从下面选择一种多边形以选定查询范围：</graphicalsearchlabel>
+			<fields>NAME</fields>
+			<titlefield>NAME</titlefield>
+			<linkfield></linkfield>
+			<icon>bzxjz.png</icon>
+		</layer>
+	</layers>
+	<geometryserviceURL>arcgis/rest/services/Geometry/GeometryServer</geometryserviceURL>
+	<excelservice>/PDGT_Index/servlet/ExcelExport</excelservice>
+</configuration>

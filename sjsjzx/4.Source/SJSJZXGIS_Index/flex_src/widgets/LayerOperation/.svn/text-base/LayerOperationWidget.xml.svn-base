@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<configuration>
+	<treedata>
+	<url>widgets/LayerOperation/layersTree.xml</url>
+	</treedata>
+	<emLayerIndex>4</emLayerIndex>
+	<zimaoquUrl>arcgis/rest/services/dynamic_pdgt2012/MapServer/62</zimaoquUrl>
+	<!-- 添加地形图年份配置文件 -->
+	<dxtyears>
+	    <year>2011年地形图</year>
+	    <year>2012年地形图</year>
+	    <year>2013年地形图</year>
+	    <year>2014年地形图</year>
+	    <year>2015年地形图</year>
+	</dxtyears>
+</configuration>

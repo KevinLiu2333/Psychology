@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/181685/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/jh/entity/serve
+END
+FlowConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/181685/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/jh/entity/serve/FlowConfig.java
+END
+FlowWorkInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/181685/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/jh/entity/serve/FlowWorkInfo.java
+END
+ServeBusinessInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/181685/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/jh/entity/serve/ServeBusinessInfo.java
+END
+ServeBusinessFieldDetail.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/181685/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/jh/entity/serve/ServeBusinessFieldDetail.java
+END
+ServeDeptIp.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/181685/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/jh/entity/serve/ServeDeptIp.java
+END
+FlowRoleConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/181685/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/jh/entity/serve/FlowRoleConfig.java
+END
+FlowWorkLog.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/181685/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/jh/entity/serve/FlowWorkLog.java
+END
+FlowNodeConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/181685/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/jh/entity/serve/FlowNodeConfig.java
+END
+FlowTaskInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/181685/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/jh/entity/serve/FlowTaskInfo.java
+END

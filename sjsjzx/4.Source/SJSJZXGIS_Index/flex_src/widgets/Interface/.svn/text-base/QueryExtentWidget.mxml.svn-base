@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<viewer:BaseWidget xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" 
+				   xmlns:esri="http://www.esri.com/2008/ags"
+				   xmlns:viewer="com.esri.viewer.*" 
+				   layout="absolute"
+				   initialize="init(event)"
+				   widgetConfigLoaded="widgetConfigLoadedHandler(event)">
+	
+	<fx:Script>
+		<![CDATA[
+			import com.esri.ags.Graphic;
+			import com.esri.ags.geometry.Geometry;
+			import com.esri.ags.geometry.MapPoint;
+			import com.esri.ags.symbols.SimpleFillSymbol;
+			import com.esri.ags.symbols.SimpleLineSymbol;
+			import com.esri.ags.symbols.SimpleMarkerSymbol;
+			import com.esri.ags.symbols.TextSymbol;
+			import com.esri.ags.utils.JSON;
+			import com.esri.viewer.AppEvent;
+			import com.esri.viewer.ViewerContainer;
+			import com.esri.viewer.utils.PostGISGeometryUtil;
+			import com.esri.viewer.utils.UtilsClass;
+			
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.events.FlexEvent;
+			import mx.managers.CursorManager;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			import mx.rpc.http.HTTPService;
+			
+			private var graphicType:String="";
+			private var graphicId:String="";
+			private var extentIdStr:String="";
+			private var tableName:String="";
+			private var queryField:String="";
+			private var callBackFunctionName:String=null;
+			private var selected:Boolean=false;
+			private var ifRefresh:Boolean;
+			private var color:String;
+			private var editSerivceURL:String;
+			private var selectExtentPolySym:SimpleFillSymbol;
+			private var outlineSymBlue:SimpleLineSymbol = new SimpleLineSymbol("solid",0x3942f8, 1, 1.5);
+			private var pointSym:SimpleMarkerSymbol=new SimpleMarkerSymbol("circle",12,0xFF0000);
+
+			private var textFormat:TextFormat=new TextFormat();
+			private var layersArray:Array=new Array;
+			protected function widgetConfigLoadedHandler(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				if(configXML){
+					
+					textFormat.size=12;
+					textFormat.color=0xff0000;
+					textFormat.bold=true;
+					editSerivceURL = servlet_UrlROOT + configXML.editSerivceURL.toString();
+					//editSerivceURL = "http://localhost:8080" + configXML.editSerivceURL.toString();
+			
+					var layersList:XMLList=configXML.labelLayers.layer;
+					for (var i:Number=0; i < layersList.length(); i++)
+					{
+						var layerName:String=layersList[i].name;
+						var labelField:String=layersList[i].labelField;
+						var layer:Object={layerName:layerName, labelField:labelField};
+						layersArray.push(layer);
+					}
+				
+				}
+				map.addLayer(extentLayer);
+				fetchSharedData("queryExtent");
+				fetchSharedData("clear");
+			}
+			
+			private function extentSelectedEventListener(event:AppEvent):void
+			{
+				CursorManager.setBusyCursor();
+				var data:Object=event.data as Object;
+				graphicType=data.type.toString();
+				extentIdStr=data.id.toString();
+				callBackFunctionName=data.callBackFunctionName.toString();
+				graphicId="";
+				var idArr:Array=extentIdStr.split("||");
+				for(var m:int=0;m<idArr.length;m++)
+				{
+					if(m<idArr.length-1)
+					{
+						graphicId+=idArr[m]+"','";
+					}
+					else if(m==idArr.length-1)
+					{
+						graphicId+=idArr[m];
+					}
+				}
+				tableName=data.tablename.toString();
+				var queryField:String=data.queryField||"misid";
+				var isLabled:Boolean=data.isLabled;
+				var labelField:String="";
+				if(isLabled){
+					for(var p:int=0;p<layersArray.length;p++){
+						if(layersArray[p].layerName==tableName){
+							labelField=layersArray[p].labelField;
+							break;
+						}else if(p==layersArray.length-1){
+							
+							Alert.show("没有找到"+tableName+"表中要标注的字段，请检查配置文件。");
+						}
+						
+					}
+				}
+				selected=false;
+				ifRefresh = data.ifRefresh;
+				if(ifRefresh){
+					extentLayer.clear();
+				}
+				color = data.color||"0x3942f8";
+				selectExtentPolySym = new SimpleFillSymbol("solid", Number(color), 0.5, outlineSymBlue);
+				var httpServiceSelected:HTTPService=new HTTPService();
+				if(editSerivceURL)
+				{
+					httpServiceSelected.url=editSerivceURL;
+					httpServiceSelected.method="post";
+					httpServiceSelected.addEventListener(ResultEvent.RESULT,extentSelectedServiceonResult);
+					httpServiceSelected.addEventListener(FaultEvent.FAULT, extentSelectedServiceonFault);
+					httpServiceSelected.resultFormat="e4x";
+					var random:Number=Math.random();
+					var obj:Object=new Object();
+					obj.action="query";
+					obj.misid=graphicId;
+					obj.tablename=tableName;
+					obj.random=random;
+					obj.queryfield=queryField;
+					obj.labelfield=labelField;
+					obj.database="sde";
+					httpServiceSelected.send(obj);
+				}
+				else
+				{
+					Alert.show("请检查保存编辑图形的服务路径！");
+				}
+			}
+			private function extentSelectedServiceonResult(event:ResultEvent):void
+			{
+//				editGraphic_AC.removeAll();
+				var json:Object=JSON.decode(event.result.toString());
+				var geometryArray:Array=json.message as Array;
+				var extentGraphic:Graphic=new Graphic;
+				if(geometryArray&&geometryArray.length>0)
+				{
+					for(var m:int=0;m<geometryArray.length;m++)
+					{
+						var center:MapPoint=new MapPoint;
+						var geometrys:ArrayCollection=PostGISGeometryUtil.stringToGeometrys(geometryArray[m].geom.toString());
+						var textSymbol:TextSymbol=new TextSymbol();
+						textSymbol.textFormat=textFormat;
+						textSymbol.text=geometryArray[m].Name;
+						var geometry:Geometry;
+						for(var i:int=0;i<geometrys.length;i++)
+						{
+							geometry=geometrys[i] as Geometry;
+							center=geometry.extent.center;
+							if(geometry.type==Geometry.MAPPOINT)
+							{
+								extentGraphic=new Graphic(geometry, pointSym,null);
+							}
+							else if(geometry.type==Geometry.POLYLINE)
+							{
+								extentGraphic=new Graphic(geometry,outlineSymBlue,null);
+							}
+							else if(geometry.type==Geometry.POLYGON)
+							{
+								extentGraphic=new Graphic(geometry,selectExtentPolySym,null);
+							}
+							extentLayer.add(extentGraphic);
+	                        if(textSymbol.text){
+								
+								var textGraphic:Graphic=new Graphic(center,textSymbol);
+								extentLayer.add(textGraphic);
+							}
+						}
+					}
+					UtilsClass.zoomToGraphics(map,extentLayer);
+					if(ExternalInterface.available) {
+						ExternalInterface.call(callBackFunctionName, "1");
+					}
+				}else
+				{
+					if(ExternalInterface.available) {
+						ExternalInterface.call(callBackFunctionName, "0");
+					}
+				}
+				CursorManager.removeBusyCursor();
+			}
+			private function extentSelectedServiceonFault(event:FaultEvent):void
+			{
+				CursorManager.removeBusyCursor();
+				Alert.show("查询范围服务出错：" + event.fault);
+			}
+			
+			protected function init(event:FlexEvent):void
+			{
+				// TODO Auto-generated method stub
+				
+				ViewerContainer.addEventListener(AppEvent.EXTENT_SELECTED,extentSelectedEventListener);
+				ViewerContainer.addEventListener(AppEvent.LAYER_CLEAR,layerClearEventListener);
+
+				ViewerContainer.addEventListener(AppEvent.DATA_SENT,dataSentHandler);
+				ViewerContainer.addEventListener(AppEvent.DATA_PUBLISH, sharedDataUpdated);
+			}
+			private function dataSentHandler(event:AppEvent):void
+			{
+				var key:String=event.data.key.toString();
+				if(key=="queryExtent")
+				{
+					if(event.data.data)
+					{
+						callbackFunction(event.data.data);
+					}
+				}else if(key=="clear"){
+					if(event.data.data){
+						
+						layerClearEventListener(event.data.data);
+					}
+				}
+			}
+			private var functionName:String;
+			private function callbackFunction(object:Object):void{
+				
+				functionName=object.typeStr.toString();
+				ExternalInterface.call(functionName);
+			}
+			
+	
+			
+			private function sharedDataUpdated(event:AppEvent):void
+			{	
+				var key:String = event.data.key;
+				if(key=="queryExtent")
+				{
+					if(event.data.data)
+					{
+						callbackFunction(event.data.data);
+					}
+				}else if(key=="clear"){
+					if(event.data.data){
+						
+						layerClearEventListener(event.data.data);
+					}
+				}
+			}
+			
+			private function layerClearEventListener(event:AppEvent=null):void
+			{
+				var data:Object=event.data as Object;
+				callBackFunctionName=data.callBackFunctionName.toString();
+				if(extentLayer)
+				{
+					extentLayer.clear();
+				}
+				ExternalInterface.call(callBackFunctionName, "1");
+			}
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+		<esri:GraphicsLayer id="extentLayer"  alpha="0.8"/>
+	</fx:Declarations>
+</viewer:BaseWidget>

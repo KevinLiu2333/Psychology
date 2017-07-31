@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<configuration>
+    <bookmarks>
+	</bookmarks>
+	<labels>
+		<bookmarkslabel>书签</bookmarkslabel>
+		<addbookmarkslabel>添加书签</addbookmarkslabel>
+		<addlabel>将当前视图添加为下面名称的书签</addlabel>
+		<submitlabel>添加</submitlabel>
+		<errorlabel>请输入书签的名称</errorlabel>
+	</labels>
+	<serviceUrl>/PDGT_Index/servlet/GetBookMark</serviceUrl>
+</configuration>

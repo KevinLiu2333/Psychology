@@ -1,0 +1,4737 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	 ////////////////////////////////////////////////////////////////////////////////
+	 //
+	 // Copyright (c) 2003-2009 Wonders Information Co.,Ltd. All Rights Reserved.
+	 // 5-6/F, 20 Bldg, 481 Guiping RD. Shanghai 200233,PRC
+	 //
+	 // This software is the confidential and proprietary information of Wonders Group.
+	 // (Research & Development Center). You shall not disclose such
+	 // Confidential Information and shall use it only in accordance with
+	 // the terms of the license agreement you entered into with Wonders Group.
+	 //
+	 // Distributable under GUN LGPL license by gun.org
+	 ////////////////////////////////////////////////////////////////////////////////
+-->
+<configuration>
+	<districtQuery>
+		<!-- 
+		<url>/arcgis/rest/services/dynamic_pdgt2012/MapServer/23</url>
+		 -->
+		<url>/arcgis/rest/services/SJ_Road/MapServer/3</url>
+		<expression>BM = '[value]'</expression>
+	</districtQuery>
+	
+	<streetsNameQuery>
+		<!-- 
+			<url>/arcgis/rest/services/dynamic_pdgt2012/MapServer/22</url>
+		 -->
+		<url>/arcgis/rest/services/SJ_Road/MapServer/4</url>
+		<expression>STID = '[value]'</expression>
+		<outfields>NAME</outfields>
+	</streetsNameQuery>
+	
+	<streetsQuery>
+		<!-- 
+		<url>/arcgis/rest/services/dynamic_pdgt2012/MapServer/22</url>
+		 -->
+		<url>/arcgis/rest/services/SJ_Road/MapServer/8</url>
+		<expression>NAME = '[value]'</expression>
+	</streetsQuery>
+	<districtScale>300000</districtScale>	
+	<districts>
+		<district>
+			<name>泗泾镇</name>
+			<value>15123</value>
+		</district>
+		<district>
+			<name>佘山镇</name>
+			<value>15104</value>
+		</district>
+		<district>
+			<name>牛墩镇</name>
+			<value>15137</value>
+		</district>
+		<district>
+			<name>新桥镇</name>
+			<value>15143</value>
+		</district>
+		<district>
+			<name>洞泾镇</name>
+			<value>15141</value>
+		</district>
+		<district>
+			<name>九亭镇</name>
+			<value>15133</value>
+		</district>
+		<district>
+			<name>柳港镇</name>
+			<value>15132</value>
+		</district>
+		<district>
+			<name>小昆山镇</name>
+			<value>15011</value>
+		</district>
+		<district>
+			<name>石湖荡镇</name>
+			<value>15014</value>
+		</district>
+		<district>
+			<name>叶榭镇</name>
+			<value>15121</value>
+		</district>
+		<district>
+			<name>新浜镇</name>
+			<value>15125</value>
+		</district>
+		<district>
+			<name>岳阳街道</name>
+			<value>15114</value>
+		</district>
+		<district>
+			<name>永丰街道</name>
+			<value>15120</value>
+		</district>
+		<district>
+			<name>方松街道</name>
+			<value>15105</value>
+		</district>
+		<district>
+			<name>中山街道</name>
+			<value>15007</value>
+		</district>
+		<district>
+			<name>广富林街道</name>
+			<value>15010</value>
+		</district>
+		<district>
+			<name>九里街街道</name>
+			<value>15016</value>
+		</district>
+	</districts>
+	<crossLocateInfo>
+		<url>/SJSJZXGIS_Index/servlet/IntersectingRoads</url>		
+	</crossLocateInfo>
+<roads>
+<road name="世纪大道"/>
+
+<road name="南京东路"/>
+
+<road name="世博馆路"/>
+
+<road name="世博大道"/>
+
+<road name="世博村路"/>
+
+<road name="翔殷路"/>
+
+<road name="同济路"/>
+
+<road name="重庆中路"/>
+
+<road name="重庆南路"/>
+
+<road name="淞沪路"/>
+
+<road name="漕溪北路"/>
+
+<road name="沪闵路"/>
+
+<road name="莘奉公路"/>
+
+<road name="宝安公路"/>
+
+<road name="大名路"/>
+
+<road name="江苏北路"/>
+
+<road name="武宁南路"/>
+
+<road name="淮海西路"/>
+
+<road name="人民大道"/>
+
+<road name="中山东二路"/>
+
+<road name="淮海东路"/>
+
+<road name="南京东路"/>
+
+<road name="光复西路"/>
+
+<road name="宁夏路"/>
+
+<road name="恒丰北路"/>
+
+<road name="东大名路"/>
+
+<road name="广中西路"/>
+
+<road name="江杨南路"/>
+
+<road name="金沙江路"/>
+
+<road name="顾高路"/>
+
+<road name="川桥路"/>
+
+<road name="港城路"/>
+
+<road name="航三公路"/>
+
+<road name="靖海南路"/>
+
+<road name="鸿音路"/>
+
+<road name="杞青路"/>
+
+<road name="同发路"/>
+
+<road name="大泥公路"/>
+
+<road name="环湖南一路"/>
+
+<road name="环湖东一路"/>
+
+<road name="航瑞路"/>
+
+<road name="周邓公路"/>
+
+<road name="闸航路"/>
+
+<road name="新环北路"/>
+
+<road name="环湖北一路"/>
+
+<road name="东葛路"/>
+
+<road name="振兴东路"/>
+
+<road name="川安路"/>
+
+<road name="北中市街"/>
+
+<road name="东市街"/>
+
+<road name="大生港路"/>
+
+<road name="古桐南路"/>
+
+<road name="第一工业小区路"/>
+
+<road name="富特西三路"/>
+
+<road name="森塘路"/>
+
+<road name="滨洲路"/>
+
+<road name="华开路"/>
+
+<road name="孟莲路"/>
+
+<road name="西街路"/>
+
+<road name="南张路"/>
+
+<road name="硕川路"/>
+
+<road name="新浜支路"/>
+
+<road name="民青路"/>
+
+<road name="蒋尹路"/>
+
+<road name="水闸河路(合庆)"/>
+
+<road name="彩雅路"/>
+
+<road name="上革路"/>
+
+<road name="汽训路"/>
+
+<road name="唐丰路"/>
+
+<road name="王新街"/>
+
+<road name="通三路(高��)"/>
+
+<road name="海一路(高东)"/>
+
+<road name="川新宅路"/>
+
+<road name="奚阳支路"/>
+
+<road name="徐家弄"/>
+
+<road name="八一河东路"/>
+
+<road name="杜新路"/>
+
+<road name="航油路"/>
+
+<road name="卫行路"/>
+
+<road name="劳安路"/>
+
+<road name="中圩路"/>
+
+<road name="纯作路"/>
+
+<road name="故居路"/>
+
+<road name="规划一路(三林)
+"/>
+
+<road name="纬三路(北蔡)"/>
+
+<road name="农元路"/>
+
+<road name="腾飞路"/>
+
+<road name="鹏海路"/>
+
+<road name="启新路"/>
+
+<road name="厂东路"/>
+
+<road name="寿萱桥路"/>
+
+<road name="桃园路(高东)"/>
+
+<road name="南明三路(高东)"/>
+
+<road name="(高桥石化)经五南路"/>
+
+<road name="(高桥石化)纬一路"/>
+
+<road name="(高桥石化)经六路"/>
+
+<road name="(高桥石化)冬青路"/>
+
+<road name="(高桥石化)经七支路"/>
+
+<road name="(高桥石化)纬六支路"/>
+
+<road name="(高桥石化)经九路"/>
+
+<road name="(高桥石化)经五���"/>
+
+<road name="(高桥石化)经四北路"/>
+
+<road name="(高桥石化)纬九路"/>
+
+<road name="(高桥石化)山茶路"/>
+
+<road name="(高桥石化)樱花路"/>
+
+<road name="(高桥石化)海棠路"/>
+
+<road name="(高桥石化)纬十路"/>
+
+<road name="(高桥石化)栀子路"/>
+
+<road name="(高桥石化)凌霄路"/>
+
+<road name="(高桥石化)木槿路"/>
+
+<road name="曹家浜路"/>
+
+<road name="环锦路"/>
+
+<road name="和雅路"/>
+
+<road name="福庆路"/>
+
+<road name="政东路"/>
+
+<road name="影前路"/>
+
+<road name="红临路"/>
+
+<road name="五星支路"/>
+
+<road name="佳南路"/>
+
+<road name="达秀路"/>
+
+<road name="海天东一路"/>
+
+<road name="新共路"/>
+
+<road name="黄赵路"/>
+
+<road name="新春路(黄楼)"/>
+
+<road name="龙港路"/>
+
+<road name="向东中心路"/>
+
+<road name="辉煌路"/>
+
+<road name="青六路"/>
+
+<road name="和平北路"/>
+
+<road name="航校路"/>
+
+<road name="明港路"/>
+
+<road name="临��路"/>
+
+<road name="临翠路"/>
+
+<road name="乳山路"/>
+
+<road name="虹桥南街"/>
+
+<road name="规一路(陆家嘴)"/>
+
+<road name="毕升路"/>
+
+<road name="浦东水泥厂路"/>
+
+<road name="中林街"/>
+
+<road name="高西中心路"/>
+
+<road name="杜尹路"/>
+
+<road name="志伟路"/>
+
+<road name="顺和路"/>
+
+<road name="金东路"/>
+
+<road name="田园路"/>
+
+<road name="河滨东一路"/>
+
+<road name="临太路"/>
+
+<road name="金晓路"/>
+
+<road name="海顺路"/>
+
+<road name="日新支路"/>
+
+<road name="王家车路"/>
+
+<road name="新源路(曹路)"/>
+
+<road name="新辉东路"/>
+
+<road name="朝勤支路"/>
+
+<road name="共一北路"/>
+
+<road name="共一中心路"/>
+
+<road name="春星路"/>
+
+<road name="东凌白路"/>
+
+<road name="八一路"/>
+
+<road name="格邦路"/>
+
+<road name="牌楼环路"/>
+
+<road name="金家二路"/>
+
+<road name="柳岸路"/>
+
+<road name="归泾路"/>
+
+<road name="杨南支路"/>
+
+<road name="���明路"/>
+
+<road name="恒顺路"/>
+
+<road name="白莲泾路(南码头)"/>
+
+<road name="金台路"/>
+
+<road name="荣成路"/>
+
+<road name="金辽路"/>
+
+<road name="柳埠路"/>
+
+<road name="金闽路"/>
+
+<road name="柴场支路"/>
+
+<road name="情谊路"/>
+
+<road name="东三街"/>
+
+<road name="孙杨路"/>
+
+<road name="北艾路"/>
+
+<road name="南经四路(高东)"/>
+
+<road name="银城路"/>
+
+<road name="航城三路"/>
+
+<road name="鹤立东路"/>
+
+<road name="楼沈路"/>
+
+<road name="衣庄街"/>
+
+<road name="古丹路"/>
+
+<road name="大叶支路"/>
+
+<road name="生产河北路"/>
+
+<road name="永春西二路"/>
+
+<road name="大芦西路"/>
+
+<road name="永宁西路"/>
+
+<road name="广北路"/>
+
+<road name="袁友路"/>
+
+<road name="远东村东路"/>
+
+<road name="火箭路"/>
+
+<road name="宏祥路"/>
+
+<road name="万牧北路"/>
+
+<road name="兴黄路"/>
+
+<road name="港舟路"/>
+
+<road name="爱华路"/>
+
+<road name="芦园大道"/>
+
+<road name="玉宇路"/>
+
+<road name="天骄路"/>
+
+<road name="飞舟路"/>
+
+<road name="兴旺路(泥城)"/>
+
+<road name="正茂路"/>
+
+<road name="彭平东路"/>
+
+<road name="文采路"/>
+
+<road name="捷兴路"/>
+
+<road name="观潮路"/>
+
+<road name="美人蕉路"/>
+
+<road name="水芸路"/>
+
+<road name="云鹃路"/>
+
+<road name="荷兰大街"/>
+
+<road name="振东路"/>
+
+<road name="丰产路"/>
+
+<road name="万建路"/>
+
+<road name="万灵路"/>
+
+<road name="滨海路"/>
+
+<road name="东雷路"/>
+
+<road name="朝锦路"/>
+
+<road name="朝航路"/>
+
+<road name="新如路"/>
+
+<road name="六如路"/>
+
+<road name="东翔路"/>
+
+<road name="金亮路"/>
+
+<road name="金凰路"/>
+
+<road name="众济街"/>
+
+<road name="南北大街"/>
+
+<road name="振兴街"/>
+
+<road name="祝星路"/>
+
+<road name="盐北路"/>
+
+<road name="南仓桥路"/>
+
+<road name="水闸河路(祝桥)"/>
+
+<road name="康锦路"/>
+
+<road name="东门路"/>
+
+<road name="沿河泾北路"/>
+
+<road name="三八路"/>
+
+<road name="为民路"/>
+
+<road name="工农北路"/>
+
+<road name="县东街"/>
+
+<road name="跃进路(惠南)"/>
+
+<road name="中山东路(惠南)"/>
+
+<road name="文化路(惠南)"/>
+
+<road name="听悦路"/>
+
+<road name="英雄路"/>
+
+<road name="福汇路"/>
+
+<road name="福缘路"/>
+
+<road name="城西南路"/>
+
+<road name="园百路"/>
+
+<road name="园跃路"/>
+
+<road name="惠乐路"/>
+
+<road name="惠同路"/>
+
+<road name="宣大路"/>
+
+<road name="南大街"/>
+
+<road name="永宁东路"/>
+
+<road name="永旺路"/>
+
+<road name="永春西一路"/>
+
+<road name="园迪路"/>
+
+<road name="园顺路"/>
+
+<road name="惠园路"/>
+
+<road name="栩妙路"/>
+
+<road name="名园路"/>
+
+<road name="九曲路"/>
+
+<road name="陈桥路"/>
+
+<road name="窑墩路"/>
+
+<road name="棋杆路"/>
+
+<road name="园德路"/>
+
+<road name="绿宝路"/>
+
+<road name="荷花路"/>
+
+<road name="蒋仁路"/>
+
+<road name="笋辉路"/>
+
+<road name="汇腾路"/>
+
+<road name="港东街"/>
+
+<road name="王家弄"/>
+
+<road name="陆瓦路"/>
+
+<road name="苗桥路"/>
+
+<road name="环桥路"/>
+
+<road name="公园路"/>
+
+<road name="北油车弄"/>
+
+<road name="金龙街"/>
+
+<road name="竹行街"/>
+
+<road name="汇丽路"/>
+
+<road name="南八灶"/>
+
+<road name="吴桥路"/>
+
+<road name="周市路"/>
+
+<road name="德浦路"/>
+
+<road name="康溪路"/>
+
+<road name="康凌路"/>
+
+<road name="康巴路"/>
+
+<road name="中华路"/>
+
+<road name="经二路(周浦)"/>
+
+<road name="纬二路(周浦)"/>
+
+<road name="建恒路"/>
+
+<road name="下盐路"/>
+
+<road name="浦连路"/>
+
+<road name="闵瑞路"/>
+
+<road name="浦涛路"/>
+
+<road name="长兴河路"/>
+
+<road name="花苑一路"/>
+
+<road name="花苑二路"/>
+
+<road name="航达路"/>
+
+<road name="富田路"/>
+
+<road name="行政路"/>
+
+<road name="方窑路"/>
+
+<road name="航鹤路(小路)"/>
+
+<road name="航帆路"/>
+
+<road name="航中路"/>
+
+<road name="熙成路"/>
+
+<road name="跃进支路"/>
+
+<road name="跃进路(康桥)"/>
+
+<road name="中山北路(周浦)"/>
+
+<road name="光明大道"/>
+
+<road name="立民路"/>
+
+<road name="西市街(航头)"/>
+
+<road name="镇北路(瓦屑)"/>
+
+<road name="坦直路"/>
+
+<road name="生产河南路"/>
+
+<road name="宣镇东路"/>
+
+<road name="拱乐路"/>
+
+<road name="维勤路"/>
+
+<road name="解放路"/>
+
+<road name="海天东三路"/>
+
+<road name="湖秀路"/>
+
+<road name="博云路"/>
+
+<road name="博霞路"/>
+
+<road name="龙沪路"/>
+
+<road name="长美路"/>
+
+<road name="联星支路"/>
+
+<road name="小园浜路"/>
+
+<road name="宝仁路"/>
+
+<road name="金唐路"/>
+
+<road name="高设路"/>
+
+<road name="高建路"/>
+
+<road name="上丰东路"/>
+
+<road name="市场路"/>
+
+<road name="荻山路"/>
+
+<road name="创滨路"/>
+
+<road name="吕三路"/>
+
+<road name="道新北路"/>
+
+<road name="永红路"/>
+
+<road name="中市街(唐镇)"/>
+
+<road name="新环路"/>
+
+<road name="陆行路"/>
+
+<road name="庙港路"/>
+
+<road name="西三里桥路"/>
+
+<road name="四方路"/>
+
+<road name="经三支路(金桥)"/>
+
+<road name="虹桥北街"/>
+
+<road name="陈水关路"/>
+
+<road name="龙星路"/>
+
+<road name="莲林路"/>
+
+<road name="浦华路"/>
+
+<road name="西新街"/>
+
+<road name="玉泉街"/>
+
+<road name="北门外街"/>
+
+<road name="道新南路"/>
+
+<road name="杨东路"/>
+
+<road name="南镇大路"/>
+
+<road name="张家街"/>
+
+<road name="杨镇路"/>
+
+<road name="欧高路"/>
+
+<road name="港湾路"/>
+
+<road name="堆栈路"/>
+
+<road name="东沟北路"/>
+
+<road name="民益路"/>
+
+<road name="小湾南街"/>
+
+<road name="龙三路"/>
+
+<road name="川环北路"/>
+
+<road name="学桥路"/>
+
+<road name="莲东街"/>
+
+<road name="东街"/>
+
+<road name="江镇东街"/>
+
+<road name="王家街"/>
+
+<road name="仓中路"/>
+
+<road name="北浜路"/>
+
+<road name="加枫路"/>
+
+<road name="速航路"/>
+
+<road name="钱家巷路"/>
+
+<road name="临园路"/>
+
+<road name="远洋路"/>
+
+<road name="成功路"/>
+
+<road name="聚华路"/>
+
+<road name="居安路"/>
+
+<road name="学后街"/>
+
+<road name="东沟路"/>
+
+<road name="龚路北街"/>
+
+<road name="道堂路"/>
+
+<road name="定水路"/>
+
+<road name="夹浦路"/>
+
+<road name="福康路"/>
+
+<road name="唐家浜路"/>
+
+<road name="牡丹支路"/>
+
+<road name="王桥街"/>
+
+<road name="益民路"/>
+
+<road name="东河浜路"/>
+
+<road name="沂林路"/>
+
+<road name="浏河路"/>
+
+<road name="思浦路"/>
+
+<road name="海霞路"/>
+
+<road name="中心街"/>
+
+<road name="乔家弄"/>
+
+<road name="王家桥路"/>
+
+<road name="南码头支路"/>
+
+<road name="金新路"/>
+
+<road name="钱仓路"/>
+
+<road name="友林路"/>
+
+<road name="百步街"/>
+
+<road name="钦殿街"/>
+
+<road name="小南码头路"/>
+
+<road name="东��龙路"/>
+
+<road name="春耘路"/>
+
+<road name="凌行路"/>
+
+<road name="青艺路"/>
+
+<road name="历城路"/>
+
+<road name="兰陵路"/>
+
+<road name="上浦西路"/>
+
+<road name="芳芯路"/>
+
+<road name="莲安西路"/>
+
+<road name="兴滨路"/>
+
+<road name="菲拉路"/>
+
+<road name="加太路"/>
+
+<road name="沪东路"/>
+
+<road name="镇北路(曹路)"/>
+
+<road name="虹昌路"/>
+
+<road name="红星路(合庆)"/>
+
+<road name="团林路"/>
+
+<road name="柳杉路"/>
+
+<road name="张家浜路(潍坊)"/>
+
+<road name="拾步街"/>
+
+<road name="恒大路(三林)"/>
+
+<road name="严杨路"/>
+
+<road name="广厦路"/>
+
+<road name="普天路"/>
+
+<road name="茂丰路"/>
+
+<road name="浦东水泥厂二路"/>
+
+<road name="神川路"/>
+
+<road name="镇南路(高东)"/>
+
+<road name="向阳南路"/>
+
+<road name="海塘东路"/>
+
+<road name="银杏园路"/>
+
+<road name="太平路"/>
+
+<road name="前程路"/>
+
+<road name="虹桥路(川沙)"/>
+
+<road name="纬五路(高东)"/>
+
+<road name="商汇步行街"/>
+
+<road name="行泰路"/>
+
+<road name="名商路"/>
+
+<road name="仲景大道"/>
+
+<road name="向阳北路"/>
+
+<road name="亭塘路"/>
+
+<road name="榕桥路"/>
+
+<road name="七九江路"/>
+
+<road name="庙车公路"/>
+
+<road name="张家浜路(金桥)"/>
+
+<road name="金明路"/>
+
+<road name="盐泥路"/>
+
+<road name="虹盛东路"/>
+
+<road name="青云路"/>
+
+<road name="池河路"/>
+
+<road name="西横街"/>
+
+<road name="西市街(唐镇)"/>
+
+<road name="越海路"/>
+
+<road name="西街(高桥)"/>
+
+<road name="旭阳路"/>
+
+<road name="恒大路(恒大建材)"/>
+
+<road name="恒德路"/>
+
+<road name="建光路"/>
+
+<road name="文化路(川沙)"/>
+
+<road name="金通路"/>
+
+<road name="民雪北路"/>
+
+<road name="东集路"/>
+
+<road name="通二路(高东)"/>
+
+<road name="银洲街"/>
+
+<road name="三灶浜路"/>
+
+<road name="集海路"/>
+
+<road name="新伦路"/>
+
+<road name="竹林路"/>
+
+<road name="寿光路"/>
+
+<road name="锦安西路"/>
+
+<road name="西街(龚路)"/>
+
+<road name="新港三路"/>
+
+<road name="新港二路"/>
+
+<road name="新港一路"/>
+
+<road name="良友三路"/>
+
+<road name="新港五路"/>
+
+<road name="钦塘路"/>
+
+<road name="��海一路(曹路)"/>
+
+<road name="洲变路"/>
+
+<road name="张家宅路"/>
+
+<road name="横浜路"/>
+
+<road name="胡家街"/>
+
+<road name="顾锋路"/>
+
+<road name="海纳路"/>
+
+<road name="滨江路"/>
+
+<road name="严明路"/>
+
+<road name="宁阳路"/>
+
+<road name="龙滨路"/>
+
+<road name="济明路"/>
+
+<road name="德恒路"/>
+
+<road name="东育路"/>
+
+<road name="新春路(三林)"/>
+
+<road name="兆港南路"/>
+
+<road name="恒木路"/>
+
+<road name="新梅路"/>
+
+<road name="沈西路"/>
+
+<road name="紫萍路"/>
+
+<road name="周谊路"/>
+
+<road name="鹤立西路"/>
+
+<road name="花苑路(航头)"/>
+
+<road name="海丰路"/>
+
+<road name="申腾路"/>
+
+<road name="六团公路"/>
+
+<road name="万航路"/>
+
+<road name="山兰路"/>
+
+<road name="石松路"/>
+
+<road name="水松路"/>
+
+<road name="海基三路"/>
+
+<road name="远征路"/>
+
+<road name="香港街"/>
+
+<road name="军民路(老港)"/>
+
+<road name="通源西路"/>
+
+<road name="新欣西路"/>
+
+<road name="远联路"/>
+
+<road name="海沈路"/>
+
+<road name="张家桥路"/>
+
+<road name="团南路"/>
+
+<road name="浦红东路"/>
+
+<road name="祝泓路"/>
+
+<road name="西市街(祝桥)"/>
+
+<road name="南季路"/>
+
+<road name="新书路"/>
+
+<road name="塘北路"/>
+
+<road name="大芦公路"/>
+
+<road name="秋萍路"/>
+
+<road name="银品路"/>
+
+<road name="南三支路"/>
+
+<road name="永春南路"/>
+
+<road name="永定北路"/>
+
+<road name="新华路"/>
+
+<road name="林场路"/>
+
+<road name="长草屋路"/>
+
+<road name="陈邵路"/>
+
+<road name="民光路"/>
+
+<road name="浦川路"/>
+
+<road name="星丰路"/>
+
+<road name="新辉西路"/>
+
+<road name="小华港路"/>
+
+<road name="航殷路"/>
+
+<road name="友青路"/>
+
+<road name="美雅路"/>
+
+<road name="宏雅路"/>
+
+<road name="双叶路"/>
+
+<road name="卡园一路"/>
+
+<road name="卡园三路"/>
+
+<road name="达记路"/>
+
+<road name="胡港南路"/>
+
+<road name="茂兴路"/>
+
+<road name="齐恒路"/>
+
+<road name="益丰路"/>
+
+<road name="蔡伦支路"/>
+
+<road name="沈括路"/>
+
+<road name="新盛路"/>
+
+<road name="川北公路"/>
+
+<road name="杰科路"/>
+
+<road name="芳春路"/>
+
+<road name="华益路"/>
+
+<road name="临庞路"/>
+
+<road name="泵站公路"/>
+
+<road name="御衡路"/>
+
+<road name="御叶路"/>
+
+<road name="河西街"/>
+
+<road name="花园街"/>
+
+<road name="庙场街"/>
+
+<road name="新德支路"/>
+
+<road name="龙樱路"/>
+
+<road name="药师新村路"/>
+
+<road name="向阳环村路"/>
+
+<road name="塘东街"/>
+
+<road name="勤昌路"/>
+
+<road name="龄南路"/>
+
+<road name="纯新路"/>
+
+<road name="鹿民路"/>
+
+<road name="圩晨路"/>
+
+<road name="川庆路"/>
+
+<road name="川治路"/>
+
+<road name="梓营路"/>
+
+<road name="韵浦路"/>
+
+<road name="马樱丹路"/>
+
+<road name="民生北路"/>
+
+<road name="丁三路"/>
+
+<road name="姚家宅路"/>
+
+<road name="���家港路"/>
+
+<road name="殷家宅路"/>
+
+<road name="规六路(高桥)"/>
+
+<road name="仓九路"/>
+
+<road name="横浜支路"/>
+
+<road name="大寨路"/>
+
+<road name="建陆路"/>
+
+<road name="芳湄路"/>
+
+<road name="兰谷路"/>
+
+<road name="西黄潼港路"/>
+
+<road name="南群河路"/>
+
+<road name="砖桥街"/>
+
+<road name="树德街"/>
+
+<road name="鹤沙路"/>
+
+<road name="鹤驰路"/>
+
+<road name="鹤雷路"/>
+
+<road name="耀华支路"/>
+
+<road name="台桥路"/>
+
+<road name="申欣路"/>
+
+<road name="亿丰路"/>
+
+<road name="嘴角路"/>
+
+<road name="紫叶路"/>
+
+<road name="新浦支路"/>
+
+<road name="华鹏路"/>
+
+<road name="华春路"/>
+
+<road name="华润路"/>
+
+<road name="北环圆路"/>
+
+<road name="新西街"/>
+
+<road name="场署街"/>
+
+<road name="祝景路"/>
+
+<road name="祝和路"/>
+
+<road name="祝城路"/>
+
+<road name="朱明连路"/>
+
+<road name="中央街"/>
+
+<road name="中山南路(周浦)"/>
+
+<road name="(高桥石化)经十一路"/>
+
+<road name="(高桥石化)棕榈路"/>
+
+<road name="含笑路"/>
+
+<road name="日照路"/>
+
+<road name="小石桥路"/>
+
+<road name="建平路"/>
+
+<road name="浦泽路"/>
+
+<road name="浦悦路"/>
+
+<road name="佳高路"/>
+
+<road name="金京路"/>
+
+<road name="兰桥路"/>
+
+<road name="懋仁街"/>
+
+<road name="东义路"/>
+
+<road name="港滨路"/>
+
+<road name="公园路(高桥)"/>
+
+<road name="申海路"/>
+
+<road name="东海三路"/>
+
+<road name="东海四路"/>
+
+<road name="东海二路"/>
+
+<road name="东海一路(高桥)"/>
+
+<road name="东海西路"/>
+
+<road name="东海路"/>
+
+<road name="长江四路"/>
+
+<road name="长江三路"/>
+
+<road name="长江二路"/>
+
+<road name="长江一路"/>
+
+<road name="东电路"/>
+
+<road name="赵环路"/>
+
+<road name="革新路"/>
+
+<road name="海通路"/>
+
+<road name="申东路"/>
+
+<road name="南经五路(高东)"/>
+
+<road name="通一路(高东)"/>
+
+<road name="海三路(高东)"/>
+
+<road name="海四路(高东)"/>
+
+<road name="经二路(高东)"/>
+
+<road name="经三路(高东)"/>
+
+<road name="经四路(高东)"/>
+
+<road name="经五路(高东)"/>
+
+<road name="纬一路(高东)"/>
+
+<road name="纬二路(高东)"/>
+
+<road name="纬三路(高东)"/>
+
+<road name="纬四路(高东)"/>
+
+<road name="经六路(高东)"/>
+
+<road name="东一路(高东)"/>
+
+<road name="东二路(高东)"/>
+
+<road name="东三路(高东)"/>
+
+<road name="东四路(高东)"/>
+
+<road name="明一路(高东)"/>
+
+<road name="明二路(高东)"/>
+
+<road name="明三路(高东)"/>
+
+<road name="明四路(高东)"/>
+
+<road name="明五路(高东)"/>
+
+<road name="联络道"/>
+
+<road name="孙东路"/>
+
+<road name="殷北路"/>
+
+<road name="中界村道"/>
+
+<road name="罗山路便道"/>
+
+<road name="新多路"/>
+
+<road name="一六路"/>
+
+<road name="三航路"/>
+
+<road name="拯安路"/>
+
+<road name="结字盘路"/>
+
+<road name="齐和街"/>
+
+<road name="陵园路"/>
+
+<road name="环镇东路"/>
+
+<road name="富民路"/>
+
+<road name="卫星西路"/>
+
+<road name="观桥路"/>
+
+<road name="中久路"/>
+
+<road name="唐港路"/>
+
+<road name="新欣东路"/>
+
+<road name="新卫路"/>
+
+<road name="海燕路"/>
+
+<road name="良勤路"/>
+
+<road name="峡海路"/>
+
+<road name="花榈路"/>
+
+<road name="水华路"/>
+
+<road name="素馨路"/>
+
+<road name="银莲路"/>
+
+<road name="汇角路"/>
+
+<road name="永晨路"/>
+
+<road name="永爱路"/>
+
+<road name="南新路"/>
+
+<road name="曙启路"/>
+
+<road name="龙丰路"/>
+
+<road name="朱新路"/>
+
+<road name="会龙路"/>
+
+<road name="孙家沟路"/>
+
+<road name="踊三路"/>
+
+<road name="东李路"/>
+
+<road name="和龙路"/>
+
+<road name="希望路"/>
+
+<road name="远联南路"/>
+
+<road name="桥北路"/>
+
+<road name="奔牛路"/>
+
+<road name="黄龙路"/>
+
+<road name="新邓路"/>
+
+<road name="施新二路"/>
+
+<road name="骆岗路"/>
+
+<road name="葡萄路"/>
+
+<road name="赵行环路"/>
+
+<road name="纬四路(北蔡)"/>
+
+<road name="川和路"/>
+
+<road name="新前路"/>
+
+<road name="S20"/>
+
+<road name="(高桥石化)鹅掌楸路"/>
+
+<road name="(高桥石化)枫杨路"/>
+
+<road name="(高桥石化)广玉兰路"/>
+
+<road name="(高桥石化)桂花路"/>
+
+<road name="(高桥石化)合欢路"/>
+
+<road name="(高桥石化)经八路"/>
+
+<road name="(高桥石化)经三北路"/>
+
+<road name="(高桥石化)经三路"/>
+
+<road name="(高桥石化)银杏路"/>
+
+<road name="(高桥石化)梧桐路"/>
+
+<road name="(高桥石化)夏鹃路"/>
+
+<road name="(高桥石化)香樟路"/>
+
+<road name="(高桥石化)意杨路"/>
+
+<road name="(高桥石化)经二路"/>
+
+<road name="(高桥石化)经七路"/>
+
+<road name="(高桥石化)经十路"/>
+
+<road name="(高桥石化)经四路"/>
+
+<road name="(高桥石化)经五北路"/>
+
+<road name="(高桥石化)秋菊路"/>
+
+<road name="(高桥石化)石榴路"/>
+
+<road name="(高桥石化)纬八路"/>
+
+<road name="(高桥石化)纬二路"/>
+
+<road name="(高桥石化)纬六路"/>
+
+<road name="(高桥石化)纬七路"/>
+
+<road name="(高桥石化)纬七支路"/>
+
+<road name="(高桥石化)纬三路"/>
+
+<road name="(高桥石化)纬四路"/>
+
+<road name="(高桥石化)纬五路"/>
+
+<road name="纬一路(高桥)"/>
+
+<road name="纬五路(高桥)"/>
+
+<road name="纬四路(高桥)"/>
+
+<road name="纬三路(高桥)"/>
+
+<road name="纬二路(高桥)"/>
+
+<road name="经二路(高桥)"/>
+
+<road name="经一路(高桥)"/>
+
+<road name="经三路(高桥)"/>
+
+<road name="经四路(高桥)"/>
+
+<road name="经五路(高桥)"/>
+
+<road name="经六路(高桥)"/>
+
+<road name="经七路(高桥)"/>
+
+<road name="爱迪生路"/>
+
+<road name="祖冲之路"/>
+
+<road name="爱都路"/>
+
+<road name="邹平路"/>
+
+<road name="紫竹路"/>
+
+<road name="紫衣路"/>
+
+<road name="紫雅路"/>
+
+<road name="爱民路"/>
+
+<road name="紫薇路"/>
+
+<road name="紫杉路"/>
+
+<road name="紫荆花路"/>
+
+<road name="紫槐路"/>
+
+<road name="梓康路"/>
+
+<road name="砖桥路"/>
+
+<road name="祝悦路"/>
+
+<road name="祝钦路"/>
+
+<road name="祝潘公路"/>
+
+<road name="祝家港路"/>
+
+<road name="祝惠路"/>
+
+<road name="祝航路"/>
+
+<road name="祝川路"/>
+
+<road name="竹柏路"/>
+
+<road name="洲海路"/>
+
+<road name="周祝公路"/>
+
+<road name="周园路"/>
+
+<road name="周园北路"/>
+
+<road name="周星路"/>
+
+<road name="周康路"/>
+
+<road name="周家嘴路"/>
+
+<road name="周家渡路"/>
+
+<road name="周东南路"/>
+
+<road name="周东路"/>
+
+<road name="重霄路"/>
+
+<road name="众安路"/>
+
+<road name="中市街(航头)"/>
+
+<road name="中市街(川沙)"/>
+
+<road name="中山南路"/>
+
+<road name="中山路"/>
+
+<road name="中山东一路"/>
+
+<road name="中山东路(周浦)"/>
+
+<road name="车站路(新场)"/>
+
+<road name="坦南路"/>
+
+<road name="秀丰路"/>
+
+<road name="新大街"/>
+
+<road name="休闲街"/>
+
+<road name="红三港路"/>
+
+<road name="三灶南街"/>
+
+<road name="耕耘路"/>
+
+<road name="港园路"/>
+
+<road name="果园路"/>
+
+<road name="永进路"/>
+
+<road name="文院街"/>
+
+<road name="集市弄"/>
+
+<road name="南油车弄"/>
+
+<road name="创新街"/>
+
+<road name="三灶东街"/>
+
+<road name="三灶西街"/>
+
+<road name="艺华路"/>
+
+<road name="水晶路"/>
+
+<road name="下沙老街"/>
+
+<road name="益民路(瓦屑)"/>
+
+<road name="六军路"/>
+
+<road name="操场街"/>
+
+<road name="曹治路"/>
+
+<road name="赵瓦路"/>
+
+<road name="永定南路"/>
+
+<road name="盐光路"/>
+
+<road name="新鹏支路"/>
+
+<road name="先新路"/>
+
+<road name="夏忠路"/>
+
+<road name="大沙路"/>
+
+<road name="荡湾支路"/>
+
+<road name="东乐路"/>
+
+<road name="发展西路"/>
+
+<road name="港北路"/>
+
+<road name="拱北路"/>
+
+<road name="广衍路"/>
+
+<road name="海桥路(航头)"/>
+
+<road name="杭湾路"/>
+
+<road name="基地七路"/>
+
+<road name="红三中心路"/>
+
+<road name="洪东街"/>
+
+<road name="洪进路"/>
+
+<road name="北新溪路"/>
+
+<road name="吉冬路"/>
+
+<road name="康威路"/>
+
+<road name="芦亚大道"/>
+
+<road name="陆楼路"/>
+
+<road name="鹿川路"/>
+
+<road name="其新连路"/>
+
+<road name="鹿湖路"/>
+
+<road name="茂宏路"/>
+
+<road name="梅花路(惠南)"/>
+
+<road name="密果路"/>
+
+<road name="南京路"/>
+
+<road name="牛渔路"/>
+
+<road name="金银河路"/>
+
+<road name="沿河路(瓦屑)"/>
+
+<road name="曲幽路"/>
+
+<road name="申瓦路"/>
+
+<road name="施宏路"/>
+
+<road name="世纪塘"/>
+
+<road name="书和路"/>
+
+<road name="双同路"/>
+
+<road name="水闸北路"/>
+
+<road name="水闸南路"/>
+
+<road name="顺通路"/>
+
+<road name="笋金路"/>
+
+<road name="笋立路"/>
+
+<road name="同望路"/>
+
+<road name="图翔路"/>
+
+<road name="万四路"/>
+
+<road name="文和街"/>
+
+<road name="西沙路"/>
+
+<road name="沿河泾西路"/>
+
+<road name="军民路(航头)"/>
+
+<road name="欧高公路"/>
+
+<road name="东陆路"/>
+
+<road name="东远航路"/>
+
+<road name="闻六路"/>
+
+<road name="太平整路"/>
+
+<road name="吴七路"/>
+
+<road name="农场路"/>
+
+<road name="赵行街"/>
+
+<road name="陶安路"/>
+
+<road name="叶家角路"/>
+
+<road name="新跃路"/>
+
+<road name="新港八路"/>
+
+<road name="恒庆路"/>
+
+<road name="环薛家西路"/>
+
+<road name="东永支路"/>
+
+<road name="东永路"/>
+
+<road name="御桥印家路"/>
+
+<road name="康沿路"/>
+
+<road name="天牛路"/>
+
+<road name="花苑三路"/>
+
+<road name="风景街"/>
+
+<road name="迎薰路"/>
+
+<road name="六灶湾路"/>
+
+<road name="海洋七路"/>
+
+<road name="海基六路"/>
+
+<road name="箭桥路"/>
+
+<road name="银樽路"/>
+
+<road name="华萃路"/>
+
+<road name="瑞金南路"/>
+
+<road name="海天六路"/>
+
+<road name="西大街(周浦)"/>
+
+<road name="微捷路"/>
+
+<road name="塘桥路"/>
+
+<road name="东佳路"/>
+
+<road name="东环圆路"/>
+
+<road name="漕溪路"/>
+
+<road name="召楼路"/>
+
+<road name="招远路"/>
+
+<road name="张杨路"/>
+
+<road name="张杨北路"/>
+
+<road name="张民路"/>
+
+<road name="张江路"/>
+
+<road name="张衡路"/>
+
+<road name="张东路"/>
+
+<road name="枣庄路"/>
+
+<road name="薀川路"/>
+
+<road name="运通路"/>
+
+<road name="运河路"/>
+
+<road name="芸香路"/>
+
+<road name="云雅路"/>
+
+<road name="云夏路"/>
+
+<road name="云台路"/>
+
+<road name="云山路"/>
+
+<road name="云桥路"/>
+
+<road name="云莲路"/>
+
+<road name="云汉路"/>
+
+<road name="���高中路"/>
+
+<road name="杨高南路"/>
+
+<road name="杨高北一路"/>
+
+<road name="杨高北路"/>
+
+<road name="扬帆路"/>
+
+<road name="艳阳路"/>
+
+<road name="盐大路"/>
+
+<road name="盐朝公路"/>
+
+<road name="沿江路"/>
+
+<road name="沿河路(宣桥)"/>
+
+<road name="严中路"/>
+
+<road name="严镇路"/>
+
+<road name="严桥路"/>
+
+<road name="严民路"/>
+
+<road name="严丰路"/>
+
+<road name="延安路高架"/>
+
+<road name="烟墩路"/>
+
+<road name="雪野路"/>
+
+<road name="雪野二路"/>
+
+<road name="雪绒花路"/>
+
+<road name="雪莲路"/>
+
+<road name="学赵路"/>
+
+<road name="学前街"/>
+
+<road name="学海路"/>
+
+<road name="学北路"/>
+
+<road name="宣竹路"/>
+
+<road name="宣中路"/>
+
+<road name="宣新路"/>
+
+<road name="宣夏路"/>
+
+<road name="宣秋路"/>
+
+<road name="宣桥大街"/>
+
+<road name="宣梅路"/>
+
+<road name="宣兰路"/>
+
+<road name="宣黄公路"/>
+
+<road name="宣港河西路"/>
+
+<road name="宣港河东路"/>
+
+<road name="宣春路"/>
+
+<road name="宣城路"/>
+
+<road name="旭日路"/>
+
+<road name="徐邵路"/>
+
+<road name="徐家汇路"/>
+
+<road name="绣川路"/>
+
+<road name="秀沿路"/>
+
+<road name="秀沈路"/>
+
+<road name="跃丰路"/>
+
+<road name="跃东路"/>
+
+<road name="悦目路"/>
+
+<road name="远航路"/>
+
+<road name="远航东路"/>
+
+<road name="源深路"/>
+
+<road name="源华路"/>
+
+<road name="园洲路"/>
+
+<road name="园中路"/>
+
+<road name="园盈路"/>
+
+<road name="园一路"/>
+
+<road name="园西路"/>
+
+<road name="园通路"/>
+
+<road name="园三路"/>
+
+<road name="园林路"/>
+
+<road name="园恒路"/>
+
+<road name="园二路"/>
+
+<road name="园春路"/>
+
+<road name="御秀路"/>
+
+<road name="御霞路"/>
+
+<road name="御水路"/>
+
+<road name="御山路"/>
+
+<road name="御青路"/>
+
+<road name="御桥路"/>
+
+<road name="御北路"/>
+
+<road name="育苗路"/>
+
+<road name="育建路"/>
+
+<road name="玉兰路"/>
+
+<road name="羽山路"/>
+
+<road name="渔港路"/>
+
+<road name="友诚路"/>
+
+<road name="泳耀路"/>
+
+<road name="永业路"/>
+
+<road name="永泰路"/>
+
+<road name="永宁路"/>
+
+<road name="永建路"/>
+
+<road name="永达路(南汇)"/>
+
+<road name="永达路(合庆)"/>
+
+<road name="永春中路"/>
+
+<road name="永春东路"/>
+
+<road name="永春北路"/>
+
+<road name="营前路"/>
+
+<road name="迎春路"/>
+
+<road name="迎春街"/>
+
+<road name="迎宾南侧联络道"/>
+
+<road name="迎宾路"/>
+
+<road name="迎宾北侧联络道"/>
+
+<road name="樱花路"/>
+
+<road name="英伦路"/>
+
+<road name="英墩路"/>
+
+<road name="银霄路"/>
+
+<road name="银山路"/>
+
+<road name="银柳路"/>
+
+<road name="银环路"/>
+
+<road name="银河路"/>
+
+<road name="银峰路"/>
+
+<road name="银冬路"/>
+
+<road name="银城中路"/>
+
+<road name="殷军路"/>
+
+<road name="殷家浜路"/>
+
+<road name="懿行路"/>
+
+<road name="懿德路"/>
+
+<road name="意威路"/>
+
+<road name="逸仙路"/>
+
+<road name="益江路"/>
+
+<road name="益华路"/>
+
+<road name="义王路"/>
+
+<road name="倚天路"/>
+
+<road name="沂南路"/>
+
+<road name="业盛路"/>
+
+<road name="耀元路"/>
+
+<road name="耀体路"/>
+
+<road name="耀龙路"/>
+
+<road name="耀江路"/>
+
+<road name="耀华路"/>
+
+<road name="耀川路"/>
+
+<road name="遥墙路"/>
+
+<road name="洋浩路"/>
+
+<road name="杨源路"/>
+
+<road name="杨新路"/>
+
+<road name="杨新东路"/>
+
+<road name="杨思路"/>
+
+<road name="杨树浦路"/>
+
+<road name="杨南路"/>
+
+<road name="杨莲路"/>
+
+<road name="杨家沟路"/>
+
+<road name="中科路"/>
+
+<road name="中环路"/>
+
+<road name="中横港南路"/>
+
+<road name="中横港路"/>
+
+<road name="中横港北路"/>
+
+<road name="中高公路"/>
+
+<road name="中大街"/>
+
+<road name="置业路"/>
+
+<road name="志丹路"/>
+
+<road name="政海路"/>
+
+<road name="正定路"/>
+
+<road name="镇��心路"/>
+
+<road name="镇南路(施湾)"/>
+
+<road name="振兴路(瓦屑)"/>
+
+<road name="振兴路(彭镇)"/>
+
+<road name="振兴路(黄路)"/>
+
+<road name="振万路"/>
+
+<road name="浙桥路"/>
+
+<road name="肇嘉浜路"/>
+
+<road name="赵高公路"/>
+
+<road name="武宁路"/>
+
+<road name="五洲大道"/>
+
+<road name="五星路"/>
+
+<road name="五莲路"/>
+
+<road name="吴中路"/>
+
+<road name="吴淞路"/>
+
+<road name="吴店路"/>
+
+<road name="闻居路"/>
+
+<road name="文友街"/>
+
+<road name="文益街"/>
+
+<road name="文心路"/>
+
+<road name="文卫路"/>
+
+<road name="文体路"/>
+
+<road name="文师街"/>
+
+<road name="文良街"/>
+
+<road name="文化西路"/>
+
+<road name="卫星东路"/>
+
+<road name="卫亭路"/>
+
+<road name="潍坊西路"/>
+
+<road name="潍坊路"/>
+
+<road name="围场河路"/>
+
+<road name="圩华路"/>
+
+<road name="为民街"/>
+
+<road name="微山路"/>
+
+<road name="威斯路"/>
+
+<road name="王桥路"/>
+
+<road name="王港路"/>
+
+<road name="万耘路"/>
+
+<road name="万祥街"/>
+
+<road name="万松路"/>
+
+<road name="万水路"/>
+
+<road name="万牧路"/>
+
+<road name="万金路"/>
+
+<road name="万和路"/>
+
+<road name="万德路"/>
+
+<road name="万达路"/>
+
+<road name="万安街"/>
+
+<road name="晚霞路"/>
+
+<road name="宛虹路"/>
+
+<road name="瓦屑街"/>
+
+<road name="团厅路"/>
+
+<road name="团金路"/>
+
+<road name="同兴路"/>
+
+<road name="同顺大道"/>
+
+<road name="同强路"/>
+
+<road name="同汇路"/>
+
+<road name="同港路"/>
+
+<road name="同创路"/>
+
+<road name="通源东路"/>
+
+<road name="通耀路	"/>
+
+<road name="通济路"/>
+
+<road name="庭安路"/>
+
+<road name="听乐路"/>
+
+<road name="听潮南路"/>
+
+<road name="听潮路"/>
+
+<road name="天宇路"/>
+
+<road name="天雪路"/>
+
+<road name="天雄路"/>
+
+<road name="天山路"/>
+
+<road name="天目中路"/>
+
+<road name="天目西路"/>
+
+<road name="天目路"/>
+
+<road name="天高路"/>
+
+<road name="陶桥路"/>
+
+<road name="桃园路(书院)"/>
+
+<road name="桃仙路"/>
+
+<road name="桃浦路"/>
+
+<road name="桃林路"/>
+
+<road name="塘子泾路"/>
+
+<road name="塘下公路"/>
+
+<road name="塘西中心路"/>
+
+<road name="塘桥新路"/>
+
+<road name="塘南路"/>
+
+<road name="塘红路"/>
+
+<road name="唐众路"/>
+
+<road name="唐镇路"/>
+
+<road name="唐兴路"/>
+
+<road name="唐念路"/>
+
+<road name="唐陆公路"/>
+
+<road name="唐龙路"/>
+
+<road name="唐黄路"/>
+
+<road name="唐安路"/>
+
+<road name="坦仁路"/>
+
+<road name="谈龙路"/>
+
+<road name="泰环路"/>
+
+<road name="泰华路"/>
+
+<road name="锦绣东路"/>
+
+<road name="泰谷路"/>
+
+<road name="台中南路"/>
+
+<road name="台中北路"/>
+
+<road name="台南西路"/>
+
+<road name="台南东路"/>
+
+<road name="台儿庄路"/>
+
+<road name="台北西路"/>
+
+<road name="台北东路"/>
+
+<road name="笋中路"/>
+
+<road name="笋心路"/>
+
+<road name="笋王路"/>
+
+<road name="孙新路"/>
+
+<road name="孙桥路"/>
+
+<road name="孙浦路"/>
+
+<road name="孙农路"/>
+
+<road name="孙建路"/>
+
+<road name="孙环路"/>
+
+<road name="孙弘路"/>
+
+<road name="秀浦路"/>
+
+<road name="秀龙路"/>
+
+<road name="秀康路"/>
+
+<road name="幸新路"/>
+
+<road name="幸福新街"/>
+
+<road name="行南路"/>
+
+<road name="行德路"/>
+
+<road name="星升路"/>
+
+<road name="星勤路"/>
+
+<road name="兴运路"/>
+
+<road name="兴旺路(东海)"/>
+
+<road name="兴城路"/>
+
+<road name="鑫旺路"/>
+
+<road name="鑫盛路"/>
+
+<road name="新泽路"/>
+
+<road name="新源路"/>
+
+<road name="新园路(六团)"/>
+
+<road name="新园路(高东)"/>
+
+<road name="新元南路"/>
+
+<road name="新艺路"/>
+
+<road name="新雅路"/>
+
+<road name="新行路"/>
+
+<road name="新沃路"/>
+
+<road name="新坦瓦公路"/>
+
+<road name="新四平公路"/>
+
+<road name="新生路"/>
+
+<road name="新浦路"/>
+
+<road name="新鹏路"/>
+
+<road name="新泥路"/>
+
+<road name="新龙路"/>
+
+<road name="新灵路"/>
+
+<road name="新兰路"/>
+
+<road name="新金桥路"/>
+
+<road name="新建路"/>
+
+<road name="新环西路"/>
+
+<road name="新环南路"/>
+
+<road name="新环东路"/>
+
+<road name="新浩路"/>
+
+<road name="新瀚路"/>
+
+<road name="新港七路"/>
+
+<road name="新港大道"/>
+
+<road name="新府路"/>
+
+<road name="新奉公路"/>
+
+<road name="新东路"/>
+
+<road name="新德西路"/>
+
+<road name="新德路"/>
+
+<road name="新村路(杨思)"/>
+
+<road name="新村路"/>
+
+<road name="新川路"/>
+
+<road name="新城西路"/>
+
+<road name="新城东路"/>
+
+<road name="新陈路"/>
+
+<road name="新场大街"/>
+
+<road name="新浜路"/>
+
+<road name="欣铁路"/>
+
+<road name="歇浦路"/>
+
+<road name="小云台街"/>
+
+<road name="小湾北街"/>
+
+<road name="小白路"/>
+
+<road name="萧山路"/>
+
+<road name="项文路"/>
+
+<road name="向阳路"/>
+
+<road name="向学街"/>
+
+<road name="向华中路"/>
+
+<road name="向城路"/>
+
+<road name="翔川路"/>
+
+<road name="祥跃路"/>
+
+<road name="祥隆路"/>
+
+<road name="祥凯路"/>
+
+<road name="祥福路"/>
+
+<road name="祥安路"/>
+
+<road name="香竹路"/>
+
+<road name="香益路"/>
+
+<road name="香兴路"/>
+
+<road name="香楠路"/>
+
+<road name="香光路"/>
+
+<road name="香格里拉路"/>
+
+<road name="咸阳路"/>
+
+<road name="夏洲路"/>
+
+<road name="夏栎路"/>
+
+<road name="夏乐路"/>
+
+<road name="夏兰路"/>
+
+<road name="夏碧路"/>
+
+<road name="下盐公路"/>
+
+<road name="下沙新街"/>
+
+<road name="下沙西街"/>
+
+<road name="下南路"/>
+
+<road name="霞光路"/>
+
+<road name="溪平路"/>
+
+<road name="溪兰路"/>
+
+<road name="奚阳公路"/>
+
+<road name="希雅路"/>
+
+<road name="西中路"/>
+
+<road name="西营南路"/>
+
+<road name="西营路"/>
+
+<road name="西泰林路"/>
+
+<road name="西市街(川沙)"/>
+
+<road name="西泥路"/>
+
+<road name="西门路"/>
+
+<road name="西藏中路"/>
+
+<road name="西藏南路"/>
+
+<road name="西藏北路"/>
+
+<road name="物流大道"/>
+
+<road name="西门大街"/>
+
+<road name="西凌江路"/>
+
+<road name="西里路"/>
+
+<road name="西河浜路"/>
+
+<road name="武夷山路"/>
+
+<road name="石潭街"/>
+
+<road name="石笋街"/>
+
+<road name="石皮路"/>
+
+<road name="石皮泐路"/>
+
+<road name="石楠路"/>
+
+<road name="石门二路"/>
+
+<road name="石家街"/>
+
+<road name="十一墩街"/>
+
+<road name="施镇路"/>
+
+<road name="施新三路"/>
+
+<road name="施新路"/>
+
+<road name="施湾三路"/>
+
+<road name="施湾七路"/>
+
+<road name="施湾路"/>
+
+<road name="施湾六路"/>
+
+<road name="施湾二路"/>
+
+<road name="盛苑路"/>
+
+<road name="盛夏路"/>
+
+<road name="胜利路"/>
+
+<road name="沈庄路"/>
+
+<road name="沈钱路"/>
+
+<road name="沈梅路"/>
+
+<road name="沈梅东路"/>
+
+<road name="沈家弄路"/>
+
+<road name="沈家港路"/>
+
+<road name="沈杜公路"/>
+
+<road name="申亚路"/>
+
+<road name="申伟路"/>
+
+<road name="申欧路"/>
+
+<road name="申杰路"/>
+
+<road name="人民路(泥城)"/>
+
+<road name="人民东路"/>
+
+<road name="曲阳路"/>
+
+<road name="秋雨路"/>
+
+<road name="秋兴路"/>
+
+<road name="秋祥路"/>
+
+<road name="秋霞路"/>
+
+<road name="秋岚路"/>
+
+<road name="秋荷路"/>
+
+<road name="庆荣路"/>
+
+<road name="庆南路"/>
+
+<road name="庆利路"/>
+
+<road name="庆达路"/>
+
+<road name="庆滨路"/>
+
+<road name="清溪路"/>
+
+<road name="青厦路"/>
+
+<road name="青桐路"/>
+
+<road name="青四中心路"/>
+
+<road name="青三路"/>
+
+<road name="青鸟路"/>
+
+<road name="青暮路"/>
+
+<road name="青黛路"/>
+
+<road name="勤政路"/>
+
+<road name="勤益路"/>
+
+<road name="勤俭路"/>
+
+<road name="勤奋路"/>
+
+<road name="勤川路	"/>
+
+<road name="秦桥路"/>
+
+<road name="秦家港路"/>
+
+<road name="��家浜路"/>
+
+<road name="前哨支路"/>
+
+<road name="前哨路"/>
+
+<road name="千祥路"/>
+
+<road name="千汇路"/>
+
+<road name="启航路"/>
+
+<road name="启帆路"/>
+
+<road name="棋瓦路"/>
+
+<road name="其乐路"/>
+
+<road name="齐河路"/>
+
+<road name="齐爱路"/>
+
+<road name="栖霞路"/>
+
+<road name="栖山路"/>
+
+<road name="普园路"/>
+
+<road name="普迎路"/>
+
+<road name="普新路"/>
+
+<road name="普陀路"/>
+
+<road name="普庆路"/>
+
+<road name="浦逸路"/>
+
+<road name="浦阳路"/>
+
+<road name="浦星公路"/>
+
+<road name="浦庭路"/>
+
+<road name="浦三路"/>
+
+<road name="申江路"/>
+
+<road name="申河路"/>
+
+<road name="申港大道南路"/>
+
+<road name="申港大道北路"/>
+
+<road name="申港大道"/>
+
+<road name="申非路"/>
+
+<road name="申波路"/>
+
+<road name="申安路"/>
+
+<road name="尚博路"/>
+
+<road name="上钦路"/>
+
+<road name="上浦路"/>
+
+<road name="上南路"/>
+
+<road name="上科路"/>
+
+<road name="上钢路"/>
+
+<road name="上丰路"/>
+
+<road name="上川路"/>
+
+<road name="上浜路"/>
+
+<road name="商城路(陆家嘴)"/>
+
+<road name="商城路(航头)"/>
+
+<road name="沙泥路"/>
+
+<road name="沙泥北路"/>
+
+<road name="沙甲路"/>
+
+<road name="森林路"/>
+
+<road name="三灶路"/>
+
+<road name="三灶北街"/>
+
+<road name="三宣公路"/>
+
+<road name="三新路"/>
+
+<road name="三三公路"/>
+
+<road name="三鲁公路"/>
+
+<road name="沪南公路"/>
+
+<road name="三林路"/>
+
+<road name="三角街"/>
+
+<road name="三甲路"/>
+
+<road name="三八河路"/>
+
+<road name="瑞意路"/>
+
+<road name="瑞阳路"/>
+
+<road name="瑞兴路"/>
+
+<road name="瑞祥路"/>
+
+<road name="瑞庆路"/>
+
+<road name="瑞浦路"/>
+
+<road name="瑞木路"/>
+
+<road name="瑞和路"/>
+
+<road name="瑞德路"/>
+
+<road name="瑞昌路"/>
+
+<road name="瑞安路"/>
+
+<road name="荣川路"/>
+
+<road name="日樱南路"/>
+
+<road name="日樱北路"/>
+
+<road name="日京路"/>
+
+<road name="日东路"/>
+
+<road name="日滨路"/>
+
+<road name="日阪路"/>
+
+<road name="仁义路"/>
+
+<road name="仁庆路"/>
+
+<road name="人民西路"/>
+
+<road name="人民塘"/>
+
+<road name="人民路(周浦)"/>
+
+<road name="随塘公路"/>
+
+<road name="松涛路"/>
+
+<road name="松林路"/>
+
+<road name="四平路"/>
+
+<road name="硕放路"/>
+
+<road name="顺运路"/>
+
+<road name="顺翔路"/>
+
+<road name="顺航路"/>
+
+<road name="水门路"/>
+
+<road name="水洞港路"/>
+
+<road name="双桥路"/>
+
+<road name="双江路"/>
+
+<road name="双惠路"/>
+
+<road name="曙光路"/>
+
+<road name="书塘路"/>
+
+<road name="首善街"/>
+
+
+<road name="石沿路"/>
+
+<road name="茂祥路"/>
+
+<road name="茂盛路"/>
+
+<road name="马五公路"/>
+
+<road name="马吉路"/>
+
+<road name="罗山路"/>
+
+<road name="绿荫路"/>
+
+<road name="绿林路"/>
+
+<road name="绿科路"/>
+
+<road name="禄口路"/>
+
+<road name="鹿溪路"/>
+
+<road name="鹿顺路"/>
+
+<road name="鹿明湖路"/>
+
+<road name="鹿吉路"/>
+
+<road name="鹿弘路"/>
+
+<road name="鹿达路"/>
+
+<road name="鹿滨路"/>
+
+<road name="陆家嘴西路"/>
+
+<road name="陆家嘴环路"/>
+
+<road name="陆家嘴东路"/>
+
+<road name="陆家路"/>
+
+<road name="陆家浜路"/>
+
+<road name="鲁桥路"/>
+
+<road name="鲁班路"/>
+
+<road name="芦云路"/>
+
+<road name="芦五公路"/>
+
+<road name="芦硕路"/>
+
+<road name="芦茂路"/>
+
+<road name="芦乐大道"/>
+
+<road name="芦潮路"/>
+
+<road name="芦安路"/>
+
+<road name="陇桥路"/>
+
+<road name="龙竹路"/>
+
+<road name="龙跃路"/>
+
+<road name="龙阳路"/>
+
+<road name="龙新路"/>
+
+<road name="龙居路"/>
+
+<road name="龙江河路"/>
+
+<road name="龙嘉路"/>
+
+<road name="龙汇路"/>
+
+<road name="龙东支路"/>
+
+<road name="龙东大道"/>
+
+<road name="六奉公路"/>
+
+<road name="流亭路"/>
+
+<road name="领航路"/>
+
+<road name="龄六路"/>
+
+<road name="铃兰路"/>
+
+<road name="凌兆园区路"/>
+
+<road name="凌兆路"/>
+
+<road name="凌杨路"/>
+
+<road name="凌空路"/>
+
+<road name="凌江路"/>
+
+<road name="凌环路"/>
+
+<road name="凌河路"/>
+
+<road name="凌海路"/>
+
+<road name="凌高路"/>
+
+<road name="凌白公路"/>
+
+<road name="岭七路"/>
+
+<road name="灵岩南路"/>
+
+<road name="灵岩路"/>
+
+<road name="灵通路"/>
+
+<road name="灵山路"/>
+
+<road name="临周路"/>
+
+<road name="临御路"/>
+
+<road name="临沂路"/>
+
+<road name="临沂北路"/>
+
+<road name="临文路"/>
+
+<road name="临塘南路"/>
+
+<road name="临塘路"/>
+
+<road name="临港大道"/>
+
+<road name="林浦路"/>
+
+<road name="林鸣路"/>
+
+<road name="林瞿路"/>
+
+<road name="林恒路"/>
+
+<road name="林海公路"/>
+
+<road name="亮秀路"/>
+
+<road name="亮景路"/>
+
+<road name="两港大道"/>
+
+<road name="良友一路"/>
+
+<road name="良友五路"/>
+
+<road name="良友二路"/>
+
+<road name="良友大道"/>
+
+<road name="良欣路"/>
+
+<road name="良通路"/>
+
+<road name="良泰路"/>
+
+<road name="良乐路"/>
+
+<road name="联星路(周浦)"/>
+
+<road name="联星路(蔡路)"/>
+
+<road name="莲中路"/>
+
+<road name="莲振路"/>
+
+<road name="莲园路"/>
+
+<road name="莲溪路"/>
+
+<road name="莲花南路"/>
+
+<road name="莲花路"/>
+
+<road name="莲航路"/>
+
+<road name="莲安东路"/>
+
+<road name="连湖路"/>
+
+<road name="连波路"/>
+
+<road name="利枝路"/>
+
+<road name="利津路"/>
+
+<road name="利航路"/>
+
+<road name="浦润路"/>
+
+<road name="浦明路"/>
+
+<road name="浦隆路"/>
+
+<road name="浦建路"/>
+
+<road name="浦红西路"/>
+
+<road name="浦东南路"/>
+
+<road name="浦东大道"/>
+
+<road name="浦东北路"/>
+
+<road name="浦电路"/>
+
+<road name="浦城路"/>
+
+<road name="浦澳路"/>
+
+<road name="平度路"/>
+
+<road name="平川路"/>
+
+<road name="品柿路"/>
+
+<road name="鹏岳路"/>
+
+<road name="鹏飞路	"/>
+
+<road name="彭新路"/>
+
+<road name="彭平中路"/>
+
+<road name="彭平路"/>
+
+<road name="彭平公路"/>
+
+<road name="培花路"/>
+
+<road name="牌楼西路"/>
+
+<road name="牌楼路"/>
+
+<road name="牌楼东路"/>
+
+<road name="牛顿路"/>
+
+<road name="宁祥路"/>
+
+<road name="宁桥路"/>
+
+<road name="年家浜路"/>
+
+<road name="年家浜东路"/>
+
+<road name="泥城路"/>
+
+<road name="南祝路"/>
+
+<road name="南园路"/>
+
+<road name="南洋泾路(小路)"/>
+
+<road name="南洋泾路"/>
+
+<road name="南新溪路"/>
+
+<road name="南团公路"/>
+
+<road name="南塘街"/>
+
+<road name="南市街"/>
+
+<road name="南泉路"/>
+
+<road name="南泉北路"/>
+
+<road name="南桥路"/>
+
+<road name="南门路"/>
+
+<road name="南门大街"/>
+
+<road name="南码头路"/>
+
+<road name="南绿丽港路"/>
+
+<road name="��芦公路"/>
+
+<road name="南六公路"/>
+
+<road name="南林路"/>
+
+<road name="南京西路"/>
+
+<road name="南黄日港路"/>
+
+<road name="南港公路"/>
+
+<road name="南曹路"/>
+
+<road name="南滨公路"/>
+
+<road name="纳贤路"/>
+
+<road name="内环线"/>
+
+<road name="牡丹路"/>
+
+<road name="牟平路"/>
+
+<road name="茉莉路"/>
+
+<road name="明珠塔路"/>
+
+<road name="明月路"/>
+
+<road name="名望路"/>
+
+<road name="民治路"/>
+
+<road name="民雨路"/>
+
+<road name="民耀路"/>
+
+<road name="民雪路"/>
+
+<road name="民贤路"/>
+
+<road name="民夏路"/>
+
+<road name="民同路"/>
+
+<road name="民生路"/>
+
+<road name="民区路"/>
+
+<road name="民秋路"/>
+
+<road name="民民路"/>
+
+<road name="民雷路"/>
+
+<road name="民风路"/>
+
+<road name="民冬路"/>
+
+<road name="民春路"/>
+
+<road name="妙香路"/>
+
+<road name="妙栏路"/>
+
+<road name="妙境路"/>
+
+<road name="妙境北路"/>
+
+<road name="苗圃路"/>
+
+<road name="沔新路"/>
+
+<road name="沔北路"/>
+
+<road name="美约路"/>
+
+<road name="美盛路"/>
+
+<road name="美桂南路"/>
+
+<road name="美桂北路"/>
+
+<road name="梅花路(花木)"/>
+
+<road name="贸易巷"/>
+
+<road name="莱阳路"/>
+
+<road name="来安路"/>
+
+<road name="科苑路"/>
+
+<road name="科农路"/>
+
+<road name="康意路"/>
+
+<road name="康新公路"/>
+
+<road name="康祥路"/>
+
+<road name="康梧路"/>
+
+<road name="康士路"/>
+
+<road name="康沈路"/>
+
+<road name="康杉路"/>
+
+<road name="康人路"/>
+
+<road name="康桥路"/>
+
+<road name="康桥东路"/>
+
+<road name="康浦路"/>
+
+<road name="康乃馨路"/>
+
+<road name="康柳路"/>
+
+<road name="康丽路"/>
+
+<road name="康佳路"/>
+
+<road name="康汇路"/>
+
+<road name="康花路"/>
+
+<road name="康弘路"/>
+
+<road name="康恩路"/>
+
+<road name="康达路"/>
+
+<road name="康安路"/>
+
+<road name="凯庆路"/>
+
+<road name="卡园二路"/>
+
+<road name="江宁路"/>
+
+<road name="江明路"/>
+
+<road name="江东路(张江)"/>
+
+<road name="江东路(高桥)"/>
+
+<road name="健祥路"/>
+
+<road name="建中路(张江)"/>
+
+<road name="建韵路"/>
+
+<road name="建苑路"/>
+
+<road name="建业路"/>
+
+<road name="建西路"/>
+
+<road name="建设路"/>
+
+<road name="建豪路"/>
+
+<road name="建东路"/>
+
+<road name="佳桥路"/>
+
+<road name="佳林路"/>
+
+<road name="佳乐路"/>
+
+<road name="佳京路"/>
+
+<road name="佳虹路"/>
+
+<road name="冀桥路"/>
+
+<road name="济阳路"/>
+
+<road name="季景路"/>
+
+<road name="季景北路"/>
+
+<road name="际和路"/>
+
+<road name="集慧路"/>
+
+<road name="即墨路"/>
+
+<road name="吉灿路"/>
+
+<road name="基隆路"/>
+
+<road name="基地一路"/>
+
+<road name="基地三路"/>
+
+<road name="基地二路"/>
+
+<road name="机场大道"/>
+
+<road name="藿香路"/>
+
+<road name="惠东路"/>
+
+<road name="汇友路"/>
+
+<road name="汇庆路"/>
+
+<road name="汇民路"/>
+
+<road name="汇盟路"/>
+
+<road name="汇骏路"/>
+
+<road name="汇技路"/>
+
+<road name="汇豪路"/>
+
+<road name="汇海路"/>
+
+<road name="汇港路"/>
+
+<road name="汇驰路"/>
+
+<road name="汇成路"/>
+
+<road name="黄杨路"/>
+
+<road name="黄泥沟路"/>
+
+<road name="黄家路"/>
+
+<road name="环镇南路"/>
+
+<road name="环庆中路"/>
+
+<road name="环庆东路"/>
+
+<road name="环龙路"/>
+
+<road name="环林西路"/>
+
+<road name="环林东路"/>
+
+<road name="环科路"/>
+
+<road name="环湖西一路"/>
+
+<road name="军民公路(孙桥)"/>
+
+<road name="军民公路(康桥)"/>
+
+<road name="军工路"/>
+
+<road name="军港公路"/>
+
+<road name="俱进路"/>
+
+<road name="巨野路"/>
+
+<road name="巨峰路"/>
+
+<road name="居里路"/>
+
+<road name="居家桥路"/>
+
+<road name="靖海路"/>
+
+<road name="敬业路"/>
+
+<road name="景园街"/>
+
+<road name="景雅路"/>
+
+<road name="景明路"/>
+
+<road name="泾南路"/>
+
+<road name="京浦路"/>
+
+<road name="进贤路"/>
+
+<road name="锦尊路"/>
+
+<road name="锦延路"/>
+
+<road name="锦康路"/>
+
+<road name="锦和路"/>
+
+<road name="锦带路"/>
+
+<road name="锦安东路"/>
+
+<road name="金钻路"/>
+
+<road name="金洲街"/>
+
+<road name="金粤路"/>
+
+<road name="金豫路"/>
+
+<road name="金谊路"/>
+
+<road name="金业路"/>
+
+<road name="金杨路"/>
+
+<road name="金湘路"/>
+
+<road name="金闻路"/>
+
+<road name="金皖路"/>
+
+<road name="金亭公路"/>
+
+<road name="金穗路"/>
+
+<road name="金苏路"/>
+
+<road name="金松路"/>
+
+<road name="金顺路"/>
+
+<road name="金秋路"/>
+
+<road name="金桥路"/>
+
+<road name="金睦路"/>
+
+<road name="金口路"/>
+
+<road name="金科路"/>
+
+<road name="金家一路"/>
+
+<road name="金家一大道"/>
+
+<road name="金家三路"/>
+
+<road name="金吉路"/>
+
+<road name="金沪路"/>
+
+<road name="金海路"/>
+
+<road name="金工路"/>
+
+<road name="金高路"/>
+
+<road name="金���路"/>
+
+<road name="金丰路"/>
+
+<road name="金滇路"/>
+
+<road name="金藏路"/>
+
+<road name="界绿路"/>
+
+<road name="界龙一路"/>
+
+<road name="界龙路"/>
+
+<road name="界龙二路"/>
+
+<road name="捷迅路"/>
+
+<road name="捷通路"/>
+
+<road name="捷航路"/>
+
+<road name="捷畅路"/>
+
+<road name="洁雅路"/>
+
+<road name="胶南路"/>
+
+<road name="胶东路"/>
+
+<road name="江镇路"/>
+
+<road name="江杨北路"/>
+
+<road name="江心沙路"/>
+
+<road name="江苏路"/>
+
+<road name="江山路"/>
+
+<road name="江泉路"/>
+
+<road name="利川路"/>
+
+<road name="丽正路"/>
+
+<road name="丽雅路"/>
+
+<road name="立跃路"/>
+
+<road name="李时珍路"/>
+
+<road name="李冰路"/>
+
+<road name="乐园路"/>
+
+<road name="乐群路"/>
+
+<road name="乐林路"/>
+
+<road name="乐丰路"/>
+
+<road name="乐城路"/>
+
+<road name="乐昌路"/>
+
+<road name="老西街"/>
+
+<road name="老芦公路"/>
+
+<road name="崂山路"/>
+
+<road name="��动路"/>
+
+<road name="蓝云路"/>
+
+<road name="蓝天路"/>
+
+<road name="蓝靛路"/>
+
+<road name="蓝村路"/>
+
+<road name="蓝桉路"/>
+
+<road name="栏学路"/>
+
+<road name="兰亭路"/>
+
+<road name="兰嵩路"/>
+
+<road name="兰花路"/>
+
+<road name="兰城路"/>
+
+<road name="航吉路"/>
+
+<road name="航鹤路"/>
+
+<road name="航飞路"/>
+
+<road name="航都南路"/>
+
+<road name="航都路"/>
+
+<road name="航定路"/>
+
+<road name="航川路"/>
+
+<road name="航城五路"/>
+
+<road name="航城四路"/>
+
+<road name="航城十路"/>
+
+<road name="航城七路"/>
+
+<road name="航城路"/>
+
+<road name="航安路"/>
+
+<road name="韩荡路"/>
+
+<road name="韩城路"/>
+
+<road name="海耶路"/>
+
+<road name="海洋一路"/>
+
+<road name="海洋三路"/>
+
+<road name="海阳路"/>
+
+<road name="海学路"/>
+
+<road name="海徐路"/>
+
+<road name="海旺路"/>
+
+<road name="海桐路"/>
+
+<road name="海天一路"/>
+
+<road name="海天五路"/>
+
+<road name="海天四路"/>
+
+<road name="海天三路"/>
+
+<road name="海天二路"/>
+
+<road name="海天东二路"/>
+
+<road name="海松路"/>
+
+<road name="海泉街"/>
+
+<road name="海桥路(黄路)"/>
+
+<road name="海鹏路"/>
+
+<road name="海宁路"/>
+
+<road name="海鸣路"/>
+
+<road name="海流路"/>
+
+<road name="海科路"/>
+
+<road name="海高路"/>
+
+<road name="海港大道"/>
+
+<road name="海堤路"/>
+
+<road name="海春路"/>
+
+<road name="哈雷路"/>
+
+<road name="果园公路"/>
+
+<road name="国展路"/>
+
+<road name="郭守敬路"/>
+
+<road name="桂桥路"/>
+
+<road name="桂花路"/>
+
+<road name="归昌路"/>
+
+<road name="广中路"/>
+
+<road name="广祥路"/>
+
+<road name="广兰路"/>
+
+<road name="光泽路"/>
+
+<road name="光耀路"/>
+
+<road name="光新路"/>
+
+<road name="光烁路"/>
+
+<road name="光明路"/>
+
+<road name="光灿路"/>
+
+<road name="观海路"/>
+
+<road name="关岳西路"/>
+
+<road name="关岳路"/>
+
+<road name="崮山路"/>
+
+<road name="顾唐路"/>
+
+<road name="顾三路"/>
+
+<road name="顾全路"/>
+
+<road name="顾江路"/>
+
+<road name="顾戴路"/>
+
+<road name="顾曹公路"/>
+
+<road name="古棕路"/>
+
+<road name="古桐路"/>
+
+<road name="古恩路"/>
+
+<road name="古翠路"/>
+
+<road name="古博路"/>
+
+<road name="古爱路"/>
+
+<road name="共青路(祝桥)"/>
+
+<road name="共平路"/>
+
+<road name="共和新路"/>
+
+<road name="拱为路"/>
+
+<road name="拱极路"/>
+
+<road name="拱极东路"/>
+
+<road name="龚新路"/>
+
+<road name="龚路支路"/>
+
+<road name="龚路南街"/>
+
+<road name="龚卢路"/>
+
+<road name="龚华路"/>
+
+<road name="龚丰路"/>
+
+<road name="公益路"/>
+
+<road name="公安路"/>
+
+<road name="工农南路"/>
+
+<road name="哥白尼路"/>
+
+<road name="高渝路"/>
+
+<road name="高行街"/>
+
+<road name="高新路"/>
+
+<road name="高新河路"/>
+
+<road name="高翔路"/>
+
+<road name="高翔环路"/>
+
+<road name="高斯路"/>
+
+<road name="高青路"/>
+
+<road name="高桥路"/>
+
+<road name="高宁路"/>
+
+<road name="高木桥路"/>
+
+<road name="高科中路"/>
+
+<road name="高科西路"/>
+
+<road name="高科东路"/>
+
+<road name="环湖西三路"/>
+
+<road name="环湖西二路"/>
+
+<road name="淮海中路"/>
+
+<road name="淮海路"/>
+
+<road name="华洲西路"/>
+
+<road name="华洲路"/>
+
+<road name="华中路"/>
+
+<road name="华绣路"/>
+
+<road name="华星路"/>
+
+<road name="华夏中路"/>
+
+<road name="华夏一路"/>
+
+<road name="华夏西路"/>
+
+<road name="��夏三路"/>
+
+<road name="华夏二路"/>
+
+<road name="华佗路"/>
+
+<road name="华申路"/>
+
+<road name="华山路"/>
+
+<road name="华路"/>
+
+<road name="华京路"/>
+
+<road name="华丰路"/>
+
+<road name="华东路"/>
+
+<road name="华城路"/>
+
+<road name="花苑路(六灶)"/>
+
+<road name="花园石桥路"/>
+
+<road name="花山路"/>
+
+<road name="花木路"/>
+
+<road name="花柏路"/>
+
+<road name="沪太路"/>
+
+<road name="沪杭公路"/>
+
+<road name="护塘路"/>
+
+<road name="护塘街"/>
+
+<road name="护航路"/>
+
+<road name="护城环路"/>
+
+<road name="胡家路"/>
+
+<road name="后滩路"/>
+
+<road name="后长街"/>
+
+<road name="虹星路"/>
+
+<road name="虹盛路"/>
+
+<road name="虹桥路"/>
+
+<road name="虹梅南路"/>
+
+<road name="洪西街"/>
+
+<road name="洪通路"/>
+
+<road name="洪山路"/>
+
+<road name="洪波路"/>
+
+<road name="宏祥北路"/>
+
+<road name="宏涛路"/>
+
+<road name="宏海路"/>
+
+<road name="红枫路"/>
+
+<road name="弘中路"/>
+
+<road name="衡安路"/>
+
+<road name="横新路"/>
+
+<road name="横升路"/>
+
+<road name="横桥路"/>
+
+<road name="横沔港路"/>
+
+<road name="恒河中路"/>
+
+<road name="恒河北路"/>
+
+<road name="恒丰路(三林)"/>
+
+<road name="恒丰路"/>
+
+<road name="黑松路"/>
+
+<road name="鹤韵路"/>
+
+<road name="鹤楼路"/>
+
+<road name="鹤长路"/>
+
+<road name="荷泽路"/>
+
+<road name="荷香路"/>
+
+<road name="荷塘路"/>
+
+<road name="荷丹路"/>
+
+<road name="河滨西路"/>
+
+<road name="河滨北路"/>
+
+<road name="合欢路"/>
+
+<road name="浩歌路"/>
+
+<road name="航园路"/>
+
+<road name="航业路"/>
+
+<road name="航行路"/>
+
+<road name="航兴南路"/>
+
+<road name="航兴北路"/>
+
+<road name="航头路"/>
+
+<road name="航同路"/>
+
+<road name="航亭环路"/>
+
+<road name="航塘公路"/>
+
+<road name="航盛路"/>
+
+<road name="航全路"/>
+
+<road name="航启路"/>
+
+<road name="航南公路"/>
+
+<road name="航鸣路"/>
+
+<road name="航梅路"/>
+
+<road name="航津路"/>
+
+<road name="富丰庄路"/>
+
+<road name="富城路"/>
+
+<road name="复兴路"/>
+
+<road name="复兴东路"/>
+
+<road name="福山路"/>
+
+<road name="芙蓉路"/>
+
+<road name="芙蓉花路"/>
+
+<road name="奉新路"/>
+
+<road name="奉惠港路"/>
+
+<road name="丰和路"/>
+
+<road name="丰海路"/>
+
+<road name="芬辛路"/>
+
+<road name="芬菊路"/>
+
+<road name="飞速路"/>
+
+<road name="飞渡路"/>
+
+<road name="飞翱路"/>
+
+<road name="芳华路"/>
+
+<road name="芳菲路"/>
+
+<road name="芳甸路"/>
+
+<road name="芳草路"/>
+
+<road name="芳波路"/>
+
+<road name="方竹路"/>
+
+<road name="繁荣路"/>
+
+<road name="繁锦路"/>
+
+<road name="繁昌路"/>
+
+<road name="法赛路"/>
+
+<road name="法拉第路"/>
+
+<road name="大连西路"/>
+
+<road name="大连路"/>
+
+<road name="大洪路"/>
+
+<road name="大街"/>
+
+<road name="大道站路"/>
+
+<road name="大川公路"/>
+
+<road name="达丰路"/>
+
+<road name="达尔文路"/>
+
+<road name="翠柏路"/>
+
+<road name="慈善街"/>
+
+<road name="慈桥路	"/>
+
+<road name="椿樟路"/>
+
+<road name="春源路"/>
+
+<road name="春阳路"/>
+
+<road name="春延路"/>
+
+<road name="春雅路"/>
+
+<road name="春晓路"/>
+
+<road name="春祥路"/>
+
+<road name="春申路"/>
+
+<road name="春泉路"/>
+
+<road name="春晖路"/>
+
+<road name="创运路"/>
+
+<road name="创业路(瓦屑)"/>
+
+<road name="创业路(唐镇)"/>
+
+<road name="创新中路"/>
+
+<road name="创新西路"/>
+
+<road name="创新路(瓦屑)"/>
+
+<road name="创新路(唐镇)"/>
+
+<road name="船山街"/>
+
+<road name="船厂街"/>
+
+<road name="川周公路(周浦)"/>
+
+<road name="川周公路(川沙)"/>
+
+<road name="川展路"/>
+
+<road name="川银路"/>
+
+<road name="川杨河路"/>
+
+<road name="川图路"/>
+
+<road name="川沙路"/>
+
+<road name="川南奉公路"/>
+
+<road name="川六公路"/>
+
+<road name="川汇三路"/>
+
+<road name="二灶港路"/>
+
+<road name="峨山路"/>
+
+<road name="墩中路"/>
+
+<road name="渡口支路"/>
+
+<road name="渡口路"/>
+
+<road name="杜鹃路"/>
+
+<road name="��昌路"/>
+
+<road name="冬融路"/>
+
+<road name="东跃路"/>
+
+<road name="东园路"/>
+
+<road name="东煦路"/>
+
+<road name="东绣路"/>
+
+<road name="东亭路"/>
+
+<road name="东塘路"/>
+
+<road name="东泰路"/>
+
+<road name="东泰林路"/>
+
+<road name="东速航路"/>
+
+<road name="东书房路"/>
+
+<road name="东胜路"/>
+
+<road name="东三里桥路"/>
+
+<road name="东启航路"/>
+
+<road name="东明路"/>
+
+<road name="东门街"/>
+
+<road name="东门大街"/>
+
+<road name="东林街"/>
+
+<road name="东靖路"/>
+
+<road name="东建路"/>
+
+<road name="东护航路"/>
+
+<road name="东后老街"/>
+
+<road name="东海大街"/>
+
+<road name="东高路"/>
+
+<road name="东港公路"/>
+
+<road name="东方路"/>
+
+<road name="东大街"/>
+
+<road name="东大公路"/>
+
+<road name="东川公路"/>
+
+<road name="东城路"/>
+
+<road name="东城壕路"/>
+
+<road name="东昌路"/>
+
+<road name="东波路"/>
+
+<road name="定武路"/>
+
+<road name="丁���路"/>
+
+<road name="丁家浜二路"/>
+
+<road name="蝶衣路"/>
+
+<road name="叠桥路"/>
+
+<road name="滴翠路"/>
+
+<road name="德州路"/>
+
+<road name="德兴街"/>
+
+<road name="德翔路"/>
+
+<road name="德平路"/>
+
+<road name="德林路"/>
+
+<road name="德川路"/>
+
+<road name="德堡路"/>
+
+<road name="稻香路"/>
+
+<road name="荡湾路"/>
+
+<road name="丹桂路"/>
+
+<road name="丹格路"/>
+
+<road name="大治河路"/>
+
+<road name="大叶公路"/>
+
+<road name="大同路"/>
+
+<road name="大泥路"/>
+
+<road name="高荷路"/>
+
+<road name="高汉路"/>
+
+<road name="高东一路"/>
+
+<road name="高东新路"/>
+
+<road name="高东路"/>
+
+<road name="高东二路"/>
+
+<road name="高城路"/>
+
+<road name="高宝路"/>
+
+<road name="港迎路"/>
+
+<road name="港怡路"/>
+
+<road name="港绣路"/>
+
+<road name="港茂路"/>
+
+<road name="港九路"/>
+
+<road name="港建路"/>
+
+<road name="港辉路"/>
+
+<road name="港华路"/>
+
+<road name="港洪路"/>
+
+<road name="港电路"/>
+
+<road name="港澳路"/>
+
+<road name="橄榄路"/>
+
+<road name="伽利略路"/>
+
+<road name="富特中路"/>
+
+<road name="富特西一路"/>
+
+<road name="富特西二路"/>
+
+<road name="富特南路"/>
+
+<road name="富特东一路"/>
+
+<road name="富特东三路"/>
+
+<road name="富特东二路"/>
+
+<road name="富特北路"/>
+
+<road name="富航路"/>
+
+<road name="保健路"/>
+
+<road name="宝杨路"/>
+
+<road name="包桥街"/>
+
+<road name="板泉路"/>
+
+<road name="百熙路"/>
+
+<road name="白杨路"/>
+
+<road name="白萱路"/>
+
+<road name="白莲泾路"/>
+
+<road name="白桦路"/>
+
+<road name="巴圣路"/>
+
+<road name="澳尼路"/>
+
+<road name="奥纳路"/>
+
+<road name="安盛街"/>
+
+<road name="安航路"/>
+
+<road name="锦绣路"/>
+
+<road name="华夏东路"/>
+
+<road name="鲁南东路"/>
+
+<road name="津行路"/>
+
+<road name="建中路(老港)"/>
+
+<road name="川汇路"/>
+
+<road name="川汇二路"/>
+
+<road name="川黄路"/>
+
+<road name="川环南路"/>
+
+<road name="川环东路"/>
+
+<road name="川宏路"/>
+
+<road name="川东河路"/>
+
+<road name="川大路"/>
+
+<road name="储墙路"/>
+
+<road name="储七路"/>
+
+<road name="崇溪路"/>
+
+<road name="崇景路"/>
+
+<road name="池月路"/>
+
+<road name="城西路(惠南)"/>
+
+<road name="城西路(川沙)"/>
+
+<road name="城南路(惠南)"/>
+
+<road name="城南路(川沙)"/>
+
+<road name="城基路"/>
+
+<road name="城丰路"/>
+
+<road name="呈祥港路"/>
+
+<road name="成园路"/>
+
+<road name="成山路"/>
+
+<road name="成都北路"/>
+
+<road name="晨阳西路"/>
+
+<road name="晨阳路"/>
+
+<road name="晨晖路"/>
+
+<road name="陈行公路"/>
+
+<road name="陈家沟路"/>
+
+<road name="陈春路"/>
+
+<road name="车站路(川沙)"/>
+
+<road name="潮中路"/>
+
+<road name="潮兴路"/>
+
+<road name="潮乐路"/>
+
+<road name="潮晖路"/>
+
+<road name="潮华路"/>
+
+<road name="潮和路"/>
+
+<road name="朝阳路"/>
+
+<road name="朝勤路"/>
+
+<road name="朝鹃路"/>
+
+<road name="朝辉路"/>
+
+<road name="场中路"/>
+
+<road name="厂南路"/>
+
+<road name="长兴路"/>
+
+<road name="长寿路"/>
+
+<road name="长清路"/>
+
+<road name="长清北路"/>
+
+<road name="长桥路"/>
+
+<road name="长宁路"/>
+
+<road name="长柳路"/>
+
+<road name="长空路"/>
+
+<road name="长岛路"/>
+
+<road name="昌邑路"/>
+
+<road name="昌兴路"/>
+
+<road name="昌里路"/>
+
+<road name="昌里东路"/>
+
+<road name="柴场中心路"/>
+
+<road name="茶花路"/>
+
+<road name="层林路"/>
+
+<road name="草高支路"/>
+
+<road name="草高路"/>
+
+<road name="草高便道"/>
+
+<road name="漕宝路"/>
+
+<road name="曹杨路"/>
+
+<road name="曹家沟路"/>
+
+<road name="沧海路"/>
+
+<road name="仓房浜路"/>
+
+<road name="仓储路"/>
+
+<road name="蔡伦路"/>
+
+<road name="彩云路"/>
+
+<road name="博兴路"/>
+
+<road name="博山路"/>
+
+<road name="博山东路"/>
+
+<road name="博华路"/>
+
+<road name="博成路"/>
+
+<road name="冰克路"/>
+
+<road name="滨江大道"/>
+
+<road name="滨果公路"/>
+
+<road name="碧云路"/>
+
+<road name="碧桃路"/>
+
+<road name="碧波路"/>
+
+<road name="北中路"/>
+
+<road name="北张家浜路"/>
+
+<road name="北园路"/>
+
+<road name="北洋泾路"/>
+
+<road name="北新园路"/>
+
+<road name="北新路"/>
+
+<road name="北五路"/>
+
+<road name="北市街"/>
+
+<road name="北门路"/>
+
+<road name="北门大街"/>
+
+<road name="北绿丽港路"/>
+
+<road name="北京西路"/>
+
+<road name="北街(三林)"/>
+
+<road name="北街(高桥)"/>
+
+<road name="北黄日港路"/>
+
+<road name="北环西路"/>
+
+<road name="北环东路"/>
+
+<road name="北城壕路"/>
+
+<road name="北蔡大街"/>
+<road name="S2"/>
+
+<road name="G1501"/>
+
+<road name="S1"/>
+
+<road name="S32"/>
+
+<!-- 去重复后路名数：2300 总计道路数：2517-->
+</roads>
+	<layers>
+		<extentLayer>
+			<name>基地图层</name>
+			<!-- 
+			<url>arcgis/rest/services/dynamic_pdgt2012/MapServer/5</url>
+			 -->
+			<url>arcgis/rest/services/SJ_Road/MapServer/3</url>
+			<fields>NAME</fields>
+			<fieldsCN>道路名称</fieldsCN>
+			<linkURL>/pdgtdbc/common/gisRedirect.jsp?funId=Ei&misid=</linkURL>
+		</extentLayer>
+	</layers>
+	<layerService>arcgis/rest/services/dynamic_pdgt2012/MapServer/26</layerService>
+    <queryfields>NAME,CADNAME</queryfields>
+    <where>NAME like '%[value]%'</where>
+
+</configuration>

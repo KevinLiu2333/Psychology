@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<configuration>
+	<layers>
+		<extentLayer>
+			<name>用地范围</name>
+			<url>arcgis/rest/services/dynamic_pdgt2012/MapServer/9</url>
+			<graphicalsearchlabel>从下面选择一种多边形以选定查询范围：</graphicalsearchlabel>
+			<fields>YD_ID</fields>
+			<fieldsCN>YD_ID</fieldsCN>
+			<titlefield>YD_ID</titlefield>
+			<linkfield>YD_ID</linkfield>
+			<icon>i_uni1.png</icon>
+		</extentLayer>
+	</layers>
+	<infodata>
+		<url>/PDGT_Index/servlet/GetOracleData</url>
+		<table>DC_LANDUSAGE</table>
+		<fields>YD_ID,PROJECT_NAME,PASS_NO,DOC_DATE,BUILD_UNIT,LAND_TYPE_NAME,BUILD_ADDRESS,BUILD_AREA</fields>
+		<fieldsCN>关联号,项目名称,证       号,发文日期,建设单位,用地性质,地       址,用地面积</fieldsCN>
+	</infodata>
+	<linkURL>/pdgtdbc/common/gisRedirect.jsp?funId=yongdixukezhengbiaozhun&ydId=</linkURL>
+	<years>
+	     <url>widgets/Query/years.xml</url>
+	</years>
+</configuration>

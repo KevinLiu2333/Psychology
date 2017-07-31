@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<viewer:BaseWidget xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx"
+				   xmlns:viewer="com.esri.viewer.*"
+				   layout="absolute"
+				   widgetConfigLoaded="basewidget1_widgetConfigLoadedHandler(event)">
+	
+	<fx:Script>
+		<![CDATA[
+			import com.esri.viewer.AppEvent;
+			import com.esri.viewer.ViewerContainer;
+			import mx.controls.Alert;
+			import mx.collections.ArrayCollection;
+			import spark.events.IndexChangeEvent;
+			private var hideTimer:Timer = new Timer(300, 1);
+			[Bindable]
+			private var mapList:ArrayCollection;
+			
+			[Bindable]
+			private var opsLayerButtonLabel:String; // the label for the button showing the list of operational layers
+			[Bindable]
+			private var vectorLabel:String="";
+			[Bindable]
+			private var imageLabel:String="";
+			private var flag:Boolean=false;
+			[Bindable]
+			private var layerOperationSrc:String;
+			[Bindable]
+			private var locationSrc:String;
+			[Bindable]
+			private var locationDianCha:String;
+			[Bindable]
+			private var locationDieJia:String;
+			[Bindable]
+			private var locationDingWei:String;
+			[Bindable]
+			private var locationTuCengKongZhi:String;
+			[Bindable]
+			[Embed(source="assets/images/image.jpg")]
+			public var imageClass:Class;
+			
+			[Bindable]
+			[Embed(source="assets/images/vector.jpg")]
+			public var vectorClass:Class;
+			protected function basewidget1_widgetConfigLoadedHandler(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				if(configXML)
+				{
+					layerOperationSrc=configXML.layerOperationSrc;
+					locationSrc=configXML.locationSrc;
+					locationDianCha=configXML.locationDianCha;
+					locationDieJia=configXML.locationDieJia;
+					locationDingWei=configXML.locationDingWei;
+					locationTuCengKongZhi=configXML.locationTuCengKongZhi;
+					
+				}
+				
+				// base maps
+				mapList = new ArrayCollection();
+				var labels:Array = [];
+				for each (var basemap:Object in configData.basemaps)
+				{
+					var label:String = basemap.label;
+					if (labels.indexOf(label) == -1) // avoid duplicates using the labels
+					{
+						labels.push(label);
+						mapList.addItem(basemap);
+					}
+				}
+				if (mapList.length <= 1)
+				{
+					this.currentState = "noBasemapsBB";
+				}
+				else
+				{
+					setTbbSelectedIndex();
+				}
+				vectorLabel=configData.basemaps[0].label;
+				imageLabel=configData.basemaps[1].label;
+			}
+			
+			protected function layerOperation_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				ViewerContainer.dispatchEvent(new AppEvent(AppEvent.REALINFORMATIONWIDGET_RUN,"图层控制"));
+			}
+			protected function location_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				ViewerContainer.dispatchEvent(new AppEvent(AppEvent.REALINFORMATIONWIDGET_RUN,"定    位"));
+			}
+			//街道地图
+			protected function locationJiedaoTc_clickHandler(event:MouseEvent):void
+			{
+				ViewerContainer.dispatchEvent(new AppEvent(AppEvent.BASEMAP_SWITCH, mapList[0].id));
+				
+			}
+			private function getExcludeLayers():ArrayCollection
+			{
+				var result:ArrayCollection = new ArrayCollection();
+				
+				if (configData && configData.basemaps)
+				{
+					// exclude basemaps
+					for (var i:int = 0; i < configData.basemaps.length; i++)
+					{
+						result.addItem(configData.basemaps[i].label);
+					}
+				}
+				
+				if (configXML)
+				{
+					// exclude these layers
+					var layers:XMLList = configXML.layerlist.excludelayer as XMLList;
+					for (var j:int = 0; j < layers.length(); j++)
+					{
+						result.addItem(layers[j].toString());
+					}
+				}
+				
+				return result;
+			}
+			
+			private function setTbbSelectedIndex():void
+			{
+				for (var i:int; i < mapList.length; i++)
+				{
+					if (mapList[i].visible)
+					{
+						//                        tbb.selectedIndex = i; // change the index of the toggle button bar to reflect the current base map.
+					}
+				}
+			}
+			
+			private function tbb_changeHandler(event:IndexChangeEvent):void
+			{
+				
+				ViewerContainer.dispatchEvent(new AppEvent(AppEvent.BASEMAP_SWITCH, mapList[event.newIndex].id));
+			}
+			
+			//           
+			
+			private function startHideTimer():void
+			{
+				hideTimer.reset();
+				hideTimer.start();
+			}
+			protected function imageBtn_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				if(flag)
+				{
+					flag=false;
+					imageBtn.toolTip=imageLabel;
+					imageBtn.source=imageClass;
+					ViewerContainer.dispatchEvent(new AppEvent(AppEvent.BASEMAP_SWITCH, mapList[0].id));
+					
+				}
+				else
+				{
+					flag=true;
+					imageBtn.toolTip=vectorLabel;
+					imageBtn.source=vectorClass;
+					ViewerContainer.dispatchEvent(new AppEvent(AppEvent.BASEMAP_SWITCH, mapList[1].id));
+				}
+				
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<s:Group width="120" height="55">
+		
+		<s:HGroup width="100%" height="100%" paddingLeft="10" paddingTop="5" horizontalAlign="center" >
+			<mx:Image id="imageBtn" width="49" height="51" mouseChildren="false" buttonMode="true" useHandCursor="true" source="{imageClass}" toolTip="{imageLabel}"  click="imageBtn_clickHandler(event)"/>
+			<mx:Image id="locatDianCha"	 toolTip="街道地图" mouseChildren="false" buttonMode="true" useHandCursor="true" source="{locationDianCha}" click="locationJiedaoTc_clickHandler(event)" width="49" height="51"/>
+		</s:HGroup>
+	</s:Group>
+</viewer:BaseWidget>

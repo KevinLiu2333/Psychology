@@ -1,0 +1,1453 @@
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[BL_QUARTZ]    Script Date: 04/29/2016 09:06:17 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[BL_QUARTZ]') AND type in (N'U'))
+DROP TABLE [dbo].[BL_QUARTZ]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[BL_QUARTZ]    Script Date: 04/29/2016 09:06:17 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[BL_QUARTZ](
+	[ID] [numeric](10, 0) IDENTITY(1,1) NOT NULL,
+	[TRIGGER_TIME] [datetime] NULL,
+	[TRIGGER_TASK_NAME] [nvarchar](300) NULL,
+	[RELATION_ID] [nvarchar](20) NULL,
+	[TRIGGER_TASK_DESC] [nvarchar](1000) NULL,
+	[NOTES] [nvarchar](1000) NULL,
+	[CREATE_DATE] [datetime] NULL,
+	[CREATE_BY] [nvarchar](30) NULL
+) ON [PRIMARY]
+
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[BUSILOG]    Script Date: 04/29/2016 09:09:02 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[BUSILOG]') AND type in (N'U'))
+DROP TABLE [dbo].[BUSILOG]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[BUSILOG]    Script Date: 04/29/2016 09:09:02 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[BUSILOG](
+	[BUSILOGID] [numeric](16, 0) IDENTITY(1,1) NOT NULL,
+	[BUSITYPE] [varchar](10) NOT NULL,
+	[OPERTIME] [datetime] NOT NULL,
+	[OPERORGAN] [varchar](16) NOT NULL,
+	[OPERATORCODE] [varchar](16) NOT NULL,
+	[OPERATORNAME] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_BUSILOG] PRIMARY KEY NONCLUSTERED 
+(
+	[BUSILOGID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[IFDEFHIS]    Script Date: 04/29/2016 09:09:13 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[IFDEFHIS](
+	[IFDEFINEHISID] [numeric](16, 0) IDENTITY(1,1) NOT NULL,
+	[IFDEFINEID] [numeric](16, 0) NOT NULL,
+	[IFDEFCODE] [varchar](50) NOT NULL,
+	[IFDEFNAME] [varchar](100) NOT NULL,
+	[IFTYPE] [varchar](50) NOT NULL,
+	[IFSUBTYPE] [varchar](50) NOT NULL,
+	[IFURI] [varchar](500) NOT NULL,
+	[IFEXT] [varchar](2000) NULL,
+	[VALID] [char](1) NOT NULL,
+	[USRID] [numeric](16, 0) NOT NULL,
+	[USRNAME] [varchar](50) NOT NULL,
+	[EDTIME] [datetime] NOT NULL,
+ CONSTRAINT [PK_IFDEFHIS] PRIMARY KEY NONCLUSTERED 
+(
+	[IFDEFINEHISID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[IFDEFINE]    Script Date: 04/29/2016 09:09:22 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IFDEFINE]') AND type in (N'U'))
+DROP TABLE [dbo].[IFDEFINE]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[IFDEFINE]    Script Date: 04/29/2016 09:09:22 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[IFDEFINE](
+	[IFDEFINEID] [numeric](16, 0) IDENTITY(1,1) NOT NULL,
+	[IFDEFCODE] [varchar](50) NOT NULL,
+	[IFDEFNAME] [varchar](100) NOT NULL,
+	[IFTYPE] [varchar](50) NOT NULL,
+	[IFSUBTYPE] [varchar](50) NOT NULL,
+	[IFURI] [varchar](500) NOT NULL,
+	[IFEXT] [varchar](2000) NULL,
+	[VALID] [char](1) NOT NULL,
+	[USRID] [numeric](16, 0) NOT NULL,
+	[USRNAME] [varchar](50) NOT NULL,
+	[EDTIME] [datetime] NOT NULL,
+ CONSTRAINT [PK_IFDEFINE] PRIMARY KEY NONCLUSTERED 
+(
+	[IFDEFINEID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[IFMONDEF]    Script Date: 04/29/2016 09:09:30 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IFMONDEF]') AND type in (N'U'))
+DROP TABLE [dbo].[IFMONDEF]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[IFMONDEF]    Script Date: 04/29/2016 09:09:31 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[IFMONDEF](
+	[IFMONDEFID] [numeric](16, 0) IDENTITY(1,1) NOT NULL,
+	[IFDEFINEID] [numeric](16, 0) NOT NULL,
+	[LSMONTIME] [datetime] NULL,
+	[LSMONSTATUS] [varchar](3) NULL,
+	[LSMONDESC] [varchar](200) NULL,
+	[VALID] [char](1) NOT NULL,
+	[USRID] [numeric](16, 0) NOT NULL,
+	[USRNAME] [varchar](50) NOT NULL,
+	[EDTIME] [datetime] NOT NULL,
+ CONSTRAINT [PK_IFMONDEF] PRIMARY KEY NONCLUSTERED 
+(
+	[IFMONDEFID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[IFMONDEFHIS]    Script Date: 04/29/2016 09:09:37 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IFMONDEFHIS]') AND type in (N'U'))
+DROP TABLE [dbo].[IFMONDEFHIS]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[IFMONDEFHIS]    Script Date: 04/29/2016 09:09:37 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[IFMONDEFHIS](
+	[IFMONDEFHISID] [numeric](16, 0) IDENTITY(1,1) NOT NULL,
+	[IFMONDEFID] [numeric](16, 0) NOT NULL,
+	[IFDEFINEID] [numeric](16, 0) NOT NULL,
+	[LSMONTIME] [datetime] NULL,
+	[LSMONSTATUS] [varchar](3) NULL,
+	[LSMONDESC] [varchar](200) NULL,
+	[VALID] [char](1) NOT NULL,
+	[USRID] [numeric](16, 0) NOT NULL,
+	[USRNAME] [varchar](50) NOT NULL,
+	[EDTIME] [datetime] NOT NULL,
+ CONSTRAINT [PK_IFMONDEFHIS] PRIMARY KEY NONCLUSTERED 
+(
+	[IFMONDEFHISID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[IFMONDETAIL]    Script Date: 04/29/2016 09:09:45 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IFMONDETAIL]') AND type in (N'U'))
+DROP TABLE [dbo].[IFMONDETAIL]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[IFMONDETAIL]    Script Date: 04/29/2016 09:09:45 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[IFMONDETAIL](
+	[IFMONDETAILID] [numeric](16, 0) IDENTITY(1,1) NOT NULL,
+	[IFMONDEFID] [numeric](16, 0) NULL,
+	[IFDEFINEID] [numeric](16, 0) NOT NULL,
+	[LSMONTIME] [datetime] NULL,
+	[LSMONSTATUS] [varchar](3) NULL,
+	[LSMONDESC] [varchar](200) NULL,
+ CONSTRAINT [PK_IFMONDETAIL] PRIMARY KEY NONCLUSTERED 
+(
+	[IFMONDETAILID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[IFSUBMON]    Script Date: 04/29/2016 09:09:52 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IFSUBMON]') AND type in (N'U'))
+DROP TABLE [dbo].[IFSUBMON]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[IFSUBMON]    Script Date: 04/29/2016 09:09:52 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[IFSUBMON](
+	[IFMONDEFID] [numeric](16, 0) NOT NULL,
+	[SUBMONSUM] [numeric](4, 0) NULL,
+	[SUBMONFAIL] [numeric](4, 0) NULL,
+	[SUBMONDETAIL] [ntext] NULL,
+ CONSTRAINT [PK_IFSUBMON] PRIMARY KEY NONCLUSTERED 
+(
+	[IFMONDEFID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[IFSUBMONDETAIL]    Script Date: 04/29/2016 09:09:59 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IFSUBMONDETAIL]') AND type in (N'U'))
+DROP TABLE [dbo].[IFSUBMONDETAIL]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[IFSUBMONDETAIL]    Script Date: 04/29/2016 09:09:59 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[IFSUBMONDETAIL](
+	[IFMONDETAILID] [numeric](16, 0) NOT NULL,
+	[SUBMONSUM] [numeric](4, 0) NULL,
+	[SUBMONFAIL] [numeric](4, 0) NULL,
+	[SUBMONDETAIL] [ntext] NULL,
+ CONSTRAINT [PK_IFSUBMONDETAIL] PRIMARY KEY NONCLUSTERED 
+(
+	[IFMONDETAILID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[IFTRANSDETAIL]    Script Date: 04/29/2016 09:10:07 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IFTRANSDETAIL]') AND type in (N'U'))
+DROP TABLE [dbo].[IFTRANSDETAIL]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[IFTRANSDETAIL]    Script Date: 04/29/2016 09:10:07 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[IFTRANSDETAIL](
+	[IFTRANSDETAILID] [numeric](16, 0) IDENTITY(1,1) NOT NULL,
+	[IFDEFINEID] [numeric](16, 0) NOT NULL,
+	[TRANSNO] [varchar](100) NULL,
+	[TRANSFUNC] [varchar](100) NULL,
+	[TRANSSUBFUNC] [varchar](100) NULL,
+	[REQCODE] [varchar](100) NULL,
+	[REQUSRID] [varchar](100) NULL,
+	[REQUSRNAME] [varchar](100) NULL,
+	[RSPCODE] [varchar](100) NULL,
+	[RSPUSRID] [varchar](100) NULL,
+	[RSPUSRNAME] [varchar](100) NULL,
+	[REQFLAG] [char](1) NULL,
+	[REQXML] [ntext] NULL,
+	[REQENXML] [ntext] NULL,
+	[RSPFLAG] [char](1) NULL,
+	[RSPXML] [ntext] NULL,
+	[RSPENXML] [ntext] NULL,
+	[REQTIME] [date] NOT NULL,
+	[RSPTIME] [date] NOT NULL,
+	[TRANSTIME] [numeric](16, 2) NOT NULL,
+	[TRANSFLAG1] [varchar](10) NULL,
+	[TRANSFLAG2] [varchar](10) NULL,
+	[ERRMSG] [ntext] NULL,
+ CONSTRAINT [PK_IFTRANSDETAIL] PRIMARY KEY NONCLUSTERED 
+(
+	[IFTRANSDETAILID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[IFTRANSSUM]    Script Date: 04/29/2016 09:10:14 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IFTRANSSUM]') AND type in (N'U'))
+DROP TABLE [dbo].[IFTRANSSUM]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[IFTRANSSUM]    Script Date: 04/29/2016 09:10:14 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[IFTRANSSUM](
+	[IFDEFINEID] [numeric](16, 0) NOT NULL,
+	[TRANSSUM] [numeric](16, 0) NOT NULL,
+	[TRANSSUC] [numeric](16, 0) NOT NULL,
+	[TRANSFAIL] [numeric](16, 0) NOT NULL,
+ CONSTRAINT [PK_IFTRANSSUM] PRIMARY KEY NONCLUSTERED 
+(
+	[IFDEFINEID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[OPTSTATUS]    Script Date: 04/29/2016 09:10:21 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[OPTSTATUS]') AND type in (N'U'))
+DROP TABLE [dbo].[OPTSTATUS]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[OPTSTATUS]    Script Date: 04/29/2016 09:10:21 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[OPTSTATUS](
+	[OPTSTATUSID] [numeric](16, 0) IDENTITY(1,1) NOT NULL,
+	[OPERATORID] [varchar](16) NOT NULL,
+	[OPERATORNAME] [varchar](50) NOT NULL,
+	[USERSTREETCODE] [varchar](16) NULL,
+	[USERSTREETNAME] [varchar](500) NULL,
+	[COUNTERNO] [varchar](6) NOT NULL,
+	[PCMAC] [varchar](100) NOT NULL,
+	[LOGINSTATUS] [varchar](3) NOT NULL,
+	[LOGINSESSION] [varchar](500) NULL,
+	[LOGINTIME] [datetime] NULL,
+ CONSTRAINT [PK_OPTSTATUS] PRIMARY KEY NONCLUSTERED 
+(
+	[OPTSTATUSID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[OPTSTATUSLOG]    Script Date: 04/29/2016 09:10:38 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[OPTSTATUSLOG]') AND type in (N'U'))
+DROP TABLE [dbo].[OPTSTATUSLOG]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[OPTSTATUSLOG]    Script Date: 04/29/2016 09:10:38 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[OPTSTATUSLOG](
+	[OPTSTATUSLOGID] [numeric](16, 0) IDENTITY(1,1) NOT NULL,
+	[OPERATORID] [varchar](16) NOT NULL,
+	[OPERATORNAME] [varchar](50) NOT NULL,
+	[USERSTREETCODE] [varchar](16) NULL,
+	[USERSTREETNAME] [varchar](500) NULL,
+	[COUNTERNO] [varchar](6) NOT NULL,
+	[PCMAC] [varchar](100) NOT NULL,
+	[LOGINSTATUS] [varchar](3) NOT NULL,
+	[LOGINSESSION] [varchar](500) NULL,
+	[LOGINTIME] [datetime] NULL,
+	[LOGOUTTIME] [datetime] NULL,
+	[LINEHOUR] [numeric](16, 0) NULL,
+ CONSTRAINT [PK_OPTSTATUSLOG] PRIMARY KEY NONCLUSTERED 
+(
+	[OPTSTATUSLOGID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_JOB_DETAILS]    Script Date: 04/29/2016 09:11:21 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[QRTZ_JOB_DETAILS]') AND type in (N'U'))
+DROP TABLE [dbo].[QRTZ_JOB_DETAILS]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_JOB_DETAILS]    Script Date: 04/29/2016 09:11:21 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[QRTZ_JOB_DETAILS](
+	[JOB_NAME] [varchar](200) NOT NULL,
+	[JOB_GROUP] [varchar](200) NOT NULL,
+	[DESCRIPTION] [varchar](250) NULL,
+	[JOB_CLASS_NAME] [varchar](250) NOT NULL,
+	[IS_DURABLE] [varchar](1) NOT NULL,
+	[IS_VOLATILE] [varchar](1) NOT NULL,
+	[IS_STATEFUL] [varchar](1) NOT NULL,
+	[REQUESTS_RECOVERY] [varchar](1) NOT NULL,
+	[JOB_DATA] [varbinary](max) NULL,
+ CONSTRAINT [SYS_C0078481] PRIMARY KEY NONCLUSTERED 
+(
+	[JOB_NAME] ASC,
+	[JOB_GROUP] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [cmcsqpttest]
+GO
+
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[SYS_C0078931]') AND parent_object_id = OBJECT_ID(N'[dbo].[QRTZ_JOB_LISTENERS]'))
+ALTER TABLE [dbo].[QRTZ_JOB_LISTENERS] DROP CONSTRAINT [SYS_C0078931]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_JOB_LISTENERS]    Script Date: 04/29/2016 09:11:28 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[QRTZ_JOB_LISTENERS]') AND type in (N'U'))
+DROP TABLE [dbo].[QRTZ_JOB_LISTENERS]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_JOB_LISTENERS]    Script Date: 04/29/2016 09:11:28 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[QRTZ_JOB_LISTENERS](
+	[JOB_NAME] [varchar](200) NOT NULL,
+	[JOB_GROUP] [varchar](200) NOT NULL,
+	[JOB_LISTENER] [varchar](200) NOT NULL,
+ CONSTRAINT [SYS_C0078485] PRIMARY KEY NONCLUSTERED 
+(
+	[JOB_NAME] ASC,
+	[JOB_GROUP] ASC,
+	[JOB_LISTENER] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[QRTZ_JOB_LISTENERS]  WITH CHECK ADD  CONSTRAINT [SYS_C0078931] FOREIGN KEY([JOB_NAME], [JOB_GROUP])
+REFERENCES [dbo].[QRTZ_JOB_DETAILS] ([JOB_NAME], [JOB_GROUP])
+GO
+
+ALTER TABLE [dbo].[QRTZ_JOB_LISTENERS] CHECK CONSTRAINT [SYS_C0078931]
+GO
+
+
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_TRIGGERS]    Script Date: 04/29/2016 09:12:37 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[QRTZ_TRIGGERS]') AND type in (N'U'))
+DROP TABLE [dbo].[QRTZ_TRIGGERS]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_TRIGGERS]    Script Date: 04/29/2016 09:12:37 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[QRTZ_TRIGGERS](
+	[TRIGGER_NAME] [varchar](200) NOT NULL,
+	[TRIGGER_GROUP] [varchar](200) NOT NULL,
+	[JOB_NAME] [varchar](200) NOT NULL,
+	[JOB_GROUP] [varchar](200) NOT NULL,
+	[IS_VOLATILE] [varchar](1) NOT NULL,
+	[DESCRIPTION] [varchar](250) NULL,
+	[NEXT_FIRE_TIME] [numeric](13, 0) NULL,
+	[PREV_FIRE_TIME] [numeric](13, 0) NULL,
+	[PRIORITY] [numeric](13, 0) NULL,
+	[TRIGGER_STATE] [varchar](16) NOT NULL,
+	[TRIGGER_TYPE] [varchar](8) NOT NULL,
+	[START_TIME] [numeric](13, 0) NOT NULL,
+	[END_TIME] [numeric](13, 0) NULL,
+	[CALENDAR_NAME] [varchar](200) NULL,
+	[MISFIRE_INSTR] [numeric](2, 0) NULL,
+	[JOB_DATA] [varbinary](max) NULL,
+ CONSTRAINT [SYS_C0078508] PRIMARY KEY NONCLUSTERED 
+(
+	[TRIGGER_NAME] ASC,
+	[TRIGGER_GROUP] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[QRTZ_TRIGGERS]  WITH CHECK ADD  CONSTRAINT [SYS_C0078932] FOREIGN KEY([JOB_NAME], [JOB_GROUP])
+REFERENCES [dbo].[QRTZ_JOB_DETAILS] ([JOB_NAME], [JOB_GROUP])
+GO
+
+ALTER TABLE [dbo].[QRTZ_TRIGGERS] CHECK CONSTRAINT [SYS_C0078932]
+GO
+
+
+USE [cmcsqpttest]
+GO
+
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[SYS_C0078936]') AND parent_object_id = OBJECT_ID(N'[dbo].[QRTZ_BLOB_TRIGGERS]'))
+ALTER TABLE [dbo].[QRTZ_BLOB_TRIGGERS] DROP CONSTRAINT [SYS_C0078936]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_BLOB_TRIGGERS]    Script Date: 04/29/2016 09:10:47 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[QRTZ_BLOB_TRIGGERS]') AND type in (N'U'))
+DROP TABLE [dbo].[QRTZ_BLOB_TRIGGERS]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_BLOB_TRIGGERS]    Script Date: 04/29/2016 09:10:47 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[QRTZ_BLOB_TRIGGERS](
+	[TRIGGER_NAME] [varchar](200) NOT NULL,
+	[TRIGGER_GROUP] [varchar](200) NOT NULL,
+	[BLOB_DATA] [varbinary](max) NULL,
+ CONSTRAINT [SYS_C0078457] PRIMARY KEY NONCLUSTERED 
+(
+	[TRIGGER_NAME] ASC,
+	[TRIGGER_GROUP] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[QRTZ_BLOB_TRIGGERS]  WITH CHECK ADD  CONSTRAINT [SYS_C0078936] FOREIGN KEY([TRIGGER_NAME], [TRIGGER_GROUP])
+REFERENCES [dbo].[QRTZ_TRIGGERS] ([TRIGGER_NAME], [TRIGGER_GROUP])
+GO
+
+ALTER TABLE [dbo].[QRTZ_BLOB_TRIGGERS] CHECK CONSTRAINT [SYS_C0078936]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_CALENDARS]    Script Date: 04/29/2016 09:10:53 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[QRTZ_CALENDARS]') AND type in (N'U'))
+DROP TABLE [dbo].[QRTZ_CALENDARS]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_CALENDARS]    Script Date: 04/29/2016 09:10:53 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[QRTZ_CALENDARS](
+	[CALENDAR_NAME] [varchar](200) NOT NULL,
+	[CALENDAR] [varbinary](max) NOT NULL,
+ CONSTRAINT [SYS_C0078460] PRIMARY KEY NONCLUSTERED 
+(
+	[CALENDAR_NAME] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [cmcsqpttest]
+GO
+
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[SYS_C0078935]') AND parent_object_id = OBJECT_ID(N'[dbo].[QRTZ_CRON_TRIGGERS]'))
+ALTER TABLE [dbo].[QRTZ_CRON_TRIGGERS] DROP CONSTRAINT [SYS_C0078935]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_CRON_TRIGGERS]    Script Date: 04/29/2016 09:11:00 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[QRTZ_CRON_TRIGGERS]') AND type in (N'U'))
+DROP TABLE [dbo].[QRTZ_CRON_TRIGGERS]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_CRON_TRIGGERS]    Script Date: 04/29/2016 09:11:00 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[QRTZ_CRON_TRIGGERS](
+	[TRIGGER_NAME] [varchar](200) NOT NULL,
+	[TRIGGER_GROUP] [varchar](200) NOT NULL,
+	[CRON_EXPRESSION] [varchar](120) NOT NULL,
+	[TIME_ZONE_ID] [varchar](80) NULL,
+ CONSTRAINT [SYS_C0078464] PRIMARY KEY NONCLUSTERED 
+(
+	[TRIGGER_NAME] ASC,
+	[TRIGGER_GROUP] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[QRTZ_CRON_TRIGGERS]  WITH CHECK ADD  CONSTRAINT [SYS_C0078935] FOREIGN KEY([TRIGGER_NAME], [TRIGGER_GROUP])
+REFERENCES [dbo].[QRTZ_TRIGGERS] ([TRIGGER_NAME], [TRIGGER_GROUP])
+GO
+
+ALTER TABLE [dbo].[QRTZ_CRON_TRIGGERS] CHECK CONSTRAINT [SYS_C0078935]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_FIRED_TRIGGERS]    Script Date: 04/29/2016 09:11:15 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[QRTZ_FIRED_TRIGGERS]') AND type in (N'U'))
+DROP TABLE [dbo].[QRTZ_FIRED_TRIGGERS]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_FIRED_TRIGGERS]    Script Date: 04/29/2016 09:11:15 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[QRTZ_FIRED_TRIGGERS](
+	[ENTRY_ID] [varchar](95) NOT NULL,
+	[TRIGGER_NAME] [varchar](200) NOT NULL,
+	[TRIGGER_GROUP] [varchar](200) NOT NULL,
+	[IS_VOLATILE] [varchar](1) NOT NULL,
+	[INSTANCE_NAME] [varchar](200) NOT NULL,
+	[FIRED_TIME] [numeric](13, 0) NOT NULL,
+	[PRIORITY] [numeric](13, 0) NOT NULL,
+	[STATE] [varchar](16) NOT NULL,
+	[JOB_NAME] [varchar](200) NULL,
+	[JOB_GROUP] [varchar](200) NULL,
+	[IS_STATEFUL] [varchar](1) NULL,
+	[REQUESTS_RECOVERY] [varchar](1) NULL,
+ CONSTRAINT [SYS_C0078473] PRIMARY KEY NONCLUSTERED 
+(
+	[ENTRY_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+
+
+
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_LOCKS]    Script Date: 04/29/2016 09:11:36 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[QRTZ_LOCKS]') AND type in (N'U'))
+DROP TABLE [dbo].[QRTZ_LOCKS]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_LOCKS]    Script Date: 04/29/2016 09:11:36 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[QRTZ_LOCKS](
+	[LOCK_NAME] [varchar](40) NOT NULL,
+ CONSTRAINT [SYS_C0078487] PRIMARY KEY NONCLUSTERED 
+(
+	[LOCK_NAME] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_PAUSED_TRIGGER_GRPS]    Script Date: 04/29/2016 09:11:43 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[QRTZ_PAUSED_TRIGGER_GRPS]') AND type in (N'U'))
+DROP TABLE [dbo].[QRTZ_PAUSED_TRIGGER_GRPS]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_PAUSED_TRIGGER_GRPS]    Script Date: 04/29/2016 09:11:43 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[QRTZ_PAUSED_TRIGGER_GRPS](
+	[TRIGGER_GROUP] [varchar](200) NOT NULL,
+ CONSTRAINT [SYS_C0078489] PRIMARY KEY NONCLUSTERED 
+(
+	[TRIGGER_GROUP] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_SCHEDULER_STATE]    Script Date: 04/29/2016 09:11:50 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[QRTZ_SCHEDULER_STATE]') AND type in (N'U'))
+DROP TABLE [dbo].[QRTZ_SCHEDULER_STATE]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_SCHEDULER_STATE]    Script Date: 04/29/2016 09:11:50 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[QRTZ_SCHEDULER_STATE](
+	[INSTANCE_NAME] [varchar](200) NOT NULL,
+	[LAST_CHECKIN_TIME] [numeric](13, 0) NOT NULL,
+	[CHECKIN_INTERVAL] [numeric](13, 0) NOT NULL,
+ CONSTRAINT [SYS_C0078493] PRIMARY KEY NONCLUSTERED 
+(
+	[INSTANCE_NAME] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [cmcsqpttest]
+GO
+
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[SYS_C0078934]') AND parent_object_id = OBJECT_ID(N'[dbo].[QRTZ_SIMPLE_TRIGGERS]'))
+ALTER TABLE [dbo].[QRTZ_SIMPLE_TRIGGERS] DROP CONSTRAINT [SYS_C0078934]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_SIMPLE_TRIGGERS]    Script Date: 04/29/2016 09:11:57 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[QRTZ_SIMPLE_TRIGGERS]') AND type in (N'U'))
+DROP TABLE [dbo].[QRTZ_SIMPLE_TRIGGERS]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_SIMPLE_TRIGGERS]    Script Date: 04/29/2016 09:11:57 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[QRTZ_SIMPLE_TRIGGERS](
+	[TRIGGER_NAME] [varchar](200) NOT NULL,
+	[TRIGGER_GROUP] [varchar](200) NOT NULL,
+	[REPEAT_COUNT] [numeric](7, 0) NOT NULL,
+	[REPEAT_INTERVAL] [numeric](12, 0) NOT NULL,
+	[TIMES_TRIGGERED] [numeric](7, 0) NOT NULL,
+ CONSTRAINT [SYS_C0078499] PRIMARY KEY NONCLUSTERED 
+(
+	[TRIGGER_NAME] ASC,
+	[TRIGGER_GROUP] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[QRTZ_SIMPLE_TRIGGERS]  WITH CHECK ADD  CONSTRAINT [SYS_C0078934] FOREIGN KEY([TRIGGER_NAME], [TRIGGER_GROUP])
+REFERENCES [dbo].[QRTZ_TRIGGERS] ([TRIGGER_NAME], [TRIGGER_GROUP])
+GO
+
+ALTER TABLE [dbo].[QRTZ_SIMPLE_TRIGGERS] CHECK CONSTRAINT [SYS_C0078934]
+GO
+
+USE [cmcsqpttest]
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF__QRTZ_TRIG__VALID__06CD04F7]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[QRTZ_TRIGGER_CONFIG] DROP CONSTRAINT [DF__QRTZ_TRIG__VALID__06CD04F7]
+END
+
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_TRIGGER_CONFIG]    Script Date: 04/29/2016 09:12:03 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[QRTZ_TRIGGER_CONFIG]') AND type in (N'U'))
+DROP TABLE [dbo].[QRTZ_TRIGGER_CONFIG]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_TRIGGER_CONFIG]    Script Date: 04/29/2016 09:12:03 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[QRTZ_TRIGGER_CONFIG](
+	[ID] [numeric](10, 0) IDENTITY(1,1) NOT NULL,
+	[BEAN_NAME] [varchar](300) NULL,
+	[BEAN_DESC] [varchar](300) NULL,
+	[NOTES] [varchar](1000) NULL,
+	[VALIDITY] [varchar](4) NULL,
+	[CREATE_TIME] [datetime] NULL,
+	[CREATER] [varchar](30) NULL,
+	[EXT1] [varchar](500) NULL,
+	[EXT2] [varchar](100) NULL,
+ CONSTRAINT [PK_QRTZ_TRIGGER_CONFIG] PRIMARY KEY NONCLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'调度配置流水号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG', @level2type=N'COLUMN',@level2name=N'ID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'实体名称' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG', @level2type=N'COLUMN',@level2name=N'BEAN_NAME'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'实体描述' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG', @level2type=N'COLUMN',@level2name=N'BEAN_DESC'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'备注' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG', @level2type=N'COLUMN',@level2name=N'NOTES'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'是否有效' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG', @level2type=N'COLUMN',@level2name=N'VALIDITY'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'创建时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG', @level2type=N'COLUMN',@level2name=N'CREATE_TIME'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'创建人' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG', @level2type=N'COLUMN',@level2name=N'CREATER'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'扩展字段1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG', @level2type=N'COLUMN',@level2name=N'EXT1'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'扩展字段2' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG', @level2type=N'COLUMN',@level2name=N'EXT2'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'调度配置表' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG'
+GO
+
+ALTER TABLE [dbo].[QRTZ_TRIGGER_CONFIG] ADD  DEFAULT ('1') FOR [VALIDITY]
+GO
+
+USE [cmcsqpttest]
+GO
+
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_QRTZ_TRI_30]') AND parent_object_id = OBJECT_ID(N'[dbo].[QRTZ_TRIGGER_CONFIG_RELEVANCE]'))
+ALTER TABLE [dbo].[QRTZ_TRIGGER_CONFIG_RELEVANCE] DROP CONSTRAINT [FK_QRTZ_TRI_30]
+GO
+
+IF  EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF__QRTZ_TRIG__VALID__09A971A2]') AND type = 'D')
+BEGIN
+ALTER TABLE [dbo].[QRTZ_TRIGGER_CONFIG_RELEVANCE] DROP CONSTRAINT [DF__QRTZ_TRIG__VALID__09A971A2]
+END
+
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_TRIGGER_CONFIG_RELEVANCE]    Script Date: 04/29/2016 09:12:14 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[QRTZ_TRIGGER_CONFIG_RELEVANCE]') AND type in (N'U'))
+DROP TABLE [dbo].[QRTZ_TRIGGER_CONFIG_RELEVANCE]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_TRIGGER_CONFIG_RELEVANCE]    Script Date: 04/29/2016 09:12:14 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[QRTZ_TRIGGER_CONFIG_RELEVANCE](
+	[ID] [numeric](10, 0) IDENTITY(1,1) NOT NULL,
+	[TRIGGER_CONFIG_ID] [numeric](10, 0) NULL,
+	[TRIGGER_NAME] [varchar](300) NULL,
+	[VALIDITY] [varchar](4) NULL,
+	[CREATER] [varchar](30) NULL,
+	[CREATE_TIME] [datetime] NULL,
+	[EXT1] [varchar](100) NULL,
+	[EXT2] [varchar](100) NULL,
+	[TRIGGER_TYPE] [varchar](20) NULL,
+	[START_TIME] [datetime] NULL,
+	[END_TIME] [datetime] NULL,
+	[CRON_EXPR] [varchar](1000) NULL,
+	[EXEUCOUNT] [numeric](10, 0) NULL,
+	[EXEUSPACE] [numeric](10, 0) NULL,
+ CONSTRAINT [PK_QRTZ_TRIGGER_CONFIG_RELEVAN] PRIMARY KEY NONCLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'配置明细流水号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG_RELEVANCE', @level2type=N'COLUMN',@level2name=N'ID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'配置流水号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG_RELEVANCE', @level2type=N'COLUMN',@level2name=N'TRIGGER_CONFIG_ID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'名称' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG_RELEVANCE', @level2type=N'COLUMN',@level2name=N'TRIGGER_NAME'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'是否有效' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG_RELEVANCE', @level2type=N'COLUMN',@level2name=N'VALIDITY'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'创建人' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG_RELEVANCE', @level2type=N'COLUMN',@level2name=N'CREATER'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'创建时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG_RELEVANCE', @level2type=N'COLUMN',@level2name=N'CREATE_TIME'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'扩展字段1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG_RELEVANCE', @level2type=N'COLUMN',@level2name=N'EXT1'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'扩展字段2' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG_RELEVANCE', @level2type=N'COLUMN',@level2name=N'EXT2'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'配置类型' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG_RELEVANCE', @level2type=N'COLUMN',@level2name=N'TRIGGER_TYPE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'开始时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG_RELEVANCE', @level2type=N'COLUMN',@level2name=N'START_TIME'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'结束时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG_RELEVANCE', @level2type=N'COLUMN',@level2name=N'END_TIME'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'当前表达式' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG_RELEVANCE', @level2type=N'COLUMN',@level2name=N'CRON_EXPR'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'执行次数' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG_RELEVANCE', @level2type=N'COLUMN',@level2name=N'EXEUCOUNT'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'执行间隔' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG_RELEVANCE', @level2type=N'COLUMN',@level2name=N'EXEUSPACE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'调度配置明细表' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'QRTZ_TRIGGER_CONFIG_RELEVANCE'
+GO
+
+ALTER TABLE [dbo].[QRTZ_TRIGGER_CONFIG_RELEVANCE]  WITH CHECK ADD  CONSTRAINT [FK_QRTZ_TRI_30] FOREIGN KEY([TRIGGER_CONFIG_ID])
+REFERENCES [dbo].[QRTZ_TRIGGER_CONFIG] ([ID])
+GO
+
+ALTER TABLE [dbo].[QRTZ_TRIGGER_CONFIG_RELEVANCE] CHECK CONSTRAINT [FK_QRTZ_TRI_30]
+GO
+
+ALTER TABLE [dbo].[QRTZ_TRIGGER_CONFIG_RELEVANCE] ADD  DEFAULT ('1') FOR [VALIDITY]
+GO
+
+USE [cmcsqpttest]
+GO
+
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[SYS_C0078933]') AND parent_object_id = OBJECT_ID(N'[dbo].[QRTZ_TRIGGER_LISTENERS]'))
+ALTER TABLE [dbo].[QRTZ_TRIGGER_LISTENERS] DROP CONSTRAINT [SYS_C0078933]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_TRIGGER_LISTENERS]    Script Date: 04/29/2016 09:12:25 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[QRTZ_TRIGGER_LISTENERS]') AND type in (N'U'))
+DROP TABLE [dbo].[QRTZ_TRIGGER_LISTENERS]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[QRTZ_TRIGGER_LISTENERS]    Script Date: 04/29/2016 09:12:25 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[QRTZ_TRIGGER_LISTENERS](
+	[TRIGGER_NAME] [varchar](200) NOT NULL,
+	[TRIGGER_GROUP] [varchar](200) NOT NULL,
+	[TRIGGER_LISTENER] [varchar](200) NOT NULL,
+ CONSTRAINT [SYS_C0078516] PRIMARY KEY NONCLUSTERED 
+(
+	[TRIGGER_NAME] ASC,
+	[TRIGGER_GROUP] ASC,
+	[TRIGGER_LISTENER] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[QRTZ_TRIGGER_LISTENERS]  WITH CHECK ADD  CONSTRAINT [SYS_C0078933] FOREIGN KEY([TRIGGER_NAME], [TRIGGER_GROUP])
+REFERENCES [dbo].[QRTZ_TRIGGERS] ([TRIGGER_NAME], [TRIGGER_GROUP])
+GO
+
+ALTER TABLE [dbo].[QRTZ_TRIGGER_LISTENERS] CHECK CONSTRAINT [SYS_C0078933]
+GO
+
+USE [cmcsqpttest]
+GO
+
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[SYS_C0078932]') AND parent_object_id = OBJECT_ID(N'[dbo].[QRTZ_TRIGGERS]'))
+ALTER TABLE [dbo].[QRTZ_TRIGGERS] DROP CONSTRAINT [SYS_C0078932]
+GO
+
+
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[UAAUTHINFO]    Script Date: 04/29/2016 09:12:55 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[UAAUTHINFO]') AND type in (N'U'))
+DROP TABLE [dbo].[UAAUTHINFO]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[UAAUTHINFO]    Script Date: 04/29/2016 09:12:55 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[UAAUTHINFO](
+	[NODEID] [numeric](16, 0) IDENTITY(1,1) NOT NULL,
+	[NODECODE] [varchar](100) NULL,
+	[NODENAME] [varchar](100) NULL,
+	[NODEDESC] [varchar](200) NULL,
+	[NODETYPE] [varchar](10) NULL,
+	[URL] [varchar](100) NULL,
+	[PARENTNODEID] [numeric](16, 0) NULL,
+	[NODEORDER] [numeric](4, 0) NULL,
+	[STATUS] [char](1) NULL,
+	[ICON1] [varchar](100) NULL,
+ CONSTRAINT [PK_UAAUTHINFO] PRIMARY KEY NONCLUSTERED 
+(
+	[NODEID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[UAROLEAUTH]    Script Date: 04/29/2016 09:13:03 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[UAROLEAUTH]') AND type in (N'U'))
+DROP TABLE [dbo].[UAROLEAUTH]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[UAROLEAUTH]    Script Date: 04/29/2016 09:13:03 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[UAROLEAUTH](
+	[ROLEID] [numeric](16, 0) NULL,
+	[NODEID] [numeric](16, 0) NULL
+) ON [PRIMARY]
+
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[UAROLEINFO]    Script Date: 04/29/2016 09:13:08 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[UAROLEINFO]') AND type in (N'U'))
+DROP TABLE [dbo].[UAROLEINFO]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[UAROLEINFO]    Script Date: 04/29/2016 09:13:08 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[UAROLEINFO](
+	[ROLEID] [numeric](16, 0) IDENTITY(1,1) NOT NULL,
+	[ROLENAME] [varchar](100) NULL,
+	[ROLEENNAME] [varchar](100) NULL,
+	[STATUS] [char](1) NULL,
+	[ROLETYPE] [varchar](20) NULL,
+ CONSTRAINT [PK_UAROLEINFO] PRIMARY KEY NONCLUSTERED 
+(
+	[ROLEID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[UAUSERINFO]    Script Date: 04/29/2016 09:13:14 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[UAUSERINFO]') AND type in (N'U'))
+DROP TABLE [dbo].[UAUSERINFO]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[UAUSERINFO]    Script Date: 04/29/2016 09:13:14 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[UAUSERINFO](
+	[USERID] [numeric](16, 0) IDENTITY(1,1) NOT NULL,
+	[LOGINNAME] [varchar](100) NULL,
+	[PASSWORD] [varchar](100) NULL,
+	[DISPLAYNAME] [varchar](100) NULL,
+	[STATUS] [char](1) NULL,
+	[AUTHENTICTYPE] [varchar](60) NULL,
+	[CERTIFICATE] [varchar](500) NULL,
+	[EXT1] [varchar](200) NULL,
+	[EXT2] [varchar](200) NULL,
+	[EXT3] [varchar](200) NULL,
+	[EXT4] [varchar](200) NULL,
+	[EXT5] [varchar](1000) NULL,
+ CONSTRAINT [PK_UAUSERINFO] PRIMARY KEY NONCLUSTERED 
+(
+	[USERID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[UAUSERROLE]    Script Date: 04/29/2016 09:13:21 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[UAUSERROLE]') AND type in (N'U'))
+DROP TABLE [dbo].[UAUSERROLE]
+GO
+
+USE [cmcsqpttest]
+GO
+
+/****** Object:  Table [dbo].[UAUSERROLE]    Script Date: 04/29/2016 09:13:21 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[UAUSERROLE](
+	[USERID] [numeric](16, 0) NULL,
+	[ROLEID] [numeric](16, 0) NULL
+) ON [PRIMARY]
+
+GO
+
+
+
+

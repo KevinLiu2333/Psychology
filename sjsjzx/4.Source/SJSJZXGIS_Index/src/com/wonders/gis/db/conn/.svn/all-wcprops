@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/175231/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/src/com/wonders/gis/db/conn
+END
+PostGISDBConnectionManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/src/com/wonders/gis/db/conn/PostGISDBConnectionManager.java
+END
+SDEDBConnectionManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/!svn/ver/175231/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/src/com/wonders/gis/db/conn/SDEDBConnectionManager.java
+END
+DBSDEConnectionManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/src/com/wonders/gis/db/conn/DBSDEConnectionManager.java
+END
+DBConnectionPool.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/src/com/wonders/gis/db/conn/DBConnectionPool.java
+END
+DBConnectionManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/src/com/wonders/gis/db/conn/DBConnectionManager.java
+END

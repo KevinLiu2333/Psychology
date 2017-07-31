@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<types>
+		<type>
+			<name>招标</name>
+			<code>1</code>
+		</type>
+		<type>
+			<name>拍卖</name>
+			<code>2</code>
+		</type>
+		<type>
+			<name>挂牌</name>
+			<code>3</code>
+		</type>
+		<type>
+			<name>协议</name>
+			<code>4</code>
+		</type>
+		<type>
+			<name>租赁</name>
+			<code>5</code>
+		</type>
+		<type>
+			<name>在建工程项目转让</name>
+			<code>6</code>
+		</type>
+		<type>
+			<name>划拨用地转让</name>
+			<code>7</code>
+		</type>
+		<type>
+			<name>补缴土地价款</name>
+			<code>8</code>
+		</type>
+		<type>
+			<name>变更补缴</name>
+			<code>9</code>
+		</type>
+		<type>
+			<name>其他</name>
+			<code>99</code>
+		</type>
+		
+</types>

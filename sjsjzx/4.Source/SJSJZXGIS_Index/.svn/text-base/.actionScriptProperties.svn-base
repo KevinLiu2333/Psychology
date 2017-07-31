@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<actionScriptProperties analytics="false" mainApplicationPath="index.mxml" projectUUID="34533f02-0840-437e-a163-20b0fa835a28" version="10">
+  <compiler additionalCompilerArguments="-locale zh_CN -source-path=locale/{locale} -keep-all-type-selectors=true" autoRSLOrdering="true" copyDependentFiles="true" flex3CompatMode="false" flexSDK="Flex 4.1" fteInMXComponents="false" generateAccessible="true" htmlExpressInstall="true" htmlGenerate="true" htmlHistoryManagement="false" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="WebContent" removeUnusedRSL="true" sourceFolderPath="flex_src" strict="true" targetPlayerVersion="0.0.0" useApolloConfig="false" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
+    <compilerSourcePath/>
+    <libraryPath defaultLinkType="3">
+      <libraryPathEntry kind="4" path="">
+        <excludedEntries>
+          <libraryPathEntry kind="3" linkType="1" path="${PROJECT_FRAMEWORKS}/libs/flex.swc" useDefaultLinkType="false"/>
+        </excludedEntries>
+      </libraryPathEntry>
+      <libraryPathEntry kind="3" linkType="1" path="flex_libs/agslib-2.1-2010-09-17.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="flex_libs/as3corelib.swc" useDefaultLinkType="false"/>
+    </libraryPath>
+    <sourceAttachmentPath/>
+  </compiler>
+  <applications>
+    <application path="index.mxml"/>
+  </applications>
+  <modules>
+    <module application="flex_src/index.mxml" destPath="widgets/ShortCuts/ShortCutsWidget.swf" optimize="true" sourcePath="flex_src/widgets/ShortCuts/ShortCutsWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/Header/HeaderController.swf" optimize="true" sourcePath="flex_src/widgets/Header/HeaderController.mxml"/>
+    
+    <module application="flex_src/index.mxml" destPath="widgets/HeaderController/HeaderControllerWidget.swf" optimize="true" sourcePath="flex_src/widgets/HeaderController/HeaderControllerWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/LayerOperation/LayerOperationWidget.swf" optimize="true" sourcePath="flex_src/widgets/LayerOperation/LayerOperationWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/QueryProject/QueryJBNTWidget.swf" optimize="true" sourcePath="flex_src/widgets/QueryProject/QueryJBNTWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/Bookmark/BookmarkWidget.swf" optimize="true" sourcePath="flex_src/widgets/Bookmark/BookmarkWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/Print/PrintWidget.swf" optimize="true" sourcePath="flex_src/widgets/Print/PrintWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/QueryProject/QueryWFYDWidget.swf" optimize="true" sourcePath="flex_src/widgets/QueryProject/QueryWFYDWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/LayerOperation/ConcernedLayerWidget.swf" optimize="true" sourcePath="flex_src/widgets/LayerOperation/ConcernedLayerWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/Thematic/XGAreaThematicWidget.swf" optimize="true" sourcePath="flex_src/widgets/Thematic/XGAreaThematicWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/InfoTemplates/InfoPopupWidget.swf" optimize="true" sourcePath="flex_src/widgets/InfoTemplates/InfoPopupWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/QueryProject/QueryXZFWWidget.swf" optimize="true" sourcePath="flex_src/widgets/QueryProject/QueryXZFWWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/MapSwitcher/MapSwitcherWidget.swf" optimize="true" sourcePath="flex_src/widgets/MapSwitcher/MapSwitcherWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/QueryProject/QueryJZJSWidget.swf" optimize="true" sourcePath="flex_src/widgets/QueryProject/QueryJZJSWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/InfoTemplates/SimpleInfoWinWidget.swf" optimize="true" sourcePath="flex_src/widgets/InfoTemplates/SimpleInfoWinWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/OverviewMap/OverviewMapWidget.swf" optimize="true" sourcePath="flex_src/widgets/OverviewMap/OverviewMapWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/Swipe/SwipeWidget.swf" optimize="true" sourcePath="flex_src/widgets/Swipe/SwipeWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/Edit/EditWidget.swf" optimize="true" sourcePath="flex_src/widgets/Edit/EditWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/Measure/MeasureWidget.swf" optimize="true" sourcePath="flex_src/widgets/Measure/MeasureWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/Query/QueryWidget.swf" optimize="true" sourcePath="flex_src/widgets/Query/QueryWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/QueryProject/QueryCYYDWidget.swf" optimize="true" sourcePath="flex_src/widgets/QueryProject/QueryCYYDWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/DecisionSupport/DecisionSupportWidget.swf" optimize="true" sourcePath="flex_src/widgets/DecisionSupport/DecisionSupportWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/Query/QueryFQGHWidget.swf" optimize="true" sourcePath="flex_src/widgets/Query/QueryFQGHWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/Coordinate/CoordinateWidget.swf" optimize="true" sourcePath="flex_src/widgets/Coordinate/CoordinateWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/Snapshot/SnapshotWidget.swf" optimize="true" sourcePath="flex_src/widgets/Snapshot/SnapshotWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/WidgetContainer/WidgetContainerWidget.swf" optimize="true" sourcePath="flex_src/widgets/WidgetContainer/WidgetContainerWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/Query/QueryXXGHWidget.swf" optimize="true" sourcePath="flex_src/widgets/Query/QueryXXGHWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/QueryProject/QueryYDFWWidget.swf" optimize="true" sourcePath="flex_src/widgets/QueryProject/QueryYDFWWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/CommenQuery/CommenQueryWidget.swf" optimize="true" sourcePath="flex_src/widgets/CommenQuery/CommenQueryWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/Query/QueryZTGHWidget.swf" optimize="true" sourcePath="flex_src/widgets/Query/QueryZTGHWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/Thematic/XGTownThematicWidget.swf" optimize="true" sourcePath="flex_src/widgets/Thematic/XGTownThematicWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/Query/QueryDYGHWidget.swf" optimize="true" sourcePath="flex_src/widgets/Query/QueryDYGHWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/MapMarker/MapMarkerWidget.swf" optimize="true" sourcePath="flex_src/widgets/MapMarker/MapMarkerWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/Navigation/NavigationWidget.swf" optimize="true" sourcePath="flex_src/widgets/Navigation/NavigationWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/QueryProject/QueryGCFWWidget.swf" optimize="true" sourcePath="flex_src/widgets/QueryProject/QueryGCFWWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/Locate/CrossRoadLocateWidget.swf" optimize="true" sourcePath="flex_src/widgets/Locate/CrossRoadLocateWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/Legend/LegendWidget.swf" optimize="true" sourcePath="flex_src/widgets/Legend/LegendWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/QueryProject/QueryQSZDWidget.swf" optimize="true" sourcePath="flex_src/widgets/QueryProject/QueryQSZDWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/QueryProject/QueryCHCGWidget.swf" optimize="true" sourcePath="flex_src/widgets/QueryProject/QueryCHCGWidget.mxml"/>
+    <module application="flex_src/index.mxml" destPath="widgets/Interface/QueryExtentWidget.swf" optimize="true" sourcePath="flex_src/widgets/Interface/QueryExtentWidget.mxml"/>
+  </modules>
+  <buildCSSFiles/>
+  <flashCatalyst validateFlashCatalystCompatibility="false"/>
+</actionScriptProperties>

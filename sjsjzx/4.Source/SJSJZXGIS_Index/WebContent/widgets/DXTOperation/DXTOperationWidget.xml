@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<configuration>
+    <dxtlayers>
+		<layer>
+			<name>2015年地形图</name>
+			<layerid>08</layerid><!-- 包含0,8两个图层 -->
+		</layer>
+		<layer>
+			<name>2014年地形图</name>
+			<layerid>07</layerid><!-- 包含0,7两个图层 -->
+		</layer>
+		<layer>
+			<name>2013年地形图</name>
+			<layerid>06</layerid><!-- 包含0,6两个图层 -->
+		</layer>
+		<layer>
+			<name>2012年地形图</name>
+			<layerid>05</layerid><!-- 包含0,5两个图层 -->
+		</layer>
+		<layer>
+			<name>2011年地形图</name>
+			<layerid>04</layerid><!-- 包含0,4两个图层 -->
+		</layer>
+	</dxtlayers>
+</configuration>

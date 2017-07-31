@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/176865/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/model
+END
+BaseOrgan.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/model/BaseOrgan.java
+END
+BaseQrtzTriggerConfigRelevance.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/model/BaseQrtzTriggerConfigRelevance.java
+END
+BaseBlQuartz.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/model/BaseBlQuartz.java
+END
+BaseQrtzTriggers.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/model/BaseQrtzTriggers.java
+END
+BaseQrtzTriggerConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/model/BaseQrtzTriggerConfig.java
+END

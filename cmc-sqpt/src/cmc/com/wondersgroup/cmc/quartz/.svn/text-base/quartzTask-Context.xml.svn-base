@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- task bean -->
+	<bean id="testDispatcherImpl"
+		class="com.wondersgroup.cmc.quartz.dispatcher.impl.TestDispatcherImpl">
+		<property name="ifCheckVS" ref="ifCheckVS"></property>
+	</bean>
+	
+	<bean id="testWebApplicationImpl"
+		class="com.wondersgroup.cmc.quartz.dispatcher.impl.TestWebApplicationImpl">
+		<property name="ifCheckVS" ref="ifCheckVS"></property>
+	</bean>
+	
+	<bean id="testOpenPortImpl"
+		class="com.wondersgroup.cmc.quartz.dispatcher.impl.TestOpenPortImpl">
+		<property name="ifCheckVS" ref="ifCheckVS"></property>
+	</bean>
+	
+	<bean id="testLowerPlatFomImpl"
+		class="com.wondersgroup.cmc.quartz.dispatcher.impl.TestLowerPlatFomImpl">
+		<property name="ifCheckVS" ref="subifCheckVS"></property>
+	</bean>
+</beans>

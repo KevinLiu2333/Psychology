@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<description>
+		一体化平台WSSIP Spring配置
+	</description>
+
+	<!-- =================================================================== -->
+	<!-- 公用构件资源接入 -->
+	<!-- =================================================================== -->
+	<bean id="defaultDialect" class="org.hibernate.dialect.SQLServerDialect">
+		<description>默认方言，用于Spring Jdbc分页查询</description>
+	</bean>
+
+	<!-- 缓存构件 -->
+	<import resource="classpath:com/wondersgroup/wsscclib/cache/cacheContext.xml" />
+	<!-- code -->
+	<import resource="classpath:com/wondersgroup/wssip/bc/commons/code/codeContext.xml" />
+	<!-- 字典明细 -->
+	<import resource="classpath:com/wondersgroup/wssip/commons/dictionary/dictionaryContext.xml" />
+	<!-- 业务类数据缓存控件 -->
+	<import resource="classpath:com/wondersgroup/wssip/commons/businesscode/businesscodeContext.xml" />
+	<!-- 通用dao -->
+	<import resource="classpath:com/wondersgroup/wssip/commons/dao/commonsContext.xml" />
+	<!-- Excel Template基础Action定义 -->
+	<bean id="abstractExcelTemplateAction"
+		class="com.wondersgroup.wsscclib.exceltemplate.web.struts2.ExcelTemplateAction"
+		abstract="true">
+		<property name="modelServiceTxExecutor" ref="excelModelServiceTxExecutor"></property>
+	</bean>
+	
+	<bean id="excelModelServiceTxExecutor" parent="basicTxProxy">
+		<property name="target" ref="excelModelServiceTxExecutorImpl"></property>
+	</bean>
+	
+	<bean id="excelModelServiceTxExecutorImpl"
+		class="com.wondersgroup.wsscclib.exceltemplate.web.ExcelModelServiceTxExecutorImpl">
+	</bean>
+</beans>

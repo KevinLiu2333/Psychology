@@ -38,5 +38,13 @@ var ioc = {
 				refer : 'dao'
 			}
 		}
-	}
+	},
+    apiJob : {
+        type : "com.wonders.wddc.suite.data.job.ApiJob",
+        fields : {
+            dao : {
+                refer : 'dao'
+            }
+        }
+    }
 };

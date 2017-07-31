@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/177925/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/dispatch/model/dto
+END
+IfmondetailDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/!svn/ver/176449/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/dispatch/model/dto/IfmondetailDTO.java
+END
+HttpClientDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/174090/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/dispatch/model/dto/HttpClientDTO.java
+END
+IfmondefDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/!svn/ver/175377/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/dispatch/model/dto/IfmondefDTO.java
+END
+IfdefineDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/!svn/ver/177925/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/dispatch/model/dto/IfdefineDTO.java
+END
+WebServiceDataSource.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/!svn/ver/174018/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/dispatch/model/dto/WebServiceDataSource.java
+END
+IftransdetailDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/!svn/ver/176449/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/dispatch/model/dto/IftransdetailDTO.java
+END

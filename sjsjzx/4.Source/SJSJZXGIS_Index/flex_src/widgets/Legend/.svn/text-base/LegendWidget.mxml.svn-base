@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<viewer:BaseWidget xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx"
+				   xmlns:viewer="com.esri.viewer.*" 
+				   layout="absolute"
+				   initialize="basewidget1_initializeHandler(event)"
+				   widgetConfigLoaded="basewidget1_widgetConfigLoadedHandler(event)" >
+	<fx:Script>
+		<![CDATA[
+			import com.esri.viewer.AppEvent;
+			import com.esri.viewer.ViewerContainer;
+			import com.esri.viewer.utils.UrlUtil;
+			
+			import mx.containers.HBox;
+			import mx.containers.VBox;
+			import mx.controls.Image;
+			import mx.controls.Label;
+			import mx.controls.Spacer;
+			import mx.events.FlexEvent;
+			import mx.events.IndexChangedEvent;
+			
+			import spark.components.HGroup;
+			
+			private const imgUrl:String = UrlUtil.URL_DOMAIN + "assets/images/legendicons/";
+			private const ICON_URL:String = UrlUtil.URL_DOMAIN + "assets/images/";
+			protected function basewidget1_initializeHandler(event:FlexEvent):void
+			{
+				// TODO Auto-generated method stub
+				this.currentState="closed";
+				ViewerContainer.addEventListener(AppEvent.LEGENDWIDGETOPEN,legendWidgetOpenHanlder);
+			}
+			private function  legendWidgetOpenHanlder(event:AppEvent):void
+			{
+				this.currentState="open";
+			}
+			protected function tabBar_changeHandler(event:IndexChangedEvent):void
+			{
+				// TODO Auto-generated method stub
+				var index:int=event.newIndex;
+				switch(index)
+				{
+					case 0:
+						legendVGroup.width=300;
+						legendVGroup.height=400;
+						break;
+					case 1:
+						legendVGroup.width=300;
+						legendVGroup.height=400;
+						break;
+					case 2:
+						legendVGroup.width=450;
+						legendVGroup.height=700;
+						break;
+				}
+				
+			}
+			
+			protected function basewidget1_widgetConfigLoadedHandler(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				if(configXML)
+				{
+					var lcdlxxxmllist:XMLList=configXML.jcxx.item;
+					var jcdlxxl:VBox=new VBox();
+					var jcdlxxr:VBox=new VBox();
+					for(var i:int=0;i<lcdlxxxmllist.length();i++)
+					{
+						var src:String=imgUrl+lcdlxxxmllist[i].toString();
+						var textString:String=lcdlxxxmllist[i].@label;	
+						var img:Image=new Image();
+						img.width=35;
+						img.height=20;
+						img.source=src;
+						var label:mx.controls.Label=new mx.controls.Label();
+						label.text=textString;
+						var hbox:HBox=new HBox();
+						hbox.addChild(img);
+						hbox.addChild(label);
+						if(i<(lcdlxxxmllist.length()/2))
+						{
+							jcdlxxl.addChild(hbox);
+						}else
+						{
+							jcdlxxr.addChild(hbox);
+						}
+					}
+					jcdlxx.addChild(jcdlxxl);
+					jcdlxx.addChild(jcdlxxr);
+					var ghxxxmllist:XMLList=configXML.ghxx.item;
+					var ghfwxxl:VBox=new VBox();
+					var ghfwxxr:VBox=new VBox();
+					for(var j:int=0;j<ghxxxmllist.length();j++)
+					{
+						var ghxxsrc:String=imgUrl+ghxxxmllist[j].toString();
+						var ghxxtextString:String=ghxxxmllist[j].@label;	
+						var ghxximg:Image=new Image();
+						ghxximg.width=35;
+						ghxximg.height=20;
+						ghxximg.source=ghxxsrc;
+						var ghxxlabel:mx.controls.Label=new mx.controls.Label();
+						ghxxlabel.text=ghxxtextString;
+						var box:HBox=new HBox();
+						box.addChild(ghxximg);
+						box.addChild(ghxxlabel);
+						if(j<(ghxxxmllist.length()/2+1))
+						{
+							ghfwxxl.addChild(box);
+						}else
+						{
+							ghfwxxr.addChild(box);
+						}
+					}
+					ghfwxx.addChild(ghfwxxl);
+					ghfwxx.addChild(ghfwxxr);
+					
+					var chcgxmllist:XMLList=configXML.chcg.item;
+					var chcgxxl:VBox=new VBox();
+					var nameL:mx.controls.Label=new mx.controls.Label();
+					nameL.setStyle("fontWeight","bold"); 
+					nameL.setStyle("fontSize","12"); 
+					nameL.text="用地类型";
+					
+					chcgxxl.addChild(nameL);
+					var chcgxxr:VBox=new VBox();
+					var nameR:mx.controls.Label=new mx.controls.Label();
+					nameR.setStyle("fontWeight","bold"); 
+					nameR.setStyle("fontSize","12");
+					nameR.text="供地类型";
+					chcgxxr.addChild(nameR);
+					for(var p:int=0;p<chcgxmllist.length();p++)
+					{
+						var chcgsrc:String=imgUrl+chcgxmllist[p].toString();
+						var chcgtextString:String=chcgxmllist[p].@label;	
+						var chcgimg:Image=new Image();
+						chcgimg.width=35;
+						chcgimg.height=20;
+						chcgimg.source=chcgsrc;
+						var chcglabel:mx.controls.Label=new mx.controls.Label();
+						chcglabel.text=chcgtextString;
+						var chcgbox:HBox=new HBox();
+						chcgbox.addChild(chcgimg);
+						chcgbox.addChild(chcglabel);
+						if(p<(chcgxmllist.length()/2+1))
+						{
+							chcgxxl.addChild(chcgbox);
+						}else
+						{
+							chcgxxr.addChild(chcgbox);
+						}
+					}
+					chcg.addChild(chcgxxl);
+					chcg.addChild(chcgxxr);
+					
+					var dkxxxmllist:XMLList=configXML.dkxx.item;
+					var dkxxVboxl:VBox=new VBox();
+					var dkxxVboxr:VBox=new VBox();
+					for(var m:int=0;m<dkxxxmllist.length();m++)
+					{
+						var dkxxsrc:String=imgUrl+dkxxxmllist[m].toString();
+						var dkxxtextString:String=dkxxxmllist[m].@label;	
+						var dkxximg:Image=new Image();
+						dkxximg.width=35;
+						dkxximg.height=20;
+						dkxximg.source=dkxxsrc;
+						var dkxxlabel:mx.controls.Label=new mx.controls.Label();
+						dkxxlabel.text=dkxxtextString;
+						var box2:HBox=new HBox();
+						box2.addChild(dkxximg);
+						box2.addChild(dkxxlabel);
+						if(m<(dkxxxmllist.length()/2))
+						{
+							dkxxVboxl.addChild(box2);
+						}else
+						{
+							dkxxVboxr.addChild(box2);
+						}
+					}
+					dkxx.addChild(dkxxVboxl);
+					dkxx.addChild(dkxxVboxr);
+				}
+			}
+			
+			protected function closeButton_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				this.currentState="closed";
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<viewer:states>
+		<s:State name="open"/>
+		<s:State name="closed"/>
+	</viewer:states>
+	<viewer:transitions>
+		<s:Transition fromState="closed" toState="open">
+			<s:Sequence>
+				<s:Move target="{icon}"/>
+				<s:Resize heightTo="460"
+						  target="{legendVGroup}"
+						  widthTo="350"/>
+				<s:Fade duration="100" target="{widgetFrame}"/>
+				<s:Fade duration="200" target="{widgetLabel}"/>
+				<s:Fade duration="100" target="{contentGroup}"/>
+				<s:Fade duration="100" target="{minclose}"/>
+				<s:Fade duration="100" target="{headerToolGroup}"/>
+			</s:Sequence>
+		</s:Transition>
+		<s:Transition fromState="open" toState="closed">
+			<s:Sequence>
+				<s:Fade duration="100" target="{widgetFrame}"/>
+				<s:Fade duration="200" target="{widgetLabel}"/>
+				<s:Fade duration="100" target="{widgetLabel}"/>
+				<s:Fade duration="100" target="{headerToolGroup}"/>
+				<s:Fade duration="100" target="{contentGroup}"/>
+			</s:Sequence>
+		</s:Transition>
+	</viewer:transitions>
+	<s:Group id="legendVGroup" 
+			 visible.open="true" visible.closed="false"    
+			 alpha.closed="0" alpha.open="1"
+			 width="350" height="500">
+		<s:Group id="widgetFrame" 
+				 alpha.closed="0" alpha.open="1"
+				 visible.open="true" visible.closed="false"
+				 left="0" right="0" top="0" bottom="0">
+		<s:Rect width="100%" height="100%"
+				radiusX="5"
+				radiusY="5">
+			<s:fill>
+				<s:SolidColor alpha="{getStyle('contentBackgroundAlpha')}"
+							  color="{getStyle('contentBackgroundColor')}"/>
+			</s:fill>
+			<s:stroke>
+				<s:SolidColorStroke  color="{getStyle('borderColor')}"/>
+			</s:stroke>
+		</s:Rect>
+		<s:Rect width="99%" height="30"
+				left="1" top="1"
+				topLeftRadiusX="5"
+				topRightRadiusX="5">
+			<s:fill>
+				<s:SolidColor alpha="{getStyle('contentBackgroundAlpha')}"
+							  color="{getStyle('contentBackgroundColor')}"/><!--0x21A1D8-->
+			</s:fill>
+		</s:Rect>
+	</s:Group>
+		<s:Group id="header"
+				 height="30"
+				 width="100%"
+				 left="25" right="{headerToolGroup.width + 60}" top="0">
+			<s:Label id="widgetLabel"
+					 alpha.closed="0" alpha.open="1"
+					 visible.open="true" visible.closed="false"
+					 width="100%"
+					 maxDisplayedLines="1"
+					 showTruncationTip="true"
+					 styleName="WidgetTitle"
+					 text="图例"
+					 verticalCenter="0"/>
+		</s:Group>
+	<s:Group id="headerToolGroup" 
+			 alpha.closed="0" alpha.open="1"
+			 visible.open="true" visible.closed="false"
+			 height="30"
+			 right="70" top="0"
+			 >
+		<s:layout>
+			<s:HorizontalLayout paddingLeft="10"/>
+		</s:layout>
+	</s:Group>
+	<s:Group id="minclose"
+			 alpha.closed="0" alpha.open="1"
+			 visible.open="true" visible.closed="false"
+			 height="30"
+			 right="3" top="0">
+		<s:layout>
+			<s:HorizontalLayout gap="2"
+								paddingLeft="2"
+								verticalAlign="middle"/>
+		</s:layout>
+		<mx:Image id="closeButton"
+				  buttonMode="true"
+				  source="{ICON_URL + 'newimage/i_w_close.png'}"
+				  toolTip="关闭"
+				  useHandCursor="true"
+				  click="closeButton_clickHandler(event)"/>
+	</s:Group>
+	<s:Group id="contentGroup"
+			 alpha.closed="0" alpha.open="1"
+			 visible.open="true" visible.closed="false"
+			 left="10" right="10" top="35" bottom="20"
+			 clipAndEnableScrolling="true">
+		<s:layout >
+			<s:BasicLayout />
+		</s:layout>
+		<mx:TabNavigator id="tabBar" width="100%" height="100%" >
+			<mx:HBox label="基础地理" id="jcdlxx"  paddingLeft="20" paddingBottom="5" verticalScrollPolicy="auto" horizontalScrollPolicy="off" >
+			</mx:HBox>
+			<mx:HBox label="规划范围" id="ghfwxx"  paddingLeft="20" paddingBottom="5" verticalScrollPolicy="auto" horizontalScrollPolicy="off" >
+			</mx:HBox>
+			<mx:HBox label="测绘成果" id="chcg"  paddingLeft="20" paddingBottom="5" verticalScrollPolicy="auto" horizontalScrollPolicy="off" >
+			</mx:HBox>
+			<mx:HBox label="规划地块" id="dkxx"   paddingLeft="2" paddingBottom="5" paddingRight="2"  horizontalScrollPolicy="off">
+			</mx:HBox>
+		</mx:TabNavigator>
+	</s:Group>
+	</s:Group>
+</viewer:BaseWidget>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" 
+		 xmlns:supportClasses="com.esri.ags.skins.supportClasses.*" 
+		 creationComplete="group1_creationCompleteHandler(event)"
+		 width="400" height="300">
+	<s:layout>
+		<supportClasses:AttachmentLayout/>
+	</s:layout>
+	<fx:Script>
+		<![CDATA[
+			import com.esri.viewer.utils.UtilsClass;
+			
+			import mx.collections.ArrayCollection;
+			import mx.events.FlexEvent;
+			import mx.events.ItemClickEvent;
+			private var _data:Object;
+			[Bindable]
+			private var dataProvider:ArrayCollection;
+			private var _staticsType:String;
+			[Bindable]
+			private var unitText:String;
+			[Bindable]
+			private var unitVisible:Boolean=false;
+			[Bindable]
+			private var graphIndex:int = 0;
+			private var selectedPieLabel:Label;
+			public function get staticsType():String
+			{
+				return _staticsType;
+			}
+
+			public function set staticsType(value:String):void
+			{
+				_staticsType = value;
+				if(_staticsType=="count")
+				{
+					unitText="单位:个";
+					unitVisible=true;
+				}else if(_staticsType=="area")
+				{
+					unitText="单位:公顷";
+					unitVisible=true;
+				}
+				else
+				{
+					unitVisible=false;
+				}
+			}
+
+			public function get data():Object
+			{
+				return _data;
+			}
+
+			public function set data(value:Object):void
+			{
+				_data = value;
+				dataProvider=new ArrayCollection(this._data.yearNum as Array);
+				dataProvider=UtilsClass.sortReverseArrayCollection("label",dataProvider);
+			}
+
+			protected function group1_creationCompleteHandler(event:FlexEvent):void
+			{
+				// TODO Auto-generated method stub
+				lblBar.setStyle("color", getStyle('selectionColor'));
+				lblBar.setStyle("fontWeight", "bold");
+				selectedPieLabel=lblBar;
+				graphIndex = 0;
+			}
+			protected function button_clickHandler(str:String):void
+			{
+				if(str=="columnChart")
+				{
+					this.currentState="columnChart";
+				}
+				else
+				{
+					this.currentState="pieChart";
+				}
+			}
+			
+			protected function linkbar_itemClickHandler(event:ItemClickEvent):void
+			{
+				// TODO Auto-generated method stub
+			}
+			private function displayGold(data:Object, field:String, index:Number, percentValue:Number):String
+			{  
+				var temp:String= ((String)(" " + percentValue)).substr(0,6);  
+				return data.label + ":" +  '\n' + temp + "%";  
+			}  
+
+			protected function lblPie_clickHandler(event:MouseEvent):void
+			{
+				var lbl:Label = event.target as Label;
+				lblPieClick(lbl);
+			}
+			
+			protected function lblPieClick(lbl:Label):void{
+				
+				graphIndex=0;
+				if(selectedPieLabel == lbl)
+				{
+					return;
+				}
+				if(selectedPieLabel != null){
+					selectedPieLabel.setStyle("color", getStyle('color'));
+					selectedPieLabel.setStyle("fontWeight", "normal");
+				}
+				lbl.setStyle("color", getStyle('selectionColor'));
+				lbl.setStyle("fontWeight", "bold");
+				selectedPieLabel = lbl;
+				if(lbl.text == lblPie.text){
+					graphIndex = 1;
+				}
+				if(lbl.text == lblBar.text){
+					graphIndex = 0;
+				}
+			}
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+		
+	</fx:Declarations>
+	<s:VGroup horizontalAlign="right" width="400"   height="300" >
+		<mx:VBox  width="380" height="260"  backgroundAlpha="0"  horizontalAlign="left"
+				 verticalScrollPolicy="off" horizontalScrollPolicy="off">
+			<s:HGroup gap="8" width="100%" horizontalAlign="right" paddingTop="2" paddingRight="4">
+				<s:Label id="lblBar" text="直方图" buttonMode="true" click="lblPie_clickHandler(event)" />
+				<s:Label id="lblPie" text="饼图" buttonMode="true" click="lblPie_clickHandler(event)" />
+			</s:HGroup>
+			<mx:VBox id="columnChart" label="直方图"  
+					 visible="{graphIndex == 0}" includeInLayout="{graphIndex == 0}"
+					 backgroundAlpha="0"  horizontalAlign="left"
+					 verticalScrollPolicy="off" horizontalScrollPolicy="off"
+					 width="100%" height="100%"  >
+				<mx:Text id="unit"  text="{unitText}" visible="{graphIndex == 0}" includeInLayout="{graphIndex == 0}"/>
+				<mx:ColumnChart id="column" 
+								width="95%" height="90%" 
+								paddingLeft="5" paddingRight="5"
+								dataProvider="{dataProvider}" >
+					<mx:horizontalAxis>
+						<mx:CategoryAxis categoryField="label" />
+					</mx:horizontalAxis>
+					<!--先制定柱子按照数据源的什么分类，然后在后面的series中指定每一个分类中的具体小类
+					在中里我们指定柱子显示的方向，horizontalAxis表示竖向显示,-->
+					<!--表示横向显示-->
+					<mx:series>
+						<mx:ColumnSeries xField="label" yField="value" height="90%" displayName="规划数目" 
+										 labelField="value"  labelPosition="outside"/>
+					</mx:series>
+					<mx:seriesFilters>
+						<fx:Array />
+					</mx:seriesFilters>
+				</mx:ColumnChart>
+			</mx:VBox>
+			<mx:HBox  id="pieChart"  label="饼图"    
+					  visible="{graphIndex == 1}"  includeInLayout="{graphIndex == 1}"
+					  backgroundAlpha="0"   verticalScrollPolicy="off" horizontalScrollPolicy="off"
+					  width="100%" height="100%"  >
+				<mx:PieChart  id="piechart"  width="95%" height="95%" 
+							  dataProvider="{dataProvider}" 
+							  showAllDataTips="false" 
+							  selectionMode="single"
+							  innerRadius="0.3"  horizontalCenter="0" verticalCenter="0">  
+					<mx:series>     
+						<mx:PieSeries 
+							displayName="规划数目" field="value" 
+							labelPosition="callout" labelField="label" 
+							nameField="label"
+							labelFunction="displayGold"/>     
+					</mx:series>  
+				</mx:PieChart>  
+			</mx:HBox>
+		</mx:VBox>	
+	</s:VGroup>
+</s:Group>

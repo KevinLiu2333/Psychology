@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+                xmlns:s="library://ns.adobe.com/flex/spark"
+                xmlns:mx="library://ns.adobe.com/flex/mx"
+                autoDrawBackground="false"
+                buttonMode="true"
+                click="itemrenderer_clickHandler(event)"
+                dataChange="itemrenderer_dataChangeHandler(event)"
+                minHeight="30"
+                useHandCursor="true">
+
+    <fx:Script>
+        <![CDATA[
+			import com.esri.viewer.ViewerContainer;
+			import com.esri.viewer.utils.UrlUtil;
+			
+			import mx.controls.Alert;
+			import mx.events.FlexEvent;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			import mx.rpc.http.HTTPService;
+			
+			import widgets.Bookmark.BookmarkWidget;
+            private const BOOKMARK_CLICK:String = "bookmarkClick";
+			
+			private const ICON_URL:String = UrlUtil.URL_DOMAIN + "assets/images/";
+            
+			private const BOOKMARK_DELETE:String = "bookmarkDelete";
+            [Bindable]
+            private var bookmark:Bookmark;
+			private var bmName:String="";
+            private function itemrenderer_dataChangeHandler(event:FlexEvent):void
+            {
+                bookmark = data as Bookmark;
+				
+            }
+
+            private function itemrenderer_clickHandler(event:MouseEvent):void
+            {
+                dispatchEvent(new Event(BOOKMARK_CLICK, true)); // bubbles
+            }
+			
+			private function getName(bmname:String):void{
+				
+				bmName=bmname;
+			}
+            private function deleteBookmark(mevent:MouseEvent):void
+            {
+				var  hs:HTTPService=new HTTPService();
+				hs.url=BookmarkWidget.serviceUrl;
+				hs.method="post";
+				hs.resultFormat="e4x";
+				hs.addEventListener(ResultEvent.RESULT,bookMarkResultHandler);
+				hs.addEventListener(FaultEvent.FAULT,bookMarkFaultHandler);
+				var obj:Object=new Object();
+				obj.action="delete";
+				obj.userid=BookmarkWidget.userId;
+				obj.bmname=bmName;
+				hs.send(obj);
+				function  bookMarkResultHandler(event:ResultEvent):void
+				{
+					var resultStr:String = event.result.toString();
+					if(resultStr == "1")
+					{
+						mevent.stopPropagation(); // don't let this click event go up to the ItemRenderer
+						dispatchEvent(new Event(BOOKMARK_DELETE, true)); // bubbles
+					}
+				}
+				function  bookMarkFaultHandler(event:FaultEvent):void
+				{
+					Alert.show("删除地图书签失败！");
+				}
+            }
+        ]]>
+    </fx:Script>
+
+    <s:states>
+        <s:State name="normal"/>
+        <s:State name="hovered"/>
+    </s:states>
+
+    <!-- border -->
+    <s:Rect left="1" right="1" top="0" bottom="0"
+            radiusX="4"
+            radiusY="4">
+        <s:stroke>
+            <s:SolidColorStroke alpha="{getStyle('borderAlpha')}"
+                                color="{getStyle('borderColor')}"
+                                weight="1"/>
+        </s:stroke>
+    </s:Rect>
+
+    <!-- background fill -->
+    <s:Rect left="2" right="2" top="2" bottom="2"
+            radiusX="4"
+            radiusY="4">
+        <s:fill>
+            <s:SolidColor alpha="0.3"
+                          alpha.hovered="0.8"
+                          color.hovered="{getStyle('rollOverColor')}"
+                          color.normal="{getStyle('contentBackgroundColor')}"/>
+        </s:fill>
+    </s:Rect>
+
+    <mx:Image left="5"
+              maxHeight="20"
+              maxWidth="20"
+			  click="getName(bookmark.name);deleteBookmark(event)"
+              source="{bookmark.icon}"
+              verticalCenter="0">
+        <mx:filters>
+            <mx:GlowFilter alpha="0.5"
+                           blurX="10"
+                           blurY="10"
+                           color="#000000"/>
+        </mx:filters>
+    </mx:Image>
+
+    <s:Label left="30" right="40"
+             fontWeight="normal"
+             text="{bookmark.name}"
+             verticalCenter="0"/>
+
+    <mx:Image width="20" height="20"
+              right="15"
+              click="getName(bookmark.name);deleteBookmark(event)"
+              source="{ICON_URL + 'w_close_red.png'}"
+              verticalCenter="0"
+              visible="{bookmark.userCreated}"/>
+
+</s:ItemRenderer>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC    
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"    
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.devMode" value="false"/>
+	<package name="wssip-default" abstract="true" extends="cuteframework-default,exceltemplate-default">
+		<interceptors>			
+			<interceptor name="businessContext" class="com.wondersgroup.wssip.application.BusinessContextInterceptor"/>
+			
+			<interceptor name="actionLogger" class="com.wondersgroup.wssip.application.ActionLogInterceptor"/>
+			
+			<interceptor-stack name="wssip-defaultStack">
+				<interceptor-ref name="cuteframework-defaultStack"/>
+				
+				<interceptor-ref name="loginCheck">
+					<param name="excludeMethods">login,logout,ulOperate</param>
+				</interceptor-ref> 
+					
+				<interceptor-ref name="businessContext">				
+					<param name="excludeMethods">login,logout,ulOperate</param>
+				</interceptor-ref>	
+				
+				<interceptor-ref name="actionLogger"/>   
+				
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="wssip-defaultStack"></default-interceptor-ref>
+		<global-results>
+			<result name="login" type="redirect">/login.jsp</result>
+			<result name="businessError"  type="ajax"></result>
+			<result name="runtimeError"  type="ajax"></result>
+		</global-results>
+
+		<global-exception-mappings>
+			<exception-mapping result="systemError"
+				exception="com.wondersgroup.framework.core.exception.FrameworkException" />
+			<exception-mapping result="businessError"
+				exception="com.wondersgroup.framework.core.exception.BusinessException" />
+			<exception-mapping result="runtimeError"
+				exception="java.lang.RuntimeException" />
+		</global-exception-mappings>
+
+	</package>
+	<include file="localAction.xml" />		
+</struts>
+

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/194964/projects2/CMC/svn/branches/dev/cmc-sqpt/etc/sql/oracle
+END
+datainit.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/179481/projects2/CMC/svn/branches/dev/cmc-sqpt/etc/sql/oracle/datainit.sql
+END
+testdatainit.sql
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/179481/projects2/CMC/svn/branches/dev/cmc-sqpt/etc/sql/oracle/testdatainit.sql
+END
+tableinit.sql
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/194964/projects2/CMC/svn/branches/dev/cmc-sqpt/etc/sql/oracle/tableinit.sql
+END

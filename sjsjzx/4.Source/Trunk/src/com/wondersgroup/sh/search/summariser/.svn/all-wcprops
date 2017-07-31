@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/summariser
+END
+ITokenizer.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/summariser/ITokenizer.java
+END
+SimpleSummariser.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/summariser/SimpleSummariser.java
+END
+Utilities.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/summariser/Utilities.java
+END
+SummariseTester.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/summariser/SummariseTester.java
+END
+DefaultStopWordsProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/summariser/DefaultStopWordsProvider.java
+END
+IStopWordProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/summariser/IStopWordProvider.java
+END
+DefaultTokenizer.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/summariser/DefaultTokenizer.java
+END
+ISummariser.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/summariser/ISummariser.java
+END

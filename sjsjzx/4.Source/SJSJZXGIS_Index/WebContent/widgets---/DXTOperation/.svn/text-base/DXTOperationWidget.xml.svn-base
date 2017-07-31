@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<configuration>
+    <dxtlayers>
+		<layer>
+			<name>2011年1:2000地形图</name>
+			<layerid>2</layerid>
+		</layer>
+	</dxtlayers>
+	<emLayerIndex>2</emLayerIndex>
+</configuration>

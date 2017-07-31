@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<configuration>
+    <panwheel visible="true" fullextlabel="全图" 
+        panuplabel="向上" pandownlabel="向下" panrightlabel="向右" panleftlabel="向左"  
+        fullexticon="assets/images/i_globe.png"  />
+    <prevextbutton visible="true" label="前一视图" />
+    <nextextbutton visible="true" label="后一视图" />
+    <panbutton visible="true" label="漫游" icon="assets/images/i_pan.png" />
+    <zoominbutton visible="true" label="放大" icon="assets/images/i_zoomin.png" />
+    <zoomoutbutton visible="true" label="缩小" icon="assets/images/i_zoomout.png" />
+</configuration>

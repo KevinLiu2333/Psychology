@@ -1,0 +1,395 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib
+END
+gt-jts-wrapper-2.7-M4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/gt-jts-wrapper-2.7-M4.jar
+END
+arcgis_jcs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/arcgis_jcs.jar
+END
+commons-codec-1.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/commons-codec-1.3.jar
+END
+commons-beanutils.jar
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/commons-beanutils.jar
+END
+commons-collections-3.2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/commons-collections-3.2.1.jar
+END
+postgis-1.5.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/postgis-1.5.0.jar
+END
+commons-lang-2.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/commons-lang-2.5.jar
+END
+jts-1.11.jar
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/jts-1.11.jar
+END
+ezmorph-1.0.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/ezmorph-1.0.6.jar
+END
+wegov_server.jar
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/wegov_server.jar
+END
+javasafeengine1.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/javasafeengine1.6.jar
+END
+gt-cql-2.7-M4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/gt-cql-2.7-M4.jar
+END
+wegov_client.jar
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/wegov_client.jar
+END
+mlibwrapper_jai.jar
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/mlibwrapper_jai.jar
+END
+arcgis_agsws_stubs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/arcgis_agsws_stubs.jar
+END
+mysql-connector-java-5.1.13-bin.jar
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/mysql-connector-java-5.1.13-bin.jar
+END
+gt-geometry-2.7-M4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/gt-geometry-2.7-M4.jar
+END
+saaj.jar
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/saaj.jar
+END
+jaxen-1.1-beta-8.jar
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/jaxen-1.1-beta-8.jar
+END
+icu4j_3_2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/icu4j_3_2.jar
+END
+commons-logging.jar
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/commons-logging.jar
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/log4j.properties
+END
+httpclient-4.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/httpclient-4.0.jar
+END
+backport-util-concurrent.jar
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/backport-util-concurrent.jar
+END
+jdom-1.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/jdom-1.0.jar
+END
+arcobjects.jar
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/arcobjects.jar
+END
+commons-httpclient-3.0.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/commons-httpclient-3.0.1.jar
+END
+gt-api-2.7-M4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/gt-api-2.7-M4.jar
+END
+gt-geojson-2.7-M4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/gt-geojson-2.7-M4.jar
+END
+spring.jar
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/spring.jar
+END
+json-lib-2.3-jdk15.jar
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/json-lib-2.3-jdk15.jar
+END
+servlet-api.jar
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/servlet-api.jar
+END
+httpcore-4.0.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/httpcore-4.0.1.jar
+END
+bcprov-jdk14-143.jar
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/bcprov-jdk14-143.jar
+END
+activation.jar
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/activation.jar
+END
+gt-metadata-2.7-M4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/gt-metadata-2.7-M4.jar
+END
+javasafeengine1.6_1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/javasafeengine1.6_1.jar
+END
+wsdl4j.jar
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/wsdl4j.jar
+END
+postgresql-8.3-605.jdbc4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/postgresql-8.3-605.jdbc4.jar
+END
+json-simple-1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/json-simple-1.1.jar
+END
+gt-referencing-2.7-M4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/gt-referencing-2.7-M4.jar
+END
+jsde92_sdk.jar
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/jsde92_sdk.jar
+END
+axis.jar
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/axis.jar
+END
+jaxrpc.jar
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/jaxrpc.jar
+END
+dom4j-1.6.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/dom4j-1.6.1.jar
+END
+gt-shapefile-2.7-M4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/gt-shapefile-2.7-M4.jar
+END
+jai_codec.jar
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/jai_codec.jar
+END
+jai_core.jar
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/jai_core.jar
+END
+log4j-1.2.12.jar
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/log4j-1.2.12.jar
+END
+commons-collections.jar
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/commons-collections.jar
+END
+commons-discovery-0.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/commons-discovery-0.2.jar
+END
+xfire-all-1.2.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/xfire-all-1.2.6.jar
+END
+jpe92_sdk.jar
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/jpe92_sdk.jar
+END
+geoapi-pending-2.3-M1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/geoapi-pending-2.3-M1.jar
+END
+concurrent.jar
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/concurrent.jar
+END
+mail.jar
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/mail.jar
+END
+wfc-v1.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/wfc-v1.4.jar
+END
+gt-data-2.7-M4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/gt-data-2.7-M4.jar
+END
+standard.jar
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/standard.jar
+END
+geoapi-2.3-M1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/geoapi-2.3-M1.jar
+END
+metadata_controls.jar
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/metadata_controls.jar
+END
+arcgis_arcweb_stubs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/arcgis_arcweb_stubs.jar
+END
+gt-main-2.7-M4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/gt-main-2.7-M4.jar
+END
+axis-schema.jar
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/axis-schema.jar
+END
+oracle-jdbc-1.4-9.2.0.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/174872/projects2/MZJ/sjsjzx/4.Source/SJSJZXGIS_Index/WebContent/WEB-INF/lib/oracle-jdbc-1.4-9.2.0.6.jar
+END

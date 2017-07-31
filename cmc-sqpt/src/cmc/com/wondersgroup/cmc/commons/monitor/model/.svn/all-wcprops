@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/commons/monitor/model
+END
+BaseOptstatuslog.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/commons/monitor/model/BaseOptstatuslog.java
+END
+Optstatuslog.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/commons/monitor/model/Optstatuslog.java
+END
+UserMonitorInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/commons/monitor/model/UserMonitorInfo.java
+END
+Optstatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/commons/monitor/model/Optstatus.java
+END
+BaseOptstatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/commons/monitor/model/BaseOptstatus.java
+END

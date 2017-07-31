@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<iconManpower>assets/images/icons/i_people.png</iconManpower>
+	<iconFlag>assets/images/icons/i_flag.png</iconFlag>
+	<iconBarrier>assets/images/icons/i_alert.png</iconBarrier>
+	<iconResources>assets/images/icons/i_package.png</iconResources>
+</config>

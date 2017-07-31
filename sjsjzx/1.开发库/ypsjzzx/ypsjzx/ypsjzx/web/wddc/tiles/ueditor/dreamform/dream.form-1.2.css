@@ -1,0 +1,72 @@
+﻿/*toobar中的button图标*/
+.edui-default .dream-text .edui-icon {
+    background-position: -6px -138px;
+}
+
+.edui-default .dream-password .edui-icon {
+    background-position: -32px -138px;
+}
+
+.edui-default .dream-hidden .edui-icon {
+    background-position: -59px -138px;
+}
+
+.edui-default .dream-date .edui-icon {
+    background-position: -88px -139px;
+}
+
+.edui-default .dream-select .edui-icon {
+    background-position: -116px -138px;
+}
+
+.edui-default .dream-textarea .edui-icon {
+    background-position: -145px -138px;
+}
+
+.edui-default .dream-subtable .edui-icon {
+    background-position: -174px -140px;
+}
+
+/*dialog页面大小*/
+.edui-default .dream-text .edui-dialog-content {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.edui-default .dream-password .edui-dialog-content {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.edui-default .dream-hidden .edui-dialog-content {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.edui-default .dream-date .edui-dialog-content {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.edui-default .dream-select .edui-dialog-content {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.edui-default .dream-textarea .edui-dialog-content {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.edui-default .dream-subtable .edui-dialog-content {
+    width: 680px;
+    height: 440px;
+    overflow: hidden;
+}
+

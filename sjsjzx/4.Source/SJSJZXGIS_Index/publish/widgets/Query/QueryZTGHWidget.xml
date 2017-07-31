@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<!--
+////////////////////////////////////////////////////////////////////////////////
+//
+// Copyright © 2008 ESRI
+//
+// All rights reserved under the copyright laws of the United States.
+// You may freely redistribute and use this software, with or
+// without modification, provided you include the original copyright
+// and use restrictions.  See use restrictions in the file:
+// <install location>/FlexViewer/License.txt
+//
+////////////////////////////////////////////////////////////////////////////////
+-->
+<configuration>
+	<layers>
+		<extentLayer>
+			<name>总体规划地块</name>
+			<url>arcgis/rest/services/dynamic_pdgt2012/MapServer/14</url>
+			<!-- expression>PLOT_NAME like '%[value]%'</expression> -->
+			<expression>PLOT_NAME like '%[value]%'</expression>
+			<graphicalsearchlabel>从下面选择一种多边形以选定查询范围：</graphicalsearchlabel>
+			<!--fields>PLOT_CODE,PLAN_CODE,PLAN_NUM,PLOT_TYPE,PLOT_NAME,DKAREA,VOL_RATIO,VEG_RATIO2,BLDG_DENS,BLDG_HLMT,VEG_RATIO,RED_E,RED_S,RED_W,RED_N,ENTRANCE,ABOVE,BELOW,REMARK,CLASS</fields-->
+			<fields>街坊编码,街坊类别,街坊性质,街坊级别,CUS_TYPE</fields>
+			<fieldsCN>街坊编码,街坊类别,街坊性质,街坊级别,用地类别</fieldsCN>
+			<titlefield>街坊编码</titlefield>
+			<linkfield></linkfield>
+			<icon>i_uni1.png</icon>
+		</extentLayer>
+	</layers>
+</configuration>

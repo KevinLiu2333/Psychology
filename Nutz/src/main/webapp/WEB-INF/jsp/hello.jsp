@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.util.Map" %><%--
   Created by IntelliJ IDEA.
   User: Administrator
   Date: 2017/7/21 0021
@@ -14,6 +14,9 @@
 <h2>Hello World!</h2>
 <%--无论返回什么，都会保存在obj中--%>
 <h1><%=request.getAttribute("obj")%>
+    <%--成功获取本地字符串--%>
+    <%=((Map<String,String>)request.getAttribute("msg")).get("name")%>
 </h1>
+
 </body>
 </html>

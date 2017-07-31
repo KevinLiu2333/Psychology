@@ -1,0 +1,197 @@
+<?xml version="1.0" ?>
+<configuration>
+    <!--title>松江数据中心地理信息系统</title-->
+     <title>assets/images/logoImage.png</title>
+    <subtitle></subtitle>
+    <logo>assets/images/logo.png</logo>
+    <!--stylecolors>0x000000,0xFFFFFF,0x68c6fd,0x1FA5FB,0x4B8CE8</stylecolors-->
+     <stylecolors>0xFEFFFF,0x66FFFF,0x68c6fd,0x1FA5FB,0x66FFFF,0xFFFFFF</stylecolors>
+    <!--0xCEE7F4,0x39628C,0x355D89,0x294867,0xCEE7F4<stylecolors>0xFFFFFF,0x333333,0x101010,0x000000,0xFFD700</stylecolors> -->
+    <!-- textColor, backgroundColor, rolloverColor, selectionColor, titleColor, applicationBackgroundColor-->
+    <stylealpha>0.6</stylealpha>
+    <!-- UI elements -->
+    <widget left="0"  top="0"    config="widgets/HeaderController/HeaderControllerWidget.xml" url="widgets/HeaderController/HeaderControllerWidget.swf"/>
+    <!--  
+    <widget left="80" top="90"   config="widgets/MapSwitcher/MapSwitcherWidget.xml" url="widgets/MapSwitcher/MapSwitcherWidget.swf" />
+    -->
+    <widget left="80" top="90"   config="widgets/ShortCuts/ShortCutsWidget.xml" url="widgets/ShortCuts/ShortCutsWidget.swf" />
+    <widget right="-2" bottom="-2" config="widgets/OverviewMap/OverviewMapWidget.xml" url="widgets/OverviewMap/OverviewMapWidget.swf"/>
+    <widget left="300"   bottom="3"  config="widgets/Coordinate/CoordinateWidget.xml" url="widgets/Coordinate/CoordinateWidget.swf"/>
+	<widget left="10"  top="75"  config="widgets/Navigation/NavigationWidget.xml" url="widgets/Navigation/NavigationWidget.swf"/>
+	<widget left="130" top="90"   config="widgets/Legend/LegendWidget.xml" url="widgets/Legend/LegendWidget.swf"  />
+	<widget left="0"  top="0"    config="widgets/Interface/QueryExtentWidget.xml" url="widgets/Interface/QueryExtentWidget.swf"/>
+	<!--  
+	<widget left="80" top="150"   config="widgets/Header/HeaderController.xml" url="widgets/Header/HeaderController.swf"/>
+	-->
+	<map  initialextent="2129.878 -4972.345 12662.432 3358.872" fullextent="-11653 -78145 67802 23170" scaleBarVisible="true">
+		<basemaps>
+			<!-- 
+			<layer label="矢量图层" type="tiled" useproxy="true" visible="true" alpha="0.9" icon="assets/images/icons/i_lego.png" url="http://192.168.102.182:6080/arcgis/rest/services/SJMap/MapServer"/>
+			<layer label="影像图层" type="tiled" useproxy="true" visible="false" alpha="0.9" icon="assets/images/icons/i_lego.png" url="http://192.168.102.182:6080/arcgis/rest/services/SJImage/MapServer"/>
+			<layer label="街道图层" type="tiled" useproxy="true" visible="false" alpha="0.9" icon="assets/images/icons/i_lego.png" url="http://192.168.102.182:6080/arcgis/rest/services/SJ_Road/MapServer"/>
+			 -->
+			<layer label="矢量图层" type="tiled" useproxy="true" visible="true" alpha="0.9" icon="assets/images/icons/i_lego.png" url="http://10.1.64.137:8399/arcgis/rest/services/demo_sjsjzx/MapServer"/>
+			
+			<!-- 信息中心
+			<layer label="地形图" type="tiled" useproxy="true" visible="false" alpha="0.6" icon="assets/images/icons/i_lego.png" url="http://10.1.64.137:8399/arcgis/rest/services/PDGT_DXT/MapServer"/>
+			<layer label="矢量图层" type="tiled" useproxy="true" visible="true" alpha="0.9" icon="assets/images/icons/i_lego.png" url="http://172.24.159.48:8399/arcgis/rest/services/PDGT_TILEMAP2012/MapServer"/>
+			<layer label="影像图层" type="tiled" useproxy="true" visible="false" alpha="0.9" icon="assets/images/icons/i_lego.png" url="http://172.24.159.48:8399/arcgis/rest/services/PDGT_RSMAP2012/MapServer"/>
+			-->
+		</basemaps>
+		
+		<operationallayers>
+			<layer label="专业图层" type="dynamic" useproxy="true" visible="false" alpha="1" icon="assets/images/icons/i_highway.png" url="http://10.1.64.137:8399/arcgis/rest/services/dynamic_sjsjzx/MapServer" />
+		<!-- 信息中心
+			<layer label="专业图层" type="dynamic" useproxy="true" visible="false" alpha="1" icon="assets/images/icons/i_highway.png" url="http://192.168.102.182:6080/arcgis/rest/services/SJMap/MapServer" />
+		-->
+		</operationallayers>
+	</map>
+    <!-- widgets organized into widget containers that manage close/open etc -->
+    <!-- supported layout property options: horizontal(default)|float|vertical|fix-->
+    
+    <widgetcontainer layout="vertical" top="80">
+    <widgetgroup permission="A" label="基础工具" icon="assets/images/newimage/nav_jcgj.png" 
+    							labelIcon="assets/images/newimage/nav_jcgj_l.png" 
+    							overlabelIcon="assets/images/newimage/nav_jcgj_r.png">
+
+       <widget permission="Ab" label="地图测量" left="100" top="50" 
+	            icon="assets/images/icons/dtcl.png"
+	            config="widgets/Measure/MeasureWidget.xml"
+	            url="widgets/Measure/MeasureWidget.swf"/>
+	  <widget permission="Ac" label="动态标绘" left="60" top="400"
+			   icon="assets/images/icons/dtbh.png"
+               config="widgets/MapMarker/MapMarkerWidget.xml"
+               url="widgets/MapMarker/MapMarkerWidget.swf"/>
+		<widget permission="Ag" label="滤    镜" 
+				icon="assets/images/icons/yxlj.png"
+				config="widgets/Swipe/SwipeWidget.xml"
+			 	url="widgets/Swipe/SwipeWidget.swf" />
+		<widget permission="Ah" label="地图保存" left="620" top="50"
+	            icon="assets/images/icons/bcdt.png"
+	            config="widgets/Snapshot/SnapshotWidget.xml"
+	            url="widgets/Snapshot/SnapshotWidget.swf"/> 	 	
+		<widget permission="Ai" label="地图打印" left="620" top="50"
+	            icon="assets/images/icons/dydt.png"
+	            config="widgets/Print/PrintWidget.xml"
+	            url="widgets/Print/PrintWidget.swf"/>
+	   	</widgetgroup>
+	   	
+	   	<widgetgroup permission="E" label="地图应用" 
+					 icon="assets/images/newimage/nav_ydcx.png" 
+					 labelIcon="assets/images/newimage/nav_dtyy_1.png" 
+					 overlabelIcon="assets/images/newimage/nav_dtyy_2.png">
+			 <widget permission="Ea"   label="基础图层" left="360" top="120"
+						icon="assets/images/icons/qszd.png" config="widgets/QueryProject/QueryQSZDWidget.xml"
+						url="widgets/QueryProject/QueryQSZDWidget.swf" />
+			 <widget permission="Eb"  label="业务图层" left="360" top="120"
+						icon="assets/images/icons/wfyd.png" config="widgets/QueryProject/QueryWFYDWidget.xml"
+						url="widgets/QueryProject/QueryWFYDWidget.swf" />
+			<widget permission="Ba" label="地图定位" right="200" top="90" 
+			 		  icon="assets/images/icons/roadlocate.png"
+					  config="widgets/Locate/LocateWidget.xml" 
+					  url="widgets/Locate/LocateWidget.swf" />
+		</widgetgroup>
+	   	
+		<widgetgroup permission="C" label="人口及房屋" 
+					icon="assets/images/newimage/nav_ghcx.png" 
+					labelIcon="assets/images/newimage/nav_rkjfw_1.png"
+					overlabelIcon="assets/images/newimage/nav_rkjfw_2.png">
+			 <widget permission="Ca"  label="保障房项目查询" left="360" top="120"
+						icon="assets/images/icons/xxgh.png" config="widgets/QueryProject/QueryBZFWidget.xml"
+						url="widgets/QueryProject/QueryBZFWidget.swf"/>
+			 <widget permission="Cb"  label="居(村)委查询" left="360" top="120"
+						icon="assets/images/icons/dygh.png" config="widgets/Query/QueryDYGHWidget.xml"
+						url="widgets/Query/QueryDYGHWidget.swf" />
+			<widget permission="Cc"  label="小区查询" left="360" top="120"
+						icon="assets/images/icons/fqgh.png" config="widgets/Query/QueryFQGHWidget.xml"
+						url="widgets/Query/QueryFQGHWidget.swf" />
+			<widget permission="Ce"  label="建筑物查询" left="360" top="120"
+						icon="assets/images/icons/zxgh.png" config="widgets/Query/QueryZXGHWidget.xml"
+						url="widgets/Query/QueryZXGHWidget.swf" />
+			<widget permission="Cd"  label="分布情况" left="360" top="120"
+					icon="assets/images/icons/ztgh.png" config="widgets/Query/QueryZTGHWidget.xml"
+					url="widgets/Query/QueryZTGHWidget.swf" />
+			<widget permission="Cd"  label="SerchDemo" left="360" top="120"
+					icon="assets/images/icons/ztgh.png" config="widgets/QueryProject/QueryBZFWidget.xml"
+					url="widgets/QueryProject/QueryBZFWidget.swf" />
+		</widgetgroup>
+		 <widgetgroup  permission="D" label="法人库信息" 
+					 icon="assets/images/newimage/nav_gccx.png" 
+					 labelIcon="assets/images/newimage/nav_frkxx_1.png" 
+					 overlabelIcon="assets/images/newimage/nav_frkxx_2.png">
+			 <widget permission="Da"  label="法人查询" left="360" top="120"
+					icon="assets/images/icons/xzyj.png" config="widgets/QueryProject/QueryXZFWWidget.xml"
+					url="widgets/QueryProject/QueryXZFWWidget.swf" />
+			 <widget permission="Db"  label="分布情况" left="360" top="120"
+					icon="assets/images/icons/ydxk.png" config="widgets/QueryProject/QueryYDFWWidget.xml"
+					url="widgets/QueryProject/QueryYDFWWidget.swf" />
+		</widgetgroup>
+		<widgetgroup permission="E" label="专题信息" 
+					 icon="assets/images/newimage/nav_ydcx.png" 
+					 labelIcon="assets/images/newimage/nav_ztxx_1.png" 
+					 overlabelIcon="assets/images/newimage/nav_ztxx_2.png">
+					 
+			 <widget permission="Ea"   label="人口热力图" left="360" top="120"
+						icon="assets/images/icons/qszd.png" config="widgets/QueryProject/QueryQSZDWidget.xml"
+						url="widgets/QueryProject/QueryQSZDWidget.swf" /> 	
+			 <widget permission="Ea"   label="法人热力图" left="360" top="120"
+						icon="assets/images/icons/qszd.png" config="widgets/QueryProject/QueryQSZDWidget.xml"
+						url="widgets/QueryProject/QueryQSZDWidget.swf" />	
+			 <widget permission="Ea"   label="历年人口增长量" left="360" top="120"
+						icon="assets/images/icons/qszd.png" config="widgets/QueryProject/QueryQSZDWidget.xml"
+						url="widgets/QueryProject/QueryQSZDWidget.swf" />
+			 <widget permission="Ea"   label="历年法人增长量" left="360" top="120"
+						icon="assets/images/icons/qszd.png" config="widgets/QueryProject/QueryQSZDWidget.xml"
+						url="widgets/QueryProject/QueryQSZDWidget.swf" />			 
+			 <widget permission="Ea"   label="社区治理" left="360" top="120"
+						icon="assets/images/icons/qszd.png" config="widgets/QueryProject/QueryQSZDWidget.xml"
+						url="widgets/QueryProject/QueryQSZDWidget.swf" />
+			 <widget permission="Eb"  label="公共安全" left="360" top="120"
+						icon="assets/images/icons/wfyd.png" config="widgets/QueryProject/QueryWFYDWidget.xml"
+						url="widgets/QueryProject/QueryWFYDWidget.swf" />
+			<widget permission="Ec"  label="监控服务" left="360" top="120"
+						icon="assets/images/icons/chcg.png" config="widgets/QueryProject/QueryCHCGWidget.xml"
+						url="widgets/QueryProject/QueryCHCGWidget.swf" />
+		    <widget permission="Ed"  label="文化教育" left="360" top="120"
+			            icon="assets/images/icons/cbjh.png" config="widgets/QueryProject/QueryJHFWWidget.xml"
+			             url="widgets/QueryProject/QueryJHFWWidget.swf" />
+		</widgetgroup>
+	
+		<widgetgroup permission="B" label="定位服务" 
+					    icon="assets/images/newimage/nav_dtdw.png" 
+					    labelIcon="assets/images/newimage/nav_dtdw_l.png" 
+					    overlabelIcon="assets/images/newimage/nav_dtdw_r.png">
+			<widget permission="Bd" label="居委定位" 
+		 		  icon="assets/images/icons/juweidingwei.png"
+				  config="widgets/Locate/NeighBorhoodWidget.xml" url="widgets/Locate/NeighBorhoodWidget.swf" />
+			<widget permission="Ba" label="小区定位" 
+		 		  icon="assets/images/icons/roadlocate.png"
+				  config="widgets/Locate/TownLocateWidget.xml" url="widgets/Locate/TownLocateWidget.swf" />
+		    <widget permission="Ba" label="法人定位" 
+		 		  icon="assets/images/icons/roadlocate.png"
+				  config="widgets/Locate/TownLocateWidget.xml" url="widgets/Locate/TownLocateWidget.swf" />
+			<widget permission="Be"  label="道路定位" 
+		 		  icon="assets/images/icons/daoludingwei.png"
+				  config="widgets/Locate/RoadLocateWidget.xml" url="widgets/Locate/RoadLocateWidget.swf" />
+			<widget permission="Bb"  label="交叉路口定位" 
+		 		  icon="assets/images/icons/crosslocate.png"
+				  config="widgets/Locate/CrossRoadLocateWidget.xml" url="widgets/Locate/CrossRoadLocateWidget.swf" />
+			<widget permission="Bc"  label="图幅定位" 
+		 		  icon="assets/images/icons/sheetLocate.png"
+				  config="widgets/Locate/SheetLocateWidget.xml" url="widgets/Locate/SheetLocateWidget.swf" />
+		</widgetgroup>
+	
+    </widgetcontainer>
+    <appconfig>
+    	<projectconfing>
+    	<!--863链接-->
+    	<urlroot>http://10.1.8.71:8082</urlroot> 
+    	</projectconfing>
+    	<gisconfig> 
+    		<!-- 863链接  -->
+    		<servletRoot>http://localhost:8989</servletRoot>
+    		<mapserverroot>http://10.1.64.137:8399/</mapserverroot>
+    		<geometryurl>arcgis/rest/services/Geometry/GeometryServer</geometryurl>
+    	</gisconfig>
+    </appconfig>
+</configuration>

@@ -1,0 +1,1288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<viewer:BaseWidget xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx"
+				   xmlns:viewer="com.esri.viewer.*" 
+				   layout="absolute" 
+				    widgetConfigLoaded="basewidget1_widgetConfigLoadedHandler(event)">
+	<fx:Script>
+		<![CDATA[
+			import com.esri.ags.FeatureSet;
+			import com.esri.ags.Graphic;
+			import com.esri.ags.events.MapMouseEvent;
+			import com.esri.ags.events.QueryEvent;
+			import com.esri.ags.geometry.Geometry;
+			import com.esri.ags.geometry.MapPoint;
+			import com.esri.ags.geometry.Multipoint;
+			import com.esri.ags.geometry.Polygon;
+			import com.esri.ags.geometry.Polyline;
+			import com.esri.ags.layers.GraphicsLayer;
+			import com.esri.ags.symbols.SimpleFillSymbol;
+			import com.esri.ags.symbols.SimpleLineSymbol;
+			import com.esri.ags.symbols.Symbol;
+			import com.esri.ags.symbols.TextSymbol;
+			import com.esri.ags.tasks.QueryTask;
+			import com.esri.ags.tasks.supportClasses.Query;
+			import com.esri.viewer.utils.NumClassify;
+			import com.esri.viewer.utils.SymbolFunctionRenderer;
+			import com.esri.viewer.utils.UtilsClass;
+			import com.wonders.components.chartTwo;
+			import com.esri.ags.geometry.Extent;
+			import com.esri.ags.layers.ArcGISDynamicMapServiceLayer;
+			
+			import flashx.textLayout.container.ScrollPolicy;
+			
+			import mx.collections.ArrayCollection;
+			import mx.collections.ArrayList;
+			import mx.controls.Alert;
+			import mx.events.ListEvent;
+			import mx.events.ValidationResultEvent;
+			import mx.managers.CursorManager;
+			import mx.rpc.AsyncResponder;
+			import mx.utils.StringUtil;
+			import com.esri.ags.utils.WebMercatorUtil;
+			
+			import org.osmf.layout.AbsoluteLayoutFacet;
+			import com.esri.ags.events.GeometryServiceEvent;
+			import com.esri.ags.tasks.GeometryService;
+			import com.esri.ags.tasks.supportClasses.AreasAndLengthsParameters;
+			import com.esri.ags.tasks.supportClasses.AreasAndLengthsResult;
+			import com.esri.ags.tasks.supportClasses.LengthsParameters;
+			import mx.rpc.Fault;
+			private var  firstGrade:Number=0;
+			private var  secondGrade:Number=30;
+			private var  thirdGrade:Number=30;
+			private var  forthGrade:Number=80;
+			private var  fifthGrade:Number=80;
+			private var  sixthGrade:Number=80;
+			private var streetsExpr:String;
+			[Bindable]
+			private var defaultDate:Date;
+			[Bindable]
+			private var firstColor:uint=0x54e8d8;
+			[Bindable]
+			private var secondColor:uint=0x89ee613;
+			[Bindable]
+			private var thirdColor:uint=0x369013;
+			[Bindable]
+			private var secTxt:String;
+			[Bindable]
+			private var thdTxt:String;
+			[Bindable]
+			private var firTxt:String;
+			private var startDateStr:String="";
+			private var endDateStr:String="";
+			private var queryLyrUrl:String="";
+			private var areaLayerUrl:String="";
+			private var outFieldsStr:String="";
+			private var outFieldsArr:Array=new Array;
+			private var districtUnOrderArrCol:ArrayCollection; 
+			private var graphicsProvider:ArrayCollection= new ArrayCollection();
+			private var graphicsLayerSymfunctionRender:SymbolFunctionRenderer=new SymbolFunctionRenderer();
+			private var districtGraphicsLayer:GraphicsLayer;
+			private var graphicLineSym:SimpleLineSymbol=new SimpleLineSymbol("solid", 0x0a86fd, 0.5, 2);
+			private var firstGradeSym:SimpleFillSymbol=new SimpleFillSymbol("solid", 0x54e8d8, 0.8, graphicLineSym);
+			private var secondGradeSym:SimpleFillSymbol=new SimpleFillSymbol("solid", 0x89ee613, 0.8, graphicLineSym);
+			private var threeGradeSym:SimpleFillSymbol=new SimpleFillSymbol("solid", 0x369013, 0.8, graphicLineSym);
+			private var defaultSym:SimpleFillSymbol=new SimpleFillSymbol("solid", 0x000000, 0, graphicLineSym);
+			private var textGraphicLayer:GraphicsLayer;
+			private var textDetailGraphicLayer:GraphicsLayer;//设施农用地显示txt内容
+			//设施农用地块图层
+			private var extentNydGraphicsLayer:GraphicsLayer;
+			private var flagCheck:Boolean=false;
+			private var flagEmpty:Boolean=true;
+			private var startYear:int=0;
+			private var endYear:int=0;
+			private var chart:chartTwo=new chartTwo;
+			[Bindable]
+			private var countVisible:Boolean=true;
+			[Bindable]
+			private var areaVisible:Boolean=true;
+			private var staticsType:String="count";
+			[Bindable]
+			private var sDate:Date;
+			[Bindable]
+			private var eDate:Date;
+			[Bindable]
+			[Embed(source="assets/images/icons/i_redclear.png")]
+			public var Clear:Class;
+			private var configDistricts:Array;
+			private var configYears:Array;
+			
+			private var searched:Boolean=false;
+			private var wTitle:String="";
+			//设施农用地图层的总个数
+			private var sheshiCount:Number;
+			
+			private var linkUrl:String;
+			[Bindable]
+			[Embed(source="assets/images/icons/i_dk_information1.png")]
+			public var Information:Class;
+			private var measureResult:Number;
+			private var geometryService:GeometryService;
+			//查询范围id
+			private var queryRange:Number;
+			private var lys:ArcGISDynamicMapServiceLayer;
+			protected function basewidget1_widgetConfigLoadedHandler(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				queryLyrUrl=configData.gisdata_UrlROOT + configXML.queryLayer.url;
+				areaLayerUrl=configData.gisdata_UrlROOT + configXML.areaLayer;
+				outFieldsStr=configXML.queryLayer.fields;
+				outFieldsArr=outFieldsStr.split(",");
+				var now:Date=new Date();
+				defaultDate=new Date(now.fullYear,now.month,now.date);
+				districtGraphicsLayer=new GraphicsLayer();
+				districtGraphicsLayer.addEventListener(MouseEvent.CLICK,graphicClickHandler);
+				map.addLayer(districtGraphicsLayer);
+				textGraphicLayer=new GraphicsLayer();
+				textGraphicLayer.minScale=125000;
+				map.addLayer(textGraphicLayer);
+				textDetailGraphicLayer=new GraphicsLayer();
+				textDetailGraphicLayer.minScale=64000;
+				map.addLayer(textDetailGraphicLayer);
+				extentNydGraphicsLayer = new GraphicsLayer();
+				map.addLayer(extentNydGraphicsLayer);
+				lys =map.getLayer("专业图层") as ArcGISDynamicMapServiceLayer;
+				map.reorderLayer(lys.id,map.layerIds.length as int);
+				var date:Date=new Date();
+				eDate=date;
+//				date.setFullYear(date.getFullYear()-1);
+				date.setFullYear(date.getFullYear(),00,01);
+				sDate=date;
+				
+				districtGraphicsLayer.graphicProvider=graphicsProvider;
+				graphicsLayerSymfunctionRender.symbolFunction=graphicSymFunction;
+				districtGraphicsLayer.renderer=graphicsLayerSymfunctionRender;
+			
+				xgThematicWidget.addTitlebarButton(ICON_URL+"statistics.png","设施农用地统计",showSatisticsConditon);
+				//xgThematicWidget.addTitlebarButton(ICON_URL+"i_table.png","设施农用地统计结果",showSatisticsResult);
+				xgThematicWidget.addTitlebarButton(ICON_URL+"setClass.png","设施农用地分级设色",showStatisticsLegend);
+				//初始化设施农用地个数
+				sheshiCount = 0;
+				queryNYDcount(queryLyrUrl);
+				districtUnOrderArrCol=new ArrayCollection;
+				
+				
+				configDistricts=new Array();
+				configYears=new Array();
+				if (configXML)
+				{
+					queryRange = configXML.queyRange;
+					//linkUrl=configData.project_UrlROOT+configXML.queryLayer.linkURL;
+					linkUrl=configXML.queryLayer.linkURL;
+					geometryService = new GeometryService(gisdata_UrlROOT + gis_Config.geometryurl.toString() || "");
+					//初始街区下拉框数据源
+					var districtList:XMLList=configXML.districts.district;
+					for (var i:Number=0; i < districtList.length(); i++)
+					{
+						var yearName:String=districtList[i].name;
+						var districtValue:String=districtList[i].value;
+						var district:Object={label: yearName, data: districtValue}
+						configDistricts.push(district);
+					}
+					//初始年份下拉框数据源
+					var yearList:XMLList=configXML.yeardistricts.district;
+					for (var i:Number=0; i < yearList.length(); i++)
+					{
+						var yearName:String=yearList[i].name;
+						var yearValue:String=yearList[i].value;
+						var year:Object={label: yearName, data: yearValue}
+						configYears.push(yearValue);
+					}
+				}
+				//在查询之前先查看要查询的范围
+				lysShow();
+				districtLocateCbo.dataProvider=configDistricts;
+				districtLocateYear.dataProvider=configYears;
+				//当接口调用这个功能的时候，默认进行查询
+				
+				if(configData.preloadWidget.search("Ek")!=-1&&configData.preSearchStr&&configData.preSearchStr!="")
+				{
+					//默认给街道镇赋值进行查询
+					districtLocateCbo.text = decodeURI(configData.preSearchStr);
+					queryJDZName(districtLocateCbo.text);;
+					
+				}
+			}
+			private function  graphicSymFunction(graphic:Graphic):Symbol
+			{
+				var sym:SimpleFillSymbol=new SimpleFillSymbol();
+				if(int(graphic.attributes.num)>=firstGrade&&int(graphic.attributes.num)<=secondGrade)
+				{
+					sym=firstGradeSym;
+				}
+				else if((int(graphic.attributes.num)>=thirdGrade)&&(int(graphic.attributes.num)<=forthGrade))
+				{
+					sym=secondGradeSym;
+				}
+				else if((int(graphic.attributes.num)>=fifthGrade)&&(int(graphic.attributes.num)<=sixthGrade))
+				{
+					sym=threeGradeSym;
+				}
+				else 
+				{
+					sym=defaultSym;
+				}
+				return sym;
+			}
+			private function lysShow(){
+				
+				
+				var leftmin  = configData.extentdata_LEFTMIN ;
+				var leftmax  = configData.extentdata_LEFTMAX ;
+				var rightmin = configData.extentdata_RIGHTMIN ;
+				var rightmax = configData.extentdata_RIGHTMAX ;				
+				var extent:Extent = new Extent(leftmin , rightmin , leftmax , rightmax);
+				map.extent = extent;
+				var visibleLayerAC:ArrayCollection=new ArrayCollection;
+				visibleLayerAC.addItem(queryRange);
+				lys.visibleLayers = visibleLayerAC;
+				lys.visible = true;
+				lys.alpha = 0.7;
+				
+			}
+			private function queryJDZName(streetsPro:String):void
+			{
+				lys.visible = false;
+				var queryTask:QueryTask=new QueryTask(areaLayerUrl);
+				var query:Query=new Query();
+				var strwhere = "1=1 ";
+				if(streetsPro != "全部街镇"){
+					strwhere += " and Name ='"+streetsPro +"'";
+				}
+				query.where=strwhere;
+				query.returnGeometry=true;
+				query.outFields=["*"];
+				queryTask.showBusyCursor=true;
+				queryTask.execute(query,new AsyncResponder(onResult, onFault));
+			}
+			private function queryNYDcount(streetsPro:String):void
+			{
+				var queryTask:QueryTask=new QueryTask(streetsPro);
+				var query:Query=new Query();
+				var strwhere = "1=1 ";
+				query.where=strwhere;
+				query.returnGeometry=true;
+				query.outFields=["*"];
+				queryTask.showBusyCursor=true;
+				queryTask.execute(query,new AsyncResponder(onResultNYD, onFault));
+			}
+			private function onResultNYD(featureSet:FeatureSet, token:Object=null):void
+			{
+				sheshiCount=featureSet.features.length
+			}
+			private function onResult(featureSet:FeatureSet, token:Object=null):void
+			{
+				//每次查询之前清楚街道镇里面的设施农用地
+				extentNydGraphicsLayer.clear();
+				extentNydGraphicsLayer.refresh();
+				graphicsProvider.removeAll();
+				graphicsProvider.refresh();
+				districtUnOrderArrCol.removeAll();
+				districtUnOrderArrCol.refresh();
+				//districtUnOrderArrCol=new ArrayCollection;
+				districtGraphicsLayer.visible=false;
+				for each (var graphic:Graphic in featureSet.features)
+				{
+					var districtName:String=graphic.attributes.NAME.toString();
+					var count:int=0;
+					var yearNumArr:Array=new Array();
+					var areaNumArr:Array=new Array();
+					var obj:Object={name:districtName,num:count,graphic:graphic,yearNum:yearNumArr,areaNum:areaNumArr,bm:graphic.attributes.BM.toString(),link:graphic.attributes.NAME.toString()};
+					graphic.addEventListener(MouseEvent.ROLL_OUT,graphicRollOutHandler);
+					graphic.addEventListener(MouseEvent.ROLL_OVER,graphicRollOverHandler);
+					graphic.addEventListener(MouseEvent.CLICK,graphicClickHandler);
+					graphic.attributes.num=0;
+					graphic.attributes.yearNum=yearNumArr;
+					graphic.attributes.areaNum=areaNumArr;
+					districtUnOrderArrCol.addItem(obj);
+					
+					//graphic.attributes.graphic=graphic;
+					//extentGraphicsLayer.add(gra);
+					graphicsProvider.addItem(graphic);
+				}
+				// TODO Auto-generated method stub			
+				CursorManager.setBusyCursor();
+				if(map.infoWindow.visible)
+				{
+					map.infoWindow.hide();
+				}
+				var expr:String="1=1";
+				if(districtUnOrderArrCol)
+				{
+					for(var i:int=0;i<districtUnOrderArrCol.length;i++)
+					{
+						var arr:Array=new Array();
+						//							for(var n:int=0;n<(endYear-startYear+1);n++)
+						//							{
+						arr[0]={label:0,value:0};
+						arr[1]={label:0,value:0};
+						//							}
+						districtUnOrderArrCol[i].num=0;
+						districtUnOrderArrCol[i].yearNum=arr;
+						districtUnOrderArrCol[i].areaNum=arr;
+						graphicsProvider[i].attributes.num=0;
+					}
+				}				
+				CursorManager.removeBusyCursor();
+				textGraphicLayer.clear();
+				textDetailGraphicLayer.clear();
+				firstStepColor.selectedColor=0x54e8d8;
+				secondStepColor.selectedColor=0x89ee613;
+				thirdStepColor.selectedColor=0x369013;
+				firstColor=firstStepColor.selectedColor;
+				secondColor=secondStepColor.selectedColor;
+				thirdColor=thirdStepColor.selectedColor;
+				firstGradeSym.color=firstColor;
+				secondGradeSym.color=secondColor;
+				threeGradeSym.color=thirdColor;
+				//getXg();//不使用范围重叠查询，用下面的根据街镇号bm查询方法
+				getXgByBM();
+			}
+
+			private function graphicRollOverHandler(event:MouseEvent):void
+			{
+				event.currentTarget.filters=[glowFilter];
+			}
+			private function graphicRollOutHandler(event:MouseEvent):void
+			{
+				event.currentTarget.filters=null;
+			}
+			private function graphicClickHandler(event:MouseEvent):void
+			{
+				var graphic:Graphic=event.target as Graphic;
+				map.infoWindow.setStyle("contentBackgroundAlpha", 0.95);
+				map.infoWindow.setStyle("backgroundAlpha", 0.95);
+				map.infoWindow.setStyle("backgroundColor", 0xCBE5FE);
+				if(map.infoWindow.visible){
+					chart.data=graphic.attributes;
+					chart.staticsType=staticsType;
+					map.infoWindow.label=graphic.attributes.NAME.toString();
+					map.infoWindow.height=320;
+					map.infoWindow.content = chart;
+					map.infoWindow.verticalScrollPolicy=ScrollPolicy.OFF;
+					map.infoWindow.horizontalScrollPolicy=ScrollPolicy.OFF;
+					map.infoWindow.show(graphic.geometry.extent.center);
+
+				}
+				else
+				{
+					chart.data=graphic.attributes;
+					chart.staticsType=staticsType;
+					map.infoWindow.label=graphic.attributes.NAME.toString();
+					map.infoWindow.height=320;
+					map.infoWindow.visible= true;
+					map.infoWindow.content = chart;
+					map.infoWindow.verticalScrollPolicy=ScrollPolicy.OFF;
+					map.infoWindow.horizontalScrollPolicy=ScrollPolicy.OFF;
+					map.infoWindow.show(graphic.geometry.extent.center);
+
+				}
+			}
+			private function onFault(info:Object, token:Object=null):void
+			{
+				Alert.show(info.toString());
+			}
+			
+			private function showSatisticsConditon():void
+			{
+				this.currentState="statisticsCondition";
+				xgThematicWidget.selectedTitlebarButtonIndex=0;
+			}
+			private function showSatisticsResult():void
+			{
+				this.currentState="statisticsResult";
+				xgThematicWidget.selectedTitlebarButtonIndex=1;
+			}
+			private function showStatisticsLegend():void
+			{
+				this.currentState="statisticsLegend";
+				xgThematicWidget.selectedTitlebarButtonIndex=2;
+			}
+			
+
+			protected function statisticsBtn_clickHandler(event:MouseEvent):void
+			{
+				var streetsPro:String=districtLocateCbo.selectedItem.data.toString();
+				var streetsProName:String = districtLocateCbo.selectedItem.label.toString();
+				queryJDZName(streetsProName);
+			}
+			public function getXg():void{
+				//显示详规图层，图层根据重叠范围显示
+				//循环街镇开始利用范围进行统计
+				for( var  i=0; i<districtUnOrderArrCol.length; i++ ){
+					var geometryArrCol:Object=districtUnOrderArrCol.getItemAt(i);
+					if(geometryArrCol){
+						var polygon:Polygon;
+						var rings:Array=new Array();
+						polygon=geometryArrCol.graphic.geometry as Polygon;
+						for(var j:int=0;j<polygon.rings.length;j++){
+							rings.push(polygon.rings[j]);
+						}
+						polygon=new Polygon(rings);
+						xgfwQuery(polygon,i as Number);
+						
+					}
+					
+				}
+			}
+			
+			/**
+			 * 重叠详规查询
+			 * */
+			public  function xgfwQuery(polygon:Polygon,num:Number):void
+			{
+				
+				var token:Object;
+				token={num:num};
+				if (queryLyrUrl){
+					
+					var queryTask:QueryTask=new QueryTask(queryLyrUrl);
+					var query:Query=new Query();
+					query.where="1=1";
+					//query.outFields=outFieldsArr.split(",");
+					query.outFields=outFieldsArr;
+					query.geometry=polygon as Geometry; 
+					query.returnGeometry=true;
+					queryTask.execute(query,new AsyncResponder(xgfwResult,xgfwFault,token));
+					
+				}
+			}
+			//根据街镇号查询
+			public function getXgByBM():void{
+				//显示详规图层，图层根据重叠范围显示
+				//循环街镇开始利用范围进行统计
+				for( var  i=0; i<districtUnOrderArrCol.length; i++ ){
+					var geometryArrCol:Object=districtUnOrderArrCol.getItemAt(i);
+					if(geometryArrCol){
+						var BM:String;
+						BM=geometryArrCol.bm.toString();
+						bmQuery(BM,i as Number);
+						
+					}
+				}
+			}
+			public  function bmQuery(bm:String,num:Number):void
+			{
+				
+				var token:Object;
+				token={num:num};
+				if (queryLyrUrl){
+					var queryTask:QueryTask=new QueryTask(queryLyrUrl);
+					var query:Query=new Query();
+					var expr:String = "1=1";
+					if(districtLocateYear.selectedIndex!=0){
+						expr += " and  ST_NAME  = '" + districtLocateYear.selectedLabel.toString() + "'";
+					}
+					if(bm!=""){
+						expr += " and  BM  = '" + StringUtil.trim(bm) + "'";
+					}
+					query.where=expr;
+					query.outFields=outFieldsArr;
+					query.returnGeometry=true;
+					queryTask.showBusyCursor=true;
+					queryTask.execute(query,new AsyncResponder(xgfwResult,xgfwFault,token));
+					
+				}
+			}
+			//获取详规列表，根据详规显示地块级别图层
+			private function xgfwResult(featureSet:FeatureSet,token:Object=null):void
+			{
+				//获取一个镇有多少种用地类型
+				var ydlx:ArrayCollection = new ArrayCollection;
+				//一个stId算一个项目
+				var stId:ArrayCollection = new ArrayCollection;
+				for each (var gra:Graphic in featureSet.features)
+				{
+					extentNydGraphicsLayer.setStyle("backgroundColor", 0xCBE5FE);
+					extentNydGraphicsLayer.add(gra);
+					//设施农用地图层上显示字
+					var mp:MapPoint=gra.geometry.extent.center;
+					var textSymbol:TextSymbol=new TextSymbol();
+					var textFormat:TextFormat=new TextFormat();
+					textSymbol.text=gra.attributes.ST_VIEWID;
+					textFormat.size=13;
+					textFormat.font="黑体";
+					textFormat.color="0xFFCC00";
+					textSymbol.textFormat=textFormat;
+					var textGraphic:Graphic=new Graphic(mp,textSymbol);
+					textDetailGraphicLayer.add(textGraphic);
+					
+					if(ydlx.length==0){
+						ydlx.addItem(gra.attributes.ST_USETYPE);
+					}else if(!(ydlx.contains(gra.attributes.ST_USETYPE))){
+						ydlx.addItem(gra.attributes.ST_USETYPE);
+					}
+					if(stId.length==0){
+						stId.addItem(gra.attributes.ST_ID);
+					}else if(!(stId.contains(gra.attributes.ST_ID))){
+						stId.addItem(gra.attributes.ST_ID);
+					}
+				}
+					var num:Number=token.num;
+					var name:String=districtUnOrderArrCol[num].name.toString();
+					var count:Number=(Number)(districtUnOrderArrCol[num].num);
+					//count = featureSet.features.length;
+					count = stId.length;
+					districtUnOrderArrCol[num].num=count;
+					countVisible=true;
+					areaVisible=false;
+					graphicsProvider[num].attributes.num=Number(count.toFixed(0));
+					
+					//var areaArr:Array=districtUnOrderArrCol[num].areaNum as Array;
+					//var arr:Array=districtUnOrderArrCol[num].yearNum as Array;
+					var areaArr:Array=new Array;
+					var arr:Array=new Array;
+					//arr[0]={label:name+"设施农用地数目",value:count.toFixed(0)};
+					//arr[1]={label:"其他设施农用地数目",value:(sheshiCount-count).toFixed(0)};
+					var times:Array = new Array;//项目个数
+					var areas:Array = new Array;//项目面积
+					//获取不同用地类型的个数
+					for(var i:Number=0; i<ydlx.length;i++){
+						//该stId是否已经计数了
+						var haveStId:ArrayCollection = new ArrayCollection;
+						times[i] = 0;
+						areas[i] = 0;
+						for each (var gra:Graphic in featureSet.features)
+						{
+							if(ydlx.getItemAt(i)==gra.attributes.ST_USETYPE){
+								//相同stId的项目只能算一个
+								if(!haveStId.contains(gra.attributes.ST_ID)){
+									times[i]++;
+									haveStId.addItem(gra.attributes.ST_ID);
+								}
+								var temp:Number = Number(gra.attributes.ST_AREA);
+								areas[i] = areas[i] + temp;
+							}
+						}
+						areaArr[i]={label:ydlx.getItemAt(i),value:areas[i].toFixed(1)};//保留一位小数
+						arr[i]={label:ydlx.getItemAt(i),value:times[i]};
+					}
+					districtUnOrderArrCol[num].yearNum=arr;
+					graphicsProvider[num].attributes.yearNum=arr;
+					
+					districtUnOrderArrCol[num].areaNum=areaArr;
+					graphicsProvider[num].attributes.areaNum=areaArr;
+					var mp:MapPoint=graphicsProvider[num].geometry.extent.center;
+					var textSymbol:TextSymbol=new TextSymbol();
+					var textFormat:TextFormat=new TextFormat();
+					textSymbol.text=graphicsProvider[num].attributes.NAME+"\n"+"设施农用地数目:"+graphicsProvider[num].attributes.num;
+					staticsType="count";
+					//staticsType="area";
+					textFormat.size=14;
+					textFormat.font="黑体";
+					textFormat.color="0x000000";
+					textSymbol.textFormat=textFormat;
+					var textGraphic:Graphic=new Graphic(mp,textSymbol);
+					textGraphicLayer.add(textGraphic);
+				
+				//避免以为排序之后，districtArrCol与graphicsProvider中的乡镇顺序不一致
+				var districtArrCol:ArrayCollection=new ArrayCollection;
+				for(var n:int=0;n<districtUnOrderArrCol.length;n++)
+				{
+					districtArrCol.addItem(districtUnOrderArrCol[n]);
+				}
+				resultDataGrid.dataProvider=UtilsClass.sortArrayCollection("num",districtArrCol);
+				var gradeArr:Array=NumClassify.ThreeClass(resultDataGrid.dataProvider[districtArrCol.length-1].num,resultDataGrid.dataProvider[0].num);
+				firstStepColor.selectedColor=0x54e8d8;
+				secondStepColor.selectedColor=0x89ee613;
+				thirdStepColor.selectedColor=0x369013;
+				firstGrade=gradeArr[0];
+				secondGrade=gradeArr[1];
+				thirdGrade=gradeArr[1]+1;
+				forthGrade=gradeArr[2];
+				fifthGrade=gradeArr[2]+1;
+				sixthGrade=gradeArr[3];
+				firstStepValue.text=firstGrade.toString();
+				secondStepValue.text=secondGrade.toString();
+				thirdStepValue.text=thirdGrade.toString();
+				forthStepValue.text=forthGrade.toString();
+				fifthStepValue.text=fifthGrade.toString();
+				sixthStepValue.text=sixthGrade.toString();
+				districtGraphicsLayer.visible=true;
+				UtilsClass.zoomToGraphics(map,districtGraphicsLayer);
+				districtGraphicsLayer.refresh();
+				firTxt=firstGrade.toString()+"~"+secondGrade.toString();
+				secTxt=thirdGrade.toString()+"~"+forthGrade.toString();
+				thdTxt=fifthGrade.toString()+"~"+sixthGrade.toString();
+				showSatisticsResult();
+				searched=true;
+			}
+			private function xgfwFault(info:Object,token:Object=null):void{
+				Alert.show("查询设施农用地时QueryTask出错！");
+			}
+			private function ontextFault(info:Object, token:Object=null):void
+			{
+				CursorManager.removeBusyCursor();
+				Alert.show(info.toString());
+			}
+
+
+			protected function statisticsReset_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				//startDate.selectedDate=null;
+				//endDate.selectedDate=null;
+			}
+
+
+			protected function resultDataGrid_itemClickHandler(event:ListEvent):void
+			{
+				// TODO Auto-generated method stub
+				var graphic:Graphic=event.itemRenderer.data.graphic as Graphic;
+				map.extent=graphic.geometry.extent.expand(2);
+				map.infoWindow.setStyle("contentBackgroundAlpha", 0.95);
+				map.infoWindow.setStyle("backgroundAlpha", 0.95);
+				map.infoWindow.setStyle("backgroundColor", 0xCBE5FE);
+				if(map.infoWindow.visible){
+					chart.data=event.itemRenderer.data;
+					chart.staticsType=staticsType;
+					map.infoWindow.label=event.itemRenderer.data.name.toString();
+					map.infoWindow.height=320;
+					map.infoWindow.content = chart;
+					map.infoWindow.verticalScrollPolicy=ScrollPolicy.OFF;
+					map.infoWindow.horizontalScrollPolicy=ScrollPolicy.OFF;
+					map.infoWindow.show(graphic.geometry.extent.center);
+				}
+				else
+				{
+					chart.data=event.itemRenderer.data;
+					chart.staticsType=staticsType;
+					map.infoWindow.label=event.itemRenderer.data.name.toString();
+					map.infoWindow.visible= true;
+					map.infoWindow.content = chart;
+					map.infoWindow.verticalScrollPolicy=ScrollPolicy.OFF;
+					map.infoWindow.horizontalScrollPolicy=ScrollPolicy.OFF;
+					map.infoWindow.show(graphic.geometry.extent.center);
+				}
+				
+			}
+			
+			protected function numbervalidator1_invalidHandler(event:ValidationResultEvent):void
+			{
+				// TODO Auto-generated method stub
+				firstSignLabel.visible=true;
+				flagCheck=false;
+				flagEmpty=false;
+			}
+			protected function numbervalidator1_validHandler(event:ValidationResultEvent):void
+			{
+				// TODO Auto-generated method stub
+				firstSignLabel.visible=false;
+				flagCheck=true;
+				flagEmpty=true;
+			}
+			
+			protected function numbervalidator2_invalidHandler(event:ValidationResultEvent):void
+			{
+				// TODO Auto-generated method stub
+				firstSignLabel.visible=true;
+				flagCheck=false;
+				flagEmpty=false;
+				
+			}
+			
+			protected function numbervalidator2_validHandler(event:ValidationResultEvent):void
+			{
+				// TODO Auto-generated method stub
+				firstSignLabel.visible=false;
+				flagCheck=true;
+				flagEmpty=true;
+			}
+			
+			protected function numbervalidator3_invalidHandler(event:ValidationResultEvent):void
+			{
+				// TODO Auto-generated method stub
+				secondSignLabel.visible=true;
+				flagCheck=false;
+				flagEmpty=false;
+			}
+			protected function numbervalidator3_validHandler(event:ValidationResultEvent):void
+			{
+				// TODO Auto-generated method stub
+				secondSignLabel.visible=false;
+				flagCheck=true;
+				flagEmpty=true;
+			}
+			
+			protected function numbervalidator4_invalidHandler(event:ValidationResultEvent):void
+			{
+				// TODO Auto-generated method stub
+				secondSignLabel.visible=true;
+				flagCheck=false;
+				flagEmpty=false;
+			}
+			protected function numbervalidator4_validHandler(event:ValidationResultEvent):void
+			{
+				// TODO Auto-generated method stub
+				secondSignLabel.visible=false;
+				flagCheck=true;
+				flagEmpty=true;
+			}
+			
+			protected function numbervalidator5_invalidHandler(event:ValidationResultEvent):void
+			{
+				// TODO Auto-generated method stub
+				thirdSignLabel.visible=true;
+				flagCheck=false;
+				flagEmpty=false;
+			}
+			protected function numbervalidator5_validHandler(event:ValidationResultEvent):void
+			{
+				// TODO Auto-generated method stub
+				thirdSignLabel.visible=false;
+				flagCheck=true;
+				flagEmpty=true;
+			}
+			protected function numbervalidator6_invalidHandler(event:ValidationResultEvent):void
+			{
+				// TODO Auto-generated method stub
+				thirdSignLabel.visible=true;
+				flagCheck=false;
+				flagEmpty=false;
+			}
+			protected function numbervalidator6_validHandler(event:ValidationResultEvent):void
+			{
+				// TODO Auto-generated method stub
+				thirdSignLabel.visible=false;
+				flagCheck=true;
+				flagEmpty=true;
+			}
+			protected function classifyBtn_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				this.currentState = "statisticsLegend";
+				xgThematicWidget.selectedTitlebarButtonIndex = 1; 
+			}
+			protected function showBtn_clickHandler(event:MouseEvent):void
+			{
+				if(flagEmpty)
+				{
+					if(flagCheck)
+					{
+						// TODO Auto-generated method stub
+						if(firstSignLabel.visible==false&&secondSignLabel.visible==false&&thirdSignLabel.visible==false)
+						{
+							if(firstStepColor.selectedColor==0&&secondStepColor.selectedColor==0&&thirdStepColor.selectedColor==0)
+							{
+								
+							}
+							else
+							{
+								firstColor=firstStepColor.selectedColor;
+								secondColor=secondStepColor.selectedColor;
+								thirdColor=thirdStepColor.selectedColor;
+							}
+							firstGrade=(Number)(firstStepValue.text);
+							secondGrade=(Number)(secondStepValue.text);
+							thirdGrade=(Number)(thirdStepValue.text);
+							forthGrade=(Number)(forthStepValue.text);
+							fifthGrade=(Number)(fifthStepValue.text);
+							sixthGrade=(Number)(sixthStepValue.text);
+							
+							firTxt=firstGrade.toString()+"~"+secondGrade.toString();
+							secTxt=thirdGrade.toString()+"~"+forthGrade.toString();
+							thdTxt=fifthGrade.toString()+"~"+sixthGrade.toString();
+							resetSymbol(firstColor,secondColor,thirdColor);
+							showSatisticsResult();
+						}
+						
+					}
+				}
+			}
+			private function resetSymbol(firstColor:uint,secondColor:uint,thirdColor:uint):void
+			{	
+				firstGradeSym.color=firstColor;
+				secondGradeSym.color=secondColor;
+				threeGradeSym.color=thirdColor;
+				if(defaultCmb.selected)
+				{
+					defaultSym.color=defaultStepColor.selectedColor;
+					defaultSym.alpha=0.8;
+				}
+				if(graphicsProvider)
+				{
+					for(var i:int=0;i<graphicsProvider.length;i++)
+					{
+						graphicsProvider[i].symbol=graphicSymFunction(graphicsProvider[i]);
+					}
+					districtGraphicsLayer.refresh();
+					UtilsClass.zoomToGraphics(map,districtGraphicsLayer);
+				}
+			}
+			protected function resetBtn_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				firstStepColor.selectedColor=0x000000;
+				secondStepColor.selectedColor=0x000000;
+				thirdStepColor.selectedColor=0x000000;
+				firstStepValue.text="";
+				secondStepValue.text="";
+			}
+
+
+			protected function firstStepValue_focusInHandler(event:FocusEvent):void
+			{
+				// TODO Auto-generated method stub
+				firstSignLabel.visible=false;
+				flagCheck=true;
+				flagEmpty=true;
+			}
+
+
+			protected function firstStepValue_focusOutHandler(event:FocusEvent):void
+			{
+				// TODO Auto-generated method stub
+				var firstValue:int=(int)(firstStepValue.text);
+				var  secondValue:int=(int)(secondStepValue.text);
+				if(secondStepValue.text)
+				{
+					if(firstValue>=secondValue)
+					{
+						firstSignLabel.visible=true;
+						flagCheck=false;
+						flagEmpty=false;
+					}
+				}
+				if(!(firstStepValue.text))
+				{
+					firstSignLabel.visible=true;
+					flagCheck=false;
+					flagEmpty=false;
+				}
+				
+			}
+			protected function secondStepValue_focusInHandler(event:FocusEvent):void
+			{
+				// TODO Auto-generated method stub
+				firstSignLabel.visible=false;
+				flagCheck=true;
+				flagEmpty=true;
+			}
+			protected function secondStepValue_focusOut(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				var firstValue:int=(int)(firstStepValue.text);
+				var  secondValue:int=(int)(secondStepValue.text);
+				if(firstValue>=secondValue)
+				{
+					firstSignLabel.visible=true;
+					flagCheck=false;
+					flagEmpty=false;
+				}
+				var  thirdValue:int=(int)(thirdStepValue.text);
+				if(thirdStepValue.text)
+				{
+					if(secondValue>=thirdValue)
+					{
+						firstSignLabel.visible=true;
+						flagCheck=false;
+						flagEmpty=false;
+					}
+				}
+				if(!(secondStepValue.text))
+				{
+					firstSignLabel.visible=true;
+					flagCheck=false;
+					flagEmpty=false;
+				}
+			}
+
+			protected function thirdStepValue_focusInHandler(event:FocusEvent):void
+			{
+				// TODO Auto-generated method stub
+				secondSignLabel.visible=false;
+				flagCheck=true;
+				flagEmpty=true;
+			}
+			protected function thirdStepValue_focusOutHandler(event:FocusEvent):void
+			{
+				// TODO Auto-generated method stub
+				var  thirdValue:int=(int)(thirdStepValue.text);
+				var  forthValue:int=(int)(forthStepValue.text);
+				if(forthStepValue.text)
+				{
+					if(forthValue<=thirdValue)
+					{
+						secondSignLabel.visible=true;
+						flagCheck=false;
+						flagEmpty=false;
+					}
+				}
+				var  secondValue:int=(int)(secondStepValue.text);
+				if(secondValue>=thirdValue)
+				{
+					secondSignLabel.visible=true;
+					flagCheck=false;
+					flagEmpty=false;
+				}
+				if(!(thirdStepValue.text))
+				{
+					secondSignLabel.visible=true;
+					flagCheck=false;
+					flagEmpty=false;
+				}
+			}
+
+
+			protected function forthStepValue_focusOutHandler(event:FocusEvent):void
+			{
+				// TODO Auto-generated method stub
+				var  thirdValue:int=(int)(thirdStepValue.text);
+				var  forthValue:int=(int)(forthStepValue.text);
+				if(thirdValue>=forthValue)
+				{
+					secondSignLabel.visible=true;
+					flagCheck=false;
+					flagEmpty=false;
+				}
+				var  fifthValue:int=(int)(fifthStepValue.text);
+				if(fifthStepValue.text)
+				{
+					if(fifthValue<=forthValue)
+					{
+						secondSignLabel.visible=true;
+						flagCheck=false;
+						flagEmpty=false;
+					}
+				}
+				if(!(forthStepValue.text))
+				{
+					secondSignLabel.visible=true;
+					flagCheck=false;
+					flagEmpty=false;
+				}
+			}
+
+
+			protected function forthStepValue_focusInHandler(event:FocusEvent):void
+			{
+				// TODO Auto-generated method stub
+				secondSignLabel.visible=false;
+				flagCheck=true;
+				flagEmpty=true;
+			}
+			protected function fifthStepValue_focusOutHandler(event:FocusEvent):void
+			{
+				// TODO Auto-generated method stub
+				var  fifthValue:int=(int)(fifthStepValue.text);
+				var  forthValue:int=(int)(forthStepValue.text);
+				if(forthValue>=fifthValue)
+				{
+					thirdSignLabel.visible=true;
+					flagCheck=false;
+					flagEmpty=false;
+				}
+				var  sixthValue:int=(int)(sixthStepValue.text);
+				if(sixthStepValue.text)
+				{
+					if(sixthValue<=fifthValue)
+					{
+						thirdSignLabel.visible=true;
+						flagCheck=false;
+						flagEmpty=false;
+					}
+				}
+				if(!(fifthStepValue.text))
+				{
+					thirdSignLabel.visible=true;
+					flagCheck=false;
+					flagEmpty=false;
+				}
+			}
+			
+			protected function fifthStepValue_focusInHandler(event:FocusEvent):void
+			{
+				// TODO Auto-generated method stub
+				thirdSignLabel.visible=false;
+				flagCheck=true;
+				flagEmpty=true;
+				
+			}
+			protected function sixthStepValue_focusOutHandler(event:FocusEvent):void
+			{
+				// TODO Auto-generated method stub
+				var  sixthValue:int=(int)(sixthStepValue.text);
+				var  fifthValue:int=(int)(fifthStepValue.text);
+				if(sixthValue<=fifthValue)
+				{
+					thirdSignLabel.visible=true;
+					flagCheck=false;
+					flagEmpty=false;
+				}
+				if(!(sixthStepValue.text))
+				{
+					thirdSignLabel.visible=true;
+					flagCheck=false;
+					flagEmpty=false;
+				}
+			}
+			
+			
+			protected function sixthStepValue_focusInHandler(event:FocusEvent):void
+			{
+				// TODO Auto-generated method stub
+				thirdSignLabel.visible=false;
+				flagCheck=true;
+				flagEmpty=true;
+			}
+
+			protected function xgThematicWidget_openHandler(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				if(searched)
+				{
+					if(districtGraphicsLayer)
+					{
+						districtGraphicsLayer.visible=true;
+					}
+					if(textGraphicLayer)
+					{
+						textGraphicLayer.visible=true;
+					}
+				}
+				if(wTitle!="")
+				{
+					xgThematicWidget.widgetTitle=wTitle;
+				}
+				if(lys){
+					lysShow();
+				
+				}
+			}
+
+
+			protected function xgThematicWidget_closedHandler(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				if(districtGraphicsLayer)
+				{
+					districtGraphicsLayer.visible=false;
+				}
+				if(textGraphicLayer)
+				{
+					textGraphicLayer.visible=false;
+				}
+				if(extentNydGraphicsLayer)
+				{
+					extentNydGraphicsLayer.visible=false;
+				}
+				lys.visible = false;
+				map.infoWindow.hide();
+			}
+
+
+			protected function startDate_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+//				if(startDate.selectedDate)
+//				{
+////					startlbl.visible=false;
+//				}
+			}
+
+
+			protected function endDate_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+//				if(endDate.selectedDate)
+//				{
+////					endlbl.visible=false;
+//				}
+				
+			}
+
+
+			protected function xgThematicWidget_minimizedHandler(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				wTitle=xgThematicWidget.widgetTitle;
+				xgThematicWidget.widgetTitle="详规街镇统计";
+			}
+			private function streetsBind():void
+			{
+//				var streetsPro:String=districtLocateCbo.selectedItem.data.toString();
+//				var streetsProName:String = districtLocateCbo.selectedItem.label.toString();
+//				if(streetsPro != "-1"){
+//					var len:int = districtUnOrderArrCol.length;
+//					for(var i=0; i<len; i++){
+//						if(streetsProName != districtUnOrderArrCol[i].name.toString()){
+//							districtUnOrderArrCol.removeItemAt(i);
+//						}
+//					}
+//				}
+				//Alert.show("streetsPro:"+streetsPro.toString());
+				//streetsNameQuery(streetsPro);
+			}
+			private function yearsBind():void
+			{
+			}
+			private function districtLocate():void
+			{
+			
+			}
+			private function clear():void
+			{
+				//graphicsLayer.clear();
+			}
+			//明细链接地址（数据中心）
+			public function clickHandle():void{
+				navigateToURL(new URLRequest(linkUrl+resultDataGrid.selectedItem.link+"&account="+configData.userId));
+			}
+
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+		<s:GlowFilter id="glowFilter"
+					  alpha="1"
+					  color="0xf4f0f0"
+					  strength="5"/>
+		<mx:DateFormatter id="formatDate" formatString="YYYY-MM-DD" />
+		<mx:NumberValidator  source="{firstStepValue}" property="text" invalid="numbervalidator1_invalidHandler(event)" valid="numbervalidator1_validHandler(event)"/>
+		<mx:NumberValidator  source="{secondStepValue}" property="text" invalid="numbervalidator2_invalidHandler(event)" valid="numbervalidator2_validHandler(event)"/>
+		<mx:NumberValidator  source="{thirdStepValue}" property="text" invalid="numbervalidator3_invalidHandler(event)" valid="numbervalidator3_validHandler(event)"/>
+		<mx:NumberValidator  source="{forthStepValue}" property="text" invalid="numbervalidator4_invalidHandler(event)" valid="numbervalidator4_validHandler(event)"/>
+		<mx:NumberValidator  source="{fifthStepValue}" property="text" invalid="numbervalidator5_invalidHandler(event)" valid="numbervalidator5_validHandler(event)"/>
+		<mx:NumberValidator  source="{sixthStepValue}" property="text" invalid="numbervalidator6_invalidHandler(event)" valid="numbervalidator6_validHandler(event)"/>
+		<mx:NumberFormatter  id="myNumberFormatter" precision="2" useThousandsSeparator="true"/>
+	</fx:Declarations>
+	
+	<viewer:states>
+		<s:State name="statisticsCondition"  />
+		<s:State name="statisticsResult"  />
+		<s:State name="statisticsLegend"  />
+	</viewer:states>
+	<viewer:transitions>
+		<s:Transition autoReverse="true" toState="*">
+			<s:Fade targets="{[statisticsCondition,statisticsResult,statisticsLegend]}" />
+		</s:Transition>
+	</viewer:transitions>
+	<viewer:WidgetTemplate id="xgThematicWidget"
+						   width="350" height="320"
+						   open="xgThematicWidget_openHandler(event)"
+						   minimized="xgThematicWidget_minimizedHandler(event)"
+						   closed="xgThematicWidget_closedHandler(event)">
+		<mx:VBox 
+				id="statisticsCondition" 
+				width="100%" height="100%"
+				verticalGap="30"  paddingTop="20"
+				horizontalAlign="center"
+				visible="false" visible.statisticsCondition="true">
+			<mx:VBox horizontalAlign="left" paddingTop="50" verticalGap="20">
+				<mx:VBox width="100%" height="100%" verticalGap="1" horizontalAlign="center"
+						 verticalAlign="middle">
+					<mx:Form id="frmLocateCoords"  verticalScrollPolicy="off" width="100%" paddingBottom="4"
+							 paddingTop="2" paddingLeft="4" paddingRight="2" verticalGap="4" horizontalGap="2">
+						<mx:FormItem label=" 按年份查询" styleName="WidgetText" direction="vertical">
+							<mx:ComboBox id="districtLocateYear"  change="yearsBind()" width="150"/>
+						</mx:FormItem>
+						<mx:FormItem label="按街道镇查询" styleName="WidgetText" direction="vertical">
+							<mx:ComboBox id="districtLocateCbo"  change="streetsBind()" width="150"/>
+							<mx:Button label="查询" click="statisticsBtn_clickHandler(event)"/>
+						</mx:FormItem>
+					</mx:Form>
+				</mx:VBox>
+				</mx:VBox>
+		</mx:VBox>	
+		<mx:VBox 
+				id="statisticsResult" 
+				width="100%" height="100%"
+				horizontalAlign="center" verticalGap="10"
+				visible="false" visible.statisticsResult="true">
+			<mx:HBox  verticalAlign="middle" horizontalGap="20" paddingTop="10">
+				<mx:VBox    horizontalAlign="center">
+					<mx:Box backgroundColor="{firstColor}" width="20" height="20"/>
+					<s:Label id="firLevel"  text="{firTxt}"/>
+				</mx:VBox>	
+				<mx:VBox   horizontalAlign="center">
+					<mx:Box backgroundColor="{secondColor}" width="20" height="20"/>
+					<s:Label id="secLevel" text="{secTxt}"/>
+				</mx:VBox>	
+				<mx:VBox   horizontalAlign="center">
+					<mx:Box backgroundColor="{thirdColor}" width="20" height="20"/>
+					<s:Label id="thdLevel" text="{thdTxt}"/>
+				</mx:VBox>
+			</mx:HBox>
+			<mx:VBox width="100%" >
+					<mx:DataGrid id="resultDataGrid"
+								 height="100%" width="100%"
+								 alpha="1"  
+								 rowHeight="25"
+								 itemClick="resultDataGrid_itemClickHandler(event)"
+								 headerStyleName="DataGridHeader"
+								 chromeColor="0xBCE1E9"
+								 >
+						<mx:columns>
+							<mx:DataGridColumn width="0.4" dataField="name"
+											   headerText="名称"/>
+							<mx:DataGridColumn width="0.4" dataField="num"  visible="{countVisible}"
+											   headerText="设施农用地数目(个)"/>
+							<mx:DataGridColumn width="0.2" headerText="明细" dataField="link">
+								<mx:itemRenderer>
+									<fx:Component>
+										<mx:LinkButton color="black" icon="{outerDocument.Information}" click="outerDocument.clickHandle()"/>
+									</fx:Component>
+								</mx:itemRenderer>
+							</mx:DataGridColumn>
+						</mx:columns>
+					</mx:DataGrid>
+			</mx:VBox>
+		</mx:VBox>
+		
+		<mx:VBox 
+			  	 id="statisticsLegend"   
+				 width="100%" height="100%"
+				 horizontalAlign="center" verticalGap="20"
+				 visible="false" visible.statisticsLegend="true">
+			<mx:VBox width="100%" paddingTop="20" verticalGap="6"  horizontalAlign="left"  paddingLeft="60">
+				<s:Label text="颜色与分级数值" fontSize="14"/>
+				<mx:HBox verticalAlign="middle">
+					<mx:ColorPicker  id="firstStepColor" /> 
+					<mx:VBox horizontalAlign="left">
+						<mx:HBox verticalAlign="middle">
+							<s:TextInput id="firstStepValue"    borderVisible="false" focusOut="firstStepValue_focusOutHandler(event)" focusIn="firstStepValue_focusInHandler(event)"  fontSize="16" width="40"/>
+							<s:Label text="~"  fontSize="20"/>
+							<s:TextInput  id="secondStepValue"  borderVisible="false"  focusIn="secondStepValue_focusInHandler(event)"  focusOut="secondStepValue_focusOut(event)" fontSize="16" width="40"/>
+						</mx:HBox>
+						<s:Label  id="firstSignLabel" text="请输入正确的数值"  visible="false"  color="0xFF0000" fontSize="12"/>	
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox verticalAlign="middle">
+					<mx:ColorPicker  id="secondStepColor"/> 
+					<mx:VBox horizontalAlign="left">
+						<mx:HBox verticalAlign="middle">
+							<s:TextInput  id="thirdStepValue" borderVisible="false" focusOut="thirdStepValue_focusOutHandler(event)" focusIn="thirdStepValue_focusInHandler(event)"   fontSize="16" width="40"/>
+							<s:Label text="~"  fontSize="20"/>
+							<s:TextInput  id="forthStepValue"  borderVisible="false" focusIn="forthStepValue_focusInHandler(event)"  focusOut="forthStepValue_focusOutHandler(event)" fontSize="16" width="40"/>
+						</mx:HBox>
+						<s:Label  id="secondSignLabel" text="请输入合适的数值"  visible="false"  color="0xFFFF00" fontSize="12"/>	
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox verticalAlign="middle">
+					<mx:ColorPicker  id="thirdStepColor"/> 
+					<mx:VBox horizontalAlign="left">
+						<mx:HBox verticalAlign="middle">
+							<s:TextInput  id="fifthStepValue" borderVisible="false"  focusIn="fifthStepValue_focusInHandler(event)"  focusOut="fifthStepValue_focusOutHandler(event)" fontSize="16" width="40"/>
+							<s:Label text="~"  fontSize="20"/>
+							<s:TextInput  id="sixthStepValue"  borderVisible="false"  focusIn="sixthStepValue_focusInHandler(event)"  focusOut="sixthStepValue_focusOutHandler(event)" fontSize="16" width="40"/>
+						</mx:HBox>
+						<s:Label  id="thirdSignLabel" text="请输入合适的数值"  visible="false"  color="0xFFFF00" fontSize="12"/>	
+					</mx:VBox>
+				</mx:HBox>
+				<mx:HBox verticalAlign="middle">
+					<mx:ColorPicker  id="defaultStepColor"/> 
+					<mx:VBox horizontalAlign="left">
+						<s:CheckBox id="defaultCmb" label="未分级区域颜色选择"  selected="false"/>
+					</mx:VBox>
+				</mx:HBox>
+			</mx:VBox>
+			<mx:HBox horizontalGap="20" >
+				<mx:Box width="0" visible="false"/>
+				<s:Button  label="显  示"  id="showBtn"  click="showBtn_clickHandler(event)"/>
+				<s:Button  label="重  置" id="resetBtn"   click="resetBtn_clickHandler(event)" />
+			</mx:HBox>
+		</mx:VBox>	
+	</viewer:WidgetTemplate>
+</viewer:BaseWidget>

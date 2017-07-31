@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/187300/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/utils/pagequery/impl
+END
+OracleDialect.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/!svn/ver/187300/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/utils/pagequery/impl/OracleDialect.java
+END
+SqlserverDialect.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/!svn/ver/187256/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/utils/pagequery/impl/SqlserverDialect.java
+END
+MysqlDialect.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/!svn/ver/187256/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/utils/pagequery/impl/MysqlDialect.java
+END

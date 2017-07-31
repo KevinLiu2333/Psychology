@@ -1,0 +1,35 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="axistest:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/axistest_Web_exploded</output-path>
+    <root id="archive" name="axistest_Web exploded.war">
+      <element id="javaee-facet-resources" facet="axistest/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="axistest" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="activation.jar" module-name="axistest" />
+          <element id="library" level="module" name="axis-ant.jar" module-name="axistest" />
+          <element id="library" level="module" name="axis.jar" module-name="axistest" />
+          <element id="library" level="module" name="bsf.jar" module-name="axistest" />
+          <element id="library" level="module" name="castor-0.9.5.2.jar" module-name="axistest" />
+          <element id="library" level="module" name="commons-codec-1.2.jar" module-name="axistest" />
+          <element id="library" level="module" name="commons-discovery-0.2.jar" module-name="axistest" />
+          <element id="library" level="module" name="commons-httpclient-3.0-rc2.jar" module-name="axistest" />
+          <element id="library" level="module" name="commons-logging-1.0.4.jar" module-name="axistest" />
+          <element id="library" level="module" name="commons-net-1.0.0-dev.jar" module-name="axistest" />
+          <element id="library" level="module" name="httpunit.jar" module-name="axistest" />
+          <element id="library" level="module" name="ibmjsse.jar" module-name="axistest" />
+          <element id="library" level="module" name="javax.jms.jar" module-name="axistest" />
+          <element id="library" level="module" name="jaxrpc.jar" module-name="axistest" />
+          <element id="library" level="module" name="JimiProClasses.jar" module-name="axistest" />
+          <element id="library" level="module" name="junit-3.8.1.jar" module-name="axistest" />
+          <element id="library" level="module" name="log4j-1.2.8.jar" module-name="axistest" />
+          <element id="library" level="module" name="mailapi_1_3_1.jar" module-name="axistest" />
+          <element id="library" level="module" name="saaj.jar" module-name="axistest" />
+          <element id="library" level="module" name="wsdl4j-1.5.1.jar" module-name="axistest" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

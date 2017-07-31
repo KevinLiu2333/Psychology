@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="jar://$MODULE_DIR$/WEB-INF/lib/activation.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WEB-INF/lib/axis-ant.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WEB-INF/lib/axis.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WEB-INF/lib/bsf.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WEB-INF/lib/castor-0.9.5.2.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WEB-INF/lib/commons-codec-1.2.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WEB-INF/lib/commons-discovery-0.2.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WEB-INF/lib/commons-httpclient-3.0-rc2.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WEB-INF/lib/commons-logging-1.0.4.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WEB-INF/lib/commons-net-1.0.0-dev.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WEB-INF/lib/httpunit.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WEB-INF/lib/ibmjsse.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WEB-INF/lib/javax.jms.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WEB-INF/lib/jaxrpc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WEB-INF/lib/JimiProClasses.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WEB-INF/lib/junit-3.8.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WEB-INF/lib/log4j-1.2.8.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WEB-INF/lib/mailapi_1_3_1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WEB-INF/lib/saaj.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WEB-INF/lib/servlet.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/WEB-INF/lib/wsdl4j-1.5.1.jar!/" />
+    <conelement value="com.genuitec.eclipse.j2eedt.core.J2EE14_CONTAINER" />
+    <src_description expected_position="0">
+      <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
+    </src_description>
+  </component>
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/WEB-INF/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
+    <orderEntry type="module-library">
+      <library name="activation.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/activation.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="axis-ant.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/axis-ant.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="axis.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/axis.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="bsf.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/bsf.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="castor-0.9.5.2.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/castor-0.9.5.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-codec-1.2.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/commons-codec-1.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-discovery-0.2.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/commons-discovery-0.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-httpclient-3.0-rc2.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/commons-httpclient-3.0-rc2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-logging-1.0.4.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/commons-logging-1.0.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-net-1.0.0-dev.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/commons-net-1.0.0-dev.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="httpunit.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/httpunit.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="ibmjsse.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/ibmjsse.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="javax.jms.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/javax.jms.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jaxrpc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/jaxrpc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="JimiProClasses.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/JimiProClasses.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="junit-3.8.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/junit-3.8.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="log4j-1.2.8.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/log4j-1.2.8.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="mailapi_1_3_1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/mailapi_1_3_1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="saaj.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/saaj.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="servlet.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/servlet.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="wsdl4j-1.5.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/wsdl4j-1.5.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

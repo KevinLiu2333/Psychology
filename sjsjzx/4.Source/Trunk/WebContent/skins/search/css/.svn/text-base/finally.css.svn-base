@@ -1,0 +1,148 @@
+/*基本*/
+body {
+	font-family:宋体;
+	font-size:12px;
+	color:#000;
+	margin:0;
+	padding:0 auto;
+}
+a:link,a:visited  {
+	color: #000;
+	text-decoration:none;
+}
+a:hover,a:active {
+	color: #c60a00;
+	text-decoration:underline;
+}
+#finally_top {
+	height:99px;
+	background:url(../images/finally_top_bg.jpg) repeat-x;
+	}
+#finally_top img {
+	float:left;
+	border:0;
+	}
+#search_content {
+	float:right;
+	margin:35px 25px 0 0;
+	}
+#search_content a {
+	font-size:14px;
+	text-decoration:underline;
+	}
+#search_input {
+	background: url(../images/search_input_bg.jpg) repeat-x;
+	height:21px;
+	border-top:1px solid #7c7c7c;
+	border-left:1px solid #7c7c7c;
+	border-bottom:1px solid #c3c3c3;
+	border-right:none;
+	font-size:15px;
+	padding:5px 0 0 3px;
+}
+#search_button {
+	background: url(../images/search_button_bg.jpg) no-repeat;
+	width:92px;
+	height:28px;
+	border:0;
+	cursor:hand;
+	font-size:14px;
+	font-weight:bold;
+	line-height:28px;
+}
+#finally_info {
+	font-size:14px;
+	height:30px;
+	background:#d0dff4;
+	border-top:1px solid #6492cf;
+	}
+#info_title {
+	float:left;
+	font-weight:bold;
+	margin:8px 0 0 32px;
+	}
+#info {
+	float:right;
+	margin:8px 15px 0 0 ;
+	} 
+#content {
+	margin:6px 0;
+	float:left;
+	}
+#content ul {
+	list-style:none;
+	margin:20px 0 0px 30px;
+	padding:0;
+	width:510px;
+	}
+.content_title a:link,.content_title a:visited {
+	color:#0000cc;
+	font-size:16px;
+	text-decoration:underline;
+	}
+.content_ext {
+	color:#909090;
+	font-size:14px;
+	}
+.content_title a:hover {
+	color:#c60a00;
+	}
+.content_text {
+	margin-top:5px;
+	line-height:20px;
+	}
+.content_link {
+	line-height:20px;
+	padding-left:28px;
+	background:url(../images/finally_arrow_1.jpg) no-repeat  0px 3px;
+	color:#008000;
+	}
+#page {
+	margin:20px 0 0 30px;
+	clear:both;
+	}
+#page a:link,#page a:visited {
+	font-size:14px;
+	color:#261cdc;
+	text-decoration:underline;
+	}
+#page a:hover {
+	color:#c60a00;
+	}
+#bottom_serach {
+	height:50px;
+	margin:35px 0 0 0;
+	padding-top:20px;
+	text-align:center;
+	background:#d0dff4;
+	border-top:1px solid #5f8fcd;
+	border-bottom:1px solid #5f8fcd;
+	}
+#bottom_input {
+	height:17px;
+	padding:3px 0 0 3px;
+	}
+.tab {
+	padding-left:33px;
+	border-bottom:1px solid #CCC;
+	height:35px;
+	margin-top:10px;
+	}
+.tab span {
+	font-size:14px;
+	font-weight:bold;
+	}
+#tab_search {
+	clear:both;
+	margin-top:10px;
+	height:28px;
+	padding:4px 0 0 32px;
+	background:#d0dff4;
+	border-top:1px solid #6492cf;
+	}
+#copyright {
+	clear:both;
+	padding:25px 0;
+	line-height:24px;
+	text-align:center;
+	}

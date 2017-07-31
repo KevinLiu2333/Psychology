@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<viewer:BaseWidget xmlns:viewer="com.esri.viewer.*"
+				   xmlns:fx="http://ns.adobe.com/mxml/2009"
+				   xmlns:s="library://ns.adobe.com/flex/spark"
+				   xmlns:mx="library://ns.adobe.com/flex/mx"
+				   widgetConfigLoaded="init();"
+				   xmlns:circle="com.wonders.circle.*"
+				   xmlns:comp="com.esri.viewer.components.*"
+				   xmlns:Query="widgets.Query.*"
+				   >
+	<viewer:states>
+		<s:State name="stateCoordinates"/>
+		<s:State name="stateAddress"/>
+		<s:State name="stateResults"/>
+	</viewer:states>
+	<viewer:transitions>
+		<s:Transition autoReverse="true" toState="*">
+			<s:Fade targets="{[stateCoordinates, stateAddress, stateResults]}"/>
+		</s:Transition>
+	</viewer:transitions>
+	<fx:Script source="excel.as"/>
+	<fx:Script>
+		<![CDATA[
+			import mx.utils.StringUtil;
+			import adobe.utils.CustomActions;
+			import com.esri.ags.FeatureSet;
+			import com.esri.ags.Graphic;
+			import com.esri.ags.SpatialReference;
+			import com.esri.ags.events.DrawEvent;
+			import com.esri.ags.events.GeometryServiceEvent;
+			import com.esri.ags.geometry.*;
+			import com.esri.ags.geometry.Polygon;
+			import com.esri.ags.layers.ArcGISDynamicMapServiceLayer;
+			import com.esri.ags.layers.GraphicsLayer;
+			import com.esri.ags.symbols.*;
+			import com.esri.ags.tasks.GeometryService;
+			import com.esri.ags.tasks.QueryTask;
+			import com.esri.ags.tasks.supportClasses.BufferParameters;
+			import com.esri.ags.tasks.supportClasses.Query;
+			import com.esri.ags.tools.DrawTool;
+			import com.esri.ags.tools.NavigationTool;
+			import com.esri.viewer.AppEvent;
+			import com.esri.viewer.ViewerContainer;
+			import com.esri.viewer.utils.UtilsClass;
+			import com.wonders.circle.CustomDraw;
+			
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.core.UIComponent;
+			import mx.events.ItemClickEvent;
+			import mx.events.ListEvent;
+			import mx.rpc.AsyncResponder;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			import mx.rpc.http.HTTPService;
+			import mx.managers.CursorManager;
+			import com.esri.viewer.utils.UrlUtil;
+			import widgets.InfoTemplates.InfoPopupWidget;
+			
+			private var isResultsExist:Boolean=false;
+			private var latestQueryWhere:String="";
+			private var latestQueryLyr:String="";
+			private var latestQuertyGeometry:Geometry=new Geometry();
+			private var latestQueryOutFields:String="";
+			private var latestQueryType:String;
+			
+			private var queryLayer:String;
+			
+			private var queryGeom:Geometry;
+			
+			private var queryExpr:String;
+			
+			private var queryFields:String;
+			
+			private var queryTitleField:String="";
+			
+			private var queryLinkField:String="";
+			
+			private var queryIcon:String;
+			
+	    	private var graphicPointSym:PictureMarkerSymbol;
+			
+			private var graphicLineSym:SimpleLineSymbol=new SimpleLineSymbol(SimpleLineSymbol.STYLE_DASHDOT, 0xFF0000, 1,2);
+			
+			private var graphicPolySym:SimpleFillSymbol=new SimpleFillSymbol("solid", 0xFF0000, 0.5, graphicLineSym);
+			
+			private var outlineSym:SimpleLineSymbol=new SimpleLineSymbol("solid", 0x0008F13, 0.5, 2);
+			private var polySym:SimpleFillSymbol=new SimpleFillSymbol("solid", 0x0008F13, 0.1, outlineSym);
+			
+			private const ICON_URL:String=UrlUtil.URL_DOMAIN + "assets/images/icons/";
+			
+			[Bindable]
+			[Embed(source="assets/images/icons/i_redclear.png")]
+			public var Clear:Class;
+			
+			[Bindable]
+			[Embed(source="assets/images/icons/i_query.png")]
+			public var Search:Class;
+			
+			private var mapPoints:ArrayCollection;
+			
+			[Bindable]
+			private var layerLabel:String;
+			
+			private var graphicalsearchLabel:String;
+			
+			private var textsearchLabel:String;
+			
+			private var resultsLabel:String;
+			
+			[Bindable]
+			private var graphicallayerLabel:String;
+			
+			[Bindable]
+			private var msgVisible:Boolean=false;
+			
+			private var graphicsLayer:GraphicsLayer;
+			
+			private var graphicsLayer2:GraphicsLayer;
+			
+			private var configLayers:Array;
+			
+			private var configQueryGraphical:Array;
+			
+			private var configQueryText:Array;
+			
+			private var circleDraw:CustomDraw;
+			
+			private var geomService:GeometryService;
+			
+			private var geometryserviceURL:String;
+			
+			private var isQueryAllowed:Boolean=false;
+			
+			private var excelURL:String;
+			[Bindable]
+			private var gridVisible:Boolean=false;
+			
+			private var initFinished:Boolean=false;
+			
+			
+			private function init():void
+			{
+				graphicsLayer=new GraphicsLayer;
+				graphicsLayer2=new GraphicsLayer;
+				map.addLayer(graphicsLayer2);
+				map.addLayer(graphicsLayer);
+				gridVisible=false;
+				queryDataGrid.dataProvider=null;
+				setMapNavigation(NavigationTool.PAN, "漫游");
+				
+				if (configXML)
+				{
+					graphicalsearchLabel=configXML.labels.graphicalsearchlabel || "空间查询";
+					textsearchLabel=configXML.labels.textsearchlabel || "属性查询";
+					resultsLabel=configXML.labels.resultslabel || "查询结果";
+					layerLabel=configXML.labels.layerlabel || "选择图层：";
+					geometryserviceURL=gisdata_UrlROOT + configXML.geometryserviceURL;
+					excelURL=configData.servlet_UrlROOT + configXML.excelservice;
+					geomService=new GeometryService(geometryserviceURL);
+					configQueryGraphical=[];
+					configQueryText=[];
+					configLayers=[];
+					var lyrList:XMLList=configXML.layers.layer;
+					var visibleAC:ArrayCollection=getVisibleLayers();
+					var visibleArr:Array=visibleAC.toArray();
+					for (var i:Number=0; i < lyrList.length(); i++)
+					{
+						var lyrURL:String=gisdata_UrlROOT + lyrList[i].url;
+						var lyrid:Number=lyrList[i].layerid;
+						var lyrLabel:String=lyrList[i].name;
+						var lyrTextLabel:String=lyrList[i].textsearchlabel;
+						var lyrGraphicalLabel:String=lyrList[i].graphicalsearchlabel;
+						var lyrExpr:String=lyrList[i].expression;
+						var lyrFields:String=lyrList[i].fields;
+						var lyrTitleField:String=lyrList[i].titlefield;
+						var lyrLinkField:String=lyrList[i].linkfield;
+						var icon:String=lyrList[i].icon;
+						var searchLayer:Object={url: lyrURL, id: lyrid, label: lyrLabel, textlabel: lyrTextLabel, graphicallabel: lyrGraphicalLabel, expr: lyrExpr, fields: lyrFields, titlefield: lyrTitleField, linkfield: lyrLinkField, icon: icon}
+						//只有当前可见图层会被添加到Combobox
+						configLayers.push(searchLayer);
+//						if (visibleArr.indexOf(searchLayer.id) != -1)
+						{
+							configQueryGraphical.push(searchLayer);
+							//表达式存在，则支持名称查询
+							if (lyrExpr)
+								configQueryText.push(searchLayer);
+						}
+					}
+				}
+				//绑定图层刷新侦听
+				ViewerContainer.addEventListener(AppEvent.LAYERS_LIST_UPDATED, refreshCombobox);
+				
+				//if (configQueryText.length)
+				wTemplate.addTitlebarButton(ICON_URL + "i_atquery.png",textsearchLabel , showStateCoordinates);
+				wTemplate.addTitlebarButton(ICON_URL + "i_spquery.png",graphicalsearchLabel , showStateAddress);
+				wTemplate.addTitlebarButton(ICON_URL + "i_table.png", resultsLabel, showStateResults);
+				
+				
+				//初始化图形查询
+				if (configQueryGraphical.length)
+				{
+					graphicalcbo.dataProvider=configQueryGraphical;
+					
+					
+				}
+				//初始化文字查询
+				if (configQueryText.length)
+				{
+					textcbo.dataProvider=configQueryText;
+					
+				}
+				
+				graphicalcbo.selectedIndex=-1;
+				textcbo.selectedIndex=-1;
+				
+				if (configQueryGraphical.length == 0)
+				{
+					graphicallb.text="暂无图层可见，请从图层操作中刷新可见图层。";
+					texttiplb.text="暂无图层可见，请从图层操作中刷新可见图层。";
+					graphicalcbo.prompt="——暂无图层——";
+					textcbo.prompt="——暂无图层——";
+					txtSearch.text="";
+					isQueryAllowed=false;
+				}
+				else
+				{
+					graphicalcbo.prompt="——选择图层——";
+					textcbo.prompt="——选择图层——";
+					graphicallb.text="从下拉列表选择图层。";
+					texttiplb.text="从下拉列表选择图层。";
+					txtSearch.text="";
+					isQueryAllowed=false;
+				}
+				
+				
+				//初始圆选工具
+				circleTool.map=map;
+				circleTool.graphicsLayer=graphicsLayer;
+				circleTool.displayRadius=false;
+				circleTool.displayCenter=true;
+			}
+			
+			private function refreshCombobox(event:AppEvent):void
+			{
+				clear();
+				CursorManager.removeBusyCursor();
+				var visibleAC:ArrayCollection=getVisibleLayers();
+				var visibleArr:Array=visibleAC.toArray();
+				configQueryGraphical=new Array;
+				configQueryText=new Array;
+				for each (var configLayer:Object in configLayers)
+				{
+					if (visibleArr.indexOf(configLayer.id) != -1)
+					{
+						configQueryGraphical.push(configLayer);
+						if (configLayer.expr)
+							configQueryText.push(configLayer);
+					}
+				}
+				graphicalcbo.dataProvider=configQueryGraphical;
+				textcbo.dataProvider=configQueryText;
+				graphicalcbo.selectedIndex=-1;
+				textcbo.selectedIndex=-1;
+				bufferRadius_txt.text="";
+				//TODO 细节处理整合到一个方法中。
+				if (configQueryGraphical.length == 0)
+				{
+					graphicallb.text="暂无图层可见，请从图层操作中刷新可见图层。";
+					texttiplb.text="暂无图层可见，请从图层操作中刷新可见图层。";
+					graphicalcbo.prompt="——暂无图层——";
+					textcbo.prompt="——暂无图层——";
+					txtSearch.text="";
+					isQueryAllowed=false;
+				}
+				else
+				{
+					graphicalcbo.prompt="——选择图层——";
+					textcbo.prompt="——选择图层——";
+					graphicallb.text="从下拉列表选择图层。";
+					texttiplb.text="从下拉列表选择图层。";
+					txtSearch.text="";
+					isQueryAllowed=false;
+				}
+				
+				
+				showStateAddress();
+				
+			}
+			
+			private function queryWidgetClosed():void
+			{
+				graphicsLayer.visible=false;
+				graphicsLayer2.visible=false;
+				setMapNavigation(NavigationTool.PAN, "漫游");
+				this.showInfoWindow(null);
+			}
+			
+			private function queryWidgetOpened():void
+			{
+				if(graphicsLayer){
+					graphicsLayer.visible=true;
+				}
+				if(graphicsLayer2){
+					graphicsLayer2.visible=true;
+				}
+				setMapNavigation(NavigationTool.PAN, "漫游");
+			}
+			
+			
+			private function showStateAddress():void
+			{
+				this.currentState = "stateAddress";
+				wTemplate.selectedTitlebarButtonIndex =0;
+			}
+			
+			private function showStateCoordinates():void
+			{
+				this.currentState = "stateCoordinates";
+				wTemplate.selectedTitlebarButtonIndex =1;
+			}
+			
+			private function showStateResults():void
+			{
+				CursorManager.removeBusyCursor();
+				this.currentState = "stateResults";
+				wTemplate.selectedTitlebarButtonIndex =2;
+			}
+			
+			private function getVisibleLayers():ArrayCollection
+			{
+				//var emLayer:ArcGISDynamicMapServiceLayer=map.layers[4] as ArcGISDynamicMapServiceLayer;
+				var emLayer:ArcGISDynamicMapServiceLayer=map.getLayer("专业图层") as ArcGISDynamicMapServiceLayer;
+				var visibleAC:ArrayCollection=new ArrayCollection;
+				
+				if (emLayer.visible == true)
+				{
+					visibleAC=emLayer.visibleLayers;
+				}
+				return visibleAC;
+				
+			}
+			
+			private function textQuery():void
+			{
+				this.showInfoWindow(null);
+				graphicsLayer.clear();
+				graphicsLayer2.clear();
+				gridVisible=false;
+				queryDataGrid.dataProvider=null;
+				
+				setMapNavigation(NavigationTool.PAN, "漫游");
+				var i:Number=textcbo.selectedIndex;
+				if(i==-1)
+				{
+					Alert.show("请先选择一个图层");
+					return;
+				}
+				queryLayer=configQueryText[i].url;
+				queryExpr=configQueryText[i].expr;
+				queryFields=configQueryText[i].fields;
+				queryTitleField=configQueryText[i].titlefield;
+				queryLinkField=configQueryText[i].linkfield;
+				queryIcon=ICON_URL + configQueryText[i].icon;
+				
+				
+				if ((queryLayer) && (txtSearch.text))
+				{
+					CursorManager.setBusyCursor();
+					var queryTask:QueryTask=new QueryTask(queryLayer);
+					var query:Query=new Query();
+					var expr:String=queryExpr.replace("[value]", StringUtil.trim(txtSearch.text));
+					query.where=expr;
+					query.outFields=queryFields.split(",");
+					query.returnGeometry=true;
+					//query.outSpatialReference = map.spatialReference;
+					queryTask.showBusyCursor=true;
+					queryTask.execute(query, new AsyncResponder(ontextResult, ontextFault));
+					showMessage("正在查询...", true);
+					
+					
+				}
+				else
+				{
+					showStateResults();
+					showMessage("请输入关键字。", false);
+				}
+				
+				
+				
+				
+				
+			}
+			
+			//on fault
+			private function ontextFault(info:Object, token:Object=null):void
+			{
+				//Alert.show(info.toString());
+				CursorManager.removeBusyCursor();
+				showMessage(info.toString(), false);
+				showStateResults();
+			}
+			
+			private function ontextResult(featureSet:FeatureSet, token:Object=null):void
+			{
+				if (featureSet.features.length > 0)
+				{
+					CursorManager.removeBusyCursor();
+					try
+					{
+						var recAC:ArrayCollection=createRecordData(featureSet);
+						queryDataGrid.dataProvider=recAC;
+						gridVisible=true;
+						msgVisible=false;
+						showStateResults();
+						
+					}
+					catch (error:Error)
+					{
+						Alert.show("aa");
+						//showMessage(error.message, false);
+					}
+				}
+				else
+				{
+					showMessage("暂无符合条件的记录!", false);
+					showStateResults();
+				}
+				
+			}
+			
+			private function polygonQuery(value:String):void
+			{
+				graphicsLayer.clear();
+				graphicsLayer2.clear();
+				this.showInfoWindow(null);
+				setMapNavigation(NavigationTool.PAN, "漫游");
+				switch (value)
+				{
+					case DrawTool.POLYGON:
+					{
+						setMapAction(value, "多边形",new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID, 0x3FAFDC, 0.5, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, 0x3FAFDC, 1, 1)), drawEnd);
+						break;
+					}
+					case DrawTool.EXTENT:
+					{
+						setMapAction(value, "框选", new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID, 0x3FAFDC, 0.5, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, 0x3FAFDC, 1, 1)), drawEnd);
+						break;
+					}
+					case "CIRCLE":
+					{
+						setMapAction(value, "圆选", null,null);
+						circleTool.activate(CustomDraw.CIRCLE);
+						break;
+					}
+					case DrawTool.POLYLINE:
+					{
+						setMapAction(value, "线形",new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, 0x3FAFDC, 1, 1), drawEnd);
+						break;
+					}
+						
+				}
+				
+			}
+			
+			//绘制完成，在graphiclayer上添加graphic 并将该多边形的点位传送给服务器端
+			private function drawEnd(event:DrawEvent):void
+			{
+				CursorManager.setBusyCursor();
+				graphicsLayer.clear();
+				graphicsLayer2.clear();
+				gridVisible=false;
+				queryDataGrid.dataProvider=null;
+				
+				circleTool.deactivate();
+				setMapNavigation(NavigationTool.PAN,"漫游");
+				var gra:Graphic=event.graphic as Graphic;
+				
+				if (gra.attributes)
+				{
+					if (gra.attributes.type == CustomDraw.CUSTOM_CIRCLE)
+					{
+						//TODO:是否需要添加中心点
+						var obj:Object=gra.attributes;
+						var temp:Number = Number(obj.radius);
+						bufferRadius_txt.text=temp.toFixed(0);
+					}
+					
+				}
+				
+				
+				gra.symbol=polySym;
+				graphicsLayer2.add(gra);
+				UtilsClass.zoomToGraphics(map,graphicsLayer2);
+				isQueryAllowed=true;
+				
+				
+				if (event.graphic.geometry.type == "esriGeometryPolyline")
+				{
+					lineBuffer(gra);
+				}
+				else
+				{
+					exeQuery(event.graphic.geometry);
+				}
+				
+				
+				
+				
+				
+			}
+			
+			private function exeQuery(geometry:Geometry):void
+			{
+				var i:Number=graphicalcbo.selectedIndex;
+				if (i != -1)
+				{
+					queryLayer=configQueryGraphical[i].url;
+					queryExpr=configQueryGraphical[i].expr;
+					queryFields=configQueryGraphical[i].fields;
+					queryTitleField=configQueryGraphical[i].titlefield;
+					queryLinkField=configQueryGraphical[i].linkfield;
+					queryIcon=ICON_URL + configQueryGraphical[i].icon;
+					if ((queryLayer) && (geometry))
+					{
+						var queryTask:QueryTask=new QueryTask(queryLayer);
+						var query:Query=new Query();
+						query.outFields=queryFields.split(",");
+						query.returnGeometry=true;
+						query.geometry=geometry;
+						//query.outSpatialReference = map.spatialReference;
+						queryTask.showBusyCursor=true;
+						showMessage("正在查询...", true);
+						try
+						{
+							queryTask.execute(query, new AsyncResponder(ongraphicalResult, ongraphicalFault));
+						}
+						catch (error:Error)
+						{
+							Alert.show(error.toString());
+							isQueryAllowed=false;
+							//showMessage(error.message, false);
+						}
+						
+						//showMessage(loadingLabel, true); 
+						
+					}
+				}
+				
+				
+				
+				
+				
+				
+				
+			}
+			//on fault
+			private function ongraphicalFault(info:Object, token:Object=null):void
+			{
+				//Alert.show(info.toString());
+				setMapNavigation(NavigationTool.PAN, "漫游");
+				gridVisible=false;
+				queryDataGrid.dataProvider=null;
+				showMessage(info.toString(), false);
+				isQueryAllowed=false;
+			}
+			
+			
+			
+			private function ongraphicalResult(featureSet:FeatureSet, token:Object=null):void
+			{
+				CursorManager.removeBusyCursor();
+				gridVisible=false;
+				queryDataGrid.dataProvider=null;
+				setMapNavigation(NavigationTool.PAN, "漫游");
+				if (featureSet.features.length > 0)
+				{
+					try
+					{
+						var recAC:ArrayCollection=createRecordData(featureSet);
+						queryDataGrid.dataProvider=recAC;
+						gridVisible=true;
+						msgVisible=false;
+						showStateResults();
+					}
+					catch (error:Error)
+					{
+						CursorManager.removeBusyCursor();
+						Alert.show("出错了！\n" + error.message);
+						isQueryAllowed=false;
+						//showMessage(error.message, false);
+					}
+				}
+				else
+				{
+					
+					graphicsLayer.clear();
+					showMessage("暂无符合条件的记录！", false);
+					showStateResults();
+				}
+				
+			}
+			
+			private function searchLayerChangedGraphical():void
+			{
+				var i:Number=graphicalcbo.selectedIndex;
+				graphicallb.text=configQueryGraphical[i].graphicallabel;
+				if (isQueryAllowed)
+				{
+					if (graphicsLayer2.numGraphics == 1)
+					{
+						try
+						{
+							var gra:Graphic=graphicsLayer2.getChildAt(0) as Graphic;
+							exeQuery(gra.geometry);
+						}
+						catch (error:Error)
+						{
+							isQueryAllowed=false;
+						}
+						
+					}
+					
+				}
+			}
+			
+			private function searchLayerChangedText():void
+			{
+				var i:Number=textcbo.selectedIndex;
+				texttiplb.text=configQueryText[i].textlabel;
+			}
+			
+			private function clear():void
+			{
+				
+				graphicsLayer.clear();
+				graphicsLayer2.clear();
+				txtSearch.text="";
+				this.showInfoWindow(null);
+				bufferRadius_txt.text="";
+				queryDataGrid.dataProvider=null;
+				gridVisible=false;
+				msgVisible=false;
+				isQueryAllowed=false;
+				isResultsExist=false;
+				circleTool.deactivate();
+				setMapNavigation(NavigationTool.PAN, "漫游");
+			}
+			
+			
+			private function getGeomCenter(gra:Graphic):MapPoint
+			{
+				var pt:MapPoint;
+				switch (gra.geometry.type)
+				{
+					case Geometry.MULTIPOINT:
+					{
+						var multiPoint:Multipoint=Multipoint(gra.geometry);
+						pt=MapPoint(multiPoint.points[0]);
+						break;
+						
+					}
+					case Geometry.MAPPOINT:
+					{
+						pt=gra.geometry as MapPoint;
+						break;
+					}
+						
+					case Geometry.POLYLINE:
+					{
+						var pl:Polyline=gra.geometry as Polyline;
+						var pathCount:Number=pl.paths.length;
+						var pathIndex:int=int((pathCount / 2) - 1);
+						var midPath:Array=pl.paths[pathIndex];
+						var ptCount:Number=midPath.length;
+						var ptIndex:int=int((ptCount / 2) - 1);
+						pt=pl.getPoint(pathIndex, ptIndex);
+						break;
+					}
+						
+					case Geometry.POLYGON:
+					{
+						var poly:Polygon=gra.geometry as Polygon;
+						pt=poly.extent.center;
+						break;
+					}
+						
+				}
+				return pt;
+			}
+			
+			private function mouseOverGraphic(event:MouseEvent):void
+			{
+				var gra:Graphic=event.currentTarget as Graphic;
+				var infoData:Object=gra.attributes;
+				this.showInfoWindow(infoData);
+			}
+			
+			private function mouseOutGraphic(event:MouseEvent):void
+			{
+				var gra:Graphic=event.currentTarget as Graphic;
+				this.showInfoWindow(null);
+			}
+			
+			private function createRecordData(featureSet:FeatureSet):ArrayCollection
+			{
+				graphicsLayer.clear();
+				var recAC:ArrayCollection=new ArrayCollection();
+				for each (var gra:Graphic in featureSet.features)
+				{
+					graphicPointSym=new PictureMarkerSymbol(queryIcon, 25, 25);
+					//地图显示部分 以及Gra改造。
+					switch (gra.geometry.type)
+					{
+						case Geometry.MULTIPOINT:
+						{
+							gra.symbol=graphicPointSym;
+							break;
+						}
+						case Geometry.POLYLINE:
+						{
+							gra.symbol=graphicLineSym;
+							break;
+						}
+							
+						case Geometry.POLYGON:
+						{
+							gra.symbol=graphicPolySym;
+							break;
+						}
+						case Geometry.MAPPOINT:
+						{
+							gra.symbol=graphicPointSym;
+							break;
+						}
+							
+					}
+					//数据构造部分
+					var obj:Object=gra.attributes;
+					var fld:String;
+					var value:String;
+					var title:String;
+					var content:String="";
+					var link:String="";
+					var point:MapPoint=getGeomCenter(gra);
+					var fldAliases:Object=featureSet.fieldAliases;
+					var icon:String=queryIcon;
+					//判断到底是Title还是Content
+					for (fld in obj)
+					{
+						
+						value=obj[fld].toString();
+						
+						if (fld.toUpperCase() == queryTitleField.toUpperCase())
+						{
+							title=value;
+							if (!title)
+								title=widgetTitle;
+						}
+//						else if (fld.toUpperCase() == queryLinkField.toUpperCase())
+						if (fld.toUpperCase() == queryLinkField.toUpperCase())
+						{
+							link=value;
+						}
+						else
+						{
+//							if (fld.toUpperCase() != queryTitleField.toUpperCase())
+							{
+								content+=fldAliases[fld] + ": " + value + ";";
+							}
+						}
+					}
+					content=content.substring(0,content.length-1);
+					var infoData:Object={icon: icon, title: title, content: content, link: link, point: point, geometry: gra.geometry};
+					
+					
+					gra.addEventListener(MouseEvent.ROLL_OVER, mouseOverGraphic)
+					//gra.addEventListener(MouseEvent.ROLL_OUT, mouseOutGraphic)
+					gra.attributes=infoData;
+					graphicsLayer.add(gra);
+					recAC.addItem(infoData);
+				}
+				UtilsClass.zoomToGraphics(map,graphicsLayer);
+				return recAC;
+				
+			}
+			
+			private function dataGridRollOver(event:ListEvent):void
+			{
+				var infoData:Object=queryDataGrid.dataProvider[event.rowIndex];
+				this.showInfoWindow(infoData);
+			}
+			
+			private function dataGridRollOut(event:ListEvent):void
+			{
+				var infoData:Object=queryDataGrid.dataProvider[event.rowIndex];
+				this.showInfoWindow(null);
+			}
+			
+			private function dataGridClick(event:ListEvent):void
+			{
+				var infoData:Object=queryDataGrid.dataProvider[event.rowIndex];
+				var pt:MapPoint=infoData.point;
+				
+				map.centerAt(pt);
+			}
+			
+			
+			
+			//event handler - fires when drawing starts
+			//clear the previous graphics from the map
+			private function drawStartHandler(event:DrawEvent):void
+			{
+				//clear all selections before new drawing
+				this.showInfoWindow(null);
+				graphicsLayer.clear();
+				graphicsLayer2.clear();
+			}
+			
+			private function lineBuffer(graphic:Graphic):void
+			{
+				var bufferParameters:BufferParameters=new BufferParameters();
+				bufferParameters.geometries=[graphic];
+				
+				
+				bufferParameters.distances=[Number(bufferRadius_txt.text)];
+				//当输入为0是否提示缓冲距离必须>0
+				if (bufferRadius_txt.text == "" || bufferRadius_txt.text == "0")
+				{
+					bufferParameters.distances=[1];
+				}
+				bufferParameters.unit=GeometryService.UNIT_METER;
+				//buffer空间参照系,102113为WKID是REST API定义好的空间参照系的id         
+				bufferParameters.bufferSpatialReference=new SpatialReference(102113);
+				graphic.geometry.spatialReference=bufferParameters.bufferSpatialReference;
+				//添加BUFFER_COMPLETE监听
+				geomService.addEventListener(GeometryServiceEvent.BUFFER_COMPLETE, bufferCompleteHandler);
+				try
+				{
+					geomService.buffer(bufferParameters)
+					//,new AsyncResponder(onbufferResult, onbufferFault));
+				}
+				catch (error:Error)
+				{
+					showMessage(error.message, false);
+				}
+			}
+			
+			private function onbufferResult(featureSet:FeatureSet, token:Object=null):void
+			{
+				//Alert.show("buffer");
+			}
+			
+			private function onbufferFault(info:Object, token:Object=null):void
+			{
+				//Alert.show(info.toString());
+				showMessage(info.toString(), false);
+			}
+			
+			private function bufferCompleteHandler(event:GeometryServiceEvent):void
+			{
+				geomService.removeEventListener(GeometryServiceEvent.BUFFER_COMPLETE, bufferCompleteHandler);
+				
+				var graphics:Array = event.result as Array;
+				
+				if (graphics.length > 0)
+				{
+					for each (var graphic:Graphic in graphics)
+					{
+						graphic.symbol=polySym;
+						graphicsLayer2.add(graphic);
+						exeQuery(graphic.geometry);
+					}
+				}
+			}
+			
+			private function showMessage(msg:String, swfVisible:Boolean):void
+			{
+				txtMessage.text=msg;
+				swfMessage.visible=swfVisible;
+				msgVisible=true;
+			}
+			
+			private function radiusTuning():void
+			{
+				if (graphicsLayer2.numGraphics == 1)
+				{
+					var gra:Graphic=graphicsLayer2.getChildAt(0) as Graphic;
+					if (gra.attributes != null)
+					{
+						if (gra.attributes.type == CustomDraw.CUSTOM_CIRCLE)
+						{
+							var circleObj:Object=gra.attributes as Object;
+							var centerPoint:MapPoint=circleObj.cpoint as MapPoint;
+							var m_radius:Number=Number(StringUtil.trim(bufferRadius_txt.text));
+//							m_radius = Number((m_radius/0.017453292519943299/6378137).toFixed(5));
+							function createCirclePoints(m_center:MapPoint):Array
+							{
+								var cosinus:Number;
+								var sinus:Number;
+								var x:Number;
+								var y:Number;
+								var arrayOfPoints:Array=new Array();
+								var numberOfCirclePoints:int=100;
+								for (var i:int=0; i < numberOfCirclePoints; i++)
+								{
+									sinus=Math.sin((Math.PI * 2.0) * (i / numberOfCirclePoints));
+									cosinus=Math.cos((Math.PI * 2.0) * (i / numberOfCirclePoints));
+									x=m_center.x + m_radius * cosinus;
+									y=m_center.y + m_radius * sinus;
+									arrayOfPoints[i]=new MapPoint(x, y);
+								}
+								
+								arrayOfPoints.push(arrayOfPoints[0]);
+								return arrayOfPoints;
+							}
+							var m_circleGeometry:Polygon=new Polygon;
+							m_circleGeometry.addRing(createCirclePoints(centerPoint));
+							graphicsLayer2.clear();
+							gra=new Graphic(m_circleGeometry, polySym);
+							gra.attributes=circleObj;
+							graphicsLayer2.add(gra);
+							exeQuery(gra.geometry);
+						}
+					}
+					else
+					{
+						Alert.show("微调半径仅对圆选生效。");
+					}
+				}
+			}
+			
+			override public function showInfoWindow(infoData:Object):void
+			{
+				if (infoData)
+				{
+					var infoTemplate:InfoPopupWidget = new InfoPopupWidget();
+					map.infoWindow.content = infoTemplate as UIComponent;
+//					map.infoWindow.label = infoData.title || "";
+					map.infoWindow.label ="详细信息";
+					infoTemplate.data = infoData;
+					map.infoWindow.show(infoData.point);
+				}
+				else
+				{
+					map.infoWindow.hide();
+				}
+			}
+			
+		]]>
+	</fx:Script>
+
+	<viewer:WidgetTemplate id="wTemplate"
+					 closed="queryWidgetClosed()"
+					 open="queryWidgetOpened()">
+		<s:Group id="stateCoordinates"
+				 width="100%" height="90%"
+				 visible="false"
+				 visible.stateCoordinates="true"
+				 >
+			<mx:Form id="frmLocateCoords"
+					 verticalScrollPolicy="off"
+					 paddingBottom="0"
+					 width="100%"
+					 height="100%">
+				<mx:FormItem label="查询图层"
+							 styleName="WidgetText">
+					<mx:ComboBox id="textcbo"
+								 change="searchLayerChangedText()"/>
+				</mx:FormItem>
+				
+				<mx:FormItem label="关键字"
+							 styleName="WidgetText">
+					<mx:TextInput id="txtSearch"
+								  text=""
+								  maxChars="30"/>
+				</mx:FormItem>
+				
+				<mx:Label id="texttiplb"
+						  styleName="WidgetText"/>
+				
+				<mx:HBox horizontalAlign="center"
+						 width="100%">
+					<mx:Button label="查询"
+							   icon="{Search}"
+							   click="textQuery()"/>
+					
+					<mx:Button label="清除"
+							   icon="{Clear}"
+							   click="clear()"/>
+				</mx:HBox>
+			</mx:Form>
+		</s:Group>
+		<s:Group id="stateAddress"
+				 width="100%" height="90%"
+				 visible="false"
+				 visible.stateAddress="true"
+				 >
+			<s:layout>
+				<s:VerticalLayout gap="1"/>
+			</s:layout>
+				<s:HGroup>
+					<mx:Label text="{layerLabel}"
+							  styleName="WidgetText"/>
+
+					<mx:ComboBox id="graphicalcbo"
+								 change="searchLayerChangedGraphical()">
+					</mx:ComboBox>
+				</s:HGroup>
+
+				<mx:Label id="graphicallb"
+						  styleName="WidgetText"/>
+
+				<s:HGroup verticalAlign="middle">
+					<mx:Image source="assets/images/icons/s_polygon.png"
+							  click="{polygonQuery(DrawTool.POLYGON)}"
+							  useHandCursor="true"
+							  buttonMode="true"
+							  toolTip="多边形"
+							  width="32"
+							  height="32"/>
+
+					<mx:Image source="assets/images/icons/s_circle.png"
+							  click="{polygonQuery('CIRCLE')}"
+							  useHandCursor="true"
+							  buttonMode="true"
+							  toolTip="圆选"
+							  width="32"
+							  height="32"/>
+
+					<mx:TextInput id="bufferRadius_txt"
+								  text=""
+								  restrict="0-9\."
+								  width="80"
+								  maxChars="10"
+								  enter="radiusTuning()"/>
+
+					<mx:Text text="米"
+							 styleName="WidgetText"/>
+
+					<mx:Button label="微调半径"
+							   click="radiusTuning()"/>
+				</s:HGroup>
+
+				<mx:Button label="清除"
+						   icon="{Clear}"
+						   click="clear()"/>
+			</s:Group>
+
+			
+		<s:Group id="stateResults"
+				 width="100%" height="100%"
+				 visible="false"
+				 visible.stateResults="true"
+				 >
+			<s:layout>
+				<s:VerticalLayout gap="1"/>
+			</s:layout>
+				<s:HGroup id="boxMessage"
+						 visible="{msgVisible}"
+						 includeInLayout="{msgVisible}"
+						 width="100%"
+						 paddingLeft="15"
+						 paddingTop="15">
+					<mx:SWFLoader id="swfMessage"
+								  source="assets/flash/loader.swf"/>
+
+					<s:Label id="txtMessage"
+							 text="正在查询..."
+							 styleName="WidgetText"
+							 width="90%"/>
+				</s:HGroup>
+
+				<s:VGroup width="100%" height="100%">
+					<mx:DataGrid id="queryDataGrid" 
+								 width="100%"
+								 height="95%"
+								 headerStyleName="DataGridHeader"
+								 chromeColor="0xBCE1E9"
+								 itemClick="dataGridClick(event)" 
+								 itemRollOut="dataGridRollOut(event)" 
+								 itemRollOver="dataGridRollOver(event)"
+								 rowHeight="25"
+								 visible="{gridVisible}">
+						<mx:columns>
+								<mx:DataGridColumn dataField="title" headerText="单位名称"/>
+								<mx:DataGridColumn dataField="content" headerText="信息"/>
+						</mx:columns>
+					</mx:DataGrid>
+					
+					<mx:LinkButton label="导出EXCEL"
+								   color="0x000000"
+								   click="loadDGInExcel(queryDataGrid,excelURL)"
+								   visible="{gridVisible}"
+								   includeInLayout="{gridVisible}"/>
+				</s:VGroup>
+			</s:Group>
+	</viewer:WidgetTemplate>
+	<fx:Declarations>
+		<circle:CustomDraw id="circleTool"
+					   drawStart="drawStartHandler(event)"
+					   drawEnd="drawEnd(event)">
+		</circle:CustomDraw>
+	</fx:Declarations>
+</viewer:BaseWidget>

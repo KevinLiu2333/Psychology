@@ -1,0 +1,26 @@
+<chart caption='$!chartName' shownames='1' showvalues='0' decimals='0' baseFont='����' formatNumberScale='0' baseFontSize='12'>
+<categories>
+#foreach( $categoryData in $chartDataList)
+<category label='$!categoryData.get($xGroup)' />
+#end
+</categories>
+#foreach( $ygroup in $yGroupsArray)
+<dataset seriesName='$yAxisNameMap.get($ygroup)'  showValues='0'>
+#foreach( $chartData in $chartDataList)
+#if($drillType =='0')
+<set value='$!chartData.get($ygroup)' />
+#else
+<set value='$!chartData.get($ygroup)' link='javascript:drillURL(\"$!linkMap.get($!chartData.get($xGroup))\")' />
+#end
+#end
+</dataset>
+#end
+<styles>                
+<definition> 
+<style name='captionFont' type='font' size='18'/>
+</definition>
+<application>
+<apply toObject='CAPTION' styles='captionFont' />
+</application>
+</styles>
+</chart>

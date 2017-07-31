@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BaseWidget xmlns="com.esri.viewer.*" 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	xmlns:tools="com.wonders.swipe.*"
+	widgetConfigLoaded	="init()">
+	<mx:Script>
+		<![CDATA[
+			import com.esri.ags.layers.ArcGISDynamicMapServiceLayer;
+			import com.esri.ags.layers.ArcGISTiledMapServiceLayer;
+			import com.esri.ags.layers.GraphicsLayer;
+			import com.esri.ags.layers.Layer;
+			import com.esri.viewer.utils.UrlUtil;
+			import mx.collections.ArrayCollection;
+			import mx.collections.ArrayList;
+			import mx.core.INavigatorContent;
+			import mx.events.FlexEvent;
+			import mx.events.ListEvent;	
+			import com.esri.viewer.utils.UtilsClass;
+			[Bindable]
+			private var activeLayer:Layer;
+			[Bindable]
+			private var layerIDArray:Array = new Array();
+			private var typeStr:String;
+			private const ICON_URL:String =UrlUtil.URL_DOMAIN + "assets/images/icons/";
+			
+			[Bindable]
+			private var baseLayerArrList:ArrayList=new ArrayList;
+			[Bindable]
+			private var shadowLayerArrList:ArrayList=new ArrayList;
+			
+			[Bindable]
+			private var shadowIndex:int=0;
+			[Bindable]
+			private var baseIndex:int=0;
+			
+			private var baseTileLayer:ArcGISTiledMapServiceLayer;
+			private var baseDynamicLayer:ArcGISDynamicMapServiceLayer;
+			private var shadowTileLayer:ArcGISTiledMapServiceLayer;
+			private var shadowDynamicLayer:ArcGISDynamicMapServiceLayer;
+			private var shadowObject:Object=new Object;
+			private var baseObject:Object=new Object;
+			private function init():void
+			{
+				
+				if (configXML)
+				{
+					baseLayerArrList.removeAll();
+					shadowLayerArrList.removeAll();
+					var layerList:XMLList= configXML.activeLayer.mapservice;
+					for (var j:Number=0; j < layerList.length(); j++)
+					{
+						var layerXML:XML=layerList[j] as XML;
+						var type:String=layerXML.@type;
+						var label:String=layerXML.@label;
+						var layerService:String=gisdata_UrlROOT + layerXML.toString();
+//						var layerService:String=layerXML.toString();
+
+						var obj:Object=new Object;
+						switch(type.toLowerCase())
+						{
+							case "tiled":
+							{
+								var tiledLayer:ArcGISTiledMapServiceLayer = new ArcGISTiledMapServiceLayer(layerService);
+//								if(j==0)
+//								{
+//									tiledLayer.alpha=0.4;
+//								}
+								obj.label=label;
+								obj.layer=tiledLayer;
+								baseLayerArrList.addItem(obj);
+								shadowLayerArrList.addItem(obj);
+//								activeLayer = tiledLayer;
+							}
+								break;
+							case "dynamic":
+							{
+								var dynamicLayer:ArcGISDynamicMapServiceLayer = new ArcGISDynamicMapServiceLayer(layerService);
+								obj.label=label;
+								obj.layer=tiledLayer;
+								baseLayerArrList.addItem(obj);
+								shadowLayerArrList.addItem(obj);
+//								activeLayer = dynamicLayer;
+							}
+								break;
+							default:
+								break;
+						}
+					}
+				}
+				shadowLayerArrList=UtilsClass.sortArrayList("label",shadowLayerArrList);
+				baseLayerArrList=UtilsClass.sortArrayList("label",baseLayerArrList);
+				if(baseLayerArrList.source[baseLayerArrList.length-1].layer is ArcGISTiledMapServiceLayer)
+				{
+					baseTileLayer=baseLayerArrList.source[baseLayerArrList.length-1].layer;
+				}
+				else if(baseLayerArrList.source[baseLayerArrList.length-1].layer is ArcGISDynamicMapServiceLayer)
+				{
+					baseDynamicLayer=baseLayerArrList.source[baseLayerArrList.length-1].layer;
+				}
+				if(shadowLayerArrList.source[shadowLayerArrList.length-2].layer is ArcGISTiledMapServiceLayer)
+				{
+					shadowTileLayer=shadowLayerArrList.source[shadowLayerArrList.length-2].layer ;
+				}
+				else if(shadowLayerArrList.source[shadowLayerArrList.length-2].layer is ArcGISDynamicMapServiceLayer)
+				{
+					shadowDynamicLayer=shadowLayerArrList.source[shadowLayerArrList.length-2].layer;
+				}
+				shadowObject=shadowLayerArrList.source[shadowLayerArrList.length-2];
+				baseObject=baseLayerArrList.source[baseLayerArrList.length-1];
+				baseIndex=baseLayerArrList.length-1;
+				shadowIndex=baseLayerArrList.length-2;
+				map.addLayer(baseLayerArrList.source[baseLayerArrList.length-1].layer);
+				map.addLayer(shadowLayerArrList.source[shadowLayerArrList.length-2].layer);
+				activeLayer=shadowLayerArrList.source[shadowLayerArrList.length-2].layer;
+//				shadowLayerArrList.removeItemAt(shadowLayerArrList.length-1);
+//				baseLayerArrList.removeItemAt(baseLayerArrList.length-2);
+				wTemplate.addTitlebarButton(ICON_URL + "swipe1.png", "卷帘", showSwipeTool);
+				wTemplate.addTitlebarButton(ICON_URL + "spotlight1.png", "聚光灯", showSpotlightTool);
+			}
+		    private function onToggleSwipeTool( activate:Boolean ):void
+			{
+				setMapAction(null, null, null,null);
+				if (activate) {
+					spotlight.deactivate();
+				//	spotlightButton.selected = false;
+					swipe.activate();
+				} else {
+					swipe.deactivate();
+				}
+			}
+			
+			private function onToggleSpotlightTool( activate:Boolean ):void
+			{
+				setMapAction(null, null, null,null);
+				if (activate) {
+					swipe.deactivate();
+				//	swipeButton.selected = false;
+					spotlight.activate();
+				} else {
+					spotlight.deactivate();
+				}
+			}
+			private function clear():void
+			{
+				swipe.deactivate();
+				spotlight.deactivate();
+//				if(baseTileLayer)
+//				{
+//					map.removeLayer(baseTileLayer);
+//				}else if(baseDynamicLayer)
+//				{
+//					map.removeLayer(baseDynamicLayer);
+//
+//				}
+//				if(shadowTileLayer)
+//				{
+//					map.removeLayer(shadowTileLayer);
+//
+//				}else 	if(shadowDynamicLayer)
+//				{
+//					map.removeLayer(shadowDynamicLayer);
+//
+//				}
+			}
+			private function showSwipeTool():void
+			{
+				viewStack.selectedIndex=0;
+				wTemplate.selectedTitlebarButtonIndex=1;
+				wTemplate.widgetTitle="卷帘";
+				roller.addChild(layerVbox);
+			}				
+						
+			private function showSpotlightTool():void
+			{
+				viewStack.selectedIndex=1;
+				wTemplate.selectedTitlebarButtonIndex=2;
+				wTemplate.widgetTitle="聚光灯";
+				lamp.addChild(layerVbox);
+			}			
+			private function widgetClosedHandler(event:Event):void
+			{
+				//graphicsLayer.visible = false;
+				setMapNavigation(null, null);
+				setMapAction(null, null, null,null);
+				clear();
+				activeLayer.visible = false;
+				if(shadowTileLayer)
+				{
+				   shadowTileLayer.visible=false;
+				}
+				if(shadowDynamicLayer)
+				{
+					shadowDynamicLayer.visible=false;
+				}
+				if(baseTileLayer)
+				{
+					baseTileLayer.visible=false;
+				}
+				if(baseDynamicLayer)
+				{
+					baseDynamicLayer.visible=false;
+				}
+			}
+						
+			private function widgetOpenedHandler(event:Event):void
+			{	
+			//	graphicsLayer.visible = true;
+				if(activeLayer)
+				{
+					activeLayer.visible = true;
+				}
+				if(baseTileLayer)
+				{
+					baseTileLayer.visible=true;
+					map.addLayer(baseTileLayer);
+				}
+				else if(baseDynamicLayer)
+				{
+					baseDynamicLayer.visible=true;
+					map.addLayer(baseDynamicLayer);
+					
+				}
+				
+				if(shadowTileLayer)
+				{
+					shadowTileLayer.visible=true;
+					map.addLayer(shadowTileLayer);
+					
+				}else if(shadowDynamicLayer)
+				{
+					shadowDynamicLayer.visible=true;
+					map.addLayer(shadowDynamicLayer);
+					
+				}
+				setMapNavigation(null, null);
+				setMapAction(null, null, null,null);
+			}
+
+
+			protected function baseLayer_changeHandler(event:ListEvent):void
+			{
+				// TODO Auto-generated method stub
+				if(baseObject.layer is ArcGISTiledMapServiceLayer)
+				{
+					baseTileLayer=baseObject.layer;
+					map.removeLayer(baseTileLayer);
+				}
+				else if(baseObject.layer is ArcGISDynamicMapServiceLayer)
+				{
+					baseDynamicLayer=baseObject.layer;
+					map.removeLayer(baseDynamicLayer);
+				}
+//				shadowLayerArrList.addItem(baseObject);
+//				shadowLayerArrList.removeItem(baseLayer.selectedItem);
+//				shadowLayerArrList=UtilsClass.sortArrayList("label",shadowLayerArrList);
+				baseObject=baseLayerComB.selectedItem;
+				if(baseObject.layer is ArcGISTiledMapServiceLayer)
+				{
+					baseTileLayer=baseObject.layer;
+					baseDynamicLayer=null;
+					map.removeLayer(shadowTileLayer);
+					map.addLayer(baseTileLayer);
+					map.addLayer(shadowTileLayer);
+				}
+				else if(baseObject.layer is ArcGISDynamicMapServiceLayer)
+				{
+					baseDynamicLayer=baseObject.layer;
+					baseTileLayer=null;
+					map.removeLayer(shadowDynamicLayer);
+					map.addLayer(baseDynamicLayer);
+					map.addLayer(shadowDynamicLayer);
+				}
+			}
+
+
+			protected function shadowLayer_changeHandler(event:ListEvent):void
+			{
+				// TODO Auto-generated method stub
+				if(shadowObject.layer is ArcGISTiledMapServiceLayer)
+				{
+					shadowTileLayer=shadowObject.layer ;
+					map.removeLayer(shadowTileLayer);
+				}
+				else if(shadowObject.layer is ArcGISDynamicMapServiceLayer)
+				{
+					shadowDynamicLayer=shadowObject.layer;
+					map.removeLayer(shadowDynamicLayer);
+				}
+//				baseLayerArrList.addItem(shadowObject);
+//				baseLayerArrList.removeItem(shadowLayer.selectedItem);
+				shadowObject=shadowLayerComB.selectedItem;
+//				baseLayerArrList=UtilsClass.sortArrayList("label",baseLayerArrList);
+				if(shadowObject.layer is ArcGISTiledMapServiceLayer)
+				{
+					shadowTileLayer=shadowObject.layer ;
+					shadowDynamicLayer=null;
+					activeLayer=shadowObject.layer;
+					map.addLayer(baseTileLayer);
+					map.addLayer(shadowTileLayer);
+				}
+				else if(shadowObject.layer is ArcGISDynamicMapServiceLayer)
+				{
+					shadowDynamicLayer=shadowObject.layer;
+					shadowTileLayer=null;
+					activeLayer=shadowObject.layer;
+					map.addLayer(baseDynamicLayer);
+					map.addLayer(shadowDynamicLayer);
+				}
+			}
+
+		]]>
+	</mx:Script>
+	<tools:SwipeTool id="swipe" map="{map}" layer="{activeLayer}"/>
+	<tools:SpotlightTool id="spotlight" map="{map}" layer="{activeLayer}"  radius="{spotlightRadius.value}"/>
+	<WidgetTemplate id="wTemplate"   closed="widgetClosedHandler(event)" open="widgetOpenedHandler(event)">  
+		<mx:ViewStack id="viewStack" width="100%" height="100%" creationPolicy="all">
+			<mx:VBox  id="roller" width="100%" height="100%" verticalGap="30" paddingTop="40" horizontalAlign="center">
+				<mx:HBox horizontalAlign="center" width="100%" horizontalGap="8">
+				<mx:Image click="onToggleSwipeTool(true)" source="assets/images/icons/swipe.png" useHandCursor="true" buttonMode="true" toolTip="卷帘" width="40" height="40"/>	
+					<mx:Image click="clear()" source="assets/images/icons/i_clear.png" useHandCursor="true" buttonMode="true" toolTip="释放当前工具" width="40" height="40"/>
+				</mx:HBox>	
+				<mx:VBox id="layerVbox" horizontalAlign="center">
+					<mx:HBox width="100%" visible="true">
+						<mx:Label text="底图层："/>
+						<mx:ComboBox id="baseLayerComB" dataProvider="{baseLayerArrList}" change="baseLayer_changeHandler(event)"  selectedIndex="{baseIndex}"  width="150">
+						</mx:ComboBox>
+					</mx:HBox>
+					<mx:HBox width="100%" visible="true">
+						<mx:Label text="遮罩层："/>
+						<mx:ComboBox  id="shadowLayerComB" dataProvider="{shadowLayerArrList}"  change="shadowLayer_changeHandler(event)" selectedIndex="{shadowIndex}" width="150">
+						</mx:ComboBox>
+					</mx:HBox>
+				</mx:VBox>
+			</mx:VBox>				
+			<mx:VBox id="lamp" width="100%" height="100%" verticalGap="15" paddingTop="20" horizontalAlign="center">
+				<mx:HBox horizontalAlign="center" width="100%" horizontalGap="8">
+					<mx:Label text="聚光灯半径:"  styleName="WidgetText"/>
+					<mx:Label text="{spotlightRadius.value}" width="30" styleName="WidgetText"/>
+					<mx:HSlider id="spotlightRadius" minimum="25" maximum="200" width="150" value="75" snapInterval="25" tickInterval="25" liveDragging="true" showDataTip="false"/>
+				</mx:HBox>
+				<mx:HBox  horizontalAlign="center" width="100%" horizontalGap="8">	
+					<mx:Image click="onToggleSpotlightTool(true)" source="assets/images/icons/spotlight.png" useHandCursor="true" buttonMode="true" toolTip="聚光灯" width="40" height="40"/>							
+					<mx:Image click="clear()" source="assets/images/icons/i_clear.png" useHandCursor="true" buttonMode="true" toolTip="释放当前工具" width="40" height="40"/>
+				</mx:HBox>
+			</mx:VBox>
+		</mx:ViewStack>
+	</WidgetTemplate>
+</BaseWidget>

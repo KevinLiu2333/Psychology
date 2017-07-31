@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/201001/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/pzgl/entity
+END
+TableConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/180438/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/pzgl/entity/TableConfig.java
+END
+Dic.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/180438/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/pzgl/entity/Dic.java
+END
+ColRelationConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/180438/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/pzgl/entity/ColRelationConfig.java
+END
+QueryConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/180438/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/pzgl/entity/QueryConfig.java
+END
+QueryCon.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/180438/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/pzgl/entity/QueryCon.java
+END
+PsAccountBookTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/180438/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/pzgl/entity/PsAccountBookTask.java
+END
+ColumnConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/180438/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/pzgl/entity/ColumnConfig.java
+END
+FormConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/180438/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/pzgl/entity/FormConfig.java
+END
+DwLog.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/201001/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/pzgl/entity/DwLog.java
+END

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<queyRange>55</queyRange>
+	<layers>
+		<xgfw_count>
+			<url>/PDGT_Index/servlet/GetOracleCountData</url>
+			<table>C405_FYJD</table>
+			<column>CGH</column>
+		</xgfw_count>
+		<extentLayer>
+			<name>基地图层</name>
+			<url>arcgis/rest/services/dynamic_pdgt2012/MapServer/55</url>
+			<fields>CGH,MISNAME,MISID</fields>
+			<fieldsCN>测绘成果号,基地名称,基地ID</fieldsCN>
+			<linkURL>/pdgtdbc/common/gisRedirect.jsp?funId=Ei&misid=</linkURL>
+		</extentLayer>
+	</layers>
+</configuration>

@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<configuration>
+    <title>松江数据中心地理信息系统</title>
+    <subtitle></subtitle>
+    <copyright>版权所有 松江数据区   万达信息股份有限公司 </copyright>
+    <labels>
+    	<titlelabel>标题</titlelabel>
+    	<subtitlelabel>副标题</subtitlelabel>
+    	<submitlabel>打印</submitlabel>
+    </labels>
+</configuration>

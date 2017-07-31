@@ -1,0 +1,2120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<viewer:BaseWidget xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" 
+				   xmlns:esri="http://www.esri.com/2008/ags"
+				   xmlns:viewer="com.esri.viewer.*" 
+				   xmlns:circle="com.wonders.circle.*"
+				   layout="absolute"
+				   widgetConfigLoaded="init(event)">
+	<viewer:states>
+		<s:State name="spquery"  />
+		<s:State name="queryResult"  />
+		<s:State name="infomationResult"  />
+		<s:State name="informationDK"  />
+		<s:State name="projectVbox"  />
+	</viewer:states>
+	<viewer:transitions>
+		<s:Transition autoReverse="true" toState="*">
+			<s:Fade targets="{[spquery,queryResult,infomationResult,informationDK,projectVbox]}" />
+		</s:Transition>
+	</viewer:transitions>
+	<fx:Script>
+		<![CDATA[
+			import com.adobe.serialization.json.JSON;
+			import com.esri.ags.FeatureSet;
+			import com.esri.ags.Graphic;
+			import com.esri.ags.SpatialReference;
+			import com.esri.ags.events.DrawEvent;
+			import com.esri.ags.events.GeometryServiceEvent;
+			import com.esri.ags.geometry.Geometry;
+			import com.esri.ags.geometry.MapPoint;
+			import com.esri.ags.geometry.Multipoint;
+			import com.esri.ags.geometry.Polygon;
+			import com.esri.ags.geometry.Polyline;
+			import com.esri.ags.layers.ArcGISDynamicMapServiceLayer;
+			import com.esri.ags.layers.GraphicsLayer;
+			import com.esri.ags.symbols.SimpleFillSymbol;
+			import com.esri.ags.symbols.SimpleLineSymbol;
+			import com.esri.ags.symbols.SimpleMarkerSymbol;
+			import com.esri.ags.symbols.TextSymbol;
+			import com.esri.ags.tasks.GeometryService;
+			import com.esri.ags.tasks.QueryTask;
+			import com.esri.ags.tasks.supportClasses.BufferParameters;
+			import com.esri.ags.tasks.supportClasses.Query;
+			import com.esri.ags.tools.DrawTool;
+			import com.esri.ags.tools.NavigationTool;
+			import com.esri.viewer.utils.Hashtable;
+			import com.esri.viewer.utils.UtilsClass;
+			
+			import mx.collections.ArrayCollection;
+			import mx.collections.Sort;
+			import mx.collections.SortField;
+			import mx.controls.Alert;
+			import mx.core.UIComponent;
+			import mx.events.EffectEvent;
+			import mx.events.ListEvent;
+			import mx.formatters.DateFormatter;
+			import mx.managers.CursorManager;
+			import mx.rpc.AsyncResponder;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			import mx.rpc.http.HTTPService;
+			
+			import org.osmf.layout.AbsoluteLayoutFacet;
+			
+			import widgets.InfoTemplates.InfoPopupWidget;
+			import widgets.Query.DKSymbol;
+			import widgets.Query.FWSymbol;
+			
+			private var geomService:GeometryService;
+			private var geometryserviceURL:String;
+			private var xmlTree:XML;
+			[Bindable]
+			[Embed(source="assets/images/icons/i_redclear.png")]
+			public var Clear:Class;
+			[Bindable]
+			[Embed(source="assets/images/icons/i_query.png")]
+			public var Search:Class;
+			[Bindable]
+			[Embed(source="assets/images/icons/i_dk_information1.png")]
+			public var Information:Class;
+			[Bindable]
+			private var msgVisible:Boolean=false;
+			[Bindable]
+			private var tree_msgVisible:Boolean=false;
+			[Bindable]
+			private var tree_visible:Boolean=false;
+			[Bindable]
+			private var dk_msgVisible:Boolean=false;
+			[Bindable]
+			private var gridVisible:Boolean=false;
+			[Bindable]
+			private var dk_gridVisible:Boolean=false;
+			//存放layer的相关信息，如url，field等
+			private var layerArrCol:ArrayCollection=new ArrayCollection;
+			private var graphicsLayer:GraphicsLayer;
+			private var xgLayer:GraphicsLayer;
+			private var textGraphicsLayer:GraphicsLayer;
+			
+			private var objLayer:Object;
+			private var resultArrCol:ArrayCollection=new ArrayCollection;
+			private var smsPoint:SimpleMarkerSymbol = new SimpleMarkerSymbol("circle", 15, 0xff0000);
+			
+			private var polygonGeometry:Polygon=new Polygon;
+			private var lys:ArcGISDynamicMapServiceLayer;
+			private var attributesServlet:String;
+			private var extentFields:String;
+			private var dklayerName:String;
+			private var areaUrl:String;
+			private var areaExpression:String;
+			private var areaGraphicalsearchlabel:String;
+			private var areaFields:String;
+			private var areaTitlefield:String;
+			private var areaLinkfield:String;
+			private var areaIcon:String;
+			private var dktitleField:String;
+			private var extentFieldsCNStr:String;
+			private var dkextentFieldsCNStr:String;
+			private var resultFWFieldsCN:Array;
+			private var resultDKFieldsCN:Array;
+			private var resultFWFields:Array;
+			private var resultDKFields:Array;
+			[Bindable]
+			private var titleString:String="规划名称";
+			[Bindable]
+			private var dataFieldName:String="";
+			
+			[Bindable]
+			[Embed(source="assets/images/icons/i_back.png")]
+			public var Back:Class;
+			
+			[Bindable]
+			private var infoFieldName:String="";
+			private var dkGraphicsLayer:GraphicsLayer;
+			private var layerName:String="";
+			[Bindable]
+			private var fieldVisible:Boolean=true;
+			//新加的土地查询下的几个功能
+			[Bindable]
+			private var newTitleString:String="用途描述";
+			[Bindable]
+			private var newDataFieldName:String="";
+			[Bindable]
+			private var newFieldVisible:Boolean=false;
+			[Bindable]
+			private var newLinkFieldVisible:Boolean=false;
+			
+			private var wTitle:String="";
+			private var linkUrl:String;
+			// 默认点查操作半径
+			private var pointWidth:String = "500";
+			protected function init(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				if(configXML)
+				{
+					graphicsLayer=new GraphicsLayer();
+					xgLayer=new GraphicsLayer();
+					xgLayer.addEventListener(MouseEvent.CLICK,mouseClickGraphic);
+					dkGraphicsLayer=new GraphicsLayer;
+					dkGraphicsLayer.addEventListener(MouseEvent.CLICK,mouseClickGraphic);
+					map.addLayer(graphicsLayer);
+					map.addLayer(xgLayer);
+					map.addLayer(dkGraphicsLayer);
+					textGraphicsLayer=new GraphicsLayer;
+					textGraphicsLayer.minScale= 4100 ;
+					map.addLayer(textGraphicsLayer);
+					glowLayer.addEventListener(MouseEvent.CLICK,mouseClickGraphic);
+					map.addLayer(glowLayer);
+					objLayer=new Object;
+					objLayer.layerName = configXML.layers.dyghLayer.extentLayer.name;
+					objLayer.orderField = configXML.layers.dyghLayer.extentLayer.order;
+					objLayer.extentUrl=configData.gisdata_UrlROOT + configXML.layers.dyghLayer.extentLayer.url;
+					objLayer.extentExpression = configXML.layers.dyghLayer.extentLayer.expression;
+					objLayer.extentFields=configXML.layers.dyghLayer.extentLayer.fields;
+					objLayer.extentFieldsCN=configXML.layers.dyghLayer.extentLayer.fieldsCN;
+					objLayer.extentTitlefield=configXML.layers.dyghLayer.extentLayer.titlefield;
+					
+					objLayer.dklayerName = configXML.layers.dyghLayer.areaLayer.name;
+					objLayer.dkextentUrl=configData.gisdata_UrlROOT + configXML.layers.dyghLayer.areaLayer.url;
+					objLayer.dkextentExpression = configXML.layers.dyghLayer.areaLayer.expression;
+					objLayer.dkextentFields=configXML.layers.dyghLayer.areaLayer.fields;
+					objLayer.dkextentFieldsCN=configXML.layers.dyghLayer.areaLayer.fieldsCN;
+					objLayer.dktitleField=configXML.layers.dyghLayer.areaLayer.titlefield;
+					layerArrCol.addItem(objLayer);
+					
+					objLayer=new Object;
+					objLayer.layerName = configXML.layers.fqghLayer.extentLayer.name;
+					objLayer.orderField = configXML.layers.fqghLayer.extentLayer.order;
+					objLayer.extentUrl=configData.gisdata_UrlROOT + configXML.layers.fqghLayer.extentLayer.url;
+					objLayer.extentExpression = configXML.layers.fqghLayer.extentLayer.expression;
+					objLayer.extentFields=configXML.layers.fqghLayer.extentLayer.fields;
+					objLayer.extentFieldsCN=configXML.layers.fqghLayer.extentLayer.fieldsCN;
+					objLayer.extentTitlefield=configXML.layers.fqghLayer.extentLayer.titlefield;
+					
+					objLayer.dklayerName = configXML.layers.fqghLayer.areaLayer.name;
+					objLayer.dkextentUrl=configData.gisdata_UrlROOT + configXML.layers.fqghLayer.areaLayer.url;
+					objLayer.dkextentExpression = configXML.layers.fqghLayer.areaLayer.expression;
+					objLayer.dkextentFields=configXML.layers.fqghLayer.areaLayer.fields;
+					objLayer.dkextentFieldsCN=configXML.layers.fqghLayer.areaLayer.fieldsCN;
+					objLayer.dktitleField=configXML.layers.fqghLayer.areaLayer.titlefield;
+					
+					layerArrCol.addItem(objLayer);
+					
+					objLayer=new Object;
+					objLayer.layerName = configXML.layers.xxghLayer.extentLayer.name;
+					objLayer.orderField = configXML.layers.xxghLayer.extentLayer.order;	
+					objLayer.extentUrl=configData.gisdata_UrlROOT + configXML.layers.xxghLayer.extentLayer.url;
+					objLayer.extentExpression = configXML.layers.xxghLayer.extentLayer.expression;
+					objLayer.extentFields=configXML.layers.xxghLayer.extentLayer.fields;
+					objLayer.extentFieldsCN=configXML.layers.xxghLayer.extentLayer.fieldsCN;
+					objLayer.extentTitlefield=configXML.layers.xxghLayer.extentLayer.titlefield;
+					
+					objLayer.dklayerName = configXML.layers.xxghLayer.areaLayer.name;
+					objLayer.dkextentUrl=configData.gisdata_UrlROOT + configXML.layers.xxghLayer.areaLayer.url;
+					objLayer.dkextentExpression = configXML.layers.xxghLayer.areaLayer.expression;
+					objLayer.dkextentFields=configXML.layers.xxghLayer.areaLayer.fields;
+					objLayer.dkextentFieldsCN=configXML.layers.xxghLayer.areaLayer.fieldsCN;
+					objLayer.dktitleField=configXML.layers.xxghLayer.areaLayer.titlefield;
+					layerArrCol.addItem(objLayer);
+					
+					objLayer=new Object;
+					objLayer.layerName = configXML.layers.ztghLayer.extentLayer.name;
+					objLayer.orderField = configXML.layers.ztghLayer.extentLayer.order;	
+					objLayer.extentUrl=configData.gisdata_UrlROOT + configXML.layers.ztghLayer.extentLayer.url;
+					objLayer.extentExpression = configXML.layers.ztghLayer.extentLayer.expression;
+					objLayer.extentFields=configXML.layers.ztghLayer.extentLayer.fields;
+					objLayer.extentFieldsCN=configXML.layers.ztghLayer.extentLayer.fieldsCN;
+					objLayer.extentTitlefield=configXML.layers.ztghLayer.extentLayer.titlefield;
+					
+					objLayer.dklayerName = configXML.layers.ztghLayer.areaLayer.name;
+					objLayer.dkextentUrl=configData.gisdata_UrlROOT + configXML.layers.ztghLayer.areaLayer.url;
+					objLayer.dkextentExpression = configXML.layers.ztghLayer.areaLayer.expression;
+					objLayer.dkextentFields=configXML.layers.ztghLayer.areaLayer.fields;
+					objLayer.dkextentFieldsCN=configXML.layers.ztghLayer.areaLayer.fieldsCN;
+					objLayer.dktitleField=configXML.layers.ztghLayer.areaLayer.titlefield;
+					layerArrCol.addItem(objLayer);
+					
+					objLayer=new Object;
+					objLayer.layerName=configXML.layers.xzfwLayer.extentLayer.name;
+					objLayer.orderField = configXML.layers.xzfwLayer.extentLayer.order;	
+					objLayer.extentUrl=configData.gisdata_UrlROOT + configXML.layers.xzfwLayer.extentLayer.url;
+					objLayer.extentExpression = configXML.layers.xzfwLayer.extentLayer.expression;
+					objLayer.extentFields=configXML.layers.xzfwLayer.extentLayer.fields;
+					objLayer.extentFieldsCN=configXML.layers.xzfwLayer.extentLayer.fieldsCN;
+					objLayer.extentTitlefield=configXML.layers.xzfwLayer.extentLayer.titlefield;
+					
+					objLayer.url=configXML.layers.xzfwLayer.infodata.url;
+					objLayer.table=configXML.layers.xzfwLayer.infodata.table;
+					objLayer.fields=configXML.layers.xzfwLayer.infodata.fields;
+					objLayer.fieldsCN=configXML.layers.xzfwLayer.infodata.fieldsCN;
+					objLayer.dateFieldName="DOC_DATE";
+					layerArrCol.addItem(objLayer);
+					
+					objLayer=new Object;
+					objLayer.layerName=configXML.layers.gcfwLayer.extentLayer.name;
+					objLayer.orderField = configXML.layers.gcfwLayer.extentLayer.order;	
+					objLayer.extentUrl=configData.gisdata_UrlROOT + configXML.layers.gcfwLayer.extentLayer.url;
+					objLayer.extentExpression = configXML.layers.gcfwLayer.extentLayer.expression;
+					objLayer.extentFields=configXML.layers.gcfwLayer.extentLayer.fields;
+					objLayer.extentFieldsCN=configXML.layers.gcfwLayer.extentLayer.fieldsCN;
+					objLayer.extentTitlefield=configXML.layers.gcfwLayer.extentLayer.titlefield;
+					
+					objLayer.url=configXML.layers.gcfwLayer.infodata.url;
+					objLayer.table=configXML.layers.gcfwLayer.infodata.table;
+					objLayer.fields=configXML.layers.gcfwLayer.infodata.fields;
+					objLayer.fieldsCN=configXML.layers.gcfwLayer.infodata.fieldsCN;
+					objLayer.dateFieldName="APPROVE_DATE";
+					layerArrCol.addItem(objLayer);
+					
+					objLayer=new Object;
+					objLayer.layerName=configXML.layers.ydfwLayer.extentLayer.name;
+					objLayer.orderField = configXML.layers.ydfwLayer.extentLayer.order;	
+					objLayer.extentUrl=configData.gisdata_UrlROOT + configXML.layers.ydfwLayer.extentLayer.url;
+					objLayer.extentExpression = configXML.layers.ydfwLayer.extentLayer.expression;
+					objLayer.extentFields=configXML.layers.ydfwLayer.extentLayer.fields;
+					objLayer.extentFieldsCN=configXML.layers.ydfwLayer.extentLayer.fieldsCN;
+					objLayer.extentTitlefield=configXML.layers.ydfwLayer.extentLayer.titlefield;
+					
+					objLayer.url=configXML.layers.ydfwLayer.infodata.url;
+					objLayer.table=configXML.layers.ydfwLayer.infodata.table;
+					objLayer.fields=configXML.layers.ydfwLayer.infodata.fields;
+					objLayer.fieldsCN=configXML.layers.ydfwLayer.infodata.fieldsCN;
+					objLayer.dateFieldName="DOC_DATE";
+					layerArrCol.addItem(objLayer);
+					//增加权属信息
+					objLayer=new Object;
+					objLayer.layerName=configXML.layers.parcelLayer.extentLayer.name;
+					objLayer.orderField = configXML.layers.parcelLayer.extentLayer.order;	
+					objLayer.extentUrl=configData.gisdata_UrlROOT + configXML.layers.parcelLayer.extentLayer.url;
+					objLayer.extentExpression = configXML.layers.parcelLayer.extentLayer.expression;
+					objLayer.extentFields=configXML.layers.parcelLayer.extentLayer.fields;
+					objLayer.extentFieldsCN=configXML.layers.parcelLayer.extentLayer.fieldsCN;
+					objLayer.extentTitlefield=configXML.layers.parcelLayer.extentLayer.titlefield;
+					layerArrCol.addItem(objLayer);
+					//增加违法用地
+					objLayer=new Object;
+					objLayer.layerName=configXML.layers.wfLayer.extentLayer.name;
+					objLayer.orderField = configXML.layers.wfLayer.extentLayer.order;	
+					objLayer.extentUrl=configData.gisdata_UrlROOT + configXML.layers.wfLayer.extentLayer.url;
+					objLayer.extentExpression = configXML.layers.wfLayer.extentLayer.expression;
+					objLayer.extentFields=configXML.layers.wfLayer.extentLayer.fields;
+					objLayer.extentFieldsCN=configXML.layers.wfLayer.extentLayer.fieldsCN;
+					objLayer.extentTitlefield=configXML.layers.wfLayer.extentLayer.titlefield;
+					layerArrCol.addItem(objLayer);
+					//增加测绘成果
+					objLayer=new Object;
+					objLayer.layerName=configXML.layers.chLayer.extentLayer.name;
+					objLayer.orderField = configXML.layers.chLayer.extentLayer.order;	
+					objLayer.extentUrl=configData.gisdata_UrlROOT + configXML.layers.chLayer.extentLayer.url;
+					objLayer.extentExpression = configXML.layers.chLayer.extentLayer.expression;
+					objLayer.extentFields=configXML.layers.chLayer.extentLayer.fields;
+					objLayer.extentFieldsCN=configXML.layers.chLayer.extentLayer.fieldsCN;
+					objLayer.extentTitlefield=configXML.layers.chLayer.extentLayer.titlefield;
+					linkUrl=configData.project_UrlROOT+configXML.layers.chLayer.extentLayer.linkURL;
+					layerArrCol.addItem(objLayer);
+					//增加出让合同
+					objLayer=new Object;
+					objLayer.layerName=configXML.layers.crLayer.extentLayer.name;
+					objLayer.orderField = configXML.layers.crLayer.extentLayer.order;	
+					objLayer.extentUrl=configData.gisdata_UrlROOT + configXML.layers.crLayer.extentLayer.url;
+					objLayer.extentExpression = configXML.layers.crLayer.extentLayer.expression;
+					objLayer.extentFields=configXML.layers.crLayer.extentLayer.fields;
+					objLayer.extentFieldsCN=configXML.layers.crLayer.extentLayer.fieldsCN;
+					objLayer.extentTitlefield=configXML.layers.crLayer.extentLayer.titlefield;
+					linkUrl=configData.project_UrlROOT+configXML.layers.crLayer.extentLayer.linkURL;
+					layerArrCol.addItem(objLayer);
+					attributesServlet=configXML.attributesServlet;
+					pointWidth = configXML.pointWidth;
+				}
+				
+				//初始圆选工具
+				circleTool.map=map;
+				circleTool.graphicsLayer=graphicsLayer;
+				circleTool.displayRadius=false;
+				circleTool.displayCenter=true;
+				
+				//lys =map.layers[4] as ArcGISDynamicMapServiceLayer;
+				lys =map.getLayer("专业图层") as ArcGISDynamicMapServiceLayer;
+				
+				commenQueryWgt.addTitlebarButton(ICON_URL+"statistics.png","通用空间查询",showConditon);
+				commenQueryWgt.addTitlebarButton(ICON_URL+"setClass.png","通用查询结果",showQueryResult);
+				commenQueryWgt.addTitlebarButton(ICON_URL+"i_table.png","规划信息",showInfomationResult);
+				//初始化地块Symbol
+				DKSymbol.getInstance();
+				FWSymbol.getInstance();
+				polygonQuery('POINTCIRCLE');
+			}
+			private function showConditon():void
+			{
+				this.showInfoWindow(null);
+				this.currentState="spquery";
+				xgLayer.visible=false;
+				glowLayer.visible=false;
+				textGraphicsLayer.visible=false;
+				dkGraphicsLayer.visible=false;
+				commenQueryWgt.widgetTitle="空间查询";
+				commenQueryWgt.selectedTitlebarButtonIndex=0;
+			}
+			private function showQueryResult():void
+			{
+				this.showInfoWindow(null);
+				this.currentState="queryResult";
+				xgLayer.visible=false;
+				glowLayer.visible=false;
+				textGraphicsLayer.visible=false;
+				dkGraphicsLayer.visible=false;
+				commenQueryWgt.widgetTitle="查询结果";
+				commenQueryWgt.selectedTitlebarButtonIndex=1;
+			}
+			private function showInfomationResult():void
+			{
+				this.showInfoWindow(null);
+				this.currentState="infomationResult";
+				xgLayer.visible=true;
+				glowLayer.visible=true;
+				textGraphicsLayer.visible=true;
+				
+				dkGraphicsLayer.visible=false;
+				commenQueryWgt.widgetTitle="通用查询结果";
+				commenQueryWgt.selectedTitlebarButtonIndex=2;
+			}
+			private function showProjectInfomation():void
+			{
+				this.showInfoWindow(null);
+				this.currentState="projectVbox";
+				xgLayer.visible=true;
+				glowLayer.visible=true;
+				
+				textGraphicsLayer.visible=true;
+				
+				dkGraphicsLayer.visible=false;
+				commenQueryWgt.widgetTitle="工程信息";
+				commenQueryWgt.selectedTitlebarButtonIndex=4;
+			}
+			private function showDKInfomation():void
+			{
+				this.showInfoWindow(null);
+				this.currentState="informationDK";
+				commenQueryWgt.selectedTitlebarButtonIndex=3;
+				xgLayer.visible=false;
+				textGraphicsLayer.visible=false;
+				glowLayer.visible=false;
+				
+				commenQueryWgt.widgetTitle="地块信息";
+				dkGraphicsLayer.visible=true;
+			}
+			private function createSearchResult():void
+			{
+				xmlTree.@isBranch=true;
+			}
+			
+			protected function commenQueryWgt_openHandler(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				if(graphicsLayer)
+				{
+					graphicsLayer.visible=true;
+				}
+				if(commenQueryWgt.selectedTitlebarButtonIndex==0)
+				{
+					if(graphicsLayer)
+					{
+						showConditon();
+					}
+					
+				}
+				else if(commenQueryWgt.selectedTitlebarButtonIndex==1)
+				{
+					if(graphicsLayer)
+					{
+						showQueryResult();
+					}
+				}
+				else if(commenQueryWgt.selectedTitlebarButtonIndex==2)
+				{
+					if(xgLayer)
+					{
+						showInfomationResult();
+					}
+				}
+				else if(commenQueryWgt.selectedTitlebarButtonIndex==3)
+				{
+					if(dkGraphicsLayer)
+					{
+						showDKInfomation();
+					}
+				}
+				
+				if(wTitle!="")
+				{
+					commenQueryWgt.widgetTitle=wTitle;
+				}
+				
+				polygonQuery('POINTCIRCLE');
+				if(graphicsLayer){
+					graphicsLayer.visible = true;
+				}
+				
+			}
+			
+			protected function commenQueryWgt_closedHandler(event:Event):void
+			{
+				circleTool.cancelClick();
+				// TODO Auto-generated method stub
+				if(graphicsLayer)
+				{
+					graphicsLayer.visible=false;
+				}
+				if(xgLayer)
+				{
+					glowLayer.visible=false;
+					xgLayer.visible=false;
+					textGraphicsLayer.visible=false;
+					
+				}
+				if(dkGraphicsLayer)
+				{
+					dkGraphicsLayer.visible=false;
+				}
+				setMapNavigation(NavigationTool.PAN, "漫游");
+				this.showInfoWindow(null);
+				
+				
+			}
+			
+			
+			private function polygonQuery(value:String):void
+			{
+			try{
+				map.infoWindow.hide();
+				graphicsLayer.clear();
+				xgLayer.clear();
+				glowLayer.clear();
+				textGraphicsLayer.clear();
+				
+				//初始化xml
+				xmlTree=<NODES />;
+				createSearchResult();
+				switch (value)
+				{
+					case DrawTool.POLYGON:
+					{
+						setMapAction(value, "多边形",new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID, 0x3FAFDC, 0.5, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, 0x3FAFDC, 1, 1)), drawEnd);
+						break;
+					}
+					case DrawTool.EXTENT:
+					{
+						setMapAction(value, "框选", new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID, 0x3FAFDC, 0.5, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, 0x3FAFDC, 1, 1)), drawEnd);
+						break;
+					}
+					case "POINTCIRCLE":
+					{
+						setMapAction(value, "圆选", null,null);
+						circleTool.activate(CustomDraw.POINTCIRCLE+"&"+pointWidth);
+						break;
+					}
+					case "CIRCLE":
+					{
+						//setMapAction(value, "圆选", null,null);
+						//circleTool.activate(CustomDraw.POINTCIRCLE+"&"+pointWidth);
+						setMapAction(value, "圆选", null,null);
+						circleTool.activate(CustomDraw.CIRCLE);
+						break;
+					}	
+					case DrawTool.POLYLINE:
+					{
+						
+						setMapAction(value, "线形",new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, 0x3FAFDC, 1, 1), drawEnd);
+						break;
+					}
+				}
+			}catch(error:Error){
+				showMessage(error.message, false,true);
+			}
+				
+			}
+			//微调半径
+			private function radiusTuning():void
+			{
+				if (graphicsLayer.numGraphics == 1)
+				{
+					var gra:Graphic=graphicsLayer.getChildAt(0) as Graphic;
+					map.infoWindow.hide();
+					xgLayer.clear();
+					glowLayer.clear();
+					textGraphicsLayer.clear();
+					xmlTree=<NODES />;
+					createSearchResult();
+					if (gra.attributes != null)
+					{
+						if (gra.attributes.type == CustomDraw.CUSTOM_CIRCLE)
+						{
+							var circleObj:Object=gra.attributes as Object;
+							var centerPoint:MapPoint=circleObj.cpoint as MapPoint;
+							var m_radius:Number=Number(bufferRadius_txt.text);
+							function createCirclePoints(m_center:MapPoint):Array
+							{
+								var cosinus:Number;
+								var sinus:Number;
+								var x:Number;
+								var y:Number;
+								var arrayOfPoints:Array=new Array();
+								var numberOfCirclePoints:int=100;
+								for (var i:int=0; i < numberOfCirclePoints; i++)
+								{
+									sinus=Math.sin((Math.PI * 2.0) * (i / numberOfCirclePoints));
+									cosinus=Math.cos((Math.PI * 2.0) * (i / numberOfCirclePoints));
+									x=m_center.x + m_radius * cosinus;
+									y=m_center.y + m_radius * sinus;
+									arrayOfPoints[i]=new MapPoint(x, y);
+								}
+								
+								arrayOfPoints.push(arrayOfPoints[0]);
+								return arrayOfPoints;
+							}
+							var m_circleGeometry:Polygon=new Polygon;
+							m_circleGeometry.addRing(createCirclePoints(centerPoint));
+							graphicsLayer.clear();
+							gra=new Graphic(m_circleGeometry, FWSymbol.tyDrawGraphicSymbol);
+							gra.attributes=circleObj;
+							graphicsLayer.add(gra);
+							showQueryResult();
+							exeQuery(gra.geometry);
+						}
+						
+					}
+					else
+					{
+						Alert.show("微调半径仅对圆选生效。");
+					}
+					
+				}
+				
+			}
+			
+			//绘制完成，在graphiclayer上添加graphic 并将该多边形的点位传送给服务器端
+			private function drawEnd(event:DrawEvent):void
+			{
+				graphicsLayer.clear();
+				CursorManager.setBusyCursor();
+				showQueryResult();
+				var gra:Graphic=event.graphic as Graphic;
+				if (gra.attributes)
+				{
+					if (gra.attributes.type == CustomDraw.CUSTOM_CIRCLE)
+					{
+						//TODO:是否需要添加中心点
+						var obj:Object=gra.attributes;
+						bufferRadius_txt.text=Number(obj.radius).toFixed(0);
+					}
+					
+				}
+
+				polygonGeometry=gra.geometry as Polygon;
+				circleTool.deactivate();
+				setMapNavigation(NavigationTool.PAN, "漫游");
+				graphicsLayer.add(gra);
+				exeQuery(polygonGeometry);
+			}
+			
+			private function exeQuery(geometry:Geometry):void
+			{
+				if(layerArrCol)
+				{
+					var extentUrl:String;
+					var extentExpression:String;
+					var layerName:String;
+					var orderField:String;
+					var extentTitlefield:String;
+					var tableName:String;
+					//标识是否是工程、选址、用地之一
+					var isProject:Boolean=false;
+					var dateFieldName:String;
+					var token:Object;
+					tree_visible=false;
+					resultArrCol.removeAll();
+					showTreeMessage("正在查询...", true,true);
+					for(var i:int=0;i<layerArrCol.length;i++)
+					{
+						
+						layerName=layerArrCol[i].layerName;
+						orderField=layerArrCol[i].orderField;
+						extentUrl=layerArrCol[i].extentUrl;
+						extentExpression=layerArrCol[i].extentExpression;
+						extentFields=layerArrCol[i].extentFields;
+						extentFieldsCNStr=layerArrCol[i].extentFieldsCN;
+						extentTitlefield=layerArrCol[i].extentTitlefield;
+						tableName=layerArrCol[i].table;
+						dateFieldName=layerArrCol[i].dateFieldName;
+						//详细规划、分区规划、总体规划、单元规划
+						if(i<4)
+						{
+							dklayerName=layerArrCol[i].dklayerName;
+							areaUrl=layerArrCol[i].dkextentUrl;
+							areaExpression=layerArrCol[i].dkextentExpression;
+							areaFields=layerArrCol[i].dkextentFields;
+							dktitleField=layerArrCol[i].dktitleField;
+							dkextentFieldsCNStr=layerArrCol[i].dkextentFieldsCN;
+							isProject=false;	 
+							
+						}
+							//工程、选择、用地属性与空间信息分离，需要单独处理
+						else if(i<7)
+						{
+							var infoUrl:String=layerArrCol[i].url;
+							var infoTable:String=layerArrCol[i].table;
+							var infoFields:String=layerArrCol[i].fields;
+							var infoFieldsCN:String=layerArrCol[i].fieldsCN;
+							isProject=true;	 
+						//权属宗地没有地块，单独分出来
+						}else{
+							isProject=false;
+						}
+						if ((extentUrl) && (geometry))
+						{
+							var queryTask:QueryTask=new QueryTask(extentUrl);
+							var query:Query=new Query();
+							query.outFields=extentFields.split(",");
+							var expr:String = "1=1";
+							query.where=expr;
+							query.returnGeometry=true;
+							query.geometry=geometry;
+							queryTask.showBusyCursor=true;
+							var isEnd:Boolean=false;
+							try
+							{
+								if(i==layerArrCol.length-1)
+								{
+									isEnd=true;
+								}
+								if(i<4)
+								{
+									token={layername:layerName,orderfield:orderField,extentFields:extentFields,dkextentFieldsCNStr:dkextentFieldsCNStr,extentFieldsCNStr:extentFieldsCNStr,dklayerName:dklayerName,areaUrl:areaUrl,areaExpression:areaExpression,areaFields:areaFields,dktitleField:dktitleField,isproject:isProject,isend:isEnd,haveDK:"true"};
+								}
+								else if(i<7)
+								{
+									token={layername:layerName,orderfield:orderField,extentFields:extentFields,dateFieldName:dateFieldName,tableName:tableName,extentTitlefield:extentTitlefield,extentFieldsCNStr:extentFieldsCNStr,infoUrl:infoUrl,infoTable:infoTable,infoFields:infoFields,infoFieldsCN:infoFieldsCN,isproject:isProject,isend:isEnd,haveDK:"false"};
+									
+								}else{
+									token={layername:layerName,orderfield:orderField,extentFields:extentFields,extentFieldsCNStr:extentFieldsCNStr,isproject:isProject,isend:isEnd,haveDK:"false"};
+								}
+								queryTask.execute(query, new AsyncResponder(ongraphicalResult, ongraphicalFault,token));
+							}
+							catch (error:Error)
+							{
+								Alert.show(error.toString());
+							}
+						}
+						
+					}
+				}
+			}
+			//on fault
+			private function ongraphicalFault(info:Object, token:Object=null):void
+			{
+				//Alert.show(info.toString());
+				setMapNavigation(NavigationTool.PAN, "漫游");
+				Alert.show(info.toString());
+			}
+			//处理空间查询结果
+			private function ongraphicalResult(featureSet:FeatureSet, token:Object):void
+			{
+				setMapNavigation(NavigationTool.PAN, "漫游");
+				//标识查询是否完成
+				var isEnd:Boolean=Boolean(token.isend);
+				var layerName:String=token.layername;
+				var orderField:String=token.orderfield;
+				var xmlXG:XML;
+				//是否有地块信息
+				var havaDK:String = "true";
+				if (featureSet.features.length > 0)
+				{
+					try
+					{
+						var featuresArr:Array=new Array();
+						var graphicsArrCol:ArrayCollection;
+						var extentTitlefield:String=token.extentTitlefield;
+						extentFields=token.extentFields;
+						dklayerName=token.dklayerName;
+						areaUrl=token.areaUrl;
+						areaExpression=token.areaExpression;
+						areaFields=token.areaFields;
+						dktitleField=token.dktitleField;
+						extentFieldsCNStr=token.extentFieldsCNStr;
+						dkextentFieldsCNStr=token.dkextentFieldsCNStr;
+						havaDK = token.haveDK;
+						var isProject:Boolean=Boolean(token.isproject);
+						var GHArrCol:ArrayCollection;
+						var obj:Object;
+						xmlXG=<NODEGroup></NODEGroup>;
+						xmlXG.@isBranch=true;
+						xmlXG.@orderField=orderField;
+						xmlXG.@state="unchecked";
+						var ids:String="";
+						var index:int=0;
+						for each(var gra:Graphic in featureSet.features)
+						{
+							//处理详规、单元、分区、总体规划查询结果
+							if(!isProject)
+							{
+								obj=new Object;
+								var yearNumber:Number;
+								yearNumber=gra.attributes.START_DATE?gra.attributes.START_DATE:gra.attributes.批复时间;
+								
+								var df:DateFormatter= new DateFormatter();
+								df.formatString='YYYY';
+								var date:Date=new Date(yearNumber);
+								var year:String=df.format(date);
+								if(gra.attributes.CGH){
+									year=gra.attributes.CGH.substr(0,4);
+									if(!Number(gra.attributes.CGH.substr(0,4))){
+										year="qz";
+									}
+								}
+								gra.attributes.point=getGeomCenter(gra);
+								if(GHArrCol)
+								{	
+									for(var m:int=0;m<GHArrCol.length;m++)							
+									{
+										var yearStr:String=GHArrCol[m].years.toString();
+										if(year==yearStr)
+										{
+											var count:int=int(GHArrCol[m].counts);
+											count++;
+											graphicsArrCol=GHArrCol[m].graphics as ArrayCollection;
+											graphicsArrCol.addItem(gra);
+											GHArrCol[m].graphics=graphicsArrCol;
+											GHArrCol[m].counts=count;
+											break;
+										}
+										else if(m==(GHArrCol.length-1))
+										{
+											graphicsArrCol=new ArrayCollection;
+											graphicsArrCol.addItem(gra);
+											obj.years=year;
+											obj.counts=1;
+											obj.graphics=graphicsArrCol;
+											GHArrCol.addItem(obj);
+											break;
+										}
+									}
+								}
+								else
+								{
+									GHArrCol=new ArrayCollection;	
+									graphicsArrCol=new ArrayCollection;
+									graphicsArrCol.addItem(gra);
+									obj.years=year;
+									obj.counts=1;
+									obj.graphics=graphicsArrCol;
+									GHArrCol.addItem(obj);
+								}
+							}
+								//工程、选址、用地信息处理
+							else
+							{
+								if(featuresArr&&featuresArr.length>0)
+								{
+									for(var p:int=0;p<featuresArr.length;p++)
+									{
+										if(featuresArr[p]==gra.attributes[extentTitlefield])
+										{
+											break;
+										}
+										else
+										{
+											if(p==featuresArr.length-1)
+											{
+												featuresArr.push(gra.attributes[extentTitlefield]);
+												p=featuresArr.length;
+												ids+="'" + gra.attributes[extentTitlefield] + "',";
+											}
+										}
+									}
+								}
+								else
+								{
+									featuresArr.push( gra.attributes[extentTitlefield]);
+									ids+="'" + gra.attributes[extentTitlefield] + "',";
+								}
+								
+								index++;
+								if(index==featureSet.features.length)
+								{
+									ids=ids.substr(0,ids.length-1);
+									queryInfoDataByIds(ids,token,xmlXG,xmlTree,resultArrCol,featureSet.features);
+								}
+								
+							}
+						}
+						if(GHArrCol&&!isProject&&havaDK=="true")
+						{
+							GHArrCol=UtilsClass.sortArrayCollection("years",GHArrCol);
+							for(var n:int=0;n<GHArrCol.length;n++)
+							{
+								var nodeXml:XML=<NODE />;
+								nodeXml.@isBranch=false;
+								nodeXml.@state="unchecked";
+								nodeXml.@isProject=false;
+								nodeXml.@NAME=GHArrCol[n].years.toString()+"年:"+GHArrCol[n].counts.toString()+"个";
+								nodeXml.@LayerName=layerName;
+								nodeXml.@havaDK="true";
+								xmlXG.appendChild(nodeXml);
+							}
+							//xmlTree.appendChild(xmlXG);
+							orderCommQuery(xmlXG);
+							resultArrCol.addItem({layerName:layerName,extentFields:extentFields,dklayerName:dklayerName,dkextentFieldsCNStr:dkextentFieldsCNStr,extentFieldsCNStr:extentFieldsCNStr,areaUrl:areaUrl,areaExpression:areaExpression,areaFields:areaFields,dktitleField:dktitleField,graphicsArrCol:GHArrCol,havaDK:"true"});
+						}
+						//没有地块的选项---sh----20141112
+						else if(GHArrCol&&!isProject&&havaDK=="false")
+						{
+							GHArrCol=UtilsClass.sortArrayCollection("years",GHArrCol);
+							for(var n:int=0;n<GHArrCol.length;n++)
+							{
+								var nodeXml:XML=<NODE />;
+								nodeXml.@isBranch=false;
+								nodeXml.@state="unchecked";
+								nodeXml.@isProject=false;
+								if(GHArrCol[n].years.toString()!="NaN"&&GHArrCol[n].years.toString()!="qz"){
+									nodeXml.@NAME=GHArrCol[n].years.toString()+"年:"+GHArrCol[n].counts.toString()+"个";
+								}else if(GHArrCol[n].years.toString()=="qz"){
+									nodeXml.@NAME="权证:"+GHArrCol[n].counts.toString()+"个";
+								}else{
+									nodeXml.@NAME="全部:"+GHArrCol[n].counts.toString()+"个";
+								}
+								nodeXml.@LayerName=layerName;
+								nodeXml.@havaDK="false";
+								xmlXG.appendChild(nodeXml);
+							}
+							//xmlTree.appendChild(xmlXG);
+							orderCommQuery(xmlXG);
+							resultArrCol.addItem({layerName:layerName,extentFields:extentFields,dklayerName:dklayerName,dkextentFieldsCNStr:dkextentFieldsCNStr,extentFieldsCNStr:extentFieldsCNStr,areaUrl:areaUrl,areaExpression:areaExpression,areaFields:areaFields,dktitleField:dktitleField,graphicsArrCol:GHArrCol,havaDK:"true"});
+						}
+						if(!isProject)
+						{
+							xmlXG.@NAME=layerName+"（"+featureSet.features.length.toString()+"个）";
+						}
+						else
+						{
+							xmlXG.@NAME=layerName+"（"+featuresArr.length.toString()+"个）";
+						}
+						
+					}
+					catch (error:Error)
+					{
+						Alert.show("出错了！\n" + error.message);
+					}
+				}
+				else
+				{
+					xmlXG=<NODEGroup></NODEGroup>;
+					xmlXG.@isBranch=true;
+					xmlXG.@state="unchecked";
+					xmlXG.@orderField=orderField;
+					xmlXG.@NAME=layerName+"（"+featureSet.features.length.toString()+"个）";
+					//xmlTree.appendChild(xmlXG);
+					orderCommQuery(xmlXG);
+				}
+				if(isEnd)
+				{
+					if(xmlTree&&xmlTree.children().length()>0)
+					{
+						emTree.dataProvider=null;
+						showTreeMessage("", false,false);
+						xmlListCollection.source=xmlTree.NODEGroup; 
+						var xmlSort:Sort = new Sort();
+						xmlSort.fields = [new SortField('@orderField', true)];
+						xmlListCollection.sort = xmlSort;
+						xmlListCollection.refresh();
+						emTree.dataProvider=xmlListCollection.source;
+						tree_visible=true;
+					}
+					CursorManager.removeBusyCursor();
+				}
+			}
+			//查詢完成后排序--边查询边排序 add by bingfei 20150113
+			private function orderCommQuery(xmlXG:XML)
+			{
+				
+				var xmlList:XMLList = xmlTree.children();
+				var leng = xmlTree.children().length();
+				if(leng>1)
+				{
+					if(xmlTree.children()[leng-1].@orderField.toString() > xmlXG.@orderField.toString())
+					{
+						for( var i = 0; i < leng-1; i++)
+						{
+							if(xmlXG.@orderField.toString() < xmlTree.children()[i].@orderField.toString())
+							{
+								xmlTree.insertChildBefore(xmlTree.NODEGroup[i],xmlXG);
+								break;
+							}
+							
+							if (xmlTree.children()[i].@orderField.toString() < xmlXG.@orderField.toString()
+								&& xmlTree.children()[i+1].@orderField.toString() > xmlXG.@orderField.toString())
+							{
+								xmlTree.insertChildAfter(xmlTree.NODEGroup[i],xmlXG);
+								break;
+							}
+							
+						}
+					}else{
+						xmlTree.appendChild(xmlXG);
+					}
+				}else if(leng == 0)
+				{
+					xmlTree.appendChild(xmlXG);
+				}else if(leng == 1 && xmlTree.children()[0].@orderField.toString() < xmlXG.@orderField.toString()){
+					xmlTree.insertChildAfter(xmlTree.NODEGroup[0],xmlXG);
+				}else if(leng == 1 && xmlTree.children()[0].@orderField.toString() > xmlXG.@orderField.toString()){
+					xmlTree.insertChildBefore(xmlTree.NODEGroup[0],xmlXG);
+				}
+			}
+			/**
+			 * 通过空间查询得到的ids，查询对应id的属性信息，并构建查询结果树
+			 * */
+			private function queryInfoDataByIds(ids:String,infoData:Object,xmlXG:XML,xmlTree:XML,resultArrCol:ArrayCollection,geometryArr:Array):void
+			{
+				var layerName:String=infoData.layername;
+				var extentTitlefield:String=infoData.extentTitlefield;
+				var servletUrl:String=infoData.infoUrl;
+				var tabelName:String=infoData.infoTable;
+				var fields:String=infoData.infoFields;
+				var fieldsCN:String=infoData.infoFieldsCN;
+				var tableName:String=infoData.tableName;
+				var dateFieldName:String=infoData.dateFieldName;
+				var infoDataArrCol:ArrayCollection=new ArrayCollection;
+				var whereStr:String = "where 1=1";
+				var httpservice:HTTPService=new HTTPService();
+				httpservice.url=attributesServlet;
+				httpservice.resultFormat="text";
+				httpservice.method="POST";
+				var obj:Object=new Object();
+				httpservice.addEventListener(ResultEvent.RESULT, info_onResult);
+				httpservice.addEventListener(FaultEvent.FAULT, info_onFault);
+				obj.table=infoData.infoTable;
+				obj.fields=infoData.infoFields;
+				if(ids!="")
+				{
+					whereStr='select "COUNT"( ID ) as counts,years from (SELECT EXTRACT(YEAR FROM '+dateFieldName+') as years,ID FROM '+tableName+' where  ID in ('+ids+')) GROUP BY years';
+				}
+				obj.where = whereStr;
+				httpservice.send(obj);
+				function info_onResult(event:ResultEvent):void
+				{
+					var infoOBJ:Object = JSON.decode(event.result.toString());
+					infoDataArrCol=new ArrayCollection(infoOBJ.datas as Array);
+					if(infoDataArrCol&&infoDataArrCol.length>0)
+					{
+						infoDataArrCol=UtilsClass.sortArrayCollection("YEARS",infoDataArrCol);
+						for(var n:int=0;n<infoDataArrCol.length;n++)
+						{
+							var nodeXml:XML=<NODE />;
+							nodeXml.@isBranch=false;
+							nodeXml.@state="unchecked";
+							nodeXml.@isProject=true;
+							nodeXml.@NAME=infoDataArrCol[n].YEARS.toString()+"年:"+infoDataArrCol[n].COUNTS.toString()+"个";
+							nodeXml.@LayerName=layerName;
+							nodeXml.@havaDK="false";
+							xmlXG.appendChild(nodeXml);
+						}
+						//xmlTree.appendChild(xmlXG);
+						orderCommQuery(xmlXG);
+						resultArrCol.addItem({layerName:layerName,extentTitlefield:extentTitlefield,tabelName:tabelName,dateFieldName:dateFieldName,servletUrl:servletUrl,tabelName:tabelName,fields:fields,fieldsCN:fieldsCN,geometryArr:geometryArr,ids:ids,havaDK:"false"});
+					}else {
+						//xmlTree.appendChild(xmlXG);
+						orderCommQuery(xmlXG);
+					}
+				}	
+				function info_onFault(event:FaultEvent):void{
+					
+				}
+			}
+			
+			private function drawStartHandler(event:DrawEvent):void
+			{
+				//clear all selections before new drawing
+				this.showInfoWindow(null);
+				xmlTree=<NODES />;
+				graphicsLayer.clear();
+				xgLayer.clear();
+				glowLayer.clear();
+				textGraphicsLayer.clear();
+				dkGraphicsLayer.clear();
+				queryDKDataGrid.dataProvider=null;
+				emTree.dataProvider=null;
+				queryDataGrid.dataProvider=null;
+			}
+			private function clear():void
+			{
+				this.showInfoWindow(null);
+				circleTool.deactivate();
+				setMapNavigation(NavigationTool.PAN, "漫游");
+				graphicsLayer.clear();
+			}
+			
+			
+			protected function emTree_itemClickHandler(event:ListEvent):void
+			{
+				// TODO Auto-generated method stub
+				this.showInfoWindow(null);
+				var selectedXML:XML=emTree.selectedItem as XML;
+				var isProject:String=selectedXML.@isProject.toString();
+				var havaDK:String=selectedXML.@havaDK.toString();
+				var isBranch:String=selectedXML.@isBranch.toString();
+				var yearselected:String=selectedXML.@NAME.toString().split(":")[0];
+				var yearSelected:String=yearselected.substr(0,yearselected.length-1);
+				layerName=selectedXML.@LayerName.toString();
+				var obj:Object=new Object;
+				var lyerName:String;
+				var arrCol:ArrayCollection=new ArrayCollection;
+				var year:String;
+				var graphicsArrCol:ArrayCollection=new ArrayCollection;
+				dk_gridVisible=false;
+				dkGraphicsLayer.clear();
+				if(isProject=="false")
+				{
+					if(isBranch=="false")
+					{
+						if(havaDK=="true")
+						{
+							showInfomationResult();
+							gridVisible=false;
+							showMessage("正在查询...", true,true);
+							for(var i:int=0;i<resultArrCol.length;i++)
+							{
+								obj=resultArrCol[i] as Object;
+								lyerName=obj.layerName.toString();
+								if(lyerName==layerName)
+								{
+									dklayerName=obj.dklayerName;
+									areaUrl=obj.areaUrl;
+									areaExpression=obj.areaExpression;
+									dktitleField=obj.dktitleField;
+									areaFields=obj.areaFields;
+									dkextentFieldsCNStr=obj.dkextentFieldsCNStr.toString();
+									extentFieldsCNStr=obj.extentFieldsCNStr.toString();
+									extentFields=obj.extentFields.toString();
+									
+									if(dkextentFieldsCNStr)
+									{
+										resultDKFieldsCN=dkextentFieldsCNStr.split(",");
+									}
+									if(areaFields)
+									{
+										resultDKFields=areaFields.split(",");
+									}
+									if(extentFieldsCNStr)
+									{
+										resultFWFieldsCN=extentFieldsCNStr.split(",");
+									}
+									if(extentFields)
+									{
+										resultFWFields=extentFields.split(",");
+									}
+									arrCol.removeAll();
+									arrCol=obj.graphicsArrCol as ArrayCollection;
+									if(arrCol)
+									{
+										for(var j:int=0;j<arrCol.length;j++)
+										{
+											year=arrCol[j].years;
+											if(yearSelected==year)
+											{
+												graphicsArrCol.removeAll();
+												graphicsArrCol=arrCol[j].graphics as ArrayCollection;
+												if(graphicsArrCol)
+												{
+													fieldVisible=true;
+													dataFieldName="plan_name";
+													infoFieldName="地块";
+													queryDataGrid.dataProvider=createRecordData(graphicsArrCol);
+													showMessage("", false,false);
+													gridVisible=true;
+												}
+												break;
+											}
+										}
+										if(lyerName=="分区规划范围")
+										{
+											dgTitle.headerText="批复编号";
+										}
+										else if(lyerName=="单元规划范围")
+										{
+											dgTitle.headerText="单元编号";
+										}
+										else
+										{
+											dgTitle.headerText="地块编号";
+										}
+									}
+									break;
+								}
+							}
+						}else{
+							showInfomationResult();
+							gridVisible=false;
+							showMessage("正在查询...", true,true);
+							for(var i:int=0;i<resultArrCol.length;i++)
+							{
+								obj=resultArrCol[i] as Object;
+								lyerName=obj.layerName.toString();
+								if(lyerName==layerName)
+								{
+									extentFieldsCNStr=obj.extentFieldsCNStr.toString();
+									extentFields=obj.extentFields.toString();
+									
+									if(extentFieldsCNStr)
+									{
+										resultFWFieldsCN=extentFieldsCNStr.split(",");
+									}
+									if(extentFields)
+									{
+										resultFWFields=extentFields.split(",");
+									}
+									arrCol.removeAll();
+									arrCol=obj.graphicsArrCol as ArrayCollection;
+									if(arrCol)
+									{
+										for(var j:int=0;j<arrCol.length;j++)
+										{
+											//如果不是权证和全部，则使用年份过滤
+											if(Number(yearSelected))
+											{
+												year=arrCol[j].years;
+												if(yearSelected==year)
+												{
+													graphicsArrCol.removeAll();
+													graphicsArrCol=arrCol[j].graphics as ArrayCollection;
+													if(graphicsArrCol)
+													{
+														fieldVisible=false;
+														newFieldVisible=true;
+														newLinkFieldVisible=true;
+														queryDataGrid.dataProvider=createRecordData(graphicsArrCol);
+														showMessage("", false,false);
+														gridVisible=true;
+													}
+													break;
+												}
+											}else{
+												graphicsArrCol.removeAll();
+												graphicsArrCol=arrCol[j].graphics as ArrayCollection;
+												year=arrCol[j].years;
+												if(graphicsArrCol)
+												{
+													fieldVisible=false;
+													newFieldVisible=true;
+													if(year=="qz"){
+														newLinkFieldVisible=true;
+													}else{
+														newLinkFieldVisible=false;
+													}
+													//secondId.width = 0.4;
+													queryDataGrid.dataProvider=createRecordData(graphicsArrCol);
+													showMessage("", false,false);
+													gridVisible=true;
+												}
+												break;
+											}
+										}
+									}
+									break;
+								}
+							}
+						}
+					}
+				}
+				else if(isProject=="true")
+				{
+					if(isBranch=="false")
+					{
+						showInfomationResult();
+						gridVisible=false;
+						showMessage("正在查询...", true,true);
+						dataFieldName="PROJECT_NAME";
+						fieldVisible=false;
+						titleString="项目名称";
+						infoFieldName="明细";
+						for(var j:int=0;j<resultArrCol.length;j++)
+						{
+							obj=resultArrCol[j] as Object;
+							lyerName=obj.layerName.toString();
+							if(lyerName==layerName)
+							{
+								var extentTitlefield:String=obj.extentTitlefield..toString();
+								var dateFieldName:String=obj.dateFieldName..toString();
+								var servletUrl:String=obj.servletUrl.toString();
+								var tabelName:String=obj.tabelName.toString();
+								var fields:String=obj.fields.toString();
+								var fieldsCN:String=obj.fieldsCN.toString();
+								var ids:String=obj.ids.toString();
+								var geometryArr:Array=obj.geometryArr;
+								var infoDataArrCol:ArrayCollection=new ArrayCollection;
+								var whereStr:String = "where 1=1";
+								var httpservice:HTTPService=new HTTPService();
+								httpservice.url=servletUrl;
+								httpservice.resultFormat="text";
+								var object:Object=new Object();
+								httpservice.addEventListener(ResultEvent.RESULT, info_onResult);
+								httpservice.method="POST";
+								object.table=tabelName;
+								object.fields=fields;
+								if(ids!="")
+								{
+									whereStr+=" and "+extentTitlefield+" in ("+ids+") and "+dateFieldName+" > to_date('" + yearSelected + "-1-1','yyyy-mm-dd') and "+dateFieldName+" < to_date('" + yearSelected + "-12-31','yyyy-mm-dd')";
+								}
+								object.where = whereStr;
+								httpservice.send(object);
+								function info_onResult(event:ResultEvent):void
+								{
+									var infoOBJ:Object = JSON.decode(event.result.toString());
+									var infoArr:Array=infoOBJ.datas as Array;
+									if(infoArr&&infoArr.length>0)
+									{
+										xgLayer.clear();
+										glowLayer.clear();
+										textGraphicsLayer.clear();
+										var projectGraphic:Graphic;
+										var projectArrCol:ArrayCollection;
+										for(var n:int=0;n<infoArr.length;n++)
+										{
+											projectArrCol=new ArrayCollection;
+											
+											for(var m:int=0;m<geometryArr.length;m++)
+											{
+												if(infoArr[n].CODE==geometryArr[m].attributes[extentTitlefield])
+												{
+													projectGraphic=geometryArr[m] as Graphic;
+													if(layerName=="工程范围")
+													{
+														var textSymbol:TextSymbol=new TextSymbol(projectGraphic.attributes.GC_C10);
+														var textGraphic:Graphic=new Graphic(projectGraphic.geometry.extent.center,textSymbol);
+														infoArr[n].buildingName=projectGraphic.attributes.GC_C10;
+														textGraphicsLayer.add(textGraphic);
+														//在此处需要修改
+														createGraphicsData(infoArr[n],projectGraphic,fields,fieldsCN,projectArrCol);
+														
+													}else if(projectGraphic)
+													{
+														createGraphicsData(infoArr[n],projectGraphic,fields,fieldsCN,infoDataArrCol);
+													}
+												}
+											}
+											if(layerName=="工程范围"&&projectArrCol&&projectArrCol.length>0)
+											{
+												infoArr[n].projectArrCol=projectArrCol;
+												infoDataArrCol.addItem(infoArr[n]);
+											}
+										}
+										queryDataGrid.dataProvider=infoDataArrCol;
+										showMessage("", false,false);
+										gridVisible=true;
+									}
+								}	
+							}
+						}
+					}
+				}
+				
+			}
+			
+			
+			private function createGraphicsData(infomation:Object,projectGraphic:Graphic,fields:String,fieldsCN:String,infoDataArrCol:ArrayCollection):void
+			{
+				var fieldsArr:Array=fields.split(",");
+				var fieldsCNArr:Array=fieldsCN.split(",");
+				var content:String="";
+				var str:String="";
+				var graphic:Graphic=new Graphic(projectGraphic.geometry, FWSymbol.tyGraphicSymbol);
+				var point:MapPoint=getGeomCenter(graphic);
+				var dgraphicataProvider:ArrayCollection=new ArrayCollection;
+				var info:Object=new Object;
+				var fld:String;
+				for (fld in infomation)
+				{
+					info[fld]=infomation[fld];
+				}
+				graphic.attributes=info;
+				if(fieldsArr)
+				{
+					if(infomation.buildingName)
+					{
+						content="建筑名称:"+info.buildingName+";";
+						info.buildingName=info.buildingName;
+					}
+					for(var m:int=1;m<fieldsArr.length;m++)
+					{
+						var field:String=fieldsArr[m].toString();
+						if(field!="CODE")
+						{
+							if("BUILD_AREA" == field){
+								content+=fieldsCNArr[m].toString() + ": " + info[field] + "平方米;";
+							}else if("DOC_DATE" == field){
+								str = info[field].toString();
+								content+=fieldsCNArr[m].toString() + ": " + str.substr(0,10) + ";";
+							}else if("APPROVE_DATE" == field){
+								str = info[field].toString();
+								content+=fieldsCNArr[m].toString() + ": " + str.substr(0,10) + ";";
+							}else{
+								content+=fieldsCNArr[m].toString() + ": " + info[field] + ";";
+							}
+						}
+					}
+					if(content == "") content = "无相关的属性信息";
+					content=content.substring(0,content.length-1);
+					graphic.attributes.content=content;
+					graphic.attributes.point=point;
+					graphic.attributes.graphic=graphic;
+				}
+				if(info.buildingName)
+				{
+					infoDataArrCol.addItem(graphic.attributes);
+				}else
+				{	//如果不是工程范围则去掉重复的属性列表
+					if(infoDataArrCol&&infoDataArrCol.length>0)
+					{
+						for(var q:int=0;q<infoDataArrCol.length;q++)
+						{
+							if(graphic.attributes.PROJECT_NAME==infoDataArrCol[q].PROJECT_NAME)
+							{
+								break;
+							}
+							else
+							{
+								if(q==infoDataArrCol.length-1)
+								{
+									infoDataArrCol.addItem(graphic.attributes);
+									q=infoDataArrCol.length;
+								}
+							}
+							
+						}
+					}
+					else
+					{
+						infoDataArrCol.addItem(graphic.attributes);
+					}
+				}
+				
+				xgLayer.add(graphic);
+			}
+			
+			private function createRecordData(graphicsArrCol:ArrayCollection):ArrayCollection
+			{
+				var name:String;
+				var code:String;
+				var graphic:Graphic;
+				var dataProvider:ArrayCollection=new ArrayCollection;
+				xgLayer.clear();
+				glowLayer.clear();
+				textGraphicsLayer.clear();
+				if(graphicsArrCol)
+				{
+					for(var n:int=0;n<graphicsArrCol.length;n++)
+					{
+						graphic=graphicsArrCol[n] as Graphic;
+						plan_name=graphic.attributes.PLAN_NAME?graphic.attributes.PLAN_NAME:graphic.attributes.单元编号;
+						plan_num=graphic.attributes.PLAN_NUM?graphic.attributes.PLAN_NUM:graphic.attributes.单元编号;	
+						//数据构造部分
+						if(!plan_num)
+						{
+							plan_num=graphic.attributes.PLAN_CODE;
+						}
+						if(graphic.attributes.PLAN_NAME)
+						{
+							titleString="规划名称";
+						}else if(graphic.attributes.ZDBH)
+						{
+							dataFieldName="firstData";
+							newDataFieldName="secondData";
+							firstId.width = 0.6;
+							titleString="宗地编号";
+							newTitleString="用途描述";
+						}else if(graphic.attributes.案件编号)
+						{
+							dataFieldName="firstData";
+							newDataFieldName="secondData";
+							firstId.width = 0.6;
+							titleString="案件编号";
+							newTitleString="归土所";
+						}else if(graphic.attributes.FILE_NO)
+						{
+							dataFieldName="firstData";
+							newDataFieldName="secondData";
+							firstId.width = 0.6;
+							titleString="成果号";
+							newTitleString="批文号";
+						}else if(graphic.attributes.GDPW)
+						{
+							dataFieldName="firstData";
+							newDataFieldName="secondData";
+							firstId.width = 0.1;
+							titleString="测绘成果号";
+							newTitleString="合同号";
+						}else
+						{
+							titleString="单元编号";
+						}
+						var obj:Object=graphic.attributes;
+						var fld:String;
+						var value:String;
+						var title:String;
+						var content:String="";
+						var link:String="";
+						var point:MapPoint=getGeomCenter(graphic);
+						var plan_num:String;
+						var plan_name:String;
+						var temp:String;
+						//分别对应显示框中第一行，第二行数据----sh----20141113
+						var firstData:String="";
+						var secondData:String="";
+						for (fld in obj)
+						{
+							if(obj[fld]&&obj[fld].toString()!="")
+							{
+								if(obj[fld].toString()=="NULL")
+								{
+									obj[fld]="";
+								}else
+								{
+									value=obj[fld].toString();
+									if (fld.toUpperCase() == "用途描述")
+									{
+										secondData = value;
+									}
+									if(fld.toUpperCase()=="ZDBH")
+									{
+										firstData=value;
+									}
+									if (fld.toUpperCase() == "案件编号")
+									{
+										firstData=value;
+										if (!firstData)
+											firstData=widgetTitle;
+									}
+									if(fld.toUpperCase()=="归土所")
+									{
+										secondData=value;
+									}
+									if (fld.toUpperCase() == "CGH")
+									{
+										firstData = value;
+										link=value;
+									}
+									if(fld.toUpperCase()=="FILE_NO")
+									{
+										secondData=value;
+									}
+									if(fld.toUpperCase()=="MISNO")
+									{
+										secondData=value;
+									}
+								}
+							}
+						}
+						for(var i:int = 0;i < resultFWFieldsCN.length;i++ ){
+							temp = resultFWFields[i].toString();
+							if("TOT_AREA" == temp){
+								var areaNum:Number=Number(obj[temp]);
+								obj[temp]=areaNum.toFixed(2);
+								content+=resultFWFieldsCN[i].toString() + ": " + obj[temp] + " 公顷;";
+							}
+							else if(temp=="START_DATE"||temp=="END_DATE")
+							{
+								var df:DateFormatter= new DateFormatter();
+								df.formatString='YYYY-MM-DD';
+								var date:Date=new Date(obj[temp]);
+								obj[temp] = df.format(date);
+								content+=resultFWFieldsCN[i].toString() + ": " + obj[temp];
+							}else if(temp=="街坊性质")
+							{
+								content+=resultFWFieldsCN[i].toString() + ": " + obj[temp];
+							}else 	if("单元名称"==temp){
+								content+="";
+							}
+							else if("总面积" == temp||"居住用地" == temp||"公共设施" == temp||"绿地" == temp||"道路广场" == temp){
+								var areaNum:Number=Number(obj[temp]);
+								obj[temp]=areaNum.toFixed(2);
+								content+=resultFWFieldsCN[i].toString() + ": " + obj[temp] + " 公顷;";
+							}
+							else if(temp=="批复时间")
+							{
+								var df:DateFormatter= new DateFormatter();
+								df.formatString='YYYY-MM-DD';
+								var date:Date=new Date(obj[temp]);
+								obj[temp] = df.format(date);
+								content+=resultFWFieldsCN[i].toString() + ": " + obj[temp]+";";
+							}else if( temp=="测量面积"|| temp=="证上面积"){
+								var areaNum:Number=Number(obj[temp]);
+								obj[temp]=areaNum.toFixed(2);
+								content+=resultFWFieldsCN[i].toString() + ": " + obj[temp] + " 平方米;";
+							}
+							else if("地块状态日" == temp)
+							{
+								var df:DateFormatter= new DateFormatter();
+								df.formatString='YYYY-MM-DD';
+								var date:Date=new Date(obj[temp]);
+								obj[temp] = df.format(date);
+								content+=resultFWFieldsCN[i].toString() + ": " + obj[temp]+";";	
+							}
+							else if("MISDATE" == temp)
+							{
+								var df:DateFormatter= new DateFormatter();
+								df.formatString='YYYY-MM-DD';
+								var date:Date=new Date(obj[temp]);
+								obj[temp] = df.format(date);
+								content+=resultFWFieldsCN[i].toString() + ": " + obj[temp]+";";	
+							}
+							else
+							{
+								content+=resultFWFieldsCN[i].toString() + ": " + obj[temp] + ";";
+							}
+						}
+						content=content.substring(0,content.length-1);
+						var infoData:Object={plan_name:plan_name,plan_num:plan_num,firstData:firstData,secondData:secondData,content: content, link: link, point: point, graphic: graphic};
+						dataProvider.addItem(infoData);
+						var gra:Graphic=new Graphic(graphic.geometry,FWSymbol.tyGraphicSymbol,infoData);
+						xgLayer.add(gra);
+					}
+				}
+				else
+				{
+					showMessage("暂无符合条件的记录！", false,true);
+				}
+				return dataProvider;
+			}
+			private function showTreeMessage(msg:String, swfVisible:Boolean,tree_boxMessageVisible:Boolean):void
+			{
+				tree_txtMessage.text=msg;
+				tree_swfMessage.visible=swfVisible;
+				tree_msgVisible=tree_boxMessageVisible;
+			}
+			private function showMessage(msg:String, swfVisible:Boolean,boxMessageVisible:Boolean):void
+			{
+				txtMessage.text=msg;
+				swfMessage.visible=swfVisible;
+				msgVisible=boxMessageVisible;
+			}
+			private function showDKMessage(msg:String, swfVisible:Boolean,boxMessageVisible:Boolean):void
+			{
+				dk_txtMessage.text=msg;
+				dk_swfMessage.visible=swfVisible;
+				dk_msgVisible=boxMessageVisible;
+				dkbackBtn.visible=!swfVisible;
+			}
+			protected function emTree_itemFocusInHandler(event:ListEvent):void
+			{
+				// TODO Auto-generated method stub
+			}
+			
+			private function dataGridClick(event:ListEvent):void
+			{
+				glowLayer.clear();
+				this.showInfoWindow(null);
+				var infoData:Object=queryDataGrid.dataProvider[event.rowIndex];
+				if(infoData.projectArrCol)
+				{
+					queryProjectDataGrid.dataProvider=infoData.projectArrCol;
+					var projectArrCol:ArrayCollection=infoData.projectArrCol;
+					queryProjectDataGrid.dataProvider=infoData.projectArrCol;
+					if(projectArrCol&&projectArrCol.length>0)
+					{
+						for(var i:int=0;i<projectArrCol.length;i++)
+						{
+							var glowGraphic:Graphic=new Graphic(projectArrCol[i].graphic.geometry,FWSymbol.tySelectedGraphicSymbol,projectArrCol[i]);
+							glowLayer.add(glowGraphic);
+						}
+						glowLayer.refresh();
+					}
+					UtilsClass.zoomToGraphics(map,glowLayer);
+					showProjectInfomation();
+					
+				}else
+				{
+					var graphic:Graphic=infoData.graphic;
+					var glowGraphic:Graphic=new Graphic(graphic.geometry,FWSymbol.tySelectedGraphicSymbol,infoData);
+					glowLayer.add(glowGraphic);
+					map.extent=graphic.geometry.extent.expand(2.5);
+					this.showInfoWindow(infoData);
+				}
+			}
+			private function projectDataGridClick(event:ListEvent):void
+			{
+				var infoData:Object=queryProjectDataGrid.dataProvider[event.rowIndex];
+				this.showInfoWindow(infoData);
+			}
+			override public function showInfoWindow(infoData:Object):void
+			{
+				if (infoData)
+				{
+					var infoTemplate:InfoPopupWidget = new InfoPopupWidget();
+					map.infoWindow.setStyle("contentBackgroundAlpha", 0.95);
+					map.infoWindow.setStyle("backgroundAlpha", 0.95);
+					map.infoWindow.setStyle("backgroundColor", 0xCBE5FE);
+					map.infoWindow.content = infoTemplate as UIComponent;
+					map.infoWindow.label = "查看详细信息";
+					infoTemplate.data = infoData;
+					map.infoWindow.show(infoData.point);
+					map.centerAt(infoData.point);
+				}
+				else
+				{
+					map.infoWindow.hide();
+				}
+			}
+			protected function emTree_itemFocusOutHandler(event:ListEvent):void
+			{
+				// TODO Auto-generated method stub
+			}
+			public function clickDKHandle():void
+			{
+				showDKInfomation();
+				dkGraphicsLayer.clear();
+				showDKMessage("正在查询...", true,true);
+				dk_gridVisible=false;
+				var selectInfo:Object = queryDataGrid.dataProvider[queryDataGrid.selectedIndex];
+				var plan_num:String = queryDataGrid.selectedItem.plan_num;
+				queryDK(plan_num,selectInfo);
+			}
+			public function clickHandle():void{
+				
+				navigateToURL(new URLRequest(linkUrl+queryDataGrid.selectedItem.link+"&account="+configData.userId));
+				
+			}
+			private function queryDK(plan_num:String,selectInfo:Object):void
+			{
+				CursorManager.setBusyCursor();
+				this.showInfoWindow(null);
+				dk_gridVisible=false;
+				queryDKDataGrid.dataProvider=null;
+				showDKMessage("正在查询...", true,true);
+				showDKInfomation();
+				var ghGra:Graphic = new Graphic(selectInfo.geometry,FWSymbol.tyDKExtentLineSymbos,selectInfo);
+				glowLayer.clear();
+				dkGraphicsLayer.add(ghGra);
+				UtilsClass.zoomToGraphics(map,graphicsLayer);
+				
+				if (areaUrl)
+				{
+					var queryTask:QueryTask=new QueryTask(areaUrl);
+					var query:Query=new Query();
+					var expr:String=areaExpression.replace("[value]",plan_num);
+					query.where=expr;
+					query.outFields=areaFields.split(",");
+					query.returnGeometry=true;
+					//query.outSpatialReference = map.spatialReference;
+					queryTask.showBusyCursor=true;
+					queryTask.execute(query, new AsyncResponder(ontextDKResult, ontextDKFault));
+				}
+				else
+				{
+					Alert.show("地块图层不存在");
+				}
+			}
+			private function ontextDKResult(featureSet:FeatureSet, token:Object=null):void
+			{
+				CursorManager.removeBusyCursor();
+				if (featureSet.features.length > 0)
+				{
+					try
+					{
+						var recAC:ArrayCollection=createDKRecordData(featureSet);
+						queryDKDataGrid.dataProvider=UtilsClass.sortArrayCollection("title",recAC);
+						showDKMessage("", false,false);
+						dk_gridVisible=true;
+						
+					}
+					catch (error:Error)
+					{
+					}
+				}
+				else
+				{
+					showDKMessage("暂无符合条件的记录!", false,true);
+				}
+			}
+			private function queryDKDataGrid_dataDKGridClick(event:ListEvent):void
+			{
+				var infoData:Object=queryDKDataGrid.dataProvider[event.rowIndex];
+				var pt:MapPoint=infoData.point;
+				map.centerAt(pt);
+				this.showInfoWindow(infoData);
+			}
+			
+			private function createDKRecordData(featureSet:FeatureSet):ArrayCollection
+			{
+				var recAC:ArrayCollection=new ArrayCollection();
+				for each (var gra:Graphic in featureSet.features)
+				{
+					var code:String="MR";
+					if(gra.attributes.CUS_TYPE)
+					{
+						code=gra.attributes.CUS_TYPE.toString();
+					}
+					else
+					{
+						gra.attributes.CUS_TYPE="";
+						code="MR";
+						
+					}
+					var symObj:Object=DKSymbol.findSymbolByCode(code);
+					gra.symbol=symObj.symbol as SimpleFillSymbol;
+					
+					//数据构造部分
+					var obj:Object=gra.attributes;
+					var fld:String;
+					var value:String;
+					var title:String;
+					var content:String="";
+					var link:String="";
+					var point:MapPoint=getGeomCenter(gra);
+					var fldAliases:Object=featureSet.fieldAliases;
+					var icon:String=areaIcon;
+					var PLOT_NAME:String;
+					var CUS_TYPE:String;
+					var temp:String;
+					for (fld in obj)
+					{
+						value=obj[fld]||"";
+						if (fld.toUpperCase() == dktitleField.toUpperCase()){
+							title=value;
+						}
+						if (fld.toUpperCase() == "PLOT_NAME"|| fld.toUpperCase() == "街坊性质")
+						{
+							PLOT_NAME=value;
+						}
+						if (fld.toUpperCase() =="CUS_TYPE")
+						{
+							CUS_TYPE=value||"";
+						}
+					}
+					for(var i:int = 0;i < resultDKFieldsCN.length;i++ ){
+						temp = resultDKFields[i].toString();
+						if("CUS_TYPE"==temp){
+							content+=resultDKFieldsCN[i].toString() + ": " + obj[temp];
+						}
+						else if("DKAREA" == temp){
+							var areaNum:Number=Number(obj[temp]);
+							obj[temp]=areaNum.toFixed(2);
+							content+=resultDKFieldsCN[i].toString() + ": " + obj[temp] + " 公顷;";
+						}else if("BLDG_DENS" == temp || "VEG_RATIO" == temp){
+							content+=resultDKFieldsCN[i].toString() + ": " + obj[temp] + "%;";
+						}else if("BLDG_HLMT" == temp){
+							content+=resultDKFieldsCN[i].toString() + ": " + obj[temp] + " 米;";
+						}else if("ENTRANCE"==temp){
+							content+=resultDKFieldsCN[i].toString() + ": " + obj[temp];
+						}else if("VOL_RATIO"==temp)
+						{
+							var ratio:Number=Number(obj[temp]);
+							obj[temp]=ratio.toFixed(2);
+							content+=resultFWFieldsCN[i].toString() + ": " + obj[temp] + " 公顷;";
+						}else if("TOT_AREA" == temp){
+							var areaNum:Number=Number(obj[temp]);
+							obj[temp]=areaNum.toFixed(2);
+							content+=resultFWFieldsCN[i].toString() + ": " + obj[temp] + " 公顷;";
+						}
+						else if(temp=="START_DATE"||temp=="END_DATE")
+						{
+							var df:DateFormatter= new DateFormatter();
+							df.formatString='YYYY-MM-DD';
+							var date:Date=new Date(obj[temp]);
+							obj[temp] = df.format(date);
+							content+=resultFWFieldsCN[i].toString() + ": " + obj[temp] + ";";
+						}else if(temp=="街坊性质")
+						{
+							content+=resultFWFieldsCN[i].toString() + ": " + obj[temp]+";";
+						}
+						else{
+							content+=resultDKFieldsCN[i].toString() + ": " + obj[temp] + ";";	
+						}
+						
+					}
+					content=content.substring(0,content.length-1);
+					var infoData:Object={plot_name:PLOT_NAME,plot_class:CUS_TYPE, title: title, content: content, link: link, point: point, graphic: gra};
+					gra.attributes=infoData;
+					dkGraphicsLayer.add(gra);
+					recAC.addItem(infoData);
+				}
+				return recAC;
+			}
+			private function mouseClickGraphic(event:MouseEvent):void
+			{
+				var gra:Graphic=event.target as Graphic;
+				var infoData:Object=gra.attributes;
+				this.showInfoWindow(infoData);
+			}
+			private function getGeomCenter(gra:Graphic):MapPoint
+			{
+				var pt:MapPoint;
+				switch (gra.geometry.type)
+				{
+					case Geometry.MULTIPOINT:
+					{
+						var multiPoint:Multipoint=Multipoint(gra.geometry);
+						pt=MapPoint(multiPoint.points[0]);
+						break;
+						
+					}
+					case Geometry.MAPPOINT:
+					{
+						pt=gra.geometry as MapPoint;
+						break;
+					}
+					case Geometry.POLYLINE:
+					{
+						var pl:Polyline=gra.geometry as Polyline;
+						var pathCount:Number=pl.paths.length;
+						var pathIndex:int=int((pathCount / 2) - 1);
+						var midPath:Array=pl.paths[pathIndex];
+						var ptCount:Number=midPath.length;
+						var ptIndex:int=int((ptCount / 2) - 1);
+						pt=pl.getPoint(pathIndex, ptIndex);
+						break;
+					}
+					case Geometry.POLYGON:
+					{
+						var poly:Polygon=gra.geometry as Polygon;
+						pt=poly.extent.center;
+						break;
+					}
+				}
+				return pt;
+			}
+			private function ontextDKFault(info:Object, token:Object=null):void
+			{
+				Alert.show("查询服务出错！");
+			}
+			private function showLayer(plan_num:String):void
+			{
+				lys.visibleLayers = new ArrayCollection([0,2]);
+				var arr:Array = [];
+				var str:String = "PLAN_NUM='" + plan_num + "'";
+				lys.layerDefinitions = [str,"",str,"","","","","","","","",""];
+				lys.visible = true;
+				lys.refresh();
+			}
+			
+			protected function backBtn_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				showInfomationResult();
+			}
+			
+			
+			protected function commenQueryWgt_minimizedHandler(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				wTitle=commenQueryWgt.widgetTitle;
+				commenQueryWgt.widgetTitle="通用查询";
+			}
+			protected function glowLayer_effectEndHandler(event:EffectEvent):void
+			{
+				// TODO Auto-generated method stub
+				event.effectInstance.reverse();
+				event.effectInstance.play();
+			}
+
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+		<esri:GraphicsLayer id="glowLayer"  />
+		<mx:XMLListCollection id="xmlListCollection" />
+		<circle:CustomDraw id="circleTool"
+						   drawStart="drawStartHandler(event)"
+						   drawEnd="drawEnd(event)">
+		</circle:CustomDraw>
+	</fx:Declarations>
+	<viewer:WidgetTemplate id="commenQueryWgt" 
+						   open="commenQueryWgt_openHandler(event)"
+						   minimized="commenQueryWgt_minimizedHandler(event)"
+						   closed="commenQueryWgt_closedHandler(event)">
+		<mx:VBox id="spquery"
+				 visible="false" visible.spquery="true"
+				 width="100%"	 height="100%"
+				 horizontalAlign="center"
+				 verticalAlign="middle">
+			<mx:Label id="graphicallb"
+					  styleName="WidgetText"/>
+			<mx:HBox verticalAlign="middle">
+				<mx:Image source="assets/images/icons/s_polygon.png"
+						  click="{polygonQuery(DrawTool.POLYGON)}"
+						  useHandCursor="true"
+						  buttonMode="true"
+						  toolTip="多边形"
+						  visible="false"
+						  width="32"
+						  height="32"/>
+				<mx:Image source="assets/images/icons/s_circle.png"
+						  click="{polygonQuery('POINTCIRCLE')}"
+						  useHandCursor="true"
+						  buttonMode="true"
+						  toolTip="圆选"
+						  width="32"
+						  height="32"/>
+				
+				<mx:TextInput id="bufferRadius_txt"
+							  text=""
+							  restrict="0-9\."
+							  width="80"
+							  maxChars="10"
+							  enter="radiusTuning()"/>
+				
+				<mx:Text text="米"
+						 styleName="WidgetText"/>
+				
+				<mx:Button label="微调半径"
+						   click="radiusTuning()"/>
+			</mx:HBox>
+			
+			<mx:Button label="清除"
+					   icon="{Clear}"
+					   click="clear()"/>
+		</mx:VBox>
+		<mx:VBox id="queryResult"
+				 width="100%" height="100%"
+				 visible.queryResult="true"
+				 visible="false" >
+			<mx:HBox id="tree_boxMessage"
+					 visible="{tree_msgVisible}"
+					 includeInLayout="{tree_msgVisible}"
+					 width="100%"
+					 paddingLeft="15"
+					 paddingTop="15">
+				<mx:SWFLoader id="tree_swfMessage"
+							  source="assets/flash/loader.swf"/>
+				<mx:Text id="tree_txtMessage"
+						 text="正在查询..."
+						 styleName="WidgetText"
+						 width="90%"/>
+			</mx:HBox>
+			<mx:VBox horizontalAlign="left" visible="{tree_visible}"  width="100%" height="100%" >
+				<s:Label styleName="WidgetText"
+						 text="查询结果："/>
+				<mx:Tree id="emTree"
+						 showDataTips="false"
+						 fontSize="12"
+						 color="0x000000"
+						 borderAlpha="0"
+						 itemClick="emTree_itemClickHandler(event)"
+						 showRoot="false"
+						 labelField="@NAME"
+						 x="0"
+						 y="0"
+						 width="100%"
+						 height="100%">
+				</mx:Tree>
+			</mx:VBox>
+		</mx:VBox>
+		<mx:VBox id="infomationResult" 
+				 width="100%" height="100%"
+				 visible="false" 
+				 visible.infomationResult="true">
+			<mx:HBox id="boxMessage"
+					 visible="{msgVisible}"
+					 includeInLayout="{msgVisible}"
+					 width="100%"
+					 paddingLeft="15"
+					 paddingTop="15">
+				<mx:SWFLoader id="swfMessage"
+							  source="assets/flash/loader.swf"/>
+				<mx:Text id="txtMessage"
+						 text="正在查询..."
+						 styleName="WidgetText"
+						 width="90%"/>
+			</mx:HBox>
+			<mx:DataGrid id="queryDataGrid"
+						 width="100%"
+						 height="100%"
+						 alpha="1"
+						 chromeColor="0xBCE1E9"
+						 headerStyleName="DataGridHeader"
+						 visible="{gridVisible}"
+						 itemClick="dataGridClick(event)">
+				<mx:columns>
+					<mx:DataGridColumn id="firstId" width="0.8" dataField="{dataFieldName}"
+									   headerText="{titleString}"/>
+					<mx:DataGridColumn id="secondId" width="0.4" dataField="{newDataFieldName}" visible="{newFieldVisible}"
+									   headerText="{newTitleString}"/>
+					<mx:DataGridColumn headerText="{infoFieldName}" width="0.2"  visible="{fieldVisible}" >
+						<mx:itemRenderer>
+							<fx:Component>
+								<mx:LinkButton icon="{outerDocument.Search}" click="outerDocument.clickDKHandle()"/>
+							</fx:Component>
+						</mx:itemRenderer>
+					</mx:DataGridColumn>
+					<mx:DataGridColumn width="0.1" headerText="明细" dataField="link" visible="{newLinkFieldVisible}">
+						<mx:itemRenderer>
+							<fx:Component>
+								<mx:LinkButton color="black" icon="{outerDocument.Information}" click="outerDocument.clickHandle()"/>
+							</fx:Component>
+						</mx:itemRenderer>
+					</mx:DataGridColumn>
+				</mx:columns>
+			</mx:DataGrid>
+		</mx:VBox>
+		<mx:VBox id="informationDK" 
+				 visible="false" visible.informationDK="true" 
+				 width="100%" height="100%">
+			<mx:HBox id="dk_boxMessage"
+					 visible="{dk_msgVisible}"
+					 includeInLayout="{dk_msgVisible}"
+					 width="100%"
+					 paddingLeft="15"
+					 paddingTop="15">
+				<mx:SWFLoader id="dk_swfMessage"
+							  source="assets/flash/loader.swf"/>
+				<mx:Text id="dk_txtMessage"
+						 text="正在查询..."
+						 styleName="WidgetText"
+						 width="90%"/>
+			</mx:HBox>
+			<mx:Button id="dkbackBtn" 
+					   width="56"
+					   icon="{Back}" toolTip="返回" 
+					   click="backBtn_clickHandler(event)"/>
+			<mx:DataGrid id="queryDKDataGrid"
+						 width="100%"
+						 height="100%"
+						 alpha="1"
+						 headerStyleName="DataGridHeader"
+						 chromeColor="0xBCE1E9"
+						 visible="{dk_gridVisible}"
+						 itemClick="queryDKDataGrid_dataDKGridClick(event)"
+						 rowHeight="25">
+				<mx:columns>
+					<mx:DataGridColumn id="dgTitle" width="0.4" dataField="title"
+									   headerText="地块编号"/>
+					<mx:DataGridColumn width="0.3" dataField="plot_name"
+									   headerText="用地性质名称"/>
+					<mx:DataGridColumn width="0.3" dataField="plot_class"
+									   headerText="用地性质编号"/>
+				</mx:columns>
+			</mx:DataGrid>
+		</mx:VBox>
+		<mx:VBox id="projectVbox" 
+				 visible="false" visible.projectVbox="true" 
+				 width="100%" height="100%">
+			<mx:Button id="projectBackBtn" 
+					   width="56"
+					   icon="{Back}" toolTip="返回" 
+					   click="backBtn_clickHandler(event)"/>
+			<mx:DataGrid id="queryProjectDataGrid"
+						 width="100%"
+						 height="95%"
+						 alpha="1"
+						 headerStyleName="DataGridHeader"
+						 chromeColor="0xBCE1E9"
+						 itemClick="projectDataGridClick(event)"
+						 rowHeight="25">
+				<mx:columns>
+					<mx:DataGridColumn width="1.0" dataField="buildingName"
+									   headerText="建筑名称"/>
+				</mx:columns>
+			</mx:DataGrid>
+		</mx:VBox>
+	</viewer:WidgetTemplate>	
+</viewer:BaseWidget>

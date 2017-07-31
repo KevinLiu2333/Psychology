@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/176865/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/model/dto
+END
+OrganDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/model/dto/OrganDTO.java
+END
+LeftMenuDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/model/dto/LeftMenuDTO.java
+END
+QueryDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/model/dto/QueryDTO.java
+END
+PageQueryDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/model/dto/PageQueryDTO.java
+END
+FileUploadDTO.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/model/dto/FileUploadDTO.java
+END

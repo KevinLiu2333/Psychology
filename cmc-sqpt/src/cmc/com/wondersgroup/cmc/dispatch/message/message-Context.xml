@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:context="http://www.springframework.org/schema/context"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+                http://www.springframework.org/schema/beans/spring-beans-2.5.xsd  
+        http://www.springframework.org/schema/context  
+        http://www.springframework.org/schema/context/spring-context-2.5.xsd"> 
+    
+	<context:component-scan base-package="com.wondersgroup.cmc.rest" />
+	<bean id="messageRouterService" parent="basicTxProxy">
+		<property name="target" ref="sqymessageRouterServiceImpl"></property>
+	</bean>
+	
+	<bean id="jkfwmessageRouterService" parent="basicTxProxy">
+		<property name="target" ref="jkfwmessageRouterServiceImpl"></property>
+	</bean>
+
+	<bean id="jkfwmessageRouterServiceImpl"
+		class="com.wondersgroup.cmc.dispatch.message.service.impl.JKFW_MessageRouterServiceImpl">
+		<property name="messageRouterServiceImpl" ref="messageRouterServiceImpl"></property>
+		<property name="wsstrategy" ref="sqywsdlstrategy"></property>
+	</bean>
+
+	<bean id="sqymessageRouterServiceImpl"
+		class="com.wondersgroup.cmc.dispatch.message.service.impl.SQY_MessageRouterServiceImpl">
+		<property name="messageRouterServiceImpl" ref="messageRouterServiceImpl"></property>
+		<property name="wsstrategy" ref="sqywsdlstrategy"></property>
+	</bean>
+
+	<bean id="messageRouterServiceImpl"
+		class="com.wondersgroup.cmc.dispatch.message.service.impl.MessageRouterServiceImpl">
+	</bean>
+	
+	<bean id="sqywsdlstrategy"
+		class="com.wondersgroup.cmc.dispatch.message.service.strategy.SQY_WSDLStrategy">
+	</bean>
+	
+	<bean id="reststrategy"
+		class="com.wondersgroup.cmc.dispatch.message.service.strategy.RESTStrategy">
+	</bean>
+</beans>

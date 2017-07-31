@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<queyRange>50</queyRange>
+	<layers>
+	    <xgfw_count>
+			<url>/PDGT_Index/servlet/GetOracleCountData</url>
+			<table>C801_HTJG</table>
+			<column>CGH</column>
+		</xgfw_count>
+		<extentLayer>
+			<name>出让合同</name>
+			<url>arcgis/rest/services/dynamic_pdgt2012/MapServer/50</url>
+			<fields>CGH,GDPW,MISNO,MISNAME,MISDATE,MISAREA,MISID</fields>
+			<fieldsCN>测绘成果号,批复文号,合  同 号,地块名称,出让时间,出让面积</fieldsCN>
+			<linkURL>/pdgtdbc/common/gisRedirect.jsp?funId=Eg&misid=</linkURL>
+		</extentLayer>
+	</layers>
+	<years>
+	     <url>widgets/Query/years.xml</url>
+	</years>
+</configuration>

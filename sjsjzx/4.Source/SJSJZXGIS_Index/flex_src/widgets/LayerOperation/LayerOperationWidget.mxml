@@ -1,0 +1,1016 @@
+<?xml version="1.0" encoding="utf-8"?>
+<viewer:BaseWidget xmlns:viewer="com.esri.viewer.*"
+			xmlns:fx="http://ns.adobe.com/mxml/2009"
+			xmlns:s="library://ns.adobe.com/flex/spark"
+			xmlns:mx="library://ns.adobe.com/flex/mx"
+			xmlns:esri="http://www.esri.com/2008/ags"
+			widgetConfigLoaded="init();"
+		    >
+	
+	<viewer:states>
+		<s:State name="visibleLayers"/>
+		<!--s:State name="concernedLayers"/>
+		<s:State name="emergencyLayers"/-->
+	</viewer:states>
+	
+	<viewer:transitions>
+		<s:Transition autoReverse="true" toState="*">
+			<!--s:Fade targets="{[visibleLayers, concernedLayers, emergencyLayers]}"/-->
+			<s:Fade targets="{[visibleLayers]}"/>
+		</s:Transition>
+	</viewer:transitions>
+	<fx:Script>
+		<![CDATA[
+			import com.esri.ags.FeatureSet;
+			import com.esri.ags.Graphic;
+			import com.esri.ags.geometry.Geometry;
+			import com.esri.ags.geometry.MapPoint;
+			import com.esri.ags.geometry.Multipoint;
+			import com.esri.ags.geometry.Polygon;
+			import com.esri.ags.geometry.Polyline;
+			import com.esri.ags.layers.ArcGISDynamicMapServiceLayer;
+			import com.esri.ags.layers.GraphicsLayer;
+			import com.esri.ags.layers.Layer;
+			import com.esri.ags.layers.supportClasses.LayerInfo;
+			import com.esri.ags.symbols.SimpleFillSymbol;
+			import com.esri.ags.symbols.SimpleLineSymbol;
+			import com.esri.ags.symbols.TextSymbol;
+			import com.esri.ags.tasks.QueryTask;
+			import com.esri.ags.tasks.supportClasses.Query;
+			import com.esri.ags.tools.NavigationTool;
+			import com.esri.viewer.AppEvent;
+			import com.esri.viewer.ViewerContainer;
+			import com.esri.viewer.components.EventsList;
+			import com.esri.viewer.managers.DataManager;
+			import com.esri.viewer.utils.UrlUtil;
+			import com.esri.viewer.utils.UtilsClass;
+			import com.esri.viewer.utils.WidgetEffects;
+			import com.wonders.components.CheckTreeEvent;
+			import com.wonders.components.CheckTreeRenderer;
+			import com.wonders.polygontopoint.PolygonToPointLayer;
+			
+			import mx.collections.ArrayCollection;
+			import mx.collections.XMLListCollection;
+			import mx.controls.Alert;
+			import mx.core.UIComponent;
+			import mx.events.CloseEvent;
+			import mx.events.FlexEvent;
+			import mx.managers.CursorManager;
+			import mx.rpc.AsyncResponder;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			import mx.rpc.http.HTTPService;
+			import mx.utils.StringUtil;
+			
+			import widgets.InfoTemplates.InfoPopupWidget;
+			import widgets.Query.FWSymbol;
+			
+			private var emLayerIndex:Number;
+			private const ICON_URL:String=UrlUtil.URL_DOMAIN + "assets/images/icons/";
+			[Bindable]
+			private var iconClose:String="assets/images/w_down.png";
+			[Bindable]
+			private var iconOpen:String="assets/images/icons/i_zoomfull.png";
+
+			[Bindable]
+			[Embed(source="assets/images/icons/i_refresh.png")]
+			public var Refresh:Class;
+			
+			[Bindable]
+			private var eventType:String;
+			private var eventInfoData:Object;
+			private var treeURL:String;
+			private var zimaoquUrl:String;
+			//当前选择的图层id或资源类型id
+			private var currentlyrID:String="";
+			private var currentlyrName:String="";
+			private var isCheckNotClickItem:Boolean;
+			private var currentLayerXml:XML=<currentLayerNode></currentLayerNode>;
+			[Bindable]
+			private var concernedTreeVisible:Boolean;
+			[Bindable]
+			private var messageText:String;
+			private var resultXML:XML;
+			
+			private var initFinished:Boolean=false;
+			
+			private var treeFinished:Boolean=false;
+			private var emLayer:ArcGISDynamicMapServiceLayer;
+			private var layer:Layer;
+			//地形图年份配置文件
+			private var dxtYears:Array;
+			private function init():void
+			{
+				if (configXML)
+				{
+					treeURL= configXML.treedata.url;
+					emLayerIndex=configXML.emLayerIndex;
+					zimaoquUrl = configData.gisdata_UrlROOT+configXML.zimaoquUrl;
+					//地形图年份配置文件
+					dxtYears = new Array();
+					var dxt:XMLList=configXML.dxtyears.year;
+					for(var i=0; i<dxt.length(); i++){
+					    
+						dxtYears.push(dxt[i]);
+					}
+				}
+				initEmergencyLayersList();
+				wTemplate.addTitlebarButton(ICON_URL + "i_vlayers.png", "当前可见图层", showVisibleLayers);
+//				wTemplate.addTitlebarButton(ICON_URL + "i_clayers.png", "重点关注图层", showConcernedLayers);
+//				wTemplate.addTitlebarButton(ICON_URL + "i_emlayers.png", "图层", showEmergencyLayers);
+				ViewerContainer.addEventListener(AppEvent.EVENT_LIST_UPDATED, setEventType);
+				concernedTree.addEventListener(CheckTreeEvent.CHECK_TREE_CHECKED, ConcernedTreeChange);
+				emTree.addEventListener(CheckTreeEvent.CHECK_TREE_CHECKED, EMTreeChange);
+				initFinished=true;
+			}
+
+
+			private function showEmergencyLayers():void
+			{
+				this.currentState = "emergencyLayers";
+			}
+
+			private function showConcernedLayers():void
+			{
+				this.currentState = "concernedLayers";
+			}
+
+			private function showVisibleLayers():void
+			{
+				this.currentState = "visibleLayers";
+			}
+
+			private function showMessage(msg:String, isTreeVisible:Boolean):void
+			{
+				messageText=msg;
+				concernedTreeVisible=isTreeVisible;
+			}
+
+			private function widgetClosedHandler(event:Event):void
+			{
+				if(emLayer){
+					emLayer.visible=false;
+					emLayer.refresh();
+				}
+				
+				ViewerContainer.removeEventListener(AppEvent.EVENT_LIST_UPDATED,setEventType);
+				setMapNavigation(NavigationTool.PAN, "漫游");
+				ViewerContainer.dispatchEvent(new AppEvent(AppEvent.BASEMAP_SWITCH, "0"));
+			}
+
+			private function widgetOpenedHandler(event:Event):void
+			{
+				//再次打开图层控制时，显示图层
+				
+				if(emLayer){
+					emLayer.visible = true;
+				}
+				//地形图做标志位显示，并且每次都只能显示一个地形图
+				if(layer){
+					layer.visible = true;
+				}
+				ViewerContainer.addEventListener(AppEvent.EVENT_LIST_UPDATED, setEventType);
+				setMapNavigation(NavigationTool.PAN, "漫游");
+			}
+			private function widgetMinimizedHandler(event:Event):void
+			{
+				ViewerContainer.removeEventListener(AppEvent.EVENT_LIST_UPDATED,setEventType);
+			}
+
+			private function setEventType(event:AppEvent):void
+			{
+				var eventinfo:Object=event.data as Object;
+				eventType=eventinfo.type;
+				setConcernedLayers(eventType);
+			}
+
+			private function initEmergencyLayersList():void
+			{
+				var httpservice:HTTPService=new HTTPService();
+				httpservice.url=treeURL;
+				httpservice.showBusyCursor=true;
+				httpservice.addEventListener(FaultEvent.FAULT, onFault);
+				httpservice.addEventListener(ResultEvent.RESULT, onResult);
+				httpservice.resultFormat="e4x";
+				var obj:Object=new Object();
+				obj.flag="layertreeflag";
+				obj.requestinfo="";
+				httpservice.send(obj);
+				function onResult(event:ResultEvent):void
+				{
+
+					var layerRts:XML=(XML)(event.result);
+					resultXML=layerRts;
+					var layerlist:XMLList=layerRts.NODEGroup;
+					if (layerlist.length() > 0)
+					{
+						emTree.dataProvider=layerRts;
+						
+						treeFinished=true;
+					}
+					else
+					{
+						showMessage("暂无重点关注图层。", false);
+					}
+				}
+			}
+
+			private function setConcernedLayers(eventType:String):void
+			{
+				if (eventType != "")
+				{
+					System.useCodePage=true;
+					var obj:Object=new Object();
+					obj.flag="concernedflag";
+					obj.requestinfo=eventType;
+					var httpService:HTTPService=new HTTPService;
+					httpService.showBusyCursor=true;
+					httpService.url=treeURL;
+					httpService.addEventListener(FaultEvent.FAULT, onFault);
+					httpService.addEventListener(ResultEvent.RESULT, ConcernedLayersResult);
+					httpService.send(obj);
+					httpService.resultFormat="e4x";
+					System.useCodePage=false;
+				}
+				else
+				{
+					concernedTree.visible=false;
+				}
+			}
+
+			private function ConcernedLayersResult(event:ResultEvent):void
+			{
+				var xmllist:XMLList=event.result.NODE;
+				if (xmllist.length() > 0)
+				{
+					concernedTree.dataProvider=event.result;
+					showMessage(null, true);
+					var ids:String="";
+					ids=getNodeValue(emTree.dataProvider[0], ids);
+					if (ids != "")
+					{
+						reviewTree(ids,concernedTree);
+					}
+				}
+				else
+				{
+					showMessage("暂无重点关注图层。", false);
+				}
+
+			}
+
+			private function onFault(event:FaultEvent):void
+			{
+				Alert.show(event.message.toString());
+			}
+
+			private function ConcernedTreeChange(event:Event):void
+			{
+				var targetTree:Tree=Tree(event.target);
+				var xmlObj:XML=targetTree.selectedItem as XML;
+				updateOtherTree(emTree, xmlObj);
+			}
+
+			private function EMTreeChange(event:Event):void //重点关联chang
+			{
+				var tree:Tree=event.currentTarget as Tree;
+				var xmlObj:XML=tree.selectedItem as XML;
+				
+				
+//				if (concernedTree.visible)
+//				{
+//					updateOtherTree(concernedTree, xmlObj);
+//				}
+
+			}
+
+			public function updateOtherTree(tree:Tree, node:XML):void
+			{
+				if (node.@isBranch == "true")
+				{
+					for each (var item:XML in node.children())
+					{
+						updateOtherTree(tree, item);
+					}
+				}
+				else
+				{
+					var state:String=node.@state;
+					var id:String=node.@ID;
+
+					var list:Object=tree.dataProvider;
+					var num:Number=list.length;
+					var i:int;
+					for (i=0; i < num; i++)
+					{
+						var titem:XML=list[i];
+						if (titem.@isBranch == "true")
+						{
+							titem.@state=findChild(titem, id, state);
+						}
+						else if (titem.@ID == id)
+						{
+							titem.@state=state;
+						}
+					}
+
+				}
+			}
+
+			private function findChild(node:XML, nodeId:String, nodeState:String):String
+			{
+				var checkedChildren:Number=0;
+				var hasCheckedChildren:Boolean=false;
+
+				for each (var newnode:XML in node.children())
+				{
+					if (newnode.@isBranch == "true")
+					{
+						newnode.@state=findChild(newnode, nodeId, nodeState);
+					}
+					else if (newnode.@ID == nodeId)
+					{
+						newnode.@state=nodeState;
+					}
+
+					if (CheckTreeRenderer.STATE_CHECKED == newnode.@state)
+					{
+						checkedChildren++;
+						hasCheckedChildren=true;
+					}
+					else if (CheckTreeRenderer.STATE_SCHRODINGER == newnode.@state)
+					{
+						hasCheckedChildren=true;
+					}
+				}
+
+				if (checkedChildren == node.children().length())
+				{
+					return CheckTreeRenderer.STATE_CHECKED;
+				}
+
+				if (hasCheckedChildren)
+				{
+					return CheckTreeRenderer.STATE_SCHRODINGER;
+				}
+				else
+				{
+					return CheckTreeRenderer.STATE_UNCHECKED;
+				}
+			}
+
+			private function refreshLayers():void
+			{
+
+				//emLayer=map.layers[emLayerIndex] as ArcGISDynamicMapServiceLayer;
+				emLayer = map.getLayer("专业图层") as ArcGISDynamicMapServiceLayer;
+				var layernames:String="";
+				layernames=this.getNodeName(emTree.dataProvider[0], layernames);
+				var selectedLayerArr:Array=layernames.split(",");
+				var visibleLayerAC:ArrayCollection=new ArrayCollection;
+				var emLayerInfos:Array=emLayer.layerInfos;
+				var visibleList:Array=new Array;
+				
+				for each (var layerinfo:LayerInfo in emLayerInfos)
+				{
+					//把自由贸易试验区示意图图层去掉，不然下面会重复覆盖
+					if (selectedLayerArr.indexOf(layerinfo.name) != -1)
+					{
+						visibleLayerAC.addItem(layerinfo.id);
+						visibleList.push(layerinfo.name);
+					}
+				}
+				if (visibleLayerAC.length >= 20)
+				{
+					Alert.yesLabel="确定";
+					Alert.noLabel="取消";
+					Alert.show("图层总数已超过20，可能会导致加载速度较慢，是否继续？", "提示信息", Alert.YES | Alert.NO, map, selectHandler, null, Alert.NO);
+				}
+				else
+				{
+					executeRefresh();
+				}
+				function selectHandler(event:CloseEvent):void
+				{
+					if (event.detail == Alert.YES)
+					{
+						executeRefresh();
+					}
+					else
+					{
+						//do nothing
+					}
+				}
+
+				function executeRefresh():void
+				{
+						//判断地形图有没有被选择dxtYears
+						for(var i= 0; i<dxtYears.length; i++){
+							if(selectedLayerArr.indexOf(dxtYears[i].toString())!= -1 && selectedLayerArr.length == 2){
+								var view:int = i+4;//"4"是在config.xml文件中，地形图配置的顺序
+								var show:String = "0"+view;
+								ViewerContainer.dispatchEvent(new AppEvent(AppEvent.BASEMAP_SWITCH,show));
+								var data:Object =
+									{ 
+										tool:"zoomfull",status:"全图"
+									};
+								ViewerContainer.dispatchEvent(new AppEvent(AppEvent.SET_MAP_NAVIGATION, data));
+								if(map.scale>2000){
+									map.scale=2000;
+								}
+								layer = map.getLayer(dxtYears[i].toString());
+								break;
+							}else if (selectedLayerArr.indexOf("地形图") != -1 && selectedLayerArr.length == 2 ){
+								ViewerContainer.dispatchEvent(new AppEvent(AppEvent.BASEMAP_SWITCH, "02"));
+								var data:Object =
+									{ 
+										tool:"zoomfull",status:"全图"
+									};
+								ViewerContainer.dispatchEvent(new AppEvent(AppEvent.SET_MAP_NAVIGATION, data));
+								if(map.scale>2000){
+									map.scale=1000;
+								}
+								
+								layer = map.getLayer("地形图");
+								var point:MapPoint = new MapPoint(24346.711,-19167.663);
+								
+								if(layer.visible){
+									map.centerAt(point);
+								}
+								break;
+							}
+							else if (selectedLayerArr.indexOf("新益村") != -1 && selectedLayerArr.length == 2 ){
+								//04表示显示的地图id
+								ViewerContainer.dispatchEvent(new AppEvent(AppEvent.BASEMAP_SWITCH, "04"));
+								var data:Object =
+									{ 
+										tool:"zoomfull",status:"全图"
+									};
+								ViewerContainer.dispatchEvent(new AppEvent(AppEvent.SET_MAP_NAVIGATION, data));
+								if(map.scale>2000){
+									map.scale=1000;
+								}
+								
+								layer = map.getLayer("新益村");
+								var point:MapPoint = new MapPoint(5090.664,13811.443);
+								
+								if(layer.visible){
+									map.centerAt(point);
+								}
+								break;
+							}
+							else if (selectedLayerArr.indexOf("2011年1:1000地形图") != -1 && selectedLayerArr.length == 2 )
+							{
+								ViewerContainer.dispatchEvent(new AppEvent(AppEvent.BASEMAP_SWITCH, "03"));
+								var data:Object =
+									{ 
+										tool:"zoomfull",status:"全图"
+									};
+								ViewerContainer.dispatchEvent(new AppEvent(AppEvent.SET_MAP_NAVIGATION, data));
+								if(map.scale>2000){
+									map.scale=2000;
+								}
+								layer = map.getLayer("地形图1000");
+								var point:MapPoint = new MapPoint(19390.751,528.210);
+								
+								if(layer.visible){
+									map.centerAt(point);
+								}
+								map.scale = 100;
+								break;
+							}else{
+								ViewerContainer.dispatchEvent(new AppEvent(AppEvent.BASEMAP_SWITCH, "0"));
+								emLayer.visibleLayers=visibleLayerAC;
+								emLayer.visible=true;
+								emLayer.alpha = 0.8;
+							}
+						}
+					visibleLayerList.dataProvider=new ArrayCollection(visibleList);
+//					CursorManager.removeBusyCursor();
+//					ViewerContainer.dispatchEvent(new AppEvent(AppEvent.LAYERS_LIST_UPDATED, null, null));
+				}
+			}
+			private function getNodeName(node:XML, layerStr:String):String
+			{
+				if (node.@isBranch == "true")
+				{
+					for each (var element:XML in node.elements())
+					{
+						if (element.@isBranch == "true")
+						{
+							layerStr=getNodeName(element, layerStr);
+						}
+						else
+						{
+							if (element.@state == "checked")
+							{
+								layerStr+=element.@NAME + ",";
+							}
+						}
+					}
+
+				}
+				else
+				{
+					if (node.@state == "checked")
+					{
+						layerStr+=node.@ID + ",";
+					}
+
+				}
+				return layerStr;
+			}
+
+			private function reviewTree(lyrids:String,tree:Tree):void
+			{
+				var lyrArray:Array=lyrids.split(",");
+				resumeLayersId(lyrArray, tree);
+
+			}
+
+			private function resumeLayersId(layerList:Array, tree:Tree):void
+			{
+				var list:Object=tree.dataProvider;
+				if (list)
+				{
+					var num:Number=list.length;
+					var i:int;
+					for (i=0; i < num; i++)
+					{
+						var titem:XML=list[i];
+						if (titem.@isBranch == "true")
+						{
+							titem.@state=findTreeChild(layerList, titem);
+						}
+						else
+						{
+							for (var j:int=0; j < layerList.length; j++)
+							{
+								var id:String=layerList[j];
+								if (titem.@ID == id)
+								{
+									titem.@state="checked";
+									j=layerList.length;
+								}
+								else
+								{
+									titem.@state="unchecked";
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			private function findTreeChild(layerList:Array, xml:XML):String
+			{
+				var checkedChildren:Number=0;
+				var hasCheckedChildren:Boolean=false;
+				for each (var newnode:XML in xml.children())
+				{
+					if (newnode.@isBranch == "true")
+					{
+						newnode.@state=findTreeChild(layerList, newnode);
+					}
+					else
+					{
+						for (var j:int=0; j < layerList.length; j++)
+						{
+							var id:String=layerList[j];
+							if (newnode.@ID == id)
+							{
+								newnode.@state="checked";
+								j=layerList.length;
+							}
+							else
+							{
+								newnode.@state="unchecked";
+							}
+						}
+					}
+
+					if (CheckTreeRenderer.STATE_CHECKED == newnode.@state)
+					{
+						checkedChildren++;
+						hasCheckedChildren=true;
+					}
+					else if (CheckTreeRenderer.STATE_SCHRODINGER == newnode.@state)
+					{
+						hasCheckedChildren=true;
+					}
+				}
+				if (checkedChildren == xml.children().length())
+				{
+					return CheckTreeRenderer.STATE_CHECKED;
+				}
+
+				if (hasCheckedChildren)
+				{
+					return CheckTreeRenderer.STATE_SCHRODINGER;
+				}
+				else
+				{
+					return CheckTreeRenderer.STATE_UNCHECKED;
+				}
+			}
+
+			private function getNodeValue(node:XML, layerStr:String):String
+			{
+				if (node.@isBranch == "true")
+				{
+					for each (var element:XML in node.elements())
+					{
+						if (element.@isBranch == "true")
+						{
+							layerStr=getNodeValue(element, layerStr);
+						}
+						else
+						{
+							if (element.@state == "checked")
+							{
+								layerStr+=element.@ID + ",";
+
+							}
+
+						}
+					}
+
+				}
+				else
+				{
+					if (node.@state == "checked")
+					{
+						layerStr+=node.@ID + ",";
+					}
+
+				}
+				return layerStr;
+			}
+
+			private function searchLayers():void
+			{
+
+				var str:String=StringUtil.trim(this.str.text);
+
+				var result:XMLList;
+				result=this.resultXML..NODE.(@isBranch == false).(@NAME.toString().search(str) > -1);
+				var tempList:XMLListCollection = new XMLListCollection(result);
+				searchList.dataProvider=tempList;
+
+			}
+
+			private function serachLayer():void
+			{
+				var xmlObj:XML=searchList.selectedItem as XML;
+				if (xmlObj != null)
+				{
+					var tempID:String=xmlObj.@ID;
+					var treeData:XMLListCollection=emTree.dataProvider as XMLListCollection;
+					var node:XMLList=treeData[0]..NODE.(@ID == tempID);
+					expandParents(node[0]);
+
+					emTree.selectedItem=node[0];
+					var idx:int=emTree.getItemIndex(node[0]);
+					emTree.scrollToIndex(idx);
+				}
+
+			}
+
+			private function expandParents(node:XML):void
+			{
+				while (node && node.parent() != null)
+				{
+					emTree.expandItem(node, true);
+					node=node.parent();
+				}
+			}
+
+			private function textQuery():void
+			{
+				CursorManager.setBusyCursor();
+				this.showInfoWindow(null);
+				//var extentUrl:String = "http://10.1.64.137:8399/arcgis/rest/services/dynamic_pdgt2012/MapServer/62";			
+				var extentUrl:String =zimaoquUrl
+				if (extentUrl)
+				{
+					var queryTask:QueryTask=new QueryTask(extentUrl);
+					var query:Query=new Query();
+					var expr:String = "1=1";
+					query.where=expr;
+					query.outFields="NAME,REMARK".split(",");
+					query.returnGeometry=true;
+					queryTask.showBusyCursor=true;
+					queryTask.execute(query, new AsyncResponder(ontextResult, ontextFault));
+				}
+				else
+				{
+					CursorManager.removeBusyCursor();
+					//					resultWidget.widgetTitle="测绘成果查询结果（合计"+0+"条)";
+				}
+			}
+			
+			//on fault
+			private function ontextFault(info:Object, token:Object=null):void
+			{
+				CursorManager.removeBusyCursor();
+			}
+			
+			private function ontextResult(featureSet:FeatureSet, token:Object=null):void
+			{
+				CursorManager.removeBusyCursor();
+				if (featureSet.features.length > 0)
+				{
+					try
+					{   						
+						var recAC:ArrayCollection=createRecordData(featureSet);
+						//UtilsClass.zoomToGraphics(map,extentGraphicsLayer);
+					}
+					catch (error:Error)
+					{
+					}
+				}
+				else
+				{
+				}
+			}
+			private function createRecordData(featureSet:FeatureSet):ArrayCollection
+			{
+				var recAC:ArrayCollection=new ArrayCollection();
+				for each (var gra:Graphic in featureSet.features)
+				{
+					//数据构造部分
+					var obj:Object=gra.attributes;
+					var fld:String="";
+					var value:String="";
+					var nameStr:String="";
+					var remark:String="";
+					var content:String="";
+					var point:MapPoint=getGeomCenter(gra);
+					//判断是Title还是Content
+					for (fld in obj)
+					{
+						if(obj[fld]&&obj[fld].toString()!="")
+						{
+							if(obj[fld].toString()=="NULL")
+							{
+								obj[fld]="";
+							}else
+							{
+								value=obj[fld].toString();
+								if (fld.toUpperCase() == "NAME")
+								{
+									nameStr = value;
+								}
+								if(fld=="REMARK")
+								{
+									remark=value;
+								}
+							}
+						}
+					}
+					var times:int = remark.length/10;
+					var tempRemark:String="";
+					for(var i:int=0;i<times;i++){
+						tempRemark = tempRemark + remark.substr(10*i,10); 
+					}
+					tempRemark = tempRemark + remark.substring(times*10,remark.length); 
+					content = "名称:" + nameStr + ";" + "介绍:" + tempRemark + ";";
+					content=content.substring(0,content.length-1);
+					
+					var outlineSym:SimpleLineSymbol = new SimpleLineSymbol("solid",Number("0x00ff00"),0.2,1);
+					gra.symbol=new SimpleFillSymbol("solid",Number("0x00CCCC"),0.9,outlineSym);
+					
+					var infoData:Object={name:nameStr,remark: remark,content: content, point: point, graphic: gra};
+					var textSymbol:TextSymbol=new TextSymbol(gra.attributes.NAME);
+					var textGraphic:Graphic=new Graphic(gra.geometry.extent.center,textSymbol);
+					gra.attributes=infoData;
+					if(recAC&&recAC.length==0){
+						recAC.addItem(infoData);
+					}else {
+						for(var j:int=0;j<recAC.length;j++){
+							var code:String=recAC[j].name;
+							if(nameStr==code){
+								if(recAC[j].graphicsArrCol&&recAC[j].graphicsArrCol.length>0){
+									
+									recAC[j].graphicsArrCol.addItem(gra);
+								}else{
+									var graphicsArrCol:ArrayCollection=new ArrayCollection;
+									graphicsArrCol.addItem(recAC[j].graphic);
+									graphicsArrCol.addItem(gra);
+									recAC[j].graphicsArrCol=graphicsArrCol;
+								}
+								break;
+							}else if(j==recAC.length-1){
+								recAC.addItem(infoData);
+							}
+						}
+					}
+				}
+				return recAC;
+			}
+			private function mouseClickGraphic(event:MouseEvent):void
+			{
+				glowLayer.clear();
+				var graphic:Graphic=event.target as Graphic;
+				if(graphic==null){
+					graphic=event.target.parent  as Graphic;
+				}
+				if(graphic!=null){
+					if(graphic.geometry is Polygon){
+						var gra:Graphic=new Graphic(graphic.geometry,FWSymbol.qszdSelectedGraphicSymbol,graphic.attributes);
+						glowLayer.add(gra);
+					}
+					var infoData:Object=graphic.attributes;
+					this.showInfoWindow(infoData);
+				}
+			}
+			override public function showInfoWindow(infoData:Object):void
+			{
+				if (infoData)
+				{
+					var infoTemplate:InfoPopupWidget=new InfoPopupWidget();
+					map.infoWindow.setStyle("contentBackgroundAlpha", 0.95);
+					map.infoWindow.setStyle("backgroundAlpha", 0.98);
+					map.infoWindow.setStyle("backgroundColor", 0xCBE5FE);
+					map.infoWindow.content = infoTemplate as UIComponent;
+					map.infoWindow.label ="查看自贸区示意图信息";
+					infoTemplate.data = infoData;
+					map.infoWindow.show(infoData.point);
+				}
+				else
+				{
+					map.infoWindow.hide();
+				}
+			}
+			private function getGeomCenter(gra:Graphic):MapPoint
+			{
+				var pt:MapPoint;
+				switch (gra.geometry.type)
+				{
+					case Geometry.MULTIPOINT:
+					{
+						var multiPoint:Multipoint=Multipoint(gra.geometry);
+						pt=MapPoint(multiPoint.points[0]);
+						break;
+						
+					}
+					case Geometry.MAPPOINT:
+					{
+						pt=gra.geometry as MapPoint;
+						break;
+					}
+						
+					case Geometry.POLYLINE:
+					{
+						var pl:Polyline=gra.geometry as Polyline;
+						var pathCount:Number=pl.paths.length;
+						var pathIndex:int=int((pathCount / 2) - 1);
+						var midPath:Array=pl.paths[pathIndex];
+						var ptCount:Number=midPath.length;
+						var ptIndex:int=int((ptCount / 2) - 1);
+						pt=pl.getPoint(pathIndex, ptIndex);
+						break;
+					}
+						
+					case Geometry.POLYGON:
+					{
+						var poly:Polygon=gra.geometry as Polygon;
+						pt=poly.extent.center;
+						break;
+					}
+						
+				}
+				return pt;
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<esri:GraphicsLayer id="glowLayer"  />
+	</fx:Declarations>
+	<viewer:WidgetTemplate id="wTemplate"
+					height="300"
+					width="250"
+					closed="widgetClosedHandler(event)"
+					open="widgetOpenedHandler(event)"
+					minimized="widgetMinimizedHandler(event)">
+		<s:Group id="visibleLayers"
+				 width="100%" height="100%"
+				 visible="false"
+				 visible.visibleLayers="true"
+				 >
+			<!--
+			<s:layout>
+				<s:VerticalLayout gap="1"/>
+			</s:layout>
+			
+				<s:Label styleName="WidgetText"
+						  text="可选图层："/>
+				-->
+				<mx:Tree id="emTree"
+						 showDataTips="true"
+						 fontSize="12"
+						 color="0x000000"
+						  borderAlpha="0"
+						 showRoot="false"
+						 itemRenderer="com.wonders.components.CheckTreeRenderer"
+						 labelField="@NAME"
+						 x="0"
+						 y="0"
+						 width="100%"
+						 itemClick="refreshLayers()"
+						 height="150%"
+						  >
+				</mx:Tree>
+			
+				<s:Group height="0%"
+						   width="0%"
+						   id="canvas1"
+						    visible.visibleLayers="false"
+							visible = "false"
+						   >
+					<s:layout>
+						<s:BasicLayout />
+					</s:layout>
+					<s:Label styleName="WidgetText"
+							  x="0"
+							  y="25"
+							  text="图层名称："
+							  id="label1"/>
+
+					<s:TextInput x="60"
+								  width="90"
+								  y="25"
+								  id="str"/>
+
+					<s:Button label="查询"
+							   x="158"
+							   y="23"
+							   click="searchLayers()"
+							   id="button1"/>
+
+					<s:List fontSize="12"
+							 color="0x000000"
+							 id="searchList"
+							 click="serachLayer()"
+							 labelField="@NAME"
+							 y="50"
+							 width="0%"
+							 height="0%">
+					</s:List>
+					
+				</s:Group>
+			
+		</s:Group>
+			
+		<s:Group id="concernedLayers"
+				 width="0%" height="0%"
+				 visible.visibleLayers="false"
+				 visible="false">
+			<s:layout>
+				<s:VerticalLayout gap="1"/>
+			</s:layout>
+				<s:Label styleName="WidgetText"
+						  text="重点关注图层："/>
+
+				<s:Label id="msgLabel"
+						  text="{messageText}"
+						  styleName="WidgetText"
+						  visible="{!concernedTreeVisible}"
+						  includeInLayout="{!concernedTreeVisible}"/>
+				<mx:Tree id="concernedTree"
+						 alpha="0"
+						 fontSize="12"
+						 labelField="@NAME"
+						 itemRenderer="com.wonders.components.CheckTreeRenderer"
+						 height="0%"
+						 width="0%"
+						 showRoot="false"
+						 color="0xFFFFFF"
+						 showDataTips="true"
+						 visible="{concernedTreeVisible}">
+				</mx:Tree>
+		</s:Group>
+		<s:Group id="emergencyLayers"
+				 width="0%" height="0%"
+				 visible.visibleLayers="false"
+				 visible="false">
+				<s:layout>
+					<s:VerticalLayout gap="1"/>
+				</s:layout>
+				<s:Label styleName="WidgetText"
+						  text="当前可见图层："/>
+
+				<s:List id="visibleLayerList"
+						 width="0%"
+						 height="0%"
+						 borderAlpha="0">
+				</s:List>
+		</s:Group>
+		<s:HGroup bottom="0" height="0" horizontalAlign="center" width="0%" visible.visibleLayers="false">
+			<mx:Button label="刷新图层" click="refreshLayers()" icon="{Refresh}"/>	
+		</s:HGroup>
+			
+	</viewer:WidgetTemplate>
+</viewer:BaseWidget>

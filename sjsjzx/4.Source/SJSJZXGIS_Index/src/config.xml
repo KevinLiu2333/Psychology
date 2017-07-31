@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<database>
+		<driver>oracle.jdbc.driver.OracleDriver</driver>
+		<url>jdbc:oracle:thin:@10.1.8.73:1521:orcl</url>
+		<!--url>jdbc:oracle:thin:@172.24.159.14:1521:gtjdb</url-->
+		<user>pdgtdbc_standard</user>
+		<pass>dba</pass>
+		<maxConnection>20</maxConnection>
+	</database>
+	<databaseSDE>
+		<driver>oracle.jdbc.driver.OracleDriver</driver>
+		<url>jdbc:oracle:thin:@10.1.64.137:1521:orcl</url>
+		<user>sde</user>
+		<pass>orcl</pass>
+		<maxConnection>20</maxConnection>
+	</databaseSDE>
+	<!--信息中心 databaseSDE>
+		<driver>oracle.jdbc.driver.OracleDriver</driver>
+		<url>jdbc:oracle:thin:@172.24.159.14:1521:GISDB</url>
+		<user>sde</user>
+		<pass>sde</pass>
+		<maxConnection>20</maxConnection>
+	</databaseSDE>-->
+	<!-- 信息中心
+	<SDE>
+		<server>172.24.159.14</server>
+		<service>5151</service>
+		<database>sde</database>
+		<user>sde</user>
+		<pass>sde</pass>
+	</SDE>
+	-->
+	<!-- 863 sde-->
+	<SDE>
+		<server>10.1.64.137</server>
+		<service>5151</service>
+		<database>sde</database>
+		<user>sde</user>
+		<pass>orcl</pass>
+	</SDE>
+	
+	
+	<mapServices>
+		<!--mapService name="IntersectMapService" url="http://172.24.159.48:8399/arcgis/services/dynamic_pdgt2012/MapServer" />  -->
+		<mapService name="IntersectMapService" url="http://10.1.64.137:8399/arcgis/services/dynamic_pdgt2012/MapServer" />
+	</mapServices>
+	<IntersectingRoads>
+		<layerName>道路中心线</layerName>
+		<fieldName>NAME</fieldName>
+	</IntersectingRoads>
+	<cad>
+		<path>D:\\gisfile\\</path>
+	</cad>
+	<gisUrl>
+		<path>http://localhost:8989/SJSJZXGIS_Index/servlet/Project</path>
+	</gisUrl>
+	
+	<SDETABLE>
+		<address>C101_XZFW</address>
+		<landusage>C201_YDFW</landusage>
+		<project>C301_GCFW</project>
+	</SDETABLE>
+	  
+	
+</configuration>
+	
+
+

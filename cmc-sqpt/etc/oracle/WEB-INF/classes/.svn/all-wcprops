@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/188569/projects2/CMC/svn/branches/dev/cmc-sqpt/etc/oracle/WEB-INF/classes
+END
+hibernate.cfg.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/188569/projects2/CMC/svn/branches/dev/cmc-sqpt/etc/oracle/WEB-INF/classes/hibernate.cfg.xml
+END
+database.properties
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/188569/projects2/CMC/svn/branches/dev/cmc-sqpt/etc/oracle/WEB-INF/classes/database.properties
+END
+quartz.properties
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/188569/projects2/CMC/svn/branches/dev/cmc-sqpt/etc/oracle/WEB-INF/classes/quartz.properties
+END
+applicationContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/188569/projects2/CMC/svn/branches/dev/cmc-sqpt/etc/oracle/WEB-INF/classes/applicationContext.xml
+END
+cmcContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/188569/projects2/CMC/svn/branches/dev/cmc-sqpt/etc/oracle/WEB-INF/classes/cmcContext.xml
+END

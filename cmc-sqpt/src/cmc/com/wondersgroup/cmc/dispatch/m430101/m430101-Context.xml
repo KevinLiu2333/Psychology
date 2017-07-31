@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- =================================================================== -->
+	<!-- Action Bean Transaction Proxy Define -->
+	<!-- =================================================================== -->
+
+	<bean id="m430101Action" class="com.wondersgroup.cmc.dispatch.m430101.action.M430101Action"
+		singleton="false">
+		<property name="subsysService" ref="subsysService"></property>
+	</bean>
+</beans>

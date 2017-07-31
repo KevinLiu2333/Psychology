@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge
+END
+TwoWayFieldBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/TwoWayFieldBridge.java
+END
+TwoWayString2FieldBridgeAdaptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/TwoWayString2FieldBridgeAdaptor.java
+END
+TwoWayStringBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/TwoWayStringBridge.java
+END
+LuceneOptions.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/LuceneOptions.java
+END
+StringBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/StringBridge.java
+END
+FieldBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/FieldBridge.java
+END
+String2FieldBridgeAdaptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/String2FieldBridgeAdaptor.java
+END
+ParameterizedBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/ParameterizedBridge.java
+END
+BridgeFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/BridgeFactory.java
+END

@@ -1,0 +1,43 @@
+10
+
+dir
+246920
+http://10.1.8.82:1088/svn/projects2/MZJ/sjsjzx/4.Source/Trunk/WebContent/skins/fw
+http://10.1.8.82:1088/svn
+
+
+
+2016-04-21T11:17:26.097125Z
+186156
+sunxin
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9817e563-51b1-004a-bdbd-08a67d9ca217
+
+data
+dir
+
+files
+dir
+
+images
+dir
+
+plugins
+dir
+
+resources
+dir
+

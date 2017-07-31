@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+               xmlns:s="library://ns.adobe.com/flex/spark"
+               xmlns:viewer="com.esri.viewer.*"
+               xmlns:managers="com.esri.viewer.managers.*"
+			   fontFamily="宋体"
+               pageTitle="松江数据中心地理信息系统" 
+			   creationComplete="application1_creationCompleteHandler(event)">
+
+    <fx:Style source="defaults.css"/>
+    <fx:Metadata>
+        [ResourceBundle("ViewerStrings")]
+    </fx:Metadata>
+	<fx:Script>
+		<![CDATA[
+			import com.esri.viewer.AppEvent;
+			import mx.controls.Alert;
+			import mx.events.FlexEvent;
+			
+			import widgets.Bookmark.Bookmark;
+
+			import com.esri.viewer.ConfigData;
+			
+			private var loaded:Boolean=true;
+			private var configData:ConfigData;
+			protected function application1_creationCompleteHandler(event:FlexEvent):void
+			{
+				// TODO Auto-generated method stub
+				ViewerContainer.addEventListener(AppEvent.CONFIG_LOADED, config);
+				ViewerContainer.addEventListener(AppEvent.LAYER_LOADED,layerLoadedFunction);
+				ViewerContainer.addEventListener(AppEvent.REALINFORMATIONWIDGET_RUN,widgetOpenHandler);
+			}
+			private function widgetOpenHandler(e:AppEvent):void
+			{
+			    	
+				var wLabel:String=e.data.toString();
+				var wId:int=findWidgetIdByLabelHandler(wLabel);
+				ViewerContainer.dispatchEvent(new AppEvent(AppEvent.WIDGET_RUN,wId));
+			}
+			private function config(event:AppEvent):void
+			{
+				configData = event.data as ConfigData;
+			}
+			private function findWidgetIdByLabelHandler(label:String):int
+			{
+				var wid:int=-1;
+				if(configData.widgets)
+				{
+					for(var n:int=0;n<configData.widgets.length;n++)
+					{
+						var widgetLabel:String=configData.widgets[n].label;
+						if(label==widgetLabel)
+						{
+							wid=configData.widgets[n].id;
+						}
+					}
+				}
+				return wid;
+			}
+			private function layerLoadedFunction(event:AppEvent):void
+			{
+				if(loaded)
+				{
+					loaded=false;
+					var timer:Timer=new Timer(6000,1);
+					timer.addEventListener(TimerEvent.TIMER_COMPLETE,timerListenerFunction);
+					timer.start();
+				}
+			}
+			private function timerListenerFunction(event:TimerEvent):void
+			{
+				var flag:int=1;
+				ExternalInterface.call("mapLoadedFunction",flag);
+			}
+		]]>
+	</fx:Script>
+    <viewer:ViewerContainer>
+		<viewer:scriptingManager>
+			<managers:ScriptingManager />
+		</viewer:scriptingManager>
+		<viewer:mapManager>
+            <managers:MapManager />
+        </viewer:mapManager>
+        <viewer:uiManager>
+            <managers:UIManager/>
+        </viewer:uiManager>
+        <viewer:widgetManager>
+            <managers:WidgetManager/>
+        </viewer:widgetManager>
+        <viewer:configManager>
+            <managers:ConfigManager/>
+        </viewer:configManager>
+        <viewer:dataManager>
+            <managers:DataManager/>
+        </viewer:dataManager>
+    </viewer:ViewerContainer>
+</s:Application>

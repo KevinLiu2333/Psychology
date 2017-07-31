@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<viewer:BaseWidget xmlns:fx="http://ns.adobe.com/mxml/2009"
+                   xmlns:s="library://ns.adobe.com/flex/spark"
+                   xmlns:viewer="com.esri.viewer.*"
+                   xmlns:Navigation="widgets.Navigation.*"
+                   initialize="basewidget1_initializeHandler(event)"
+                   widgetConfigLoaded="init()">
+    <viewer:states>
+        <s:State name="out"/>
+        <s:State name="over"/>
+    </viewer:states>
+    <fx:Declarations>
+        <s:Fade id="fadeOver"
+                alphaTo="1"
+                effectEnd="navtool.alpha = 1"/>
+		<s:Fade id="fadeOut"
+				alphaTo="0.9"
+				effectEnd="navtool.alpha =0.9"/>
+        <!--s:Fade id="fadeOut"
+                alphaTo="{getStyle('contentBackgroundAlpha') / 2}"
+                effectEnd="navtool.alpha = getStyle('contentBackgroundAlpha') / 2"/-->
+    </fx:Declarations>
+    <fx:Script>
+        <![CDATA[
+            import com.esri.viewer.AppEvent;
+            import com.esri.viewer.ViewerContainer;
+
+            import mx.core.FlexGlobals;
+            import mx.events.FlexEvent;
+
+            private var lastSelectedIndex:int; // selectedIndex for buttonbar containing pan, zoom-in and zoom-out
+
+            protected function basewidget1_initializeHandler(event:FlexEvent):void
+            {
+                ViewerContainer.addEventListener(AppEvent.DATA_PUBLISH, sharedDataUpdated);
+            }
+
+            private function init():void
+            {
+                if (configXML)
+                {
+                    navtool.panwheelItem = new NavToolItem("PanWheel", "", configXML.panwheel.@visible == 'true');
+                    navtool.zoomFullextItem = new NavToolItem(configXML.panwheel.@fullextlabel, configXML.panwheel.@fullexticon, true);
+                    navtool.panupItem = new NavToolItem(configXML.panwheel.@panuplabel, "", true);
+                    navtool.pandownItem = new NavToolItem(configXML.panwheel.@pandownlabel, "", true);
+                    navtool.panleftItem = new NavToolItem(configXML.panwheel.@panleftlabel, "", true);
+                    navtool.panrightItem = new NavToolItem(configXML.panwheel.@panrightlabel, "", true);
+                    navtool.prevextItem = new NavToolItem(configXML.prevextbutton.@label, "", configXML.prevextbutton.@visible == 'true');
+                    navtool.nextextItem = new NavToolItem(configXML.nextextbutton.@label, "", configXML.nextextbutton.@visible == 'true');
+                    navtool.panItem = new NavToolItem(configXML.panbutton.@label, configXML.panbutton.@icon, configXML.panbutton.@visible == 'true');
+                    navtool.zoominItem = new NavToolItem(configXML.zoominbutton.@label, configXML.zoominbutton.@icon, configXML.zoominbutton.@visible == 'true');
+                    navtool.zoomoutItem = new NavToolItem(configXML.zoomoutbutton.@label, configXML.zoomoutbutton.@icon, configXML.zoomoutbutton.@visible == 'true');
+                    navtool.initButtonBar();
+					//默认第一次打开图层控制
+					ViewerContainer.dispatchEvent(new AppEvent(AppEvent.REALINFORMATIONWIDGET_RUN,"图层控制"));	
+                }
+            }
+
+            protected function navtool_creationCompleteHandler(event:FlexEvent):void
+            {
+//                navtool.alpha = FlexGlobals.topLevelApplication.styleManager.getStyleDeclaration('global').getStyle('contentBackgroundAlpha') / 2;
+            }
+
+            private function sharedDataUpdated(event:AppEvent):void
+            {
+                var data:Object = event.data;
+
+                if (data.key == "Edit_Widget") // disable buttonbar when edit widget is opened
+                {
+                    if (data.collection[0])
+                    {
+                        map.cursorManager.removeAllCursors(); // make sure all custom cursors are removed
+                        lastSelectedIndex = navtool.btnBar.selectedIndex;
+                        navtool.btnBar.selectedIndex = 0;
+                        navtool.btnBar.enabled = false;
+                    }
+                    else
+                    {
+                        navtool.btnBar.selectedIndex = lastSelectedIndex;
+                        navtool.btnBar.enabled = true;
+                    }
+                }
+            }
+        ]]>
+    </fx:Script>
+    <Navigation:Navigation id="navtool" alpha="0.9"
+                           creationComplete="navtool_creationCompleteHandler(event)"
+                           map="{map}"
+                           rollOut="fadeOut.play([navtool])"
+                           rollOver="fadeOver.play([navtool])"/>
+</viewer:BaseWidget>

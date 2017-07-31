@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	 ////////////////////////////////////////////////////////////////////////////////
+	 //
+	 // Copyright (c) 2003-2009 Wonders Information Co.,Ltd. All Rights Reserved.
+	 // 5-6/F, 20 Bldg, 481 Guiping RD. Shanghai 200233,PRC
+	 //
+	 // This software is the confidential and proprietary information of Wonders Group.
+	 // (Research & Development Center). You shall not disclose such
+	 // Confidential Information and shall use it only in accordance with
+	 // the terms of the license agreement you entered into with Wonders Group.
+	 //
+	 // Distributable under GUN LGPL license by gun.org
+	 ////////////////////////////////////////////////////////////////////////////////
+-->
+<BaseWidget xmlns="com.esri.viewer.*"
+			xmlns:mx="http://www.adobe.com/2006/mxml"
+			xmlns:esri="http://www.esri.com/2008/ags"
+			widgetConfigLoaded="init()"
+			initialize="basewidget1_initializeHandler(event)"
+			xmlns:aotoSuggest="com.wonders.aotoSuggest.*"
+		    creationComplete="changeTitle()"
+			>
+	<mx:Script>
+		<![CDATA[
+			import com.esri.ags.FeatureSet;
+			import com.esri.ags.Graphic;
+			import com.esri.ags.SpatialReference;
+			import com.esri.ags.events.GeometryServiceEvent;
+			import com.esri.ags.geometry.*;
+			import com.esri.ags.geometry.Geometry;
+			import com.esri.ags.layers.GraphicsLayer;
+			import com.esri.ags.symbols.*;
+			import com.esri.ags.tasks.GeometryService;
+			import com.esri.ags.tasks.QueryTask;
+			import com.esri.ags.tasks.supportClasses.Query;
+			import com.esri.ags.tools.NavigationTool;
+			import com.esri.viewer.AppEvent;
+			import com.esri.viewer.ViewerContainer;
+			import com.esri.viewer.utils.WidgetEffects;
+			import flash.sampler.Sample;
+			import com.esri.viewer.utils.UrlUtil;
+
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.events.FlexEvent;
+			import mx.managers.CursorManager;
+			import mx.rpc.AsyncResponder;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			import mx.rpc.http.HTTPService;
+
+
+			private var configRoad:Array;
+			private var graphicsLayer:GraphicsLayer = new GraphicsLayer();
+			private var graphicsLayer2:GraphicsLayer = new GraphicsLayer();
+			private var districtLayer:String;
+			private var districtExpr:String;
+			private var streetsLayer:String;
+			private var streetsExpr:String;
+			private var streetsNameFields:String;
+			private var streetsNameLayer:String;
+			private var streetsNameExpr:String;
+
+			private var houseNumFields:String;
+			private var houseNumLayer:String;
+			private var houseNumeExpr:String;
+
+			private var outlineSym:SimpleLineSymbol;
+			private var graphicPolySym:SimpleFillSymbol;
+			private var configDistricts:Array;
+			private const ICON_URL:String=UrlUtil.URL_DOMAIN + "assets/images/icons/";
+			private var districtScale:Number;
+			
+			[Bindable]
+			[Embed(source="assets/images/icons/i_redclear.png")]
+			public var Clear:Class;
+			
+
+			private function changeTitle():void
+			{
+				wTemplate.widgetTitle = "居委定位";
+			}
+			private function init():void
+			{
+
+				setMapNavigation(NavigationTool.PAN, "漫游");
+				map.addLayer(graphicsLayer);
+				outlineSym=new SimpleLineSymbol("solid", 0xFF0000, 0.4, 2);
+				graphicPolySym=new SimpleFillSymbol(SimpleFillSymbol.STYLE_CROSS, 0xFF0000, 0.2, outlineSym);
+				
+				configDistricts=new Array();
+				configRoad=new Array();
+				wTemplate.addTitlebarButton(ICON_URL + "i_dis.png", "居委定位", showStreetLocator);
+				if (configXML)
+				{
+					//初始街镇下拉框数据源
+					var districtList:XMLList=configXML.districts.district;
+					for (var i:Number=0; i < districtList.length(); i++)
+					{
+						var districtName:String=districtList[i].name;
+						var districtValue:String=districtList[i].value;
+						var district:Object={label: districtName, data: districtValue}
+						configDistricts.push(district);
+					}
+					
+					//初始区县定位的scale
+					districtScale=configXML.districtScale;
+					
+					//初始区县定位
+					districtLayer=gisdata_UrlROOT + configXML.districtQuery.url;
+					districtExpr=configXML.districtQuery.expression;
+					//初始街道定位
+					streetsLayer= gisdata_UrlROOT + configXML.streetsQuery.url;
+					streetsExpr=configXML.streetsQuery.expression;
+
+					//初始街道与区县级联
+					streetsNameLayer=gisdata_UrlROOT + configXML.streetsNameQuery.url;
+					streetsNameExpr=configXML.streetsNameQuery.expression;
+					streetsNameFields=configXML.streetsNameQuery.outfields;
+
+					districtLocateCbo.dataProvider=configDistricts;
+					streetsBind();
+				}
+				
+				fetchSharedData("getStreet");
+			}
+			
+			private function dataSentHandler(event:AppEvent):void
+			{
+				var key:String=event.data.key.toString();
+				if(key=="getStreet")
+				{
+					if(event.data.data)
+					{
+						findStreetByCode(event.data.data);
+					}
+				}
+			}
+			
+			
+			
+			private function sharedDataUpdated(event:AppEvent):void
+			{	
+				var key:String = event.data.key;
+				if(key=="getStreet")
+				{
+					if(event.data.data)
+					{
+						findStreetByCode(event.data.data);
+					}
+				}
+			}
+			
+			private function findStreetByCode(object:Object):void
+			{
+				var code:String=object.code;
+				if(configDistricts&&configDistricts.length>0)
+				{
+					for(var m:int=0;m<configDistricts.length;m++)
+					{
+						if(configDistricts[m].data==code)
+						{
+							districtLocateCbo.selectedItem=configDistricts[m];
+							streetsBind();
+							districtLocate();
+							break;
+						}
+					}
+				}
+				
+			}
+				
+			private function showStreetLocator():void
+			{
+				//WidgetEffects.flipWidget(this, viewStack, "selectedIndex", 0, 400);
+				wTemplate.widgetTitle = "居委定位";
+			}
+
+			private function districtLocate():void
+			{
+				CursorManager.setBusyCursor();
+				graphicsLayer.clear();
+				var queryTask:QueryTask=new QueryTask(districtLayer);
+				var query:Query=new Query();
+				var expr:String=districtExpr.replace("[value]", districtLocateCbo.selectedItem.data);
+				query.where=expr;
+				query.returnGeometry=true;
+				queryTask.showBusyCursor=true;
+				queryTask.execute(query, new AsyncResponder(onstreetResult, onstreetFault));
+				function onstreetResult(featureSet:FeatureSet, token:Object=null):void
+				{
+					CursorManager.removeBusyCursor();
+					try
+					{
+						for each (var gra:Graphic in featureSet.features)
+						{
+							switch (gra.geometry.type)
+							{
+
+								case Geometry.POLYGON:
+								{
+									gra.symbol=graphicPolySym;
+									break;
+								}
+
+
+
+							}
+							var pt:MapPoint=getGeomCenter(gra);
+							//setMapNavigation(ViewerContainer.NAVIGATION_ZOOM_FULL, "全图");
+							map.centerAt(pt);
+							map.scale=districtScale;
+							graphicsLayer.add(gra);
+							setMapNavigation(NavigationTool.PAN, "漫游");
+
+						}
+					}
+					catch (e:Error)
+					{
+						Alert.show(e.toString());
+					}
+
+				}
+				function onstreetFault(info:Object, token:Object=null):void
+				{
+					CursorManager.removeBusyCursor();
+					Alert.show(info.toString());
+				}
+
+			}
+
+
+
+			private function getGeomCenter(gra:Graphic):MapPoint
+			{
+				var pt:MapPoint;
+				switch (gra.geometry.type)
+				{
+					case Geometry.MULTIPOINT:
+					{
+						var multiPoint:Multipoint=Multipoint(gra.geometry);
+						pt=MapPoint(multiPoint.points[0]);
+						break;
+
+					}
+					case Geometry.MAPPOINT:
+					{
+						pt=gra.geometry as MapPoint;
+						break;
+					}
+
+					case Geometry.POLYLINE:
+					{
+						var pl:Polyline=gra.geometry as Polyline;
+						var pathCount:Number=pl.paths.length;
+						var pathIndex:int=int((pathCount / 2) - 1);
+						var midPath:Array=pl.paths[pathIndex];
+						var ptCount:Number=midPath.length;
+						var ptIndex:int=int((ptCount / 2) - 1);
+						pt=pl.getPoint(pathIndex, ptIndex);
+						break;
+					}
+
+					case Geometry.POLYGON:
+					{
+						var poly:Polygon=gra.geometry as Polygon;
+						pt=poly.extent.center;
+						break;
+					}
+
+				}
+				return pt;
+			}
+
+			private function streetsBind():void
+			{
+				var streetsPro:String=districtLocateCbo.selectedItem.data.toString();
+				streetsNameQuery(streetsPro);
+			}
+
+			private function streetsNameQuery(streetName:String):void
+			{
+				graphicsLayer.clear();
+				var queryTask:QueryTask=new QueryTask(streetsNameLayer);
+				var query:Query=new Query();
+				var expr:String=streetsNameExpr.replace("[value]", streetName);
+				query.where=expr;
+				query.outFields=streetsNameFields.split(",");
+				query.returnGeometry=false;
+				queryTask.showBusyCursor=true;
+				queryTask.execute(query, new AsyncResponder(onResult, onFault));
+				function onResult(featureSet:FeatureSet, token:Object=null):void
+				{
+					try
+					{
+						var streetsNameArr:Array=new Array();
+						for each (var gra:Graphic in featureSet.features)
+						{
+							var obj:Object=gra.attributes;
+							var jwmc:String=obj.NAME.toString();
+							var dataobj:Object={label: jwmc, data: jwmc}
+							streetsNameArr.push(dataobj);
+						}
+						streetLocateCbo.dataProvider=streetsNameArr;
+						setMapNavigation(NavigationTool.PAN, "漫游");
+					}
+
+					catch (e:Error)
+					{
+						Alert.show(e.toString());
+					}
+
+				}
+				function onFault(info:Object, token:Object=null):void
+				{
+					Alert.show(info.toString());
+				}
+			}
+
+			private function streetLocate():void
+			{
+				CursorManager.setBusyCursor();
+				graphicsLayer.clear();
+				var queryTask:QueryTask=new QueryTask(streetsLayer);
+				var query:Query=new Query();
+				var expr:String=streetsExpr.replace("[value]", streetLocateCbo.selectedItem.data.toString());
+				query.where=expr;
+				query.returnGeometry=true;
+				queryTask.showBusyCursor=true;
+				queryTask.execute(query, new AsyncResponder(onResult, onFault));
+				function onResult(featureSet:FeatureSet, token:Object=null):void
+				{
+				   CursorManager.removeBusyCursor();
+					try
+					{
+						for each (var gra:Graphic in featureSet.features)
+						{
+							switch (gra.geometry.type)
+							{
+								case Geometry.POLYGON:
+								{
+									gra.symbol=graphicPolySym;
+									break;
+								}
+							}
+							var pt:MapPoint=getGeomCenter(gra);
+							map.centerAt(pt);
+							map.extent=Polygon(gra.geometry).extent.expand(2);
+							graphicsLayer.add(gra);
+							setMapNavigation(NavigationTool.PAN, "漫游");
+						}
+					}
+					catch (e:Error)
+					{
+						Alert.show(e.toString());
+					}
+
+				}
+				function onFault(info:Object, token:Object=null):void
+				{
+					CursorManager.removeBusyCursor();
+					Alert.show(info.toString());
+				}
+
+			}
+
+
+
+			private function clear():void
+			{
+				graphicsLayer.clear();
+			}
+
+			private function locateWidgetClosed():void
+			{
+				graphicsLayer.visible=false;
+				setMapNavigation(NavigationTool.PAN, "漫游");
+			}
+
+			private function locateWidgetOpened():void
+			{
+				graphicsLayer.visible=true;
+				setMapNavigation(NavigationTool.PAN, "漫游");
+				
+			}
+
+			protected function basewidget1_initializeHandler(event:FlexEvent):void
+			{
+				// TODO Auto-generated method stub
+				ViewerContainer.addEventListener(AppEvent.DATA_SENT,dataSentHandler);
+				ViewerContainer.addEventListener(AppEvent.DATA_PUBLISH, sharedDataUpdated);
+			}
+
+		]]>
+	</mx:Script>
+	<WidgetTemplate id="wTemplate" closed="locateWidgetClosed()" open="locateWidgetOpened()"
+					width="320" height="160">
+			<mx:VBox width="100%" height="100%" verticalGap="1" horizontalAlign="center"
+					 verticalAlign="middle">
+				<mx:Form id="frmLocateCoords"  verticalScrollPolicy="off" width="100%" paddingBottom="4"
+						 paddingTop="2" paddingLeft="4" paddingRight="2" verticalGap="4" horizontalGap="2">
+					<mx:FormItem label="街道定位" styleName="WidgetText" direction="horizontal" visible="false">
+						<mx:ComboBox id="districtLocateCbo"  change="streetsBind()" width="130"/>
+						<mx:Button label="定位" click="districtLocate()"/>
+					</mx:FormItem>
+					<mx:FormItem label="居委定位" styleName="WidgetText" direction="horizontal">
+						<mx:ComboBox id="streetLocateCbo" width="130"/>
+						<mx:Button label="定位" click="streetLocate()"/>
+					</mx:FormItem>
+				</mx:Form>
+				<mx:Button label="清除" click="clear()" icon="{Clear}"/>
+			</mx:VBox>
+	</WidgetTemplate>
+</BaseWidget>

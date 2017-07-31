@@ -1,0 +1,151 @@
+package com.wonders.wddc.tiles.sn;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.nutz.dao.Dao;
+import org.nutz.lang.Strings;
+import org.nutz.log.Log;
+import org.nutz.log.Logs;
+import org.nutz.mvc.Mvcs;
+
+import com.wonders.wddc.tiles.sn.entity.SerialNumberBo;
+
+/**
+ * 序号生成器
+ * 
+ * @author vcixp
+ * 
+ */
+public class SnCreator {
+	/**
+	 * 序号池
+	 */
+	private static Map<String, Long> sn = new HashMap<String, Long>();
+	
+	private static SnCreator instance = null;
+	
+	private static Log log = Logs.get();
+
+	private SnCreator() {
+
+	}
+	
+	public static SnCreator getInstance() {
+		if(instance == null){
+			synchronized(SnCreator.class){
+				if(instance == null){
+					instance = new SnCreator();
+				}
+			}
+		}
+		return instance;
+	}
+	/**
+	 * 初始化序号池
+	 */
+	public void init(){
+		if(sn == null){
+			sn = new HashMap<String, Long>();
+		}
+		Dao dao = Mvcs.ctx().getDefaultIoc().get(Dao.class, "dao");
+		List<SerialNumberBo> list = dao.query(SerialNumberBo.class, null);
+		for(SerialNumberBo number : list){
+			sn.put(number.getId(), number.getCurrentNumber());
+		}
+		log.info("加载了"+list.size()+"条序号");
+	}
+	/**
+	 * 获取序号
+	 * @param id
+	 * 			序号id
+	 * @param bit
+	 * 			位数
+	 * @param prefix
+	 * 			前缀
+	 * @param suffix
+	 * 			后缀
+	 * @return
+	 */
+	public String getSN(String id,int bit,String prefix,String suffix){
+		String serialnumber = "";
+		//加前缀
+		if(!Strings.isEmpty(prefix)){
+			serialnumber += prefix;
+		}
+		//序号
+		long number = 0;
+		SerialNumberBo snobj = new SerialNumberBo();
+		snobj.setId(id);
+		if(sn.get(id)==null){
+			number = 1;
+			snobj.setCurrentNumber(number);
+			Mvcs.ctx().getDefaultIoc().get(Dao.class, "dao").insert(snobj);
+		}else {
+			number = sn.get(id);
+			number++;
+			snobj.setCurrentNumber(number);
+			Mvcs.ctx().getDefaultIoc().get(Dao.class, "dao").update(snobj);
+		}
+		sn.put(id, number);
+		int dbit = bit - snbits(number); //需要补几个0
+		if(dbit>0){
+			serialnumber += Strings.dup("0", dbit);
+		}
+		serialnumber += number;
+		//后缀
+		if(!Strings.isEmpty(suffix)){
+			serialnumber += suffix;
+		}
+		return serialnumber;
+	}
+	/**
+	 * 获取序号
+	 * @param id
+	 * 			序号id
+	 * @param bit
+	 * 			位数
+	 * @param prefix
+	 * 			前缀
+	 * @return
+	 */
+	public String getSN(String id,int bit,String prefix){
+		return getSN(id, bit, prefix, "");
+	}
+	/**
+	 * 获取序号
+	 * @param id
+	 * 			序号id
+	 * @param bit
+	 * 			位数
+	 * @return
+	 */
+	public String getSN(String id,int bit){
+		return getSN(id, bit,"");
+	}
+	/**
+	 * 获取序号
+	 * @param id
+	 * 			序号id
+	 * @param bit
+	 * 			位数
+	 * @return
+	 */
+	public String getSN(String id){
+		return getSN(id, 0);
+	}
+	/**
+	 * 获取号码位数
+	 * @param number
+	 * @return
+	 */
+	private int snbits(long number){
+		int bit=1;
+		while(number >= 10){
+			bit++;
+			number = number / 10;
+		}
+		return bit;
+	}
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<description>交易分发</description>
+	<import resource="classpath:com/wondersgroup/cmc/dispatch/message/message-Context.xml" />
+	<import resource="classpath:com/wondersgroup/cmc/dispatch/subsys/subsys-Context.xml" />
+	<import resource="classpath:com/wondersgroup/cmc/dispatch/ifcheck/ifcheck-Context.xml" />
+	<import resource="classpath:com/wondersgroup/cmc/dispatch/token/token-Context.xml" />
+	<import	resource="classpath:com/wondersgroup/cmc/dispatch/m410101/m410101-Context.xml" />
+	<import	resource="classpath:com/wondersgroup/cmc/dispatch/m420101/m420101-Context.xml" />
+	<import	resource="classpath:com/wondersgroup/cmc/dispatch/m430101/m430101-Context.xml" />
+</beans>

@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!--
+////////////////////////////////////////////////////////////////////////////////
+//
+// Copyright © 2008 ESRI
+//
+// All rights reserved under the copyright laws of the United States.
+// You may freely redistribute and use this software, with or
+// without modification, provided you include the original copyright
+// and use restrictions.  See use restrictions in the file:
+// <install location>/FlexViewer/License.txt
+//
+////////////////////////////////////////////////////////////////////////////////
+-->
+<configuration>
+	<queyRange>18</queyRange>	
+	<layers> 
+		<extentLayer>
+			<name>单元规划范围</name>
+			<url>arcgis/rest/services/dynamic_pdgt2012/MapServer/18</url>
+			<graphicalsearchlabel>从下面选择一种多边形以选定查询范围：</graphicalsearchlabel>
+			<fields>单元编号,单元名称,社区,人口,总面积,居住用地,公共设施,绿地,道路广场,批复时间</fields>
+			<fieldsCN>单元编号,单元名称,社       区,人       口,总  面 积,居住用地,公共设施,绿       地,道路广场,批复时间</fieldsCN>
+			<titlefield>单元编号</titlefield>
+			<linkfield>单元编号</linkfield>
+		</extentLayer>
+		<dyfw_count>
+			<url>/SJSJZXGIS_Index/servlet/GetOracleCountData</url>
+			<table>B201_DYGHFW</table>
+			<column>单元编号</column>
+		</dyfw_count>
+		<areaLayer>
+			<name>单元规划地块</name>
+			<url>arcgis/rest/services/dynamic_pdgt2012/MapServer/19</url>
+			<graphicalsearchlabel>从下面选择一种多边形以选定查询范围：</graphicalsearchlabel>
+			<fields>PLAN_CODE,PLOT_NAME,CUS_TYPE</fields>
+			<fieldsCN>单元编号,用地名称,用地性质</fieldsCN>
+			<titlefield>PLAN_CODE</titlefield>
+			<linkfield></linkfield>
+		</areaLayer>
+	</layers>
+	<districts>
+		<url>widgets/Query/districts.xml</url>
+		<expression>社区  like '%[value]%'</expression>
+	</districts>
+	<years>
+	     <url>widgets/Query/years.xml</url>
+	</years>
+	<linkURL>/page/accumulate/doc_get_fileno.action?单元编号=</linkURL>
+	
+</configuration>

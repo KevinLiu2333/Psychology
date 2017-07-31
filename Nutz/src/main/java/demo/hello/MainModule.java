@@ -10,10 +10,13 @@ import org.nutz.mvc.annotation.*;
  * Time: 9:27
  */
 @ChainBy(type = MyActionChainMaker.class, args = {})
+@Localization(value = "msgs/" ,defaultLocalizationKey="zh_CN")//声明本地化字符串位置
+//应用启动和关闭时的额外处理
+@SetupBy(MainSetup.class)
 public class MainModule {
 
 
-    @At("/hello")//at中支持路径参数,用?做单层通配符,*做多层通配符
+    @At("/hello/?/?")//at中支持路径参数,用?做单层通配符,*做多层通配符
     /**
      *     入口函数，可申明如下注释
      @At - 入口函数对应的 URL 入口函数主要标记，可声明多个URL
@@ -54,6 +57,7 @@ public class MainModule {
                           @Param("::abc.") Abc<jk> abc,
 //                          @Attr注解可以获取req或session里的attr
                           @Attr("me") Object object3) {
+//        return null;走默认视图
         return "Hello " + name;
     }
 

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<viewer:BaseWidget xmlns:viewer="com.esri.viewer.*"
+			xmlns:fx="http://ns.adobe.com/mxml/2009"
+			xmlns:s="library://ns.adobe.com/flex/spark"
+			xmlns:mx="library://ns.adobe.com/flex/mx"
+			widgetConfigLoaded="configLoaded(event)">
+	
+	<fx:Script>
+		<![CDATA[
+			import com.esri.ags.geometry.MapPoint;
+			import com.esri.ags.layers.ArcGISTiledMapServiceLayer;
+			import com.esri.ags.layers.Layer;
+			import com.esri.viewer.AppEvent;
+			import com.esri.viewer.ViewerContainer;
+			
+			import mx.controls.Alert;
+			[Bindable]
+			[Embed(source="assets/images/icons/i_refresh.png")]
+			public var Refresh:Class;
+			private var configLayers:Array=new Array;
+			private var layerId:String="3";
+			protected function configLoaded(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				if (configXML){
+					var layerList:XMLList=configXML.dxtlayers.layer;
+					for (var i:Number=0; i < layerList.length(); i++)
+					{
+						var layerName:String=layerList[i].name;
+						var layerId:String=layerList[i].layerid;
+						var layer:Object={label: layerName, layerid: layerId};
+						configLayers.push(layer);
+					}
+					dxtCom.dataProvider=configLayers;
+				}
+				
+			}
+			
+			protected function refreshLayers(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				layerId=dxtCom.selectedItem.layerid;
+				ViewerContainer.dispatchEvent(new AppEvent(AppEvent.BASEMAP_SWITCH, layerId));
+				var data:Object =
+					{
+						tool:"zoomfull",status:"全图"
+					};
+				ViewerContainer.dispatchEvent(new AppEvent(AppEvent.SET_MAP_NAVIGATION, data));
+				
+				
+				if(map.scale>2000){
+					map.scale=2000;
+				}
+				var lay:Layer = map.getLayer("地形图");
+				var lay1:Layer = map.getLayer("地形图1000");
+				var poingt:MapPoint;
+				poingt = new MapPoint(19401.070,529.401);
+				if(lay1.visible){
+					map.centerAt(poingt);
+				}
+				map.scale = 100;
+				
+			}
+			
+			protected function wTemplate_closedHandler(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				ViewerContainer.dispatchEvent(new AppEvent(AppEvent.BASEMAP_SWITCH, "0"));
+			}
+			
+		]]>
+	</fx:Script>
+	
+	
+	<viewer:WidgetTemplate id="wTemplate" height="200" 	width="260"  closed="wTemplate_closedHandler(event)" >
+		<s:VGroup horizontalAlign="left"  gap="30">
+			<s:HGroup  verticalAlign="middle" paddingLeft="20" paddingTop="30"  horizontalAlign="center">
+				<s:Label  text="图层:"/>
+				<mx:ComboBox id="dxtCom" width="150"/>
+			</s:HGroup>
+			<s:HGroup   height="25"  horizontalAlign="center" width="100%">
+				<mx:Button label="刷新图层" click="refreshLayers(event)" icon="{Refresh}"/>	
+			</s:HGroup>
+		</s:VGroup>
+	</viewer:WidgetTemplate>
+</viewer:BaseWidget>

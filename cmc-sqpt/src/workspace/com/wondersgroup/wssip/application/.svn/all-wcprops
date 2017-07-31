@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/187243/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/com/wondersgroup/wssip/application
+END
+ApplicationConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/com/wondersgroup/wssip/application/ApplicationConstants.java
+END
+wssipAppAction.xml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/com/wondersgroup/wssip/application/wssipAppAction.xml
+END
+RelateDicAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/com/wondersgroup/wssip/application/RelateDicAction.java
+END
+wssipAppContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/!svn/ver/178386/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/com/wondersgroup/wssip/application/wssipAppContext.xml
+END
+SessionConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/!svn/ver/177593/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/com/wondersgroup/wssip/application/SessionConstants.java
+END
+BusinessContextInterceptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/com/wondersgroup/wssip/application/BusinessContextInterceptor.java
+END
+LoginConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/com/wondersgroup/wssip/application/LoginConstants.java
+END

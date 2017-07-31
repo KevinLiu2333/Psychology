@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/203538/projects2/MZJ/sjsjzx/1.%E5%BC%80%E5%8F%91%E5%BA%93/ImpFrkData_SJ/conf
+END
+frk.properties
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/199839/projects2/MZJ/sjsjzx/1.%E5%BC%80%E5%8F%91%E5%BA%93/ImpFrkData_SJ/conf/frk.properties
+END
+quartz_job.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/199839/projects2/MZJ/sjsjzx/1.%E5%BC%80%E5%8F%91%E5%BA%93/ImpFrkData_SJ/conf/quartz_job.xml
+END
+dao.js
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/203538/projects2/MZJ/sjsjzx/1.%E5%BC%80%E5%8F%91%E5%BA%93/ImpFrkData_SJ/conf/dao.js
+END
+quartz.properties
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/199839/projects2/MZJ/sjsjzx/1.%E5%BC%80%E5%8F%91%E5%BA%93/ImpFrkData_SJ/conf/quartz.properties
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/199839/projects2/MZJ/sjsjzx/1.%E5%BC%80%E5%8F%91%E5%BA%93/ImpFrkData_SJ/conf/log4j.properties
+END

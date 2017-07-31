@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<include file="com/wondersgroup/cmc/dispatch/m410101/m410101-Action.xml"></include>
+	<include file="com/wondersgroup/cmc/dispatch/m420101/m420101-Action.xml"></include>
+	<include file="com/wondersgroup/cmc/dispatch/m430101/m430101-Action.xml"></include>
+</struts>

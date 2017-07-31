@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/185481/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/support/timer
+END
+JsonSchedule.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/185481/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/support/timer/JsonSchedule.java
+END
+XmlSchedule.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/183849/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/support/timer/XmlSchedule.java
+END
+XmlJob.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/184424/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/support/timer/XmlJob.java
+END
+JsonJob.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/185481/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/support/timer/JsonJob.java
+END
+XmlCronTrigger.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/185243/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/support/timer/XmlCronTrigger.java
+END
+JsonCronTrigger.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/185481/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/support/timer/JsonCronTrigger.java
+END

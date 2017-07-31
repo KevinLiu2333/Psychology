@@ -1,13 +1,9 @@
 package com.wonders.sjic.entity;
 
-import java.util.UUID;
-
-import org.nutz.dao.entity.annotation.Column;
-import org.nutz.dao.entity.annotation.EL;
-import org.nutz.dao.entity.annotation.Name;
-import org.nutz.dao.entity.annotation.Prev;
-import org.nutz.dao.entity.annotation.Table;
+import org.nutz.dao.entity.annotation.*;
 import org.nutz.lang.Strings;
+
+import java.util.UUID;
 
 /**
  * @author Wanda
@@ -56,8 +52,52 @@ public class InterfaceLogBo {
 	 */
 	@Column("transfer_time")
 	private String transferTime;
-	
-	/**
+
+	@Column("reqmsg")
+	private String reqmsg;
+
+	@Column("resmsg")
+	private String resmsg;
+
+	@Column("transfer_flag")
+	private String transferFlag;
+
+	@Column("errmsg")
+	private String errmsg;
+
+    public String getReqmsg() {
+        return reqmsg;
+    }
+
+    public void setReqmsg(String reqmsg) {
+        this.reqmsg = reqmsg;
+    }
+
+    public String getResmsg() {
+        return resmsg;
+    }
+
+    public void setResmsg(String resmsg) {
+        this.resmsg = resmsg;
+    }
+
+    public String getTransferFlag() {
+        return transferFlag;
+    }
+
+    public void setTransferFlag(String transferFlag) {
+        this.transferFlag = transferFlag;
+    }
+
+    public String getErrmsg() {
+        return errmsg;
+    }
+
+    public void setErrmsg(String errmsg) {
+        this.errmsg = errmsg;
+    }
+
+    /**
      * 生成uuid主键
      * @return
      */

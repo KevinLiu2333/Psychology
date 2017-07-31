@@ -1,0 +1,647 @@
+*{
+   padding:0px;
+   margin:0px;
+}
+
+
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+
+body{
+   cursor: default;
+    font-size:12px;
+}
+
+.background {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+   
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{
+	.background { width: 0; }
+}
+
+.screen ul {
+    padding: 60px 70px 0 70px;
+    height:100%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+
+#container{
+}
+.screen ul li{
+   width: 110px;   
+}
+.block{
+   float:left;
+   display:block;
+   height:115px;
+   text-align:center;
+   overflow:hidden;
+   padding: 15px 10px 0 0;
+}
+
+.block .count{
+   position: absolute;
+   right: -20px;
+   top: -8px;
+   width: 44px;
+   height: 40px;
+   background-repeat: no-repeat;
+   background-image: url('../10/images/count_bg.png')
+}
+
+.icon-text{
+   cursor: pointer;
+	padding-left: 0px;
+	height: 20px;
+	display: inline-block;
+	overflow: hidden;
+	text-align: center;
+/*	background: url('images/icon_text_l.png') 0px 0px no-repeat;*/
+}
+
+.icon-text span{
+    font-family: "Microsoft YaHei","Arial",simsun, sans-serif;
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+    font-size: 14px;
+	/*background: url('images/icon_text_r.png') right center no-repeat;*/
+	color: #454545;
+	padding: 0;
+}
+
+li.block .img{
+	height: 86px;
+	width: 86px;
+	line-height:86px;
+	cursor:pointer;
+	position:relative;
+	margin:0px auto;
+   text-align:center; 
+}
+li.block .img:hover{
+    animation: tada 0.8s ease-in-out;
+    -webkit-animation: tada 0.8s ease-in-out;
+    -moz-animation: tada 0.8s ease-in-out;
+}
+@-webkit-keyframes tada {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes tada {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+li.block .img p{
+   position:static;   
+   +position:absolute;   
+   top:50%       
+}
+
+li.block .img p img {
+	max-height:86px;
+	max-width:86px;
+    position: absolute;
+    vertical-align: middle;
+    width: 65px;
+    height: 65px;
+    top: 50%;
+    left: 50%;   
+    margin-left: -32px;
+    margin-top: -32px; 
+/*    
+    +position:relative;   
+    top:-50%;left:-50%;     
+*/
+ }   
+li.block .img p:after {   
+   content:".";font-size:1px;   
+   visibility:hidden   
+ }   
+
+.block .count1{
+   background-position: -16px -41px;
+}
+.block .count2{
+   background-position: -16px -84px;
+}
+.block .count3{
+   background-position: -16px -126px;
+}
+.block .count4{
+   background-position: -16px -168px;
+}
+.block .count5{
+   background-position: -16px -210px;
+}
+.block .count6{
+   background-position: -16px -252px;
+}
+.block .count7{
+   background-position: -16px -294px;
+}
+.block .count8{
+   background-position: -16px -336px;
+}
+.block .count9{
+   background-position: -16px -378px;
+}
+.block .count10{
+   background-position: -16px -420px;
+}
+
+#trash {
+	position: absolute;
+	left: 50%;
+	width: 128px;
+	height: 128px;
+	bottom: 10px;
+	display: none;
+	background: url('images/slidebox/trash.png') no-repeat center top transparent;
+}
+
+#trash.hover { 
+	background: url('images/slidebox/trash_hover.png') no-repeat center top transparent;
+}
+
+#pageUp {
+	position: absolute;
+	z-index: 3;
+	top: 50%;
+	left: 10px;
+	width: 61px;
+	height: 99px;
+	margin-top: -50px;
+	background: url('images/slidebox/page_up.png') no-repeat left top transparent;
+}
+
+#pageDown {
+	position: absolute;
+	z-index: 3;
+	top: 50%;
+	right: 10px;
+	width: 61px;
+	height: 99px;
+	margin-top: -50px;
+	background: url('images/slidebox/page_down.png') no-repeat left top transparent;
+}
+
+#control { 
+   height: 26px; 
+   position: absolute; 
+   top: 10px; 
+   left: 0; 
+   z-index: 3; 
+   width: 100%; 
+} 
+
+#control table { 
+   margin: 5px auto;
+} 
+
+.control-r a{
+   padding-right: 6px;
+   height: 26px; 
+   width: 26px;
+} 
+
+.control-l { 
+   width: 10px;
+   height: 26px; 
+   background: url('images/slidebox/1.png') no-repeat left top transparent;
+} 
+
+#control a { 
+   top: 0px; 
+   float: left; 
+   width: 26px;
+   height: 26px; 
+   background: url('images/slidebox/3.png') no-repeat center top transparent;
+   display: block; 
+} 
+
+#control a.active { 
+   background: url('images/slidebox/2.png') no-repeat center top transparent;
+} 
+
+#control a.cfg { 
+   height: 26px;
+   width: 19px;
+   float: right; 
+   background: url('images/slidebox/4.png') no-repeat center top transparent;
+} 
+
+#control a.cfg:hover { 
+   background: url('images/slidebox/4-hover.png') no-repeat center top transparent;
+}
+
+.slidebox {
+	position: relative;
+	z-index: 2;	
+}
+
+.add {
+	background: url('images/slidebox/add.png') no-repeat center top transparent;
+}
+
+.add:hover {
+	background: url('images/slidebox/add_hover.png') no-repeat center top transparent;
+}
+/**** end ****/
+#overlay {
+   background:#000;
+   filter:alpha(opacity=60);
+   -moz-opacity:0.6;
+   opacity:0.6;
+}
+
+.table-title{
+   font-size:16px;
+   font-weight:bold;
+   text-align:left;
+   padding-bottom:5px;
+}
+
+.dialog .head {
+	cursor: move;
+}
+
+.dialog .msg-content {
+	overflow-y:auto;
+}
+
+
+.TableTop{
+   border:0px;
+   font-size:12px;
+}
+.TableTop td{
+   height:32px;
+   font-weight:bold;
+   color:#383838;
+   background:url('../10/images/table_top_bg.png') 0px -32px no-repeat;
+}
+.TableTop td.head-left{
+   width:5px !important;
+   background-position:left 0px;
+}
+.TableTop td.head-center{
+   background-position:0px -32px;
+   background-repeat:repeat-x;
+}
+.TableTop td.head-right{
+   width:5px !important;
+   background-position:right -64px;
+}
+
+
+
+.dialog .head .left, .dialog .top .left, .dialog .body .left, .dialog .foot .left{
+   width:10px;
+}
+.dialog .body .center .msg-content{
+   margin:0px 0px;
+   position:relative;
+   overflow-x:hidden;
+   overflow-y:auto;
+}
+
+.extDialog .dialog .head {
+	cursor: default;
+}
+
+.clearfix{
+	border-top:1px solid transparent !important;
+	margin-top:-1px !important;
+	border-top:0;
+	margin-top:0;
+	clear:both;
+	visibility:hidden;	
+}
+#portalSetting{
+	width:100%;
+	height:100%;	
+}
+#portalSetting #appPageDom{
+	display:block;	
+	height:100%;
+}
+#portalSetting #screenPageDom{
+	display:none;
+	height:100%;	
+}
+#portalSetting #bar{
+	line-height:24px;
+	text-align:left;
+	padding-left:10px;
+	background-color:#eee;
+}
+#portalSetting #appPageDom #app_cate_list{
+	width:120px;
+	height:100%;
+	background-color:#F3F3F3;
+	text-align:left;
+	padding:3px 0px;
+	float:left;
+	overflow:auto;
+	border-right:1px solid #D0D0D0;
+}
+#portalSetting #appPageDom #app_list_box{
+	
+}
+#portalSetting #bar #btnAppSet{
+	width:102px;
+	height:22px;
+	display:block;
+	float:left;
+	margin-right:10px;
+	margin-top:8px;
+	cursor:pointer;
+	background:url("images/appbox/bar_btn_appset.png") center center;
+}
+#portalSetting #bar #btnScreenSet{
+	width:102px;
+	height:22px;
+	display:block;
+	float:left;
+	margin-top:8px;
+	margin-right:10px;
+	cursor:pointer;
+	background:transparent url("images/appbox/bar_btn_screenset.png") center center;
+}
+#portalSetting #bar #portalSettingMsg{
+	width:auto;
+	margin-left:100px;
+	display:none;
+	height:38px;
+	line-height:38px;
+	color:Green;	
+}
+#portalSetting #appPageDom #app_cate_list ul{
+	list-style-type:none;
+	width:100%;
+	overflow:hidden;
+	height:300px;
+}
+#portalSetting #appPageDom #app_cate_list .scroll-up,
+#portalSetting #appPageDom #app_cate_list .scroll-down
+{
+   height:10px;
+   overflow:hidden;
+   cursor:pointer;
+   background:url('../10/images/scroll_arrow.png') center 0px no-repeat;
+}
+#portalSetting #appPageDom #app_cate_list .scroll-up{
+   background-position:center -5px;     
+}
+#portalSetting #appPageDom #app_cate_list .scroll-down{
+   background-position:center -23px;     
+}
+#portalSetting #appPageDom #app_cate_list .scroll-up-hover{
+   background-position:center -45px;   
+}
+#portalSetting #appPageDom #app_cate_list .scroll-down-hover{
+   background-position:center -63px;   
+}
+#portalSetting #app_cate_list ul li{
+	width:100%;
+	border-bottom:1px solid #D8D8D8;
+	float:left;
+	height:37px;
+	text-indent:15px;
+	line-height:37px;
+}
+#app_cate_list img {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 3px;
+}
+#portalSetting #app_cate_list ul li a{
+	display:block;
+	height:37px;
+	width:100%;
+	color:#000;
+	overflow:hidden;
+	text-overflow:ellipsis; 
+	white-space:nowrap;
+}
+#portalSetting #app_cate_list ul li a:hover{
+    color:#000;	
+    background-color: #f9f9f9;
+}
+#portalSetting #app_cate_list ul li a.current{
+	color:#333;
+    background-color: #fff;
+}
+
+#portalSetting #app_list_box{
+	overflow:auto !important;		
+}
+#portalSetting #app_list_box ul{
+	padding:10px;
+	list-style-type:none;
+}
+
+#portalSetting #app_list_box ul li{
+	float:left;
+	width:85px;
+	height: 70px;
+	text-align:center;
+	margin-left:30px;
+	margin-bottom:14px;
+	cursor:pointer;
+}
+
+#portalSetting #app_list_box ul li a img{
+	display:block;
+	margin:0 auto;
+    width: 48px;
+    height: 48px;
+}
+
+#portalSetting #app_list_box ul li a{
+	color:#000;
+}
+
+#portalSetting #app_list_box ul li a span.lleft{
+   display:inline-block;
+	height:18px;
+	line-height:18px;
+	margin-top:3px;
+}
+#portalSetting #app_list_box ul li a span.lright{
+   display:inline-block;
+   height:18px;
+   max-width:80px;
+	line-height:18px;
+	overflow:hidden;
+	cursor:pointer;      	
+}
+#portalSetting #app_list_box ul li:hover span.lleft{
+   display:inline-block;
+   height:18px;
+   background:transparent url('images/appbox/app_title_bg.png') no-repeat left 0;
+   padding-left:2px;
+} 
+#portalSetting #app_list_box ul li:hover span.lright{
+   display:inline-block;
+   padding-right:2px;
+   max-width:80px;
+   overflow:hidden;
+	color:#FFF;
+	background:transparent url('images/appbox/app_title_bg.png') no-repeat right -18px;	
+}
+
+#portalSetting #screenPageDom{
+	height:100%; 
+	background-color:#F3F3F3;
+}
+#portalSetting #screenPageDom #screen_list{
+	overflow:auto !important;
+	height:100%;	
+}
+#portalSetting #screenPageDom ul{
+	padding:10px 5px;
+	height:auto;
+	list-style-type:none;
+}
+#portalSetting #screenPageDom ul li{
+	display:block;
+	height:120px;
+	width:240px;
+	line-height:120px;
+	cursor:move;
+	text-align:center;
+	font-family:"Microsoft YaHei","Arial","����";
+	float:left;
+	margin-left:5px;
+	margin-bottom:10px;
+	font-size:40px;
+	color:#FFF;
+	background:transparent url('images/appbox/min_screen_bg.png') no-repeat;
+}
+
+#portalSetting #screenPageDom ul #btnAddScreen{
+	cursor:pointer;
+	background:transparent url('images/appbox/min_screen_bg_add.png') no-repeat;
+}
+
+#portalSetting #screenPageDom ul li{
+	position:relative;	
+}
+#portalSetting #screenPageDom ul li.current{
+	font-size:60px;
+	font-weight:bold;
+}
+
+#portalSetting #screenPageDom ul li .closebtn{
+	width:32px;
+	height:32px;
+	display:block;
+	position:absolute;
+	background:transparent url('images/appbox/close.png') no-repeat center center;
+	cursor:pointer;
+	top:-6px;right:-6px;	
+}
+
+/* appbox icons */
+.appbox_icons{
+    font-family: "iconfont" !important;
+    font-size: 20px;
+    text-align: center;
+    font-style: normal;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+#app_cate_list ul li a i{
+   *zoom: 1;
+   width: 20px;
+   height: 20px;
+   margin-top: -4px;
+   *margin-top: -3px;
+   *margin-right: 5px;
+}
+.ext_data{
+    color: #90a5fe;
+}
+.ext_data:hover{
+    color: #fff;
+}
+#dialog_appbox .dialog .left,
+#dialog_appbox .dialog .right{
+	width:0px;
+}
+#dialog_appbox .dialog .foot{
+	height:0px;
+}
+#dialog_appbox .dialog .head .center .title{
+	padding-left:15px;
+}
+.dialog .body .center #dialog_content_appbox {
+	padding: 0px;
+}
+#dialog_appbox .dialog{
+	border:0px;
+	box-shadow: 1px 1px 15px 3px;
+}
+body #dialog_appbox .dialog .body #dialog_content_appbox {
+	overflow-x:hidden!important;
+}

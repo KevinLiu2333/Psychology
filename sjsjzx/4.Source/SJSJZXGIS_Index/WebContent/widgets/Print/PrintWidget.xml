@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<configuration>
+    <title>上海市浦东新区规土局地理信息系统</title>
+    <subtitle></subtitle>
+    <copyright>版权所有 上海市浦东新区规土局   万达信息股份有限公司 </copyright>
+    <labels>
+    	<titlelabel>标题</titlelabel>
+    	<subtitlelabel>副标题</subtitlelabel>
+    	<submitlabel>打印</submitlabel>
+    </labels>
+</configuration>

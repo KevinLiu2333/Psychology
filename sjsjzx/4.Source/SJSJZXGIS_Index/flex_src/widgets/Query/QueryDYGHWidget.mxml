@@ -1,0 +1,1384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<viewer:BaseWidget xmlns:viewer="com.esri.viewer.*"
+				   xmlns:fx="http://ns.adobe.com/mxml/2009"
+				   xmlns:s="library://ns.adobe.com/flex/spark"
+				   xmlns:mx="library://ns.adobe.com/flex/mx"
+				   xmlns:esri="http://www.esri.com/2008/ags"
+				   widgetConfigLoaded="init();"
+				   xmlns:circle="com.wonders.circle.*"
+				   xmlns:comp="com.esri.viewer.components.*"
+				   xmlns:Query="widgets.Query.*" 
+				   xmlns:symbols="com.esri.ags.symbols.*">
+	<fx:Script>
+		<![CDATA[
+			import adobe.utils.CustomActions;
+			import com.adobe.serialization.json.JSON;
+			import com.esri.ags.FeatureSet;
+			import com.esri.ags.Graphic;
+			import com.esri.ags.SpatialReference;
+			import com.esri.ags.events.DrawEvent;
+			import com.esri.ags.events.GeometryServiceEvent;
+			import com.esri.ags.geometry.Geometry;
+			import com.esri.ags.geometry.MapPoint;
+			import com.esri.ags.geometry.Multipoint;
+			import com.esri.ags.geometry.Polygon;
+			import com.esri.ags.geometry.Polyline;
+			import com.esri.ags.layers.ArcGISDynamicMapServiceLayer;
+			import com.esri.ags.layers.GraphicsLayer;
+			import com.esri.ags.symbols.PictureMarkerSymbol;
+			import com.esri.ags.symbols.SimpleFillSymbol;
+			import com.esri.ags.symbols.SimpleLineSymbol;
+			import com.esri.ags.tasks.GeometryService;
+			import com.esri.ags.tasks.QueryTask;
+			import com.esri.ags.tasks.supportClasses.BufferParameters;
+			import com.esri.ags.tasks.supportClasses.Query;
+			import com.esri.ags.tools.DrawTool;
+			import com.esri.ags.tools.NavigationTool;
+			import com.esri.viewer.AppEvent;
+			import com.esri.viewer.ViewerContainer;
+			import com.esri.viewer.utils.UtilsClass;
+			import com.wonders.circle.CustomDraw;
+			import com.wonders.polygontopoint.PolygonToPointLayer;
+			
+			import flash.net.URLRequest;
+			import flash.net.navigateToURL;
+			import com.esri.ags.geometry.Extent;
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.core.UIComponent;
+			import mx.events.EffectEvent;
+			import mx.events.ItemClickEvent;
+			import mx.events.ListEvent;
+			import mx.formatters.DateFormatter;
+			import mx.managers.CursorManager;
+			import mx.rpc.AsyncResponder;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			import mx.rpc.http.HTTPService;
+			import mx.utils.StringUtil;
+			import com.esri.viewer.utils.UrlUtil;
+
+			import widgets.InfoTemplates.InfoPopupWidget;
+			
+			private var graphicPointSym:PictureMarkerSymbol;
+
+			private var configDistricts:Array;
+			private var districtExpr:String;
+			private var treeURL:String;
+			private var yearURL:String;
+			private var configYear:Array;
+			
+			private const ICON_URL:String=UrlUtil.URL_DOMAIN + "assets/images/icons/";
+			
+			[Bindable]
+			[Embed(source="assets/images/icons/i_redclear.png")]
+			public var Clear:Class;
+			
+			[Bindable]
+			[Embed(source="assets/images/icons/i_query.png")]
+			public var Search:Class;
+			
+			[Bindable]
+			[Embed(source="assets/images/icons/i_information.png")]
+			public var DK_Information:Class;
+			
+			[Bindable]
+			[Embed(source="assets/images/icons/i_back.png")]
+			public var Back:Class;
+			[Bindable]
+			private var msgVisible:Boolean=false;
+			
+			[Bindable]
+			private var dk_msgVisible:Boolean=false;
+
+			private var graphicsLayer:GraphicsLayer;
+			
+			private var plotGraphicsLayer:GraphicsLayer;
+
+			private var dawGraphicsLayer:GraphicsLayer;
+			
+			private var extentGraphicsLayer:PolygonToPointLayer;
+			
+			private var circleDraw:CustomDraw;
+
+			[Bindable]
+			private var gridVisible:Boolean=false;
+			[Bindable]
+			private var dk_gridVisible:Boolean=false;
+			
+			private var linkURL:String;
+		    
+		    private var extentUrl:String;
+		    private var extentExpression:String;
+		    private var extentGraphicalsearchlabel:String;
+		    private var extentFields:String;
+		    private var extentTitlefield:String;
+		    private var extentLinkfield:String;
+		    private var extentIcon:String;
+		    
+		    private var areaUrl:String;
+		    private var areaExpression:String;
+		    private var areaGraphicalsearchlabel:String;
+		    private var areaFields:String;
+		    private var areaTitlefield:String;
+		    private var areaLinkfield:String;
+		    private var areaIcon:String;
+		    
+		    private var flag:String = "1";
+		    
+		    private var resultFWFields:Array;
+		    private var resultFWFieldsCN:Array;
+		    private var fwFieldsCNStr:String;
+		    
+		    private var resultDKFields:Array;
+		    private var resultDKFieldsCN:Array;
+		    private var dkFieldsCNStr:String;
+		    
+		    private var lys:ArcGISDynamicMapServiceLayer;
+		    
+			private var wTitle:String="";
+			private var queryResultCount:int=-1;
+			private var queryResultDKCount:int=-1;
+			
+			private var ydfwCountUrl="";
+			private var ydfwCountTable="";
+			private var ydfwColcum="";
+			//查询范围id
+			private var queryRange:Number;
+
+			private function init():void
+			{
+				graphicsLayer=new GraphicsLayer;
+				plotGraphicsLayer=new GraphicsLayer;
+				plotGraphicsLayer.addEventListener(MouseEvent.CLICK,plotMouseClickGraphic);
+				dawGraphicsLayer=new GraphicsLayer;
+				extentGraphicsLayer=new PolygonToPointLayer(map);
+				extentGraphicsLayer.addEventListener(MouseEvent.CLICK,extentMouseClickGraphic);
+				configDistricts=new Array();
+				configYear=new Array();
+				map.addLayer(dawGraphicsLayer);
+				map.addLayer(extentGraphicsLayer);
+				//map.addLayer(graphicsLayer);
+				map.addLayer(plotGraphicsLayer);
+				glowLayer.addEventListener(MouseEvent.CLICK,extentMouseClickGraphic);
+				map.addLayer(glowLayer);
+				setMapNavigation(NavigationTool.PAN, "漫游");
+				lys =map.getLayer("专业图层") as ArcGISDynamicMapServiceLayer;
+				//将动态地图放到顶层来显示
+				map.reorderLayer(lys.id,map.layerIds.length as int);
+				if (configXML)
+				{
+					queryRange = configXML.queyRange;
+					treeURL= configXML.districts.url;
+					districtExpr=configXML.districts.expression;
+					extentUrl = configData.gisdata_UrlROOT + configXML.layers.extentLayer.url;
+				    extentExpression = configXML.layers.extentLayer.expression;
+				    extentGraphicalsearchlabel=configXML.layers.extentLayer.graphicalsearchlabel;
+				    extentFields=configXML.layers.extentLayer.fields;
+				    extentTitlefield=configXML.layers.extentLayer.titlefield;
+				    extentLinkfield=configXML.layers.extentLayer.linkfield;
+				    extentIcon=ICON_URL + configXML.layers.extentLayer.icon;
+				    resultFWFields = extentFields.split(",");
+				    fwFieldsCNStr = configXML.layers.extentLayer.fieldsCN;
+				    resultFWFieldsCN = fwFieldsCNStr.split(",");
+				    
+					ydfwCountUrl=configXML.layers.dyfw_count.url.toString();
+					ydfwCountTable=configXML.layers.dyfw_count.table.toString();
+					ydfwColcum = configXML.layers.dyfw_count.column.toString();
+					
+				    areaUrl = configData.gisdata_UrlROOT + configXML.layers.areaLayer.url;
+				    areaExpression = configXML.layers.areaLayer.expression;
+				    areaGraphicalsearchlabel=configXML.layers.areaLayer.graphicalsearchlabel;
+				    areaFields=configXML.layers.areaLayer.fields;
+				    areaTitlefield=configXML.layers.areaLayer.titlefield;
+				    areaLinkfield=configXML.layers.areaLayer.linkfield;
+				    areaIcon=ICON_URL + configXML.layers.areaLayer.icon;
+				    dkFieldsCNStr = configXML.layers.areaLayer.fieldsCN;
+				    resultDKFields = areaFields.split(",");
+				    resultDKFieldsCN = dkFieldsCNStr.split(",");
+				    
+				  
+					linkURL =configData.project_UrlROOT+configXML.linkURL;
+				    graphicallb.text = extentGraphicalsearchlabel;
+					
+				}
+				
+				//初始社区下拉框数据源
+				var httpservice:HTTPService=new HTTPService();
+				httpservice.url=treeURL;
+				httpservice.resultFormat="e4x";
+				var obj:Object=new Object();
+				httpservice.addEventListener(ResultEvent.RESULT, onResult);
+				obj.flag="districtsflag";
+				obj.requestinfo="";
+				httpservice.send(obj);	
+				function onResult(event:ResultEvent):void
+				{
+					var district:Object;
+					district={label: "社区", data: "社区"}
+					configDistricts.push(district);
+					var layerRts:XML=(XML)(event.result);
+					var districtList:XMLList=layerRts.district;
+					for (var i:Number=0; i <districtList.length(); i++)
+					{
+						var districtName:String=districtList[i].name;
+						var districtValue:String=districtList[i].value;
+						district={label: districtName, data: districtValue}
+						configDistricts.push(district);
+					}
+					DistrictLocate.dataProvider=configDistricts;
+				}	
+				
+				
+				//动态初始化年份
+				var now:Date=new Date();
+				var yearValue:Number = now.fullYear;
+				var dateyear:Object;
+				for (var j:Number=1993; j <=yearValue; j++)
+				{
+					var yearvalue:String=j.toString();
+					dateyear={label:yearvalue}
+					configYear.push(dateyear);
+				}
+				configYear.push("-------年份------");
+				YearLocate.dataProvider=configYear.reverse();
+				
+				wTemplate.addTitlebarButton(ICON_URL + "i_atquery.png", "单元规划属性查询", showStateCoordinates);
+				//wTemplate.addTitlebarButton(ICON_URL + "i_spquery.png", "单元规划空间查询", showStateAddress);
+				wTemplate.addTitlebarButton(ICON_URL +"i_table.png", "单元规划信息", showStateResults);
+
+				//初始圆选工具
+				circleTool.map=map;
+				circleTool.graphicsLayer=dawGraphicsLayer;
+				circleTool.displayRadius=false;
+				circleTool.displayCenter=true;
+				//获取地块样式
+				DKSymbol.getInstance();
+				FWSymbol.getInstance();
+				lysShow();
+				
+				
+				if(configData.preloadWidget.search("Cb")!=-1&&configData.preSearchStr&&configData.preSearchStr!="")
+				{
+					planNum.text=decodeURI(configData.preSearchStr);
+					textQuery();
+					
+				}
+			}
+			private function lysShow(){
+				
+				var leftmin  = configData.extentdata_LEFTMIN ;
+				var leftmax  = configData.extentdata_LEFTMAX ;
+				var rightmin = configData.extentdata_RIGHTMIN ;
+				var rightmax = configData.extentdata_RIGHTMAX ;				
+				var extent:Extent = new Extent(leftmin , rightmin , leftmax , rightmax);
+				map.extent = extent;
+				var LayerAC:ArrayCollection=new ArrayCollection;
+				LayerAC.addItem(queryRange);
+				lys.visibleLayers = LayerAC;
+				lys.visible = true;
+				lys.alpha = 0.7;
+				
+			}
+			private function getLayerExpr(event:AppEvent):void
+			{
+				var obj:Object=event.data;
+
+				var num:String=obj.num.toString();
+				var gname:String=obj.gname.toString();
+				var startdate:String=obj.startdate.toString();
+				var enddate:String=obj.enddate.toString();
+				
+				num = num.replace('(','_').replace(')','_').replace('（','_').replace('）','_').replace('[','_').replace(']','_').replace('【','_').replace('】','_');
+				planNum.text = num;
+				textQuery();
+			}
+
+			public static function URLEncodeChange(p:String,chartSet:String):String
+			{
+				var result:String ="";
+				var byte:ByteArray =new ByteArray();
+				byte.writeMultiByte(p,chartSet);
+				for(var i:int;i<byte.length;i++)
+				{
+					result += escape(String.fromCharCode(byte[i]));
+				}
+				return result;
+			}
+
+			private function queryWidgetClosed():void
+			{
+				graphicsLayer.visible=false;
+				plotGraphicsLayer.visible=false;
+				dawGraphicsLayer.visible=false;
+				extentGraphicsLayer.visible=false;
+				glowLayer.visible=false;
+				lys.visible=false;
+				setMapNavigation(NavigationTool.PAN, "漫游");
+				this.showInfoWindow(null);
+			}
+
+			private function queryWidgetOpened():void
+			{
+				if(flag == "4")
+				{
+					if(extentGraphicsLayer)
+					{
+						glowLayer.visible=false;
+						graphicsLayer.visible=false;
+						plotGraphicsLayer.visible=true;
+						dawGraphicsLayer.visible=false;
+						extentGraphicsLayer.visible=false;
+					}
+				}
+				else
+				{
+					if(extentGraphicsLayer)
+					{
+						glowLayer.visible=true;
+						graphicsLayer.visible=true;
+						plotGraphicsLayer.visible=false;
+						dawGraphicsLayer.visible=true;
+						extentGraphicsLayer.visible=true;
+					}
+				}
+				if(wTitle!="")
+				{
+					wTemplate.widgetTitle=wTitle;
+				}
+				if(lys){
+					lysShow();
+				}
+				setMapNavigation(NavigationTool.PAN, "漫游");
+			}
+
+
+			private function showStateAddress():void
+			{
+				flag = "2";
+				viewStack.selectedIndex=1;
+				wTemplate.selectedTitlebarButtonIndex=1;
+				wTemplate.widgetTitle="单元规划空间查询";
+				dawGraphicsLayer.visible=true;
+				this.showInfoWindow(null);
+			}
+
+			private function showStateCoordinates():void
+			{
+				flag = "1";
+				viewStack.selectedIndex=0;
+				wTemplate.selectedTitlebarButtonIndex=1;
+				wTemplate.widgetTitle="单元规划属性查询";				
+				this.showInfoWindow(null);
+
+			}
+
+			private function showStateResults():void
+			{
+				glowLayer.visible=true;
+				extentGraphicsLayer.visible=true;
+				plotGraphicsLayer.visible=false;
+				graphicsLayer.visible=false;
+				dawGraphicsLayer.visible=true;
+				flag = "3";
+				viewStack.selectedIndex=2;
+				wTemplate.selectedTitlebarButtonIndex=2;
+				if(queryResultCount!=-1){
+					wTemplate.widgetTitle="单元规划查询结果（合计"+queryResultCount+"条)";
+				}else{
+					wTemplate.widgetTitle="单元规划查询结果";
+				}
+				
+				this.showInfoWindow(null);
+
+			}
+			
+			private function showDKResults():void
+			{
+				glowLayer.visible=false;
+				extentGraphicsLayer.visible=false;
+				plotGraphicsLayer.visible=true;
+				graphicsLayer.visible=true;
+				flag = "4";
+				viewStack.selectedIndex=3;
+				wTemplate.selectedTitlebarButtonIndex=3;
+				if(queryResultDKCount!=-1){
+					wTemplate.widgetTitle="单元规划地块查询结果(合计"+queryResultDKCount+")条";
+				}else{
+					wTemplate.widgetTitle="单元规划地块查询结果";
+				}
+				
+				
+				this.showInfoWindow(null);
+
+			}
+			
+			private function tableCountQuery(XZ_ID:String):void
+			{
+				//先查询一下这个图层数据的总数
+				CursorManager.setBusyCursor();	
+				if (ydfwCountUrl)
+				{
+					var whereStr:String = "where 1=1";
+					whereStr+=" and "+XZ_ID;
+					var httpCount:HTTPService=new HTTPService();
+					httpCount.url=ydfwCountUrl;
+					httpCount.resultFormat="e4x";
+					httpCount.method="post";
+					httpCount.addEventListener(ResultEvent.RESULT, count_onResult);
+					httpCount.addEventListener(FaultEvent.FAULT, count_onFault);
+					var random:Number=Math.random();
+					var obj:Object=new Object();
+					obj.table=ydfwCountTable;
+					obj.database="sde";
+					obj.action="query";
+					obj.column=ydfwColcum;
+					obj.tablename = ydfwCountTable;
+					obj.whereClause = whereStr;
+					obj.random=random;
+					httpCount.send(obj);
+					function count_onResult(event:ResultEvent):void
+					{
+						var count:String  = JSON.decode(event.result.toString());
+						CursorManager.removeBusyCursor();
+						wTemplate.widgetTitle="单元规划查询结果（合计"+count+"条)";
+						
+					}	
+					function count_onFault(event:FaultEvent):void
+					{
+						showMessage("没有查询到相关信息", false,true);
+						CursorManager.removeBusyCursor();
+					}
+				}
+			}
+			private function textQuery():void
+			{
+				CursorManager.setBusyCursor();
+				this.showInfoWindow(null);
+				graphicsLayer.clear();
+				plotGraphicsLayer.clear();
+				dawGraphicsLayer.clear();
+				extentGraphicsLayer.clear();
+				glowLayer.clear();
+
+				queryDataGrid.dataProvider=null;
+				queryDKDataGrid.dataProvider=null;
+				gridVisible=false;
+				dk_gridVisible=false;
+				lys.visible = false;
+				showMessage("正在查询...", true,true);
+				showStateResults();
+				wTemplate.widgetTitle="单元规划查询结果";
+				setMapNavigation(NavigationTool.PAN, "漫游");
+
+				if (extentUrl)
+				{
+					var queryTask:QueryTask=new QueryTask(extentUrl);
+					var query:Query=new Query();
+					var expr:String = "1=1";
+					
+						var df_start:DateFormatter= new DateFormatter();
+						df_start.formatString='YYYY-MM-DD'
+						
+						var df_end:DateFormatter= new DateFormatter();
+						df_end.formatString='YYYY-MM-DD';
+						
+						if(DistrictLocate.selectedIndex!=-1&&DistrictLocate.selectedIndex!=0){
+							expr += " and 社区 like '%" + DistrictLocate.selectedItem.label.toString() + "%'";
+						}
+						if(planNum.text!=""){
+							expr += " and 单元编号 like '%" + StringUtil.trim(planNum.text) + "%'";
+						}
+					
+						if(YearLocate.selectedIndex!=0){
+							var date_start_s:Date=new Date(YearLocate.selectedItem.label,0,1);
+							expr += " and 批复时间 > date '" + df_start.format(date_start_s) + "'";	
+							var date_end_e:Date=new Date(YearLocate.selectedItem.label,11,31);
+							expr += " and 批复时间 < date '" + df_end.format(date_end_e) + "'";
+						}
+					//先查询count数	
+					tableCountQuery(expr);									
+					query.where=expr;
+					query.outFields=extentFields.split(",");
+					query.returnGeometry=true;
+					queryTask.showBusyCursor=true;
+					queryTask.execute(query, new AsyncResponder(ontextResult, ontextFault));
+				}
+				else
+				{
+					showStateResults();
+					showMessage("查询图层不存在", false,true);
+//					wTemplate.widgetTitle="单元规划查询结果（合计"+0+"条)";
+					wTemplate.widgetTitle="单元规划查询结果";
+				}
+
+			}
+			
+			//on fault
+			private function ontextFault(info:Object, token:Object=null):void
+			{
+				CursorManager.removeBusyCursor();
+				showMessage(info.toString(), false,true);
+				showStateResults();
+				wTemplate.widgetTitle="单元规划查询结果";
+			}
+			
+			private function ontextResult(featureSet:FeatureSet, token:Object=null):void
+			{
+				CursorManager.removeBusyCursor();
+				if (featureSet.features.length > 0)
+				{
+					try
+					{   						
+						var recAC:ArrayCollection=createRecordData(featureSet);
+						queryDataGrid.dataProvider=recAC;
+						queryResultCount=recAC.length;
+						//wTemplate.widgetTitle="单元规划查询结果（合计"+queryResultCount+"条)";
+						gridVisible=true;
+						showMessage("", false,false);
+						UtilsClass.zoomToGraphics(map,extentGraphicsLayer);
+					}
+					catch (error:Error)
+					{
+						showMessage(error.message, false,true);
+					}
+				}
+				else
+				{
+					showMessage("暂无符合条件的记录!", false,true);
+					showStateResults();
+//					wTemplate.widgetTitle="单元规划查询结果（合计"+0+"条)";
+					wTemplate.widgetTitle="单元规划查询结果";
+				}
+			}
+			private function polygonQuery(value:String):void
+			{
+				graphicsLayer.clear();
+				plotGraphicsLayer.clear();
+				dawGraphicsLayer.clear();
+				extentGraphicsLayer.clear();
+				glowLayer.clear();
+				this.showInfoWindow(null);
+				setMapNavigation(NavigationTool.PAN, "漫游");
+				switch (value)
+				{
+					case DrawTool.POLYGON:
+					{
+						setMapAction(value, "多边形",new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID, 0x3FAFDC, 0.5, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, 0x3FAFDC, 1, 1)), drawEnd);
+						break;
+					}
+					case DrawTool.EXTENT:
+					{
+						setMapAction(value, "框选", new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID, 0x3FAFDC, 0.5, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, 0x3FAFDC, 1, 1)), drawEnd);
+						break;
+					}
+					case "CIRCLE":
+					{
+						setMapAction(value, "圆选", null,null);
+						circleTool.activate(CustomDraw.CIRCLE);
+						break;
+					}
+					case DrawTool.POLYLINE:
+					{
+						setMapAction(value, "线形",new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, 0x3FAFDC, 1, 1), drawEnd);
+						break;
+					}
+				}
+			}
+
+			//绘制完成，在graphiclayer上添加graphic 并将该多边形的点位传送给服务器端
+			private function drawEnd(event:DrawEvent):void
+			{
+				CursorManager.setBusyCursor();
+				graphicsLayer.clear();
+				plotGraphicsLayer.clear();
+				dawGraphicsLayer.clear();
+				extentGraphicsLayer.clear();
+				glowLayer.clear();
+				gridVisible=false;
+				queryDataGrid.dataProvider=null;
+				dk_gridVisible=false;
+				lys.visible = false;
+				queryDKDataGrid.dataProvider=null;
+				showStateResults();
+				wTemplate.widgetTitle="单元规划查询结果";
+				showMessage("正在查询...", true,true);
+				circleTool.deactivate();
+				setMapNavigation(NavigationTool.PAN,"漫游");
+				var gra:Graphic=event.graphic as Graphic;
+
+				if (gra.attributes)
+				{
+					if (gra.attributes.type == CustomDraw.CUSTOM_CIRCLE)
+					{
+						//TODO:是否需要添加中心点
+						var obj:Object=gra.attributes;
+						bufferRadius_txt.text=Number(obj.radius).toFixed(0);
+					}
+
+				}
+				gra.symbol=FWSymbol.dyDrawGraphicSymbol;
+				dawGraphicsLayer.add(gra);
+				exeQuery(event.graphic.geometry);
+			}
+
+			private function exeQuery(geometry:Geometry):void
+			{
+					if ((extentUrl) && (geometry))
+					{
+						var queryTask:QueryTask=new QueryTask(extentUrl);
+						var query:Query=new Query();
+						query.outFields=extentFields.split(",");
+						var expr:String = "1=1";
+						var df_start:DateFormatter= new DateFormatter();
+						//df_start.formatString='YYYY-MM-DD'
+						
+						var df_end:DateFormatter= new DateFormatter();
+						//df_end.formatString='YYYY-MM-DD';
+						
+						if(DistrictLocate.selectedIndex!=-1&&DistrictLocate.selectedIndex!=0){
+							//expr += " and 社区 like '%" + DistrictLocate.selectedItem.label.toString() + "%'";
+						}
+						if(planNum.text!=""){
+							//expr += " and 单元编号 like '%" + StringUtil.trim(planNum.text) + "%'";
+						}
+						if(YearLocate.selectedIndex==-1){
+							var date_start:Date=new Date(2012,0,1);
+							//expr += " and 批复时间 > date '" + df_start.format(date_start) + "'";		
+							
+							var date_end:Date=new Date(2012,11,31);
+							//expr += " and 批复时间 < date '" + df_end.format(date_end) + "'";		
+						}
+						else{
+							if(YearLocate.selectedIndex!=-1&&YearLocate.selectedIndex!=0){
+								var date_start_s:Date=new Date(YearLocate.selectedItem.label,0,1);
+								//expr += " and 批复时间 > date '" + df_start.format(date_start_s) + "'";							
+							}
+							if(YearLocate.selectedIndex!=-1&&YearLocate.selectedIndex!=0){
+								var date_end_e:Date=new Date(YearLocate.selectedItem.label,11,31);
+								//expr += " and 批复时间 < date '" + df_end.format(date_end_e) + "'";							
+							}
+						}
+						query.where=expr;
+						query.returnGeometry=true;
+						query.geometry=geometry;
+						try
+						{
+							queryTask.execute(query, new AsyncResponder(ongraphicalResult, ongraphicalFault));
+						}
+						catch (error:Error)
+						{
+							Alert.show(error.toString());
+						}
+					}
+			}
+			//on fault
+			private function ongraphicalFault(info:Object, token:Object=null):void
+			{
+				//Alert.show(info.toString());
+				setMapNavigation(NavigationTool.PAN, "漫游");
+				gridVisible=false;
+				queryDataGrid.dataProvider=null;
+				dk_gridVisible=false;
+				queryDKDataGrid.dataProvider=null;
+				showMessage(info.toString(), false,true);
+			}
+
+			private function ongraphicalResult(featureSet:FeatureSet, token:Object=null):void
+			{
+				CursorManager.removeBusyCursor();
+				if (featureSet.features.length > 0)
+				{
+					try
+					{
+						var recAC:ArrayCollection=createRecordData(featureSet);
+						queryDataGrid.dataProvider=recAC;
+						queryResultCount=recAC.length;
+						wTemplate.widgetTitle="单元规划查询结果（合计"+queryResultCount+"条)";
+						showMessage("", false,false);
+						gridVisible=true;
+					}
+					catch (error:Error)
+					{
+						showMessage(error.message, false,true);
+					}
+				}
+				else
+				{
+					showMessage("暂无符合条件的记录！", false,true);
+//					wTemplate.widgetTitle="单元规划查询结果（合计"+0+"条)";
+					wTemplate.widgetTitle="单元规划查询结果";
+				}
+			}
+
+			private function clear():void
+			{
+
+				graphicsLayer.clear();
+				plotGraphicsLayer.clear();
+				dawGraphicsLayer.clear();
+				extentGraphicsLayer.clear();
+				glowLayer.clear();
+				this.showInfoWindow(null);
+				bufferRadius_txt.text="";
+				queryDataGrid.dataProvider=null;
+				queryResultCount=-1;
+				gridVisible=false;
+				msgVisible=false;
+				queryDKDataGrid.dataProvider=null;
+				queryResultDKCount=-1;
+				dk_gridVisible=false;
+				dk_msgVisible=false;
+				circleTool.deactivate();
+				setMapNavigation(NavigationTool.PAN, "漫游");
+			}
+
+			private function getGeomCenter(gra:Graphic):MapPoint
+			{
+				var pt:MapPoint;
+				switch (gra.geometry.type)
+				{
+					case Geometry.MULTIPOINT:
+					{
+						var multiPoint:Multipoint=Multipoint(gra.geometry);
+						pt=MapPoint(multiPoint.points[0]);
+						break;
+
+					}
+					case Geometry.MAPPOINT:
+					{
+						pt=gra.geometry as MapPoint;
+						break;
+					}
+
+					case Geometry.POLYLINE:
+					{
+						var pl:Polyline=gra.geometry as Polyline;
+						var pathCount:Number=pl.paths.length;
+						var pathIndex:int=int((pathCount / 2) - 1);
+						var midPath:Array=pl.paths[pathIndex];
+						var ptCount:Number=midPath.length;
+						var ptIndex:int=int((ptCount / 2) - 1);
+						pt=pl.getPoint(pathIndex, ptIndex);
+						break;
+					}
+
+					case Geometry.POLYGON:
+					{
+						var poly:Polygon=gra.geometry as Polygon;
+						pt=poly.extent.center;
+						break;
+					}
+
+				}
+				return pt;
+			}
+			private function plotMouseClickGraphic(event:MouseEvent):void
+			{
+				var graphic:Graphic=event.target as Graphic;
+				var infoData:Object=graphic.attributes;
+				infoData.label = "查看单元规划地块信息";
+				this.showInfoWindow(infoData);
+			}
+			private function extentMouseClickGraphic(event:MouseEvent):void
+			{
+				var graphic:Graphic=event.target as Graphic;
+				if(graphic==null){
+					graphic=event.target.parent  as Graphic;
+				}
+				if(graphic!=null){
+					if(graphic.geometry is Polygon){
+						glowLayer.clear();
+						var gra:Graphic=new Graphic(graphic.geometry,FWSymbol.dySelectedGraphicSymbol,graphic.attributes);
+						glowLayer.add(gra);
+					}
+					var infoData:Object=graphic.attributes;
+					infoData.label = "查看单元规划范围信息";
+					this.showInfoWindow(infoData);
+				}
+			}
+			private function createRecordData(featureSet:FeatureSet):ArrayCollection
+			{
+				var recAC:ArrayCollection=new ArrayCollection();
+				for each (var gra:Graphic in featureSet.features)
+				{
+					gra.symbol=FWSymbol.dyGraphicSymbol;
+					//数据构造部分
+					var obj:Object=gra.attributes;
+					var fld:String;
+					var value:String;
+					var title:String;
+					var content:String="";
+					var link:String="";
+					var point:MapPoint=getGeomCenter(gra);
+					var fldAliases:Object=featureSet.fieldAliases;
+					var icon:String=extentIcon;
+					var plan_num:String;
+					var temp:String;
+					var district:String;
+					//判断是Title还是Content
+					for (fld in obj)
+					{
+
+						value=obj[fld].toString();
+
+						if (fld.toUpperCase() == extentTitlefield.toUpperCase())
+						{
+							title=value;
+							if (!title)
+								title=widgetTitle;
+						}
+						if (fld.toUpperCase() == extentLinkfield.toUpperCase())
+						{
+							plan_num = value;
+							link=linkURL+value;
+						}
+						if(fld=="社区")
+						{
+							district=value;
+						}
+					}
+					if(resultFWFieldsCN)
+					{
+						for(var i:int = 0;i < resultFWFieldsCN.length;i++ ){
+							temp = resultFWFields[i].toString();
+							if("单元名称"==temp){
+								content+="";
+							}
+							else if("总面积" == temp||"居住用地" == temp||"公共设施" == temp||"绿地" == temp||"道路广场" == temp){
+								var areaNum:Number=Number(obj[temp]);
+								obj[temp]=areaNum.toFixed(2);
+								content+=resultFWFieldsCN[i].toString() + ": " + obj[temp] + " 公顷;";
+							 }
+							else if(temp=="批复时间")
+							 {
+								var df:DateFormatter= new DateFormatter();
+								df.formatString='YYYY-MM-DD';
+								var date:Date=new Date(obj[temp]);
+								obj[temp] = df.format(date);
+								content+=resultFWFieldsCN[i].toString() + ": " + obj[temp];
+							 }
+							else{
+								content+=resultFWFieldsCN[i].toString() + ": " + obj[temp]+";";
+							}
+						}
+					}
+					var infoData:Object={icon: icon,plan_num:plan_num, title: title,district:district, content: content, link: link, point: point, graphic: gra};
+					gra.attributes=infoData;
+					extentGraphicsLayer.add(gra);
+					recAC.addItem(infoData);
+				}
+				return recAC;
+			}
+
+			private function dataGridClick(event:ListEvent):void
+			{
+				glowLayer.clear();
+				var infoData:Object=queryDataGrid.dataProvider[event.rowIndex];
+				var graphic:Graphic;
+				if(infoData.graphic.geometry is MapPoint){
+					graphic=new Graphic(infoData.polygon,FWSymbol.dySelectedGraphicSymbol,infoData.graphic.attributes);
+				}else{
+					graphic=new Graphic(infoData.graphic.geometry,FWSymbol.dySelectedGraphicSymbol,infoData.graphic.attributes);
+				}
+				glowLayer.add(graphic);
+				UtilsClass.zoomToGraphics(map,glowLayer);
+				infoData.label = "查看单元规划范围信息";
+				this.showInfoWindow(infoData);
+			}
+			
+			private function queryDKDataGrid_dataDKGridClick(event:ListEvent):void
+			{
+				var infoData:Object=queryDKDataGrid.dataProvider[event.rowIndex];
+				var pt:MapPoint=infoData.point;
+				map.centerAt(pt);
+				infoData.label = "查看单元规划地块信息";
+				this.showInfoWindow(infoData);
+			}
+			
+			override public function showInfoWindow(infoData:Object):void
+			{
+				if (infoData)
+				{
+					var infoTemplate:InfoPopupWidget=new InfoPopupWidget();
+					map.infoWindow.setStyle("contentBackgroundAlpha", 0.95);
+					map.infoWindow.setStyle("backgroundAlpha", 0.98);
+					map.infoWindow.setStyle("backgroundColor", 0xCBE5FE);
+					map.infoWindow.content = infoTemplate as UIComponent;
+					//map.infoWindow.label = infoData.title || "";
+					map.infoWindow.label =infoData.label;
+					infoTemplate.data = infoData;
+					map.infoWindow.show(infoData.point);
+				}
+				else
+				{
+					map.infoWindow.hide();
+				}
+			}
+			private function dataDKGridClick(event:ListEvent):void
+			{
+				var infoData:Object=queryDKDataGrid.dataProvider[event.rowIndex];
+				var pt:MapPoint=infoData.point;
+
+				map.centerAt(pt);
+				this.showInfoWindow(infoData);
+			}
+			//clear the previous graphics from the map
+			private function drawStartHandler(event:DrawEvent):void
+			{
+				//clear all selections before new drawing
+				this.showInfoWindow(null);
+				graphicsLayer.clear();
+				plotGraphicsLayer.clear();
+				dawGraphicsLayer.clear();
+			}
+
+			private function showMessage(msg:String, swfVisible:Boolean,boxMessageVisible:Boolean):void
+			{
+				txtMessage.text=msg;
+				swfMessage.visible=swfVisible;
+				msgVisible=boxMessageVisible;
+			}
+
+			private function radiusTuning():void
+			{
+				if (dawGraphicsLayer.numGraphics == 1)
+				{
+					var gra:Graphic=dawGraphicsLayer.getChildAt(0) as Graphic;
+					if (gra.attributes != null)
+					{
+						if (gra.attributes.type == CustomDraw.CUSTOM_CIRCLE)
+						{
+							var circleObj:Object=gra.attributes as Object;
+							var centerPoint:MapPoint=circleObj.cpoint as MapPoint;
+							var m_radius:Number=Number(StringUtil.trim(bufferRadius_txt.text));
+							function createCirclePoints(m_center:MapPoint):Array
+							{
+								var cosinus:Number;
+								var sinus:Number;
+								var x:Number;
+								var y:Number;
+								var arrayOfPoints:Array=new Array();
+								var numberOfCirclePoints:int=100;
+								for (var i:int=0; i < numberOfCirclePoints; i++)
+								{
+									sinus=Math.sin((Math.PI * 2.0) * (i / numberOfCirclePoints));
+									cosinus=Math.cos((Math.PI * 2.0) * (i / numberOfCirclePoints));
+									x=m_center.x + m_radius * cosinus;
+									y=m_center.y + m_radius * sinus;
+									arrayOfPoints[i]=new MapPoint(x, y);
+								}
+
+								arrayOfPoints.push(arrayOfPoints[0]);
+								return arrayOfPoints;
+							}
+							var m_circleGeometry:Polygon=new Polygon;
+							m_circleGeometry.addRing(createCirclePoints(centerPoint));
+							dawGraphicsLayer.clear();
+							gra=new Graphic(m_circleGeometry,FWSymbol.dyDrawGraphicSymbol);
+							gra.attributes=circleObj;
+							dawGraphicsLayer.add(gra);
+							exeQuery(gra.geometry);
+						}
+
+					}
+					else
+					{
+						Alert.show("微调半径仅对圆选生效。");
+					}
+
+				}
+			}
+			
+			public function clickHandle():void{
+				navigateToURL(new URLRequest(queryDataGrid.selectedItem.link));
+			}
+			
+			
+			public function clickDKHandle():void{
+				var selectInfo:Object = queryDataGrid.dataProvider[queryDataGrid.selectedIndex];
+				var plan_num:String = queryDataGrid.selectedItem.plan_num;
+				queryDK(plan_num,selectInfo);
+				
+			}
+			
+			private function queryDK(plan_num:String,selectInfo:Object):void
+			{
+				CursorManager.setBusyCursor();
+				graphicsLayer.clear();
+				plotGraphicsLayer.clear();
+				dawGraphicsLayer.visible=false;
+				dk_gridVisible=false;
+				queryDKDataGrid.dataProvider=null;
+				showDKMessage("正在查询...", true,true);
+				showDKResults();
+				wTemplate.widgetTitle="单元规划地块查询结果";
+				this.showInfoWindow(null);
+				var ghGra:Graphic = new Graphic(selectInfo.graphic.geometry,FWSymbol.dyDKExtentLineSymbos,selectInfo);
+				graphicsLayer.add(ghGra);
+				UtilsClass.zoomToGraphics(map,graphicsLayer);
+				setMapNavigation(NavigationTool.PAN, "漫游");
+
+				if (areaUrl)
+				{
+					var queryTask:QueryTask=new QueryTask(areaUrl);
+					var query:Query=new Query();
+					var expr:String = "PLAN_CODE = '" + plan_num + "'";
+					query.where=expr;
+					query.outFields=areaFields.split(",");
+					query.returnGeometry=true;
+					queryTask.showBusyCursor=true;
+					queryTask.execute(query, new AsyncResponder(ontextDKResult, ontextDKFault));
+				}
+				else
+				{
+					showDKResults();
+					showDKMessage("地块图层不存在", false,true);
+					wTemplate.widgetTitle="单元规划地块查询结果(合计"+0+")条";
+				}
+			}
+			
+			private function ontextDKFault(info:Object, token:Object=null):void
+			{
+				showDKMessage(info.toString(), false,true);
+				showDKResults();
+				wTemplate.widgetTitle="单元规划地块查询结果";
+			}
+			
+			private function ontextDKResult(featureSet:FeatureSet, token:Object=null):void
+			{
+				CursorManager.removeBusyCursor();
+				if (featureSet.features.length > 0)
+				{
+					try
+					{
+						var recAC:ArrayCollection=createDKRecordData(featureSet);
+						queryDKDataGrid.dataProvider=UtilsClass.sortArrayCollection("title",recAC);
+						queryResultDKCount=recAC.length;
+						wTemplate.widgetTitle="单元规划地块查询结果(合计"+queryResultDKCount+")条";
+						this.showInfoWindow(null);
+						showDKMessage("", false,false);
+						dk_gridVisible=true;			
+					}
+					catch (error:Error)
+					{
+						showDKMessage(error.toString(), false,true);
+//						wTemplate.widgetTitle="单元规划地块查询结果(合计"+0+")条";
+						wTemplate.widgetTitle="单元规划查询结果";
+					}
+				}
+				else
+				{
+					showDKMessage("暂无符合条件的记录!", false,true);
+//					wTemplate.widgetTitle="单元规划地块查询结果(合计"+0+")条";
+					wTemplate.widgetTitle="单元规划查询结果";
+				}
+			}
+			
+			private function createDKRecordData(featureSet:FeatureSet):ArrayCollection
+			{
+				var recAC:ArrayCollection=new ArrayCollection();
+				for each (var gra:Graphic in featureSet.features)
+				{
+					var code:String="MR";
+					if(gra.attributes.CUS_TYPE)
+					{
+						code=gra.attributes.CUS_TYPE.toString();
+					}	
+					else
+					{
+						code="MR";
+						gra.attributes.CUS_TYPE="";
+					}
+					var symObj:Object=DKSymbol.findSymbolByCode(code);
+					//地图显示部分 以及Gra改造
+					var symObj:Object=DKSymbol.findSymbolByCode(code);
+					gra.symbol=symObj.symbol as SimpleFillSymbol;
+						
+					//数据构造部分
+					var obj:Object=gra.attributes;
+					var fld:String;
+					var value:String;
+					var title:String;
+					var content:String="";
+					var link:String="";
+					var point:MapPoint=getGeomCenter(gra);
+					var fldAliases:Object=featureSet.fieldAliases;
+					var icon:String=areaIcon;
+					var PLOT_NAME:String;
+					var CUS_TYPE:String;
+					var temp:String;
+					for (fld in obj)
+					{
+						value=obj[fld]||"";
+						if (fld.toUpperCase() == areaTitlefield.toUpperCase()){
+							title=value;
+							if (!title)
+								title=widgetTitle;
+						}
+						if (fld.toUpperCase() == areaLinkfield.toUpperCase())
+						{
+							link=linkURL+value;
+						}
+						if (fld.toUpperCase() == "PLOT_NAME")
+						{
+							PLOT_NAME=value;
+						}
+						if (fld.toUpperCase() == "CUS_TYPE")
+						{
+							CUS_TYPE=value||"";
+						}
+					}
+					for(var i:int = 0;i < resultDKFieldsCN.length;i++ ){
+						temp = resultDKFields[i].toString();
+						if("CUS_TYPE"==temp){
+							content+=resultDKFieldsCN[i].toString() + ": " + obj[temp];
+						}
+						else if("DKAREA" == temp){
+							var areaNum:Number=Number(obj[temp]);
+							obj[temp]=areaNum.toFixed(2);
+							content+=resultDKFieldsCN[i].toString() + ": " + obj[temp] + " 公顷;";
+						}else if("BLDG_DENS" == temp || "VEG_RATIO" == temp){
+							content+=resultDKFieldsCN[i].toString() + ": " + obj[temp] + "%;";
+						}else if("BLDG_HLMT" == temp){
+							content+=resultDKFieldsCN[i].toString() + ": " + obj[temp] + " 米;";
+						}else{
+							content+=resultDKFieldsCN[i].toString() + ": " + obj[temp] + ";";	
+						}
+						
+					}
+					var infoData:Object={icon: icon,plot_name:PLOT_NAME,CUS_TYPE:CUS_TYPE, title: title, content: content, link: link, point: point, geometry: gra.geometry};
+					gra.attributes=infoData;
+					plotGraphicsLayer.add(gra);
+					recAC.addItem(infoData);
+				}
+				return recAC;
+			}
+			
+			private function showDKMessage(msg:String, swfVisible:Boolean,boxMessageVisible:Boolean):void
+			{
+				dk_txtMessage.text=msg;
+				dk_swfMessage.visible=swfVisible;
+				dk_msgVisible=boxMessageVisible;
+				dkbackBtn.visible=!swfVisible;
+			}
+			
+			protected function backBtn_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				showStateResults();
+				wTemplate.widgetTitle="单元规划查询结果（合计"+queryResultCount+"条)";
+			}
+
+
+			protected function wTemplate_minimizedHandler(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				wTitle=wTemplate.widgetTitle;
+				wTemplate.widgetTitle="单元规划";
+			}
+			protected function glowLayer_effectEndHandler(event:EffectEvent):void
+			{
+				// TODO Auto-generated method stub
+				event.effectInstance.reverse();
+				event.effectInstance.play();
+			}
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<esri:GraphicsLayer id="glowLayer"  minScale="32000" />
+		<mx:DateFormatter id="formatDate" formatString="YYYY-MM-DD">
+			</mx:DateFormatter>
+		<circle:CustomDraw id="circleTool"
+						   drawStart="drawStartHandler(event)"
+						   drawEnd="drawEnd(event)">
+		</circle:CustomDraw>
+	</fx:Declarations>
+	<viewer:WidgetTemplate id="wTemplate"
+					closed="queryWidgetClosed()"
+					open="queryWidgetOpened()"
+					minimized="wTemplate_minimizedHandler(event)"
+					height="280" width="380">
+		<mx:ViewStack id="viewStack"
+					  width="100%"
+					  height="100%" 
+					  creationPolicy="all">
+			
+			<mx:VBox width="100%"
+					 height="100%"
+					 horizontalAlign="center"
+					 verticalGap="20">
+				<mx:Form id="frmLocateCoords"
+						 verticalScrollPolicy="off"
+						 paddingBottom="0"
+						 verticalGap="10"
+						 width="100%"
+						 height="100%">
+						<mx:FormItem label="单元编号"
+									 styleName="WidgetText">
+							<mx:VBox  horizontalAlign="left">
+								<mx:TextInput id="planNum"
+											  width="130"
+											  text=""
+											  maxChars="30"/>
+								<!--s:Label  text="例如：Z000501"/-->
+							</mx:VBox>
+						</mx:FormItem>
+						<mx:FormItem label="社区" styleName="WidgetText" direction="horizontal">
+							<mx:ComboBox id="DistrictLocate" prompt="社区" width="130" height="22" />
+						</mx:FormItem>
+						<mx:FormItem label="年份" styleName="WidgetText" direction="horizontal">
+							<mx:ComboBox id="YearLocate"  width="130" height="22" />
+						</mx:FormItem>
+					<mx:FormItem label="空间查询" styleName="WidgetText" direction="horizontal">
+						<mx:Image source="assets/images/icons/s_polygon.png"
+								  click="{polygonQuery(DrawTool.POLYGON)}"
+								  useHandCursor="true"
+								  buttonMode="true"
+								  toolTip="多边形"
+								  width="32"
+								  height="32"/>
+						
+						<mx:Image source="assets/images/icons/s_circle.png"
+								  click="{polygonQuery('CIRCLE')}"
+								  useHandCursor="true"
+								  buttonMode="true"
+								  toolTip="圆选"
+								  width="32"
+								  height="32"/>
+						
+						<mx:TextInput id="bufferRadius_txt"
+									  text=""
+									  restrict="0-9\."
+									  width="80"
+									  maxChars="10"
+									  enter="radiusTuning()"
+									  visible="false"/>
+						
+						<mx:Text text="米"
+								 styleName="WidgetText"
+								 visible="false"/>
+						
+						<mx:Button label="微调半径"
+								   click="radiusTuning()"
+								   visible="false"/>
+					</mx:FormItem>
+					<mx:HBox horizontalAlign="center" 
+							 width="100%">
+						<mx:Button label="查询"
+								   icon="{Search}"
+								   click="textQuery()"/>
+
+						<mx:Button label="清除"
+								   icon="{Clear}"
+								   click="clear()"/>
+					</mx:HBox>
+				</mx:Form>
+			</mx:VBox>
+			<mx:VBox width="100%"
+					 height="100%"
+					 horizontalAlign="center"
+					 verticalAlign="middle">
+				
+				<mx:Label id="graphicallb"
+						  styleName="WidgetText"/>
+				
+				
+				
+				<mx:Button label="清除"
+						   icon="{Clear}"
+						   click="clear()"/>
+			</mx:VBox>
+
+			<mx:VBox width="100%"
+					 height="100%"
+					 verticalGap="1"
+					 verticalScrollPolicy="off">
+				<mx:HBox id="boxMessage"
+						 visible="{msgVisible}"
+						 includeInLayout="{msgVisible}"
+						 width="100%"
+						 paddingLeft="15"
+						 paddingTop="15">
+					<mx:SWFLoader id="swfMessage"
+								  source="assets/flash/loader.swf"/>
+					<mx:Text id="txtMessage"
+							 text="正在查询..."
+							 styleName="WidgetText"
+							 width="90%"/>
+				</mx:HBox>
+				<mx:VBox id="extendVbox"
+						 width="100%"
+						 height="100%">
+					<mx:DataGrid id="queryDataGrid"
+								 width="100%"
+								 height="100%"
+								 alpha="1"  
+								 itemClick="dataGridClick(event)"
+								 rowHeight="25"
+								 chromeColor="0xBCE1E9"
+								 headerStyleName="DataGridHeader"
+								 visible="{gridVisible}">
+						<mx:columns>
+							<mx:DataGridColumn width="0.5" dataField="title"
+											   headerText="单元编号"/>
+							<mx:DataGridColumn width="0.3" headerText="社区" dataField="district">
+							</mx:DataGridColumn>
+							<mx:DataGridColumn width="0.2" headerText="地块">
+								<mx:itemRenderer>
+									<fx:Component>
+										<mx:LinkButton color="black"  icon="{outerDocument.DK_Information}" click="outerDocument.clickDKHandle()"/>
+									</fx:Component>
+								</mx:itemRenderer>
+							</mx:DataGridColumn>
+						</mx:columns>
+					</mx:DataGrid>
+				</mx:VBox>
+			</mx:VBox>
+			
+			<mx:VBox width="100%"
+					 height="100%"
+					 verticalGap="1"
+					 verticalScrollPolicy="off">
+				<mx:HBox id="dk_boxMessage"
+						 visible="{dk_msgVisible}"
+						 includeInLayout="{dk_msgVisible}"
+						 width="100%"
+						 paddingLeft="15"
+						 paddingTop="15">
+					<mx:SWFLoader id="dk_swfMessage"
+								  source="assets/flash/loader.swf"/>
+					<mx:Text id="dk_txtMessage"
+							 text="正在查询..."
+							 styleName="WidgetText"
+							 width="90%"/>
+				</mx:HBox>
+				<mx:VBox id="dkVbox" width="100%"  height="100%">
+					<mx:Button id="dkbackBtn" 
+							   width="56"
+							   icon="{Back}" toolTip="返回" 
+							   click="backBtn_clickHandler(event)"/>
+					<mx:DataGrid id="queryDKDataGrid"
+								 width="100%"
+								 height="100%"
+								 alpha="1"
+								 sortableColumns="false"
+								 headerStyleName="DataGridHeader"
+								 chromeColor="0xBCE1E9"
+								 visible="{dk_gridVisible}"
+								 itemClick="queryDKDataGrid_dataDKGridClick(event)"
+								 rowHeight="25">
+						<mx:columns>
+							<mx:DataGridColumn width="0.4" dataField="title"
+											   headerText="单元编号"/>
+							<mx:DataGridColumn width="0.3" dataField="plot_name"
+											   headerText="用地性质名称"/>
+							<mx:DataGridColumn width="0.3" dataField="CUS_TYPE" textAlign="center"
+											   headerText="用地性质代码"/>
+						</mx:columns>
+					</mx:DataGrid>
+				</mx:VBox>
+			</mx:VBox>
+		</mx:ViewStack>
+	</viewer:WidgetTemplate>
+</viewer:BaseWidget>

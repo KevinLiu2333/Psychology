@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<viewer:BaseWidget xmlns:fx="http://ns.adobe.com/mxml/2009"
+                   xmlns:s="library://ns.adobe.com/flex/spark"
+                   xmlns:mx="library://ns.adobe.com/flex/mx"
+                   xmlns:viewer="com.esri.viewer.*"
+                   xmlns:Bookmark="widgets.Bookmark.*"
+                   x="600" y="300"
+                   layout="absolute"
+                   widgetConfigLoaded="init()" xmlns:components="com.esri.viewer.components.*">
+
+    <viewer:states>
+        <s:State name="bkmList"/>
+        <s:State name="bkmAdd"/>
+    </viewer:states>
+
+    <viewer:transitions>
+        <s:Transition autoReverse="true" toState="*">
+            <s:Fade targets="{[bkmList, bkmAdd]}"/>
+        </s:Transition>
+    </viewer:transitions>
+
+    <fx:Script>
+        <![CDATA[
+			import com.adobe.serialization.json.JSON;
+			import com.esri.ags.geometry.Extent;
+			import com.esri.viewer.ConfigData;
+			import com.esri.viewer.ViewerContainer;
+			
+			import mx.collections.ArrayList;
+			import mx.controls.Alert;
+			import mx.events.EffectEvent;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			import mx.rpc.http.HTTPService;
+			
+			import spark.components.supportClasses.ItemRenderer;
+			import spark.core.NavigationUnit;
+
+            private const BOOKMARKS:String = "bookmarks";
+
+
+            //labels
+            private var bookmarksLabel:String;
+            private var addbookmarksLabel:String;
+            [Bindable]
+            private var addLabel:String;
+            [Bindable]
+            private var submitLabel:String;
+            private var errorLabel:String;
+
+            [Bindable]
+            private var bookmarkAL:ArrayList; // used by BookmarkDataGroup
+            private var bookmarkSO:SharedObject;
+            private var bookmarkSOAL:ArrayList; // stored in bookmarkSO
+            private var selectedindex:int = 0;
+			public static var serviceUrl:String="";
+			public static  var userId:String="";
+			[Bindable]
+			[Embed(source="assets/images/w_close_red.png")]
+			public var closeIcon:Class;
+			private var Icon:String="assets/images/w_close_red.png";
+            private function init():void
+            {
+                if (configXML)
+                {
+                    //labels
+                    bookmarksLabel = configXML.labels.bookmarkslabel || "Bookmarks";
+                    addbookmarksLabel = configXML.labels.addbookmarkslabel || "Add Bookmark";
+                    addLabel = configXML.labels.addlabel || "Add current extent as a bookmark named:";
+                    submitLabel = configXML.labels.submitlabel || "Add Bookmark";
+                    errorLabel = configXML.labels.errorlabel || "Please enter a name for the bookmark.";
+					serviceUrl=configXML.serviceUrl;
+					userId=configData.userId;
+				}
+
+                wTemplate.addTitlebarButton(ICON_URL + "newimage/i_bookmark.png", bookmarksLabel, showBookmarksList);
+                wTemplate.addTitlebarButton(ICON_URL + "newimage/i_addBookmark.png", addbookmarksLabel, showBookmarkAdd);
+
+                bookmarkAL = new ArrayList();
+                try
+                {
+                    bookmarkSO = SharedObject.getLocal(BOOKMARKS);
+                }
+                catch (err:Error)
+                {
+                    trace(err);
+                }
+				loadBookmarksFromOracle();
+            }
+			private function loadBookmarksFromOracle():void
+			{
+				bookmarkAL.removeAll();
+				bookmarkSOAL=new ArrayList;
+				var  hs:HTTPService=new HTTPService();
+				hs.url=serviceUrl;
+				hs.method="post";
+				hs.resultFormat="e4x";
+				hs.addEventListener(ResultEvent.RESULT,bookMarkResultHandler);
+				hs.addEventListener(FaultEvent.FAULT,bookMarkFaultHandler);
+				var obj:Object=new Object();
+				obj.action="query";
+				obj.userid=configData.userId;
+				hs.send(obj);
+				function  bookMarkResultHandler(event:ResultEvent):void
+				{
+					var json:Object=JSON.decode(event.result.toString());
+					var bookmarksArr:Array=json.message as Array;
+					if(bookmarksArr&&bookmarksArr.length>0)
+					{
+						for(var i:int=0;i<bookmarksArr.length;i++){
+						
+							var bookmark:Bookmark = new Bookmark();
+							bookmark.name = bookmarksArr[i].bmname;
+							bookmark.icon = Icon;
+							bookmark.xmin = bookmarksArr[i].xmin;
+							bookmark.ymin = bookmarksArr[i].ymin;
+							bookmark.xmax = bookmarksArr[i].xmax;
+							bookmark.ymax = bookmarksArr[i].ymax;
+							bookmarkAL.addItem(bookmark);
+							bookmarkSOAL.addItem(bookmark);
+							saveBookmarks();
+						}
+					}
+				}
+				function  bookMarkFaultHandler(event:FaultEvent):void
+				{
+					Alert.show("获取地图书签失败！");
+				
+				}
+			}
+            private function showBookmarksList():void
+            {
+                this.currentState = "bkmList";
+                wTemplate.selectedTitlebarButtonIndex = 0; // used to indicate selected titlebar button when automatically switching state
+            }
+
+            private function showBookmarkAdd():void
+            {
+                this.currentState = "bkmAdd";
+            }
+
+
+            private function addBookmark():void
+            {
+                var name:String = txtName.text;
+                if (name)
+                {
+                    var ext:Extent = map.extent;
+                    var bookmark:Bookmark = new Bookmark();
+                    bookmark.name = name;
+                    bookmark.userCreated = true;
+                    bookmark.xmin = Number(ext.xmin.toFixed(4));
+                    bookmark.ymin = Number(ext.ymin.toFixed(4));
+                    bookmark.xmax = Number(ext.xmax.toFixed(4));
+                    bookmark.ymax = Number(ext.ymax.toFixed(4));
+					var  hs:HTTPService=new HTTPService();
+					hs.url=serviceUrl;
+					hs.method="post";
+					hs.resultFormat="e4x";
+					hs.addEventListener(ResultEvent.RESULT,bookMarkResultHandler);
+					hs.addEventListener(FaultEvent.FAULT,bookMarkFaultHandler);
+					var obj:Object=new Object();
+					obj.action="add";
+					obj.userid=configData.userId;
+					obj.bmname=name;
+					obj.xmin=bookmark.xmin;
+					obj.ymin=bookmark.ymin;
+					obj.xmax=bookmark.xmax;
+					obj.ymax=bookmark.ymax;
+					hs.send(obj);
+					function  bookMarkResultHandler(event:ResultEvent):void
+					{
+						var resultStr:String = event.result.toString();
+						if(resultStr == "1")
+						{
+							txtName.text = "";
+							bkmList.addEventListener(EffectEvent.EFFECT_END, bkmList_effectEndHandler);
+							showBookmarksList();
+							bookmarkAL.addItem(bookmark);
+							bookmarkSOAL.addItem(bookmark);
+							saveBookmarks();
+						}
+					}
+					function  bookMarkFaultHandler(event:FaultEvent):void
+					{
+						Alert.show("保存地图书签失败！");
+					}
+                }
+                else
+                {
+                    Alert.show(errorLabel, wTemplate.widgetTitle);
+                }
+            }
+
+            private function bkmList_effectEndHandler(event:EffectEvent):void
+            {
+                bkmList.removeEventListener(EffectEvent.EFFECT_END, bkmList_effectEndHandler);
+                // scroll to the bottom
+                bookmarkDG.verticalScrollPosition += bookmarkDG.layout.getVerticalScrollPositionDelta(NavigationUnit.END);
+            }
+
+            private function removeBookmark(event:Event):void
+            {
+                var bookmark:Bookmark = ItemRenderer(event.target).data as Bookmark;
+                bookmarkAL.removeItem(bookmark);
+                bookmarkSOAL.removeItem(bookmark);
+                saveBookmarks();
+            }
+
+            private function saveBookmarks():void
+            {
+                if (bookmarkSO)
+                {
+                    try
+                    {
+                        bookmarkSO.flush();
+                    }
+                    catch (err:Error)
+                    {
+                        trace(err);
+                    }
+                }
+            }
+
+            private function showBookmark(event:Event):void
+            {
+                var bookmark:Bookmark = ItemRenderer(event.target).data as Bookmark;
+                var ext:Extent = new Extent(bookmark.xmin, bookmark.ymin, bookmark.xmax, bookmark.ymax);
+                map.extent = ext;
+            }
+        ]]>
+    </fx:Script>
+
+    <viewer:WidgetTemplate id="wTemplate"
+                           width="300" height="180">
+        <s:Group id="bkmList"
+                 width="100%" height="100%"
+                 visible="false"
+                 visible.bkmList="true">
+            <s:Scroller width="100%" height="100%">
+                <Bookmark:BookmarkDataGroup id="bookmarkDG"
+                                            bookmarkClick="showBookmark(event)"
+                                            bookmarkDelete="removeBookmark(event)"
+                                            dataProvider="{bookmarkAL}">
+                    <Bookmark:layout>
+                        <s:VerticalLayout gap="2"
+                                          horizontalAlign="justify"
+                                          useVirtualLayout="true"/>
+                    </Bookmark:layout>
+                </Bookmark:BookmarkDataGroup>
+            </s:Scroller>
+        </s:Group>
+        <s:Group id="bkmAdd"
+                 width="100%" height="100%"
+                 visible="false"
+                 visible.bkmAdd="true">
+            <s:layout>
+                <s:VerticalLayout gap="10"
+                                  horizontalAlign="center"
+                                  paddingTop="10"/>
+            </s:layout>
+            <s:Label text="{addLabel}"/>
+            <s:TextInput id="txtName" restrict="0-9\a-z\^{'[\u4e00-\u9fa5]'}" width="98%"/>
+			<s:Button click="addBookmark()" label="{submitLabel}" />
+        </s:Group>
+    </viewer:WidgetTemplate>
+
+</viewer:BaseWidget>

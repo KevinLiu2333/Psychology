@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<description>Spring Configuration of WSSIP - montior.</description>
+
+	<bean id="userMonitorServiceImpl"
+		class="com.wondersgroup.cmc.commons.monitor.service.impl.UserMonitorServiceImpl">
+	</bean>
+	<bean id="userMonitorService" parent="basicTxProxy">
+		<property name="target" ref="userMonitorServiceImpl"></property>
+	</bean>
+	
+</beans>

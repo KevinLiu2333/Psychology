@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/187311/projects2/CMC/svn/branches/dev/cmc-sqpt/etc/sql/sqlserver/CI_SQLSERVER_INIT
+END
+authdatainit.sql
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/187311/projects2/CMC/svn/branches/dev/cmc-sqpt/etc/sql/sqlserver/CI_SQLSERVER_INIT/authdatainit.sql
+END
+definedatainit.sql
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/187311/projects2/CMC/svn/branches/dev/cmc-sqpt/etc/sql/sqlserver/CI_SQLSERVER_INIT/definedatainit.sql
+END
+tableinit.sql
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/187259/projects2/CMC/svn/branches/dev/cmc-sqpt/etc/sql/sqlserver/CI_SQLSERVER_INIT/tableinit.sql
+END

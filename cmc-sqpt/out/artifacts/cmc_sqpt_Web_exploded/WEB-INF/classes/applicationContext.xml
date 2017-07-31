@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<description>
+		CuteFramework框架Spring基础配置
+	</description>
+	
+	<!-- =================================================================== 
+		框架资源接入 =================================================================== -->
+
+	<import resource="classpath:frameworkContext.xml" />
+	
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<description>属性配置接入</description>
+		<property name="locations">
+			<list>
+				<value>classpath:database.properties</value>
+				<value>classpath:application.properties</value>
+				<value>classpath:wssuap.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- 开发环境数据源配置 -->
+	<bean id="dataSource" class="com.wondersgroup.wssip.jdbc.proxy.ProxyDataSource">
+		<constructor-arg>
+			<bean class="org.apache.commons.dbcp.BasicDataSource"
+				destroy-method="close">
+				<property name="driverClassName" value="${hibernate.connection.driver_class}" />
+				<property name="url" value="${hibernate.connection.url}" />
+				<property name="username" value="${hibernate.connection.username}" />
+				<property name="password" value="${hibernate.connection.password}" />
+				<property name="maxActive" value="${hibernate.connection.maxActive}" />
+				<property name="maxIdle" value="${hibernate.connection.maxIdle}" />
+				<property name="maxWait" value="${hibernate.connection.maxWait}" />
+				<property name="removeAbandoned" value="${hibernate.connection.removeAbandoned}" />
+				<property name="removeAbandonedTimeout"
+					value="${hibernate.connection.removeAbandonedTimeout}" />
+				<property name="logAbandoned" value="${hibernate.connection.logAbandoned}" />
+			</bean>
+		</constructor-arg>
+	</bean>
+
+	<bean id="defaultLobHandler" class="org.springframework.jdbc.support.lob.DefaultLobHandler">
+	</bean>
+	<bean id="sessionFactory"
+		class="com.wondersgroup.framework.core5.dao.support.EnhancedAnnotationSessionFactoryBean">
+		<description>Hibernate SessionFactory 配置</description>
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:hibernate.cfg.xml" />
+		<property name="annotatedPackagePrefixes">
+			<description>Hibernate Annotation映射 包配置</description>
+			<list>
+				<value>com.wondersgroup.wssip</value>
+				<value>com.wondersgroup.wsscclib</value>
+				<value>com.wondersgroup.cmc</value>
+				<value>com.wondersgroup.wssuap</value>
+			</list>
+		</property>
+
+		<property name="lobHandler" ref="${jdbc.handler}" />
+	</bean>
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<description>消息资源接入</description>
+		<property name="basenames">
+			<list>
+				<value>com/wondersgroup/wssip/bc/wssip-messages</value>
+				<value>wssuap-messages</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="abstractJdbcDAO" abstract="true" parent="abstractJdbcDao" />
+	<bean id="abstractHibernateDAO" abstract="true" parent="abstractHibernateDao" />
+
+	<bean id="genericDAO" parent="genericDao">
+		<constructor-arg value="java.lang.Object"></constructor-arg>
+	</bean>
+
+	<!-- =================================================================== 
+		Transaction Define =================================================================== -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="basicTxProxy" abstract="true"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="add*">PROPAGATION_REQUIRED</prop>
+				<prop key="remove*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+				<prop key="Save*">PROPAGATION_REQUIRES_NEW</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

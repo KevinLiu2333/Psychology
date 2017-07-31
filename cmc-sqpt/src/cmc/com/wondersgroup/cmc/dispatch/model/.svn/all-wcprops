@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/189598/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/dispatch/model
+END
+BaseIfmondetail.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/!svn/ver/173368/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/dispatch/model/BaseIfmondetail.java
+END
+BaseIftransdetail.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/174039/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/dispatch/model/BaseIftransdetail.java
+END
+BaseIfmondefhis.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/!svn/ver/173368/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/dispatch/model/BaseIfmondefhis.java
+END
+BaseIfdefhis.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/!svn/ver/173368/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/dispatch/model/BaseIfdefhis.java
+END
+BaseIfsubmondetail.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/!svn/ver/173368/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/dispatch/model/BaseIfsubmondetail.java
+END
+BaseIfsubmon.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/!svn/ver/173368/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/dispatch/model/BaseIfsubmon.java
+END
+BaseIfdefine.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/!svn/ver/173368/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/dispatch/model/BaseIfdefine.java
+END
+BaseIfuser.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/189598/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/dispatch/model/BaseIfuser.java
+END
+BaseIfuserhis.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/!svn/ver/189598/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/dispatch/model/BaseIfuserhis.java
+END
+BaseIfmondef.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/!svn/ver/173368/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/dispatch/model/BaseIfmondef.java
+END
+BaseIftranssum.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/!svn/ver/173368/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/dispatch/model/BaseIftranssum.java
+END
+BaseIfuserauth.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/!svn/ver/189598/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/dispatch/model/BaseIfuserauth.java
+END

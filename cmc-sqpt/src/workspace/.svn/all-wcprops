@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/187250/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace
+END
+oscache.properties
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/oscache.properties
+END
+database.properties
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/database.properties
+END
+quartz.properties
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/quartz.properties
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/176425/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/log4j.properties
+END
+xwork-conversion.properties
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/xwork-conversion.properties
+END
+applicationContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/177440/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/applicationContext.xml
+END
+version.config.properties
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/version.config.properties
+END
+localAction.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/177440/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/localAction.xml
+END
+wssuapContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/187250/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/wssuapContext.xml
+END
+struts.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/178386/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/struts.xml
+END
+localContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/179504/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/localContext.xml
+END
+weblogicContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/weblogicContext.xml
+END
+field-labels.properties
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/field-labels.properties
+END
+application.properties
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/176415/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/application.properties
+END
+hibernate.cfg.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/176425/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/hibernate.cfg.xml
+END
+wssuap.properties
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/wssuap.properties
+END
+wssuap-messages_zh_CN.properties
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/wssuap-messages_zh_CN.properties
+END
+parameter.properties
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/parameter.properties
+END
+struts.properties
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/struts.properties
+END
+cmcContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/workspace/cmcContext.xml
+END

@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<configuration>
+     <userguideUrl>/SJSJZXGIS_Index/userguide/userguide.html</userguideUrl>
+     <pointUrl>assets/images/newimage/point.png</pointUrl>
+     <controlUrl>assets/images/newimage/control.png</controlUrl>
+     <userguideIcon>assets/images/newimage/help.png</userguideIcon>
+     <legendIcon>assets/images/newimage/legend.png</legendIcon>
+    <about>
+       <label>关于</label>
+       <visible>true</visible>
+       <width>400</width>
+       <height>400</height>
+       <content>
+        <![CDATA[<p align='center'><img src='assets/images/globe.png' width='160' height='160' /></p>
+        <font size="20"><p><b>松江数据中心基础地理信息服务平台</b></p></font>
+        <font size="16"><p>开发单位：万达信息股份有限公司</p></font>
+		<font size="16"><p>版权所有:松江数据中心</p></font>
+        <font size="16"><p>万达信息 智慧城市的最佳实践者</p></font>
+        <p><font size="14">更多信息请访问:</font>
+        <a href="http://www.wondersgroup.com/" target='_blank'><font size="14" color="0xFFFFFF">万达信息股份有限公司</font></a></p>
+        
+        ]]>
+        </content>
+        <btnlabel>确定</btnlabel>
+    </about>
+</configuration>
+
+<!--
+    See HeaderController widget documentation at
+    http://links.esri.com/headercontrollerwidget
+-->

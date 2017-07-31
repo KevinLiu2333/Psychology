@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<description>一体化平台 应用资源配置</description>
+	<import resource="classpath:com/wondersgroup/wssip/application/dictionary/wssipAppDicContext.xml" />
+
+	<bean class="com.wondersgroup.wssip.application.login.LoginUtils">
+		<property name="userMonitorService" ref="userMonitorService"></property>
+	</bean>
+	 
+	<bean id="logoutAction" class="com.wondersgroup.wssip.application.login.LogoutAction" singleton="false">
+		<description>用户退出登录Action</description>
+	</bean>
+
+	<!-- 字典相关 -->
+	<bean id="getDicAction" class="com.wondersgroup.wssip.application.dictionary.DicAction"
+		singleton="false">
+		<description>字典查询Action</description>
+	</bean>
+
+	<bean id="relateDicAction" class="com.wondersgroup.wssip.application.RelateDicAction">
+	</bean>
+</beans>

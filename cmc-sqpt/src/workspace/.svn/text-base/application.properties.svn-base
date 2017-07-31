@@ -1,0 +1,10 @@
+#######################################
+######
+######    WEBSERVICE相关参数配置	 ######
+######
+#######################################
+edata.timeout = 5000
+edata.upload.wsdlLocation = http://10.1.8.193:8181/cmc-edata/UploadServicePort?wsdl
+edata.download.wsdlLocation = http://10.1.8.193:8181/cmc-edata/DownloadServicePort?wsdl
+edata.type = edata
+edata.ftp.wsdlLocation = http://10.1.8.193:8181/cmc-ftp/services/FtpServ?WSDL

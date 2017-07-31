@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/edata/download/model/common
+END
+Item.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/edata/download/model/common/Item.java
+END
+GetRequestData.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/edata/download/model/common/GetRequestData.java
+END
+GetResponseData.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/!svn/ver/173331/projects2/CMC/svn/branches/dev/cmc-sqpt/src/cmc/com/wondersgroup/cmc/edata/download/model/common/GetResponseData.java
+END

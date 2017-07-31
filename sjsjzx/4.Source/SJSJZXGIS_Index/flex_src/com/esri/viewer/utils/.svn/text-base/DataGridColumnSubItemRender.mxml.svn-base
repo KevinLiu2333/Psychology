@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<mx:TextArea	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				xmlns:s="library://ns.adobe.com/flex/spark" 
+				xmlns:mx="library://ns.adobe.com/flex/mx" 
+				xmlns:supportClasses="com.esri.ags.skins.supportClasses.*"
+				width="100%"
+				editable="false"
+				borderVisible="false"
+				verticalScrollPolicy="off"
+				contentBackgroundAlpha="0" 
+				wordWrap="true"
+				change="changeHandler(event)"
+				mouseWheel="textarea_mouseWheelHandler(event)"
+				textAlign="left" link="text_linkHandler(event)">
+	
+	<fx:Script>
+		<![CDATA[
+			import com.esri.viewer.AppEvent;
+			import com.esri.viewer.ViewerContainer;
+			
+			import mx.controls.Alert;
+			import mx.controls.DataGrid;
+			import mx.utils.StringUtil;
+			
+			override public function set data(value:Object) : void
+			{
+				super.data = value;
+				var my_css:StyleSheet = new StyleSheet();
+				var byteArr:ByteArray=new ByteArray();
+				addStyle("a:hover", 
+					{  						
+						"color":"#FF0000"
+					}, 
+					my_css);
+				this.styleSheet=my_css;
+				if(value)
+				{
+					//通过Label组件的htmlText属性，结合html标签自定义字体颜色 0000FF
+					var pass_no:String="";
+					var title:String="";
+					var plan_num:String="";
+					var stringLength:int=0;
+					if(value.type=="info_cdxg"){
+						title=value.title;
+						var cdxg_plan_num:String=value.plan_num.replace("\n","");
+						cdxg_plan_num=cdxg_plan_num.replace("\n","");
+						title=title.replace("\n","");
+						stringLength=countStringLength(cdxg_plan_num);
+						for(var i:int=0;i<46-stringLength;i++){
+							cdxg_plan_num+=" ";
+						}
+						this.htmlText ="<textformat blockindent='12px'><font color=\"#333\">"+title+"</font>\n"+"<font face='宋体' color=\"#999999\">"+cdxg_plan_num+"</font>"+
+							"<font face='宋体'> </font><a href=\"event:cdxg_mx\"><u><font color=\"#053a7c\" >明细</font></u></a></textformat>";				  
+					}else if(value.type=="info_tzxg"){
+						title=value.title;
+						title=title.replace("\n","");
+						var value_flag:String=value.flag;
+						value_flag=value_flag.replace("\n","");
+						stringLength=countStringLength(value_flag);
+						for(var i:int=0;i<46-stringLength;i++){
+							value_flag+=" ";
+						}
+						this.htmlText ="<textformat blockindent='12px'><font color=\"#333\">"+title+"</font>\n"+"<font  face='宋体' color=\"#FF0000\">"+value_flag+"</font>"+
+							"<font face='宋体'> </font><a href=\"event:tzxg_mx\"><u><font color=\"#053a7c\" >明细</font></u></a></textformat>";				  
+					}else if(value.type=="xgxzfw"){
+						var xgxz_pass_no:String=value.PASS_NO.replace("\n","");
+						xgxz_pass_no=xgxz_pass_no.replace("\n","");
+						value.PROJECT_NAME=value.PROJECT_NAME.replace("\n","");
+						stringLength=countStringLength(xgxz_pass_no);
+						for(var i:int=0;i<46-stringLength;i++){
+							xgxz_pass_no+=" ";
+						}
+						this.htmlText ="<textformat blockindent='12px'><font color=\"#333\">"+value.PROJECT_NAME+"</font>\n"+"<font face='宋体' color=\"#999999\">"+xgxz_pass_no+"</font>"+
+							"<font face='宋体'> </font><a href=\"event:info_xgxzfw\"><u><font color=\"#053a7c\" >明细</font></u></a></textformat>";				  
+					}else if(value.type=="xgydfw"){
+						var xgyd_pass_no:String=value.PASS_NO.replace("\n","");
+						value.PROJECT_NAME=value.PROJECT_NAME.replace("\n","");
+						stringLength=countStringLength(xgyd_pass_no);
+						for(var i:int=0;i<46-stringLength;i++){
+							xgyd_pass_no+=" ";
+						}
+						this.htmlText ="<textformat blockindent='12px'><font color=\"#333\">"+value.PROJECT_NAME+"</font>\n"+"<font face='宋体' color=\"#999999\">"+xgyd_pass_no+"</font>"+
+							"<font face='宋体'> </font><a href=\"event:info_xgydfw\"><u><font color=\"#053a7c\" >明细</font></u></a></textformat>";				  
+					}else if(value.type=="xggcfw"){
+						var xggc_pass_no:String=value.PASS_NO.replace("\n","");
+						value.PROJECT_NAME=value.PROJECT_NAME.replace("\n","");
+						stringLength=countStringLength(xggc_pass_no);
+						for(var i:int=0;i<46-stringLength;i++){
+							xggc_pass_no+=" ";
+						}
+						this.htmlText ="<textformat blockindent='12px'><font color=\"#333\">"+value.PROJECT_NAME+"</font>\n"+"<font face='宋体' color=\"#999999\">"+xggc_pass_no+"</font>"+
+							"<font face='宋体'> </font><a href=\"event:info_xggcfw\"><u><font color=\"#053a7c\" >明细</font></u></a></textformat>";				  
+					}else if(value.type=="gc_xzfw"){	
+						pass_no=value.pass_no;
+						stringLength=countStringLength(pass_no);
+						for(var i:int=0;i<46-stringLength;i++){
+							pass_no+=" ";
+						}						
+						value.project_name=value.project_name.replace("\n","");	
+						this.htmlText ="<textformat blockindent='12px'><font color=\"#333\">"+value.project_name+"</font>\n"+"<font face='宋体' color=\"#999999\">"+pass_no+"</font>"+
+							"<font face='宋体'> </font><a href=\"event:gcfw_xzmx\"><u><font color=\"#053a7c\">明细</font></u></a></textformat>"; 
+					}else if(value.type=="gc_ydfw"){	
+						pass_no=value.pass_no;
+						stringLength=countStringLength(pass_no);
+						for(var i:int=0;i<46-stringLength;i++){
+							pass_no+=" ";
+						}						
+						value.project_name=value.project_name.replace("\n","");	
+						this.htmlText ="<textformat blockindent='12px'><font color=\"#333\">"+value.project_name+"</font>\n"+"<font face='宋体' color=\"#999999\">"+pass_no+"</font>"+
+							"<font face='宋体'> </font><a href=\"event:gcfw_ydmx\"><u><font color=\"#053a7c\">明细</font></u></a></textformat>"; 
+					}else if(value.type=="gc_xgfw"){	
+						//工程许可下添加地块功能---sh--20141023
+						title=value.title;
+						var cdxg_plan_num:String=value.plan_num.replace("\n","");
+						cdxg_plan_num=cdxg_plan_num.replace("\n","");
+						title=title.replace("\n","");
+						stringLength=countStringLength(cdxg_plan_num);
+						for(var i:int=0;i<40-stringLength;i++){
+							cdxg_plan_num+=" ";
+						}
+						this.htmlText ="<textformat blockindent='12px'><font color=\"#333\">"+title+"</font>\n"+"<font face='宋体' color=\"#999999\">"+cdxg_plan_num+"</font>"+
+							"<font face='宋体'> </font><a href=\"event:info_gcdk\"><u><font color=\"#053a7c\" >地块</font></u></a><font face='宋体' letterspacing='1px'> </font><a href=\"event:gcfw_xgmx\"><u><font color=\"#053a7c\" >明细</font></u></a></textformat>";				  
+					}else if(value.type=="yd_xzfw"){	
+						pass_no=value.pass_no;
+						stringLength=countStringLength(pass_no);
+						for(var i:int=0;i<46-stringLength;i++){
+							pass_no+=" ";
+						}						
+						value.project_name=value.project_name.replace("\n","");	
+						this.htmlText ="<textformat blockindent='12px'><font color=\"#333\">"+value.project_name+"</font>\n"+"<font face='宋体' color=\"#999999\">"+pass_no+"</font>"+
+							"<font face='宋体'> </font><a href=\"event:ydfw_xzmx\"><u><font color=\"#053a7c\">明细</font></u></a></textformat>"; 
+					}else if(value.type=="yd_gcfw"){	
+						pass_no=value.pass_no;
+						stringLength=countStringLength(pass_no);
+						for(var i:int=0;i<46-stringLength;i++){
+							pass_no+=" ";
+						}						
+						value.project_name=value.project_name.replace("\n","");	
+						this.htmlText ="<textformat blockindent='12px'><font color=\"#333\">"+value.project_name+"</font>\n"+"<font face='宋体' color=\"#999999\">"+pass_no+"</font>"+
+							"<font face='宋体'> </font><a href=\"event:ydfw_gcmx\"><u><font color=\"#053a7c\">明细</font></u></a></textformat>"; 
+					}else if(value.type=="yd_xgfw"){	
+						//用地许可下添加地块功能---sh--20141023
+						title=value.title;
+						var cdxg_plan_num:String=value.plan_num.replace("\n","");
+						cdxg_plan_num=cdxg_plan_num.replace("\n","");
+						title=title.replace("\n","");
+						stringLength=countStringLength(cdxg_plan_num);
+						for(var i:int=0;i<40-stringLength;i++){
+							cdxg_plan_num+=" ";
+						}
+						this.htmlText ="<textformat blockindent='12px'><font color=\"#333\">"+title+"</font>\n"+"<font face='宋体' color=\"#999999\">"+cdxg_plan_num+"</font>"+
+							"<font face='宋体'> </font><a href=\"event:info_dk\"><u><font color=\"#053a7c\" >地块</font></u></a><font face='宋体' letterspacing='1px'> </font><a href=\"event:ydfw_xgmx\"><u><font color=\"#053a7c\" >明细</font></u></a></textformat>";				  
+						
+					}else if(value.type=="xz_ydfw"){	
+						pass_no=value.pass_no;
+						stringLength=countStringLength(pass_no);
+						for(var i:int=0;i<46-stringLength;i++){
+							pass_no+=" ";
+						}						
+						value.project_name=value.project_name.replace("\n","");	
+						this.htmlText ="<textformat blockindent='12px'><font color=\"#333\">"+value.project_name+"</font>\n"+"<font face='宋体' color=\"#999999\">"+pass_no+"</font>"+
+							"<font face='宋体'> </font><a href=\"event:xzfw_xzmx\"><u><font color=\"#053a7c\">明细</font></u></a></textformat>"; 
+					}else if(value.type=="xz_gcfw"){	
+						pass_no=value.pass_no;
+						stringLength=countStringLength(pass_no);
+						for(var i:int=0;i<46-stringLength;i++){
+							pass_no+=" ";
+						}						
+						value.project_name=value.project_name.replace("\n","");	
+						this.htmlText ="<textformat blockindent='12px'><font color=\"#333\">"+value.project_name+"</font>\n"+"<font face='宋体' color=\"#999999\">"+pass_no+"</font>"+
+							"<font face='宋体'> </font><a href=\"event:xzfw_gcmx\"><u><font color=\"#053a7c\">明细</font></u></a></textformat>"; 
+					}else if(value.type=="xz_xgfw"){	
+						//选址意见下添加地块功能---sh--20141023
+						title=value.title;
+						var cdxg_plan_num:String=value.plan_num.replace("\n","");
+						cdxg_plan_num=cdxg_plan_num.replace("\n","");
+						title=title.replace("\n","");
+						stringLength=countStringLength(cdxg_plan_num);
+						for(var i:int=0;i<40-stringLength;i++){
+							cdxg_plan_num+=" ";
+						}
+						this.htmlText ="<textformat blockindent='12px'><font color=\"#333\">"+title+"</font>\n"+"<font face='宋体' color=\"#999999\">"+cdxg_plan_num+"</font>"+
+							"<font face='宋体'> </font><a href=\"event:info_dk\"><u><font color=\"#053a7c\" >地块</font></u></a><font face='宋体' letterspacing='1px'> </font><a href=\"event:xzfw_xgmx\"><u><font color=\"#053a7c\" >明细</font></u></a></textformat>";				  
+						
+					}else if(value.type=="fqgh"){
+						title=value.title;
+						var cdfq_plan_num:String=value.plan_num.replace("\n","");
+						cdfq_plan_num=cdfq_plan_num.replace("\n","");
+						title=title.replace("\n","");
+						stringLength=countStringLength(cdfq_plan_num);
+						for(var i:int=0;i<46-stringLength;i++){
+							cdfq_plan_num+=" ";
+						}
+						this.htmlText ="<textformat blockindent='12px'><font color=\"#333\">"+title+"</font>\n"+"<font face='宋体' color=\"#999999\">"+cdfq_plan_num+"</font>";				  
+					}else if(value.type=="fqgh_cdxg"){
+						title=value.title;
+						var cdxg_plan_num:String=value.plan_num.replace("\n","");
+						cdxg_plan_num=cdxg_plan_num.replace("\n","");
+						title=title.replace("\n","");
+						stringLength=countStringLength(cdxg_plan_num);
+						for(var i:int=0;i<46-stringLength;i++){
+							cdxg_plan_num+=" ";
+						}
+						this.htmlText ="<textformat blockindent='12px'><font color=\"#333\">"+title+"</font>\n"+"<font face='宋体' color=\"#999999\">"+cdxg_plan_num+"</font>"+
+							"<font face='宋体'> </font><a href=\"event:fqgh_xgmx\"><u><font color=\"#053a7c\" >明细</font></u></a></textformat>";				  
+					}else if(value.type=="zxgh"){
+						title=value.title;
+						var cdzx_plan_num:String=value.plan_num.replace("\n","");
+						cdzx_plan_num=cdzx_plan_num.replace("\n","");
+						title=title.replace("\n","");
+						stringLength=countStringLength(cdzx_plan_num);
+						for(var i:int=0;i<46-stringLength;i++){
+							cdzx_plan_num+=" ";
+						}
+						this.htmlText ="<textformat blockindent='12px'><font color=\"#333\">"+title+"</font>\n"+"<font face='宋体' color=\"#999999\">"+cdzx_plan_num+"</font>";				  
+					}else if(value.type=="zxgh_cdxg"){
+						title=value.title;
+						var cdxg_plan_num:String=value.plan_num.replace("\n","");
+						cdxg_plan_num=cdxg_plan_num.replace("\n","");
+						title=title.replace("\n","");
+						stringLength=countStringLength(cdxg_plan_num);
+						for(var i:int=0;i<46-stringLength;i++){
+							cdxg_plan_num+=" ";
+						}
+						this.htmlText ="<textformat blockindent='12px'><font color=\"#333\">"+title+"</font>\n"+"<font face='宋体' color=\"#999999\">"+cdxg_plan_num+"</font>"+
+							"<font face='宋体'> </font><a href=\"event:zxgh_xgmx\"><u><font color=\"#053a7c\" >明细</font></u></a></textformat>";				  
+					}
+					
+				}
+				//				this.height = this.textHeight*4+10;
+			} 
+			
+			private function countStringLength(src:String):int
+			{
+				var length:int = 0;
+				var byteArr:ByteArray=new ByteArray();
+				for (var i:int = 0;i < src.length; i++){
+					byteArr.clear();
+					byteArr.writeUTFBytes(src.charAt(i));
+					if(byteArr.length>=2){
+						length+=2;
+					}else{
+						length+=1;
+					}
+				}
+				
+				return length;
+			}
+			private function linkClickEvent(event:TextEvent):void
+			{
+				ViewerContainer.dispatchEvent(new AppEvent(AppEvent.GHDataGridClick,event.text));
+			}
+			
+			
+			protected function text_linkHandler(event:TextEvent):void
+			{
+				ViewerContainer.dispatchEvent(new AppEvent(AppEvent.GHDataGridClick,event.text));
+			}
+			
+			
+			protected function textarea_mouseWheelHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub.
+				var displayObject:DisplayObjectContainer = this.parent ;
+				displayObject.dispatchEvent(event);
+			}
+			public static  function addStyle(styleName:String,style:Object,styleSheet:StyleSheet):void{ 
+				styleSheet.setStyle(styleName,style); 
+			} 
+			
+			
+			protected function changeHandler(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				invalidateSize();
+			}
+			override protected function measure():void{
+				super.measure();
+				this.htmlText=mx.utils.StringUtil.trim(this.htmlText);
+				this.measuredHeight = measuredMinHeight = textField.getExplicitOrMeasuredHeight() +
+					borderMetrics.top + borderMetrics.bottom;
+				if(this.measuredHeight>50&&this.measuredHeight<70){
+					this.measuredHeight=55;
+				}else{
+					this.measuredHeight=60;
+				}
+			}
+			
+		]]>
+	</fx:Script>
+</mx:TextArea>

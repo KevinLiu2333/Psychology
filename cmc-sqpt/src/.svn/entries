@@ -1,0 +1,34 @@
+10
+
+dir
+246368
+http://10.1.8.82:1088/svn/projects2/CMC/svn/branches/dev/cmc-sqpt/src
+http://10.1.8.82:1088/svn
+
+
+
+2017-03-22T07:22:16.909500Z
+230977
+chenjun02
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9817e563-51b1-004a-bdbd-08a67d9ca217
+
+cmc
+dir
+
+workspace
+dir
+

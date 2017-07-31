@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/test
+END
+ContentAuditHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/test/ContentAuditHelper.java
+END
+SingleSearchTester.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/test/SingleSearchTester.java
+END
+SearchTestRunner.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/test/SearchTestRunner.java
+END
+ContentAuditSynchro.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/test/ContentAuditSynchro.java
+END
+SearchTester.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/test/SearchTester.java
+END
+AnalyzerTester.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/test/AnalyzerTester.java
+END
+TaskTester.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/test/TaskTester.java
+END
+BatchSearchTester.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/test/BatchSearchTester.java
+END
+TestLuceneSearch.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/test/TestLuceneSearch.java
+END
+WdissConfigurationTester.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/test/WdissConfigurationTester.java
+END
+ConfigurationHelperTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/test/ConfigurationHelperTest.java
+END
+TokenizerTester.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/test/TokenizerTester.java
+END
+TestGrouping.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/test/TestGrouping.java
+END
+ConfigurationTester.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/test/ConfigurationTester.java
+END
+SearchPortalTester.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/test/SearchPortalTester.java
+END
+TestAnalyzerFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/test/TestAnalyzerFactory.java
+END
+SearchClientTester.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/test/SearchClientTester.java
+END
+IndexTester.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/test/IndexTester.java
+END

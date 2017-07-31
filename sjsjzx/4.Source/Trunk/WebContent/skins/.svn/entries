@@ -1,0 +1,64 @@
+10
+
+dir
+246920
+http://10.1.8.82:1088/svn/projects2/MZJ/sjsjzx/4.Source/Trunk/WebContent/skins
+http://10.1.8.82:1088/svn
+
+
+
+2017-06-12T10:58:41.500000Z
+242818
+wulong
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9817e563-51b1-004a-bdbd-08a67d9ca217
+
+SYJS
+dir
+
+blue
+dir
+
+css
+dir
+
+daping
+dir
+
+fw
+dir
+
+images
+dir
+
+index
+dir
+
+jk
+dir
+
+query
+dir
+
+search
+dir
+
+style
+dir
+
+swf
+dir
+

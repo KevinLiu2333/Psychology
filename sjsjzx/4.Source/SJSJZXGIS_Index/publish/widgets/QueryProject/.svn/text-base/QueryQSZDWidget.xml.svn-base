@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!--
+////////////////////////////////////////////////////////////////////////////////
+//
+// Copyright © 2008 ESRI
+//
+// All rights reserved under the copyright laws of the United States.
+// You may freely redistribute and use this software, with or
+// without modification, provided you include the original copyright
+// and use restrictions.  See use restrictions in the file:
+// <install location>/FlexViewer/License.txt
+//
+////////////////////////////////////////////////////////////////////////////////
+-->
+<configuration>
+	<layers> 
+		<parcelLayer>
+			<sjyt><name>权属宗地图层</name></sjyt>
+			<url>arcgis/rest/services/dynamic_pdgt2012/MapServer/25</url>
+			<graphicalsearchlabel>从下面选择一种多边形以选定查询范围：</graphicalsearchlabel>
+			<fields>ZDBH,用途描述,土地等级,土地权属状,街坊名称,街道名称,测量面积,证上面积,地块状态日</fields>
+			<fieldsCN>宗地编号,用途描述,土地等级,土地权属状,街坊名称,街道名称,测量面积 ,证上面积,地块状态日</fieldsCN>
+			<titlefield>ZDBH</titlefield>
+			<linkfield>ZDBH</linkfield>
+		</parcelLayer>
+		</layers>
+		<sjyts>
+			<sjyt><name>0</name></sjyt>
+			<sjyt><name>1</name></sjyt>
+			<sjyt><name>2</name></sjyt>
+			<sjyt><name>3</name></sjyt>
+			<sjyt><name>4</name></sjyt>
+			<sjyt><name>5</name></sjyt>
+			<sjyt><name>6</name></sjyt>
+			<sjyt><name>7</name></sjyt>
+			<sjyt><name>8</name></sjyt>
+			<sjyt><name>9</name></sjyt>
+			<sjyt><name>10</name></sjyt>
+		</sjyts>
+</configuration>

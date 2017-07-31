@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, span, em, strong, img, form, fieldset, input, textarea, button, pre, table, tr, th, td, blockquote, code, label, cite, i { padding: 0; margin: 0 }
+body{ font-size:12px; font-family:Arial,宋体; color:#464646; line-height:30px;}
+:focus { outline: 0 }
+fieldset, img { border: 0 none;}
+ul, ol, li { list-style-type: none }
+select, input, img { vertical-align: middle }
+input, textarea, select { font-family: inherit; font-size: inherit; font-weight: inherit; *font-size:100%}
+a,a:visited { text-decoration: none; color:#464646;}
+a:hover { text-decoration: none; color:#3faae0; }
+/*login*/
+.bg_hui{width: 100%;height: 100%;}
+.login_bg{ background:url(../images/login/login_bg.jpg) left top repeat-x;width: 100%;height: 100%;}
+.login_logo{ width:60%; height:58px; float:left; background:url(../images/login/login_logo.png) right top no-repeat;}
+.login_banner{ width:95%; margin:0 auto; padding-top:117px; _padding-top:97px; background:url(../images/login/login_banner.jpg) no-repeat;background-position: center 183px;overflow:hidden;}
+.login_text{ width:30%; height:292px; float:left; margin-left:20px; margin-bottom:40px; padding:18px 0 0 33px; background:url(../images/login/login_text.png) no-repeat;}
+.login_text .zhuce{margin-left:80px;}
+.login_text .zhuce a:link,.login_text .zhuce a:visited{ color:#808080; padding:0 3px;}
+.login_text .zhuce a:hover{color:#3faae0;}
+.login_input{ height:42px; margin-top:18px; overflow:hidden;}
+.login_input input{line-height:38px; height:38px;border:1px solid #ccc; font-size:16px; color:#999;}
+.login_input select{line-height:38px; height:38px;border:1px solid #ccc; font-size:16px; color:#999;}
+.login_input option{line-height:38px; height:38px;border:1px solid #ccc; font-size:16px; color:#999;}
+.login_input .username{ width:234px; background:url(../images/login/login_icon.jpg) 5px 5px no-repeat; text-indent:40px; *width:194px; *text-indent:0px; *padding-left:40px;}
+.login_input .userlist{ width:234px; padding-left:40px;}
+.login_input .password{ width:234px; background:url(../images/login/login_icon.jpg) 5px -33px no-repeat; text-indent:40px; *width:194px; *text-indent:0px; *padding-left:40px;}
+.login_input .pin{ width:234px; background:url(../images/login/login_icon.jpg) 5px -67px no-repeat; text-indent:40px; *width:194px; *text-indent:0px; *padding-left:40px;}
+.banquan{ width:100%; float:left; margin-top:10px; margin-bottom:20px; text-align:center; }

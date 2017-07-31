@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<description>Spring Configuration of WSSIP - Event.</description>
+
+	<bean class="com.wondersgroup.cmc.commons.event.BusilogUtils">
+		<property name="businessLogService" ref="businessLogService"></property>
+	</bean>
+
+	<bean id="businessLogServiceImpl"
+		class="com.wondersgroup.cmc.commons.event.service.impl.BusinessLogServiceImpl">
+	</bean>
+	<bean id="businessLogService" parent="basicTxProxy">
+		<property name="target" ref="businessLogServiceImpl"></property>
+	</bean>
+
+</beans>

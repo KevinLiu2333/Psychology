@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/184983/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/xml2db/xml/operator
+END
+ReadXmlProxy.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/184983/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/xml2db/xml/operator/ReadXmlProxy.java
+END
+Factory.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/183852/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/xml2db/xml/operator/Factory.java
+END
+IReadXml.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/184426/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/xml2db/xml/operator/IReadXml.java
+END
+Operator.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/184639/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/xml2db/xml/operator/Operator.java
+END
+ReadXmlImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/184983/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wonders/xml2db/xml/operator/ReadXmlImpl.java
+END

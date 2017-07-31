@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<queyRange>55</queyRange>
+	<layers>
+		<xgfw_count>
+			<url>/SJSJZXGIS_Index/servlet/GetOracleCountData</url>
+			<table>house</table>
+			<column>ID</column>
+		</xgfw_count>
+		<extentLayer>
+			<name>基地图层dasds</name>
+			<url>arcgis/rest/services/dynamic_sjsjzx/MapServer/0</url>
+			<fields>ID,NAME,ADDRESS,TYPE,CREATETIME,FKIND,RKIND</fields>
+			<fieldsCN>ID,名字,地址,类型,时间,外键1,外键2</fieldsCN>
+		</extentLayer>
+	</layers>
+</configuration>

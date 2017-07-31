@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<viewer:BaseWidget xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx"
+				   xmlns:viewer="com.esri.viewer.*"
+				   layout="absolute"
+				   widgetConfigLoaded="basewidget1_widgetConfigLoadedHandler(event)">
+	
+	<fx:Script>
+		<![CDATA[
+			import com.esri.viewer.AppEvent;
+			import com.esri.viewer.ViewerContainer;
+			import mx.controls.Alert;
+			[Bindable]
+			private var layerOperationSrc:String;
+			[Bindable]
+			private var locationSrc:String;
+			protected function basewidget1_widgetConfigLoadedHandler(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				if(configXML)
+				{
+					layerOperationSrc=configXML.layerOperationSrc;
+					locationSrc=configXML.locationSrc;
+				}
+			}
+			
+			protected function layerOperation_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				ViewerContainer.dispatchEvent(new AppEvent(AppEvent.REALINFORMATIONWIDGET_RUN,"图层控制"));
+			}
+			protected function location_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				ViewerContainer.dispatchEvent(new AppEvent(AppEvent.REALINFORMATIONWIDGET_RUN,"街道定位"));
+
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<s:Group width="120" height="55">
+		<s:Rect width="120" height="55"  radiusX="5" radiusY="5">
+			<s:fill>
+				<s:SolidColor alpha="{getStyle('contentBackgroundAlpha')}"
+							  color="{getStyle('contentBackgroundColor')}"/>
+			</s:fill>
+			<s:stroke>
+				<s:SolidColorStroke  color="{getStyle('borderColor')}"/>
+			</s:stroke>
+		</s:Rect>
+		<s:HGroup width="100%" height="100%" paddingLeft="10" paddingTop="5" horizontalAlign="center" >
+			<mx:Image id="layerOperation"	 toolTip="图层控制" source="{layerOperationSrc}" click="layerOperation_clickHandler(event)" width="48" height="48"/>
+			<mx:VRule height="80%"   chromeColor="{getStyle('contentBackgroundColor')}" alpha="1"/>
+			<mx:Image id="location"	 toolTip="地图定位" source="{locationSrc}" click="location_clickHandler(event)" width="48" height="48"/>
+		</s:HGroup>
+ 	</s:Group>
+</viewer:BaseWidget>

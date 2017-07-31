@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<viewer:BaseWidget xmlns:fx="http://ns.adobe.com/mxml/2009"
+				   xmlns:s="library://ns.adobe.com/flex/spark"
+				   xmlns:mx="library://ns.adobe.com/flex/mx"
+				   xmlns:viewer="com.esri.viewer.*"
+				   xmlns:HeaderController="widgets.HeaderController.*"
+				   borderSkin="{null}"
+				   creationComplete="creationCompleteHandler(event)"
+				   horizontalScrollPolicy="off" verticalScrollPolicy="off"				   
+				   widgetConfigLoaded="init()">
+	<fx:Script>
+		<![CDATA[
+			import com.esri.viewer.AppEvent;
+			import com.esri.viewer.ConfigData;
+			import com.esri.viewer.ViewerContainer;
+			import com.esri.viewer.WidgetStates;
+			import com.esri.viewer.components.HTMLPopup;
+			
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.events.EffectEvent;
+			import mx.events.FlexEvent;
+			
+			import spark.components.supportClasses.ItemRenderer;
+			
+			private var userguideUrl:String;
+			private var btnLabel:String = "";
+			private var txtareaWidth:Number;
+			private var txtareaHeight:Number;
+			
+			[Bindable]
+			private var labelText:String = "";
+			[Bindable]
+			private var labelVisible:String = "";
+			
+			[Bindable]
+			private var widgetItemAC:ArrayCollection;
+			[Bindable]
+			private var groupWidgetAC:ArrayCollection;
+			[Bindable]
+			private var title:String;
+			[Bindable]
+			private var openToolTip:String="打开";
+			[Bindable]
+			private var closeToolTip:String="隐藏";
+			private var userguideIconStr:String="assets/images/newimage/help.png";
+			private var legendIconStr:String="assets/images/newimage/legend.png";
+			
+			private var pointIconStr:String="assets/images/newimage/point.png";
+			private var controlIconStr:String="assets/images/newimage/control.png";
+			
+			private function creationCompleteHandler(event:FlexEvent):void
+			{
+				if (configData)
+				{
+					widgetItemAC = getWidgetItems(configData.widgets);
+					var uiList:Array = configData.viewerUI;
+					
+					for (var i:int = 0; i < uiList.length; i++)
+					{
+						if (uiList[i].id == "title")
+						{
+							titleIcon.source = uiList[i].value;
+							
+							// bannerTitle.text = uiList[i].value;
+						} // default is no title at all
+						
+						if (uiList[i].id == "subtitle")
+						{
+							// bannerSubtitle.text = uiList[i].value;
+						} // default is no subtitle at all
+						
+						if (uiList[i].id == "logo")
+						{
+							//logoIcon.source = uiList[i].value;
+						} // default is no logo at all
+					}
+					
+					helpIcon.source=userguideIconStr;
+					legendIcon.source=legendIconStr;
+					ViewerContainer.addEventListener(AppEvent.WIDGET_STATE_CHANGED, widgetStateChangedHandler);
+				}
+			}
+			
+			private function init():void
+			{
+				if (configXML)
+				{
+					userguideUrl = configXML.userguideUrl || "";
+					labelText = configXML.about.label || getDefaultString("aboutLabel");
+					labelVisible = configXML.about.visible.toString() || "true";
+					btnLabel = configXML.about.btnlabel || getDefaultString("okLabel");
+					txtareaWidth = configXML.about.width || 500;
+					txtareaHeight = configXML.about.height || 500;
+					userguideIconStr= configXML.userguideIcon || "";
+					legendIconStr=configXML.legendIcon || "";
+					
+					pointIconStr = configXML.pointUrl || "";
+					controlIconStr = configXML.controlUrl || "";
+				}
+			}
+			private function getWidgetItems(widgetList:Array):ArrayCollection
+			{
+				var menuItems:ArrayCollection = new ArrayCollection;
+				var widgetItem:WidgetItem;
+				for (var i:int = 0; i < widgetList.length; )
+				{
+					if (widgetList[i].grouped)
+					{
+						// grouped
+						var widgetArray:Array = [];
+						var length:Number = widgetList[i].groupLength;
+						var groupLabel:String = widgetList[i].groupLabel;
+						for (var k:int = 0; k < length; k++)
+						{
+							if(widgetList.length>1)
+							{
+								if(groupLabel == widgetList[i + k].groupLabel){
+									widgetArray.push({ widget: widgetList[i + k], open: (widgetList[i].preload && (widgetList[i].preload == "open" || widgetList[i].preload == "minimized")) ? true : false });
+								}else{
+									length = k;
+									break;
+								}	
+							}else
+							{
+								    widgetArray.push({ widget: widgetList[i + k], open: (widgetList[i].preload && (widgetList[i].preload == "open" || widgetList[i].preload == "minimized")) ? true : false });
+							}
+							
+						}
+						widgetItem = new WidgetItem;
+						widgetItem.isGroup = true;
+						widgetItem.label = widgetList[i].groupLabel;
+						widgetItem.icon = widgetList[i].groupIcon;
+						widgetItem.labelIcon=widgetList[i].groupLabelIcon;
+						widgetItem.overLabelIcon=widgetList[i].groupOverLabelIcon;
+						widgetItem.widgets = widgetArray;
+						
+						menuItems.addItem(widgetItem);
+						
+						// move to the next group
+						i = i + length;
+					}
+					else
+					{
+						Alert.show("let show 1");
+						// upgrouped
+						widgetItem = new WidgetItem;
+						widgetItem.id = widgetList[i].id;
+						widgetItem.label = widgetList[i].label;
+						widgetItem.icon = widgetList[i].icon;
+						widgetItem.url = widgetList[i].url;
+						widgetItem.open = widgetList[i].preload && (widgetList[i].preload == "open" || widgetList[i].preload == "minimized");
+						menuItems.addItem(widgetItem);
+						
+						// move to the next individual widget
+						i++;
+					}
+				}
+
+				return menuItems;
+			}
+			
+			
+			private function widgetItemDG_widgetItemClickHandler(event:Event):void
+			{
+				
+				var widgetItem:WidgetItem = ItemRenderer(event.target).data as WidgetItem;
+				if (widgetItem.isGroup && widgetItem.label != "点查操作" && widgetItem.label != "图层控制" )
+				{
+					groupWidgetAC = new ArrayCollection();
+					// check the array of widgets if they are open before hand
+					for each (var widgetObj:Object in widgetItem.widgets)
+					{
+						if(widgetObj.widget)
+						{
+							var widgetItem1:WidgetItem = new WidgetItem;
+							widgetItem1.id = widgetObj.widget.id;
+							widgetItem1.label = widgetObj.widget.label;
+							widgetItem1.icon = widgetObj.widget.icon;
+							widgetItem1.url = widgetObj.widget.url;
+							widgetItem1.open = widgetObj.open;
+							groupWidgetAC.addItem(widgetItem1);
+						}
+					}
+					menuToolTip.visible = false;
+					widgetList.visible = true;
+					var resise:Resize = new Resize();
+					resise.widthTo = 120;
+					resise.widthFrom = 0;
+					resise.heightFrom = 0;
+					resise.heightTo = groupWidgetAC.length * 30;
+					resise.heightBy = 10;
+					resise.widthBy = 10;
+					resise.play([widgetListDG]);
+				}
+				else
+				{
+					if(widgetItem.id){
+						ViewerContainer.dispatchEvent(new AppEvent(AppEvent.WIDGET_RUN, widgetItem.id));
+					}
+					
+				}
+				if(widgetItem.label == "图层控制"){
+					ViewerContainer.dispatchEvent(new AppEvent(AppEvent.REALINFORMATIONWIDGET_RUN,"图层控制"));		
+				}
+				if(widgetItem.label == "点查操作"){
+					ViewerContainer.dispatchEvent(new AppEvent(AppEvent.REALINFORMATIONWIDGET_RUN,"点查操作"));		
+				}
+			}
+			
+			private function widgetList_widgetItemClickHandler(event:Event):void
+			{
+				var widgetItem:WidgetItem = ItemRenderer(event.target).data as WidgetItem;
+				ViewerContainer.dispatchEvent(new AppEvent(AppEvent.WIDGET_RUN, widgetItem.id));
+			}
+			
+			[Bindable]
+			private var xOver:int;
+			
+			private function widgetItemDG_widgetItemMouseOverHandler(event:Event):void
+			{
+				var pointGlobal:Point = ItemRenderer(event.target).localToGlobal(new Point(0, 0));
+				var pointLocal:Point = headerGroup.globalToLocal(pointGlobal); // get the local coordinates where the menuItem will be shown
+				
+				xOver = pointLocal.x;
+				
+				widgetList.visible = false;
+				if (WidgetItem(ItemRenderer(event.target).data).label)
+				{
+					menuTitle.text = WidgetItem(ItemRenderer(event.target).data).label;
+				}
+			}
+			
+			private function widgetItemDG_widgetItemMouseOutHandler(event:Event):void
+			{
+				menuToolTip.visible = false;
+			}
+			
+			private function widgetStateChangedHandler(event:AppEvent):void
+			{
+				var data:Object = event.data;
+				for (var i:Number = 0; i < widgetItemAC.length; )
+				{
+					if (widgetItemAC.getItemAt(i).isGroup)
+					{
+						// make sure to check it for the array of widgets(group) if they are open before hand
+						var widgetFound:Boolean;
+						for each (var widgetObj:Object in widgetItemAC.getItemAt(i).widgets)
+						{
+							if (data.id as Number == widgetObj.widget.id)
+							{
+								widgetFound = true;
+								widgetObj.open = (data.state as String == WidgetStates.WIDGET_OPENED) || (data.state as String == WidgetStates.WIDGET_MINIMIZED);
+								break;
+							}
+						}
+						if (widgetFound)
+						{
+							break;
+						}
+						else
+						{
+							i++;
+						}
+					}
+					else
+					{
+						if (data.id as Number == widgetItemAC.getItemAt(i).id)
+						{
+							widgetItemAC.getItemAt(i).open = (data.state as String == WidgetStates.WIDGET_OPENED) || (data.state as String == WidgetStates.WIDGET_MINIMIZED);
+							break;
+						}
+						else
+						{
+							i++;
+						}
+					}
+				}
+				// check for any grouped widgets
+				if (groupWidgetAC && groupWidgetAC.length > 0)
+				{
+					for (var j:Number = 0; j < groupWidgetAC.length; )
+					{
+						if (data.id as Number == groupWidgetAC.getItemAt(j).id)
+						{
+							groupWidgetAC.getItemAt(j).open = (data.state as String == WidgetStates.WIDGET_OPENED) || (data.state as String == WidgetStates.WIDGET_MINIMIZED);
+							widgetList.visible = false;
+							break;
+						}
+						else
+						{
+							j++;
+						}
+					}
+				}
+			}
+			
+			private function widgetList_rollOutHandler(event:MouseEvent):void
+			{
+				widgetList.visible = false;
+			}
+			
+			protected function helpIcon_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				navigateToURL( new URLRequest(servlet_UrlROOT+userguideUrl));
+			}
+			
+			protected function legendIcon_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				
+				ViewerContainer.dispatchEvent(new AppEvent(AppEvent.LEGENDWIDGETOPEN,null));
+				//Alert.show("let 111");
+				//ViewerContainer.dispatchEvent(new AppEvent(AppEvent.CONTROLWIDGETOPEN,null));
+			}
+			protected function pointIcon_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				
+				ViewerContainer.dispatchEvent(new AppEvent(AppEvent.REALINFORMATIONWIDGET_RUN,"点查操作"));	
+			}
+			protected function controlIcon_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				ViewerContainer.dispatchEvent(new AppEvent(AppEvent.REALINFORMATIONWIDGET_RUN,"图层控制"));		
+			}
+			private function changeState():void
+			{
+				if (currentState == "expanded")
+				{
+					currentState="collapsed";
+				}
+				
+				else
+					
+				{
+					currentState="expanded";
+				}
+			}
+			
+			protected function move1_effectEndHandler(event:EffectEvent):void
+			{
+				// TODO Auto-generated method stub
+				imgCloser.source="assets/flash/arrows_right.swf";
+				headerContent.visible=false;
+				rect.visible=false;
+				imgCloser.width=50;
+				imgCloser.y=10;
+			}
+			
+			
+			protected function moveRight_effectEndHandler(event:EffectEvent):void
+			{
+				// TODO Auto-generated method stub
+				imgCloser.source="assets/flash/arrows_left.swf";
+				imgCloser.visible=true;
+				
+			}
+			
+			protected function move2_effectStartHandler(event:EffectEvent):void
+			{
+				// TODO Auto-generated method stub
+				imgCloser.y=20;
+				imgCloser.visible=false;
+				headerContent.visible=true;
+				rect.visible=true;
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<viewer:states>
+		<s:State name="expanded"/>
+		<s:State name="collapsed"/> 
+	</viewer:states>
+	<viewer:transitions>
+		<s:Transition id="transA"
+					  fromState="expanded"
+					  toState="collapsed">
+			<s:Sequence>
+				<mx:Parallel>
+					<s:Resize duration="1000"  target="{headerContent}"  widthTo="60"/>
+					<mx:Move duration="1000"
+							 target="{imgCloser}"
+							 xTo="10"
+							 effectEnd="move1_effectEndHandler(event)"/>
+				</mx:Parallel>
+			</s:Sequence>
+		</s:Transition>
+		<s:Transition id="transB"
+					  fromState="collapsed"
+					  toState="expanded">
+			<s:Sequence>
+				<mx:Parallel>
+					<mx:Move duration="1000"
+							 target="{imgCloser}"
+							 xTo="{headerGroup.width-50}"
+							 effectStart="move2_effectStartHandler(event)"
+							 effectEnd="moveRight_effectEndHandler(event)"/>
+					<s:Resize duration="1000"  target="{headerContent}" />
+				</mx:Parallel>
+			</s:Sequence>
+		</s:Transition>
+	</viewer:transitions>
+	<s:Group id="headerGroup"  width.collapsed="{headerContent.width}" 
+			 width="90%" height="85" >
+		<s:Rect id="rect"    x="10" y="10" radiusX="30" radiusY="30" width="100%" height="{headerGroup.height - 30}" >
+			<s:fill>
+				<s:LinearGradient rotation="90">
+					<s:GradientEntry alpha="1.0" color="#0099FF" ratio="0" />
+					<s:GradientEntry alpha="0.5" color="#0099CC" ratio="1"/>
+				</s:LinearGradient>
+			</s:fill>
+		</s:Rect>
+		<mx:HBox id="headerContent" 
+				 width.collapsed="45"  width="100%" 
+				 horizontalScrollPolicy="off" verticalScrollPolicy="off"
+				 backgroundAlpha="0"  
+				 backgroundColor="{getStyle('contentBackgroundColor')}"
+				 horizontalGap="5"
+				 paddingLeft="10"
+				 verticalAlign="middle"
+				 >
+			<mx:Image id="titleIcon" height="{headerGroup.height - 40}"
+					  buttonMode="true"
+					  smoothBitmapContent="true"
+					  useHandCursor="true"
+					  horizontalAlign="left"
+					  maxHeight="{headerContent.height}"
+					  maxWidth="300" 
+					  verticalAlign="middle"/>
+			<mx:HBox  id="widgetBox"   paddingTop="10" 
+					  width="80%"    height="{headerGroup.height}"
+					  backgroundAlpha="0"
+					  verticalScrollPolicy="off"
+					  horizontalAlign="center">
+				<HeaderController:WidgetItemDataGroup id="widgetItemDG"
+													  dataProvider="{widgetItemAC}"
+													  widgetItemClick="widgetItemDG_widgetItemClickHandler(event)"
+													  widgetItemMouseOut="widgetItemDG_widgetItemMouseOutHandler(event)"
+													  widgetItemMouseOver="widgetItemDG_widgetItemMouseOverHandler(event)">
+					<HeaderController:layout>
+						<s:HorizontalLayout gap="2"
+											useVirtualLayout="true"
+											verticalAlign="middle"/>
+					</HeaderController:layout>
+				</HeaderController:WidgetItemDataGroup>
+			</mx:HBox>
+			<!--mx:Spacer width="-5"/-->
+			<mx:VBox id="linkBox"
+					 horizontalAlign="left"
+					 paddingRight="50"
+					 paddingLeft="0"
+					 verticalAlign="middle"
+					 >
+				<mx:Image id="legendIcon"  click="legendIcon_clickHandler(event)" buttonMode="true"/>
+				<mx:Image id="helpIcon"  click="helpIcon_clickHandler(event)"  buttonMode="true"/>
+			</mx:VBox>
+		</mx:HBox>
+		<s:VGroup id="menuToolTip"
+				  x="{xOver + 40 - menuToolTipBox.width/2}" y="{headerContent.height}"
+				  gap="0"
+				  horizontalAlign="center"
+				  visible="false">
+			<s:Graphic id="menuTriangle" visible="{menuToolTip.visible}">
+				<s:Group>
+					<s:Path data="m 7 0 l 7 14 l -14 0 z">
+						<s:fill>
+							<mx:SolidColor alpha="1" color="{getStyle('contentBackgroundColor')}"/>
+						</s:fill>
+					</s:Path>
+				</s:Group>
+			</s:Graphic>
+			<s:BorderContainer id="menuToolTipBox"
+							   width="{menuTitle.width + 8}" height="{menuTitle.height +2}"
+							   backgroundColor="{getStyle('contentBackgroundColor')}"
+							   borderVisible="false"
+							   cornerRadius="10"
+							   visible="{menuToolTip.visible}">
+				<s:layout>
+					<s:HorizontalLayout horizontalAlign="center" verticalAlign="middle"/>
+				</s:layout>
+				<s:Label id="menuTitle"
+						 paddingBottom="4"
+						 paddingLeft="5"
+						 paddingRight="5"
+						 paddingTop="5"
+						 visible="{menuToolTip.visible}"/>
+			</s:BorderContainer>
+		</s:VGroup>
+		<s:BorderContainer id="widgetList"
+						   x="{xOver + 40 - widgetListDG.width/2}" y="{headerContent.height}" width="{widgetListDG.width + 4}" height="{widgetListDG.height + 2}"
+						   backgroundColor="{getStyle('contentBackgroundColor')}"
+						   borderColor="{getStyle('color')}"
+						   borderVisible="true"
+						   cornerRadius="3"
+						   rollOut="widgetList_rollOutHandler(event)"
+						   visible="false">
+			<HeaderController:WidgetListDataGroup id="widgetListDG" 
+												  dataProvider="{groupWidgetAC}"
+												  visible="{widgetList.visible}"
+												  widgetListItemClick="widgetList_widgetItemClickHandler(event)">
+				<HeaderController:layout>
+					<s:VerticalLayout paddingTop="0" gap="0"
+									  useVirtualLayout="true"
+									  verticalAlign="middle"/>
+				</HeaderController:layout>
+				
+			</HeaderController:WidgetListDataGroup>
+		</s:BorderContainer>
+		<mx:Image id="imgCloser" 
+				  toolTip.collapsed="{openToolTip}"
+				  toolTip.expanded="{closeToolTip}"
+				  visible="true" 
+				  x="{headerContent.width-50}"
+				  y="20"
+				  source="assets/flash/arrows_left.swf"
+				  click="changeState()"/>
+	</s:Group>
+</viewer:BaseWidget>

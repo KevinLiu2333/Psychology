@@ -1,0 +1,1302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f60a329b-8328-4f14-82bd-1cc9c3e4ac72" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/axis.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/commons-codec-1.10.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/commons-discovery-0.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/commons-httpclient-3.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/commons-logging-1.1.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jaxrpc.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/wsdl4j-1.5.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/springcxf-1.0-SNAPSHOT.war" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/testAxis2Demo.war" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/xfire-1.0-SNAPSHOT.war" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/lib/commons-httpclient-3.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/lib/junit-4.12.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Nutz/src/main/java/demo/crossorigin/CrossOrigin.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Nutz/src/main/java/demo/dao/Ceshi.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Nutz/src/main/java/demo/dao/DataSource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Nutz/src/main/java/demo/fileupload/FileUpload.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Nutz/src/main/java/demo/filter/Filter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Nutz/src/main/java/demo/filter/MyFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Nutz/src/main/java/demo/filter/SayHiFilterProcessor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Nutz/src/main/java/demo/hello/MainSetup.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Nutz/src/main/java/demo/ioc/PetModule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Nutz/src/main/java/demo/json/JsonDemo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Nutz/src/main/java/demo/json/Pet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Nutz/src/main/java/demo/localstring/LocalString.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Nutz/src/main/java/demo/rest/RestfulApi.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Nutz/src/main/java/demo/rest/User.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Nutz/src/main/resources/msgs/en_US/user.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Nutz/src/main/resources/msgs/zh_CN/role.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Nutz/src/main/resources/msgs/zh_CN/user.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../axis14/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../axis14/src/main/java/com/lucky/axis/service/Book.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../axis14/src/main/java/com/lucky/axis/service/Person.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../axis14/src/main/java/com/lucky/axis/service/PersonInfoService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/example/HelloWorld.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/soaptest/ApiTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/soaptest/DynamicHttpclientCall.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/soaptest/Static.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/sun-jaxws.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../springcxf/src/main/java/client/ClientForCXF.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../springcxf/src/main/java/webservice/ClientForCXF.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../springcxf/src/main/java/webservice/MyWebService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../springcxf/src/main/java/webservice/MyWebServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../springcxf/src/main/resources/spring/spring-web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../springcxf/src/main/resources/spring/spring-webservice.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../wddc/src/com/wonders/sjic/service/RESTService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../wddc/src/com/wonders/test/ApiTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../wddc/src/com/wonders/wdac/at/ApiAt.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../wddc/src/com/wonders/wddc/suite/data/job/ApiJob.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../wddc/src/com/wonders/wddc/suite/data/job/DynamicHttpclientCall.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../wddc/src/com/wonders/wddc/suite/data/job/Ret.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../xfire/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../xfire/src/main/java/demo/ServerTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../xfire/src/main/java/demo/ServerTestImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../xfire/src/main/webapp/WEB-INF/classes/META-INF/xfire/services.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/.svn/all-wcprops" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/.svn/entries" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/LoginAt.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/LoginAt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/MainModule.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/MainModule.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/at/BaseAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/at/BaseAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/at/FwAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/at/FwAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/at/FwApplyAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/at/FwApplyAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/entity/FwAccess.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/entity/FwAccess.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/entity/FwAlert.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/entity/FwAlert.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/entity/FwApply.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/entity/FwApply.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/entity/FwConfig.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/entity/FwConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/entity/FwInfo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/entity/FwInfo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/entity/FwUsed.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/entity/FwUsed.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/entity/LogFw.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/entity/LogFw.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/fwbean/DataFileFwBean.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/fwbean/DataFileFwBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/FwConstants.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/FwConstants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/FwCoreService.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/FwCoreService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/FwOpenService.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/FwOpenService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/FwParam.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/FwParam.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/error/Error101.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/error/Error101.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/error/Error201.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/error/Error201.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/error/Error202.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/error/Error202.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/error/Error203.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/error/Error203.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/error/Error205.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/error/Error205.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/error/Error206.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/error/Error206.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/error/Error301.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/error/Error301.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/handle/DataHandle.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/handle/DataHandle.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/handle/ErrorHandle.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/handle/ErrorHandle.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/handle/LogHandle.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/handle/LogHandle.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/jk/FwBean.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/jk/FwBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/jk/FwError.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/jk/FwError.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/jk/FwHandle.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/jk/FwHandle.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/jk/FwProcessor.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/jk/FwProcessor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/processor/Biaozhun2Processor.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/processor/Biaozhun2Processor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/processor/Dingzhi1Processor.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/processor/Dingzhi1Processor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/processor/Dingzhi2Processor.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/processor/Dingzhi2Processor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/processor/Dingzhi3Processor.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/processor/Dingzhi3Processor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/processor/Jiekou1Processor.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/processor/Jiekou1Processor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/processor/Jiekou2Processor.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/processor/Jiekou2Processor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/processor/Jiekou3Processor.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/processor/Jiekou3Processor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/processor/Jiekou4Processor.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/processor/Jiekou4Processor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/processor/Jiekou5Processor.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/processor/Jiekou5Processor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/processor/Waibu1Processor.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/processor/Waibu1Processor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/spu/BaseSpu.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/spu/BaseSpu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/spu/KeySpu.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/spu/KeySpu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/spu/ParamSpu.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/spu/ParamSpu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/spu/SpuFactory.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjfw/platform/spu/SpuFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/Base64Utils.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/Base64Utils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/DispatchContent.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/DispatchContent.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/IFCheckUtils.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/IFCheckUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/StringUtils.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/StringUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/at/JkglAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/at/JkglAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/entity/HttpClientDTO.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/entity/HttpClientDTO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/entity/InterfaceInfoBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/entity/InterfaceInfoBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/entity/InterfaceLogBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/entity/InterfaceLogBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/entity/InterfaceTransferBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/entity/InterfaceTransferBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/rest/ErrorCode.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/rest/ErrorCode.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/rest/RestService.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/rest/RestService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/rest/entity/MessageVO.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/rest/entity/MessageVO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/rest/entity/ResultVO.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/rest/entity/ResultVO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/rest/entity/WebServiceDataSource.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/rest/entity/WebServiceDataSource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/service/JkfwRouterService.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/service/JkfwRouterService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/service/MessageRouterService.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/service/MessageRouterService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/service/WSDLStrategyService.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/sjic/service/WSDLStrategyService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/CjAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/CjAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/JhAct$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/JhAct$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/JhAct$2.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/JhAct$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/JhAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/JhAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/JkAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/JkAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/MainAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/MainAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/SjbqAct$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/SjbqAct$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/SjbqAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/SjbqAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/SjdbAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/SjdbAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/SjjcTaskAct$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/SjjcTaskAct$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/SjjcTaskAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/SjjcTaskAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/ZyAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/ZyAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/ZyApplyAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/at/ZyApplyAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/DicDept.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/DicDept.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/PZyInfo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/PZyInfo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/PfZyItem.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/PfZyItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/RCheckResult.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/RCheckResult.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/RJob.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/RJob.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/RJobResult.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/RJobResult.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/SjbdTask.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/SjbdTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/SjjcDataFeedbackBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/SjjcDataFeedbackBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/SjjcIffyBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/SjjcIffyBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/SjjcTaskBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/SjjcTaskBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/SuiteTableConfig.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/SuiteTableConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/TagInfoBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/TagInfoBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/ZyApply.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/ZyApply.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/ZyApplyDetails.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/entity/ZyApplyDetails.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/jk/WdUserService.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wdac/jk/WdUserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/config/ConfigSetup.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/config/ConfigSetup.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/config/CrossScriptingFilter.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/config/CrossScriptingFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/config/OnlineUserListener.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/config/OnlineUserListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/config/OpFilter.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/config/OpFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/config/RequestWrapper.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/config/RequestWrapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/config/SessionFilter.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/config/SessionFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/config/WddcConstants.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/config/WddcConstants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/at/ChartAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/at/ChartAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/at/FormAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/at/FormAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/at/QueryAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/at/QueryAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/at/ReportAct$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/at/ReportAct$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/at/ReportAct$2.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/at/ReportAct$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/at/ReportAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/at/ReportAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/comparator/ListNumComparator.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/comparator/ListNumComparator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/comparator/OrderComparator.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/comparator/OrderComparator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/constants/ConfigConstants.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/constants/ConfigConstants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/constants/DetailQueryConstants.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/constants/DetailQueryConstants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/ChartConfigBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/ChartConfigBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/ColConfigBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/ColConfigBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/ColRelationConfigBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/ColRelationConfigBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/ColumnConfigBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/ColumnConfigBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/FormConfigBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/FormConfigBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/QueryConBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/QueryConBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/QueryConfigBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/QueryConfigBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/ReportCacheBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/ReportCacheBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/ReportDataBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/ReportDataBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/ReportHeaderBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/ReportHeaderBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/ReportInfoBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/ReportInfoBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/ReportResultBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/ReportResultBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/ReportRowBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/entity/ReportRowBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/generator/ReportHtmlGenerator.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/generator/ReportHtmlGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/job/FormTimingJob$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/job/FormTimingJob$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/job/FormTimingJob.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/job/FormTimingJob.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/job/ReportJob$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/job/ReportJob$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/job/ReportJob.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/job/ReportJob.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/job/SpecailReportJob$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/job/SpecailReportJob$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/job/SpecailReportJob.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/job/SpecailReportJob.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/renderer/BaseRenderer.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/renderer/BaseRenderer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/renderer/DemoRenderer.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/renderer/DemoRenderer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/QueryService$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/QueryService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/QueryService$2.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/QueryService$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/QueryService$3.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/QueryService$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/QueryService$4.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/QueryService$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/QueryService$5.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/QueryService$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/QueryService$6.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/QueryService$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/QueryService$7.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/QueryService$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/QueryService.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/QueryService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/ReportService$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/ReportService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/ReportService$2.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/ReportService$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/ReportService.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/csrq/service/ReportService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/adapter/DBAdapter.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/adapter/DBAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/DataFileAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/DataFileAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/DbAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/DbAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/StatMultAct$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/StatMultAct$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/StatMultAct$2.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/StatMultAct$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/StatMultAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/StatMultAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/StatTermAct$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/StatTermAct$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/StatTermAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/StatTermAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/StatUnitAct$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/StatUnitAct$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/StatUnitAct$2.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/StatUnitAct$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/StatUnitAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/StatUnitAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/TableAct$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/TableAct$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/TableAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/at/TableAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/DBinfoBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/DBinfoBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/DataFileCustomJsonBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/DataFileCustomJsonBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/DataFileDataBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/DataFileDataBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/DataFileInfoBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/DataFileInfoBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/DataFileLinkBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/DataFileLinkBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/MultStatInfoBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/MultStatInfoBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/MultStatResultBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/MultStatResultBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/StatInfoBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/StatInfoBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/StatResultBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/StatResultBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/StatTermBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/StatTermBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/StatTermResultBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/StatTermResultBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/TableConfigBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/entity/TableConfigBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/job/StatMultJob.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/job/StatMultJob.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/job/StatTermJob$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/job/StatTermJob$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/job/StatTermJob.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/job/StatTermJob.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/processor/SqlProcessor.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/processor/SqlProcessor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/DataCoreService$KeyValueCallBack.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/DataCoreService$KeyValueCallBack.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/DataCoreService$ListMapCallBack.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/DataCoreService$ListMapCallBack.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/DataCoreService$MapArrayCallBack.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/DataCoreService$MapArrayCallBack.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/DataCoreService$SingleResultCallBack.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/DataCoreService$SingleResultCallBack.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/DataCoreService.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/DataCoreService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$1$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$1$2.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$1$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$1$3.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$1$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$10.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$2.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$3$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$3$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$3$2.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$3$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$3$3.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$3$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$3.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$4.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$5.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$6.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$7.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$8.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$9.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/data/service/TableService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/LogConstants.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/LogConstants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/LogManager.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/LogManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/annotation/OpLogger.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/annotation/OpLogger.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/at/LogAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/at/LogAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/at/LogViewAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/at/LogViewAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/entity/BaseLog.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/entity/BaseLog.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/entity/LogBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/entity/LogBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/entity/LogChangeBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/entity/LogChangeBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/entity/LogErrorBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/entity/LogErrorBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/entity/LogLoginBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/entity/LogLoginBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/entity/LogOpBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/entity/LogOpBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/entity/LogOpDetailBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/entity/LogOpDetailBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/entity/OpLogConfig.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/entity/OpLogConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/interceptor/OpInterceptor.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/interceptor/OpInterceptor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/outlet/LoggerOutlet.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/outlet/LoggerOutlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/outlet/impl/ConsoleLoggerOutlet.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/outlet/impl/ConsoleLoggerOutlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/outlet/impl/DBLoggerOutlet.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/outlet/impl/DBLoggerOutlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/outlet/impl/FileLoggerOutlet.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/outlet/impl/FileLoggerOutlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/service/LogCoreService.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/logger/service/LogCoreService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/msg/at/MailAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/msg/at/MailAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/msg/mail/MailSenderInfo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/msg/mail/MailSenderInfo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/msg/mail/MyAuthenticator.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/msg/mail/MyAuthenticator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/msg/mail/SimpleMailSender.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/msg/mail/SimpleMailSender.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/msg/mail/useMail.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/msg/mail/useMail.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/service/at/ForeignAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/service/at/ForeignAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/service/entity/ForeignBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/service/entity/ForeignBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/user/at/AuthAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/user/at/AuthAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/user/at/UnitAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/user/at/UnitAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/user/at/UserAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/user/at/UserAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/user/at/UserStatAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/user/at/UserStatAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/user/entity/AuthorityBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/user/entity/AuthorityBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/user/entity/RoleBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/user/entity/RoleBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/user/entity/UserInfoBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/user/entity/UserInfoBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/user/entity/UserUnitBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/user/entity/UserUnitBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/user/service/UserInfoService.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/suite/user/service/UserInfoService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/adaptor/SearchTableAdaptor.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/adaptor/SearchTableAdaptor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/adaptor/injector/FilterInjector.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/adaptor/injector/FilterInjector.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/adaptor/injector/PagerInjector.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/adaptor/injector/PagerInjector.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/adaptor/util/ConUtils.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/adaptor/util/ConUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/calendar/at/CalendarAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/calendar/at/CalendarAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/dic/DicConfigManager.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/dic/DicConfigManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/dic/DicDataUtils.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/dic/DicDataUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/dic/at/DicAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/dic/at/DicAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/dic/entity/Dic.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/dic/entity/Dic.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/dic/entity/DicConfigBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/dic/entity/DicConfigBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/dic/entity/DicResourceBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/dic/entity/DicResourceBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/file/at/FileAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/file/at/FileAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/file/entity/FwFileBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/file/entity/FwFileBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/DBCPAssist.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/DBCPAssist.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/DBpool.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/DBpool.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/DSConfigConstant.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/DSConfigConstant.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/DataSourceFactory.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/DataSourceFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/IDBpool.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/IDBpool.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/IDataSource.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/IDataSource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/MysqlDataSource.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/MysqlDataSource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/OracleDataSource.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/OracleDataSource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/SQLService.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/SQLService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/SqlExecutor.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/SqlExecutor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/UserService.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/entity/User.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/jk/entity/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/quartz/QuartzLoader.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/quartz/QuartzLoader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/quartz/QuartzManager.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/quartz/QuartzManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/quartz/at/QuartzAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/quartz/at/QuartzAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/quartz/entity/QuartzTaskBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/quartz/entity/QuartzTaskBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/sn/SnCreator.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/sn/SnCreator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/sn/at/SnAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/sn/at/SnAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/sn/entity/SerialNumberBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/sn/entity/SerialNumberBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tag/at/TagAct.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tag/at/TagAct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tag/entity/TagInfoBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tag/entity/TagInfoBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tag/entity/TagTypeBo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tag/entity/TagTypeBo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/ArithmeticUtil.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/ArithmeticUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/ArrayUtil.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/ArrayUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/BeanUtils.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/BeanUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/BeanUtilsBean$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/BeanUtilsBean$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/BeanUtilsBean.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/BeanUtilsBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/CamelCaseUtils.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/CamelCaseUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/CardUtils.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/CardUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/ClassUtil$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/ClassUtil$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/ClassUtil.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/ClassUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/CookieUtils.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/CookieUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/DateUtils.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/DateUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/DeepCloneUtil.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/DeepCloneUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/ExcelUtil.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/ExcelUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/ListMapUtil.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/ListMapUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/Lunar.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/Lunar.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/NutzSqlUtil.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/NutzSqlUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/PropertyUtils.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/PropertyUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/ReportHtmlUtil.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/ReportHtmlUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/SecurityUtil.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/SecurityUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/StringUtil.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/StringUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/UI$AjaxType.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/UI$AjaxType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/UI$StatusCode$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/UI$StatusCode$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/UI$StatusCode$2.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/UI$StatusCode$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/UI$StatusCode$3.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/UI$StatusCode$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/UI$StatusCode$4.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/UI$StatusCode$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/UI$StatusCode.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/UI$StatusCode.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/UI.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/UI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/VelocityUtils.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/VelocityUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/WeekUtil.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/WeekUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/WeekUtils.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/tools/WeekUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/ActionEnter.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/ActionEnter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/ConfigManager.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/ConfigManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/Encoder.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/Encoder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/PathFormat.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/PathFormat.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/ActionMap$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/ActionMap$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/ActionMap.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/ActionMap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/ActionState.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/ActionState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/AppInfo$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/AppInfo$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/AppInfo.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/AppInfo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/BaseState.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/BaseState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/FileType$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/FileType$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/FileType.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/FileType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/MIMEType$1.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/MIMEType$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/MIMEType.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/MIMEType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/MultiState.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/MultiState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/State.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/define/State.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/hunter/FileManager.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/hunter/FileManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/hunter/ImageHunter.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/hunter/ImageHunter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/upload/Base64Uploader.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/upload/Base64Uploader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/upload/BinaryUploader.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/upload/BinaryUploader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/upload/StorageManager.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/upload/StorageManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/upload/Uploader.class" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/com/wonders/wddc/tiles/ueditor/upload/Uploader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Nutz/pom.xml" afterPath="$PROJECT_DIR$/../../Nutz/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Nutz/src/main/java/demo/hello/MainModule.java" afterPath="$PROJECT_DIR$/../../Nutz/src/main/java/demo/hello/MainModule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Nutz/src/main/webapp/WEB-INF/jsp/hello.jsp" afterPath="$PROJECT_DIR$/../../Nutz/src/main/webapp/WEB-INF/jsp/hello.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../klswWebService/pom.xml" afterPath="$PROJECT_DIR$/../klswWebService/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/conf/ioc/dao.js" afterPath="$PROJECT_DIR$/../../wddc/conf/ioc/dao.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/src/com/wonders/sjic/at/JkglAct.java" afterPath="$PROJECT_DIR$/../../wddc/src/com/wonders/sjic/at/JkglAct.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/src/com/wonders/sjic/entity/InterfaceLogBo.java" afterPath="$PROJECT_DIR$/../../wddc/src/com/wonders/sjic/entity/InterfaceLogBo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/src/com/wonders/sjic/service/WSDLStrategyService.java" afterPath="$PROJECT_DIR$/../../wddc/src/com/wonders/sjic/service/WSDLStrategyService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/ioc/dao.js" afterPath="$PROJECT_DIR$/../../wddc/web/WEB-INF/classes/ioc/dao.js" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/webservicetest$HelloWorld.coverage" NAME="HelloWorld Coverage Results" MODIFIED="1501227792023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>example.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="HelloWorld.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/example/HelloWorld.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApiTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/soaptest/ApiTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="107" column="30" lean-forward="true" selection-start-line="107" selection-start-column="30" selection-end-line="107" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Static.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/soaptest/Static.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="26" column="78" lean-forward="false" selection-start-line="26" selection-start-column="78" selection-end-line="26" selection-end-column="78" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DynamicHttpclientCall.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/soaptest/DynamicHttpclientCall.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1781">
+              <caret line="48" column="63" lean-forward="false" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/soaptest/IfTest.java" />
+        <option value="$PROJECT_DIR$/src/soaptest/Ret.java" />
+        <option value="$PROJECT_DIR$/src/soaptest/InterfaceLogBo.java" />
+        <option value="$PROJECT_DIR$/src/example/HelloWorld.java" />
+        <option value="$PROJECT_DIR$/src/soaptest/Static.java" />
+        <option value="$PROJECT_DIR$/src/soaptest/DynamicHttpClientCall2.java" />
+        <option value="$PROJECT_DIR$/src/soaptest/DynamicHttpclientCall2.java" />
+        <option value="$PROJECT_DIR$/src/soaptest/DynamicHttpclientCall.java" />
+        <option value="$PROJECT_DIR$/src/soaptest/ApiTest.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/apache-maven-3.5.0" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="28" />
+    <option name="width" value="1346" />
+    <option name="height" value="732" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Class structureJava</id>
+          </State>
+          <State>
+            <id>Code maturity issuesJava</id>
+          </State>
+          <State>
+            <id>Code style issuesJava</id>
+          </State>
+          <State>
+            <id>Declaration redundancyJava</id>
+          </State>
+          <State>
+            <id>Google Web Toolkit issues</id>
+          </State>
+          <State>
+            <id>Inheritance issuesJava</id>
+          </State>
+          <State>
+            <id>JUnit issuesJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Java 5Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java 7Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java 8Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java 9Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java language level issuesJava</id>
+          </State>
+          <State>
+            <id>Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Javadoc issuesJava</id>
+          </State>
+          <State>
+            <id>Modularization issuesJava</id>
+          </State>
+          <State>
+            <id>Numeric issuesJava</id>
+          </State>
+          <State>
+            <id>Performance issuesJava</id>
+          </State>
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring AOPSpring</id>
+          </State>
+          <State>
+            <id>TestNGJava</id>
+          </State>
+          <State>
+            <id>Threading issuesJava</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AutoUnboxing</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="webservicetest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webservicetest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webservicetest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webservicetest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webservicetest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webservicetest" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webservicetest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webservicetest" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/axistest_Web exploded.war" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\git\crosswaywebsvc\webservicetest\web\WEB-INF" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="soaptest" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\git\crosswaywebsvc\webservicetest\web\WEB-INF" />
+      <recent name="E:\git\crosswaywebsvc\webservicetest\lib" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.tomcate8.5">
+    <configuration name="ApiTest.axis2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="soaptest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="webservicetest" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="soaptest" />
+      <option name="MAIN_CLASS_NAME" value="soaptest.ApiTest" />
+      <option name="METHOD_NAME" value="axis2Test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ApiTest.axisTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="soaptest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="webservicetest" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="soaptest" />
+      <option name="MAIN_CLASS_NAME" value="soaptest.ApiTest" />
+      <option name="METHOD_NAME" value="axisTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ApiTest.cxfTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="soaptest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="webservicetest" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="soaptest" />
+      <option name="MAIN_CLASS_NAME" value="soaptest.ApiTest" />
+      <option name="METHOD_NAME" value="cxfTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ApiTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="soaptest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="webservicetest" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="soaptest" />
+      <option name="MAIN_CLASS_NAME" value="soaptest.ApiTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ApiTest.xfireTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="soaptest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="webservicetest" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="soaptest" />
+      <option name="MAIN_CLASS_NAME" value="soaptest.ApiTest" />
+      <option name="METHOD_NAME" value="xfireTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="tomcate8.5" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.16" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <file path="$PROJECT_DIR$/web/WEB-INF/axistest_Web exploded.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </file>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_webservicetest" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="57623" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="false" />
+      </method>
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.tomcate8.5" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ApiTest.test1" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ApiTest.cxfTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ApiTest.axisTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ApiTest.xfireTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.ApiTest.axis2Test" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ApiTest.axisTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ApiTest.cxfTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ApiTest.axis2Test" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ApiTest.xfireTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ApiTest.test1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f60a329b-8328-4f14-82bd-1cc9c3e4ac72" name="Default" comment="" />
+      <created>1501208304297</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1501208304297</updated>
+      <workItem from="1501208311331" duration="89000" />
+      <workItem from="1501208513578" duration="12541000" />
+      <workItem from="1501228269522" duration="2160000" />
+      <workItem from="1501462904567" duration="8869000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="ApiTest_axis2Test - 2017.07.31 at 11h 14m 01s.xml">
+      <configuration name="ApiTest.axis2Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApiTest_axis2Test - 2017.07.31 at 11h 14m 15s.xml">
+      <configuration name="ApiTest.axis2Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApiTest_axisTest - 2017.07.31 at 13h 47m 05s.xml">
+      <configuration name="ApiTest.axisTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApiTest_axisTest - 2017.07.31 at 13h 49m 34s.xml">
+      <configuration name="ApiTest.axisTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApiTest_cxfTest - 2017.07.31 at 11h 15m 35s.xml">
+      <configuration name="ApiTest.cxfTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApiTest_xfireTest - 2017.07.31 at 10h 58m 43s.xml">
+      <configuration name="ApiTest.xfireTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApiTest_xfireTest - 2017.07.31 at 10h 59m 34s.xml">
+      <configuration name="ApiTest.xfireTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApiTest_xfireTest - 2017.07.31 at 10h 59m 57s.xml">
+      <configuration name="ApiTest.xfireTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApiTest_xfireTest - 2017.07.31 at 11h 02m 57s.xml">
+      <configuration name="ApiTest.xfireTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApiTest_xfireTest - 2017.07.31 at 11h 03m 14s.xml">
+      <configuration name="ApiTest.xfireTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="23659000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08775137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3432836" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26251897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20232172" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/soaptest/ApiTest.java</url>
+          <line>19</line>
+          <properties />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/soaptest/DynamicHttpclientCall.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="7" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/example/HelloWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/soaptest/Static.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="26" column="78" lean-forward="false" selection-start-line="26" selection-start-column="78" selection-end-line="26" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/soaptest/DynamicHttpclientCall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1131">
+          <caret line="48" column="63" lean-forward="false" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/soaptest/ApiTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="899">
+          <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/example/HelloWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="9" column="49" lean-forward="true" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/soaptest/Static.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="26" column="78" lean-forward="false" selection-start-line="26" selection-start-column="78" selection-end-line="26" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/soaptest/DynamicHttpclientCall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1131">
+          <caret line="48" column="63" lean-forward="false" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/soaptest/ApiTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/soaptest/InterfaceLogBo.java" />
+    <entry file="file://$PROJECT_DIR$/src/soaptest/Ret.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/javax/xml/namespace/QName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="230" column="11" lean-forward="false" selection-start-line="230" selection-start-column="11" selection-end-line="230" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/soaptest/DynamicHttpclientCall2.java" />
+    <entry file="jar://$PROJECT_DIR$/lib/axis.jar!/org/apache/axis/client/Call.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="966" column="0" lean-forward="true" selection-start-line="966" selection-start-column="0" selection-end-line="966" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/soaptest/DynamicHttpclientCall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1781">
+          <caret line="48" column="63" lean-forward="false" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/soaptest/Static.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="26" column="78" lean-forward="false" selection-start-line="26" selection-start-column="78" selection-end-line="26" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/example/HelloWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/soaptest/ApiTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="107" column="30" lean-forward="true" selection-start-line="107" selection-start-column="30" selection-end-line="107" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>webservicetest:war exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>jquery</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>webservicetest</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>axis</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

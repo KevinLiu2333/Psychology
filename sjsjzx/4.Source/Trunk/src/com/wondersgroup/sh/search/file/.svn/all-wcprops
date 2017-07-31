@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/file
+END
+ExtractUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/file/ExtractUtils.java
+END
+ExcelExtractor.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/file/ExcelExtractor.java
+END
+XmlExtractor.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/file/XmlExtractor.java
+END
+FileExtractException.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/file/FileExtractException.java
+END
+WdlExtractor.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/file/WdlExtractor.java
+END
+UnsupportedFileTypeException.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/file/UnsupportedFileTypeException.java
+END
+Extractor.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/file/Extractor.java
+END
+XmlExcelExtractor.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/file/XmlExcelExtractor.java
+END
+XmlWordExtractor.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/file/XmlWordExtractor.java
+END
+XmlPowerPointExtractor.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/file/XmlPowerPointExtractor.java
+END
+AbstractExtractor.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/file/AbstractExtractor.java
+END
+FileExtractorFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/file/FileExtractorFactory.java
+END
+RtfExtractor.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/file/RtfExtractor.java
+END
+WordExtractor.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/file/WordExtractor.java
+END
+HtmlExtractor.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/file/HtmlExtractor.java
+END
+PowerPointExtractor.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/file/PowerPointExtractor.java
+END
+TextExtractor.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/file/TextExtractor.java
+END
+PdfExtractor.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/file/PdfExtractor.java
+END

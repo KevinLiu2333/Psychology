@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!--
+////////////////////////////////////////////////////////////////////////////////
+//
+// Copyright © 2008 ESRI
+//
+// All rights reserved under the copyright laws of the United States.
+// You may freely redistribute and use this software, with or
+// without modification, provided you include the original copyright
+// and use restrictions.  See use restrictions in the file:
+// <install location>/FlexViewer/License.txt
+//
+////////////////////////////////////////////////////////////////////////////////
+-->
+<configuration>
+	<queyRange>20</queyRange>	
+	<layers>
+		<extentLayer>
+			<name>专项规划范围</name>
+			<url>arcgis/rest/services/dynamic_pdgt2012/MapServer/20</url>
+			<expression>PLAN_NUM like '%[value]%' and PLAN_TYPE &lt;&gt; '技术调整'</expression>
+			<graphicalsearchlabel>从下面选择一种多边形以选定查询范围：</graphicalsearchlabel>
+			<fields>PLAN_NUM,PLAN_NAME,TOT_AREA,AUTH_UNIT,DESGN_UNIT,START_DATE</fields>
+			<fieldsCN>批复文号,规划名称,用地面积,批准单位,设计单位,批准日期</fieldsCN>
+			<titlefield>PLAN_NAME</titlefield>
+			<linkfield>PLAN_NUM</linkfield>
+			<icon>i_uni1.png</icon>
+		</extentLayer>
+		<xgfw_count>
+			<url>/SJSJZXGIS_Index/servlet/GetOracleCountData</url>
+			<table>B101_FQGHFW</table>
+			<column>PLAN_NAME</column>
+		</xgfw_count>
+		<areaLayer>
+			<name>专项规划地块</name>
+			<url>arcgis/rest/services/dynamic_pdgt2012/MapServer/21</url>
+			<expression>PLOT_NAME like '%[value]%'</expression>
+			<graphicalsearchlabel>从下面选择一种多边形以选定查询范围：</graphicalsearchlabel>
+			<fields>PLAN_NUM,PLOT_CODE,PLOT_NAME,DKAREA,VOL_RATIO,BLDG_DENS,BLDG_HLMT,VEG_RATIO,ENTRANCE,PLOT_TYPE,CUS_TYPE</fields>
+			<fieldsCN>批复文号,地块编号,用地性质,地块面积,容  积  率,建筑密度,建筑限高,绿  地  率,出入口方位</fieldsCN>
+			<titlefield>PLAN_NUM</titlefield>
+			<linkfield></linkfield>
+			<icon>i_uni1.png</icon>
+		</areaLayer>
+	</layers>
+	<xxghExtentUrl>arcgis/rest/services/dynamic_pdgt2012/MapServer/11</xxghExtentUrl>
+	<xxghFields>PLAN_NAME,PLAN_NUM,TOT_AREA,AUTH_UNIT,DESGN_UNIT,START_DATE</xxghFields>
+	<xxghFieldsCN>批复名称,批复文号,用地面积,批准单位,设计单位,批准日期</xxghFieldsCN>
+	<linkURL>/pdgtdbc/common/gisRedirect.jsp?funId=kongxiangguibiaozhun&planNum=</linkURL>
+</configuration>

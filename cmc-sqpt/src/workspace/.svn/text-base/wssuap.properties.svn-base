@@ -1,0 +1,20 @@
+#################################认证#################################
+#md5 sha plain
+authentic.encoder.type=sha
+authentic.provider.type=database
+authentic.connector.type=native
+authentic.encoder.md5base64.cryptKey=wssuap
+
+
+url.encoding=ISO-8859-1
+jsp.encoding=UTF-8
+
+#登录失败次数
+login.maxFail=3
+#密码有效期(天)
+user.password.expired.day=90
+#密码修改提前提醒天数
+user.password.remind.day=14
+#最近几次密码不能作为新密码
+user.password.update.loopSize=1
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="linkAction" class="com.opensymphony.xwork2.ActionSupport"></bean>
+	<import resource="classpath:com/wondersgroup/wssip/local/localContext.xml"/>
+	<import resource="classpath:com/wondersgroup/cmc/quartz/quartz-Context.xml"/>
+	<import resource="classpath:com/wondersgroup/cmc/commons/commons-Context.xml"/>
+	<import resource="classpath:com/wondersgroup/cmc/dispatch/dispatch-Context.xml"/>
+	<import resource="classpath:com/wondersgroup/cmc/userManager/m380000-Context.xml"/>
+</beans>

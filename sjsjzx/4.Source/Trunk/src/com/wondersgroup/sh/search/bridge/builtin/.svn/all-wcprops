@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/builtin
+END
+IntegerBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/builtin/IntegerBridge.java
+END
+BigIntegerBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/builtin/BigIntegerBridge.java
+END
+BlobBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/builtin/BlobBridge.java
+END
+LongBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/builtin/LongBridge.java
+END
+ShortBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/builtin/ShortBridge.java
+END
+FloatBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/builtin/FloatBridge.java
+END
+ClobBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/builtin/ClobBridge.java
+END
+ClassBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/builtin/ClassBridge.java
+END
+StringBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/builtin/StringBridge.java
+END
+DoubleBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/builtin/DoubleBridge.java
+END
+BigDecimalBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/builtin/BigDecimalBridge.java
+END
+UrlBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/builtin/UrlBridge.java
+END
+DateBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/builtin/DateBridge.java
+END
+UriBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/builtin/UriBridge.java
+END
+NumberBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/builtin/NumberBridge.java
+END
+BooleanBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/201718/projects2/MZJ/sjsjzx/4.Source/Trunk/src/com/wondersgroup/sh/search/bridge/builtin/BooleanBridge.java
+END

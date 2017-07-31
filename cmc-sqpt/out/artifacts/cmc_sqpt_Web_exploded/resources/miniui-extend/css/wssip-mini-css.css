@@ -1,0 +1,300 @@
+/* CSS Document */
+
+/****************tabs*****************/
+.mini-tabs-position-bottom-withnav .mini-tabs-scrollCt
+{
+    border-bottom:0;
+    border-top:solid 1px #999999;
+}
+
+.mini-tabs-position-bottom-withnav .mini-tabs-headers
+{
+    border-top:0;
+    padding-top:0px;
+    padding-bottom:3px;
+    top:-1px;
+    width:auto;
+    overflow:hidden;
+    border-left:solid 1px #999999;
+}
+
+.mini-tabs-position-bottom-withnav .mini-tabs-space,
+.mini-tabs-position-bottom-withnav .mini-tabs-space2
+{
+    border:0;
+    border-top: 1px solid #999999;
+}
+
+.mini-tabs-position-bottom-withnav .mini-tabs-bodys
+{
+    border:solid 1px #999999;
+    border-top:0;
+    border-bottom:0;
+    padding:0px;  
+}
+.mini-tabs-position-bottom-withnav .mini-tab-active
+{
+    border-top:0;
+    border-bottom:solid 1px #999999;
+}
+
+.mini-tabs-position-bottom-withnav .mini-tabs-header2
+{
+    margin:0px;
+    margin-top:0px;
+}
+.mini-tabs-position-bottom-withnav .mini-tabs-header2 .mini-tabs-firstSpace,
+.mini-tabs-position-bottom-withnav .mini-tabs-header2 .mini-tabs-lastSpace
+{    
+    border-top:1px solid transparent;    
+    _border-color:tomato;
+    _filter:chroma(color=tomato);
+    
+}
+
+.mini-tabs-position-bottom-withnav .mini-tabs-plain .mini-tabs-headers
+{
+    border-top:0;
+ 
+}
+
+/****************asLabel*****************/
+.asLabel .mini-textbox-border,
+.asLabel .mini-textbox-input,
+.asLabel .mini-buttonedit-border,
+.asLabel .mini-buttonedit-input,
+.asLabel .mini-textboxlist-border {
+   border:0;background:none;cursor:default;overflow:hidden;
+}
+.asLabel .mini-buttonedit-button,
+.asLabel .mini-textboxlist-close{
+   display:none;
+}
+.asLabel .mini-textboxlist-item{
+   padding-right:8px;
+}
+
+.readonly .mini-textbox-border,
+.readonly .mini-textbox-input,
+.readonly .mini-buttonedit-border,
+.readonly .mini-buttonedit-input
+{
+	background-color:#e7e7e7;
+}
+
+.readonly .mini-buttonedit-button,
+.readonly .mini-textboxlist-close{
+   display:none;
+}
+
+/****************panel*****************/
+.mini-panel-noborder{
+    border:0px;
+    overflow:hidden;
+    position:relative;    
+}
+
+.mini-panel-noborder .mini-panel-header
+{
+    border:1px solid #999999;
+    border-bottom:0px;
+}
+
+.mini-panel-header-wssip
+{
+    background:#E3E6E8 url(../../images/panel-bg.jpg) repeat-x 0 0px;
+    font-weight: bolder;
+}
+
+/****************grid*****************/
+.mini-datagrid-wssip .mini-grid-headerCell
+{   
+    background:#E7EBEF url(../../images/thread_bg.jpg) repeat 0 0;
+    font-weight: 700;
+    color: #10418c;
+    border: 1px solid #999999;
+    border-left:0px;
+    border-top:0px;
+    height:22px
+}
+
+.mini-datagrid-wssip .mini-grid-topRightCell
+{
+    background:#E7EBEF url(../../images/thread_bg.jpg) repeat-x 0 0;
+    
+}
+
+.mini-datagrid-wssip .mini-grid-cell
+{   
+	border: 1px solid #999999;
+ 	border-collapse: collapse;
+ 	border-left:0px;
+    border-top:0px;
+}
+
+.mini-datagrid-wssip .mini-grid-border
+{
+ 	border: 1px solid #999999;
+ 	border-collapse: collapse;
+}
+
+.mini-datagrid-wssip .mini-resizer-trigger
+{
+    display:none;
+}
+
+.mini-datagrid-wssip .mini-grid-rowstable
+{
+   height:22px;
+   border-collapse: collapse;
+}
+.mini-datagrid-wssip .mini-grid-vscroll
+{
+  display:none;
+}
+
+.mini-datagrid-wssip .mini-grid-table
+{
+ 	 border-collapse: collapse;
+}
+
+.mini-datagrid-wssip .mini-grid-rowstable .gridrowlink a 
+{
+ 	text-decoration:underline;
+}
+
+
+.mini-datagrid-wssip .mini-grid-nobottom TD
+{
+	border-bottom:0;
+}
+.mini-datagrid-wssip .mini-grid-notop TD
+{
+	border-top:0;
+}
+
+.mini-datagrid-wssip .mini-grid-noright TD
+{
+	border-right:0;
+}
+
+.mini-datagrid-wssip .mini-grid-emptyText
+{
+	padding:2px;
+    text-align:center;
+}
+.mini-listgrid-wssip .mini-grid-summaryCell
+{   
+	height:20px;
+    background:none;
+    border: 1px solid #999999;
+    border-bottom:0px;
+    border-right:0px;
+    border-left:0px;
+ 	border-collapse: collapse;
+ 	font-weight: 700;
+ 	padding-top:0px;
+ 	padding-bottom:0px;
+ 	
+}
+.mini-listgrid-wssip .mini-grid-summaryRow
+{
+    overflow:hidden;background:none;position:relative;zoom:1;width:100%;
+}
+
+html body .mini-listgrid-wssip .mini-grid-cell-selected
+{
+    background:#dfe8f6;
+}
+
+.mini-printgrid-wssip .mini-grid-summaryCell
+{   
+	height:20px;
+    background:none;
+    border: 1px solid #999999;
+    border-bottom:0px;
+    border-right:0px;
+ 	border-collapse: collapse;
+ 	font-weight: 700;
+ 	padding-top:0px;
+ 	padding-bottom:0px;
+}
+.mini-printgrid-wssip .mini-grid-summaryRow
+{
+    overflow:hidden;background:none;position:relative;zoom:1;width:100%;
+}
+
+.mini-printgrid-wssip .mini-grid-headerCell
+{   
+    background:none;
+    color: black;
+}
+
+.mini-printgrid-wssip .mini-grid-topRightCell
+{
+    background:none;
+}
+
+.mini-printgrid-wssip .mini-grid-cell
+{
+ 	border: 1px solid #999999;
+ 	border-bottom:0px;
+ 	border-left:0px; 
+ 	border-collapse: collapse;
+}
+
+.mini-checkboxlist-item-selected{
+	font-weight: 700;
+	color: blue;
+}
+
+
+.icon-excel{
+	background:url(../../images/xls.gif) no-repeat;
+}
+.icon-mail{
+	background:url(../../images/mail.gif) no-repeat;
+}
+.icon-mail-opened{
+	background:url(../../images/mail-opened.gif) no-repeat;
+}
+.icon-mail-rp{
+	background:url(../../images/mail-reply.gif) no-repeat 0px -1px;
+}
+.icon-attach{
+	background:url(../../images/attach.gif) no-repeat;
+}
+
+.icon-query{
+	background:url(../../images/query.gif) no-repeat;
+}
+
+.icon-read{
+	background:url(../../images/read.gif) no-repeat;
+}
+.icon-readid{
+	background:url(../../images/idread.gif) no-repeat;
+}
+
+.icon-exit{
+	background:url(../../images/exit.gif) no-repeat;
+}
+
+.gridrowlink a {font-size:11px;color:#1B3F91;font-family:"ËÎÌו"; font-size: 9pt; text-decoration:underline;margin-right:5px;letter-spacing:1px;cursor:pointer;}
+.gridrowlink a:link {text-decoration:underline;}
+.gridrowlink a:visited {text-decoration:underline;}
+.gridrowlink a:hover {text-decoration:underline;}
+.gridrowlink a:active {text-decoration:underline;}
+
+
+.fixlinktext a {font-size:11px;color:#1B3F91;font-family:"ËÎÌו"; font-size: 9pt; text-decoration:underline;margin-right:5px;letter-spacing:1px;cursor:pointer;}
+.fixlinktext a:link {text-decoration:underline;color:#1B3F91;}
+.fixlinktext a:visited {text-decoration:underline;color:#1B3F91;}
+.fixlinktext a:hover {text-decoration:underline;color:#1B3F91;}
+.fixlinktext a:active {text-decoration:underline;color:#1B3F91;}
+
+.titlelink a {text-decoration:none;cursor:pointer;color:black;}
+.titlelink a:link {text-decoration:none;}
+.titlelink a:visited {text-decoration:none;}
+.titlelink a:hover {text-decoration:underline;}
+.titlelink a:active {text-decoration:underline;}

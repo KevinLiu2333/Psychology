@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<viewer:BaseWidget xmlns:fx="http://ns.adobe.com/mxml/2009"
+                   xmlns:s="library://ns.adobe.com/flex/spark"
+                   xmlns:mx="library://ns.adobe.com/flex/mx"
+                   xmlns:viewer="com.esri.viewer.*"
+                   creationComplete="init()"
+                   implements="com.esri.viewer.IInfowindowTemplate, com.esri.ags.components.supportClasses.IGraphicRenderer">
+
+	<fx:Script>
+		<![CDATA[
+			import com.esri.ags.Graphic;
+			import com.esri.ags.layers.GraphicsLayer;
+			import com.esri.viewer.IInfowindowTemplate;
+			
+			import mx.collections.ArrayCollection;
+			import mx.containers.GridItem;
+			import mx.containers.GridRow;
+			import mx.containers.HBox;
+			import mx.controls.Text;
+			import mx.controls.dataGridClasses.DataGridColumn;
+			import mx.events.FlexEvent;
+			
+			private var _graphic:Graphic;
+			private var _layer:GraphicsLayer;
+			private var _data:Object;
+			
+			//private var _infoData:Object;
+			//set info parameters
+			[Bindable]
+			private var _content:String = "";
+			
+			[Bindable]
+			private var _title:String = "";
+			[Bindable]
+			private var info_width:int=365;
+			private var _infoClass:Class;
+			
+			private var dataGridProvider:ArrayCollection=new ArrayCollection;
+			public function set infoClass(value:Class):void
+			{
+				_infoClass = value;
+			}
+			
+			
+			public function get infoClass():Class
+			{
+				return _infoClass;
+			}
+			
+			private function init():void
+			{
+				this.addEventListener(FlexEvent.DATA_CHANGE, setInfoParameters);
+				infoClass = InfoPopupWidget;
+				setInfoParameters(null);
+			}
+			
+			public function set graphic(value:Graphic):void
+			{
+				_graphic = value;
+				_layer = _graphic.graphicsLayer;
+			}
+			
+			public function set infoConfig(value:XML):void
+			{
+				
+			}
+			
+			private function setInfoParameters(event:FlexEvent):void
+			{
+				if (data == null)
+				{
+					return;
+				}
+				
+				_title = data.title || "";
+				_content = data.content;
+				if (_content)
+				{
+					dataGridProvider.removeAll();
+					var contentArr:Array=_content.split(";");
+					if(contentArr&&contentArr.length>0)
+					{
+						for(var m:int = 0 ; m< contentArr.length ; m++)
+						{
+							var row:GridRow = new GridRow();
+							var nameItem:GridItem = new GridItem();
+							nameItem.setStyle("backgroundColor",0xE4E4E4);
+							var nameTxt:Text=new Text();
+							nameTxt.setStyle("color",0x000000);
+							nameTxt.setStyle("paddingTop",3);
+							nameTxt.setStyle("paddingLeft",15);
+							nameTxt.setStyle("fontSize",14);
+							var valueTxt:Text=new Text();
+							var valueItem:GridItem = new GridItem();
+							valueItem.setStyle("backgroundColor",0xF3F3F3);
+							valueTxt.setStyle("color",0x000000);
+							valueTxt.setStyle("paddingTop",3);
+							valueTxt.setStyle("paddingRight",15);
+							valueTxt.setStyle("fontSize",14);
+							valueTxt.width=250;
+							var valueStr:String=contentArr[m].toString().split(":")[1];
+
+							var name:String=contentArr[m].toString().split(":")[0];
+							nameTxt.text=name.replace("+","\n")+": ";
+							valueTxt.text=valueStr;
+							nameItem.addChild(nameTxt);
+							valueItem.addChild(valueTxt);
+							row.addChild(nameItem);
+							row.addChild(valueItem);
+							contentGrid.addChild(row);
+						}
+					}
+				}
+				
+				//clear picture and link button
+				infoImage.source = "";
+				infoImage.visible = false;
+				infoImage.includeInLayout = false;
+				infoLink.visible = false;
+				infoLink.includeInLayout = false;
+				
+				if (data.link)
+				{
+					var link:String = data.link as String;
+					var pos:Number = link.length - 4;
+					var sfx:String = link.substr(pos, 4).toLowerCase();
+					if ((sfx == ".jpg") || (sfx == ".png") || (sfx == ".gif"))
+					{
+						infoImage.source = link;
+						infoImage.visible = true;
+						infoImage.includeInLayout = true;
+					}
+					else
+					{
+						infoLink.text = "";
+						infoLink.visible = true;
+						infoLink.includeInLayout = true;
+					}
+				}
+			}
+			
+			//show link
+			private function showLink():void
+			{
+				navigateToURL(new URLRequest(data.link));
+			}
+		]]>
+	</fx:Script>
+	
+	<s:Group id="infoCanvas" width="{info_width}" height="100%">
+		<s:Rect width="{info_width}" height="100%">
+			<s:fill>
+				<s:SolidColor color="0xFFFFFF" alpha="1.0"/>
+			</s:fill>
+		</s:Rect>
+		<s:Group width="100%" 
+				 height="100%">
+			<s:layout>
+				<s:VerticalLayout gap="0"
+								  horizontalAlign="left"
+								  paddingBottom="4"
+								  paddingLeft="4"
+								  paddingRight="4"
+								  paddingTop="15"
+								  verticalAlign="middle"/>
+			</s:layout>
+			<mx:Grid id="contentGrid"   verticalGap="2" horizontalGap="2"  paddingRight="10"  paddingLeft="10" verticalScrollPolicy="off">
+			</mx:Grid>
+			<mx:Image id="infoImage"
+					  height="150"
+					  buttonMode="true"
+					  click="showLink()"
+					  includeInLayout="false"
+					  maxWidth="{infoCanvas.width - 10}"
+					  useHandCursor="true"
+					  visible="false"/>
+			<s:Label id="infoLink"
+					 width="100%"
+					 click="showLink()"
+					 includeInLayout="false"
+					 maxDisplayedLines="1"
+					 showTruncationTip="true"
+					 textDecoration="underline" 
+					 fontSize="14"
+					 visible="false"/>
+		</s:Group>
+	</s:Group>
+</viewer:BaseWidget>

@@ -1,0 +1,77 @@
+/* -------------
+ * Selects
+ * ------------- */
+.time_form .jqTransformSelectWrapper {
+	width:116px;
+	position:relative;
+	height:26px;
+	float:left;
+	padding-left:0;
+	
+}
+
+.time_form .jqTransformSelectWrapper div span {
+	width:118px;
+	font-size: 14px;
+	float: none;
+	position: absolute;
+	white-space: nowrap;
+	height: 26px;
+	line-height: 26px;
+	padding: 0 10px;
+	overflow: hidden;
+	cursor:pointer;
+	text-align:center;
+}
+
+.time_form .jqTransformSelectWrapper  a.jqTransformSelectOpen {
+	display: block;
+	position: absolute;
+	right: 0px;
+	width: 26px;
+	height: 26px;
+	background: url(../images/btn_dn.png) no-repeat center center;
+}
+
+.time_form .jqTransformSelectWrapper ul {
+	position: absolute;
+	width:116px;
+	top: 26px;
+	left:-1px;
+	list-style: none;
+	background-color: #FFF;
+	border: solid 1px #2d94c9;
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	height: 150px;
+	overflow: auto;
+	overflow-y: auto;
+	z-index:10;
+}
+
+.time_form .jqTransformSelectWrapper ul a {
+	display:block;
+	padding:5px 0;
+	margin-left:-10px;
+	text-decoration:none;
+	text-align:center;
+	color:#333;
+	background-color: #FFF;
+	font-size: 14px;
+}
+
+.time_form .jqTransformSelectWrapper ul a.selected {
+	background: #EDEDED;
+	color: #F00;
+}
+
+.time_form .jqTransformSelectWrapper ul a:hover, .jqTransformSelectWrapper ul a.selected:hover {
+	background:#3582c4;
+	color: #fff;
+}
+
+/* -------------
+ * Hidden - used to hide the original form elements
+ * ------------- */
+.time_form .jqTransformHidden {display: none;}

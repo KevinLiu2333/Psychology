@@ -1,0 +1,12 @@
+项目名称：$!plan.getProjectName()</br>
+任务描述：$!plan.getJobDesc()</br>
+任务类型：$!plan.getJobType()</br>
+开始时间：$!dateUtil.date2String($!plan.getbTime(),"yyyy-MM-dd")</br>
+截止时间：$!dateUtil.date2String($!plan.geteTime(),"yyyy-MM-dd")</br>
+任务用时：$!plan.getTimeUsed()</br>
+承担人：　$!plan.getAccepter()</br>
+项目经理：$!plan.getArranger()</br>
+备    注：   $!plan.getMemo()</br>
+</br>
+</br>
+详情请见：<a href="http://10.1.8.72:25252/">http://10.1.8.72:25252/</a>

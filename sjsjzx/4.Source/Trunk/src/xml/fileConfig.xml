@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://www.wondersgroup.com wdis.xsd">
+	<index id="fileIndex" name="文件索引配置文件" abstract="false">
+		<path>D:/myproject/calileo/index</path>
+		<!-- <analyzer impl="com.wondersgroup.sh.search.analysis.CJKDigitLengthAnalyzerFactory"/> -->
+		<analyzer impl="com.wondersgroup.sh.search.test.TestAnalyzerFactory"/>
+		<QueryParser defaultOperator="AND"/>
+		<fields>
+			<field name="relativePath"  index="UN_TOKENIZED" store="YES"/>
+			<field name="name"          index="UN_TOKENIZED" store="YES"/>
+			<field name="title"         index="TOKENIZED"    store="YES" termVector="WITH_POSITION_OFFSETS" boost="5"/>
+			<field name="ext" 			index="UN_TOKENIZED" store="YES"/>
+			<field name="length" 		index="UN_TOKENIZED" store="YES" type="long" />
+			<field name="modifiedTime" 	index="UN_TOKENIZED" store="YES" type="date" resolution="millisecond"/>
+			<field name="path" 			index="UN_TOKENIZED" store="YES" id="true"/>
+			<field name="content" 		index="TOKENIZED"	 store="YES" termVector="WITH_POSITION_OFFSETS" default="true"/>
+			<field name="keywords"      index="TOKENIZED"    store="YES" boost="10"/>
+			<field name="url"  			index="UN_TOKENIZED" store="YES"/>
+			<field name="fileType"  	index="UN_TOKENIZED" store="YES"/>
+		</fields>
+		
+	</index>
+	<datasource id="sjsjzx">
+	    <property name="url">jdbc:oracle:thin:@10.1.8.73:1521:ORCL</property>
+	    <property name="password">sjsjzx</property>
+	    <property name="driverClassName">oracle.jdbc.driver.OracleDriver</property>
+    	<property name="username">sjsjzx</property>
+  	</datasource>
+  	<fetcher id="tgarjbxxfetch" type="DB" xsi:type="dbFetcherType">
+  		<index ref="fileIndex" />
+  		<datasource ref="sjsjzx" />
+  		<synchro impl="com.wondersgroup.sh.search.sync.DefaultDBSynchro">
+  			<params>
+				<param name="syncTable">PEOPLE_SYNCHRO</param>
+				<param name="condition">1=1</param>
+			</params>
+  		</synchro>
+  		<table name="T_GA_RJBXX">
+  			<select>select t.RID id,NVL(t.XM,' ') name,
+  				'姓名：'||t.XM||' 证件号码：'||substr(t.ZJHM,1,6)||'********'||substr(t.ZJHM,15)||' 户籍地街道：'||t.HJDJDHZ||' 居住地街道：'||t.JZDJDHZ data,
+  				t.XM||' '||t.ZJHM||' '||t.HJDJDHZ||' '||t.JZDJDHZ keywords,
+  				'RK' ext ,'RK' fileType from T_GA_RJBXX t</select>
+  			<fields>
+  				<field name="url" column="id" />
+  				<field name="title" column="name" />
+  				<field name="content" column="data" />
+				<field name="keywords" column="keywords" />
+				<field name="name" column="data" />
+				<field name="ext" column="ext" />
+				<field name="fileType" column="fileType" />
+  			</fields>
+  		</table>
+  	</fetcher>
+  	<fetcher id="corpinfofetch" type="DB" xsi:type="dbFetcherType">
+  		<index ref="fileIndex" />
+  		<datasource ref="sjsjzx" />
+  		<synchro impl="com.wondersgroup.sh.search.sync.DefaultDBSynchro">
+  			<params>
+				<param name="syncTable">PEOPLE_SYNCHRO</param>
+				<param name="condition">1=1</param>
+			</params>
+  		</synchro>
+  		<table name="CORP_INFO">
+  			<select>select t.CORP_INFO_ID id,NVL(t.CORP_NAME,' ') corpname,
+  				'法人名称：'||t.CORP_NAME||' 组织机构代码'||t.ORGAN_CODE||' 法定代表人：'||t.PERSON_NAME||' 经营场所：'||t.ADDRESS||' 联系电话：'||t.TELEPHONE||' 业务范围:'||t.BUSINESS_SCOPE data,
+  				t.CORP_NAME||' '||t.ORGAN_CODE||' '||t.PERSON_NAME||' '||t.ADDRESS||' '||t.TELEPHONE||' '||t.BUSINESS_SCOPE keywords,
+  				'corpinfo' ext ,'corpinfo' fileType from CORP_INFO t</select>
+  			<fields>
+  				<field name="url" column="id" />
+  				<field name="title" column="corpname" />
+  				<field name="content" column="data" />
+				<field name="keywords" column="keywords" />
+				<field name="name" column="data" />
+				<field name="ext" column="ext" />
+				<field name="fileType" column="fileType" />
+  			</fields>
+  		</table>
+  	</fetcher>
+  	<fetcher id="corplicencefetch" type="DB" xsi:type="dbFetcherType">
+  		<index ref="fileIndex" />
+  		<datasource ref="sjsjzx" />
+  		<synchro impl="com.wondersgroup.sh.search.sync.DefaultDBSynchro">
+  			<params>
+				<param name="syncTable">PEOPLE_SYNCHRO</param>
+				<param name="condition">1=1</param>
+			</params>
+  		</synchro>
+  		<table name="CORP_LICENSE">
+  			<select>select t.LICENSE_ID id,NVL(t.UNIT_NAME,' ') unitname,
+  				'单位名称：'||t.UNIT_NAME||' 许可证号:'||t.LICENSE_CODE||' 组织机构代码'||t.ORGAN_CODE||' 法定代表人：'||t.PERSON_NAME||' 单位地址：'||t.UNIT_ADDRESS||' 发证机关：'||t.ISSUE_ORGAN data,
+  				t.UNIT_NAME||' '||t.LICENSE_CODE||' '||t.ORGAN_CODE||' '||t.PERSON_NAME||' '||t.UNIT_ADDRESS||' '||t.ISSUE_ORGAN keywords,
+  				'corplicense' ext ,'corplicense' fileType from CORP_LICENSE t</select>
+  			<fields>
+  				<field name="url" column="id" />
+  				<field name="title" column="unitname" />
+  				<field name="content" column="data" />
+				<field name="keywords" column="keywords" />
+				<field name="name" column="data" />
+				<field name="ext" column="ext" />
+				<field name="fileType" column="fileType" />
+  			</fields>
+  		</table>
+  	</fetcher>
+  	<fetcher id="punishnoteentyfetch" type="DB" xsi:type="dbFetcherType">
+  		<index ref="fileIndex" />
+  		<datasource ref="sjsjzx" />
+  		<synchro impl="com.wondersgroup.sh.search.sync.DefaultDBSynchro">
+  			<params>
+				<param name="syncTable">PEOPLE_SYNCHRO</param>
+				<param name="condition">1=1</param>
+			</params>
+  		</synchro>
+  		<table name="PUNISH_NOTE_ENTY">
+  			<select>select t.PUNISH_ENTY_ID id,NVL(t.CORP_NAME,' ') corpname,
+  				'法人名称：'||t.CORP_NAME||' 处罚通知书编号:'||t.PUNISH_CODE||' 处罚机关：'||t.PUNISH_UNIT||' 处罚依据：'||t.PUNISH_BASIS||' 处罚措施：'||t.PUNISH_MEASURES data,
+  				t.CORP_NAME||' '||t.PUNISH_CODE||' '||t.PUNISH_UNIT||' '||t.PUNISH_BASIS||' '||t.PUNISH_MEASURES keywords,
+  				'punishnoteenty' ext ,'punishnoteenty' fileType from PUNISH_NOTE_ENTY t</select>
+  			<fields>
+  				<field name="url" column="id" />
+  				<field name="title" column="corpname" />
+  				<field name="content" column="data" />
+				<field name="keywords" column="keywords" />
+				<field name="name" column="data" />
+				<field name="ext" column="ext" />
+				<field name="fileType" column="fileType" />
+  			</fields>
+  		</table>
+  	</fetcher>
+</config>	

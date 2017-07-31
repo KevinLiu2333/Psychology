@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="/dispatch/m420101" extends="wssip-default" namespace="/dispatch/m420101">
+		<action name="m420101Action" class="m420101Action"></action>
+	</package>
+</struts>

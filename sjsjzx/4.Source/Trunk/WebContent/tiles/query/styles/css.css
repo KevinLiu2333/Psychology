@@ -1,0 +1,105 @@
+/* CSS Document */
+body {
+	font-family:"宋体",Arial, Helvetica, sans-serif;
+	}
+.a{ color:#024e88; font-size:12px; text-decoration:none;}
+.a:hover{ color:#000000; font-size:12px; text-decoration:none;}
+body{margin:0px; font-size:12px;}
+.top-main{background:url(../images/top-main.jpg) repeat-x; width:100%; height:96px;}
+.top_nav_left {background:url(../images/top_nav_left.jpg) no-repeat top;font-size:12px;}
+.top_nav_right {background:url(../images/top_nav_right.jpg) no-repeat top;}
+.top-bg{background:url(../images/top_nav_bg.jpg) repeat-x; width:100%; height:28px; color:#024e88; font-size:12px; padding-top:0px;}
+.top-bg a{ color:#024e88; font-size:12px; text-decoration:none;}
+.top-bg a:hover{ color:#F00; font-size:12px; text-decoration:underline;}
+.top_nav_bottom { background:url(../images/top_nav_bottom.jpg) repeat-x; height:4px;}
+
+/* left */
+.left-top{background:url(../images/ico1_40.jpg) no-repeat; width:180px; height:19px; padding-top:7px; text-align:center; font-size:14px; font-weight:bold; color:#ffffff; padding-bottom:3px;}
+.left-border{border-left:1px solid #c7d9e7; border-right:1px solid #c7d9e7; background-color:#f2f6f9;}
+/*left 菜单*/
+.left_menu{ background:url(../images/ico11_49.jpg) no-repeat; width:178px; height:29px; padding-top:5px; padding-left:40px; color:#255e8b; font-weight:bold; margin-top:-1px; font-size:14px;}
+.left_menu2{ background:url(../images/ico11_45.jpg) no-repeat; width:178px; height:29px; padding-top:5px; padding-left:40px; color:#255e8b; font-weight:bold; margin-top:-1px;font-size:14px;}
+
+.menu_drop{ background:url(../images/v1_47.jpg) no-repeat; width:178px; height:29px; padding-top:5px; padding-left:66px; color:#4c4c4c; font-weight:normal; margin-top:0px; font-size:14px;}
+.menu_drop a:link,.menu_drop a:visited{ color:#333333; font-weight:normal; text-decoration:none; font-size:14px;}
+.menu_drop a:hover,.menu_drop a:active{ color:#0a5e9f; font-weight:normal; text-decoration:none; font-size:14px;}
+
+/*bar*/
+.bar { background:url(../images/v1_38.jpg) top left no-repeat; width:18px; height:519px; margin-left:2px; margin-right:2px; }
+.bar1 { background:url(../images/bar_42.jpg) top left no-repeat; width:18px; height:519px;  margin-left:2px; margin-right:2px; }
+/*l正文*/
+.title{background:url(../images/v1_33.jpg)  no-repeat; width:500; height:32px; padding-left:44px; line-height:22px;font-size:14px;
+color:#255e8b; padding-top:5px; font-weight:bold;}
+.title1{background:url(../images/iiicco_37.jpg)  no-repeat; width:166px; height:32px; padding-left:44px; font-size:14px;
+color:#255e8b; padding-top:5px; font-weight:bold;}
+.bg-title{background:url(../images/v1_34.jpg) repeat-x;  height:37px; }
+.input{border-top: 2px #808080 solid; border-left: 2px  #808080 solid; border-right: 1px  #c5c3bf solid; border-bottom: 1px  #c5c3bf solid; height:19px; width:90%; }
+.input1{height:31px; width:91%; }
+.search { height:40px; background-color:#f2f6f9;font-size:12px;color:#A20135;font-weight:bold;}
+.search td {white-space:nowrap; padding:0px 3px;}
+.search_button { background:url(../images/search_bg.jpg) no-repeat; border:0; width:64px; height:24px; cursor:hand;}
+
+.baocun_button { background:url(../images/baocun.jpg) no-repeat; border:0; width:64px; height:24px; cursor:hand;}
+.daochu_button { background:url(../images/daochu.jpg) no-repeat; border:0; width:93px; height:24px; cursor:hand;}
+.chongzhi_button { background:url(../images/chongzhi.jpg) no-repeat; border:0; width:93px; height:24px; cursor:hand;}
+.quxiao_button { background:url(../images/quxiao.jpg) no-repeat; border:0; width:64px; height:24px; cursor:hand;}
+.queding_button { background:url(../images/queding.jpg) no-repeat; border:0; width:64px; height:24px; cursor:hand;}
+.shanchu_button { background:url(../images/v1_73.jpg) no-repeat; border:0; width:64px; height:24px; cursor:hand;}
+
+
+/*表单*/
+.td_over { background-color:#c2e8fd;}
+.table_list1 { margin-bottom:18px; border-top:1px solid #c7d9e7; border-right:1px solid #c7d9e7; background-color:#f7fcff;}
+.table_list1 th { border-right:1px solid #fff; border-left:1px solid #c7d9e7; background:url(../images/v1_64.jpg); height:31px; border-bottom:1px solid #c7d9e7; color:#0982e1; line-height:31px; white-space:nowrap; font-weight:normal; font-size:14px; font-weight:bold;}
+.table_list1 td { border-left:1px solid #c7d9e7; border-bottom:1px  solid #c7d9e7; height:26px; white-space:nowrap; padding:0px 3px; text-align:left; color:#333333;font-size:14px;}
+.table_list1 td a{ color:#0042ae; text-decoration:none;}
+.table_list1 td a:hover{ color:red; text-decoration:none;}
+.table_list2 { margin-bottom:18px; border-top:1px solid #c7d9e7; border-right:1px solid #c7d9e7; background-color:#f7fcff;}
+.table_list2 th { border-right:1px solid #fff; border-left:1px solid #c7d9e7; background:url(../images/v1_64.jpg); height:31px; border-bottom:1px solid #c7d9e7; color:#0982e1; line-height:31px; white-space:nowrap; font-weight:normal; font-size:14px; font-weight:bold;}
+.table_list2 td { border-left:1px solid #c7d9e7; border-bottom:1px  solid #c7d9e7; height:26px; white-space:nowrap; padding:0px 3px; text-align:center; color:#333333;font-size:14px;}
+.table_list2 td a{ color:#0042ae; text-decoration:none;}
+.table_list2 td a:hover{ color:red; text-decoration:none;}
+.border{border:1px #CCCCCC solid; width:15px;}
+/*底*/
+.border_bottom{background:url(../images/v1_84.jpg) repeat-x; width:100%; height:35px;}
+.boder_bottom1{background:url(../images/v_94.jpg) repeat-x; width:100%; height:18px; padding-top:10px; color:#255e8b; font-size:12px; text-align:center;}
+/*地*/
+.text-border{border:#CCCCCC 1px solid; width:97%}
+.zi_xx{	color: #006699;	font-size: 12px;}
+
+/*登陆页面*/
+.login_bg {
+	font-size:14px;
+	font-weight:bold;
+	background:url(../images/login_bg.jpg) no-repeat center ;
+	}
+.login_input {
+	height:22px;
+	padding:6px 5px 0 5px;
+	font-size:14px;
+	width:130px;
+	border:1px solid #c7d9e7;
+	background:url(../images/login_input_bg.jpg) repeat-x;
+	}
+.login_botton {
+	background:url(../images/login_botton_bg.jpg) no-repeat;
+	width:78px;
+	height:30px;
+	border:0;
+	cursor:hand;
+	}
+.copyright {
+	font-size:12px;
+	font-weight:normal;
+	}
+
+/*查询结果列表-滤色*/
+.listable tr.alt td {
+    background: #D6E7F7;
+}	
+.bz_title {
+color:#A20135;
+font-size:16px;
+font-weight:bold;
+text-align:center;
+}	

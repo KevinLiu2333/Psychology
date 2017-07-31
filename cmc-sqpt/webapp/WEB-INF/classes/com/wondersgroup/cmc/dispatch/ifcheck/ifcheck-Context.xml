@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<!-- =================================================================== -->
+	<!-- VS Bean Transaction Proxy Define -->
+	<!-- =================================================================== -->
+	<bean id="ifCheckVS" parent="basicTxProxy">
+		<property name="target" ref="ifCheckVSImpl"></property>
+	</bean>
+
+	<bean id="subifCheckVS" parent="basicTxProxy">
+		<property name="target" ref="subifCheckVSImpl"></property>
+	</bean>
+
+	<!-- =================================================================== -->
+	<!-- VS Bean Implement Define -->
+	<!-- =================================================================== -->
+	<bean id="ifCheckVSImpl" class="com.wondersgroup.cmc.dispatch.ifcheck.service.impl.IfCheckVSImpl">
+	</bean>
+	
+	<bean id="subifCheckVSImpl" class="com.wondersgroup.cmc.dispatch.ifcheck.service.impl.SubIfCheckVSImpl">
+		<property name="wsStrategy" ref="reststrategy"></property>
+		<property name="messageRouterServiceImpl" ref="messageRouterServiceImpl"></property>
+	</bean>
+</beans>

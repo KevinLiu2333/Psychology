@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<description>Spring Configuration of QT .</description>
+	<import	resource="classpath:com/wondersgroup/cmc/quartz/quartzTask-Context.xml"/>
+	<!-- =================================================================== -->
+	<!-- Action Bean Transaction Proxy Define                                -->
+	<!-- =================================================================== -->
+	<bean id="quartzTriggerConfigAction" class="com.wondersgroup.cmc.quartz.action.QuartzTriggerConfigAction"
+		singleton="false">
+		<property name="qrtzTriggerConfigUtils" ref="qrtzTriggerConfigUtils"></property>
+	</bean>   
+	
+	
+	<!-- =================================================================== -->
+	<!-- VS Bean Transaction Proxy Define                                    -->
+	<!-- ===================================================================  --> 
+	<bean id="qrtzTriggerConfigUtils" parent="basicTxProxy">
+		<property name="target" ref="qrtzTriggerConfigServiceImpl"></property>
+	</bean>
+
+	<!-- =================================================================== -->
+	<!-- VS Bean Implement Define                                            -->
+	<!-- =================================================================== -->
+	<bean id="qrtzTriggerConfigServiceImpl" class="com.wondersgroup.cmc.quartz.utils.QrtzTriggerConfigServiceImpl">
+		<property name="schedulerUtils" ref="schedulerUtils"></property>
+	</bean>
+	
+	<!-- quartz Trigger-->
+	<bean id="schedulerUtils" parent="basicTxProxy">
+		<property name="target" ref="schedulerServicerImpl"></property>
+	</bean>
+	
+	<bean id="schedulerServicerImpl"
+		class="com.wondersgroup.cmc.quartz.utils.SchedulerServicerImpl">
+		<property name="scheduler" ref="quartzScheduler" />
+		<property name="jobDetail" ref="jobDetail" />
+	</bean>
+	
+	<bean name="quartzScheduler"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="applicationContextSchedulerContextKey"
+			value="applicationContext" />
+		<property name="configLocation"
+			value="classpath:quartz.properties" />
+	</bean>
+
+	<bean id="jobDetail"
+		class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass">
+			<value>com.wondersgroup.cmc.quartz.dispatcher.MyQuartzJobBean</value>
+		</property>
+	</bean>
+	<!-- quartz Trigger end -->
+</beans>

@@ -1,0 +1,37 @@
+10
+
+dir
+246920
+http://10.1.8.82:1088/svn/projects2/MZJ/sjsjzx/1.%E5%BC%80%E5%8F%91%E5%BA%93/ImpFrkData_SJ
+http://10.1.8.82:1088/svn
+
+
+
+2016-08-31T02:57:33.171875Z
+203538
+xueyishan
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9817e563-51b1-004a-bdbd-08a67d9ca217
+
+WebContent
+dir
+
+conf
+dir
+
+src
+dir
+

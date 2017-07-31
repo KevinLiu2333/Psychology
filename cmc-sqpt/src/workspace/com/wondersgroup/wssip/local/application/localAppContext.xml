@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<description>一体化本地化 应用资源配置</description>
+	<import
+		resource="classpath:com/wondersgroup/wssip/application/wssipAppContext.xml" />
+	<bean id="uaLoginAction"
+		class="com.wondersgroup.wssip.local.application.login.UaLoginAction" singleton="false">
+		<property name="uaLoginService" ref="uaLoginService"></property>
+	</bean>
+	
+	<bean id="uaLogoutAction"
+		class="com.wondersgroup.wssip.local.application.login.UaLogoutAction" singleton="false">
+	</bean>
+	
+	<bean id="uaLoginService" parent="basicTxProxy">
+		<property name="target" ref="uaLoginServiceImpl"></property>
+	</bean>
+	
+	<bean id="uaLoginServiceImpl"
+		class="com.wondersgroup.wssip.service.impl.UaLoginServiceImpl">
+	</bean>
+</beans>

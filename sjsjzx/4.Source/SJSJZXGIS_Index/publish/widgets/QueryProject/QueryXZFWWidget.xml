@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<configuration>
+	<layers>
+		<extentLayer>
+			<name>选址范围</name>
+			<url>arcgis/rest/services/dynamic_pdgt2012/MapServer/8</url>
+			<graphicalsearchlabel>从下面选择一种多边形以选定查询范围：</graphicalsearchlabel>
+			<fields>XZ_ID</fields>
+			<fieldsCN>XZ_ID</fieldsCN>
+			<titlefield>XZ_ID</titlefield>
+			<linkfield>XZ_ID</linkfield>
+			<icon>i_uni1.png</icon>
+		</extentLayer>
+	</layers>
+	<infodata>
+		<url>/PDGT_Index/servlet/GetOracleData</url>
+		<table>DC_ADDRESS</table>
+		<fields>XZ_ID,PROJECT_NAME,PASS_NO,DOC_DATE,BUILD_UNIT,LAND_TYPE_NAME,BUILD_ADDRESS,BUILD_AREA,AREA_RATIO,PLANT_RATIO,BUILDING_HEIGHT_L</fields>
+		<fieldsCN>关联号,项目名称,证       号,发文日期,建设单位,用地性质,地       址,用地面积,容 积 率,绿 化 率,建筑限高</fieldsCN>
+	</infodata>
+	<linkURL>/pdgtdbc/common/gisRedirect.jsp?funId=xuanzhiyijianshubiaozhun&xzId=</linkURL>
+	<years>
+	     <url>widgets/Query/years.xml</url>
+	</years>
+</configuration>

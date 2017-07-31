@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://www.wondersgroup.com" targetNamespace="http://www.wondersgroup.com" 
+	elementFormDefault="qualified" attributeFormDefault="qualified">
+	<xs:element name="config">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="index" maxOccurs="unbounded"/>
+				<xs:element ref="datasource" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="fetcher" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- index -->
+	<xs:element name="index">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="path"/>
+				<xs:element ref="analyzer"/>
+				<xs:element ref="QueryParser"/>
+				<xs:element ref="fields"/>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:string" use="required"/>
+			<xs:attribute name="name" type="xs:string"/>
+			<xs:attribute name="default" type="xs:boolean" default="false"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="analyzer">
+		<xs:complexType>
+			<xs:attribute name="impl" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="QueryParser">
+		<xs:complexType>
+			<xs:attribute name="defaultOperator" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="path" type="xs:string"/>
+	<xs:element name="fields">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="field" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- index field -->
+	<xs:element name="field">
+		<xs:complexType>
+			<xs:attributeGroup ref="indexFieldAttrGroup"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="fieldIndexEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="UN_TOKENIZED"/>
+			<xs:enumeration value="TOKENIZED"/>
+			<xs:enumeration value="NO"/>
+			<xs:enumeration value="NO_NORMS"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fieldStoreEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="YES"/>
+			<xs:enumeration value="NO"/>
+			<xs:enumeration value="COMPRESS"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="fieldTypeEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="string"/>
+			<xs:enumeration value="date"/>
+			<xs:enumeration value="int"/>
+			<xs:enumeration value="long"/>
+			<xs:enumeration value="float"/>
+			<xs:enumeration value="double"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="dateResolutionEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="year"/>
+			<xs:enumeration value="month"/>
+			<xs:enumeration value="day"/>
+			<xs:enumeration value="hour"/>
+			<xs:enumeration value="minute"/>
+			<xs:enumeration value="second"/>
+			<xs:enumeration value="millisecond"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="termVectorEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="YES"/>
+			<xs:enumeration value="NO"/>
+			<xs:enumeration value="WITH_OFFSETS"/>
+			<xs:enumeration value="WITH_POSITIONS"/>
+			<xs:enumeration value="WITH_POSITION_OFFSETS"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:attributeGroup name="indexFieldAttrGroup">
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="id" type="xs:boolean" default="false"/>
+		<xs:attribute name="default" type="xs:boolean" default="false"/>
+		<xs:attribute name="index" type="fieldIndexEnum" default="TOKENIZED"/>
+		<xs:attribute name="store" type="fieldStoreEnum" default="NO"/>
+		<xs:attribute name="type" type="fieldTypeEnum" default="string"/>
+		<xs:attribute name="resolution" type="dateResolutionEnum" default="second"/>
+		<xs:attribute name="termVector" type="termVectorEnum" default="NO"/>
+	</xs:attributeGroup>
+	<!-- datasource -->
+	<xs:element name="datasource">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="property" minOccurs="4" maxOccurs="4"/>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:string" use="required"/>
+			<xs:attribute name="name" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="property">
+		<xs:complexType mixed="true">
+			<xs:attribute name="name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- fetcher -->
+	<xs:simpleType name="fetcherTypeEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DB"/>
+			<xs:enumeration value="FILE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="fetcherFieldType">
+		<xs:sequence>
+			<xs:element ref="bridge" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="column" type="xs:string"/>
+		<xs:attribute name="discriminator" type="xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="datasourceRefType">
+		<xs:attribute name="ref" type="xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="indexRefType">
+		<xs:attribute name="ref" type="xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="fetcherType" abstract="true">
+		<xs:sequence>
+			<xs:element name="index" type="indexRefType"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:string" use="required"/>
+		<xs:attribute name="type" type="fetcherTypeEnum" use="required"/>
+	</xs:complexType>
+
+	<xs:element name="fetcher" type="fetcherType"/>
+	
+	<xs:complexType name="dbFetcherType">
+		<xs:complexContent>
+			<xs:extension base="fetcherType">
+				<xs:sequence>
+					<xs:element name="datasource" type="datasourceRefType"/>
+					<xs:element ref="table"/>
+					<xs:element ref="synchro" minOccurs="0"/>
+					<xs:element ref="eraser" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>	
+	
+	<xs:complexType name="fileFetcherType">
+		<xs:complexContent>
+			<xs:extension base="fetcherType">
+				<xs:sequence>
+					<xs:element name="path" type="xs:string"/>	
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:element name="table">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="fields">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="field" type="fetcherFieldType" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="condition" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="bridge">
+		<xs:complexType>
+			<xs:attribute name="impl" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="condition" type="xs:string"/>
+	<xs:element name="eraser">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="params"/>
+			</xs:sequence>
+			<xs:attribute name="impl" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="param">
+		<xs:complexType mixed="true">
+			<xs:attribute name="name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="params">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="param" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="synchro">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="params"/>
+			</xs:sequence>
+			<xs:attribute name="impl" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

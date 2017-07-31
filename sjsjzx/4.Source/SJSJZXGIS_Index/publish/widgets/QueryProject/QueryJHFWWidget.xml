@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<layers>
+		<extentLayer>
+			<name>计划范围</name>
+			<url>arcgis/rest/services/dynamic_pdgt2012/MapServer/47</url>
+			<fields> MISID,MISNAME,MISDATE,MISNO,MISTYPE,MISID</fields>
+			<fieldsCN>项目编号,计划名称,储备年份,地块名称,地块类别</fieldsCN>
+			<linkURL>/pdgtdbc/common/gisRedirect.jsp?funId=Ed&misid=</linkURL>
+		</extentLayer>
+	</layers>
+	<years>
+	     <url>widgets/Query/years.xml</url>
+	</years>
+</configuration>
