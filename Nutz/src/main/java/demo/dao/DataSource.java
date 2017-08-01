@@ -1,6 +1,6 @@
 package demo.dao;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.nutz.dao.Chain;
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
@@ -87,10 +87,12 @@ public class DataSource {
     }
 
     //        将分页信息和查询结果一起返回
-    public QueryResult getPetList(Dao dao, int pageNumber, int pageSize) {
-        Pager pager = getDao().createPager(pageNumber, pageSize);
+    @Test
+    public void getPetList() {
+        Dao dao = getDao();
+        Pager pager = dao.createPager(1, 5);
         List<Ceshi> list = dao.query(Ceshi.class, null, pager);
         pager.setRecordCount(dao.count(Ceshi.class));
-        return new QueryResult(list, pager);
+        QueryResult queryResult = new QueryResult(list, pager);
     }
 }
