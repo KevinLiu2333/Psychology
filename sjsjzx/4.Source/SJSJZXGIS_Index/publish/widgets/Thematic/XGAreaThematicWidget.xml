@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-	<queryLayer>
-			<name>详细规划范围</name>
-			<url>arcgis/rest/services/dynamic_pdgt2012/MapServer/11</url>
-			<fields>PLAN_CODE,PLAN_NAME,START_DATE,DISTRICT,TOT_AREA</fields>
-	</queryLayer>
-	<areaLayer>arcgis/rest/services/dynamic_pdgt2012/MapServer/24</areaLayer>
-</configuration>

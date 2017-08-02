@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-    <layerService>arcgis/rest/services/dynamic_pdgt2012/MapServer/26</layerService>
-    <queryfields>NAME,CADNAME</queryfields>
-    <where>NAME like '%[value]%'</where>
-</configuration>

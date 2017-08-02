@@ -1,7 +1,0 @@
-<?xml version="1.0" ?>
-<configuration>
-    <!-- geo, dms, mercator -->
-    <outputunit>geo</outputunit>
-    <numberformatter precision="3"/>
-    <label template="X:{0}   Y:{1}"/>
-</configuration>

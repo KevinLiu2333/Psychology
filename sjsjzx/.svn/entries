@@ -1,43 +1,0 @@
-10
-
-dir
-246920
-http://10.1.8.82:1088/svn/projects2/MZJ/sjsjzx
-http://10.1.8.82:1088/svn
-
-
-
-2017-07-25T08:29:45.292625Z
-246520
-sunxin
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-9817e563-51b1-004a-bdbd-08a67d9ca217
-
-1.开发库
-dir
-
-2.产品库
-dir
-
-3.个人目录
-dir
-
-4.Source
-dir
-
-code
-dir
-

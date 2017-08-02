@@ -1,5 +1,0 @@
-<?xml version="1.0" ?>
-<configuration>
-	<routeserviceurl>arcgis/rest/services/network2012/NAServer/Route</routeserviceurl>
-	<areaserviceurl>arcgis/rest/services/network2012/NAServer/Service%20Area</areaserviceurl>
-</configuration>

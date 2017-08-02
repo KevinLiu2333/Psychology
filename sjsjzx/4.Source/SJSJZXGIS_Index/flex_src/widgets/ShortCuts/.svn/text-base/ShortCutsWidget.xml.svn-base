@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-   <layerOperationSrc>assets/images/icons/tckz.png</layerOperationSrc>
-   <locationSrc>assets/images/icons/roadlocate.png</locationSrc>
-   <locationDianCha>assets/images/icons/diancha.jpg</locationDianCha>
-   <locationDieJia>assets/images/icons/diejia.jpg</locationDieJia>
-   <locationDingWei>assets/images/icons/dingwei.jpg</locationDingWei>
-   <locationTuCengKongZhi>assets/images/icons/tucengkongzhi.jpg</locationTuCengKongZhi>
-</configuration>
