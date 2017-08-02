@@ -1,0 +1,52 @@
+10
+
+dir
+247130
+http://10.1.8.82:1088/svn/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/csrq
+http://10.1.8.82:1088/svn
+
+
+
+2017-08-01T04:26:37.667625Z
+247055
+wulong
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9817e563-51b1-004a-bdbd-08a67d9ca217
+
+at
+dir
+
+comparator
+dir
+
+constants
+dir
+
+entity
+dir
+
+generator
+dir
+
+job
+dir
+
+renderer
+dir
+
+service
+dir
+

@@ -1,0 +1,209 @@
+<div id="sidebar" class="sidebar responsive menu-min">
+                <script type="text/javascript">
+                    try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+                </script>
+
+                <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+                    <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+                        <button class="btn btn-success">
+                            <i class="ace-icon fa fa-signal"></i>
+                        </button>
+
+                        <button class="btn btn-info">
+                            <i class="ace-icon fa fa-pencil"></i>
+                        </button>
+
+                        <button class="btn btn-warning">
+                            <i class="ace-icon fa fa-users"></i>
+                        </button>
+
+                        <button class="btn btn-danger">
+                            <i class="ace-icon fa fa-cogs"></i>
+                        </button>
+                    </div>
+
+                    <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+                        <span class="btn btn-success"></span>
+
+                        <span class="btn btn-info"></span>
+
+                        <span class="btn btn-warning"></span>
+
+                        <span class="btn btn-danger"></span>
+                    </div>
+                </div><!-- /.sidebar-shortcuts -->
+
+                <ul class="nav nav-list">
+                    <li id="jksy" class="active">
+                        <a href="index.html">
+                            <i class="menu-icon fa fa-tachometer"></i>
+                            <span class="menu-text"> 监控首页 </span>
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li id="jhjk" class="">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-desktop"></i>
+                            <span class="menu-text">
+                                交换监控
+                            </span>
+
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                        <ul class="submenu">
+
+
+                            <li hidden id="jdzt" class="">
+                                <a href="jdzt.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    节点状态监控
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li hidden id="sjjhl-month" class="">
+                                <a href="sjjhl.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    数据交换量监控(月)
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                            <li hidden id="sjjhl-year" class="">
+                                <a href="sjjhl-year.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    数据交换量监控(年)
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+
+
+                            <li hidden id="jhsltj" class="">
+                                <a href="jhjgtj.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    交换数量统计(图)
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+							<!-- 
+                            <li id="jhzltj" class="">
+                                <a href="jhzltj-detail.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    交换质量统计(表)
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+							 -->
+                            <li id="jhrzck" class="">
+                                <a href="jhrzck.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    交换日志查看
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+
+                        </ul>
+                    </li>
+
+                    <li id="fwjk" class="">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-list"></i>
+                            <span class="menu-text"> 服务监控 </span>
+
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                        <ul class="submenu">
+                            <li hidden id="fwztjk" class="">
+                                <a href="fwztjk.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    服务状态监控
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li id="fwrdjk" class="">
+                                <a href="fwdyjk.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    服务热度监控
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li id="czjk" class="">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-pencil-square-o"></i>
+                            <span class="menu-text"> 操作监控 </span>
+
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                        <ul class="submenu">
+                            <li id="dlrz" class="">
+                                <a href="dlrz.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    登录日志
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li id="czrz" class="">
+                                <a href="czrz.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    操作日志
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <!-- <li hidden id="yxdt" class="">
+                        <a href="yxdt.html">
+                            <i class="menu-icon fa fa-calendar"></i>
+
+                            <span class="menu-text">
+                                运行动态
+
+                                <span class="badge badge-transparent tooltip-error" title="2 Important Events">
+                                    <i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
+                                </span>
+                            </span>
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li> -->
+
+                </ul><!-- /.nav-list -->
+
+                <!-- <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+                    <i class="ace-icon fa fa-angle-double-right" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+                </div>
+
+                <script type="text/javascript">
+                    try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+                </script> -->
+            </div>

@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/245529/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/data/entity
+END
+StatInfoBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/215869/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/data/entity/StatInfoBo.java
+END
+MultStatInfoBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/237954/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/data/entity/MultStatInfoBo.java
+END
+StatResultBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/211907/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/data/entity/StatResultBo.java
+END
+MultStatResultBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/211907/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/data/entity/MultStatResultBo.java
+END
+DataFileDataBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/245441/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/data/entity/DataFileDataBo.java
+END
+StatTermBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/215869/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/data/entity/StatTermBo.java
+END
+DataFileLinkBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/240204/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/data/entity/DataFileLinkBo.java
+END
+TableConfigBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/245529/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/data/entity/TableConfigBo.java
+END
+DataFileCustomJsonBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/!svn/ver/240204/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/data/entity/DataFileCustomJsonBo.java
+END
+StatTermResultBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/211907/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/data/entity/StatTermResultBo.java
+END
+DBinfoBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/221626/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/data/entity/DBinfoBo.java
+END
+DataFileInfoBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/240204/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/data/entity/DataFileInfoBo.java
+END

@@ -1,0 +1,49 @@
+10
+
+dir
+247143
+http://10.1.8.82:1088/svn/projects2/MZJ/dream/dreamDC/code/wddc/web/wdac
+http://10.1.8.82:1088/svn
+
+
+
+2017-07-13T07:30:12.926625Z
+245723
+lijianlin
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9817e563-51b1-004a-bdbd-08a67d9ca217
+
+cj
+dir
+
+data-deal
+dir
+
+dataDuibi
+dir
+
+image
+dir
+
+skins
+dir
+
+tiles
+dir
+
+upload
+dir
+

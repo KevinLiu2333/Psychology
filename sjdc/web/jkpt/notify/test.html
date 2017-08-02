@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <script type="text/javascript" src="src/jquery.2.1.1.min.js"></script>
+        <script type="text/javascript" src="src/pnotify.js"></script>
+        <link href="src/pnotify.css" media="all" rel="stylesheet" type="text/css" />
+        <link href="src/pnotify.brighttheme.css" media="all" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+    <button id="button">Test</button><br>
+    <script type="text/javascript">
+       $("#button").click(function(){
+                    new PNotify({
+                        title: 'Animate.css Effect',
+                         text: 'I use effects from Animate.css. Such smooth CSS3 transitions make me feel like butter.',
+                        delay:2000,
+                    });
+                });
+    </script>
+    </body>
+</html>

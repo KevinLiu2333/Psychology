@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <title>数据中心监控平台</title>
+
+    <meta name="description" content="overview &amp; stats" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/font-awesome/4.2.0/css/font-awesome.min.css" />
+
+    <!-- page specific plugin styles -->
+
+    <!-- text fonts -->
+    <link rel="stylesheet" href="assets/fonts/fonts.googleapis.com.css" />
+
+    <!-- ace styles -->
+    <link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+
+    <!--[if lte IE 9]>
+			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+		<![endif]-->
+
+    <!--[if lte IE 9]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+    <!-- inline styles related to this page -->
+
+    <!-- ace settings handler -->
+    <script src="assets/js/ace-extra.min.js"></script>
+
+    <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+    <!--[if lte IE 8]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+</head>
+
+<body class="no-skin">
+    <div id="header"></div>
+
+    <div class="main-container" id="main-container">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('main-container', 'fixed')
+            } catch (e) {}
+
+        </script>
+
+        <div id="sidebar"></div>
+
+        <div class="main-content" style="width:96%;float:right">
+
+            <div class="page-content">
+
+                <div class="col-md-12" >
+                    <h2 class="page-header" style="margin-top: 5px">服务热度监控
+                    </h2>
+                    <div class="wrapper">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="width-100 label label-info label-xlg arrowed-in arrowed-right">
+                                    <span align="center" style="font-family:'微软雅黑';font-size:20px">用户调用前十排行（<span id="userCount">184</span>）</span>
+                                    <span id="test" hidden>0</span>
+                                </div>
+
+                                <div class="col-xs-11">
+                                    <ul id="userRank" class="list-unstyled spaced"></ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="width-100 label label-info label-xlg arrowed-in arrowed-right">
+                                    <span  align="center" style="font-family:'微软雅黑';font-size:20px">委办局使用量前五排行（<span id="dpCount">167</span>）</span>
+                                    <span id="test" hidden>0</span>
+                                </div>
+
+                                <div class="col-xs-11">
+                                    <ul id="dpRank" class="list-unstyled spaced"></ul>
+                                </div>
+                                <div class="row col-md-12" >
+
+                                        <div id="main2" style="width: 100%;height:250px;"></div>
+
+                                 </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.page-content -->
+    </div>
+    </div>
+    <!-- /.main-content -->
+
+    <div id="footer" class="col-md-12"></div>
+
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
+    </div>
+    <!-- /.main-container -->
+
+    <!-- basic scripts -->
+
+    <!--[if !IE]> -->
+    <script src="assets/js/jquery.2.1.1.min.js"></script>
+    <script src="js/echarts.js"></script>
+
+
+    <!-- <![endif]-->
+
+    <!--[if IE]>
+<script src="assets/js/jquery.1.11.1.min.js"></script>
+<![endif]-->
+
+    <!--[if !IE]> -->
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='assets/js/jquery.min.js'>" + "<" + "/script>");
+
+    </script>
+
+    <!-- <![endif]-->
+
+    <!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery1x.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+    <script type="text/javascript">
+        if ('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+
+    </script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- page specific plugin scripts -->
+    <script src="assets/js/bootstrap-datepicker.min.js"></script>
+    <script src="assets/js/jquery.jqGrid.min.js"></script>
+    <script src="assets/js/grid.locale-en.js"></script>
+
+    <script src="assets/js/jquery-ui.custom.min.js"></script>
+    <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="assets/js/jquery.gritter.min.js"></script>
+    <script src="assets/js/bootbox.min.js"></script>
+    <script src="assets/js/jquery.easypiechart.min.js"></script>
+    <script src="assets/js/jquery.hotkeys.min.js"></script>
+    <script src="assets/js/bootstrap-wysiwyg.min.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/fuelux.spinner.min.js"></script>
+    <script src="assets/js/bootstrap-editable.min.js"></script>
+    <script src="assets/js/ace-editable.min.js"></script>
+    <script src="assets/js/jquery.maskedinput.min.js"></script>
+
+    <!-- ace scripts -->
+    <script src="assets/js/ace-elements.min.js"></script>
+    <script src="assets/js/ace.min.js"></script>
+
+    <!-- inline scripts related to this page -->
+    <script type="text/javascript">
+        // include
+        $("#header").load("include/header.html");
+        $("#sidebar").load("include/sidebar.html",function () {
+            $("#jksy").attr("class","");
+            $("#fwjk").attr("class","active");
+            $("#fwrdjk").attr("class","active");
+        });
+        $("#footer").load("include/footer.html");
+
+        // 取随机数   min <= random < max
+        function randomIndex(Min,Max){
+            var Range = Max - Min;
+            var Rand = Math.random();
+            var num = Min + Math.floor(Rand * Range);
+            return num;
+        };
+
+        //随机色tool
+        function TransferColor(){
+            var colorArray = ['danger','success','info','warning','purple','grey','orange'];
+            return colorArray[randomIndex(0,7)];
+        }
+
+        $.ajax({
+            type:"get",
+            url:"json/server/serverRank.json",
+            dataType:"text",
+            success:function(result){
+                var dataJson = eval('('+result+')');
+                var i = 0;
+                var j = 0;
+                $("#userCount").html(eval(dataJson.userCount.join("+")));
+                $("#dpCount").html(eval(dataJson.dpCount.join("+")));
+                dataJson.userRank.forEach(function(data){
+                    i++;
+                    $("#userRank").append(
+                        '<li style="border-bottom:1px dashed #BBB;margin-top:21px">'+
+                            '<span class="badge badge-'+TransferColor()+'" style="font-size:18px">'+i+'</span>&nbsp;&nbsp; <span style="font-size: 18px">'+data+'（'+dataJson.userCount[i-1]+'）'+'</span>'+
+                        '</li>'
+                    )
+                });
+                dataJson.dpRank.forEach(function(data){
+                    j++;
+                    $("#dpRank").append(
+                        '<li style="border-bottom:1px dashed #BBB;margin-top:21px">'+
+                            '<span class="badge badge-'+TransferColor()+'" style="font-size:18px">'+j+'</span>&nbsp;&nbsp; <span style="font-size: 18px">'+data+'（'+dataJson.dpCount[j-1]+'）'+'</span>'+
+                        '</li>'
+                    )
+                });
+                // chars
+                var myChart1 = echarts.init(document.getElementById('main2'));
+                // 指定图表的配置项和数据
+                var option1 = {
+                    title: {
+                    },
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'shadow'
+                        }
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        top:'5%',
+                        containLabel: true,
+                    },
+                    xAxis: {
+                        type: 'value',
+                        boundaryGap: [0, 0.01]
+                    },
+                    yAxis: {
+                        type: 'category',
+                        data: dataJson.dpRank
+                    },
+                    series: [
+                        {
+                            name: '服务器使用量',
+                            type: 'bar',
+                            data: dataJson.dpCount
+                        }
+
+                    ]
+                };
+                // 使用刚指定的配置项和数据显示图表。
+                myChart1.setOption(option1);
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+10
+
+dir
+247137
+http://10.1.8.82:1088/svn/projects2/MZJ/sjsjzx/code/sjdc/web/WEB-INF
+http://10.1.8.82:1088/svn
+
+
+
+2017-08-02T02:01:44.948875Z
+247137
+sunxin
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9817e563-51b1-004a-bdbd-08a67d9ca217
+
+classes
+dir
+
+lib
+dir
+
+sjdc
+dir
+
+sjfw
+dir
+
+tmp
+dir
+
+wdac
+dir
+
+wddc
+dir
+
+web.xml
+file
+
+
+
+
+2017-08-02T01:47:22.314000Z
+37480302beb3fb41daec062cd1c7e5cd
+2017-07-31T08:43:04.183250Z
+246966
+sunxin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1293
+

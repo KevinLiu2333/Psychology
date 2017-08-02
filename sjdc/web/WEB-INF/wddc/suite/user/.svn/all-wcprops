@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/213226/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wddc/suite/user
+END
+user_online.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/211298/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wddc/suite/user/user_online.jsp
+END
+unit_list.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/211999/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wddc/suite/user/unit_list.jsp
+END
+user_edit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/213226/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wddc/suite/user/user_edit.jsp
+END
+login_log_list.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/211298/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wddc/suite/user/login_log_list.jsp
+END
+auth_edit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/212007/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wddc/suite/user/auth_edit.jsp
+END
+user_list.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/213226/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wddc/suite/user/user_list.jsp
+END
+auth_list.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/211999/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wddc/suite/user/auth_list.jsp
+END
+unit_edit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/212005/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wddc/suite/user/unit_edit.jsp
+END

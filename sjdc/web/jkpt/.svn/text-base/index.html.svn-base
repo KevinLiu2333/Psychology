@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>数据中心监控平台</title>
+
+		<meta name="description" content="overview &amp; stats" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<!-- 跑马灯 -->
+		<link rel="stylesheet" type="text/css" href="assets/css/liMarquee.css">
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/font-awesome/4.2.0/css/font-awesome.min.css" />
+
+		<!-- page specific plugin styles -->
+
+		<!-- text fonts -->
+		<link rel="stylesheet" href="assets/fonts/fonts.googleapis.com.css" />
+
+		<!-- ace styles -->
+		<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+		<![endif]-->
+
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<link href="assets/data-tables/css/demo_page.css" rel="stylesheet" />
+        <link href="assets/data-tables/css/demo_table.css" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/data-tables/DT_bootstrap.css" />
+
+		<!-- ace settings handler -->
+		<script src="assets/js/ace-extra.min.js"></script>
+		 <script src="js/echarts.js"></script>
+
+		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+		<!--[if lte IE 8]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+
+	<style>
+		.btn-light1{
+			background-color:#f2f2f2;
+		}
+		.h4text{
+			margin-top: 0px;
+			padding-left: 25px;
+			font-size: 20px;
+			font-weight: 500;
+			color:#fff;
+		}
+		.icon{
+			width:75px;
+			height: 75px;
+		}
+		.col-xs-2{
+			width:20%;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+		.icon-text{
+			margin-top:15px;
+
+		}
+		.icon-padding{
+			padding-left: 10px;
+			padding-right: 0px;
+			padding-top: 0px;
+		}
+	</style>
+	</head>
+	<body class="no-skin">
+		<div class="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+            <div id="header"></div>
+        </div>
+        <div class="main-container">
+            <script type="text/javascript">
+                try {
+                    ace.settings.check('main-container', 'fixed')
+                } catch (e) {}
+            </script>
+
+            <div id="sidebar" class="sidebar  responsive menu-min">
+
+            </div>
+		<div class="main-content">
+				<div class="page-content">
+					<br>
+					<!-- PAGE TABLE -->
+							<div hidden class="col-md-12 panel">
+								<div class="col-md-1 marqueeLeft">
+									<span class="marqueeSpan">消息动态</span>
+								</div>
+                                <!-- push message -->
+								<div id="dowebok" class="col-md-11" style="background-color: #9ccdf5">
+									<div id="marquee" class="dowebok marquee1 col-md-11" style="height: 35px"></div>
+								</div>
+							</div><!-- /.row -->
+
+							<div class="panel col-md-12">
+								<div class="col-xs-2">
+									<div class="panel  btn-light1">
+                                        <div  id="sjjhzl" class="panel-body">
+                                            <div class="row">
+                                                <div class="col-xs-8 icon-padding" align="center">
+													<p class="state-title icon-text bigger-270"><span id="countUp1">0</span><span style="font-size:15px">&nbsp;条</span></p>
+                                                </div>
+                                                <div class="col-xs-4 icon-padding">
+                                                	<img class="icon" src="assets/img/icon_03.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="blue-bg btn-warning" style="height:30px">
+                                    		<p class="h4text">数据交换总量</p>
+                                   	 	</div>
+                                    </div>
+								</div>
+								<div class="col-xs-2">
+									<div class="panel  btn-light1">
+                                        <div id="sjjrbm" class="panel-body">
+                                            <div class="row">
+                                                <div class="col-xs-7 icon-padding" align="center">
+                                                    <p class="state-title icon-text bigger-270"><span id="countUp2">0</span><span style="font-size:15px">&nbsp;个</span></p>
+                                                    <!-- <h5 id="errorCount">数据交换总量</h5> -->
+                                                </div>
+                                                <div class="col-xs-5 icon-padding">
+                                                	<img class="icon" src="assets/img/icon_02.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="blue-bg btn-info" style="height:30px">
+                                    		<p class="h4text">数据接入部门</p>
+                                   	 	</div>
+                                    </div>
+								</div>
+								<div class="col-xs-2">
+									<div class="panel  btn-light1">
+                                        <div  id="xtjrsl" class="panel-body">
+                                            <div class="row">
+                                                <div class="col-xs-7 icon-padding" align="center">
+                                                    <p class="state-title icon-text bigger-270"><span id="countUp3">0</span><span style="font-size:15px">&nbsp;个</span></p>
+                                                    <!-- <h5 id="errorCount">数据交换总量</h5> -->
+                                                </div>
+                                                <div class="col-xs-5 icon-padding">
+                                                	<img class="icon" src="assets/img/icon_04.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="blue-bg btn-danger" style="height:30px">
+                                    		<p class="h4text">系统接入数量</p>
+                                   	 	</div>
+                                    </div>
+								</div>
+								<div class="col-xs-2">
+									<div class="panel  btn-light1">
+                                        <div  id="fwtgzl" class="panel-body">
+                                            <div class="row">
+                                                <div class="col-xs-7 icon-padding" align="center">
+                                                    <p class="state-title icon-text bigger-270"><span id="countUp4">0</span><span style="font-size:15px">&nbsp;个</span></p>
+                                                    <!-- <h5 id="errorCount">数据交换总量</h5> -->
+                                                </div>
+                                                <div class="col-xs-5 icon-padding">
+                                                	<img class="icon" src="assets/img/icon_05.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="blue-bg btn-success" style="height:30px">
+                                    		<p class="h4text">服务提供总量</p>
+                                   	 	</div>
+                                    </div>
+								</div>
+								<div class="col-xs-2">
+									<div class="panel  btn-light1">
+                                        <div  id="fwdyzl" class="panel-body">
+                                            <div class="row">
+                                                <div class="col-xs-8 icon-padding" align="center">
+                                                    <p class="state-title icon-text bigger-270"><span id="countUp5">0</span><span style="font-size:15px">&nbsp;条</span></p>
+                                                    <!-- <h5 id="errorCount">数据交换总量</h5> -->
+                                                </div>
+                                                <div class="col-xs-4 icon-padding">
+                                                	<img class="icon" src="assets/img/icon_06.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="blue-bg btn-purple" style="height:30px">
+                                    		<p class="h4text">服务调用总量</p>
+                                   	 	</div>
+                                    </div>
+								</div>
+								<!-- charts -->
+							 <div class="col-md-12 panel ">
+							 	<div class="col-md-12" id="indexCharts" style="width:100%;height:320px;"></div>
+							 </div>
+
+			</div>
+			</div>
+            </div>
+			<!-- Footer  -->
+			<div id="footer" class="col-md-12"></div>
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script src="assets/js/jquery-2.2.3.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="assets/js/jquery.1.11.1.min.js"></script>
+<![endif]-->
+
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery1x.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<!-- 跑马灯 -->
+		<script src="js/jquery.liMarquee.js"></script>
+
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+		<script src="assets/js/fuelux.tree.min.js"></script>
+
+		<!-- ace scripts -->
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<script type="text/javascript" language="javascript" src="assets/data-tables/jquery.dataTables.js"></script>
+        <script type="text/javascript" src="assets/data-tables/DT_bootstrap.js"></script>
+        <script src="assets/data-tables/dynamic_table_init.js"></script>
+        <script src="socket.io/socket.io.js"></script>
+		<script src="js/countUp.min.js"></script>
+        <script src="js/jquery.color.js"></script>
+		<script type="text/javascript">
+			// include
+			$("#header").load("include/header.html");
+			$("#sidebar").load("include/sidebar.html");
+			$("#footer").load("include/footer.html");
+
+			// 跑马灯
+			$(function(){
+				$('#dowebok').liMarquee();
+			});
+			
+			function myInterval() {
+				$.ajax({
+                type: "GET",
+                url: "/jkpt/getData",
+                dataType: 'text',
+                success:function(result){
+                	console.log(result)
+                	}
+                })
+			}
+			
+            $.ajax({
+                type:"get",
+                url:"json/index/indexMessage.json",
+                dataType:"text",
+                success:function(result){
+                    var data = eval('('+result+')');
+                    data.data.forEach(function(data){
+                        $("#marquee").append(
+                            '<span class="alert">'+
+                                    data.message+
+                                    '</span>'+
+                                    '<span class="alert span-border">'+
+                                        '|'+
+                                    '</span>'
+                            )
+                    })
+                }
+            })
+
+			// 初始化data的数据
+			$.ajax({
+				type: "GET",
+				url: "json/index/data.json",
+				dataType: 'text',
+				success: function (result) {
+					data = eval('(' + result + ')');
+					// 数字滚动
+					var options = {
+						useEasing : true,
+						useGrouping : false, // 将数字按位数分开
+						separator : ',',
+						decimal : '.',
+						prefix : '',  //前缀
+						suffix : '' //后缀
+					};
+					var count1 = new CountUp("countUp1", 0, data.dataCount, 0, 3.5, options);  //参数依次为 元素ID 开始值 结束值 小数位数 动画延迟
+					var count2 = new CountUp("countUp2", 0, data.dpCount, 0, 3.5, options);
+					var count3 = new CountUp("countUp3", 0, data.systemCount, 0, 3.5, options);
+					var count4 = new CountUp("countUp4", 0, data.serverCount, 0, 3.5, options);
+					var count5 = new CountUp("countUp5", 0, data.serverTransferCount, 0, 3.5, options);
+					count1.start();
+					count2.start();
+					count3.start();
+					count4.start();
+					count5.start();
+				}
+			});
+
+			// 定时器 刷新data数据
+			setInterval("myInterval()",10000);//1000为1秒钟
+
+			var random1 = 0;
+			var random2 = 0;
+			
+			function myInterval() {
+				$.ajax({
+                type: "GET",
+                url: "json/index/data.json",
+                dataType: 'text',
+                success: function (result) {
+                    data = eval('(' + result + ')');
+                    var oldCount1 = parseInt($("#countUp1").html());
+                    var oldCount2 = parseInt($("#countUp2").html());
+                    var oldCount3 = parseInt($("#countUp3").html());
+                    var oldCount4 = parseInt($("#countUp4").html());
+                    var oldCount5 = parseInt($("#countUp5").html());
+                    // 数值改变 背景闪烁效果
+                    if(oldCount1 != data.dataCount){
+                        jQuery("#sjjhzl").animate({
+                            backgroundColor: "#f0ad4e !important"
+                        }, 1000 );
+                        jQuery("#sjjhzl").animate({
+                            backgroundColor: "#f2f2f2"
+                        }, 1000 );
+                    }
+                    if(oldCount2 != data.dpCount){
+                        jQuery("#sjjrbm").animate({
+                            backgroundColor: "#6fb3e0 !important"
+                        }, 1000 );
+                        jQuery("#sjjrbm").animate({
+                            backgroundColor: "#f2f2f2"
+                        }, 1000 );
+                    }
+                    if(oldCount3 != data.systemCount){
+                        jQuery("#xtjrsl").animate({
+                            backgroundColor: "#d15b47 !important"
+                        }, 1000 );
+                        jQuery("#xtjrsl").animate({
+                            backgroundColor: "#f2f2f2"
+                        }, 1000 );
+                    }
+                    if(oldCount4 != data.serverCount){
+                        jQuery("#fwtgzl").animate({
+                            backgroundColor: "#5cb85c !important"
+                        }, 1000 );
+                        jQuery("#fwtgzl").animate({
+                            backgroundColor: "#f2f2f2"
+                        }, 1000 );
+                    }
+                    if(oldCount5 != data.serverTransferCount){
+                        jQuery("#fwdyzl").animate({
+                            backgroundColor: "#9585bf !important"
+                        }, 1000 );
+                        jQuery("#fwdyzl").animate({
+                            backgroundColor: "#f2f2f2"
+                        }, 1000 );
+                    }
+
+                    // 数字滚动
+                    var options = {
+                        useEasing : true,
+                        useGrouping : false, // 将数字按位数分开
+                        separator : ',',
+                        decimal : '.',
+                        prefix : '',  //前缀
+                        suffix : '' //后缀
+                    };
+    				// 演示随机增长数字
+    				//random1 += parseInt(Math.random()*100);
+    	            //random2 += parseInt(Math.random()*5);
+    	            //var test1 = (parseInt(data.dataCount) + random1)+"";
+    	            //var test2 = (parseInt(data.serverTransferCount) + random2)+"";
+					
+                    var count1 = new CountUp("countUp1", oldCount1, data.dataCount, 0, 3.5, options);  //参数依次为 元素ID 开始值 结束值 小数位数 动画延迟
+                    //var count1 = new CountUp("countUp1", oldCount1, test1, 0, 3.5, options);
+                    var count2 = new CountUp("countUp2", oldCount2, data.dpCount, 0, 3.5, options);
+                    var count3 = new CountUp("countUp3", oldCount3, data.systemCount, 0, 3.5, options);
+                    var count4 = new CountUp("countUp4", oldCount4, data.serverCount, 0, 3.5, options);
+                    var count5 = new CountUp("countUp5", oldCount5, data.serverTransferCount, 0, 3.5, options);
+                    //var count5 = new CountUp("countUp5", oldCount5, test2, 0, 3.5, options);
+                    count1.start();
+                    count2.start();
+                    count3.start();
+                    count4.start();
+                    count5.start();
+                }
+            });
+			}
+
+			// echarts
+			var jsonData = {};
+			$.ajax({
+				type: "GET",
+				url: "json/index/indexChartsData.json",
+				dataType: 'text',
+				success: function(result) {
+					jsonData = eval('('+result+')');
+					var myChart = echarts.init(document.getElementById('indexCharts'));
+					// 指定图表的配置项和数据
+					option = {
+						title: {
+							text: '本月监控状态'
+						},
+						tooltip: {
+							trigger: 'axis'
+						},
+						legend: {
+							x: 'center',
+							data:['数据查询对比','数据交换最频繁部门','服务调用最频繁部门','数据发送量','数据接收量']
+						},
+						radar: [
+							{
+								indicator: jsonData.indicator[0],
+								center: ['20%','60%'],
+								radius: 80
+							},
+							{
+								indicator: jsonData.indicator[1],
+								radius: 80,
+								center: ['50%','60%'],
+							},
+							{
+								indicator: jsonData.indicator[2],
+								center: ['80%','60%'],
+								radius: 80
+							}
+						],
+						series: [
+							{
+								type: 'radar',
+								tooltip: {
+									trigger: 'item'
+								},
+								itemStyle: {normal: {areaStyle: {type: 'default'}}},
+								data: [
+									{
+										value: jsonData.chart1,
+										name: '数据查询对比'
+									}
+								]
+							},
+							{
+								type: 'radar',
+								radarIndex: 1,
+								tooltip: {
+									trigger: 'item'
+								},
+								data: [
+									//{
+									//	value: jsonData.chart2,
+									//	name: '数据交换最频繁部门'
+									//},
+									{
+										value: jsonData.chart3,
+										name: '服务调用最频繁部门'
+									}
+								]
+							},
+							{
+								type: 'radar',
+								radarIndex: 2,
+								tooltip: {
+									trigger: 'item'
+								},
+								itemStyle: {normal: {areaStyle: {type: 'default'}}},
+								data: [
+									{
+										name: '数据发送量',
+										value: jsonData.chart4,
+									},
+									{
+										name:'数据接收量',
+										value:jsonData.chart5
+									}
+								]
+							}
+						]
+					};
+
+					// 使用刚指定的配置项和数据显示图表。
+					myChart.setOption(option);
+				}
+			});
+		</script>
+	</body>
+</html>

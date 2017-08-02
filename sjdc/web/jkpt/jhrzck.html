@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>数据中心监控平台</title>
+
+		<meta name="description" content="overview &amp; stats" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/font-awesome/4.2.0/css/font-awesome.min.css" />
+
+		<!-- page specific plugin styles -->
+
+		<!-- text fonts -->
+		<link rel="stylesheet" href="assets/fonts/fonts.googleapis.com.css" />
+
+		<!-- ace styles -->
+		<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+		<![endif]-->
+
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<link href="assets/data-tables/css/demo_page.css" rel="stylesheet" />
+        <link href="assets/data-tables/css/demo_table.css" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/data-tables/DT_bootstrap.css" />
+
+		<!-- ace settings handler -->
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+		<!--[if lte IE 8]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+		<style type="text/css">
+            .dataTables_paginate.paging_bootstrap.pagination li {
+                float: left;
+                margin: 0 1px;
+                border: 1px solid #ddd;
+                list-style: none;
+            }
+
+            .dataTables_paginate.paging_bootstrap.pagination li.disabled a {
+                color: #c7c7c7;
+            }
+
+            .dataTables_paginate.paging_bootstrap.pagination li a {
+                color: #797979;
+                padding: 5px 10px;
+                display: inline-block;
+            }
+
+            .dataTables_paginate.paging_bootstrap.pagination li:hover a, .dataTables_paginate.paging_bootstrap.pagination li.active a {
+                color: #fff;
+                background: #65cea7;
+                text-decoration: none;
+            }
+
+            .dataTables_paginate.paging_bootstrap.pagination li:hover,
+            .dataTables_paginate.paging_bootstrap.pagination li.active {
+                border-color: #65cea7;
+            }
+
+            .dataTables_paginate.paging_bootstrap.pagination li.disabled:hover,
+            .dataTables_paginate.paging_bootstrap.pagination li.disabled:hover a {
+                color: #C7C7C7;
+                background: #fff;
+                border-color: #DDDDDD;
+                cursor: no-drop;
+            }
+
+            .dataTables_paginate.paging_bootstrap.pagination {
+                float: right;
+                margin-bottom: 15px;
+            }
+            .h4text{
+            	margin-left: 10px;
+            	font-weight: 600;
+            	font-family: 黑体;
+            	font-size: 18px;
+            	color:grey;
+            }
+            .col-xs-5{
+            	padding-left: 0px;
+            	padding-right: 0px;
+            	height:125px;
+            	width:80px;
+            }
+            .icon-size{
+            	width:40px;
+            	height: 40px;
+            	margin-top: 5px;
+            	margin-left: 5px;
+            }
+            .circle{
+            	width: 50px;
+            	height: 50px;
+            	background-color:white;
+            	border-radius: 50%;
+            	-moz-border-radius: 50%;
+            	-webkit-border-radius: 50%;
+            	margin-left: 15px;
+            	margin-top: 15px;
+            }
+            .p-text{
+            	font-size: 13px;
+            	letter-spacing: -2px;
+            	font-family: 黑体;
+            	font-weight: 600;
+            	text-align:center;
+            	margin-top: 10px;
+            	color:white;
+            }
+            .btn-light1{
+			background-color:#f2f2f2;
+			padding-left: 0px;
+			}
+			.text{
+				font-size:30px;
+				padding-left: 0px;
+				padding-right: 0px;
+				text-align: right;
+			}
+			.sm-text{
+				font-size: 15px;
+				text-align: right;
+			}
+            /*黄：#F9B24A  蓝：#5F9EED  灰：#6C8C9B  紫：#A87CED 绿：#72D753  红：#F4514E;*/
+        </style>
+
+	</head>
+
+	<body class="no-skin">
+		<div id="header"></div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div id="sidebar"></div>
+			<div class="main-content" style="width:96%;float:right">
+
+					<div class="page-content">
+
+					<div class="col-md-12">
+                        <h2 class="page-header">交换日志查看
+        				</h2>
+                    </div>
+
+					<!-- main page -->
+					<div class="row panel">
+						<div class="col-md-12">
+							<div class="panel" style="background-color:#f5f5f5">
+								<h4 class="h4text">人口库日志</h4>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="col-sm-3 ">
+								<div class="col-xs-5 btn-danger">
+									<p class="p-text">人口基本信息</p>
+									<div class="circle">
+										<img src="assets/img/9.png" class="icon-size" alt="" />
+									</div>
+								</div>
+								<div class="col-xs-8 btn-light1">
+									<div class="col-md-12">
+										<p></p>
+										<span><strong>数据总条数:</strong></span>
+									</div>
+									<div class="col-md-12 text">
+										<span id="rkjbxx">2523468</span><span class="sm-text">条</span>
+									</div>
+									<div class="col-md-12">
+
+										<span><strong>数据最后更新时间:</strong></span>
+									</div>
+									<div class="col-md-12">
+										<p class="sm-text">2017-7-31</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row panel">
+						<div class="col-md-12">
+							<div class="panel" style="background-color:#f5f5f5">
+								<h4 class="h4text">法人库日志</h4>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="col-sm-3 ">
+								<div class="col-xs-5 btn-info">
+									<p class="p-text">法人基本信息</p>
+									<div class="circle">
+										<img src="assets/img/5.png" class="icon-size" alt="" />
+									</div>
+								</div>
+								<div class="col-xs-8 btn-light1">
+									<div class="col-md-12">
+										<p></p>
+										<span><strong>数据总条数:</strong></span>
+									</div>
+									<div class="col-md-12 text">
+										<span id="frjbxx">985644</span><span class="sm-text">条</span>
+									</div>
+									<div class="col-md-12">
+										<span><strong>数据最后更新时间:</strong></span>
+									</div>
+									<div class="col-md-12">
+										<p class="sm-text">2017-7-31</p>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="col-sm-3 ">
+								<div class="col-xs-5 btn-success">
+									<p class="p-text">法人资质信息</p>
+									<div class="circle">
+										<img src="assets/img/1.png" class="icon-size" alt="" />
+									</div>
+								</div>
+								<div class="col-xs-8 btn-light1">
+									<div class="col-md-12">
+										<p></p>
+										<span><strong>数据总条数:</strong></span>
+									</div>
+									<div class="col-md-12 text">
+										<span id="frzzxx">864532</span><span class="sm-text">条</span>
+									</div>
+									<div class="col-md-12">
+
+										<span><strong>数据最后更新时间:</strong></span>
+									</div>
+									<div class="col-md-12">
+										<p class="sm-text">2017-7-31</p>
+									</div>
+
+								</div>
+							</div>
+							<div class="col-sm-3 ">
+								<div class="col-xs-5 btn-purple">
+									<p class="p-text">法人登记信息</p>
+									<div class="circle">
+										<img src="assets/img/8.png" class="icon-size" alt="" />
+									</div>
+								</div>
+								<div class="col-xs-8 btn-light1">
+									<div class="col-md-12">
+										<p></p>
+										<span><strong>数据总条数:</strong></span>
+									</div>
+									<div class="col-md-12 text">
+										<span id="frdjxx">784658</span><span class="sm-text">条</span>
+									</div>
+									<div class="col-md-12">
+
+										<span><strong>数据最后更新时间:</strong></span>
+									</div>
+									<div class="col-md-12">
+										<p class="sm-text">2017-7-31</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3 ">
+								<div class="col-xs-5 btn-warning">
+									<p class="p-text">法人处罚信息</p>
+									<div class="circle">
+										<img src="assets/img/2.png" class="icon-size" alt="" />
+									</div>
+								</div>
+								<div class="col-xs-8 btn-light1">
+									<div class="col-md-12">
+										<p></p>
+										<span><strong>数据总条数:</strong></span>
+									</div>
+									<div class="col-md-12 text">
+										<span id="frcfxx">8848</span><span class="sm-text">条</span>
+									</div>
+									<div class="col-md-12">
+
+										<span><strong>数据最后更新时间:</strong></span>
+									</div>
+									<div class="col-md-12">
+										<p class="sm-text">2017-7-31</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row panel">
+						<div class="col-md-12">
+							<div class="panel" style="background-color:#f5f5f5">
+								<h4 class="h4text">房屋库日志</h4>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="col-sm-3 ">
+								<div class="col-xs-5 btn-danger">
+									<p class="p-text">房屋基本信息</p>
+									<div class="circle">
+										<img src="assets/img/10.png" class="icon-size" alt="" />
+									</div>
+								</div>
+								<div class="col-xs-8 btn-light1">
+									<div class="col-md-12">
+										<p></p>
+										<span><strong>数据总条数:</strong></span>
+									</div>
+									<div class="col-md-12 text">
+										<span id="fwjbxx">583453</span><span class="sm-text">条</span>
+									</div>
+									<div class="col-md-12">
+										<span><strong>数据最后更新时间:</strong></span>
+									</div>
+									<div class="col-md-12">
+										<p class="sm-text">2017-7-31</p>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="col-sm-3 ">
+								<div class="col-xs-5 btn-warning">
+									<p class="p-text">人户分离信息</p>
+									<div class="circle">
+										<img src="assets/img/12.png" class="icon-size" alt="" />
+									</div>
+								</div>
+								<div class="col-xs-8 btn-light1">
+									<div class="col-md-12">
+										<p></p>
+										<span><strong>数据总条数:</strong></span>
+									</div>
+									<div class="col-md-12 text">
+										<span id="rhflxx">14532</span><span class="sm-text">条</span>
+									</div>
+									<div class="col-md-12">
+
+										<span><strong>数据最后更新时间:</strong></span>
+									</div>
+									<div class="col-md-12">
+										<p class="sm-text">2017-7-31</p>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+
+
+
+			</div>
+			<!-- Footer  -->
+			<div id="footer" class="col-md-12"></div>
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script src="assets/js/jquery-2.2.3.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="assets/js/jquery.1.11.1.min.js"></script>
+<![endif]-->
+
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery1x.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+		<script type="text/javascript">
+		// include
+            $("#header").load("include/header.html");
+            $("#sidebar").load("include/sidebar.html",function () {
+                $("#jksy").attr("class","");
+                $("#jhjk").attr("class","active");
+                $("#jhrzck").attr("class","active");
+            });
+            $("#footer").load("include/footer.html");
+		
+			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			 $.ajax({
+				url:"json/jhrz.json",
+				type:"GET",
+				dataType: "text",
+				success:function(data){
+					var data = eval("("+data+")");
+					$("#rkjbxx").html(data.rkjbxx);
+					$("#frjbxx").html(data.frjbxx);
+					$("#frzzxx").html(data.frzzxx);
+					$("#frdjxx").html(data.frdjxx);
+					$("#frcfxx").html(data.frcfxx);
+					$("#fwjbxx").html(data.fwjbxx);
+					$("#rhflxx").html(data.rhflxx);	
+                }
+			 });
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+		<script src="assets/js/fuelux.tree.min.js"></script>
+
+		<!-- ace scripts -->
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<script type="text/javascript" language="javascript" src="assets/data-tables/jquery.dataTables.js"></script>
+        <script type="text/javascript" src="assets/data-tables/DT_bootstrap.js"></script>
+        <script src="assets/data-tables/dynamic_table_init.js"></script>
+
+
+
+	</body>
+</html>
