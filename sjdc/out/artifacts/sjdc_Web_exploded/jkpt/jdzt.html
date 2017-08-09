@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta charset="utf-8" />
+        <title>数据中心监控平台</title>
+        <meta name="description" content="overview &amp; stats" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <!-- 滑动块 -->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.scrollbar.js"></script>
+        <!-- bootstrap & fontawesome -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/font-awesome/4.2.0/css/font-awesome.min.css" />
+        <!-- page specific plugin styles -->
+        <link rel="stylesheet" href="assets/css/jquery-ui.custom.min.css" />
+        <link rel="stylesheet" href="assets/css/jquery.gritter.min.css" />
+        <link rel="stylesheet" href="assets/css/select2.min.css" />
+        <link rel="stylesheet" href="assets/css/datepicker.min.css" />
+        <link rel="stylesheet" href="assets/css/bootstrap-editable.min.css" />
+        <!-- text fonts -->
+        <link rel="stylesheet" href="assets/fonts/fonts.googleapis.com.css" />
+        <!-- ace styles -->
+        <link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+        <!--[if lte IE 9]>
+        <link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+        <![endif]-->
+        <!--[if lte IE 9]>
+        <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+        <![endif]-->
+        <!-- inline styles related to this page -->
+        <!-- ace settings handler -->
+        <script src="assets/js/ace-extra.min.js"></script>
+        <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+        <!--[if lte IE 8]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+        <![endif]-->
+        <!-- 引入 ECharts 文件 -->
+        <script src="js/echarts.js"></script>
+        <script type="text/javascript" src="js/jdzt-charts.js"></script>
+        <style type="text/css">
+            .console {
+                text-align: center;
+                font-size: 20px;
+                font-family: "Lucida Console", monospace;
+            }
+            .scroll{
+                height:450px;
+                overflow-x:hidden;
+            }
+            .scroll-bar{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: inherit;
+                background-color: #938e8ecc;
+                background: #938e8ecc;
+            }
+            /*
+            *  STYLE 3
+            */
+            #style-3::-webkit-scrollbar-track
+            {
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+                background-color: #F5F5F5;
+            }
+            #style-3::-webkit-scrollbar
+            {
+                width: 6px;
+                background-color: #F5F5F5;
+            }
+            #style-3::-webkit-scrollbar-thumb
+            {
+                background-color: grey;
+            }
+            .alert{
+                padding-left: 0px;
+                padding-right: 0px;
+                font-size: 16px;
+            }
+        </style>
+    </head>
+<body class="no-skin">
+    <div id="header"></div>
+    <div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+    <div id="sidebar"></div>
+        <div class="main-content" style="width:96%;float:right">
+            <div class="page-content">
+                <h2 class="page-header">
+                    节点状态监控
+                </h2>
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <div class="col-md-12">
+                            <!--<p id="test1">{{data.marquee}}</p>-->
+                            <p class="console">
+                            <span id="caption" style="color:red"></span>
+                            <span id="cursor">|</span>
+                            </p>
+                        </div>
+                        <div class="col-md-12">
+                            <div id = "jdzt-charts" class="col-md-12" style="height:450px"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" style="border-left-width: 1px;border-left-style: dashed;">
+                        <div class="width-100 label label-info label-xlg arrowed-in arrowed-right">
+                            <span id="jdName" align="center" style="font-family:'微软雅黑';font-size:20px">数据中心交换节点</span>
+                        </div>
+                        <p></p>
+                        <div class="" id="scrollbar">
+                            <div class="widget-box transparent"></div>
+                            <div id="ngRepeat"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="col-md-12"></div>
+        <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+            <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+        </a>
+        </div><!-- /.main-container -->
+        <!-- basic scripts -->
+        <!--[if !IE]> -->
+
+        <script src="assets/js/jquery-2.2.3.min.js"></script>
+    <!--&lt;!&ndash; 滑动块 &ndash;&gt;-->
+    <!--<script type="text/javascript">-->
+        <!--$(".scroll").scrollbar();-->
+    <!--</script>-->
+        <!-- <![endif]-->
+        <!--[if IE]>
+        <script src="assets/js/jquery.1.11.1.min.js"></script>
+        <![endif]-->
+        <!--[if !IE]> -->
+        <script type="text/javascript">
+            window.jQuery || document.write("<script src='assets/js/jquery.min.js'>"+"<"+"/script>");
+        </script>
+        <!-- <![endif]-->
+        <!--[if IE]>
+        <script type="text/javascript">
+        window.jQuery || document.write("<script src='assets/js/jquery1x.min.js'>"+"<"+"/script>");
+        </script>
+        <![endif]-->
+        <script type="text/javascript">
+            if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+        </script>
+        <!--<script src='js/angular.min.js'></script>-->
+        <!--<script src="js/angular-customList.js"></script>-->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- page specific plugin scripts -->
+        <script src="assets/js/prettify.min.js"></script>
+        <!-- ace scripts -->
+        <script src="assets/js/ace-elements.min.js"></script>
+        <script src="assets/js/ace.min.js"></script>
+        <!-- inline scripts related to this page -->
+        <script src="assets/js/bootstrap-editable.min.js"></script>
+        <script src="assets/js/ace-editable.min.js"></script>
+        <script type="text/javascript">
+            jQuery(function($) {
+                window.prettyPrint && prettyPrint();
+                $('#id-check-horizontal').removeAttr('checked').on('click', function(){
+                $('#dt-list-1').toggleClass('dl-horizontal').prev().html(this.checked ? '&lt;dl class="dl-horizontal"&gt;' : '&lt;dl&gt;');
+                });
+            })
+        </script>
+        <script type="text/javascript">
+            // include
+            $("#header").load("include/header.html");
+            $("#sidebar").load("include/sidebar.html",function () {
+                $("#jksy").attr("class","");
+                $("#jhjk").attr("class","active");
+                $("#jdzt").attr("class","active");
+            });
+            $("#footer").load("include/footer.html");
+
+            // 红字提示
+            var index = 0;
+            var captionLength = 0;
+            var captionOptions = [];
+            function cursorAnimation() {
+                $('#cursor').animate({
+                    opacity: 0
+                }, 400).animate({
+                    opacity: 1
+                }, 400);
+            }
+            // this types the caption
+            function type() {
+                $caption.html(caption.substr(0, captionLength++));
+                if(captionLength < caption.length+1) {
+                    setTimeout('type()', 70);
+                }
+            }
+            // this erases the caption
+            function erase() {
+                $caption.html(caption.substr(0, captionLength--));
+                if(captionLength >= 0) {
+                    setTimeout('erase()', 50);
+                }
+            }
+            // this instigates the cycle of typing the captions
+            function showCaptions() {
+                caption = captionOptions[index];
+                type();
+                if (index < (captionOptions.length - 1)) {
+                    index++
+                    setTimeout('erase()', 4000);
+                    setTimeout('showCaptions()', 6000)
+                } else {
+                    setTimeout('erase()', 4000);
+                    setTimeout(function(){
+                        $('#cursor').remove()
+                    }, 100)
+                }
+            }
+            $.ajax({
+                type: "GET",
+                url: "json/swap/jdzt.json",
+                dataType: 'text',
+                success: function (result) {
+                    jsonData = eval('(' + result + ')');
+                    jdztCharts(jsonData);
+                    captionOptions = jsonData.marquee;
+                    // this will make the cursor blink at 400ms per cycle
+                    $(document).ready(function(){
+                        // use setInterval so that it will repeat itself
+                        setInterval('cursorAnimation()', 600);
+                        $caption = $('#caption');
+                        // use setTimeout so that it only gets called once
+                        setTimeout('showCaptions()', 2000);
+                    })
+                }
+            })
+
+            // 滑块
+            jQuery(function($) {
+            $('#scrollbar').ace_scroll({
+                size: 450,
+                mouseWheelLock: false,
+                alwaysVisible : true
+            });
+        });
+        </script>
+    </body>
+</html>
