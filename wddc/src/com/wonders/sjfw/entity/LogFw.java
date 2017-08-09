@@ -1,17 +1,19 @@
 package com.wonders.sjfw.entity;
 
-import org.nutz.dao.entity.annotation.*;
-import org.nutz.lang.Strings;
-
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
+
+import org.nutz.dao.entity.annotation.Column;
+import org.nutz.dao.entity.annotation.EL;
+import org.nutz.dao.entity.annotation.Name;
+import org.nutz.dao.entity.annotation.Prev;
+import org.nutz.dao.entity.annotation.Table;
+import org.nutz.lang.Strings;
 
 /**
  * 服务调用日志.
  */
 @Table("PF_LOG_FW")
-@View("V_FW_INFO_LOG")
 public class LogFw {
     /**
      * 主键
@@ -71,26 +73,32 @@ public class LogFw {
     @Column("USED_TIME")
     private Integer usedTime;
 
-    //userKey 在服务日志中显示 调用的服务 孟振乾 2016、6、22
+    //userKey 
     @Column("USER_KEY")
     private String userKey;
-    //methodKey 在服务日志中显示 调用的服务 孟振乾 2016、6、22
+    //methodKey 
     @Column("METHOD_KEY")
     private String methodKey;
-    //服务Id 在服务日志中显示 传参 孟振乾 2016、6、22
+    //服务Id 
     @Column("FW_INFO_ID")
     private String fwInfoId;
 
-    //服务名称 在服务日志中显示 调用的服务 孟振乾 2016、6、22
-    @Column("FW_NAME")
-    @Readonly
-    private String fwName;
-    //服务ID 在服务日志中显示 调用的服务 孟振乾 2016、6、22
-    @Column("FW_TYPE")
-    @Readonly
-    private String fwType;
-
-
+    /**
+     * 秘钥的后四位
+     * @return
+     */
+    public String getUnitKeyDisplay() {
+       String showString = "********"+this.userKey.substring(15);
+        return showString;
+    }
+    /**
+     * 秘钥的后四位
+     * @return
+     */
+    public String getMethodKeyDisplay() {
+       String showString = "********"+this.methodKey.substring(11);
+        return showString;
+    }
     /**
      * 生成uuid主键
      * @return
@@ -197,21 +205,7 @@ public class LogFw {
 		this.fwInfoId = fwInfoId;
 	}
 
-	public String getFwName() {
-		return fwName;
-	}
-
-	public void setFwName(String fwName) {
-		this.fwName = fwName;
-	}
-
-	public String getFwType() {
-		return fwType;
-	}
-
-	public void setFwType(String fwType) {
-		this.fwType = fwType;
-	}
+	
 	
 	public String getUserKey() {
 		return userKey;

@@ -51,7 +51,7 @@
 							<input style="width: 200px;"  name="term.statinfolist[0].key" type="text" value="${obj.term.statinfolist[0].key }">
 						</td>
 						<td>
-							<wddc:jsonselect name="term.statinfolist[0].value" jsonstr="${obj.unit}" style="width: 400px;height:30px" initValue="请选择"/>
+							<select name="term.statinfolist[0].value" type="data_item" value="${obj.term.statinfolist[0].value }" style="width: 400px;height:30px"></select>
 						</td>
 						<td><a href="#" onclick="deletetr(this);" style="display:none;" id="delBtn2">删除</a></td>
 					</tr>
@@ -68,7 +68,7 @@
 							<input style="width: 200px;"  name="term.statinfolist[${row.index}].key" type="text" value="${obj.term.statinfolist[row.index].key }">
 						</td>
 						<td>
-							<wddc:jsonselect name="term.statinfolist[${row.index}].value" jsonstr="${obj.unit}" style="width: 400px;height:30px" initValue="请选择" defaultValue="${obj.term.statinfolist[row.index].value }"/>
+							<select name="term.statinfolist[${row.index}].value" type="data_item" style="width: 400px;height:30px" value="${obj.term.statinfolist[row.index].value }"></select>
 						</td>
 						<td>
 						<c:if test="${row.index == 0}">
@@ -96,6 +96,7 @@
 <script type="text/javascript">
 var statindex=0;
 var statlistName;
+var dataitem;
 $(document).ready(function(){
 	statindex = '${fn:length(obj.term.statinfolist)}';
 	if(statindex == 0) statindex=1;
@@ -105,6 +106,15 @@ $(document).ready(function(){
 		defaultvalue:"${obj.term.axisdic }",
 		initvalue:"不使用轴坐标字典",
 		initoptvalue:"0"
+	});
+	dataitem = '${obj.unit}';
+	$("select[type='data_item']").each(function(){
+		var defaultval=$(this).attr('value');
+		$(this).dicselect({
+			dic:dataitem,
+			defaultvalue:defaultval,
+			initvalue:'----请选择----'
+		});
 	});
 });
 function addstat(){

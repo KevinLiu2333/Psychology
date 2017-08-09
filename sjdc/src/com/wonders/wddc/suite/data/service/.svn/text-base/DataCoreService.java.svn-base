@@ -24,7 +24,6 @@ import com.wonders.wddc.suite.data.adapter.DBAdapter;
 import com.wonders.wddc.suite.data.entity.DBinfoBo;
 import com.wonders.wddc.suite.data.entity.MultStatInfoBo;
 import com.wonders.wddc.suite.data.entity.TableConfigBo;
-import com.wonders.wddc.tiles.jk.DBpool;
 /**
  * 数据服务类
  * @author wonders
@@ -38,8 +37,6 @@ public class DataCoreService {
 	public final static String LIST_MAP = "LM";		//list_map
 	public final static String MAP_ARRAY = "MA";		//map数组
 	
-	@Inject
-	private DBpool dbPool;
 	@Inject
 	private Dao dao;
 	/**

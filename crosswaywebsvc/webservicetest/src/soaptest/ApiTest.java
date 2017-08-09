@@ -20,7 +20,7 @@ public class ApiTest {
 
     @Test
     public void jdkTest() {
-        String endpoint = "http://localhost:9000/HelloWorld?wsdl";
+        String endpoint = "http://localhost:9000/HelloWorld";
         Service service = new Service();
         Call call = null;
         try {

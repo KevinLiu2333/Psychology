@@ -63,15 +63,15 @@ svn:wc:ra_dav:version-url
 V 97
 /svn/!svn/ver/244802/projects2/MZJ/dream/dreamDC/code/wddc/web/wdac/data-deal/js/ace-extra.min.js
 END
-jquery1x.min.js
-K 25
-svn:wc:ra_dav:version-url
-V 96
-/svn/!svn/ver/244802/projects2/MZJ/dream/dreamDC/code/wddc/web/wdac/data-deal/js/jquery1x.min.js
-END
 respond.min.js
 K 25
 svn:wc:ra_dav:version-url
 V 95
 /svn/!svn/ver/244802/projects2/MZJ/dream/dreamDC/code/wddc/web/wdac/data-deal/js/respond.min.js
+END
+jquery1x.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/244802/projects2/MZJ/dream/dreamDC/code/wddc/web/wdac/data-deal/js/jquery1x.min.js
 END

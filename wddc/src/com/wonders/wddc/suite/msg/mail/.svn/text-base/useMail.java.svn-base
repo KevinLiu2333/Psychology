@@ -1,21 +1,25 @@
 package com.wonders.wddc.suite.msg.mail;
 
-public class useMail {
-	public static void useMail(String Host,String port,boolean validate,String userName,String passWord,String fromAddress,String toAddress,String subject,String content,String type){
+import com.wonders.wddc.suite.msg.entity.MailConfigBo;
+import com.wonders.wddc.suite.msg.entity.MailLogBo;
+
+public class UseMail {
+	public static void useMail(MailConfigBo mailConfig,boolean validate,MailLogBo mailLog){
 		MailSenderInfo mailInfo = new MailSenderInfo();
-		mailInfo.setMailServerHost(Host);
-		mailInfo.setMailServerPort(port);
+		mailInfo.setMailServerHost(mailConfig.getHostAdd());
+		mailInfo.setMailServerPort(mailConfig.getPortAdd());
 		mailInfo.setValidate(validate);
-		mailInfo.setUserName(userName);
-		mailInfo.setPassword(passWord);
-		mailInfo.setFromAddress(fromAddress);
-		mailInfo.setToAddress(toAddress);
-		mailInfo.setSubject(subject);
-		mailInfo.setContent(content);
+		mailInfo.setUserName(mailConfig.getUserName());
+		mailInfo.setPassword(mailConfig.getPassword());
+		mailInfo.setFromAddress(mailConfig.getSendName());
+		mailInfo.setToAddress(mailLog.getToAddress());
+		mailInfo.setToMoreAddress(mailLog.getToMoreAddress());
+		mailInfo.setSubject(mailLog.getMailSubject());
+		mailInfo.setContent(mailLog.getMailContent());
 		SimpleMailSender sms = new SimpleMailSender();
-		if("html".equals(type)){
+		if("2".equals(mailLog.getType())){
 			sms.sendHtmlMail(mailInfo);
-		}else if("text".equals(type)){
+		}else if("1".equals(mailLog.getType())){
 			sms.sendTextMail(mailInfo);
 		}
 	}

@@ -15,12 +15,10 @@ import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.dbcp.BasicDataSource;
 import org.apache.commons.lang.StringUtils;
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
 import org.nutz.dao.Sqls;
-import org.nutz.dao.impl.NutDao;
 import org.nutz.dao.sql.Criteria;
 import org.nutz.dao.sql.Sql;
 import org.nutz.dao.sql.SqlCallback;
@@ -186,8 +184,7 @@ public class StatMultAct {
 	private void countByInfo(MultStatInfoBo info){
 		DBinfoBo dbinfo = dao.fetch(DBinfoBo.class,
 				Cnd.where("id", "=", info.getDatabaseid()));
-		BasicDataSource dataSource = DBAdapter.getDataSource(dbinfo);
-		Dao dao1 = new NutDao(dataSource);
+		Dao dao1 = DBAdapter.getDao(dbinfo);
 		Sql sql = Sqls.create(info.getSql());
 		sql.setCallback(new SqlCallback() {
 			@Override
@@ -219,7 +216,6 @@ public class StatMultAct {
 		dao.insert(result);
 		info.setUpdatetime(new Date());
 		dao.update(info);
-		DBAdapter.closeDataSource(dataSource);
 	}
 	/**
 	 * 获取统计结果
@@ -319,10 +315,9 @@ public class StatMultAct {
 			List<Map<String, String>> list = new ArrayList<Map<String,String>>();
 			String originalSql =info.getSql();
 			DBinfoBo dbinfo = dao.fetch(DBinfoBo.class,info.getDatabaseid());
-			BasicDataSource dataSource = DBAdapter.getDataSource(dbinfo);
 			try{
 				Sql sql = SqlProcessor.toDealSql(originalSql, param);
-				Dao dao1 = new NutDao(dataSource);
+				Dao dao1 = DBAdapter.getDao(dbinfo);
 				sql.setCallback(new SqlCallback() {
 					@Override
 					public Object invoke(Connection conn, ResultSet rs, Sql arg2)
@@ -350,7 +345,7 @@ public class StatMultAct {
 				list.add(map);
 				result.put("result", list);
 			}finally {
-				DBAdapter.closeDataSource(dataSource);
+				
 			}
 				
 		}

@@ -70,7 +70,7 @@
 
 		}
 		.icon-padding{
-			padding-left: 0px;
+			padding-left: 10px;
 			padding-right: 0px;
 			padding-top: 0px;
 		}
@@ -97,7 +97,7 @@
 				<div class="page-content">
 					<br>
 					<!-- PAGE TABLE -->
-							<div class="col-md-12 panel">
+							<div hidden class="col-md-12 panel">
 								<div class="col-md-1 marqueeLeft">
 									<span class="marqueeSpan">消息动态</span>
 								</div>
@@ -113,7 +113,7 @@
                                         <div  id="sjjhzl" class="panel-body">
                                             <div class="row">
                                                 <div class="col-xs-8 icon-padding" align="center">
-													<p class="state-title icon-text bigger-300"><span id="countUp1">0</span><span style="font-size:15px">&nbsp;条</span></p>
+													<p class="state-title icon-text bigger-270"><span id="countUp1">0</span><span style="font-size:15px">&nbsp;条</span></p>
                                                 </div>
                                                 <div class="col-xs-4 icon-padding">
                                                 	<img class="icon" src="assets/img/icon_03.png" alt="">
@@ -130,7 +130,7 @@
                                         <div id="sjjrbm" class="panel-body">
                                             <div class="row">
                                                 <div class="col-xs-7 icon-padding" align="center">
-                                                    <p class="state-title icon-text bigger-300"><span id="countUp2">0</span><span style="font-size:15px">&nbsp;个</span></p>
+                                                    <p class="state-title icon-text bigger-270"><span id="countUp2">0</span><span style="font-size:15px">&nbsp;个</span></p>
                                                     <!-- <h5 id="errorCount">数据交换总量</h5> -->
                                                 </div>
                                                 <div class="col-xs-5 icon-padding">
@@ -148,7 +148,7 @@
                                         <div  id="xtjrsl" class="panel-body">
                                             <div class="row">
                                                 <div class="col-xs-7 icon-padding" align="center">
-                                                    <p class="state-title icon-text bigger-300"><span id="countUp3">0</span><span style="font-size:15px">&nbsp;个</span></p>
+                                                    <p class="state-title icon-text bigger-270"><span id="countUp3">0</span><span style="font-size:15px">&nbsp;个</span></p>
                                                     <!-- <h5 id="errorCount">数据交换总量</h5> -->
                                                 </div>
                                                 <div class="col-xs-5 icon-padding">
@@ -166,7 +166,7 @@
                                         <div  id="fwtgzl" class="panel-body">
                                             <div class="row">
                                                 <div class="col-xs-7 icon-padding" align="center">
-                                                    <p class="state-title icon-text bigger-300"><span id="countUp4">0</span><span style="font-size:15px">&nbsp;个</span></p>
+                                                    <p class="state-title icon-text bigger-270"><span id="countUp4">0</span><span style="font-size:15px">&nbsp;个</span></p>
                                                     <!-- <h5 id="errorCount">数据交换总量</h5> -->
                                                 </div>
                                                 <div class="col-xs-5 icon-padding">
@@ -184,7 +184,7 @@
                                         <div  id="fwdyzl" class="panel-body">
                                             <div class="row">
                                                 <div class="col-xs-8 icon-padding" align="center">
-                                                    <p class="state-title icon-text bigger-300"><span id="countUp5">0</span><span style="font-size:15px">&nbsp;条</span></p>
+                                                    <p class="state-title icon-text bigger-270"><span id="countUp5">0</span><span style="font-size:15px">&nbsp;条</span></p>
                                                     <!-- <h5 id="errorCount">数据交换总量</h5> -->
                                                 </div>
                                                 <div class="col-xs-4 icon-padding">
@@ -267,7 +267,18 @@
 			$(function(){
 				$('#dowebok').liMarquee();
 			});
-
+			
+			function myInterval() {
+				$.ajax({
+                type: "GET",
+                url: "/jkpt/getData",
+                dataType: 'text',
+                success:function(result){
+                	console.log(result)
+                	}
+                })
+			}
+			
             $.ajax({
                 type:"get",
                 url:"json/index/indexMessage.json",
@@ -386,18 +397,18 @@
                         suffix : '' //后缀
                     };
     				// 演示随机增长数字
-    				random1 += parseInt(Math.random()*100);
-    	            random2 += parseInt(Math.random()*5);
-    	            var test1 = (parseInt(data.dataCount) + random1)+"";
-    	            var test2 = (parseInt(data.serverTransferCount) + random2)+"";
+    				//random1 += parseInt(Math.random()*100);
+    	            //random2 += parseInt(Math.random()*5);
+    	            //var test1 = (parseInt(data.dataCount) + random1)+"";
+    	            //var test2 = (parseInt(data.serverTransferCount) + random2)+"";
 					
-                    //var count1 = new CountUp("countUp1", oldCount1, data.dataCount, 0, 3.5, options);  //参数依次为 元素ID 开始值 结束值 小数位数 动画延迟
-                    var count1 = new CountUp("countUp1", oldCount1, test1, 0, 3.5, options);
+                    var count1 = new CountUp("countUp1", oldCount1, data.dataCount, 0, 3.5, options);  //参数依次为 元素ID 开始值 结束值 小数位数 动画延迟
+                    //var count1 = new CountUp("countUp1", oldCount1, test1, 0, 3.5, options);
                     var count2 = new CountUp("countUp2", oldCount2, data.dpCount, 0, 3.5, options);
                     var count3 = new CountUp("countUp3", oldCount3, data.systemCount, 0, 3.5, options);
                     var count4 = new CountUp("countUp4", oldCount4, data.serverCount, 0, 3.5, options);
-                    //var count5 = new CountUp("countUp5", oldCount5, data.serverTransferCount, 0, 3.5, options);
-                    var count5 = new CountUp("countUp5", oldCount5, test2, 0, 3.5, options);
+                    var count5 = new CountUp("countUp5", oldCount5, data.serverTransferCount, 0, 3.5, options);
+                    //var count5 = new CountUp("countUp5", oldCount5, test2, 0, 3.5, options);
                     count1.start();
                     count2.start();
                     count3.start();
@@ -466,10 +477,10 @@
 									trigger: 'item'
 								},
 								data: [
-									{
-										value: jsonData.chart2,
-										name: '数据交换最频繁部门'
-									},
+									//{
+									//	value: jsonData.chart2,
+									//	name: '数据交换最频繁部门'
+									//},
 									{
 										value: jsonData.chart3,
 										name: '服务调用最频繁部门'
@@ -479,7 +490,9 @@
 							{
 								type: 'radar',
 								radarIndex: 2,
-
+								tooltip: {
+									trigger: 'item'
+								},
 								itemStyle: {normal: {areaStyle: {type: 'default'}}},
 								data: [
 									{

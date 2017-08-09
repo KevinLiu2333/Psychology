@@ -62,21 +62,21 @@
 
                 <div class="col-md-12">
                     <h2 class="page-header" style="margin-top: 5px">服务状态监控
-                        <span style="float: right;padding-right: 10px">
-                    <div class="btn-group">
-                        <select class="chosen-select form-control" data-placeholder="指定监控服务...">
-                            <option value="">所有服务</option>
-                            <option value="">服务1</option>
-                            <option value="">服务2</option>
-                            <option value="">服务3</option>
-                        </select>
-                    </div>
-                    <div class="btn-group">
-                        <button class="btn btn-info" type="button" onclick="window.location.href='#'">本日</button>
-                        <button class="btn btn-default" type="button" onclick="window.location.href='#'">本月</button>
-                        <button class="btn btn-default" type="button" onclick="window.location.href='#'">本年</button>
-                    </div>
-               </span>
+                        <span hidden style="float: right;padding-right: 10px">
+			                   <div class="btn-group">
+			                       <select class="chosen-select form-control" data-placeholder="指定监控服务...">
+			                           <option value="">所有服务</option>
+			                           <option value="">服务1</option>
+			                           <option value="">服务2</option>
+			                           <option value="">服务3</option>
+			                       </select>
+			                   </div>
+			                   <div class="btn-group">
+			                       <button class="btn btn-info" type="button" onclick="window.location.href='#'">本日</button>
+			                       <button class="btn btn-default" type="button" onclick="window.location.href='#'">本月</button>
+			                       <button class="btn btn-default" type="button" onclick="window.location.href='#'">本年</button>
+			                   </div>
+			              </span>
                     </h2>
 
                     <div class="col-md-12" style="border-bottom:1px dashed #ccc;">

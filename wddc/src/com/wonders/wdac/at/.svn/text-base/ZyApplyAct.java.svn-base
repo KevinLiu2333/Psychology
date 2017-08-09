@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
 import org.nutz.dao.sql.Criteria;
+import org.nutz.ioc.loader.annotation.Inject;
 import org.nutz.ioc.loader.annotation.IocBean;
-import org.nutz.lang.Strings;
 import org.nutz.mvc.annotation.At;
 import org.nutz.mvc.annotation.Ok;
 import org.nutz.mvc.annotation.Param;
@@ -20,17 +20,19 @@ import com.wonders.wdac.entity.PZyInfo;
 import com.wonders.wdac.entity.PfZyItem;
 import com.wonders.wdac.entity.ZyApply;
 import com.wonders.wdac.entity.ZyApplyDetails;
+import com.wonders.wdac.service.ZyCoreService;
 import com.wonders.wddc.config.SessionFilter;
 import com.wonders.wddc.tiles.jk.entity.User;
 import com.wonders.wddc.tiles.sn.SnCreator;
-import com.wonders.wddc.tiles.tag.entity.TagInfoBo;
-import com.wonders.wddc.tiles.tag.entity.TagTypeBo;
 
 @At("/zyapply")
 @IocBean(fields = "dao")
 public class ZyApplyAct {
 	
 	private Dao dao;
+	
+	@Inject
+	private ZyCoreService zyCoreService;
 	/**
 	 * 资源浏览列表.
 	 * @param tagId
@@ -40,63 +42,14 @@ public class ZyApplyAct {
 	@At
 	@Ok("jsp:wdac.zy.zy_index")
 	public Map<String,Object> toZyIndex(HttpServletRequest request,String tagId,String keyWord){
-		Map<String,Object> result = new HashMap<String,Object>();
         //放入标签类型
-        List<TagTypeBo> tagTypeList = dao.query(TagTypeBo.class, Cnd.where("catalog","=","11"));
-        User sessionUser = (User)request.getSession().getAttribute(SessionFilter.SESSION_USER);
-        Map<String,Object>  applyMap= new HashMap<String,Object>();
-        if(sessionUser != null){
-        String applyIds = "";
-        List<ZyApply> fwApplyList = dao.query(ZyApply.class,Cnd.where("unitId","=",sessionUser.getUnitId()).and("isNewApply", "=", "1"));
-        for(ZyApply zyApply :fwApplyList){
-            applyMap.put(zyApply.getZyInfoId(),zyApply);
-            if("".equals(applyIds)){
-                applyIds = zyApply.getZyInfoId();
-            }else{
-                applyIds = applyIds+","+zyApply.getZyInfoId();
-            }
-        }
-        }
-        
-        result.put("typeList", tagTypeList);
-        //放入catalog为"11"的页面标签集合
-        result.put("tagList", tagList());
-        result.put("keyWord", keyWord);
-        result.put("applyMap",applyMap);
-        //放入资源数据
-        result.put("zyInfoList",zyInfoList(tagId,keyWord));
+	   	Map<String,Object> result = new HashMap<String, Object>();
+    	User sessionUser = (User)request.getSession().getAttribute(SessionFilter.SESSION_USER);
+	   	result = this.zyCoreService.toZyIndex(sessionUser, tagId, keyWord);
+      
         return result;
 	}
 	
-	/**
-	 * 标签列表
-	 * @return
-	 */
-	public List<TagInfoBo> tagList(){
-    	List<TagInfoBo> tagList = dao.query(TagInfoBo.class, Cnd.where("catalog", "=","11").getOrderBy().asc("orders"),null);
-    	return tagList;
-    }
-	
-	/**
-	 * 获取资源列表
-	 * @param tagId
-	 * @param keyWord
-	 * @return
-	 */
-	public List<PZyInfo> zyInfoList(String tagId,String keyWord){
-	    	Criteria cri = Cnd.cri();
-	    	if(!Strings.isBlank(tagId)){
-	    		TagInfoBo tagInfo = dao.fetch(TagInfoBo.class,Cnd.where("tagId", "=", tagId));
-	            cri.where().andLike("tagLists", tagInfo.getShowName());
-	    	}
-
-	        if(!Strings.isBlank(keyWord)){
-	            cri.where().orLike("zyAbstract", keyWord).orLike("tagLists", keyWord).orLike("zyName", keyWord);
-	        }
-	        cri.where().andEquals("status", "已发布");
-	    	List<PZyInfo> zyInfoList = dao.query(PZyInfo.class, cri);
-	    	return zyInfoList;
-	}
 
 	 /**
     * 申请资源入口方法 .

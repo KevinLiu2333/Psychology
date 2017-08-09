@@ -56,7 +56,7 @@
 								
 								<div class="col-xs-12">	
 								<br/>										
-									<div id="fltjbq" style="float:center;height:500px;width:100%">
+									<div id="fltjbq" style="float:center;height:1500px;width:100%">
 								         
 									</div>	
 							    </div>

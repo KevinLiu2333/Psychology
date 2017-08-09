@@ -15,17 +15,17 @@ svn:wc:ra_dav:version-url
 V 107
 /svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/flatui/img/icons/svg/gift-box.svg
 END
-ribbon.svg
-K 25
-svn:wc:ra_dav:version-url
-V 105
-/svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/flatui/img/icons/svg/ribbon.svg
-END
 clipboard.svg
 K 25
 svn:wc:ra_dav:version-url
 V 108
 /svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/flatui/img/icons/svg/clipboard.svg
+END
+ribbon.svg
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/flatui/img/icons/svg/ribbon.svg
 END
 mail.svg
 K 25

@@ -22,7 +22,6 @@
 <jsp:include page="/cj/header.jsp"/>
 <input type="hidden" id="js_ctx" value="${ctx}" />
 <div class="container">
-
 	<h3 class="page-header text-info" funtype="funh3" index = "0">基础组件</h3>
 	<div class="row">
 		
@@ -49,14 +48,15 @@
 		<i class="ace-icon fa  fa-calendar  bigger-230"></i>
 		个人日程管理
 		</a>
-		<a href="${ctx}/toIndex" class="btn btn-app btn-purple" funtype="funa" index = "0-5">
+		<a href="${ctx}/kernel/sn/toIndex" class="btn btn-app btn-purple" funtype="funa" index = "0-5">
 		<i class="ace-icon fa  fa-list-ol  bigger-230"></i>
-		取号管理00000
+		取号管理
 		</a>
+	
 			
 	</div>
 	
-	<h3 class="page-header" funtype="funh3" index = "1">用户管理套件</h3>
+	<h3 class="page-header" funtype="funh3" index = "1">用户组件</h3>
 	<div class="row">
 	
 		<a href="${ctx}/suite/unit/toUnitList" class="btn btn-app btn-info" funtype="funa" index = "1-0">
@@ -74,146 +74,159 @@
 		用户管理
 		</a>
 		
-		<a href="${ctx}/suite/userStat/userOnline" class="btn btn-app btn-info" funtype="funa" index = "1-3">
-		<i class="ace-icon fa  fa-users bigger-230"></i>
-		在线用户
-		</a>
-		
-		<a href="${ctx}/suite/userStat/toLoginLogList" class="btn btn-app btn-info" funtype="funa" index = "1-4">
-		<i class="ace-icon fa  fa-sticky-note bigger-230"></i>
-		登录日志
-		</a>
-		
-		<a href="${ctx}/login.jsp" class="btn btn-app btn-info" funtype="funa" index = "1-5">
+		<a href="${ctx}/login.jsp" class="btn btn-app btn-info" funtype="funa" index = "1-3">
 		<i class="ace-icon fa  fa-refresh bigger-230"></i>
 		登录页面
 		</a>
 		
 	</div>
 	
-	<h3 class="page-header" funtype="funh3" index = "2">数据项套件</h3>
+	<h3 class="page-header" funtype="funh3" index = "2">图表组件</h3>
 	<div class="row">
 	
 		<a href="${ctx}/suite/data/db/toIndex" class="btn btn-app btn-yellow" funtype="funa" index = "2-0"> 
 		<i class="ace-icon fa fa-database bigger-230"></i>
 		数据资源配置
 		</a>
+	
 		
-		<!--<a href="${ctx}/merit/toFwrzList" class="btn btn-app btn-yellow" funtype="funa" index = "2-2">
-		<i class="ace-icon fa fa-building-o  bigger-230"></i>
-		库表配置管理
-		</a>
-		-->
-		
-		<a href="${ctx}/suite/config/table/toTableList" class="btn btn-app btn-yellow" funtype="funa" index = "2-1">
-		<i class="ace-icon fa fa-building-o  bigger-230"></i>
-		库表配置管理
-		</a>
-		
-		<a href="${ctx}/suite/data/unit/toIndex" class="btn btn-app btn-yellow" funtype="funa" index = "2-2">
+		<a href="${ctx}/suite/data/unit/toIndex" class="btn btn-app btn-yellow" funtype="funa" index = "2-1">
 		<i class="ace-icon fa fa-cubes bigger-230"></i>
 		图表数据元配置
 		</a>
 		
-		<a href="${ctx}/suite/data/term/toIndex" class="btn btn-app btn-yellow" funtype="funa" index = "2-3">
+		<a href="${ctx}/suite/data/term/toIndex" class="btn btn-app btn-yellow" funtype="funa" index = "2-2">
 		<i class="ace-icon fa  fa-newspaper-o bigger-230"></i>
 		图表数据项配置
 		</a>
 		
-		<a href="${ctx}/suite/data/mult/toIndex" class="btn btn-app btn-yellow" funtype="funa" index = "2-4">
+	
+		
+		<a href="${ctx}/suite/data/df/toIndex" class="btn btn-app btn-yellow" funtype="funa" index = "2-3">
 		<i class="ace-icon fa  fa-newspaper-o bigger-230"></i>
-		报表数据项配置
+		图表数据组装
 		</a>
 		
-		<a href="${ctx}/suite/data/df/toDataIndex" class="btn btn-app btn-yellow" funtype="funa" index = "2-5">
-		<i class="ace-icon fa  fa-newspaper-o bigger-230"></i>
-		文件数据项配置
-		</a>
 		
-		<a href="${ctx}/suite/data/df/toIndex" class="btn btn-app btn-yellow" funtype="funa" index = "2-6">
-		<i class="ace-icon fa  fa-newspaper-o bigger-230"></i>
-		文件缓存配置
+		<a href="${ctx}/suite/chart/maintainList" class="btn btn-app btn-success" funtype="funa" index = "2-4">
+		<i class="ace-icon fa fa-line-chart bigger-230"></i>
+		数据图表配置
 		</a>
 		
 	</div>
 	
-	<h3 class="page-header" funtype="funh3" index = "3">数据展现套件</h3>
+	<h3 class="page-header" funtype="funh3" index = "3">报表组件</h3>
 	<div class="row">
-		<a href="${ctx}/suite/config/query/toQueryList" class="btn btn-app btn-success" funtype="funa" index = "3-1">
-		<i class="ace-icon fa fa-search-plus bigger-230"></i>
-		数据查询配置
+		<a href="${ctx}/suite/data/db/toIndex" class="btn btn-app btn-yellow" funtype="funa" index = "3-0"> 
+		<i class="ace-icon fa fa-database bigger-230"></i>
+		数据资源配置
 		</a>
-		
-		<a href="${ctx}/suite/config/form/toFormList" class="btn btn-app btn-success" funtype="funa" index = "3-2">
-		<i class="ace-icon fa fa-file-text bigger-230"></i>
-		数据表单配置
+		<a href="${ctx}/suite/data/mult/toIndex" class="btn btn-app btn-yellow" funtype="funa" index = "3-1">
+		<i class="ace-icon fa  fa-newspaper-o bigger-230"></i>
+		报表数据项配置
 		</a>
-		
-		<a href="${ctx}/suite/chart/maintainList" class="btn btn-app btn-success" funtype="funa" index = "3-3">
-		<i class="ace-icon fa fa-line-chart bigger-230"></i>
-		数据图表配置
-		</a>
-		<a href="${ctx}/suite/csrq/report/toIndex" class="btn btn-app btn-success" funtype="funa" index = "3-4">
+		<a href="${ctx}/suite/csrq/report/toIndex" class="btn btn-app btn-success" funtype="funa" index = "3-2">
 		<i class="ace-icon fa fa-table bigger-230"></i>
 		数据报表配置
 		</a>
 		
 	</div>
 	
-	<h3 class="page-header" funtype="funh3" index = "4">日志套件</h3>
+	<h3 class="page-header" funtype="funh3" index = "4">日志组件</h3>
 	<div class="row">
-		<a href="${ctx}/suite/log/viewCode" class="btn btn-app btn-pink" funtype="funa" index = "4-1">
+		<a href="${ctx}/suite/log/viewCode" class="btn btn-app btn-pink" funtype="funa" index = "4-0">
 		<i class="ace-icon fa fa-pencil-square-o bigger-230"></i>
 		日志代码表
 		</a>
 		
-		<a href="${ctx}/suite/log/configList" class="btn btn-app btn-pink" funtype="funa" index = "4-2">
+		<a href="${ctx}/suite/log/configList" class="btn btn-app btn-pink" funtype="funa" index = "4-1">
 		<i class="ace-icon fa fa-pencil-square-o bigger-230"></i>
 		操作日志配置
 		</a>
 		
-		<a href="${ctx}/tag/tagMaintain/11" class="btn btn-app btn-pink" funtype="funa" index = "4-3">
-		<i class="ace-icon fa fa-pencil-square-o bigger-230"></i>
-		字段修改日志
-		</a>
 		
-		<a href="${ctx}/tag/tagMaintain/11" class="btn btn-app btn-pink" funtype="funa" index = "4-4">
-		<i class="ace-icon fa fa-pencil-square-o bigger-230"></i>
-		业务定做日志
-		</a>
 		
 	</div>
-	<h3 class="page-header" funtype="funh3" index = "5">服务套件</h3>
+	<h3 class="page-header" funtype="funh3" index = "5">服务组件</h3>
 	<div class="row">
-		<a href="${ctx}/fw/toPublish" class="btn btn-app btn-primary" funtype="funa" index = "5-1">
+		<a href="${ctx}/fw/toPublish" class="btn btn-app btn-primary" funtype="funa" index = "5-0">
 		<i class="ace-icon fa fa-volume-up bigger-230"></i>
 		服务发布
 		</a>
-		<a href="${ctx}/fw/toFwfbList" class="btn btn-app btn-primary" funtype="funa" index = "5-2">
+		<a href="${ctx}/fw/toFwfbList" class="btn btn-app btn-primary" funtype="funa" index = "5-1">
 		<i class="ace-icon fa fa-volume-up bigger-230"></i>
 		 服务管理
 		</a>
+		<a href="${ctx}/fw/apply/toIndex" class="btn btn-app btn-primary" funtype="funa" index = "5-2">
+		<i class="ace-icon fa fa-volume-up bigger-230"></i>
+		 服务浏览
+		</a>
+		<a href="${ctx}/suite/config/table/toTableList" class="btn btn-app btn-yellow" funtype="funa" index = "5-3">
+		<i class="ace-icon fa fa-building-o  bigger-230"></i>
+		库表配置管理
+		</a>
+		
+		<a href="${ctx}/suite/data/df/toIndex" class="btn btn-app btn-yellow" funtype="funa" index = "5-4">
+		<i class="ace-icon fa  fa-newspaper-o bigger-230"></i>
+		组装服务管理
+		</a>
 		
 	</div>
-	<h3 class="page-header" funtype="funh3" index = "6">消息套件</h3>
+	<h3 class="page-header" funtype="funh3" index = "6">消息组件</h3>
 	<div class="row">
-		<a href="${ctx}/zy/toZyFbList" class="btn btn-app btn-primary" funtype="funa" index = "6-1">
+		<a href="${ctx}/zy/toZyFbList" class="btn btn-app btn-primary" funtype="funa" index = "6-0">
 		<i class="ace-icon fa fa-volume-up bigger-230"></i>
 		通知公告
 		</a>
 		
-		<a href="${ctx}/tag/tagMaintain/11" class="btn btn-app btn-primary" funtype="funa" index = "6-2">
+		<a href="${ctx}/tag/tagMaintain/11" class="btn btn-app btn-primary" funtype="funa" index = "6-1">
 		<i class="ace-icon fa fa-comment bigger-230"></i>
 		短信
 		</a>
 		
-		<a href="${ctx}/suite/mail/useMail" class="btn btn-app btn-primary" funtype="funa" index = "6-3">
+		<a href="${ctx}/suite/mail/useMail" class="btn btn-app btn-primary" funtype="funa" index = "6-2">
 		<i class="ace-icon fa fa-envelope bigger-230"></i>
 		邮件
 		</a>
-		
 	</div>
 	
+	<h3 class="page-header" funtype="funh3" index = "7">资源目录</h3>
+	<div class="row">
+		<a href="${ctx }/zy/sourceList" class="btn btn-app btn-yellow" funtype="funa" index = "7-0">
+		<i class="ace-icon fa  fa-asterisk bigger-230"></i>
+		资源目录配置
+		</a>
+		<a href="${ctx }/zy/queryZyList" class="btn btn-app btn-yellow"  funtype="funa" index = "7-1">
+		<i class="ace-icon fa  fa-pencil bigger-230"></i>
+		资源目录审批
+		</a>
+		<a href="${ctx }/zy/queryFbList" class="btn btn-app btn-yellow"  funtype="funa" index = "7-2">
+		<i class="ace-icon fa  fa-bullhorn bigger-230"></i>
+		资源目录发布
+		</a>
+		<a href="${ctx}/zyapply/toZyIndex" class="btn btn-app btn-yellow"  funtype="funa" index = "7-3">
+		<i class="ace-icon fa  fa-bullhorn bigger-230"></i>
+		资源目录浏览
+		</a>
+		<a href="${ctx}/zyapply/toApplyList" class="btn btn-app btn-yellow"  funtype="funa" index = "7-4">
+		<i class="ace-icon fa  fa-bullhorn bigger-230"></i>
+		资源申请审批
+		</a>
+	</div>
+	
+	<h3 class="page-header" funtype="funh3" index = "8">接口调用</h3>
+	<div class="row">
+		<a href="${ctx}/sjic/jkgl/toIndex" class="btn btn-app btn-primary" funtype="funa" index = "8-0">
+		<i class="ace-icon fa fa-volume-up bigger-230"></i>
+		接口管理
+		</a>
+		<a href="#" class="btn btn-app btn-primary" funtype="funa" index = "8-1">
+		<i class="ace-icon fa fa-volume-up bigger-230"></i>
+		 接口任务
+		</a>
+		
+		
+	</div>
 	
 
 </div>
@@ -228,28 +241,35 @@
 			</div>
 			<div class="modal-body">
 				<div class="row">
-					<div class="col-md-3 form-group">
-						报表组件：<input inputtype="fun" index="0" type="checkbox" funa="2-0,2-1,2-4,3-4">
+				     <div class="col-md-3 form-group">
+						基础组件：<input inputtype="fun" index="0" type="checkbox"  funa="0-0,0-1,0-2,0-3,0-4,0-5">
 					</div>
 					<div class="col-md-3 form-group">
-						定时器组件：<input inputtype="fun" index="1" type="checkbox"  funa="0-2">
+						服务组件：<input inputtype="fun" index="5" type="checkbox" funa="5-0,5-1,5-2,5-3,5-4" >
 					</div>
 					<div class="col-md-3 form-group">
-						字典组件：<input inputtype="fun" index="2" type="checkbox"  funa="0-0">
+						报表组件：<input inputtype="fun" index="3" type="checkbox" funa="3-0,3-1,3-2">
 					</div>
 					<div class="col-md-3 form-group">
-						取号组件：<input inputtype="fun" index="3" type="checkbox" funa="0-5,4-1,4-2" >
-					</div>
-					<div class="col-md-3 form-group">
-						图表组件：<input inputtype="fun" index="4" type="checkbox"  funa="2-0,2-2,2-3">
-					</div>
-					<div class="col-md-3 form-group">
-						公开服务：<input inputtype="fun" index="5" type="checkbox"  funa="5-1,5-2"> 
-					</div>
-					<div class="col-md-3 form-group">
-						文件缓存：<input inputtype="fun" index="6" type="checkbox"  funa="2-0,2-5,2-6"> 
+						图表组件：<input inputtype="fun" index="2" type="checkbox"  funa="2-1,2-2,2-3,2-4">
 					</div>
 					
+					<div class="col-md-3 form-group">
+						日志组件：<input inputtype="fun" index="4" type="checkbox"  funa="4-0,4-1">
+					</div>
+					<div class="col-md-3 form-group">
+						消息组件：<input inputtype="fun" index="6" type="checkbox"  funa="6-0,6-1,6-2"> 
+					</div>
+					<div class="col-md-3 form-group">
+						用户组件：<input inputtype="fun" index="1" type="checkbox"  funa="1-0,1-1,1-2,1-3"> 
+					</div>
+					<div class="col-md-3 form-group">
+						资源目录：<input inputtype="fun" index="7" type="checkbox"  funa="7-0,7-1,7-2,7-3,7-4"> 
+					</div>
+					
+					<div class="col-md-3 form-group">
+						接口调用：<input inputtype="fun" index="8" type="checkbox"  funa="8-0,8-1"> 
+					</div>
 				</div>				
 			</div>
 			<div class="modal-footer">

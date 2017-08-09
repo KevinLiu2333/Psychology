@@ -1,14 +1,14 @@
 10
 
 dir
-246286
+247464
 http://10.1.8.82:1088/svn/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/sjfw
 http://10.1.8.82:1088/svn
 
 
 
-2017-07-03T05:58:12.484375Z
-244837
+2017-08-04T08:03:56.527000Z
+247464
 sunxin
 
 
@@ -68,6 +68,9 @@ sunxin
 
 
 5614
+
+log
+dir
 
 publish
 dir

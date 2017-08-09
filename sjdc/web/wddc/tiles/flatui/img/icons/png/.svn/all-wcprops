@@ -3,12 +3,6 @@ svn:wc:ra_dav:version-url
 V 94
 /svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/flatui/img/icons/png
 END
-Pocket.png
-K 25
-svn:wc:ra_dav:version-url
-V 105
-/svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/flatui/img/icons/png/Pocket.png
-END
 Pensils.png
 K 25
 svn:wc:ra_dav:version-url
@@ -20,6 +14,12 @@ K 25
 svn:wc:ra_dav:version-url
 V 108
 /svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/flatui/img/icons/png/Clipboard.png
+END
+Pocket.png
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/flatui/img/icons/png/Pocket.png
 END
 Mail.png
 K 25
@@ -45,17 +45,17 @@ svn:wc:ra_dav:version-url
 V 112
 /svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/flatui/img/icons/png/Infinity-Loop.png
 END
-Toilet-Paper.png
-K 25
-svn:wc:ra_dav:version-url
-V 111
-/svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/flatui/img/icons/png/Toilet-Paper.png
-END
 Map.png
 K 25
 svn:wc:ra_dav:version-url
 V 102
 /svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/flatui/img/icons/png/Map.png
+END
+Toilet-Paper.png
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/flatui/img/icons/png/Toilet-Paper.png
 END
 Watches.png
 K 25
@@ -63,17 +63,17 @@ svn:wc:ra_dav:version-url
 V 106
 /svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/flatui/img/icons/png/Watches.png
 END
-Calendar.png
-K 25
-svn:wc:ra_dav:version-url
-V 107
-/svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/flatui/img/icons/png/Calendar.png
-END
 Gift-Box.png
 K 25
 svn:wc:ra_dav:version-url
 V 107
 /svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/flatui/img/icons/png/Gift-Box.png
+END
+Calendar.png
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/flatui/img/icons/png/Calendar.png
 END
 Compas.png
 K 25

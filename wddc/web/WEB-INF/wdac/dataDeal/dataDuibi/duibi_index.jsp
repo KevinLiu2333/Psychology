@@ -80,7 +80,8 @@
 											<c:forEach items="${obj.info}" var="info" varStatus="infos">
 												<tr>
 													<td class="center">${infos.index+1 }</td>
-													<td><a href="#" onclick="window.location.href='${ctx }/wdac/dataDuibi/toDuibitjjcrw3?id=${info.id}'">${info.taskName}</a></td>
+												 	<td><a href="#" onclick="window.location.href='${ctx }/wdac/dataDuibi/toDuibitjjcrw3?id=${info.id}'">${info.taskName}</a></td>
+													<!--<td><a href="#">${info.taskName}</a></td>-->
 													<td id="checkRule_${infos.index}">${info.taskRules }</td>
 													<td >${(info.jobId != null && info.jobId != '') ? '是':'否' }</td>
 													
@@ -146,9 +147,9 @@
 			success: function (result) {
 				dicJson = eval('('+result+')');
 				for(var i = 0 ;i<tdLength;i++){
-					for(key in dicJson['2007']){
+					for(key in dicJson['3007']){
 						if(key == $("#checkRule_"+i).text()){
-							$("#checkRule_"+i).text(dicJson['2007'][key]);
+							$("#checkRule_"+i).text(dicJson['3007'][key]);
 						}
 					}
 				}

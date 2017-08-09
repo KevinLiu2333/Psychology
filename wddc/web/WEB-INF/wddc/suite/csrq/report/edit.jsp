@@ -150,7 +150,7 @@
 						<td><input type="text" name="info.headers[0].columnname" style="width: 200px;" value="${obj.info.headers[0].columnname }"></td>
 						<td><select type="dic_zh_cn" name="info.headers[0].diczhcn" style="width:100px;height:30px" defalutvalue="${obj.info.headers[0].diczhcn }"></select></td>
 						<td>
-						<wddc:jsonselect name="info.headers[0].issum" jsonstr="${obj.isnotdic}" style="width:100px;height:30px" initValue="请选择" defaultValue="${obj.info.headers[0].issum }"/>
+						<select type="dic_zh_cn" name="info.headers[0].issum" style="width:100px;height:30px"  defaultValue="${obj.info.headers[0].issum }"></select>
 						</td>
 						<td><a href="#" onclick="deletetr(this);" style="display:none;" id="delBtn2">删除</a></td>
 					</tr>
@@ -173,7 +173,7 @@
 							<td><input  type="text" name="info.headers[${row.index}].columnname" style="width: 200px;" value="${obj.info.headers[row.index].columnname }"></td>
 							<td><select type="dic_zh_cn" name="info.headers[${row.index}].diczhcn" style="width:100px;height:30px" defalutvalue="${obj.info.headers[row.index].diczhcn }"></select></td>
 							<td>
-							<wddc:jsonselect name="info.headers[${row.index}].issum" jsonstr="${obj.isnotdic}" style="width:100px;height:30px" initValue="请选择" defaultValue="${obj.info.headers[row.index].issum }"/>
+							<select type="dic_zh_cn" name="info.headers[${row.index}].issum" style="width:100px;height:30px" defaultValue="${obj.info.headers[row.index].issum }"></select>
 							</td>
 							<td>
 								<c:if test="${row.index == 0}">
@@ -213,7 +213,7 @@
 						<td><input type="text" name="info.rows[0].columnname" style="width: 200px;" value="${obj.info.rows[0].columnname }"></td>
 						<td><select type="dic_zh_cn" name="info.rows[0].diczhcn" style="width:100px;height:30px" defalutvalue="${obj.info.rows[0].diczhcn }"></select></td>
 						<td>
-						<wddc:jsonselect name="info.rows[0].issum"  jsonstr="${obj.isnotdic}" style="width:100px;height:30px" initValue="请选择" defaultValue="${obj.info.rows[0].issum }"/>
+						<select type="dic_zh_cn" name="info.rows[0].issum"  style="width:100px;height:30px" defaultValue="${obj.info.rows[0].issum }"></select>
 						</td>
 						<td><a href="#" onclick="deletetr(this);" style="display:none;" id="delBtn2">删除</a></td>
 					</tr>
@@ -235,7 +235,7 @@
 							<td><input type="text" name="info.rows[${row.index}].columnname" style="width: 200px;" value="${obj.info.rows[row.index].columnname }"></td>
 							<td><select type="dic_zh_cn" name="info.rows[${row.index}].diczhcn" style="width:100px;height:30px" defalutvalue="${obj.info.rows[row.index].diczhcn }"></select></td>
 							<td>
-							<wddc:jsonselect name="info.rows[${row.index}].issum"  jsonstr="${obj.isnotdic}" style="width:100px;height:30px" initValue="请选择" defaultValue="${obj.info.rows[row.index].issum }"/>
+							<select type="dic_zh_cn" name="info.rows[${row.index}].issum"  style="width:100px;height:30px"  defaultValue="${obj.info.rows[row.index].issum }"></select>
 							<td>
 								<c:if test="${row.index == 0}">
 									<a href="#" onclick="deletetr(this);" style="display:none;" id="delBtn2">删除</a>

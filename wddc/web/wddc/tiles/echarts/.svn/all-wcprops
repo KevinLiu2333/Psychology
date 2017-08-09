@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 81
-/svn/!svn/ver/245595/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/echarts
+/svn/!svn/ver/246450/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/echarts
 END
 echarts_tree.js
 K 25
@@ -14,4 +14,10 @@ K 25
 svn:wc:ra_dav:version-url
 V 96
 /svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/echarts/echarts.min.js
+END
+echarts.js
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/246450/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/echarts/echarts.js
 END

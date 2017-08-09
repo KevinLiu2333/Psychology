@@ -15,17 +15,17 @@ svn:wc:ra_dav:version-url
 V 101
 /svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/select2/select2-spinner.gif
 END
-select2.wddc.css
-K 25
-svn:wc:ra_dav:version-url
-V 98
-/svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/select2/select2.wddc.css
-END
 select2_locale_zh-CN.js
 K 25
 svn:wc:ra_dav:version-url
 V 105
 /svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/select2/select2_locale_zh-CN.js
+END
+select2.wddc.css
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/select2/select2.wddc.css
 END
 select2x2.png
 K 25

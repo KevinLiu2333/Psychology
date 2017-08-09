@@ -27,18 +27,6 @@ svn:wc:ra_dav:version-url
 V 119
 /svn/!svn/ver/211907/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/data/entity/MultStatResultBo.java
 END
-DataFileDataBo.java
-K 25
-svn:wc:ra_dav:version-url
-V 117
-/svn/!svn/ver/245441/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/data/entity/DataFileDataBo.java
-END
-StatTermBo.java
-K 25
-svn:wc:ra_dav:version-url
-V 113
-/svn/!svn/ver/215869/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/data/entity/StatTermBo.java
-END
 DataFileLinkBo.java
 K 25
 svn:wc:ra_dav:version-url
@@ -50,6 +38,18 @@ K 25
 svn:wc:ra_dav:version-url
 V 116
 /svn/!svn/ver/245529/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/data/entity/TableConfigBo.java
+END
+DataFileDataBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/245441/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/data/entity/DataFileDataBo.java
+END
+StatTermBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/215869/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/data/entity/StatTermBo.java
 END
 DataFileCustomJsonBo.java
 K 25

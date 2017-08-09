@@ -60,7 +60,12 @@
 		                                	<c:forEach items="${echart.tags }" var="tag"><label class="label label-info">${tag }</label>&nbsp</c:forEach>
 		                                </td>
 		                                <td>
-		                                	<a href="#" onclick="window.open('${ctx }/suite/chart/detailView?id=${echart.id}')">查看</a>
+		                                	<c:if test="${echart.legendToKey == null }">
+		                                		<a href="#" onclick="window.open('${ctx }/suite/chart/detailView?id=${echart.id}')">查看</a>
+		                                	</c:if>
+		                                	<c:if test="${echart.legendToKey != null }">
+		                                		<a href="#" onclick="window.open('${ctx }/suite/chart/detailView2?id=${echart.id}')">查看</a>
+		                                	</c:if>
 		                                	<a href="${ctx }/suite/chart/toEditEChart?id=${echart.id}">修改</a>
 		                                    <a href="${ctx}/suite/chart/deleteEchart?id=${echart.id}">删除</a> 
 		                                </td>

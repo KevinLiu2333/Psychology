@@ -11,7 +11,7 @@ public class MailSenderInfo {
 	private String fromAddress;
 	
 	private String toAddress;
-	
+	private String toMoreAddress;
 	private String userName;
 	private String password;
 	
@@ -25,6 +25,7 @@ public class MailSenderInfo {
 	
 	public Properties getProperties(){
 		Properties p = new Properties();
+		p.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
 		p.put("mail.smtp.host",this.mailServerHost);
 		p.put("mail.smtp.port", this.mailServerPort);
 		p.put("mail.smtp.auth", validate ? "true" : "fales");
@@ -61,6 +62,14 @@ public class MailSenderInfo {
 
 	public void setToAddress(String toAddress) {
 		this.toAddress = toAddress;
+	}
+
+	public String getToMoreAddress() {
+		return toMoreAddress;
+	}
+
+	public void setToMoreAddress(String toMoreAddress) {
+		this.toMoreAddress = toMoreAddress;
 	}
 
 	public String getUserName() {

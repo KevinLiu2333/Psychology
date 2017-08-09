@@ -27,6 +27,12 @@ svn:wc:ra_dav:version-url
 V 79
 /svn/!svn/ver/246519/projects2/MZJ/sjsjzx/code/sjdc/web/sjdc/open/jquery_003.js
 END
+magnific-popup.css
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/246519/projects2/MZJ/sjsjzx/code/sjdc/web/sjdc/open/magnific-popup.css
+END
 jquery_002.js
 K 25
 svn:wc:ra_dav:version-url
@@ -44,12 +50,6 @@ K 25
 svn:wc:ra_dav:version-url
 V 78
 /svn/!svn/ver/246519/projects2/MZJ/sjsjzx/code/sjdc/web/sjdc/open/ghost-url.js
-END
-magnific-popup.css
-K 25
-svn:wc:ra_dav:version-url
-V 84
-/svn/!svn/ver/246519/projects2/MZJ/sjsjzx/code/sjdc/web/sjdc/open/magnific-popup.css
 END
 bootstrap.js
 K 25

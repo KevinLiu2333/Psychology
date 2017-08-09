@@ -12,13 +12,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-import org.apache.commons.dbcp.BasicDataSource;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
 import org.nutz.dao.Sqls;
-import org.nutz.dao.impl.NutDao;
 import org.nutz.dao.sql.Criteria;
 import org.nutz.dao.sql.Sql;
 import org.nutz.dao.sql.SqlCallback;
@@ -93,9 +91,7 @@ public class SpecailReportJob implements Job{
 					if (multStatInfo != null) {
 						DBinfoBo dbinfo = dao.fetch(DBinfoBo.class, Cnd.where(
 								"id", "=", multStatInfo.getDatabaseid()));
-						BasicDataSource dataSource = DBAdapter
-								.getDataSource(dbinfo);
-						Dao dao1 = new NutDao(dataSource);
+						Dao dao1 = DBAdapter.getDao(dbinfo);
 						Sql sql = Sqls.create(multStatInfo.getSql());
 						sql.setCallback(new SqlCallback() {
 							@Override
@@ -128,7 +124,6 @@ public class SpecailReportJob implements Job{
 						result.setResult(re);
 						result.setCountTime(new Date());
 						dao.insert(result);
-						DBAdapter.closeDataSource(dataSource);
 					}
 				}
 

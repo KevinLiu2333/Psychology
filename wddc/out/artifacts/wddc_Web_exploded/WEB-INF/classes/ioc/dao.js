@@ -5,6 +5,8 @@ var ioc = {
 			depose : 'close'
 		},
 		fields : {
+
+			//url : 'jdbc:mysql://10.1.64.41:23306/suining?useUnicode=true&characterEncoding=utf-8',
 			url : 'jdbc:mysql://10.2.8.169:3306/wddc?useUnicode=true&characterEncoding=utf-8&autoReconnect=true',
 			driverClassName : 'com.mysql.jdbc.Driver',
 			username : 'wddc',
@@ -38,13 +40,5 @@ var ioc = {
 				refer : 'dao'
 			}
 		}
-	},
-    apiJob : {
-        type : "com.wonders.wddc.suite.data.job.ApiJob",
-        fields : {
-            dao : {
-                refer : 'dao'
-            }
-        }
-    }
+	}
 };

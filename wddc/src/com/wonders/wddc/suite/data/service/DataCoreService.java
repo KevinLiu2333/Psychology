@@ -10,11 +10,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-import org.apache.commons.dbcp.BasicDataSource;
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
 import org.nutz.dao.Sqls;
-import org.nutz.dao.impl.NutDao;
 import org.nutz.dao.sql.Sql;
 import org.nutz.dao.sql.SqlCallback;
 import org.nutz.ioc.loader.annotation.Inject;
@@ -38,6 +36,7 @@ public class DataCoreService {
 	public final static String KEY_VALUE = "KV";		//单条记录 key-value
 	public final static String LIST_MAP = "LM";		//list_map
 	public final static String MAP_ARRAY = "MA";		//map数组
+	
 	@Inject
 	private Dao dao;
 	/**
@@ -111,9 +110,8 @@ public class DataCoreService {
 			result.put("MSG", "统计项没有正确配置数据库:-->"+id);
 			return result;
 		}
-		//创建dao
-		BasicDataSource dataSource = DBAdapter.getDataSource(dbinfo);
-		Dao dao1 = new NutDao(dataSource);
+		//创建dao --- NutDao创建dao(废弃)
+		Dao dao1 = DBAdapter.getDao(dbinfo);
 		String sqlstr = bo.getSql();
 		Sql sql = Sqls.create(sqlstr);
 		//查找sql中的参数
@@ -143,7 +141,8 @@ public class DataCoreService {
 			sql.setCallback(new ListMapCallBack());
 		}
 		dao1.execute(sql);
-		return sql.getResult();
+		Object result = sql.getResult();
+		return result;
 	}
 	/**
 	 * 单一记录 key_value sql处理

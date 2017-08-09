@@ -43,10 +43,7 @@ public class ChartAct {
 	 * 数据图表详细信息
 	 */
 	@At
-	//@Ok("jsp:wddc.suite.csrq.charts.echarts_detail")
-	//@Ok("jsp:wddc.suite.csrq.charts.echarts_view")
-	@Ok("jsp:wddc.suite.csrq.charts.echarts_datetime")
-	//@Ok("jsp:wddc.suite.csrq.charts.echarts_demo")
+	@Ok("jsp:wddc.suite.csrq.charts.echarts_preview")
 	public Map<String,Object> detailView(String id,String currDate){
 		Map<String,Object> result = new HashMap<String,Object>();
 		ChartConfigBo echart = dao.fetch(ChartConfigBo.class, id);
@@ -58,6 +55,23 @@ public class ChartAct {
 			currDate = dft.format(new Date());
 		}
 		result.put("date", currDate);
+		result.put("echart", echart);
+		
+		return result;
+		
+	}
+	/**
+	 * 数据图表详细信息
+	 */
+	@At
+	@Ok("jsp:wddc.suite.csrq.charts.echarts_preview2")
+	public Map<String,Object> detailView2(String id){
+		Map<String,Object> result = new HashMap<String,Object>();
+		ChartConfigBo echart = dao.fetch(ChartConfigBo.class, id);
+		echart.setOperateCount(echart.getOperateCount()+1);
+		dao.update(echart);
+		
+		SimpleDateFormat dft = new SimpleDateFormat("yyyy-MM-dd");
 		result.put("echart", echart);
 		
 		return result;

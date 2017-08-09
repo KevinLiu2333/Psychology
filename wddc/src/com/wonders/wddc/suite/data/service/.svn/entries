@@ -28,20 +28,15 @@ svn:special svn:externals svn:needs-lock
 
 DataCoreService.java
 file
+247203
 
 
 
-
-2017-07-21T07:56:22.151000Z
-3274de23e40484f4acec8242873b3de6
-2017-06-30T08:29:24.687500Z
-244729
-sunxin
-
-
-
-
-
+2017-08-07T01:33:58.991000Z
+d79c0fd03e35376519654abcf0631d16
+2017-08-02T08:09:35.683250Z
+247203
+daiwenlong
 
 
 
@@ -58,24 +53,24 @@ sunxin
 
 
 
-7692
+
+
+
+
+
+7604
 
 TableService.java
 file
+247203
 
 
 
-
-2017-07-21T07:56:22.201000Z
-bbb966baee8f6f2e725f1c70d4cd26e1
-2017-05-11T08:27:24.218750Z
-238122
-mengzhenqian
-
-
-
-
-
+2017-08-07T01:33:58.913000Z
+217eab2e2c0633600f6028f008b8d22a
+2017-08-01T04:27:00.339500Z
+247058
+wulong
 
 
 
@@ -92,5 +87,10 @@ mengzhenqian
 
 
 
-36682
+
+
+
+
+
+36471
 

@@ -52,7 +52,50 @@
 							<!-- 按标签分类统计 -->
 							<div class="col-xs-12">	
 								<br/>										
-								<div id="fltjbq" style="float:center;height:500px;width:100%">
+								
+								<div>
+									<table id="simple-table" class="table table-striped table-bordered table-hover">
+										<thead>
+											<tr>
+												<th >一级标签</th>
+												
+												<th >二级标签</th>
+												<th >三级标签</th>
+												
+												<th >四级标签</th>
+												<th >合计</th>
+												
+											</tr>
+										</thead>
+
+										<tbody>
+									 	<c:forEach items="${obj.father }" var="fer">
+									 	   <tr>
+									 		<td>${fer.tagName }	</td>
+									 		<td>${fer.level }	</td>
+									 		<td>${fer.tAccess }	</td>
+									 		<td>${fer.tDo }	</td>
+									 		<td>${fer.tagNumber }</td>
+									 	    </tr>
+									 	</c:forEach>
+									
+										 <tr>
+									 		<td>合计	</td>
+									 		<td>${obj.count2 }</td>
+									 		<td>${obj.count3 }</td>
+									 		<td>${obj.count4 }</td>
+									 		<td>${obj.all }</td>
+									 		
+									 	  </tr>
+									 	  </tbody>
+									</table>
+								</div>
+								
+								<div style="float:center;height:50px;width:100%">
+							         
+								</div>	
+								
+								<div id="fltjbq" style="float:center;height:1000px;width:100%">
 							         
 								</div>	
 							</div>
@@ -100,7 +143,7 @@
         var myChart = echarts.init(document.getElementById('fltjbq')); 
         var option = {
         	    title : {
-        	        text: '标签统计'
+        	        text: '标签结构'
         	    },
         	    toolbox: {
         	        show : true,

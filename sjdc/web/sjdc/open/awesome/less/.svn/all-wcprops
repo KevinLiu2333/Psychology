@@ -27,17 +27,17 @@ svn:wc:ra_dav:version-url
 V 99
 /svn/!svn/ver/246519/projects2/MZJ/sjsjzx/code/sjdc/web/sjdc/open/awesome/less/bordered-pulled.less
 END
-path.less
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/246519/projects2/MZJ/sjsjzx/code/sjdc/web/sjdc/open/awesome/less/path.less
-END
 font-awesome.less
 K 25
 svn:wc:ra_dav:version-url
 V 96
 /svn/!svn/ver/246519/projects2/MZJ/sjsjzx/code/sjdc/web/sjdc/open/awesome/less/font-awesome.less
+END
+path.less
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/246519/projects2/MZJ/sjsjzx/code/sjdc/web/sjdc/open/awesome/less/path.less
 END
 animated.less
 K 25
@@ -57,17 +57,17 @@ svn:wc:ra_dav:version-url
 V 88
 /svn/!svn/ver/246519/projects2/MZJ/sjsjzx/code/sjdc/web/sjdc/open/awesome/less/core.less
 END
-list.less
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/246519/projects2/MZJ/sjsjzx/code/sjdc/web/sjdc/open/awesome/less/list.less
-END
 rotated-flipped.less
 K 25
 svn:wc:ra_dav:version-url
 V 99
 /svn/!svn/ver/246519/projects2/MZJ/sjsjzx/code/sjdc/web/sjdc/open/awesome/less/rotated-flipped.less
+END
+list.less
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/246519/projects2/MZJ/sjsjzx/code/sjdc/web/sjdc/open/awesome/less/list.less
 END
 fixed-width.less
 K 25

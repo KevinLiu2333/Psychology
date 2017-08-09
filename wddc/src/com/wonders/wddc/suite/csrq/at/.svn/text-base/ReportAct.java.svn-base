@@ -20,15 +20,11 @@ import java.util.regex.Pattern;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import net.sf.json.JSONObject;
-
-import org.apache.commons.dbcp.BasicDataSource;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
 import org.nutz.dao.Sqls;
-import org.nutz.dao.impl.NutDao;
 import org.nutz.dao.sql.Criteria;
 import org.nutz.dao.sql.Sql;
 import org.nutz.dao.sql.SqlCallback;
@@ -62,6 +58,8 @@ import com.wonders.wddc.tiles.dic.entity.DicConfigBo;
 import com.wonders.wddc.tiles.quartz.QuartzManager;
 import com.wonders.wddc.tiles.sn.SnCreator;
 import com.wonders.wddc.tiles.tools.DateUtils;
+
+import net.sf.json.JSONObject;
 
 /**
  * 报表AT
@@ -419,8 +417,8 @@ public class ReportAct {
 				if (multStatInfo != null) {
 					DBinfoBo dbinfo = dao.fetch(DBinfoBo.class, Cnd.where("id",
 							"=", multStatInfo.getDatabaseid()));
-					BasicDataSource dataSource = DBAdapter.getDataSource(dbinfo);
-					Dao dao1 = new NutDao(dataSource);
+					 
+					Dao dao1 = DBAdapter.getDao(dbinfo);
 					Sql sql =toDealSql(multStatInfo.getSql(),request); 
 						//Sqls.create(multStatInfo.getSql());
 					sql.setCallback(new SqlCallback() {
@@ -448,7 +446,6 @@ public class ReportAct {
 					if(re!=null&&re.size()>0){
 						list.addAll(re);
 					}
-					DBAdapter.closeDataSource(dataSource);
 					multStatInfo.setUpdatetime(new Date());
 					dao.update(multStatInfo);
 					MultStatResultBo bo = new MultStatResultBo();
@@ -1055,8 +1052,7 @@ public class ReportAct {
 	private List<Map<String, String>> countByMultStatInfo(MultStatInfoBo info){
 		DBinfoBo dbinfo = dao.fetch(DBinfoBo.class,
 				Cnd.where("id", "=", info.getDatabaseid()));
-		BasicDataSource dataSource = DBAdapter.getDataSource(dbinfo);
-		Dao dao1 = new NutDao(dataSource);
+		Dao dao1 = DBAdapter.getDao(dbinfo);
 		Sql sql = Sqls.create(info.getSql());
 		sql.setCallback(new SqlCallback() {
 			@Override
@@ -1088,7 +1084,6 @@ public class ReportAct {
 		dao.insert(result);
 		info.setUpdatetime(new Date());
 		dao.update(info);
-		DBAdapter.closeDataSource(dataSource);
 		return result.getResult();
 	}
 	

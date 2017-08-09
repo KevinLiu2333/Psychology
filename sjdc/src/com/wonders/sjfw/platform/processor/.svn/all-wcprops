@@ -15,6 +15,12 @@ svn:wc:ra_dav:version-url
 V 121
 /svn/!svn/ver/243464/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/sjfw/platform/processor/Dingzhi2Processor.java
 END
+Dingzhi3Processor.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/237945/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/sjfw/platform/processor/Dingzhi3Processor.java
+END
 Biaozhun2Processor.java
 K 25
 svn:wc:ra_dav:version-url
@@ -26,12 +32,6 @@ K 25
 svn:wc:ra_dav:version-url
 V 120
 /svn/!svn/ver/243121/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/sjfw/platform/processor/Jiekou1Processor.java
-END
-Dingzhi3Processor.java
-K 25
-svn:wc:ra_dav:version-url
-V 121
-/svn/!svn/ver/237945/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/sjfw/platform/processor/Dingzhi3Processor.java
 END
 Jiekou2Processor.java
 K 25

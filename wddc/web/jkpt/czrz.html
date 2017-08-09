@@ -125,7 +125,7 @@
 											</div>
 
 											<div class="infobox-data">
-												<span class="infobox-data-number">4647次</span>
+												<span class="infobox-data-number">0次</span>
 												<div class="infobox-content">人口库查询</div>
 											</div>
 										</div>
@@ -135,7 +135,7 @@
 											</div>
 
 											<div class="infobox-data">
-												<span class="infobox-data-number">4147次</span>
+												<span class="infobox-data-number">0次</span>
 												<div class="infobox-content">法人查询</div>
 											</div>
 										</div>
@@ -145,7 +145,7 @@
 											</div>
 
 											<div class="infobox-data">
-												<span class="infobox-data-number">3947次</span>
+												<span class="infobox-data-number">0次</span>
 												<div class="infobox-content">房屋库查询</div>
 											</div>
 										</div>
@@ -156,7 +156,7 @@
 											</div>
 
 											<div class="infobox-data">
-												<span class="infobox-data-number">1147次</span>
+												<span class="infobox-data-number">0次</span>
 												<div class="infobox-content">法人资质信息查询</div>
 											</div>
 										</div>
@@ -166,7 +166,7 @@
 											</div>
 
 											<div class="infobox-data">
-												<span class="infobox-data-number">847次</span>
+												<span class="infobox-data-number">0次</span>
 												<div class="infobox-content">法人处罚信息查询</div>
 											</div>
 										</div>
@@ -176,7 +176,7 @@
 											</div>
 
 											<div class="infobox-data">
-												<span class="infobox-data-number">3947次</span>
+												<span class="infobox-data-number">0次</span>
 												<div class="infobox-content">法人查询</div>
 											</div>
 										</div>
@@ -198,7 +198,7 @@
 											</div>
 
 											<div class="infobox-data">
-												<span class="infobox-data-number">4347次</span>
+												<span class="infobox-data-number">0次</span>
 												<div class="infobox-content">服务申请</div>
 											</div>
 										</div>
@@ -208,7 +208,7 @@
 											</div>
 
 											<div class="infobox-data">
-												<span class="infobox-data-number">4137次</span>
+												<span class="infobox-data-number">0次</span>
 												<div class="infobox-content">服务审核</div>
 											</div>
 										</div>
@@ -218,7 +218,7 @@
 											</div>
 
 											<div class="infobox-data">
-												<span class="infobox-data-number">3777次</span>
+												<span class="infobox-data-number">0次</span>
 												<div class="infobox-content">服务调用</div>
 											</div>
 										</div>
@@ -232,15 +232,15 @@
                                 </div>
                                     <br>
                                     <br>
-                                <div id="zyml">
+                                <div id="zyml1">
                                     <div class="infobox infobox-blue" >
 											<div class="infobox-icon">
 												<i class="ace-icon glyphicon glyphicon-list-alt"></i>
 											</div>
 
 											<div class="infobox-data">
-												<span class="infobox-data-number">1237次</span>
-												<div class="infobox-content">目录编制</div>
+												<span class="infobox-data-number"><span id="zyml">0</span>个</span>
+												<div class="infobox-content">资源目录</div>
 											</div>
 										</div>
                                     <div class="infobox infobox-blue"  >
@@ -249,7 +249,7 @@
 											</div>
 
 											<div class="infobox-data">
-												<span class="infobox-data-number">1117次</span>
+												<span class="infobox-data-number"><span id="mlfb">0</span>个</span>
 												<div class="infobox-content">目录发布</div>
 											</div>
 										</div>
@@ -259,7 +259,7 @@
 											</div>
 
 											<div class="infobox-data">
-												<span class="infobox-data-number">977次</span>
+												<span class="infobox-data-number"><span id="mlll">0</span>次</span>
 												<div class="infobox-content">目录浏览</div>
 											</div>
 										</div>
@@ -335,25 +335,23 @@
                         data = eval('('+data+')');
                         var sjcx = data.sjcx;
                         var fwdy = data.fwdy;
-                        var zyml = data.zyml;
+                        $("#zyml").html(data.zyml[0].value)
+                        $("#mlfb").html(data.zyml[1].value)
+                        $("#mlll").html(data.zyml[2].value)
                         var sjcxstr = "";
                         var fwdystr = "";
-                        var zymlstr = "";
                         for(var i=0;i<sjcx.length;i++){
                             sjcxstr = sjcxstr+'<div class="infobox infobox-red" ><div class="infobox-icon"><i class="ace-icon  glyphicon glyphicon-folder-open"></i></div><div class="infobox-data"><span class="infobox-data-number">'+sjcx[i].value+'次</span><div class="infobox-content">'+sjcx[i].name+'</div></div></div>'
                         }
                         for(var i=0;i<fwdy.length;i++){
                             fwdystr = fwdystr+'<div class="infobox infobox-green" ><div class="infobox-icon"><i class="ace-icon  glyphicon glyphicon-resize-full"></i></div><div class="infobox-data"><span class="infobox-data-number">'+fwdy[i].value+'次</span><div class="infobox-content">'+fwdy[i].name+'</div></div></div>'
                         }
-                        for(var i=0;i<zyml.length;i++){
-                            zymlstr = zymlstr+'<div class="infobox infobox-blue" ><div class="infobox-icon"><i class="ace-icon  glyphicon glyphicon-list-alt"></i></div><div class="infobox-data"><span class="infobox-data-number">'+zyml[i].value+'次</span><div class="infobox-content">'+zyml[i].name+'</div></div></div>'
-                        }
+                        console.log(data.zyml[0].value)
                         $('#sjcx').html(sjcxstr);
                         $('#fwdy').html(fwdystr);
-                        $('#zyml').html(zymlstr);
                     }
                 });
-                setTimeout("loaddata()",1000*30);  
+                //setTimeout("loaddata()",1000*30);  
             }
             loaddata();
             $.ajax({
@@ -431,6 +429,7 @@
             $("#sidebar").load("include/sidebar.html",function(response,status,xhr){
                 $('#jksy').removeAttr('class');
                 $('#czjk').attr('class','active');
+                $('#czrz').attr('class','active');
             });
 
 		</script>

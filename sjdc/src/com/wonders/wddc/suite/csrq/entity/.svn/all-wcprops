@@ -51,17 +51,17 @@ svn:wc:ra_dav:version-url
 V 115
 /svn/!svn/ver/222229/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/csrq/entity/ReportDataBo.java
 END
-QueryConBo.java
-K 25
-svn:wc:ra_dav:version-url
-V 113
-/svn/!svn/ver/211895/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/csrq/entity/QueryConBo.java
-END
 QueryConfigBo.java
 K 25
 svn:wc:ra_dav:version-url
 V 116
 /svn/!svn/ver/221538/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/csrq/entity/QueryConfigBo.java
+END
+QueryConBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/211895/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/csrq/entity/QueryConBo.java
 END
 ColumnConfigBo.java
 K 25

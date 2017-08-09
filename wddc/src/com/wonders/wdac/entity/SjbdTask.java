@@ -28,7 +28,7 @@ public class SjbdTask {
 	@Column("task_desc")
 	private String taskDesc;
 	/**
-	 * 检测规则
+	 * 比对规则
 	 */
 	@Column("task_rules")
 	private String taskRules;
@@ -62,6 +62,12 @@ public class SjbdTask {
 	 */
 	@Column("department")
 	private String department;
+	
+	/**
+	 * 待检测资源项名称
+	 */
+	@Column("item_name")
+	private String itemName;
 	/**
 	 * 待检测资源项代码
 	 */
@@ -114,6 +120,12 @@ public class SjbdTask {
 	}
 	public String getTaskRules() {
 		return taskRules;
+	}
+	public String getItemName() {
+		return itemName;
+	}
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
 	}
 	public void setTaskRules(String taskRules) {
 		this.taskRules = taskRules;

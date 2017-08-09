@@ -15,15 +15,15 @@ svn:wc:ra_dav:version-url
 V 110
 /svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/dialogs/template/template.js
 END
-template.html
-K 25
-svn:wc:ra_dav:version-url
-V 112
-/svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/dialogs/template/template.html
-END
 template.css
 K 25
 svn:wc:ra_dav:version-url
 V 111
 /svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/dialogs/template/template.css
+END
+template.html
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/dialogs/template/template.html
 END

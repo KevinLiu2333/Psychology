@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
-import org.nutz.dao.entity.annotation.Column;
 import org.nutz.dao.sql.Criteria;
 import org.nutz.ioc.loader.annotation.Inject;
 import org.nutz.ioc.loader.annotation.IocBean;
@@ -26,6 +25,7 @@ import org.nutz.mvc.view.ViewWrapper;
 import com.wonders.sjfw.entity.FwAccess;
 import com.wonders.sjfw.entity.FwConfig;
 import com.wonders.sjfw.entity.FwInfo;
+import com.wonders.sjfw.entity.LogFw;
 import com.wonders.wddc.suite.data.service.DataCoreService;
 import com.wonders.wddc.suite.user.entity.UserUnitBo;
 import com.wonders.wddc.tiles.sn.SnCreator;
@@ -86,7 +86,23 @@ public class FwAct extends BaseAct{
         result.put("fwConfigList",fwConfigList);
         return result;
     }
-    
+
+	/**
+	 * 查看服务详细日志.
+	 */
+	@At("/log/*")
+	@Ok("jsp:sjfw.log.fw_detail")
+	public Object toFwlogDetail(String dlId) {
+		//6.回传数据
+		Map<String,Object>  result= new HashMap<String,Object>();
+		LogFw logFw = dao.fetch(LogFw.class, dlId);
+		if(logFw != null){
+	        FwInfo fwInfo = dao.fetch(FwInfo.class,logFw.getFwInfoId());
+			result.put("fwInfo", fwInfo);
+		}
+		result.put("fwLog", logFw);
+		return result; 
+	}
 
     /**
      * 服务发布列表 .

@@ -71,10 +71,10 @@
 								  </div>					
 					        </div>	
                         </div>	        
-	  <div class="col-xs-12" style="padding-top:10px;border:1px solid #dff0d8;"> 
-					
-							   <div><input type="radio" name="Fruit" style="float:right;margin-right:10px;" value="themeId:${obj.info[0].themeId }"><label style="float:right;margin-right:5px;">选择所有字段</label></div>
-							    <table id="simple-table" class="table table-striped table-bordered table-hover">
+	 						 <div class="col-xs-12" style="padding-top:10px;border:1px solid #dff0d8;"> 
+				
+							   <!--  <div><input type="radio" name="Fruit" style="float:right;margin-right:10px;" value="themeId:${obj.info[0].themeId }"><label style="float:right;margin-right:5px;">选择所有字段</label></div>-->
+							  	  <table id="simple-table" class="table table-striped table-bordered table-hover">
 												<thead>
 													<tr>
 														<th>序号</th>
@@ -87,6 +87,7 @@
 												</thead>
 
 												<tbody>
+													
 												    <c:forEach items="${obj.info }" var="info" varStatus="infos">
 													<tr>
 														<td>${infos.index + 1}</td>
@@ -94,6 +95,7 @@
 														<td>${info.colName }</td>
 														<td>${info.colTypeName }</td>
 														<td><input type="radio" name="Fruit" value="${info.colCfgId }"></td>
+														
 													</tr>
 													</c:forEach>
 													</tbody>
@@ -152,12 +154,17 @@
 		$("#dataDuibi").attr("class","active open");
 		$("#duibiIndex").attr("class","active");
 		function toTjjcrw3(){
+			
 			var i=$("input[type='radio']:checked").val();
+			
+			
+			var data="${obj.czb}";
 			if(i==undefined ||i==""){
 				alert("请选择需要检测的资源项！");
 				return;
 			}
-			window.location.href='${ctx}/wdac/dataDuibi/toDuibitjjcrw3?colCfgId='+i;
+			
+			window.location.href='${ctx}/wdac/dataDuibi/toDuibitjjcrw3?colCfgId='+i+'&czb='+data;
 		}
 		
 		

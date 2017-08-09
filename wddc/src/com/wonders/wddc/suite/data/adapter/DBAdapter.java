@@ -9,13 +9,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.commons.dbcp.BasicDataSource;
+import org.nutz.dao.Dao;
+import org.nutz.dao.impl.NutDao;
 import org.nutz.log.Log;
 import org.nutz.log.Logs;
 
 import com.wonders.wddc.suite.data.entity.DBinfoBo;
 
 public class DBAdapter {
-	private static Map<String,BasicDataSource> dbMap = new HashMap<String,BasicDataSource>();
+	private static Map<String,Dao> dbMap = new HashMap<String,Dao>();
 	private static Log			log							= Logs.get();
 	public final static int		MYSQL						= 1;
 	public final static int		ORACLE						= 2;
@@ -31,56 +33,61 @@ public class DBAdapter {
 	public final static String	POSTGRESQL_VALIDATIONQUERY	= "select version()";
 
 	/**
-	 * 根据dbinfo获取数据源
+	 * 根据dbinfo获取dao
 	 * 
 	 * @param dBinfo
 	 * @return
 	 */
-	public static BasicDataSource getDataSource(DBinfoBo dBinfo) {
-		BasicDataSource dataSource = null;
-		if(dbMap.containsKey(dBinfo.getId())){
-			dataSource = dbMap.get(dBinfo.getId());
-		}else{
-			dataSource = new BasicDataSource();
-			switch (dBinfo.getType()) {
-			case MYSQL:
-				dataSource.setDriverClassName(MYSQL_DRIVER);
-				break;
-			case ORACLE:
-				dataSource.setDriverClassName(ORACLE_DRIVER);
-				break;
-			case SQL_SERVER:
-				dataSource.setDriverClassName(SQL_SERVER_DRIVER);
-				break;
-			case POSTGRESQL:
-				dataSource.setDriverClassName(POSTGRESQL_DRIVER);
-				break;
-			default:
-				break;
+	public static Dao getDao(DBinfoBo dBinfo) {
+		Dao dao = null;
+		synchronized(DBAdapter.class){
+			if(dbMap.containsKey(dBinfo.getId())){
+				dao = dbMap.get(dBinfo.getId());
+			}else{
+				BasicDataSource dataSource = new BasicDataSource();
+				switch (dBinfo.getType()) {
+				case MYSQL:
+					dataSource.setDriverClassName(MYSQL_DRIVER);
+					break;
+				case ORACLE:
+					dataSource.setDriverClassName(ORACLE_DRIVER);
+					break;
+				case SQL_SERVER:
+					dataSource.setDriverClassName(SQL_SERVER_DRIVER);
+					break;
+				case POSTGRESQL:
+					dataSource.setDriverClassName(POSTGRESQL_DRIVER);
+					break;
+				default:
+					break;
+				}
+				dataSource.setUrl(dBinfo.getUrl());
+				dataSource.setUsername(dBinfo.getUsername());
+				dataSource.setPassword(dBinfo.getPassword());
+				// 设置数据源的配置
+				if ("2".equals(dBinfo.getConfigType())) {
+					dataSource.setInitialSize(10);
+					dataSource.setMaxIdle(30);
+					dataSource.setMinIdle(5);
+					dataSource.setMaxActive(50);
+				} else if ("3".equals(dBinfo.getConfigType())) {
+					dataSource.setInitialSize(30);
+					dataSource.setMaxIdle(50);
+					dataSource.setMinIdle(10);
+					dataSource.setMaxActive(100);
+				} else {
+					dataSource.setInitialSize(5);
+					dataSource.setMaxIdle(20);
+					dataSource.setMinIdle(2);
+					dataSource.setMaxActive(20);
+				}
+				dao = new NutDao(dataSource);
+				dbMap.put(dBinfo.getId(), dao);
 			}
-			dataSource.setUrl(dBinfo.getUrl());
-			dataSource.setUsername(dBinfo.getUsername());
-			dataSource.setPassword(dBinfo.getPassword());
-			// 设置数据源的配置
-			if ("2".equals(dBinfo.getConfigType())) {
-				dataSource.setInitialSize(10);
-				dataSource.setMaxIdle(30);
-				dataSource.setMinIdle(5);
-				dataSource.setMaxActive(50);
-			} else if ("3".equals(dBinfo.getConfigType())) {
-				dataSource.setInitialSize(30);
-				dataSource.setMaxIdle(50);
-				dataSource.setMinIdle(10);
-				dataSource.setMaxActive(100);
-			} else {
-				dataSource.setInitialSize(5);
-				dataSource.setMaxIdle(20);
-				dataSource.setMinIdle(2);
-				dataSource.setMaxActive(20);
-			}
-			dbMap.put(dBinfo.getId(), dataSource);
 		}
-		return dataSource;
+		
+		
+		return dao;
 	}
 
 	/**

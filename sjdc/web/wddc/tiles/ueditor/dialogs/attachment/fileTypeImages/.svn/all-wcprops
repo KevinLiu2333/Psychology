@@ -15,17 +15,17 @@ svn:wc:ra_dav:version-url
 V 128
 /svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/dialogs/attachment/fileTypeImages/icon_txt.gif
 END
-icon_psd.gif
-K 25
-svn:wc:ra_dav:version-url
-V 128
-/svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/dialogs/attachment/fileTypeImages/icon_psd.gif
-END
 icon_jpg.gif
 K 25
 svn:wc:ra_dav:version-url
 V 128
 /svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/dialogs/attachment/fileTypeImages/icon_jpg.gif
+END
+icon_psd.gif
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/dialogs/attachment/fileTypeImages/icon_psd.gif
 END
 icon_exe.gif
 K 25

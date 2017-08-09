@@ -45,12 +45,6 @@ svn:wc:ra_dav:version-url
 V 89
 /svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/img/icon_2.png
 END
-clear.png
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/img/clear.png
-END
 icon_07.png
 K 25
 svn:wc:ra_dav:version-url
@@ -62,6 +56,12 @@ K 25
 svn:wc:ra_dav:version-url
 V 89
 /svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/img/icon_3.png
+END
+clear.png
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/img/clear.png
 END
 icon_4.png
 K 25

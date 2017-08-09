@@ -87,17 +87,17 @@ svn:wc:ra_dav:version-url
 V 98
 /svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/echart/chart/scatter.js
 END
-chord.js
-K 25
-svn:wc:ra_dav:version-url
-V 96
-/svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/echart/chart/chord.js
-END
 map.js
 K 25
 svn:wc:ra_dav:version-url
 V 94
 /svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/echart/chart/map.js
+END
+chord.js
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/echart/chart/chord.js
 END
 gauge.js
 K 25

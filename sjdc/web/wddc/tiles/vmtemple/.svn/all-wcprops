@@ -3,17 +3,17 @@ svn:wc:ra_dav:version-url
 V 82
 /svn/!svn/ver/233307/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/vmtemple
 END
-addPlanMail.vm
-K 25
-svn:wc:ra_dav:version-url
-V 97
-/svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/vmtemple/addPlanMail.vm
-END
 addMeetingMail.vm
 K 25
 svn:wc:ra_dav:version-url
 V 100
 /svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/vmtemple/addMeetingMail.vm
+END
+addPlanMail.vm
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/210463/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/vmtemple/addPlanMail.vm
 END
 workInfo.vm
 K 25

@@ -274,6 +274,7 @@ public class SjbqAct {
 			}
 		}
 		List<Map<String, Object>> list1 =new ArrayList<Map<String,Object>>();
+		int level2 = 0,level3 = 0 ,level4 = 0 ,count2 = 0,count3 = 0,count4 =0;
 		for(TagInfoBo info:list){
 			Map<String, Object> map = new HashMap<String, Object>();
 			List<Map<String, Object>> list2 =new ArrayList<Map<String,Object>>();
@@ -300,7 +301,21 @@ public class SjbqAct {
 			}
 			map.put("children", list2);
 			list1.add(map);
+			level2 = dao.count(TagInfoBo.class,Cnd.where("t_status","=","1").and("tag_level","=",2).and("tag_number","like",info.getTagNumber()+"%"));
+			level3 = dao.count(TagInfoBo.class,Cnd.where("t_status","=","1").and("tag_level","=",3).and("tag_number","like",info.getTagNumber()+"%"));
+			level4 = dao.count(TagInfoBo.class,Cnd.where("t_status","=","1").and("tag_level","=",4).and("tag_number","like",info.getTagNumber()+"%"));
+			info.setLevel(level2);
+			info.settAccess(level3);
+			info.settDo(level4);
+			info.setTagNumber(level2+level3+level4+1+"");
+			count2 += level2;
+			count3 += level3;
+			count4 += level4;
 		}
+		result.put("count2", count2);
+		result.put("count3", count3);
+		result.put("count4", count4);
+		result.put("all", count2+count3+count4+list.size());
 		result.put("data", JSONArray.fromObject(list1));
 		result.put("father", list);
 		return result;

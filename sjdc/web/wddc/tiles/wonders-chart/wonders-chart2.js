@@ -23,7 +23,7 @@
 	function getMyEchartsObj(echart,divId,data){
 		$.ajax({
 			type:"get",
-			url:"/wddc/fw/ptservices?unitKey=SJ20161447233004873&fwCode=fw00013&id="+echart.fwDataParameter,
+			url:$('#js_ctx').val()+"/fw/ptservices?unitKey=SJ20161447233004873&fwCode=fw00013&id="+echart.fwDataParameter,
 			dataType: 'text',
 			success : function(result){
 			result = eval('('+result+')');
@@ -54,7 +54,6 @@
 	     for(i=0;i<keys.length;i++){
 	    	toChartData(option,echartsData,i,axisNameList,keys);
 	     }
-	     console.log(option);
 	     myChart.setOption(option);
 	 }
 	 function toChartAxis(option,echartsData,axisNameList,keys){
@@ -63,30 +62,30 @@
 			 if(option.legend != null && option.legend != ''&& typeof(option.legend) != 'undefined'){
 				 option.legend.data = keys;
 			 }
+			 console.log(echartsData);
 			 var axis = [];
-			 if(echartsData.dic != null && echartsData.dic != ''&& typeof(echartsData.dic) != 'undefined'){
-				 axis = echartsData.dic.dic;
-			 }else if(echartsData.custom_json != null && echartsData.custom_json != '' && typeof(echartsData.custom_json.dic) != 'undefined'){
-				 var axisDic = echartsData.custom_json.dic;
-				 axisDic = eval("(" + axisDic + ")");
+			 if(echartsData.DATA.dic != null && echartsData.DATA.dic != ''&& typeof(echartsData.DATA.dic) != 'undefined'){
+				 axis = echartsData.DATA.dic.dic;
+			 }else if(echartsData.DATA.custom_json != null && echartsData.DATA.custom_json != '' && typeof(echartsData.DATA.custom_json.dic) != 'undefined'){
+				 var axisDic = echartsData.DATA.custom_json.dic;
 				 axis = axisDic;
 			 }else{
-				 var axisJson = echartsData.DATA.DATA[axisNameList[0]];
+				 var axisJson = echartsData.DATA[axisNameList[0]];
 				 axisJson.forEach(function(result){
 					 axis.push(result.name);
 				 });
 			 }
-			 if(option.xAxis.type == "value" || option.xAxis[0].type == "value" ){
+			 if(option.xAxis[0].type == "value" ){
 		    		option.yAxis[0].data = axis;
-		    		option.yAxis.data = axis;
-		    }else if(option.yAxis.type == "value"||option.yAxis[0].type == "value"){
+		    }else if(option.yAxis[0].type == "value"){
 		    		option.xAxis[0].data = axis;
-		    		option.xAxis.data = axis;
 		    }
+			 console.log(option.xAxis[0]);
 		 }else{
 			 var axis = [];
+			 console.log(echartsData);
 			 for(i=0;i<axisNameList.length;i++){
-				 var axisJson = echartsData.DATA.DATA[axisNameList[0]];
+				 var axisJson = echartsData.DATA[axisNameList[0]];
 				 axisJson.forEach(function(result){
 					 axis.push(result.name);
 				 });
@@ -101,19 +100,18 @@
 	 //明天新增图表数据
 	 function toChartData(option,echartsData,i,axisNameList,keys){
 		 if(option.series[0].type == "bar" || option.series[0].type =="line"){
-			 var axisJson = echartsData[axisNameList[i]];
+			 var axisJson = echartsData.DATA[axisNameList[i]];
 			 var axisList = [];
 			 var dataList = [];
 			 var nameList = [];
-			 if(option.xAxis.type == "value" || option.xAxis[0].type == "value" ){
+			 if(option.xAxis[0].type == "value" ){
 				 axisList = option.yAxis[0].data;
-				 axisList = option.yAxis.data;
-		    }else if(option.yAxis.type == "value"||option.yAxis[0].type == "value"){
+		    }else if(option.yAxis[0].type == "value"){
 		    	axisList = option.xAxis[0].data;
-		    	axisList = option.xAxis.data;
 		    }
 			for(k=0;k<axisList.length;k++){
 				var axisFlag = 0;
+				if(axisJson != '当前数据项含有动态字典无法缓存')
 				axisJson.forEach(function(result){
 					if(result.name == axisList[k]){
 						dataList.push(result.value);
@@ -128,7 +126,7 @@
 			 option.series[i].name = keys[i];
 			 option.series[i].data = dataList;
 		 }else{
-			 var axisJson = echartsData.DATA.DATA[axisNameList[i]];
+			 var axisJson = echartsData.DATA[axisNameList[i]];
 			 option.series[i].name = keys[i];
 	    	 option.series[i].data = axisJson;
 		 }

@@ -9,6 +9,12 @@ svn:wc:ra_dav:version-url
 V 114
 /svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/dialogs/scrawl/images/delimg.png
 END
+brush.png
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/dialogs/scrawl/images/brush.png
+END
 scale.png
 K 25
 svn:wc:ra_dav:version-url
@@ -20,12 +26,6 @@ K 25
 svn:wc:ra_dav:version-url
 V 113
 /svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/dialogs/scrawl/images/redoH.png
-END
-brush.png
-K 25
-svn:wc:ra_dav:version-url
-V 113
-/svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/dialogs/scrawl/images/brush.png
 END
 emptyH.png
 K 25
@@ -75,15 +75,15 @@ svn:wc:ra_dav:version-url
 V 114
 /svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/dialogs/scrawl/images/addimg.png
 END
-undoH.png
-K 25
-svn:wc:ra_dav:version-url
-V 113
-/svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/dialogs/scrawl/images/undoH.png
-END
 undo.png
 K 25
 svn:wc:ra_dav:version-url
 V 112
 /svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/dialogs/scrawl/images/undo.png
+END
+undoH.png
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/dialogs/scrawl/images/undoH.png
 END

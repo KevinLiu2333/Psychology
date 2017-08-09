@@ -130,7 +130,8 @@
 															序号
 														</th>
 														<th class="center">资源类型</th>
-														<th class="center">目标资源</th>							
+														<th class="center">目标资源</th>	
+														<th class="center">选择资源项</th>							
 													</tr>
 												</thead>
 
@@ -145,11 +146,11 @@
 											
 																<td>
 																	${list.viewName }
-																	<input type="radio" name="Fruit" value="${list.themeId }">
+																	
 																</td>
-																
-															
-														
+																<td>
+																	<input type="radio" name="mbb" value="${list.themeId }">
+																</td>
 													</tr>
 													</c:forEach>												
 												
@@ -176,7 +177,8 @@
 															序号
 														</th>
 														<th class="center">资源类型</th>
-														<th class="center">参照资源</th>							
+														<th class="center">参照资源</th>
+														<th class="center">选择资源项</th>							
 													</tr>
 												</thead>
 
@@ -191,9 +193,11 @@
 											
 																<td>
 																	${list.viewName }
-																	<input type="radio" name="Fruit1" value="${list.themeId }">
+																	
 																</td>
-																
+																<td>
+																	<input type="radio" name="czb" value="${list.themeId }">
+																</td>
 															
 														
 													</tr>
@@ -278,12 +282,19 @@
 		$("#duibiIndex").attr("class","active");
 			
 		function toDuibi2(){
-			var checkedValue = $("input[type='radio'][name='Fruit1']:checked").val();
+			var checkedValue = $("input[name='mbb']:checked").val();
+			var checkedValue1 = $("input[name='czb']:checked").val();
+			
 			if(checkedValue == undefined || checkedValue == ""){
 				alert("请选择需要检测的资源项！");
 				return;
 			}
-			window.location.href='${ctx}/wdac/dataDuibi/toDuibitjjcrw2?themeId='+checkedValue;
+			if(checkedValue1 == undefined || checkedValue1 == ""){
+				alert("请选择需要检测的资源项！");
+				return;
+			}
+			window.location.href="${ctx}/wdac/dataDuibi/toDuibitjjcrw2?mbb="+checkedValue+"&czb="+checkedValue1;
+			
 		}
 		
 		</script>

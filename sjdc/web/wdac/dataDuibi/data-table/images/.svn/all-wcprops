@@ -21,17 +21,17 @@ svn:wc:ra_dav:version-url
 V 115
 /svn/!svn/ver/245696/projects2/MZJ/dream/dreamDC/code/wddc/web/wdac/dataDuibi/data-table/images/forward_enabled.png
 END
-sort_desc_disabled.png
-K 25
-svn:wc:ra_dav:version-url
-V 118
-/svn/!svn/ver/245696/projects2/MZJ/dream/dreamDC/code/wddc/web/wdac/dataDuibi/data-table/images/sort_desc_disabled.png
-END
 back_enabled.png
 K 25
 svn:wc:ra_dav:version-url
 V 112
 /svn/!svn/ver/245696/projects2/MZJ/dream/dreamDC/code/wddc/web/wdac/dataDuibi/data-table/images/back_enabled.png
+END
+sort_desc_disabled.png
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/245696/projects2/MZJ/dream/dreamDC/code/wddc/web/wdac/dataDuibi/data-table/images/sort_desc_disabled.png
 END
 sort_asc_disabled.png
 K 25

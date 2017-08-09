@@ -31,4 +31,7 @@ public class WddcConstants {
 
 	//返回值结构--返回map的值数量
 	public static final String RS_MAP_COUNT = "COUNT"; 
+
+	//返回值结构--返回map的值数量
+	public static final String VERIFY_CODE = "VVCC"; 
 }

@@ -14,15 +14,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-import net.sf.json.JSONObject;
-
-import org.apache.commons.dbcp.BasicDataSource;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
 import org.nutz.dao.Sqls;
-import org.nutz.dao.impl.NutDao;
 import org.nutz.dao.sql.Sql;
 import org.nutz.dao.sql.SqlCallback;
 import org.nutz.ioc.loader.annotation.IocBean;
@@ -45,6 +41,8 @@ import com.wonders.wddc.suite.data.entity.DBinfoBo;
 import com.wonders.wddc.suite.data.entity.MultStatInfoBo;
 import com.wonders.wddc.suite.data.entity.MultStatResultBo;
 import com.wonders.wddc.tiles.dic.DicDataUtils;
+
+import net.sf.json.JSONObject;
 
 @IocBean
 public class FormTimingJob implements Job{
@@ -114,8 +112,7 @@ public class FormTimingJob implements Job{
 				if (multStatInfo != null) {
 					DBinfoBo dbinfo = dao.fetch(DBinfoBo.class, Cnd.where("id",
 							"=", multStatInfo.getDatabaseid()));
-					BasicDataSource dataSource = DBAdapter.getDataSource(dbinfo);
-					Dao dao1 = new NutDao(dataSource);
+					Dao dao1 = DBAdapter.getDao(dbinfo);
 					Sql sql =Sqls.create(multStatInfo.getSql());
 					if(sqlflag&&!Strings.isEmpty(param)){
 						sql =toDealSql(multStatInfo.getSql(),param); 
@@ -149,7 +146,6 @@ public class FormTimingJob implements Job{
 					if(re!=null&&re.size()>0){
 						list.addAll(re);
 					}
-					DBAdapter.closeDataSource(dataSource);
 					MultStatResultBo bo = new MultStatResultBo();
 					bo.setId(UUID.randomUUID().toString().replaceAll("-",
 							""));

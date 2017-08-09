@@ -1,12 +1,9 @@
 package com.wonders.sjfw.fwbean;
 
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
-import net.sf.json.JSONObject;
 
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
@@ -20,6 +17,8 @@ import com.wonders.wddc.suite.data.entity.DataFileCustomJsonBo;
 import com.wonders.wddc.suite.data.entity.DataFileDataBo;
 import com.wonders.wddc.suite.data.entity.DataFileLinkBo;
 import com.wonders.wddc.suite.data.service.DataCoreService;
+
+import net.sf.json.JSONObject;
 
 @IocBean
 public class DataFileFwBean implements FwBean{
@@ -39,7 +38,7 @@ public class DataFileFwBean implements FwBean{
 		DataFileDataBo resultCacheMap =dao.fetch(DataFileDataBo.class, fwParam.requestParamMap.get("id"));
 		int countSum = 0;
 		if (resultCacheMap != null) {
-			result.put(FwConstants.RS_MAP_DATA, JSONObject.fromObject(resultCacheMap.getData()));
+			result.put(FwConstants.RS_MAP_DATA, JSONObject.fromObject(resultCacheMap.getData()).get("DATA"));
 			countSum ++;
 			result.put(FwConstants.RS_MAP_COUNT, ""+countSum);
 		}else {

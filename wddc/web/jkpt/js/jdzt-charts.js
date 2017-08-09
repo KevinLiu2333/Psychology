@@ -143,7 +143,7 @@ function jdztCharts(data){
                 },
 
                 {
-                name: '公安局',
+                name: dpList[3],
                 x: 670,
                 y: 250,
                 value:jdCount[3],
@@ -409,7 +409,7 @@ function jdztCharts(data){
             },
             {
             source: dpList[0],
-            target: '公安局',
+            target: dpList[3],
             label : {
                     normal : {
                         show : false

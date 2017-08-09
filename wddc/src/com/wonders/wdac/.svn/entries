@@ -1,15 +1,15 @@
 10
 
 dir
-246286
+247310
 http://10.1.8.82:1088/svn/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wdac
 http://10.1.8.82:1088/svn
 
 
 
-2017-07-13T04:03:05.582875Z
-245694
-lijianlin
+2017-08-03T08:05:30.902000Z
+247310
+daiwenlong
 
 
 svn:special svn:externals svn:needs-lock
@@ -33,5 +33,8 @@ entity
 dir
 
 jk
+dir
+
+service
 dir
 

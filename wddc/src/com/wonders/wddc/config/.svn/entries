@@ -1,15 +1,15 @@
 10
 
 dir
-246286
+246965
 http://10.1.8.82:1088/svn/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/config
 http://10.1.8.82:1088/svn
 
 
 
-2017-07-03T03:15:41.484375Z
-244820
-guanzuo
+2017-07-31T08:42:17.495750Z
+246965
+sunxin
 
 
 svn:special svn:externals svn:needs-lock
@@ -230,16 +230,16 @@ sunxin
 
 1439
 
-WddcConstants.java
+VerifyCodeAct.java
 file
 
 
 
 
-2017-07-21T07:56:21.751000Z
-5d3bf9646179e6aa1a0e49b217d686c7
-2017-06-15T02:22:36.625000Z
-243121
+2017-08-04T08:29:11.111000Z
+5ccbd9fb101f1ea15c6d46a61780f21d
+2017-07-31T08:42:17.495750Z
+246965
 sunxin
 
 
@@ -262,5 +262,39 @@ sunxin
 
 
 
-932
+4843
+
+WddcConstants.java
+file
+
+
+
+
+2017-08-04T08:29:11.098000Z
+2c02af832eab0765ff11a1d829541838
+2017-07-31T08:42:17.495750Z
+246965
+sunxin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1029
 

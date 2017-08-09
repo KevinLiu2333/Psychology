@@ -3,7 +3,6 @@ package com.wonders.wddc.suite.data.service;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -14,16 +13,12 @@ import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
 import org.nutz.dao.Cnd;
-import org.nutz.dao.Dao;
 import org.nutz.dao.Sqls;
-import org.nutz.dao.impl.NutDao;
 import org.nutz.dao.sql.Criteria;
 import org.nutz.dao.sql.Sql;
 import org.nutz.dao.sql.SqlCallback;
 import org.nutz.ioc.loader.annotation.Inject;
 import org.nutz.ioc.loader.annotation.IocBean;
-import org.nutz.mvc.annotation.At;
-import org.nutz.mvc.annotation.Ok;
 import org.nutz.service.Service;
 import org.nutz.trans.Atom;
 import org.nutz.trans.Trans;
@@ -31,7 +26,6 @@ import org.nutz.trans.Trans;
 import com.wonders.wddc.suite.csrq.comparator.OrderComparator;
 import com.wonders.wddc.suite.csrq.entity.ColConfigBo;
 import com.wonders.wddc.suite.csrq.entity.ColumnConfigBo;
-import com.wonders.wddc.suite.data.adapter.DBAdapter;
 import com.wonders.wddc.suite.data.entity.DBinfoBo;
 import com.wonders.wddc.suite.data.entity.TableConfigBo;
 import com.wonders.wddc.tiles.jk.DBpool;
@@ -740,8 +734,8 @@ public class TableService extends Service{
 	 */
 	@SuppressWarnings("unchecked")
 	public  List<Map<String,String>> getMapListColumn(final String viewName,String dataSouceId){
-		DBinfoBo dbInfo = dao().fetch(DBinfoBo.class, dataSouceId);//此处看的不爽
-		DBAdapter.getDataSource(dbInfo);
+//		DBinfoBo dbInfo = dao().fetch(DBinfoBo.class, dataSouceId);//此处看的不爽
+//		DBAdapter.getDataSource(dbInfo);
 		//获取表名为viewName的表单字段信息
 	    String colStr = 
 	    		"select "

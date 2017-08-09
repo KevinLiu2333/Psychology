@@ -66,7 +66,7 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="width-100 label label-info label-xlg arrowed-in arrowed-right">
-                                    <span align="center" style="font-family:'微软雅黑';font-size:20px">用户调用量（<span id="userCount">184</span>）</span>
+                                    <span align="center" style="font-family:'微软雅黑';font-size:20px">用户调用前十排行（<span id="userCount">184</span>）</span>
                                     <span id="test" hidden>0</span>
                                 </div>
 
@@ -76,7 +76,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="width-100 label label-info label-xlg arrowed-in arrowed-right">
-                                    <span  align="center" style="font-family:'微软雅黑';font-size:20px">委办局使用量（<span id="dpCount">167</span>）</span>
+                                    <span  align="center" style="font-family:'微软雅黑';font-size:20px">委办局使用量前五排行（<span id="dpCount">167</span>）</span>
                                     <span id="test" hidden>0</span>
                                 </div>
 
@@ -238,13 +238,13 @@
                     },
                     yAxis: {
                         type: 'category',
-                        data: dataJson.dpRank.sort()
+                        data: dataJson.dpRank
                     },
                     series: [
                         {
                             name: '服务器使用量',
                             type: 'bar',
-                            data: dataJson.dpCount.sort()
+                            data: dataJson.dpCount
                         }
 
                     ]

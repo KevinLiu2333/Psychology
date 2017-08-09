@@ -9,17 +9,17 @@ svn:wc:ra_dav:version-url
 V 94
 /svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/avatars/avatar1.png
 END
-avatar2.png
-K 25
-svn:wc:ra_dav:version-url
-V 94
-/svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/avatars/avatar2.png
-END
 avatar.png
 K 25
 svn:wc:ra_dav:version-url
 V 93
 /svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/avatars/avatar.png
+END
+avatar2.png
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/avatars/avatar2.png
 END
 avatar3.png
 K 25

@@ -9,17 +9,17 @@ svn:wc:ra_dav:version-url
 V 120
 /svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-sv_SE.min.js
 END
-defaults-fa_IR.js
-K 25
-svn:wc:ra_dav:version-url
-V 116
-/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-fa_IR.js
-END
 defaults-da_DK.min.js
 K 25
 svn:wc:ra_dav:version-url
 V 120
 /svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-da_DK.min.js
+END
+defaults-fa_IR.js
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-fa_IR.js
 END
 defaults-pt_BR.js
 K 25
@@ -33,29 +33,17 @@ svn:wc:ra_dav:version-url
 V 120
 /svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-cs_CZ.min.js
 END
-defaults-ko_KR.min.js
-K 25
-svn:wc:ra_dav:version-url
-V 120
-/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-ko_KR.min.js
-END
 defaults-eu.js
 K 25
 svn:wc:ra_dav:version-url
 V 113
 /svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-eu.js
 END
-defaults-it_IT.min.js
+defaults-ko_KR.min.js
 K 25
 svn:wc:ra_dav:version-url
 V 120
-/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-it_IT.min.js
-END
-defaults-hu_HU.min.js
-K 25
-svn:wc:ra_dav:version-url
-V 120
-/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-hu_HU.min.js
+/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-ko_KR.min.js
 END
 defaults-ro_RO.min.js
 K 25
@@ -69,29 +57,35 @@ svn:wc:ra_dav:version-url
 V 120
 /svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-ru_RU.min.js
 END
-defaults-de_DE.min.js
-K 25
-svn:wc:ra_dav:version-url
-V 120
-/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-de_DE.min.js
-END
 defaults-bg_BG.min.js
 K 25
 svn:wc:ra_dav:version-url
 V 120
 /svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-bg_BG.min.js
 END
+defaults-de_DE.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-de_DE.min.js
+END
+defaults-it_IT.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-it_IT.min.js
+END
+defaults-hu_HU.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-hu_HU.min.js
+END
 defaults-zh_CN.min.js
 K 25
 svn:wc:ra_dav:version-url
 V 120
 /svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-zh_CN.min.js
-END
-defaults-ua_UA.js
-K 25
-svn:wc:ra_dav:version-url
-V 116
-/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-ua_UA.js
 END
 defaults-fr_FR.js
 K 25
@@ -129,6 +123,12 @@ svn:wc:ra_dav:version-url
 V 116
 /svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-tr_TR.js
 END
+defaults-ua_UA.js
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-ua_UA.js
+END
 defaults-es_CL.min.js
 K 25
 svn:wc:ra_dav:version-url
@@ -141,17 +141,17 @@ svn:wc:ra_dav:version-url
 V 116
 /svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-sl_SI.js
 END
-defaults-zh_TW.js
-K 25
-svn:wc:ra_dav:version-url
-V 116
-/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-zh_TW.js
-END
 defaults-en_US.js
 K 25
 svn:wc:ra_dav:version-url
 V 116
 /svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-en_US.js
+END
+defaults-zh_TW.js
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-zh_TW.js
 END
 defaults-fa_IR.min.js
 K 25
@@ -189,18 +189,6 @@ svn:wc:ra_dav:version-url
 V 116
 /svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-cs_CZ.js
 END
-defaults-pt_PT.min.js
-K 25
-svn:wc:ra_dav:version-url
-V 120
-/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-pt_PT.min.js
-END
-defaults-tr_TR.min.js
-K 25
-svn:wc:ra_dav:version-url
-V 120
-/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-tr_TR.min.js
-END
 defaults-ua_UA.min.js
 K 25
 svn:wc:ra_dav:version-url
@@ -231,6 +219,18 @@ svn:wc:ra_dav:version-url
 V 120
 /svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-sk_SK.min.js
 END
+defaults-pt_PT.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-pt_PT.min.js
+END
+defaults-tr_TR.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-tr_TR.min.js
+END
 defaults-ko_KR.js
 K 25
 svn:wc:ra_dav:version-url
@@ -242,24 +242,6 @@ K 25
 svn:wc:ra_dav:version-url
 V 120
 /svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-sl_SI.min.js
-END
-defaults-it_IT.js
-K 25
-svn:wc:ra_dav:version-url
-V 116
-/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-it_IT.js
-END
-defaults-hu_HU.js
-K 25
-svn:wc:ra_dav:version-url
-V 116
-/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-hu_HU.js
-END
-defaults-ro_RO.js
-K 25
-svn:wc:ra_dav:version-url
-V 116
-/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-ro_RO.js
 END
 defaults-ru_RU.js
 K 25
@@ -278,6 +260,24 @@ K 25
 svn:wc:ra_dav:version-url
 V 116
 /svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-de_DE.js
+END
+defaults-it_IT.js
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-it_IT.js
+END
+defaults-hu_HU.js
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-hu_HU.js
+END
+defaults-ro_RO.js
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/210532/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/bootstrap-select/js/i18n/defaults-ro_RO.js
 END
 defaults-zh_CN.js
 K 25

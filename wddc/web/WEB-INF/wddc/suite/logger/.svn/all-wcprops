@@ -1,13 +1,25 @@
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/svn/!svn/ver/244709/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wddc/suite/logger
+/svn/!svn/ver/247464/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wddc/suite/logger
 END
 config_edit.jsp
 K 25
 svn:wc:ra_dav:version-url
 V 104
 /svn/!svn/ver/240483/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wddc/suite/logger/config_edit.jsp
+END
+log_analysis.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/247304/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wddc/suite/logger/log_analysis.jsp
+END
+view_list.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/247464/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wddc/suite/logger/view_list.jsp
 END
 config_list.jsp
 K 25
@@ -20,4 +32,10 @@ K 25
 svn:wc:ra_dav:version-url
 V 97
 /svn/!svn/ver/244709/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wddc/suite/logger/code.jsp
+END
+log_stat.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/247304/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wddc/suite/logger/log_stat.jsp
 END

@@ -1,16 +1,11 @@
 package com.wonders;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import org.nutz.dao.Cnd;
+import com.wonders.wddc.config.OnlineUserListener;
+import com.wonders.wddc.config.SessionFilter;
+import com.wonders.wddc.config.WddcConstants;
+import com.wonders.wddc.suite.logger.entity.LogLoginBo;
+import com.wonders.wddc.tiles.jk.entity.User;
+import com.wonders.wddc.tiles.tools.CookieUtils;
 import org.nutz.dao.Dao;
 import org.nutz.ioc.loader.annotation.Inject;
 import org.nutz.ioc.loader.annotation.IocBean;
@@ -26,14 +21,13 @@ import org.nutz.mvc.view.JspView;
 import org.nutz.mvc.view.ServerRedirectView;
 import org.nutz.mvc.view.ViewWrapper;
 
-import com.wonders.sjfw.entity.FwApply;
-import com.wonders.sjfw.entity.FwInfo;
-import com.wonders.wddc.config.OnlineUserListener;
-import com.wonders.wddc.config.SessionFilter;
-import com.wonders.wddc.config.WddcConstants;
-import com.wonders.wddc.suite.logger.entity.LogLoginBo;
-import com.wonders.wddc.tiles.jk.entity.User;
-import com.wonders.wddc.tiles.tools.CookieUtils;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.text.SimpleDateFormat;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
 /**
  * 用户登录 .
  *
@@ -62,6 +56,11 @@ public class LoginAt {
     public View login(String logonName, String password,Integer jym,HttpSession session,HttpServletRequest request, HttpServletResponse response) {
         //验证码信息
     	Integer jym_ok = (Integer) session.getAttribute(WddcConstants.VERIFY_CODE);
+        Enumeration names = request.getParameterNames();
+        while (names.hasMoreElements()){
+            String a = (String) names.nextElement();
+            System.out.println(a+":"+request.getParameter(a));
+        }
     	//登陆对象用于存储登陆登出信息
         removeAllAttributes(session);
     	if(jym_ok!=null && jym_ok == jym ){

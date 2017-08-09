@@ -13,13 +13,9 @@ import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
-import net.sf.json.JSONObject;
-
-import org.apache.commons.dbcp.BasicDataSource;
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
 import org.nutz.dao.Sqls;
-import org.nutz.dao.impl.NutDao;
 import org.nutz.dao.sql.Criteria;
 import org.nutz.dao.sql.Sql;
 import org.nutz.dao.sql.SqlCallback;
@@ -36,6 +32,8 @@ import com.wonders.wddc.suite.data.entity.StatResultBo;
 import com.wonders.wddc.suite.data.entity.StatTermBo;
 import com.wonders.wddc.suite.data.entity.StatTermResultBo;
 import com.wonders.wddc.tiles.dic.DicDataUtils;
+
+import net.sf.json.JSONObject;
 
 @IocBean
 public class StatTermJob implements Job{
@@ -55,9 +53,8 @@ public class StatTermJob implements Job{
 			info.init();
 			DBinfoBo dBinfo = dao.fetch(DBinfoBo.class,
 					Cnd.where("ID", "=", info.getDatabaseid()));
-			BasicDataSource dataSource = DBAdapter.getDataSource(dBinfo);
 			Map<String, String> result = new HashMap<String, String>();
-			Dao statdao = new NutDao(dataSource);
+			Dao statdao = DBAdapter.getDao(dBinfo);
 			List<String> sqlstrs = info.getSqllist();
 			for (String sqlstr : sqlstrs) {
 				Sql sql = Sqls.create(sqlstr);
@@ -88,7 +85,6 @@ public class StatTermJob implements Job{
 			dao.insert(statResult);
 			info.setUpdatetime(new Date());
 			dao.update(info);
-			DBAdapter.closeDataSource(dataSource);
 		}
 		//统计统计项
 		List<StatTermBo> list2 = dao.query(StatTermBo.class, null);

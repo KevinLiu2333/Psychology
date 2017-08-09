@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 74
-/svn/!svn/ver/244988/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/lib
+/svn/!svn/ver/246364/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/lib
 END
 json-lib-2.4-jdk15.jar
 K 25
@@ -62,6 +62,12 @@ K 25
 svn:wc:ra_dav:version-url
 V 104
 /svn/!svn/ver/208809/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/lib/commons-collections-3.2.1.jar
+END
+poi-3.10.1-20140818.jar
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/246364/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/lib/poi-3.10.1-20140818.jar
 END
 commons-lang-2.5.jar
 K 25

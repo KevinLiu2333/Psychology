@@ -15,13 +15,9 @@ import java.util.UUID;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import net.sf.json.JSONObject;
-
-import org.apache.commons.dbcp.BasicDataSource;
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
 import org.nutz.dao.Sqls;
-import org.nutz.dao.impl.NutDao;
 import org.nutz.dao.sql.Criteria;
 import org.nutz.dao.sql.Sql;
 import org.nutz.dao.sql.SqlCallback;
@@ -42,6 +38,8 @@ import com.wonders.wddc.suite.data.entity.DBinfoBo;
 import com.wonders.wddc.suite.data.entity.StatInfoBo;
 import com.wonders.wddc.suite.data.entity.StatResultBo;
 import com.wonders.wddc.suite.data.entity.StatTermBo;
+
+import net.sf.json.JSONObject;
 /**
  * 统计单元AT
  * @author vcixp
@@ -133,9 +131,8 @@ public class StatUnitAct {
 		info.init();
 		DBinfoBo dBinfo = dao.fetch(DBinfoBo.class, Cnd.where("ID", "=", info.getDatabaseid()));
 		//获取数据源
-		BasicDataSource dataSource = DBAdapter.getDataSource(dBinfo);
 		Map<String, String> result = new HashMap<String, String>();
-		Dao statdao = new NutDao(dataSource);
+		Dao statdao = DBAdapter.getDao(dBinfo);
 		List<String> sqlstrs = info.getSqllist();
 		//逐条sql执行
 		for (String sqlstr : sqlstrs) {
@@ -167,7 +164,6 @@ public class StatUnitAct {
 		dao.insert(statResult);
 		info.setUpdatetime(new Date());
 		dao.update(info);
-		DBAdapter.closeDataSource(dataSource);
 	}
 	/**
 	 * 统计所有
@@ -260,9 +256,8 @@ public class StatUnitAct {
 		info.init();
 		DBinfoBo dBinfo = dao.fetch(DBinfoBo.class, Cnd.where("ID", "=", info.getDatabaseid()));
 		//获取数据源
-		BasicDataSource dataSource = DBAdapter.getDataSource(dBinfo);
 		Map<String, String> result = new HashMap<String, String>();
-		Dao statdao = new NutDao(dataSource);
+		Dao statdao = DBAdapter.getDao(dBinfo);
 		List<String> sqlstrs = info.getSqllist();
 		for (String sqlstr : sqlstrs) {
 			Sql sql = Sqls.create(sqlstr);
@@ -321,7 +316,6 @@ public class StatUnitAct {
 				result.put(key, sqlresult.get(key));
 			}
 		}
-		DBAdapter.closeDataSource(dataSource);
 		return JSONObject.fromObject(result).toString();
 	}
 	

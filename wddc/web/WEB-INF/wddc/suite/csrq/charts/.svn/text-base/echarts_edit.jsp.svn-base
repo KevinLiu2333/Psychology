@@ -48,6 +48,18 @@
     				</div>
 		            
 	            </div>
+	           <label class="lable active-blue"  >与组装服务相关联 ：</label>
+	            <div class= "row">
+	            	<div class="col-md-12 form-group">
+	            		<p style="font-size:10px;color:red">如在组装服务中的key为"echartsData"和"echartsData1"并且数据项内容是"残疾人"和"志愿者"的则写为{'残疾人':'echartsData','志愿者':'echartsData1'}</p>
+	            		<table class="table" style="margin:0 auto; padding:0px; border-spacing:0px; border-style:none; border-collapse:collapse;">
+	            			<tr>
+			            		<td width="50%">请以json格式输入与组装服务自定义Key相关联的数据项内容 </td>
+			            		<td ><input class="form-control" style="display:inline;width : 60% " name="echart.legendToKey" type="text" value="${obj.echart.legendToKey }"/></td>
+	            			</tr>
+	            		</table>
+	            	</div>
+	            </div>
 	            <!-- option配置 -->
 	            <label class="lable active-blue"  >标签信息及Option配置信息  ：</label>
 	            
@@ -190,7 +202,8 @@
      $.ajax({
          type:"post",
          async:false,
-         url:"${ctx}/suite/data/term/getAllStatterm",
+         //url:"${ctx}/suite/data/term/getAllStatterm",
+         url:"${ctx}/suite/data/term/getAllData",
          success:function(data){
              for(var term in data){
                  //alert(data[term]);

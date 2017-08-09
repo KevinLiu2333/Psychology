@@ -208,9 +208,7 @@ public class DataFileAct {
 		}
 		Map<String, Object> jsonMap = new LinkedHashMap<String,Object>();
 		jsonMap.put(FwConstants.RS_MAP_DATA, data);
-//		jsonMap.putAll(data);
 		JSONObject json =JSONObject.fromObject(jsonMap);
-		//System.out.println(Json.toJson(jsonMap));
 		//缓存json到数据库
 		DataFileDataBo fileDataBo = dao.fetch(DataFileDataBo.class,id);
 		if (fileDataBo == null) {

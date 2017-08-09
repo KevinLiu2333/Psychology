@@ -16,15 +16,11 @@ import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import net.sf.json.JSONObject;
-
-import org.apache.commons.dbcp.BasicDataSource;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
 import org.nutz.dao.Sqls;
-import org.nutz.dao.impl.NutDao;
 import org.nutz.dao.sql.Criteria;
 import org.nutz.dao.sql.Sql;
 import org.nutz.dao.sql.SqlCallback;
@@ -48,6 +44,8 @@ import com.wonders.wddc.suite.data.entity.MultStatInfoBo;
 import com.wonders.wddc.suite.data.entity.MultStatResultBo;
 import com.wonders.wddc.tiles.dic.DicDataUtils;
 import com.wonders.wddc.tiles.tools.DateUtils;
+
+import net.sf.json.JSONObject;
 
 /**
  * 报表服务类
@@ -512,9 +510,7 @@ public class ReportService {
 				if (multStatInfo != null) {
 					DBinfoBo dbinfo = dao.fetch(DBinfoBo.class, Cnd.where("id",
 							"=", multStatInfo.getDatabaseid()));
-					BasicDataSource dataSource = DBAdapter
-							.getDataSource(dbinfo);
-					Dao dao1 = new NutDao(dataSource);
+					Dao dao1 = DBAdapter.getDao(dbinfo);
 					Sql sql = toDealSql(multStatInfo.getSql(), params);
 					// Sqls.create(multStatInfo.getSql());
 					sql.setCallback(new SqlCallback() {
@@ -543,7 +539,6 @@ public class ReportService {
 					if (re != null && re.size() > 0) {
 						list.addAll(re);
 					}
-					DBAdapter.closeDataSource(dataSource);
 					multStatInfo.setUpdatetime(new Date());
 					dao.update(multStatInfo);
 					MultStatResultBo bo = new MultStatResultBo();
@@ -665,8 +660,7 @@ public class ReportService {
 	private List<Map<String, String>> countByMultStatInfo(MultStatInfoBo info){
 		DBinfoBo dbinfo = dao.fetch(DBinfoBo.class,
 				Cnd.where("id", "=", info.getDatabaseid()));
-		BasicDataSource dataSource = DBAdapter.getDataSource(dbinfo);
-		Dao dao1 = new NutDao(dataSource);
+		Dao dao1 = DBAdapter.getDao(dbinfo);
 		Sql sql = Sqls.create(info.getSql());
 		sql.setCallback(new SqlCallback() {
 			@Override
@@ -698,7 +692,6 @@ public class ReportService {
 		dao.insert(result);
 		info.setUpdatetime(new Date());
 		dao.update(info);
-		DBAdapter.closeDataSource(dataSource);
 		return result.getResult();
 	}
 }

@@ -33,15 +33,36 @@ public class SimpleMailSender {
 			Message mailMessage = new MimeMessage(sendMailSession);
 			Address from = new InternetAddress(mailInfo.getFromAddress());
 			mailMessage.setFrom(from);
-			Address to = new InternetAddress(mailInfo.getToAddress());
-			Address toMore = new InternetAddress("364113971@qq.com");
-			Address toMM = new InternetAddress("guanzuo@Wondersgroup.com");
-			List list = new ArrayList();
-			list.add(toMore);
-			list.add(toMM);
-			InternetAddress[] addressTo = (InternetAddress[])list.toArray(new InternetAddress[list.size()]);
-			mailMessage.setRecipient(Message.RecipientType.TO, to);
-			mailMessage.addRecipients(Message.RecipientType.CC, addressTo);
+			String toAddress = mailInfo.getToAddress();
+			String toMoreAddress = mailInfo.getToMoreAddress();
+			if(toAddress.indexOf(",")!=-1){
+				String[] toAdd = toAddress.split(",");
+				List toList = new ArrayList();
+				for(int i=0;i<toAdd.length;i++){
+					Address to = new InternetAddress(toAdd[i]);
+					toList.add(to);
+				}
+				InternetAddress[] to = (InternetAddress[])toList.toArray(new InternetAddress[toList.size()]);
+				mailMessage.setRecipients(Message.RecipientType.TO, to);
+			}else{
+				Address to = new InternetAddress(toAddress);
+				mailMessage.setRecipient(Message.RecipientType.TO, to);
+			}
+			if(!"".equals(toMoreAddress)||toMoreAddress!=null){
+				if(toMoreAddress.indexOf(",")!=-1){
+					String[] toMoreAdd = toMoreAddress.split(",");
+					List list = new ArrayList();
+					for(int i=0;i<toMoreAdd.length;i++){
+						Address toMore = new InternetAddress(toMoreAdd[i]);
+						list.add(toMore);
+					}
+					InternetAddress[] addressTo = (InternetAddress[])list.toArray(new InternetAddress[list.size()]);
+					mailMessage.addRecipients(Message.RecipientType.CC, addressTo);
+				}else{
+					Address toMore = new InternetAddress(toMoreAddress);
+					mailMessage.addRecipient(Message.RecipientType.CC, toMore);
+				}
+			}
 			mailMessage.setSubject(mailInfo.getSubject());
 			mailMessage.setSentDate(new Date());
 			String mailContent = mailInfo.getContent();

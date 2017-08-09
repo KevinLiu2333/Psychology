@@ -32,11 +32,13 @@
 	</style>
 </head>
 <body class="no-skin">
+
+<input type="hidden" id="js_ctx" value="${ctx }" />
 <jsp:include page="/wdac/cj/sjclyy_header.jsp"></jsp:include>
 
 <div class="main-container" id="main-container">
 			<script type="text/javascript">
-				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			try{ace.settings.check('main-container' , 'fixed')}catch(e){}
 			</script>
 			<jsp:include page="/wdac/cj/sjclyy_slider.jsp"></jsp:include>
 			<div class="main-content">
@@ -54,6 +56,72 @@
 							</h1>
 						</div><!-- /.page-header -->
 						
+						<c:if test="${obj.data == 'none'}">
+						<form class="form-horizontal" id="form" action="${ctx }/wdac/dataCheck/toEditTask" method="post">
+						   <input name="info.id" value="${obj.info.id }" type="hidden">                        										
+						   <div class="col-xs-12" style="padding:50px 0 50px 0;border:1px solid #dff0d8;"> 
+							   
+								<div class="form-group">
+										<div class="col-xs-7" style="float: right;">
+											<label class="col-sm-12 control-label" style="text-align:left;"> ${obj.info.targetTable }</label>
+										</div>
+										<label class="col-sm-3 control-label" for="form-field-1" style="float: right;"> 目标表： </label>
+								</div>
+								<div class="form-group">
+										<div class="col-xs-7" style="float: right;">
+											<label class="col-sm-12 control-label" style="text-align:left;"> ${obj.info.referTable }</label>
+										</div>
+										<label class="col-sm-3 control-label" for="form-field-1" style="float: right;"> 参照表： </label>
+								</div>
+								<c:if test="${obj.info.itemName == 'all'}">
+									 <div class="form-group">
+										    <div class="col-xs-7" style="float: right;">
+										    	<label class="col-sm-12 control-label" for="form-field-1" style="text-align:left;">全部字段</label>
+											</div>
+											<label class="col-sm-3 control-label" for="form-field-1" style="float: right;"> 数据项： </label>
+									</div>
+								</c:if>
+								<c:if test="${obj.info.itemName != 'all'}">
+									<div class="form-group">
+									    <div class="col-xs-7" style="float: right;">
+									    	<label class="col-sm-12 control-label" for="form-field-1" style="text-align:left;" > ${obj.info.itemName }</label>
+										</div>
+										<label class="col-sm-3 control-label" for="form-field-1" style="float: right;"> 字段中文名： </label>
+									</div>
+									<div class="form-group">
+									    <div class="col-xs-7" style="float: right;">
+									    	<label class="col-sm-12 control-label" for="form-field-1" style="text-align:left;" > ${obj.info.itemCode }</label>
+										</div>
+										<label class="col-sm-3 control-label" for="form-field-1" style="float: right;"> 字段英文名： </label>
+									</div>
+								</c:if>
+					           <div class="form-group">
+										<div class="col-xs-7" style="float: right;">
+											<label class="col-sm-12 control-label" style="text-align:left;"> ${obj.info.taskName }</label>
+										</div>
+										<label class="col-sm-3 control-label" for="form-field-1" style="float: right;"> 任务名称： </label>
+								</div>
+								 <div class="form-group">
+										<div class="col-xs-7" style="float: right;">
+											<label id="checkRule" class="col-sm-12 control-label" style="text-align:left;">${obj.info.taskRules }</label>
+										</div>
+										<label class="col-sm-3 control-label" for="form-field-1" style="float: right;"> 检测规则： </label>
+								</div>
+								 <div class="form-group">
+										<div class="col-xs-7" style="float: right;">
+											<label class="col-sm-12 control-label" style="text-align:left;">${obj.info.taskDesc }</label>
+										</div>
+										<label class="col-sm-3 control-label" for="form-field-1" style="float: right;"> 任务描述： </label>
+								</div>
+								
+							</div>
+						</form>
+						</c:if>
+						
+						
+						
+						
+						<c:if test="${obj.data != 'none'}">
 						<div class="widget-box">
 	                       <div class="widget-header widget-header-small" style="background:#fff">
 								 <div class="step">
@@ -64,80 +132,83 @@
 								  </div>					
 					        </div>	
                         </div>	     
-                        
+                  <form class="form-horizontal" id="form" action="${ctx }/wdac/dataDuibi/toSaveTask" method="post">           
                    <div class="col-xs-12" style="padding:50px 0 50px 0;border:1px solid #dff0d8;"> 
-						     <form class="form-horizontal" role="form">
+						   
 							   <div class="form-group">
 									    <div class="col-xs-7" style="float: right;">
-											<label class="col-sm-3 control-label" for="form-field-1" style="text-align:left;" > T_GA_RJBXX </label>
+											<input name="info.resourceName" value="${obj.info.name }" type="hidden">
+									    	<input name="info.resourceType" value="${obj.info.tableTheme }" type="hidden">
+									    	<input name="info.targetTable" value="${obj.info.viewName }" type="hidden">
+									    	<input name="info.providerDepartment" value="${obj.info.deptName }" type="hidden">
+											<label class="col-sm-3 control-label" for="form-field-1" style="text-align:left;">${obj.info.viewName }</label>
 										</div>
 										<label class="col-sm-3 control-label" for="form-field-1" style="float: right;"> 目标资源： </label>
 								</div>
 								
 								<div class="form-group">
 									    <div class="col-xs-7" style="float: right;">
-											<label class="col-sm-3 control-label" for="form-field-1" style="text-align:left;" > T_GA_RJBXX_2017_05_01 </label>
+											<input name="info.resourceName" value="${obj.info.name }" type="hidden">
+									    	<input name="info.resourceType" value="${obj.info.tableTheme }" type="hidden">
+									    	<input name="info.referTable" value="${obj.cxf.viewName }" type="hidden">
+									    	<input name="info.providerDepartment" value="${obj.info.deptName }" type="hidden">
+											<label class="col-sm-3 control-label" for="form-field-1" style="text-align:left;">${obj.cxf.viewName }</label>
 										</div>
 										<label class="col-sm-3 control-label" for="form-field-1" style="float: right;"> 参照资源： </label>
 								</div>
 								
 								 <div class="form-group">
 									    <div class="col-xs-7" style="float: right;">
-											<label class="col-sm-3 control-label" for="form-field-1" style="text-align:left;" > 身份证号码 </label>
+									    <c:if test="${obj.data == 'all'}">
+									    	  <input  name="info.itemName" value="all" type="hidden">
+									    	<input  name="info.itemType" value="all" type="hidden">
+									    	<input  name="info.itemCode" value="all" type="hidden"> 
+									    	<label class="col-sm-12 control-label" for="form-field-1" style="text-align:left;">全部字段</label>
+									    </c:if>
+									    <c:if test="${obj.data != 'all'}">
+									    	<input  name="info.itemName" value="${obj.data.colComment }" type="hidden">
+									    	<input  name="info.itemType" value="${obj.data.colType }" type="hidden">
+									    	<input  name="info.itemCode" value="${obj.data.colName }" type="hidden">
+											<label class="col-sm-12 control-label" for="form-field-1" style="text-align:left;" > ${obj.data.colName } ${obj.data.colComment } </label>
+										</c:if>
 										</div>
-										<label class="col-sm-3 control-label" for="form-field-1" style="float: right;"> 目标表： </label>
-								</div>
-                                 <div class="form-group">
-									    <div class="col-xs-7" style="float: right;">
-											<label class="col-sm-3 control-label" for="form-field-1" style="text-align:left;" > ZJHM </label>
-										</div>
-										<label class="col-sm-3 control-label" for="form-field-1" style="float: right;"> 参照表： </label>
+										<label class="col-sm-3 control-label" for="form-field-1" style="float: right;"> 数据项： </label>
 								</div>
 					           <div class="form-group">
 										
-
 										<div class="col-xs-7" style="float: right;">
-											<input type="text" id="form-field-1" placeholder="请输入任务名称" class="col-xs-10 col-sm-5" />
+											<input type="text" id="taskName" name="info.taskName" placeholder="请输入任务名称" class="col-xs-10 col-sm-5">
 										</div>
 										<label class="col-sm-3 control-label" for="form-field-1" style="float: right;"> 任务名称： </label>
 								</div>
 								 <div class="form-group">
-										
-
 										<div class="col-xs-7" style="float: right;">
-											
-											<select class="chosen-select col-xs-10 col-sm-5" id="form-field-select-3" >
-													<option value="AA">---------请选择----------</option>
-													<option value="AL">数据非空量</option>
-													<option value="AK">数据变化量</option>
-													<option value="AZ">数据变化量</option>
-											</select>
+											<select id="taskRules" class="chosen-select col-xs-10 col-sm-5" name="info.taskRules"></select>
 										</div>
-										<label class="col-sm-3 control-label" for="form-field-1" style="float: right;"> 比对规则： </label>
+										<label class="col-sm-3 control-label" for="form-field-1" style="float: right;"> 对比规则： </label>
 								</div>
 								 <div class="form-group">
-
 										<div class="col-xs-7" style="float: right;">
-											<textarea style="margin: 0px; width: 267px; height: 136px;"  id="form-field-1"  class="col-xs-12 col-sm-5" value="" value="目标表T_GA_RJBXX与参照表T_GA_RJBXX_20161231的在沪人口（XM字段）增量比对">目标表T_GA_RJBXX与canzhao参照表T_GA_RJBXX_20161231的在沪人口（XM字段）+增量比对
-											</textarea>
+											<input type="text" id="taskDesc" name="info.taskDesc" placeholder="请输入任务描述" class="col-xs-10 col-sm-5">
 										</div>
 										<label class="col-sm-3 control-label" for="form-field-1" style="float: right;"> 任务描述： </label>
 								</div>
-							 </form>
+							 
 							</div>
-							<div class="col-xs-12" style="padding-top:50px;border:1px solid #dff0d8;"> \
+							<div class="col-xs-12" style="padding-top:50px;border:1px solid #dff0d8;">
 							     <div class="col-md-offset-2 col-md-8 center">
 						                     <button class="btn btn-sm btn-success" type="button" onclick="history.go(-1);">
 												<i class="ace-icon fa fa-reply icon-only"></i>
 												上一步
 											</button>
-						                   <button type="button" class="btn btn-sm btn-success" onclick="window.location.href='#'" align="Left" style="margin-left:50px;">
+						                   <button type="button" class="btn btn-sm btn-success" onclick="toSave()" align="Left" style="margin-left:50px;">
 												提交任务
 												<i class="ace-icon fa fa-arrow-right icon-on-right bigger-110"></i>
 											</button>
 					             </div> 
 							</div>
-							
+							</form>
+							</c:if>
 						 </div> 
                      
 					</div><!-- /.page-content -->
@@ -172,9 +243,55 @@
 	<![endif]-->
 	<script src="${ctx }/wdac/data-deal/js/ace-elements.min.js"></script>
 	<script src="${ctx }/wdac/data-deal/js/ace.min.js"></script>
+	<script type="text/javascript" src="${ctx}/wddc/tiles/js/dic.js"></script>
 	<script>
 		$("#dataDuibi").attr("class","active open");
 		$("#duibiIndex").attr("class","active");
+		var defaultvalue = $("#taskRules").attr("defaultvalue");
+		$(document).ready(function(){
+			$('#taskRules').jsondic({
+			dicid:'3007',
+			initvalue:'请选择',
+			defaultvalue:defaultvalue
+			});
+		});
+
+		var dicJson = null;
+		$.ajax({
+			type: "GET",
+			url: "${ctx}/wddc/tiles/js/dic.json",
+			dataType: 'text',
+			success: function (result) {
+				dicJson = eval('('+result+')');
+					for(key in dicJson['3007']){
+						if(key == $("#checkRule").text()){
+							$("#checkRule").text(dicJson['3007'][key]);
+						}
+					}
+			}
+		});
+		
+		function toSave(){
+			if($('#taskName').val()==null||$('#taskName').val()==''){
+				alert("请输入任务名称！");
+				return;
+			}
+			if($('#taskRules').val()=='请选择'){
+				alert("请选择检测规则！");
+				return;
+			}
+			if($('#taskDesc').val()==null||$('#taskDesc').val()==''){
+				alert("请输入任务描述！");
+				return;
+			}
+			$('#form').submit();
+		}
+		
+		
+		
+		
+		
+		
 	</script>
 </body>
 </html>

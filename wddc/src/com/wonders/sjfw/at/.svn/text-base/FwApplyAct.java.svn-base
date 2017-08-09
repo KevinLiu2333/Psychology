@@ -11,17 +11,15 @@ import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
 import org.nutz.dao.sql.Criteria;
 import org.nutz.ioc.loader.annotation.IocBean;
-import org.nutz.lang.Strings;
 import org.nutz.mvc.annotation.At;
 import org.nutz.mvc.annotation.Ok;
 
 import com.wonders.sjfw.entity.FwApply;
 import com.wonders.sjfw.entity.FwConfig;
 import com.wonders.sjfw.entity.FwInfo;
+import com.wonders.sjfw.platform.FwCoreService;
 import com.wonders.wddc.config.SessionFilter;
 import com.wonders.wddc.tiles.jk.entity.User;
-import com.wonders.wddc.tiles.tag.entity.TagInfoBo;
-import com.wonders.wddc.tiles.tag.entity.TagTypeBo;
 
 @At("/fw/apply")
 @IocBean(fields = "dao")
@@ -29,69 +27,26 @@ public class FwApplyAct {
 
     private Dao dao;
     
+    private FwCoreService fwCoreService;
+    /**
+     * 浏览服务信息.
+     * @param request
+     * @param tagId
+     * @param keyWord
+     * @param usedStatus
+     * @return
+     */
     @At
     @Ok("jsp:sjfw.index")
     public Map<String,Object> toIndex(HttpServletRequest request,String tagId,String keyWord,String usedStatus) {
-        tagId = request.getParameter("tagId");
-        keyWord = request.getParameter("keyWord");
-        usedStatus = request.getParameter("usedStatus");
         Map<String,Object> result = new HashMap<String,Object>();
 
-        Map<String,Object>  applyMap= new HashMap<String,Object>();
         User sessionUser = (User)request.getSession().getAttribute(SessionFilter.SESSION_USER);
-        String applyIds = "";
-        if(sessionUser != null){
-	        List<FwApply> fwApplyList = dao.query(FwApply.class,Cnd.where("unitId","=",sessionUser.getUnitId()));
-	        for(FwApply fwApply :fwApplyList){
-	            applyMap.put(fwApply.getFwInfoId(),fwApply);
-	            if("".equals(applyIds)){
-	                applyIds = fwApply.getFwInfoId();
-	            }else{
-	                applyIds = applyIds+","+fwApply.getFwInfoId();
-	            }
-	        }
-        }
-        //放入所有服务信息
-        result.put("fwInfoList", fwInfoList( tagId,keyWord,usedStatus,applyIds));
-        //放入标签信息
-        List<TagTypeBo> tagTypeList = dao.query(TagTypeBo.class, Cnd.where("catalog","=","12"));
-        result.put("typeList", tagTypeList);
-        //放入标签信息
-        result.put("keyWord", keyWord);
-        //放入标签信息
-        result.put("usedStatus", usedStatus);
-        //放入标签类型
-
-    	//获取catalog为"12"的页面标签集合
-        List<TagInfoBo> tagList = dao.query(TagInfoBo.class, Cnd.where("catalog", "=","12").getOrderBy().asc("orders"),null);
-        result.put("tagList",tagList);
-        //获取已申请的服务信息
-
-        //分页信息
-        result.put("applyMap",applyMap);
+        fwCoreService.toIndex(sessionUser, tagId, keyWord, usedStatus);
 
         return result;
     }
-    
-    public List<FwInfo> fwInfoList(String tagId,String keyWord,String usedStatus,String applyIds){
-        Criteria cri = Cnd.cri();
-        if(!Strings.isBlank(tagId)){
-        	TagInfoBo tagInfo = dao.fetch(TagInfoBo.class,Cnd.where("tagId", "=", tagId));
-            cri.where().andLike("tagList", tagInfo.getShowName());
-
-        }
-        if(!Strings.isBlank(keyWord)){
-            cri.where().orLike("fwAbstract", keyWord).orLike("tagList", keyWord).orLike("fwName", keyWord);;
-        }
-        if("0".equals(usedStatus)){
-            cri.where().andNotIn("fwInfoId", applyIds.split(","));
-        }
-        if("1".equals(usedStatus)){
-            cri.where().andIn("fwInfoId", applyIds.split(","));
-        }
-        List<FwInfo> fwInfoList = dao.query(FwInfo.class, cri);
-        return fwInfoList;
-    }
+ 
     
     /**
      * 获取接口数据.

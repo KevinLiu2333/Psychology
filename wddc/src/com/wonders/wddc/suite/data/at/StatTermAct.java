@@ -20,13 +20,9 @@ import java.util.regex.Pattern;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import net.sf.json.JSONObject;
-
-import org.apache.commons.dbcp.BasicDataSource;
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
 import org.nutz.dao.Sqls;
-import org.nutz.dao.impl.NutDao;
 import org.nutz.dao.sql.Criteria;
 import org.nutz.dao.sql.Sql;
 import org.nutz.dao.sql.SqlCallback;
@@ -44,12 +40,15 @@ import org.nutz.mvc.view.ServerRedirectView;
 
 import com.wonders.wddc.suite.data.adapter.DBAdapter;
 import com.wonders.wddc.suite.data.entity.DBinfoBo;
+import com.wonders.wddc.suite.data.entity.DataFileInfoBo;
 import com.wonders.wddc.suite.data.entity.StatInfoBo;
 import com.wonders.wddc.suite.data.entity.StatResultBo;
 import com.wonders.wddc.suite.data.entity.StatTermBo;
 import com.wonders.wddc.suite.data.entity.StatTermResultBo;
 import com.wonders.wddc.tiles.dic.DicDataUtils;
 import com.wonders.wddc.tiles.tools.DateUtils;
+
+import net.sf.json.JSONObject;
 
 /**
  * 统计项At
@@ -248,9 +247,8 @@ public class StatTermAct {
 		info.init();
 		DBinfoBo dBinfo = dao.fetch(DBinfoBo.class,
 				Cnd.where("ID", "=", info.getDatabaseid()));
-		BasicDataSource dataSource = DBAdapter.getDataSource(dBinfo);
 		Map<String, String> result = new HashMap<String, String>();
-		Dao statdao = new NutDao(dataSource);
+		Dao statdao = DBAdapter.getDao(dBinfo);
 		List<String> sqlstrs = info.getSqllist();
 		for (String sqlstr : sqlstrs) {
 			Sql sql = Sqls.create(sqlstr);
@@ -281,7 +279,6 @@ public class StatTermAct {
 		dao.insert(statResult);
 		info.setUpdatetime(new Date());
 		dao.update(info);
-		DBAdapter.closeDataSource(dataSource);
 	}
 	/**
 	 * 获取统计单元的结果
@@ -350,7 +347,16 @@ public class StatTermAct {
 		}
 		return result;
 	}
-	
+	@At
+	@Ok("json")
+	public Object getAllData(){
+		List<DataFileInfoBo> list = dao.query(DataFileInfoBo.class, null);
+		Map<String,String> result = new LinkedHashMap<String,String>();
+		for(DataFileInfoBo info:list){
+			result.put(info.getId(), info.getName());
+		}
+		return result;
+	}
 	/**
 	 * 获取统计项结果
 	 * @param id

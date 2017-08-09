@@ -1,9 +1,20 @@
 package com.wonders.wddc.suite.logger.at;
 
+import com.wonders.wddc.suite.logger.entity.BaseLog;
+import com.wonders.wddc.suite.logger.entity.LogErrorBo;
+import com.wonders.wddc.tiles.adaptor.util.ConUtils;
 import org.nutz.dao.Dao;
+import org.nutz.dao.pager.Pager;
+import org.nutz.dao.sql.Criteria;
 import org.nutz.ioc.loader.annotation.Inject;
 import org.nutz.ioc.loader.annotation.IocBean;
 import org.nutz.mvc.annotation.At;
+import org.nutz.mvc.annotation.Ok;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @At("/suite/logview")
 @IocBean
@@ -11,5 +22,70 @@ public class LogViewAct {
 	
 	@Inject
 	private Dao dao;
+	/**
+	 * 查看日志.
+	 */
+	@At
+	@Ok("jsp:wddc.suite.logger.view_list")
+	public Object toViewlog(HttpServletRequest request) {
+		//1.适配页面的查询参数
+		Criteria cri =  ConUtils.makeCri(request);
+		
+		//设置固定参数，可以多个条件查询
+		//cri.where().and("isDelay", "=","0");
+		//2.适配页面的分页参数
+		Pager pager =ConUtils.makePaginationPager(request);
+		//4.适配页面的排序参数		
+		ConUtils.makePaginationOrder(request, cri, "logTime", "desc");
+		//5.结果查询
+		//dao.query()为条件查询
+		List<BaseLog> list = dao.query(BaseLog.class,cri,pager);
+		pager.setRecordCount(dao.count(BaseLog.class,cri));
+		//6.回传数据
+		Map<String,Object>  result= new HashMap<String,Object>();
+		//数据总数
+		result.put("total",pager.getRecordCount());
+		//数据对象
+		result.put("rows", list);
+		//分页信息
+        result.put("pager",pager);
+		return result; 
+	}
+	/**
+	 * 查看错误详细日志.
+	 */
+	@At("/error/log/*")
+	@Ok("jsp:wddc.suite.logger.view.error_detail")
+	public Object toFwlogDetail(String dlId) {
+		//6.回传数据
+		Map<String,Object>  result= new HashMap<String,Object>();
+		LogErrorBo logErrorBo = dao.fetch(LogErrorBo.class, dlId);
+		result.put("errorLog", logErrorBo);
+		return result; 
+	}
+	
+	
+	/**
+	 * 日志分类汇总.
+	 */
+	@At
+	@Ok("jsp:wddc.suite.logger.log_stat")
+	public Object toLogStat(HttpServletRequest request) {
+		//6.回传数据
+		Map<String,Object>  result= new HashMap<String,Object>();
+		return result; 
+	}
+	
+	/**
+	 * 日志运行分析.
+	 */
+	@At
+	@Ok("jsp:wddc.suite.logger.log_analysis")
+	public Object toLogAnalysis(HttpServletRequest request) {
+		//6.回传数据
+		Map<String,Object>  result= new HashMap<String,Object>();
+		return result; 
+	}
+
 
 }

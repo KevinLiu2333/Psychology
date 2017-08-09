@@ -184,7 +184,7 @@
 		短信
 		</a>
 		
-		<a href="${ctx}/suite/mail/useMail" class="btn btn-app btn-primary" funtype="funa" index = "6-2">
+		<a href="${ctx}/suite/mail/toMailConfig" class="btn btn-app btn-primary" funtype="funa" index = "6-2">
 		<i class="ace-icon fa fa-envelope bigger-230"></i>
 		邮件
 		</a>
@@ -224,6 +224,10 @@
 		<i class="ace-icon fa fa-volume-up bigger-230"></i>
 		 接口任务
 		</a>
+		
+		
+	</div>
+
 		
 		
 	</div>

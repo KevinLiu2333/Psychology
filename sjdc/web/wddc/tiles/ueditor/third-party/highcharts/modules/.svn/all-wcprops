@@ -93,17 +93,17 @@ svn:wc:ra_dav:version-url
 V 125
 /svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/third-party/highcharts/modules/drilldown.js
 END
-canvas-tools.src.js
-K 25
-svn:wc:ra_dav:version-url
-V 132
-/svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/third-party/highcharts/modules/canvas-tools.src.js
-END
 map.js
 K 25
 svn:wc:ra_dav:version-url
 V 119
 /svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/third-party/highcharts/modules/map.js
+END
+canvas-tools.src.js
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/third-party/highcharts/modules/canvas-tools.src.js
 END
 annotations.src.js
 K 25

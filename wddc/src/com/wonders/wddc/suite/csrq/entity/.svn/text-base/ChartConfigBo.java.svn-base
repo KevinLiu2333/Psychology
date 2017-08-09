@@ -32,7 +32,8 @@ public class ChartConfigBo {
 	private Date generateTime;
 	@Column("TAG_LIST")
 	private String tagList;
-	
+	@Column("LEGENDTOKEY")
+	private String legendToKey;
 	
 	public String[] getTags() {
 	    if(!Strings.isBlank(tagList)){
@@ -115,4 +116,16 @@ public class ChartConfigBo {
 	public void setGenerateTime(Date generateTime) {
 		this.generateTime = generateTime;
 	}
+
+
+	public String getLegendToKey() {
+		return legendToKey;
+	}
+
+
+	public void setLegendToKey(String legendToKey) {
+		this.legendToKey = legendToKey;
+	}
+	
+	
 }

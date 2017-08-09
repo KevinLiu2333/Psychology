@@ -1,5 +1,17 @@
 K 25
 svn:wc:ra_dav:version-url
 V 96
-/svn/!svn/ver/237064/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/msg/entity
+/svn/!svn/ver/246293/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/msg/entity
+END
+MailLogBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/246293/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/msg/entity/MailLogBo.java
+END
+MailConfigBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/246293/projects2/MZJ/dream/dreamDC/code/wddc/src/com/wonders/wddc/suite/msg/entity/MailConfigBo.java
 END

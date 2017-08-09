@@ -3,17 +3,17 @@ svn:wc:ra_dav:version-url
 V 102
 /svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/dialogs/video/images
 END
-icons.gif
-K 25
-svn:wc:ra_dav:version-url
-V 112
-/svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/dialogs/video/images/icons.gif
-END
 bg.png
 K 25
 svn:wc:ra_dav:version-url
 V 109
 /svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/dialogs/video/images/bg.png
+END
+icons.gif
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/211588/projects2/MZJ/dream/dreamDC/code/wddc/web/wddc/tiles/ueditor/dialogs/video/images/icons.gif
 END
 center_focus.jpg
 K 25

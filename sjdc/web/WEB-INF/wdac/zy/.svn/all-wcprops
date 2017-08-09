@@ -3,29 +3,17 @@ svn:wc:ra_dav:version-url
 V 78
 /svn/!svn/ver/244843/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wdac/zy
 END
-compile_list.jsp
-K 25
-svn:wc:ra_dav:version-url
-V 95
-/svn/!svn/ver/243122/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wdac/zy/compile_list.jsp
-END
 apply_audit.jsp
 K 25
 svn:wc:ra_dav:version-url
 V 94
 /svn/!svn/ver/244823/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wdac/zy/apply_audit.jsp
 END
-apply_result.jsp
+compile_list.jsp
 K 25
 svn:wc:ra_dav:version-url
 V 95
-/svn/!svn/ver/244843/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wdac/zy/apply_result.jsp
-END
-apply.jsp
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/!svn/ver/244709/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wdac/zy/apply.jsp
+/svn/!svn/ver/243122/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wdac/zy/compile_list.jsp
 END
 audit_edit.jsp
 K 25
@@ -44,6 +32,18 @@ K 25
 svn:wc:ra_dav:version-url
 V 95
 /svn/!svn/ver/243122/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wdac/zy/publish_list.jsp
+END
+apply_result.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/244843/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wdac/zy/apply_result.jsp
+END
+apply.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/244709/projects2/MZJ/dream/dreamDC/code/wddc/web/WEB-INF/wdac/zy/apply.jsp
 END
 apply_list.jsp
 K 25

@@ -106,6 +106,7 @@
 																		
 																		<td style="width:15%"><h4>下级标签</h4></td>
 																		<td style="width:85%">
+																		
 																		   <c:forEach items="${obj.childtag }" var="child">
 																			<a href="#" class="btn btn-white">${child.tagName}</a>
 																			</c:forEach>	

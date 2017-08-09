@@ -3,12 +3,6 @@ svn:wc:ra_dav:version-url
 V 70
 /svn/!svn/ver/247048/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/js
 END
-fs-charts.js
-K 25
-svn:wc:ra_dav:version-url
-V 83
-/svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/js/fs-charts.js
-END
 jquery.liMarquee.js
 K 25
 svn:wc:ra_dav:version-url
@@ -20,6 +14,12 @@ K 25
 svn:wc:ra_dav:version-url
 V 89
 /svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/js/jd-month-charts.js
+END
+fs-charts.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/js/fs-charts.js
 END
 jd-year-cjarts.js
 K 25
@@ -57,17 +57,17 @@ svn:wc:ra_dav:version-url
 V 87
 /svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/js/angular-index.js
 END
-angular.min.js
-K 25
-svn:wc:ra_dav:version-url
-V 85
-/svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/js/angular.min.js
-END
 jquery-ui-datepicker.js
 K 25
 svn:wc:ra_dav:version-url
 V 94
 /svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/js/jquery-ui-datepicker.js
+END
+angular.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/js/angular.min.js
 END
 bootstrap-datetimepicker.zh-CN.js
 K 25
@@ -99,15 +99,15 @@ svn:wc:ra_dav:version-url
 V 92
 /svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/js/angular-customList.js
 END
-jd-day-charts.js
-K 25
-svn:wc:ra_dav:version-url
-V 87
-/svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/js/jd-day-charts.js
-END
 js-charts.js
 K 25
 svn:wc:ra_dav:version-url
 V 83
 /svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/js/js-charts.js
+END
+jd-day-charts.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/js/jd-day-charts.js
 END

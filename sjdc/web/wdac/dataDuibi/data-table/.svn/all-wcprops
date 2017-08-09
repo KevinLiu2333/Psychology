@@ -15,6 +15,12 @@ svn:wc:ra_dav:version-url
 V 110
 /svn/!svn/ver/245696/projects2/MZJ/dream/dreamDC/code/wddc/web/wdac/dataDuibi/data-table/dynamic_table_init.js
 END
+jquery.dataTables.js
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/245696/projects2/MZJ/dream/dreamDC/code/wddc/web/wdac/dataDuibi/data-table/jquery.dataTables.js
+END
 DT_bootstrap.js
 K 25
 svn:wc:ra_dav:version-url
@@ -26,12 +32,6 @@ K 25
 svn:wc:ra_dav:version-url
 V 135
 /svn/!svn/ver/245696/projects2/MZJ/dream/dreamDC/code/wddc/web/wdac/dataDuibi/data-table/dynamic_table_init%20-%20%E5%89%AF%E6%9C%AC.js
-END
-jquery.dataTables.js
-K 25
-svn:wc:ra_dav:version-url
-V 109
-/svn/!svn/ver/245696/projects2/MZJ/dream/dreamDC/code/wddc/web/wdac/dataDuibi/data-table/jquery.dataTables.js
 END
 Chinese.json
 K 25

@@ -27,17 +27,17 @@ svn:wc:ra_dav:version-url
 V 96
 /svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/css/ace-skins.min.css
 END
-fullcalendar.min.css
-K 25
-svn:wc:ra_dav:version-url
-V 99
-/svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/css/fullcalendar.min.css
-END
 colorpicker.css
 K 25
 svn:wc:ra_dav:version-url
 V 94
 /svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/css/colorpicker.css
+END
+fullcalendar.min.css
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/css/fullcalendar.min.css
 END
 bootstrap-duallistbox.min.css
 K 25
@@ -147,17 +147,17 @@ svn:wc:ra_dav:version-url
 V 98
 /svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/css/colorpicker.min.css
 END
-chosen.min.css
-K 25
-svn:wc:ra_dav:version-url
-V 93
-/svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/css/chosen.min.css
-END
 select2x2.png
 K 25
 svn:wc:ra_dav:version-url
 V 92
 /svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/css/select2x2.png
+END
+chosen.min.css
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/css/chosen.min.css
 END
 select2.min.css
 K 25
@@ -207,17 +207,17 @@ svn:wc:ra_dav:version-url
 V 96
 /svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/css/chosen-sprite.png
 END
-ui.jqgrid.css
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/css/ui.jqgrid.css
-END
 ace.min.css
 K 25
 svn:wc:ra_dav:version-url
 V 90
 /svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/css/ace.min.css
+END
+ui.jqgrid.css
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/243205/projects2/MZJ/dream/dreamDC/code/wddc/web/jkpt/assets/css/ui.jqgrid.css
 END
 bootstrap-datepicker.css.map
 K 25
