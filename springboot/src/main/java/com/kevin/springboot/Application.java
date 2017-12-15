@@ -4,6 +4,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -29,6 +30,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @MapperScan("com.kevin.springboot.mapper")
 //swagger2注解
 @EnableSwagger2
+//支持缓存
+@EnableCaching
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);

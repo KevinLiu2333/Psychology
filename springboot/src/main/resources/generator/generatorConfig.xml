@@ -2,32 +2,34 @@
 <!DOCTYPE generatorConfiguration
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
-
+<!-- 配置生成器 -->
 <generatorConfiguration>
     <properties resource="generator/config.properties"/>
-
     <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <!--    分隔符    -->
         <property name="beginningDelimiter" value="`"/>
         <property name="endingDelimiter" value="`"/>
-
+        <!--    mapper插件    -->
         <plugin type="${mapper.plugin}">
             <property name="mappers" value="${mapper.Mapper}"/>
         </plugin>
 
+        <!--    jdbc配置    -->
         <jdbcConnection driverClass="${jdbc.driverClass}"
                         connectionURL="${jdbc.url}"
                         userId="${jdbc.user}"
                         password="${jdbc.password}">
+            <property name="remarksReporting" value="true"></property>
         </jdbcConnection>
-
+        <!--    model路径    -->
         <javaModelGenerator targetPackage="${targetModelPackage}" targetProject="${targetJavaProject}"/>
-
+        <!--    xml路径    -->
         <sqlMapGenerator targetPackage="${targetXMLPackage}" targetProject="${targetResourcesProject}"/>
-
+        <!--    mapper路径    -->
         <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetJavaProject}"
                              type="XMLMAPPER"/>
-
-        <table tableName="%">
+        <!--    表配置    -->
+        <table tableName="JCPT_START_INFO">
             <generatedKey column="ID" sqlStatement="oracle" identity="true"/>
         </table>
     </context>
