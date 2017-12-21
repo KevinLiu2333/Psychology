@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VCalltagMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VCalltag" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="PERFORMANCE_CLASS" property="performanceClass" jdbcType="VARCHAR" />
+    <result column="WORK_REQUEST_CLASS" property="workRequestClass" jdbcType="VARCHAR" />
+    <result column="HOP_COUNT" property="hopCount" jdbcType="DECIMAL" />
+    <result column="PC_UNKNOWN" property="pcUnknown" jdbcType="DECIMAL" />
+    <result column="SERVICE_NAME" property="serviceName" jdbcType="VARCHAR" />
+    <result column="MODULE" property="module" jdbcType="VARCHAR" />
+    <result column="ACTION" property="action" jdbcType="VARCHAR" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="PROGRAM" property="program" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.XmlLoadRecordsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.XmlLoadRecords" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="XML_LOADID" property="xmlLoadid" jdbcType="DECIMAL" />
+    <id column="XML_RECORDID" property="xmlRecordid" jdbcType="DECIMAL" />
+    <result column="XML_RECORDTEXT" property="xmlRecordtext" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

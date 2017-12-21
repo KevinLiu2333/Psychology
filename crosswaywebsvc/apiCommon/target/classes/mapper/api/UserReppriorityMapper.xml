@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserReppriorityMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserReppriority" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PRIORITY_GROUP" property="priorityGroup" jdbcType="VARCHAR" />
+    <result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+    <result column="DATA_TYPE" property="dataType" jdbcType="VARCHAR" />
+    <result column="FIXED_DATA_LENGTH" property="fixedDataLength" jdbcType="DECIMAL" />
+    <result column="CHAR_VALUE" property="charValue" jdbcType="CHAR" />
+    <result column="VARCHAR2_VALUE" property="varchar2Value" jdbcType="VARCHAR" />
+    <result column="NUMBER_VALUE" property="numberValue" jdbcType="DECIMAL" />
+    <result column="DATE_VALUE" property="dateValue" jdbcType="DATE" />
+    <result column="NCHAR_VALUE" property="ncharValue" jdbcType="OTHER" />
+    <result column="NVARCHAR2_VALUE" property="nvarchar2Value" jdbcType="OTHER" />
+    <result column="LARGE_CHAR_VALUE" property="largeCharValue" jdbcType="CHAR" />
+    <result column="RAW_VALUE" property="rawValue" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

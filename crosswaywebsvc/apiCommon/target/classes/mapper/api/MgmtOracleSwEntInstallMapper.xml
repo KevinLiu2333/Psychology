@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtOracleSwEntInstallMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtOracleSwEntInstall" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="PNAME" property="pname" jdbcType="VARCHAR" />
+    <result column="PVALUE" property="pvalue" jdbcType="VARCHAR" />
+    <result column="EXTERNAL_NAME" property="externalName" jdbcType="VARCHAR" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="HOST_NAME" property="hostName" jdbcType="VARCHAR" />
+    <result column="CONTAINER_LOCATION" property="containerLocation" jdbcType="VARCHAR" />
+    <result column="NUM_PATCHED" property="numPatched" jdbcType="DECIMAL" />
+    <result column="HTGUID" property="htguid" jdbcType="VARBINARY" />
+    <result column="CONTAINER_GUID" property="containerGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

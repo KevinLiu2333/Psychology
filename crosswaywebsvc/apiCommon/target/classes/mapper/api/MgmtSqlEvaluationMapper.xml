@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtSqlEvaluationMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtSqlEvaluation" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="EVAL_TIMESTAMP" property="evalTimestamp" jdbcType="DATE" />
+    <id column="REASON_CODE" property="reasonCode" jdbcType="DECIMAL" />
+    <id column="ADDRESS" property="address" jdbcType="VARBINARY" />
+    <id column="HASH_VALUE" property="hashValue" jdbcType="DECIMAL" />
+    <id column="PLAN_HASH_VALUE" property="planHashValue" jdbcType="DECIMAL" />
+    <result column="COLLECTION_TIMESTAMP" property="collectionTimestamp" jdbcType="DATE" />
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="DERIVED_METRIC" property="derivedMetric" jdbcType="DECIMAL" />
+    <result column="SEVERITY_CODE" property="severityCode" jdbcType="DECIMAL" />
+    <result column="SEVERITY" property="severity" jdbcType="DECIMAL" />
+    <result column="EVAL_TYPE" property="evalType" jdbcType="DECIMAL" />
+    <result column="SQL_TEXT" property="sqlText" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

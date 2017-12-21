@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.LogmnrProcessedLogMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.LogmnrProcessedLog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SESSION#" property="session" jdbcType="DECIMAL" />
+    <id column="THREAD#" property="thread" jdbcType="DECIMAL" />
+    <result column="SEQUENCE#" property="sequence" jdbcType="DECIMAL" />
+    <result column="FIRST_CHANGE#" property="firstChange" jdbcType="DECIMAL" />
+    <result column="NEXT_CHANGE#" property="nextChange" jdbcType="DECIMAL" />
+    <result column="FIRST_TIME" property="firstTime" jdbcType="DATE" />
+    <result column="NEXT_TIME" property="nextTime" jdbcType="DATE" />
+    <result column="FILE_NAME" property="fileName" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="INFO" property="info" jdbcType="VARCHAR" />
+    <result column="TIMESTAMP" property="timestamp" jdbcType="DATE" />
+  </resultMap>
+</mapper>

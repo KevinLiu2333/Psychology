@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CtxUserPendingMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CtxUserPending" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PND_INDEX_NAME" property="pndIndexName" jdbcType="VARCHAR" />
+    <result column="PND_PARTITION_NAME" property="pndPartitionName" jdbcType="VARCHAR" />
+    <result column="PND_ROWID" property="pndRowid" jdbcType="OTHER" />
+    <result column="PND_TIMESTAMP" property="pndTimestamp" jdbcType="DATE" />
+  </resultMap>
+</mapper>

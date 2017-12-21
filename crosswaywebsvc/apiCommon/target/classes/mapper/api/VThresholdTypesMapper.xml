@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VThresholdTypesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VThresholdTypes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="METRICS_ID" property="metricsId" jdbcType="DECIMAL" />
+    <result column="METRICS_GROUP_ID" property="metricsGroupId" jdbcType="DECIMAL" />
+    <result column="OPERATOR_MASK" property="operatorMask" jdbcType="DECIMAL" />
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <result column="ALERT_REASON_ID" property="alertReasonId" jdbcType="DECIMAL" />
+    <result column="METRIC_VALUE_TYPE" property="metricValueType" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

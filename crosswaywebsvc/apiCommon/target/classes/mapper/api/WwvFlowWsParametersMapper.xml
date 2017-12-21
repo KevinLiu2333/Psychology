@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowWsParametersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowWsParameters" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="WS_OPERS_ID" property="wsOpersId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="INPUT_OR_OUTPUT" property="inputOrOutput" jdbcType="VARCHAR" />
+    <result column="PARM_TYPE" property="parmType" jdbcType="VARCHAR" />
+    <result column="TYPE_IS_XSD" property="typeIsXsd" jdbcType="VARCHAR" />
+    <result column="PARENT_ID" property="parentId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+  </resultMap>
+</mapper>

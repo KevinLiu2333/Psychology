@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigFrmRevFormmodulesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigFrmRevFormmodules" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FORMMODULE_ID" property="formmoduleId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="TITLE" property="title" jdbcType="VARCHAR" />
+    <result column="CONSOLEWINDOW" property="consolewindow" jdbcType="VARCHAR" />
+    <result column="SELECT_FOR_APP" property="selectForApp" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

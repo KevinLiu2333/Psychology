@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowUserMailQueueMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowUserMailQueue" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="MAIL_TO" property="mailTo" jdbcType="VARCHAR" />
+    <result column="MAIL_FROM" property="mailFrom" jdbcType="VARCHAR" />
+    <result column="MAIL_REPLYTO" property="mailReplyto" jdbcType="VARCHAR" />
+    <result column="MAIL_SUBJ" property="mailSubj" jdbcType="VARCHAR" />
+    <result column="MAIL_CC" property="mailCc" jdbcType="VARCHAR" />
+    <result column="MAIL_BCC" property="mailBcc" jdbcType="VARCHAR" />
+    <result column="MAIL_SEND_COUNT" property="mailSendCount" jdbcType="DECIMAL" />
+    <result column="MAIL_SEND_ERROR" property="mailSendError" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="MAIL_BODY" property="mailBody" jdbcType="CLOB" />
+    <result column="MAIL_BODY_HTML" property="mailBodyHtml" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

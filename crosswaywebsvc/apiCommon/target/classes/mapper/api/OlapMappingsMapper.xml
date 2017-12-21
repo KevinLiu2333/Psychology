@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OlapMappingsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OlapMappings" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="MAP_NAME" property="mapName" jdbcType="VARCHAR" />
+    <result column="MAP_ID" property="mapId" jdbcType="DECIMAL" />
+    <result column="MAP_TYPE" property="mapType" jdbcType="DECIMAL" />
+    <result column="MAPPING_OWNER_ID" property="mappingOwnerId" jdbcType="DECIMAL" />
+    <result column="MAPPING_OWNER_TYPE" property="mappingOwnerType" jdbcType="DECIMAL" />
+    <result column="MAPPED_OBJECT_ID" property="mappedObjectId" jdbcType="DECIMAL" />
+    <result column="MAPPED_DIM_TYPE" property="mappedDimType" jdbcType="DECIMAL" />
+    <result column="MAPPED_DIM_ID" property="mappedDimId" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="VARCHAR" />
+    <result column="SPARE4" property="spare4" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,3 @@
+Hadoop流使用Unix标准流作为Hadoop和程序之间的接口
+
+Hadoop管道 使用sockets作为tasktracker与C++编写的map或者reduce函数的进程之间的通道.jni(java native interface)未被使用

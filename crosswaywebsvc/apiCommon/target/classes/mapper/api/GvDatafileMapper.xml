@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvDatafileMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvDatafile" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="FILE#" property="file" jdbcType="DECIMAL" />
+    <result column="CREATION_CHANGE#" property="creationChange" jdbcType="DECIMAL" />
+    <result column="CREATION_TIME" property="creationTime" jdbcType="DATE" />
+    <result column="TS#" property="ts" jdbcType="DECIMAL" />
+    <result column="RFILE#" property="rfile" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="ENABLED" property="enabled" jdbcType="VARCHAR" />
+    <result column="CHECKPOINT_CHANGE#" property="checkpointChange" jdbcType="DECIMAL" />
+    <result column="CHECKPOINT_TIME" property="checkpointTime" jdbcType="DATE" />
+    <result column="UNRECOVERABLE_CHANGE#" property="unrecoverableChange" jdbcType="DECIMAL" />
+    <result column="UNRECOVERABLE_TIME" property="unrecoverableTime" jdbcType="DATE" />
+    <result column="LAST_CHANGE#" property="lastChange" jdbcType="DECIMAL" />
+    <result column="LAST_TIME" property="lastTime" jdbcType="DATE" />
+    <result column="OFFLINE_CHANGE#" property="offlineChange" jdbcType="DECIMAL" />
+    <result column="ONLINE_CHANGE#" property="onlineChange" jdbcType="DECIMAL" />
+    <result column="ONLINE_TIME" property="onlineTime" jdbcType="DATE" />
+    <result column="BYTES" property="bytes" jdbcType="DECIMAL" />
+    <result column="BLOCKS" property="blocks" jdbcType="DECIMAL" />
+    <result column="CREATE_BYTES" property="createBytes" jdbcType="DECIMAL" />
+    <result column="BLOCK_SIZE" property="blockSize" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="PLUGGED_IN" property="pluggedIn" jdbcType="DECIMAL" />
+    <result column="BLOCK1_OFFSET" property="block1Offset" jdbcType="DECIMAL" />
+    <result column="AUX_NAME" property="auxName" jdbcType="VARCHAR" />
+    <result column="FIRST_NONLOGGED_SCN" property="firstNonloggedScn" jdbcType="DECIMAL" />
+    <result column="FIRST_NONLOGGED_TIME" property="firstNonloggedTime" jdbcType="DATE" />
+    <result column="FOREIGN_DBID" property="foreignDbid" jdbcType="DECIMAL" />
+    <result column="FOREIGN_CREATION_CHANGE#" property="foreignCreationChange" jdbcType="DECIMAL" />
+    <result column="FOREIGN_CREATION_TIME" property="foreignCreationTime" jdbcType="DATE" />
+    <result column="PLUGGED_READONLY" property="pluggedReadonly" jdbcType="VARCHAR" />
+    <result column="PLUGIN_CHANGE#" property="pluginChange" jdbcType="DECIMAL" />
+    <result column="PLUGIN_RESETLOGS_CHANGE#" property="pluginResetlogsChange" jdbcType="DECIMAL" />
+    <result column="PLUGIN_RESETLOGS_TIME" property="pluginResetlogsTime" jdbcType="DATE" />
+  </resultMap>
+</mapper>

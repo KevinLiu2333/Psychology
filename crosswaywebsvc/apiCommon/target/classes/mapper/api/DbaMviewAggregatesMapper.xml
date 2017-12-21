@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaMviewAggregatesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaMviewAggregates" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="MVIEW_NAME" property="mviewName" jdbcType="VARCHAR" />
+    <result column="POSITION_IN_SELECT" property="positionInSelect" jdbcType="DECIMAL" />
+    <result column="CONTAINER_COLUMN" property="containerColumn" jdbcType="VARCHAR" />
+    <result column="AGG_FUNCTION" property="aggFunction" jdbcType="VARCHAR" />
+    <result column="DISTINCTFLAG" property="distinctflag" jdbcType="VARCHAR" />
+    <result column="MEASURE" property="measure" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

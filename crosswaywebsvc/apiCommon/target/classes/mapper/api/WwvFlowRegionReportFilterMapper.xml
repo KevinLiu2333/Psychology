@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowRegionReportFilterMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowRegionReportFilter" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="REGION_ID" property="regionId" jdbcType="DECIMAL" />
+    <result column="CONDITION_TYPE" property="conditionType" jdbcType="VARCHAR" />
+    <result column="COND_EXPRESSION1" property="condExpression1" jdbcType="VARCHAR" />
+    <result column="COND_EXPRESSION2" property="condExpression2" jdbcType="VARCHAR" />
+    <result column="COMPOUND_OPERATOR" property="compoundOperator" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+  </resultMap>
+</mapper>

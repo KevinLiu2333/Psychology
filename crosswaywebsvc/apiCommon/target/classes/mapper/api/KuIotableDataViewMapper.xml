@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuIotableDataViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuIotableDataView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="DATAOBJ_NUM" property="dataobjNum" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="PART_NAME" property="partName" jdbcType="VARCHAR" />
+    <result column="PARTTYPE" property="parttype" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="TRIGFLAG" property="trigflag" jdbcType="DECIMAL" />
+    <result column="XMLTYPE_FMTS" property="xmltypeFmts" jdbcType="DECIMAL" />
+    <result column="XMLSCHEMACOLS" property="xmlschemacols" jdbcType="CHAR" />
+    <result column="XML_OUTOFLINE" property="xmlOutofline" jdbcType="CHAR" />
+    <result column="LONGCOL" property="longcol" jdbcType="CHAR" />
+    <result column="NFT_VARRAY" property="nftVarray" jdbcType="CHAR" />
+    <result column="NONSCOPED_REF" property="nonscopedRef" jdbcType="CHAR" />
+    <result column="TSTZ_COLS" property="tstzCols" jdbcType="CHAR" />
+    <result column="SCHEMA_OBJ" property="schemaObj" jdbcType="OTHER" />
+    <result column="TS_NAME" property="tsName" jdbcType="VARCHAR" />
+    <result column="BLOCKSIZE" property="blocksize" jdbcType="DECIMAL" />
+    <result column="BYTES_ALLOC" property="bytesAlloc" jdbcType="DECIMAL" />
+    <result column="BASE_OBJ" property="baseObj" jdbcType="OTHER" />
+    <result column="DOMIDX_OBJ" property="domidxObj" jdbcType="OTHER" />
+    <result column="ANC_OBJ" property="ancObj" jdbcType="OTHER" />
+    <result column="UNLOAD_METHOD" property="unloadMethod" jdbcType="DECIMAL" />
+    <result column="ET_PARALLEL" property="etParallel" jdbcType="DECIMAL" />
+    <result column="FGAC" property="fgac" jdbcType="DECIMAL" />
+    <result column="REFPAR_LEVEL" property="refparLevel" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

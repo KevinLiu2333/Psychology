@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VRowcacheParentMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VRowcacheParent" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDX" property="indx" jdbcType="DECIMAL" />
+    <result column="HASH" property="hash" jdbcType="DECIMAL" />
+    <result column="CACHE#" property="cache" jdbcType="DECIMAL" />
+    <result column="CACHE_NAME" property="cacheName" jdbcType="VARCHAR" />
+    <result column="EXISTENT" property="existent" jdbcType="VARCHAR" />
+    <result column="LOCK_MODE" property="lockMode" jdbcType="DECIMAL" />
+    <result column="LOCK_REQUEST" property="lockRequest" jdbcType="DECIMAL" />
+    <result column="INST_LOCK_REQUEST" property="instLockRequest" jdbcType="DECIMAL" />
+    <result column="INST_LOCK_RELEASE" property="instLockRelease" jdbcType="DECIMAL" />
+    <result column="INST_LOCK_TYPE" property="instLockType" jdbcType="VARCHAR" />
+    <result column="ADDRESS" property="address" jdbcType="VARBINARY" />
+    <result column="TXN" property="txn" jdbcType="VARBINARY" />
+    <result column="SADDR" property="saddr" jdbcType="VARBINARY" />
+    <result column="INST_LOCK_ID1" property="instLockId1" jdbcType="VARBINARY" />
+    <result column="INST_LOCK_ID2" property="instLockId2" jdbcType="VARBINARY" />
+    <result column="KEY" property="key" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

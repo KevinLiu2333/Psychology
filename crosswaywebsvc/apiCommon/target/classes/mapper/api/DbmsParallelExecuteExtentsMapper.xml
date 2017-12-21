@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbmsParallelExecuteExtentsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbmsParallelExecuteExtents" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="SEGMENT_NAME" property="segmentName" jdbcType="VARCHAR" />
+    <result column="PARTITION_NAME" property="partitionName" jdbcType="VARCHAR" />
+    <result column="SEGMENT_TYPE" property="segmentType" jdbcType="VARCHAR" />
+    <result column="DATA_OBJECT_ID" property="dataObjectId" jdbcType="DECIMAL" />
+    <result column="RELATIVE_FNO" property="relativeFno" jdbcType="DECIMAL" />
+    <result column="BLOCK_ID" property="blockId" jdbcType="DECIMAL" />
+    <result column="BLOCKS" property="blocks" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

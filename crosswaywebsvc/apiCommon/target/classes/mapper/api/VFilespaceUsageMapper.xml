@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VFilespaceUsageMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VFilespaceUsage" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TABLESPACE_ID" property="tablespaceId" jdbcType="DECIMAL" />
+    <result column="RFNO" property="rfno" jdbcType="DECIMAL" />
+    <result column="ALLOCATED_SPACE" property="allocatedSpace" jdbcType="DECIMAL" />
+    <result column="FILE_SIZE" property="fileSize" jdbcType="DECIMAL" />
+    <result column="FILE_MAXSIZE" property="fileMaxsize" jdbcType="DECIMAL" />
+    <result column="CHANGESCN_BASE" property="changescnBase" jdbcType="DECIMAL" />
+    <result column="CHANGESCN_WRAP" property="changescnWrap" jdbcType="DECIMAL" />
+    <result column="FLAG" property="flag" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

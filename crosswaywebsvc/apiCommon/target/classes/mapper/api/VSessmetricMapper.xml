@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VSessmetricMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VSessmetric" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="BEGIN_TIME" property="beginTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="INTSIZE_CSEC" property="intsizeCsec" jdbcType="DECIMAL" />
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="SESSION_SERIAL_NUM" property="sessionSerialNum" jdbcType="DECIMAL" />
+    <result column="CPU" property="cpu" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_READS" property="physicalReads" jdbcType="DECIMAL" />
+    <result column="LOGICAL_READS" property="logicalReads" jdbcType="DECIMAL" />
+    <result column="PGA_MEMORY" property="pgaMemory" jdbcType="DECIMAL" />
+    <result column="HARD_PARSES" property="hardParses" jdbcType="DECIMAL" />
+    <result column="SOFT_PARSES" property="softParses" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_READ_PCT" property="physicalReadPct" jdbcType="DECIMAL" />
+    <result column="LOGICAL_READ_PCT" property="logicalReadPct" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

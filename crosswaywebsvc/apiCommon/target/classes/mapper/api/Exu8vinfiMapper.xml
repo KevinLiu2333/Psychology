@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu8vinfiMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu8vinfi" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VOBJID" property="vobjid" jdbcType="DECIMAL" />
+    <result column="VNAME" property="vname" jdbcType="VARCHAR" />
+    <result column="VOWNER" property="vowner" jdbcType="VARCHAR" />
+    <result column="VOWNERID" property="vownerid" jdbcType="DECIMAL" />
+    <result column="VAUDIT" property="vaudit" jdbcType="VARCHAR" />
+    <result column="VCOMMENT" property="vcomment" jdbcType="VARCHAR" />
+    <result column="VCNAME" property="vcname" jdbcType="VARCHAR" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="DEFER" property="defer" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="OIDLEN" property="oidlen" jdbcType="DECIMAL" />
+    <result column="OIDCLAUSE" property="oidclause" jdbcType="VARCHAR" />
+    <result column="TYPEOWNER" property="typeowner" jdbcType="VARCHAR" />
+    <result column="TYPENAME" property="typename" jdbcType="VARCHAR" />
+    <result column="VLEN" property="vlen" jdbcType="DECIMAL" />
+    <result column="VTEXT" property="vtext" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuRlsPolicyViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuRlsPolicyView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="BASE_OBJ" property="baseObj" jdbcType="OTHER" />
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="GNAME" property="gname" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="STMT_TYPE" property="stmtType" jdbcType="DECIMAL" />
+    <result column="CHECK_OPT" property="checkOpt" jdbcType="DECIMAL" />
+    <result column="ENABLE_FLAG" property="enableFlag" jdbcType="DECIMAL" />
+    <result column="PFSCHMA" property="pfschma" jdbcType="VARCHAR" />
+    <result column="PPNAME" property="ppname" jdbcType="VARCHAR" />
+    <result column="PFNAME" property="pfname" jdbcType="VARCHAR" />
+    <result column="POLICY_TYPE" property="policyType" jdbcType="VARCHAR" />
+    <result column="LONG_PRED" property="longPred" jdbcType="DECIMAL" />
+    <result column="REL_COLS" property="relCols" jdbcType="OTHER" />
+    <result column="REL_COLS_OPT" property="relColsOpt" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexWorkspaceApexUsersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexWorkspaceApexUsers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE_ID" property="workspaceId" jdbcType="DECIMAL" />
+    <result column="WORKSPACE_NAME" property="workspaceName" jdbcType="VARCHAR" />
+    <result column="FIRST_SCHEMA_PROVISIONED" property="firstSchemaProvisioned" jdbcType="VARCHAR" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="EMAIL" property="email" jdbcType="VARCHAR" />
+    <result column="DATE_CREATED" property="dateCreated" jdbcType="DATE" />
+    <result column="DATE_LAST_UPDATED" property="dateLastUpdated" jdbcType="DATE" />
+    <result column="AVAILABLE_SCHEMAS" property="availableSchemas" jdbcType="DECIMAL" />
+    <result column="IS_ADMIN" property="isAdmin" jdbcType="VARCHAR" />
+    <result column="IS_APPLICATION_DEVELOPER" property="isApplicationDeveloper" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

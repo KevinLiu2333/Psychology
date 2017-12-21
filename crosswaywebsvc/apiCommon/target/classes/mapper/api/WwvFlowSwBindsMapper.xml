@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowSwBindsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowSwBinds" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FILE_ID" property="fileId" jdbcType="DECIMAL" />
+    <result column="STMT_NUM" property="stmtNum" jdbcType="DECIMAL" />
+    <result column="BIND_TYPE" property="bindType" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="VALUE" property="value" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

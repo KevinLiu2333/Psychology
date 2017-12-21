@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexWorkspaceFilesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexWorkspaceFiles" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE_ID" property="workspaceId" jdbcType="DECIMAL" />
+    <result column="WORKSPACE_NAME" property="workspaceName" jdbcType="VARCHAR" />
+    <result column="FILE_ID" property="fileId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="FILE_NAME" property="fileName" jdbcType="VARCHAR" />
+    <result column="MIME_TYPE" property="mimeType" jdbcType="VARCHAR" />
+    <result column="FILE_SIZE" property="fileSize" jdbcType="DECIMAL" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="EMAIL" property="email" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="FILE_TYPE" property="fileType" jdbcType="VARCHAR" />
+    <result column="DOCUMENT" property="document" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

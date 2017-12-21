@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VLockMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VLock">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LMODE" jdbcType="DECIMAL" property="lmode" />
+    <result column="REQUEST" jdbcType="DECIMAL" property="request" />
+    <result column="CTIME" jdbcType="DECIMAL" property="ctime" />
+    <result column="BLOCK" jdbcType="DECIMAL" property="block" />
+    <result column="LADDR" jdbcType="VARBINARY" property="laddr" />
+    <result column="KADDR" jdbcType="VARBINARY" property="kaddr" />
+    <result column="SADDR" jdbcType="VARBINARY" property="saddr" />
+    <result column="RADDR" jdbcType="VARBINARY" property="raddr" />
+  </resultMap>
+</mapper>

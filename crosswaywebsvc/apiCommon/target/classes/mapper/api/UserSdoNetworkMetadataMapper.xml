@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserSdoNetworkMetadataMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserSdoNetworkMetadata" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NETWORK" property="network" jdbcType="VARCHAR" />
+    <result column="NETWORK_ID" property="networkId" jdbcType="DECIMAL" />
+    <result column="NETWORK_CATEGORY" property="networkCategory" jdbcType="VARCHAR" />
+    <result column="GEOMETRY_TYPE" property="geometryType" jdbcType="VARCHAR" />
+    <result column="NETWORK_TYPE" property="networkType" jdbcType="VARCHAR" />
+    <result column="NO_OF_HIERARCHY_LEVELS" property="noOfHierarchyLevels" jdbcType="DECIMAL" />
+    <result column="NO_OF_PARTITIONS" property="noOfPartitions" jdbcType="DECIMAL" />
+    <result column="LRS_TABLE_NAME" property="lrsTableName" jdbcType="VARCHAR" />
+    <result column="LRS_GEOM_COLUMN" property="lrsGeomColumn" jdbcType="VARCHAR" />
+    <result column="NODE_TABLE_NAME" property="nodeTableName" jdbcType="VARCHAR" />
+    <result column="NODE_GEOM_COLUMN" property="nodeGeomColumn" jdbcType="VARCHAR" />
+    <result column="NODE_COST_COLUMN" property="nodeCostColumn" jdbcType="VARCHAR" />
+    <result column="NODE_PARTITION_COLUMN" property="nodePartitionColumn" jdbcType="VARCHAR" />
+    <result column="NODE_DURATION_COLUMN" property="nodeDurationColumn" jdbcType="VARCHAR" />
+    <result column="LINK_TABLE_NAME" property="linkTableName" jdbcType="VARCHAR" />
+    <result column="LINK_GEOM_COLUMN" property="linkGeomColumn" jdbcType="VARCHAR" />
+    <result column="LINK_DIRECTION" property="linkDirection" jdbcType="VARCHAR" />
+    <result column="LINK_COST_COLUMN" property="linkCostColumn" jdbcType="VARCHAR" />
+    <result column="LINK_PARTITION_COLUMN" property="linkPartitionColumn" jdbcType="VARCHAR" />
+    <result column="LINK_DURATION_COLUMN" property="linkDurationColumn" jdbcType="VARCHAR" />
+    <result column="PATH_TABLE_NAME" property="pathTableName" jdbcType="VARCHAR" />
+    <result column="PATH_GEOM_COLUMN" property="pathGeomColumn" jdbcType="VARCHAR" />
+    <result column="PATH_LINK_TABLE_NAME" property="pathLinkTableName" jdbcType="VARCHAR" />
+    <result column="SUBPATH_TABLE_NAME" property="subpathTableName" jdbcType="VARCHAR" />
+    <result column="SUBPATH_GEOM_COLUMN" property="subpathGeomColumn" jdbcType="VARCHAR" />
+    <result column="PARTITION_TABLE_NAME" property="partitionTableName" jdbcType="VARCHAR" />
+    <result column="PARTITION_BLOB_TABLE_NAME" property="partitionBlobTableName" jdbcType="VARCHAR" />
+    <result column="COMPONENT_TABLE_NAME" property="componentTableName" jdbcType="VARCHAR" />
+    <result column="NODE_LEVEL_TABLE_NAME" property="nodeLevelTableName" jdbcType="VARCHAR" />
+    <result column="TOPOLOGY" property="topology" jdbcType="VARCHAR" />
+    <result column="USER_DEFINED_DATA" property="userDefinedData" jdbcType="VARCHAR" />
+    <result column="EXTERNAL_REFERENCES" property="externalReferences" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SchedulerDestinationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SchedulerDestinations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="CONNECT_INFO" property="connectInfo" jdbcType="VARCHAR" />
+    <result column="HOSTNAME" property="hostname" jdbcType="VARCHAR" />
+    <result column="IP_ADDRESS" property="ipAddress" jdbcType="VARCHAR" />
+    <result column="PORT" property="port" jdbcType="DECIMAL" />
+    <result column="EXPIRY_DATE" property="expiryDate" jdbcType="TIMESTAMP" />
+    <result column="ADDITIONAL_INFO1" property="additionalInfo1" jdbcType="DECIMAL" />
+    <result column="ADDITIONAL_INFO2" property="additionalInfo2" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="AGTDESTOID" property="agtdestoid" jdbcType="DECIMAL" />
+    <result column="COMMENTS" property="comments" jdbcType="VARCHAR" />
+    <result column="SHARED_KEY" property="sharedKey" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

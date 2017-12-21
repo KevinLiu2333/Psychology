@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VSqlfnMetadataMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VSqlfnMetadata" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FUNC_ID" property="funcId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="MINARGS" property="minargs" jdbcType="DECIMAL" />
+    <result column="MAXARGS" property="maxargs" jdbcType="DECIMAL" />
+    <result column="DATATYPE" property="datatype" jdbcType="VARCHAR" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="ANALYTIC" property="analytic" jdbcType="VARCHAR" />
+    <result column="AGGREGATE" property="aggregate" jdbcType="VARCHAR" />
+    <result column="OFFLOADABLE" property="offloadable" jdbcType="VARCHAR" />
+    <result column="DISP_TYPE" property="dispType" jdbcType="VARCHAR" />
+    <result column="USAGE" property="usage" jdbcType="VARCHAR" />
+    <result column="DESCR" property="descr" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

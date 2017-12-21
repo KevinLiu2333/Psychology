@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserJavaMethodsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserJavaMethods" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="METHOD_INDEX" property="methodIndex" jdbcType="DECIMAL" />
+    <result column="METHOD_NAME" property="methodName" jdbcType="VARCHAR" />
+    <result column="ACCESSIBILITY" property="accessibility" jdbcType="VARCHAR" />
+    <result column="IS_STATIC" property="isStatic" jdbcType="VARCHAR" />
+    <result column="IS_FINAL" property="isFinal" jdbcType="VARCHAR" />
+    <result column="IS_SYNCHRONIZED" property="isSynchronized" jdbcType="VARCHAR" />
+    <result column="IS_NATIVE" property="isNative" jdbcType="VARCHAR" />
+    <result column="IS_ABSTRACT" property="isAbstract" jdbcType="VARCHAR" />
+    <result column="IS_STRICT" property="isStrict" jdbcType="VARCHAR" />
+    <result column="ARGUMENTS" property="arguments" jdbcType="DECIMAL" />
+    <result column="THROWS" property="throws" jdbcType="DECIMAL" />
+    <result column="ARRAY_DEPTH" property="arrayDepth" jdbcType="DECIMAL" />
+    <result column="BASE_TYPE" property="baseType" jdbcType="VARCHAR" />
+    <result column="RETURN_CLASS" property="returnClass" jdbcType="VARCHAR" />
+    <result column="IS_COMPILED" property="isCompiled" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

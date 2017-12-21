@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuSequenceViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuSequenceView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="SCHEMA_OBJ" property="schemaObj" jdbcType="OTHER" />
+    <result column="INCRE" property="incre" jdbcType="DECIMAL" />
+    <result column="MINVALUE" property="minvalue" jdbcType="VARCHAR" />
+    <result column="MAXVALUE" property="maxvalue" jdbcType="VARCHAR" />
+    <result column="CYCLE" property="cycle" jdbcType="DECIMAL" />
+    <result column="SEQ_ORDER" property="seqOrder" jdbcType="DECIMAL" />
+    <result column="CACHE" property="cache" jdbcType="DECIMAL" />
+    <result column="HIGHWATER" property="highwater" jdbcType="VARCHAR" />
+    <result column="SEQ_AUDIT" property="seqAudit" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

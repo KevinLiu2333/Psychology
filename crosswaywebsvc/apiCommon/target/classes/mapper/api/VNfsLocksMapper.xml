@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VNfsLocksMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VNfsLocks" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OPENSEQUENCEID" property="opensequenceid" jdbcType="DECIMAL" />
+    <result column="LOCKSEQUENCEID" property="locksequenceid" jdbcType="DECIMAL" />
+    <result column="LOCKOWNER" property="lockowner" jdbcType="VARCHAR" />
+    <result column="OFFSET" property="offset" jdbcType="DECIMAL" />
+    <result column="LENGTH" property="length" jdbcType="DECIMAL" />
+    <result column="LOCKTYPE" property="locktype" jdbcType="VARCHAR" />
+    <result column="OPENSTATEID" property="openstateid" jdbcType="VARBINARY" />
+    <result column="LOCKSTATEID" property="lockstateid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

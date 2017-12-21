@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtUserPreferencesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtUserPreferences" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <id column="PREFERENCE_NAME" property="preferenceName" jdbcType="VARCHAR" />
+    <result column="PREFERENCE_VALUE" property="preferenceValue" jdbcType="VARCHAR" />
+    <result column="ADDITIONAL_VALUE" property="additionalValue" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

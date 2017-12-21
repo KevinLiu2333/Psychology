@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexDeveloperAuditLogMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexDeveloperAuditLog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="DEVELOPER" property="developer" jdbcType="VARCHAR" />
+    <result column="AUDIT_DATE" property="auditDate" jdbcType="DATE" />
+    <result column="UPDATED" property="updated" jdbcType="DATE" />
+    <result column="AUDIT_ACTION" property="auditAction" jdbcType="VARCHAR" />
+    <result column="PAGE_ID" property="pageId" jdbcType="DECIMAL" />
+    <result column="PAGE_NAME" property="pageName" jdbcType="VARCHAR" />
+    <result column="COMPONENT" property="component" jdbcType="VARCHAR" />
+    <result column="COMPONENT_NAME" property="componentName" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="FLOW_TABLE_PK" property="flowTablePk" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

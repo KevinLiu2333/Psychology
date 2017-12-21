@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VHmRecommendationMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VHmRecommendation" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RECOMMENDATION_ID" property="recommendationId" jdbcType="DECIMAL" />
+    <result column="FDG_ID" property="fdgId" jdbcType="DECIMAL" />
+    <result column="RUN_ID" property="runId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="RANK" property="rank" jdbcType="DECIMAL" />
+    <result column="TIME_DETECTED" property="timeDetected" jdbcType="TIMESTAMP" />
+    <result column="EXECUTED" property="executed" jdbcType="TIMESTAMP" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="REPAIR_SCRIPT" property="repairScript" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

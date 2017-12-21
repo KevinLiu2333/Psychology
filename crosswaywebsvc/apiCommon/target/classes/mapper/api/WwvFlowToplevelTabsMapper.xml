@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowToplevelTabsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowToplevelTabs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="TAB_SET" property="tabSet" jdbcType="VARCHAR" />
+    <result column="TAB_SEQUENCE" property="tabSequence" jdbcType="DECIMAL" />
+    <result column="TAB_NAME" property="tabName" jdbcType="VARCHAR" />
+    <result column="TAB_IMAGE" property="tabImage" jdbcType="VARCHAR" />
+    <result column="TAB_NON_CURRENT_IMAGE" property="tabNonCurrentImage" jdbcType="VARCHAR" />
+    <result column="TAB_IMAGE_ATTRIBUTES" property="tabImageAttributes" jdbcType="VARCHAR" />
+    <result column="TAB_TEXT" property="tabText" jdbcType="VARCHAR" />
+    <result column="TAB_TARGET" property="tabTarget" jdbcType="VARCHAR" />
+    <result column="DISPLAY_CONDITION" property="displayCondition" jdbcType="VARCHAR" />
+    <result column="DISPLAY_CONDITION2" property="displayCondition2" jdbcType="VARCHAR" />
+    <result column="DISPLAY_CONDITION_TYPE" property="displayConditionType" jdbcType="VARCHAR" />
+    <result column="CURRENT_ON_TABSET" property="currentOnTabset" jdbcType="VARCHAR" />
+    <result column="REQUIRED_PATCH" property="requiredPatch" jdbcType="DECIMAL" />
+    <result column="SECURITY_SCHEME" property="securityScheme" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="TAB_COMMENT" property="tabComment" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

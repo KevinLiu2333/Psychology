@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvSessionWaitHistoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvSessionWaitHistory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="SEQ#" property="seq" jdbcType="DECIMAL" />
+    <result column="EVENT#" property="event" jdbcType="DECIMAL" />
+    <result column="EVENT" property="event" jdbcType="VARCHAR" />
+    <result column="P1TEXT" property="p1text" jdbcType="VARCHAR" />
+    <result column="P1" property="p1" jdbcType="DECIMAL" />
+    <result column="P2TEXT" property="p2text" jdbcType="VARCHAR" />
+    <result column="P2" property="p2" jdbcType="DECIMAL" />
+    <result column="P3TEXT" property="p3text" jdbcType="VARCHAR" />
+    <result column="P3" property="p3" jdbcType="DECIMAL" />
+    <result column="WAIT_TIME" property="waitTime" jdbcType="DECIMAL" />
+    <result column="WAIT_TIME_MICRO" property="waitTimeMicro" jdbcType="DECIMAL" />
+    <result column="TIME_SINCE_LAST_WAIT_MICRO" property="timeSinceLastWaitMicro" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

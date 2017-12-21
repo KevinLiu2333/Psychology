@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtBslnStatisticsMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtBslnStatistics">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DATASOURCE_GUID" jdbcType="VARBINARY" property="datasourceGuid" />
+    <id column="COMPUTE_DATE" jdbcType="DATE" property="computeDate" />
+    <id column="SUBINTERVAL_CODE" jdbcType="VARCHAR" property="subintervalCode" />
+    <id column="BSLN_GUID" jdbcType="VARBINARY" property="bslnGuid" />
+    <result column="SAMPLE_COUNT" jdbcType="DECIMAL" property="sampleCount" />
+    <result column="AVERAGE" jdbcType="DECIMAL" property="average" />
+    <result column="MINIMUM" jdbcType="DECIMAL" property="minimum" />
+    <result column="MAXIMUM" jdbcType="DECIMAL" property="maximum" />
+    <result column="SDEV" jdbcType="DECIMAL" property="sdev" />
+    <result column="PCTILE_25" jdbcType="DECIMAL" property="pctile25" />
+    <result column="PCTILE_50" jdbcType="DECIMAL" property="pctile50" />
+    <result column="PCTILE_75" jdbcType="DECIMAL" property="pctile75" />
+    <result column="PCTILE_90" jdbcType="DECIMAL" property="pctile90" />
+    <result column="PCTILE_95" jdbcType="DECIMAL" property="pctile95" />
+    <result column="EST_SAMPLE_COUNT" jdbcType="DECIMAL" property="estSampleCount" />
+    <result column="EST_SLOPE" jdbcType="DECIMAL" property="estSlope" />
+    <result column="EST_INTERCEPT" jdbcType="DECIMAL" property="estIntercept" />
+    <result column="EST_FIT_QUALITY" jdbcType="DECIMAL" property="estFitQuality" />
+    <result column="EST_PCTILE_99" jdbcType="DECIMAL" property="estPctile99" />
+    <result column="EST_PCTILE_999" jdbcType="DECIMAL" property="estPctile999" />
+    <result column="EST_PCTILE_9999" jdbcType="DECIMAL" property="estPctile9999" />
+  </resultMap>
+</mapper>

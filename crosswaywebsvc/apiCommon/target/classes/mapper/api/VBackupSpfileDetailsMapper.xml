@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VBackupSpfileDetailsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VBackupSpfileDetails" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SESSION_KEY" property="sessionKey" jdbcType="DECIMAL" />
+    <result column="SESSION_RECID" property="sessionRecid" jdbcType="DECIMAL" />
+    <result column="SESSION_STAMP" property="sessionStamp" jdbcType="DECIMAL" />
+    <result column="BS_KEY" property="bsKey" jdbcType="DECIMAL" />
+    <result column="SET_STAMP" property="setStamp" jdbcType="DECIMAL" />
+    <result column="SET_COUNT" property="setCount" jdbcType="DECIMAL" />
+    <result column="MODIFICATION_TIME" property="modificationTime" jdbcType="DATE" />
+    <result column="FILESIZE" property="filesize" jdbcType="DECIMAL" />
+    <result column="FILESIZE_DISPLAY" property="filesizeDisplay" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

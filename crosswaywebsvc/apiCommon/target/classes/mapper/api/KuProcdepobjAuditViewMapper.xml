@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuProcdepobjAuditViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuProcdepobjAuditView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="BASE_OBJ" property="baseObj" jdbcType="OTHER" />
+    <result column="CLASS" property="class" jdbcType="DECIMAL" />
+    <result column="PREPOST" property="prepost" jdbcType="DECIMAL" />
+    <result column="TYPE_NUM" property="typeNum" jdbcType="DECIMAL" />
+    <result column="LEVEL_NUM" property="levelNum" jdbcType="DECIMAL" />
+    <result column="PACKAGE" property="package" jdbcType="VARCHAR" />
+    <result column="PKG_SCHEMA" property="pkgSchema" jdbcType="VARCHAR" />
+    <result column="ANC_OBJ" property="ancObj" jdbcType="OTHER" />
+    <result column="PLSQL" property="plsql" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

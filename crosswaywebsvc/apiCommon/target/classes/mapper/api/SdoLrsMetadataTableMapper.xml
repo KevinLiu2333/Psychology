@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoLrsMetadataTableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoLrsMetadataTable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SDO_OWNER" property="sdoOwner" jdbcType="VARCHAR" />
+    <id column="SDO_TABLE_NAME" property="sdoTableName" jdbcType="VARCHAR" />
+    <id column="SDO_COLUMN_NAME" property="sdoColumnName" jdbcType="VARCHAR" />
+    <result column="SDO_DIM_POS" property="sdoDimPos" jdbcType="DECIMAL" />
+    <result column="SDO_DIM_UNIT" property="sdoDimUnit" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

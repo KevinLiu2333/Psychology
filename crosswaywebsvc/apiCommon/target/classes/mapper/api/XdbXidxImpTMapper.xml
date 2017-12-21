@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.XdbXidxImpTMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.XdbXidxImpT" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDEX_NAME" property="indexName" jdbcType="VARCHAR" />
+    <result column="SCHEMA_NAME" property="schemaName" jdbcType="VARCHAR" />
+    <result column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="DATA" property="data" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

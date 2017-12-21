@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.XdbDxptabMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.XdbDxptab" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="IDXOBJ#" property="idxobj" jdbcType="DECIMAL" />
+    <result column="PATHTABOBJ#" property="pathtabobj" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="RAWSIZE" property="rawsize" jdbcType="DECIMAL" />
+    <result column="PARAMETERS" property="parameters" jdbcType="OTHER" />
+    <result column="PENDTABOBJ#" property="pendtabobj" jdbcType="DECIMAL" />
+    <result column="SNAPSHOT" property="snapshot" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UstatsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Ustats" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="INTCOL#" property="intcol" jdbcType="DECIMAL" />
+    <result column="STATSTYPE#" property="statstype" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="STATISTICS" property="statistics" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

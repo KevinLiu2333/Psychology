@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserAdvisorLogMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserAdvisorLog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <result column="TASK_NAME" property="taskName" jdbcType="VARCHAR" />
+    <result column="EXECUTION_START" property="executionStart" jdbcType="DATE" />
+    <result column="EXECUTION_END" property="executionEnd" jdbcType="DATE" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="STATUS_MESSAGE" property="statusMessage" jdbcType="VARCHAR" />
+    <result column="PCT_COMPLETION_TIME" property="pctCompletionTime" jdbcType="DECIMAL" />
+    <result column="PROGRESS_METRIC" property="progressMetric" jdbcType="DECIMAL" />
+    <result column="METRIC_UNITS" property="metricUnits" jdbcType="VARCHAR" />
+    <result column="ACTIVITY_COUNTER" property="activityCounter" jdbcType="DECIMAL" />
+    <result column="RECOMMENDATION_COUNT" property="recommendationCount" jdbcType="DECIMAL" />
+    <result column="ERROR_MESSAGE" property="errorMessage" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

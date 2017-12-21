@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VOlapiIfaceObjectHistoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VOlapiIfaceObjectHistory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HIST_ID" property="histId" jdbcType="DECIMAL" />
+    <result column="SEQNO" property="seqno" jdbcType="DECIMAL" />
+    <result column="XSOQSEHI_SEQNO" property="xsoqsehiSeqno" jdbcType="DECIMAL" />
+    <result column="IFACE_NAME" property="ifaceName" jdbcType="VARCHAR" />
+    <result column="PARENT" property="parent" jdbcType="DECIMAL" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="XSOQOPHI_SEQNO" property="xsoqophiSeqno" jdbcType="DECIMAL" />
+    <result column="TOTAL_SQL2CPP" property="totalSql2cpp" jdbcType="DECIMAL" />
+    <result column="TOTAL_CPPEXEC" property="totalCppexec" jdbcType="DECIMAL" />
+    <result column="TOTAL_CPP2SQL" property="totalCpp2sql" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

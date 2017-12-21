@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.LogmnrgObjMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.LogmnrgObj" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJV#" property="objv" jdbcType="DECIMAL" />
+    <result column="OWNER#" property="owner" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="NAMESPACE" property="namespace" jdbcType="DECIMAL" />
+    <result column="SUBNAME" property="subname" jdbcType="VARCHAR" />
+    <result column="TYPE#" property="type" jdbcType="DECIMAL" />
+    <result column="REMOTEOWNER" property="remoteowner" jdbcType="VARCHAR" />
+    <result column="LINKNAME" property="linkname" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+    <result column="STIME" property="stime" jdbcType="DATE" />
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="OID$" property="oid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

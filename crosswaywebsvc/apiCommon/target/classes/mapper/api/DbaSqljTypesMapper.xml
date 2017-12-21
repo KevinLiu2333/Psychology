@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaSqljTypesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaSqljTypes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="TYPE_NAME" property="typeName" jdbcType="VARCHAR" />
+    <result column="EXTERNAL_NAME" property="externalName" jdbcType="VARCHAR" />
+    <result column="USING" property="using" jdbcType="VARCHAR" />
+    <result column="TYPECODE" property="typecode" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTES" property="attributes" jdbcType="DECIMAL" />
+    <result column="METHODS" property="methods" jdbcType="DECIMAL" />
+    <result column="PREDEFINED" property="predefined" jdbcType="VARCHAR" />
+    <result column="INCOMPLETE" property="incomplete" jdbcType="VARCHAR" />
+    <result column="FINAL" property="final" jdbcType="VARCHAR" />
+    <result column="INSTANTIABLE" property="instantiable" jdbcType="VARCHAR" />
+    <result column="SUPERTYPE_OWNER" property="supertypeOwner" jdbcType="VARCHAR" />
+    <result column="SUPERTYPE_NAME" property="supertypeName" jdbcType="VARCHAR" />
+    <result column="LOCAL_ATTRIBUTES" property="localAttributes" jdbcType="DECIMAL" />
+    <result column="LOCAL_METHODS" property="localMethods" jdbcType="DECIMAL" />
+    <result column="TYPE_OID" property="typeOid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

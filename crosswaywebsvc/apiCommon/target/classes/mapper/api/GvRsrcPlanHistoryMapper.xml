@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvRsrcPlanHistoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvRsrcPlanHistory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="SEQUENCE#" property="sequence" jdbcType="DECIMAL" />
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="ENABLED_BY_SCHEDULER" property="enabledByScheduler" jdbcType="VARCHAR" />
+    <result column="WINDOW_NAME" property="windowName" jdbcType="VARCHAR" />
+    <result column="ALLOWED_AUTOMATED_SWITCHES" property="allowedAutomatedSwitches" jdbcType="VARCHAR" />
+    <result column="CPU_MANAGED" property="cpuManaged" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -152,7 +152,7 @@ public class ApiTest {
 
     @Test
     public void xfireTest() {
-        String endpoint = "http://localhost:8080/services/Test";
+        String endpoint = "http://localhost:8080/wddc/services/FwWebService";
         Service service = new Service();
         Call call = null;
         try {
@@ -163,14 +163,14 @@ public class ApiTest {
         }
         call.setTargetEndpointAddress(endpoint);
         // WSDL里面描述的接口名称(要调用的方法)
-        call.setOperationName(new QName("haople", "say"));
+        call.setOperationName(new QName("http://webservice.sjfw.wonders.com", "sayHello"));
         // 接口方法的参数名, 参数类型,参数模式  IN(输入), OUT(输出) or INOUT(输入输出)
-        call.addParameter("in0", XMLType.XSD_STRING, ParameterMode.IN);
+        call.addParameter("name", XMLType.XSD_STRING, ParameterMode.IN);
         // 设置被调用方法的返回值类型
         call.setReturnType(XMLType.XSD_STRING);
         //设置方法中参数的值
         Object[] paramValues = new Object[]{"liukun"};
-        call.setTimeout(3000);
+        call.setTimeout(100000);
         // 给方法传递参数，并且调用方法
         String result = null;
         try {

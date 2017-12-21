@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtPolicyViolCtxtDefMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtPolicyViolCtxtDef" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="POLICY_GUID" property="policyGuid" jdbcType="VARBINARY" />
+    <id column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="COLUMN_POSITION" property="columnPosition" jdbcType="DECIMAL" />
+    <result column="IS_HIDDEN" property="isHidden" jdbcType="DECIMAL" />
+    <result column="URL_LINK_TEMPLATE" property="urlLinkTemplate" jdbcType="VARCHAR" />
+    <result column="URL_LINK_TYPE" property="urlLinkType" jdbcType="DECIMAL" />
+    <result column="METRIC_GUID" property="metricGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

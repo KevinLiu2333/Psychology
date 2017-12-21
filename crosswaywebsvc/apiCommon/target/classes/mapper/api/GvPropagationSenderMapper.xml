@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvPropagationSenderMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvPropagationSender" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="QUEUE_ID" property="queueId" jdbcType="DECIMAL" />
+    <result column="QUEUE_SCHEMA" property="queueSchema" jdbcType="VARCHAR" />
+    <result column="QUEUE_NAME" property="queueName" jdbcType="VARCHAR" />
+    <result column="DST_QUEUE_SCHEMA" property="dstQueueSchema" jdbcType="VARCHAR" />
+    <result column="DST_QUEUE_NAME" property="dstQueueName" jdbcType="VARCHAR" />
+    <result column="STARTUP_TIME" property="startupTime" jdbcType="DATE" />
+    <result column="DBLINK" property="dblink" jdbcType="VARCHAR" />
+    <result column="HIGH_WATER_MARK" property="highWaterMark" jdbcType="DECIMAL" />
+    <result column="ACKNOWLEDGEMENT" property="acknowledgement" jdbcType="DECIMAL" />
+    <result column="SCHEDULE_STATUS" property="scheduleStatus" jdbcType="VARCHAR" />
+    <result column="TOTAL_MSGS" property="totalMsgs" jdbcType="DECIMAL" />
+    <result column="TOTAL_BYTES" property="totalBytes" jdbcType="DECIMAL" />
+    <result column="ELAPSED_DEQUEUE_TIME" property="elapsedDequeueTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_PICKLE_TIME" property="elapsedPickleTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_PROPAGATION_TIME" property="elapsedPropagationTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_RULE_TIME" property="elapsedRuleTime" jdbcType="DECIMAL" />
+    <result column="MAX_NUM_PER_WIN" property="maxNumPerWin" jdbcType="DECIMAL" />
+    <result column="MAX_SIZE" property="maxSize" jdbcType="DECIMAL" />
+    <result column="LAST_MSG_LATENCY" property="lastMsgLatency" jdbcType="DECIMAL" />
+    <result column="LAST_MSG_ENQUEUE_TIME" property="lastMsgEnqueueTime" jdbcType="TIMESTAMP" />
+    <result column="LAST_MSG_PROPAGATION_TIME" property="lastMsgPropagationTime" jdbcType="TIMESTAMP" />
+    <result column="LAST_LCR_LATENCY" property="lastLcrLatency" jdbcType="DECIMAL" />
+    <result column="LAST_LCR_CREATION_TIME" property="lastLcrCreationTime" jdbcType="DATE" />
+    <result column="LAST_LCR_PROPAGATION_TIME" property="lastLcrPropagationTime" jdbcType="DATE" />
+    <result column="DST_DATABASE_NAME" property="dstDatabaseName" jdbcType="VARCHAR" />
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="SERIAL#" property="serial" jdbcType="DECIMAL" />
+    <result column="SPID" property="spid" jdbcType="VARCHAR" />
+    <result column="PROPAGATION_NAME" property="propagationName" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

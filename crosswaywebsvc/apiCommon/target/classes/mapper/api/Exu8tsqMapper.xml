@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu8tsqMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu8tsq" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TSNAME" property="tsname" jdbcType="VARCHAR" />
+    <result column="TSID" property="tsid" jdbcType="DECIMAL" />
+    <result column="UNAME" property="uname" jdbcType="VARCHAR" />
+    <result column="USERID" property="userid" jdbcType="DECIMAL" />
+    <result column="MAXBLOCKS" property="maxblocks" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

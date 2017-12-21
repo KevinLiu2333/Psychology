@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaStreamsTpComponentLinkMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaStreamsTpComponentLink" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SOURCE_COMPONENT_ID" property="sourceComponentId" jdbcType="DECIMAL" />
+    <result column="SOURCE_COMPONENT_NAME" property="sourceComponentName" jdbcType="VARCHAR" />
+    <result column="SOURCE_COMPONENT_DB" property="sourceComponentDb" jdbcType="VARCHAR" />
+    <result column="SOURCE_COMPONENT_TYPE" property="sourceComponentType" jdbcType="VARCHAR" />
+    <result column="DESTINATION_COMPONENT_ID" property="destinationComponentId" jdbcType="DECIMAL" />
+    <result column="DESTINATION_COMPONENT_NAME" property="destinationComponentName" jdbcType="VARCHAR" />
+    <result column="DESTINATION_COMPONENT_DB" property="destinationComponentDb" jdbcType="VARCHAR" />
+    <result column="DESTINATION_COMPONENT_TYPE" property="destinationComponentType" jdbcType="VARCHAR" />
+    <result column="PATH_ID" property="pathId" jdbcType="DECIMAL" />
+    <result column="POSITION" property="position" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoCoordAxesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoCoordAxes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="COORD_SYS_ID" property="coordSysId" jdbcType="DECIMAL" />
+    <id column="ORDER" property="order" jdbcType="DECIMAL" />
+    <result column="COORD_AXIS_NAME_ID" property="coordAxisNameId" jdbcType="DECIMAL" />
+    <result column="COORD_AXIS_ORIENTATION" property="coordAxisOrientation" jdbcType="VARCHAR" />
+    <result column="COORD_AXIS_ABBREVIATION" property="coordAxisAbbreviation" jdbcType="VARCHAR" />
+    <result column="UOM_ID" property="uomId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

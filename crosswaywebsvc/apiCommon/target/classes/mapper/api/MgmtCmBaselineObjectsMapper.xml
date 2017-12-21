@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCmBaselineObjectsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCmBaselineObjects" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="DECIMAL" />
+    <result column="OBJECT_SCHEMA" property="objectSchema" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="LAST_DDL_TIME" property="lastDdlTime" jdbcType="DATE" />
+    <result column="HASH_VALUE" property="hashValue" jdbcType="CHAR" />
+    <result column="FIRST_VERSION" property="firstVersion" jdbcType="DECIMAL" />
+    <result column="LAST_VERSION" property="lastVersion" jdbcType="DECIMAL" />
+    <result column="ADDNL_INFO" property="addnlInfo" jdbcType="VARCHAR" />
+    <result column="BASELINE_GUID" property="baselineGuid" jdbcType="VARBINARY" />
+    <result column="OBJECT_LONGNAME" property="objectLongname" jdbcType="CLOB" />
+    <result column="DEFINITION" property="definition" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoUnitsOfMeasureMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoUnitsOfMeasure" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="UOM_ID" property="uomId" jdbcType="DECIMAL" />
+    <result column="UNIT_OF_MEAS_NAME" property="unitOfMeasName" jdbcType="VARCHAR" />
+    <result column="SHORT_NAME" property="shortName" jdbcType="VARCHAR" />
+    <result column="LEGACY_UNIT_NAME" property="legacyUnitName" jdbcType="VARCHAR" />
+    <result column="UNIT_OF_MEAS_TYPE" property="unitOfMeasType" jdbcType="VARCHAR" />
+    <result column="TARGET_UOM_ID" property="targetUomId" jdbcType="DECIMAL" />
+    <result column="FACTOR_B" property="factorB" jdbcType="DECIMAL" />
+    <result column="FACTOR_C" property="factorC" jdbcType="DECIMAL" />
+    <result column="INFORMATION_SOURCE" property="informationSource" jdbcType="VARCHAR" />
+    <result column="DATA_SOURCE" property="dataSource" jdbcType="VARCHAR" />
+    <result column="IS_LEGACY" property="isLegacy" jdbcType="VARCHAR" />
+    <result column="LEGACY_CODE" property="legacyCode" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvIrFailureMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvIrFailure" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="FAILURE_ID" property="failureId" jdbcType="DECIMAL" />
+    <result column="PARENT_ID" property="parentId" jdbcType="DECIMAL" />
+    <result column="CHILD_COUNT" property="childCount" jdbcType="DECIMAL" />
+    <result column="CLASS_NAME" property="className" jdbcType="VARCHAR" />
+    <result column="TIME_DETECTED" property="timeDetected" jdbcType="DATE" />
+    <result column="MODIFIED" property="modified" jdbcType="DATE" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="IMPACTS" property="impacts" jdbcType="VARCHAR" />
+    <result column="PRIORITY" property="priority" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

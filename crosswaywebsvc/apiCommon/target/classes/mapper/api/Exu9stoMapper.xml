@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu9stoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu9sto" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNERID" property="ownerid" jdbcType="DECIMAL" />
+    <result column="TSNO" property="tsno" jdbcType="DECIMAL" />
+    <result column="FILENO" property="fileno" jdbcType="DECIMAL" />
+    <result column="BLOCKNO" property="blockno" jdbcType="DECIMAL" />
+    <result column="INIEXT" property="iniext" jdbcType="DECIMAL" />
+    <result column="SEXT" property="sext" jdbcType="DECIMAL" />
+    <result column="MINEXT" property="minext" jdbcType="DECIMAL" />
+    <result column="MAXEXT" property="maxext" jdbcType="DECIMAL" />
+    <result column="PCTINC" property="pctinc" jdbcType="DECIMAL" />
+    <result column="BLOCKS" property="blocks" jdbcType="DECIMAL" />
+    <result column="LISTS" property="lists" jdbcType="DECIMAL" />
+    <result column="GROUPS" property="groups" jdbcType="DECIMAL" />
+    <result column="EXTENTS" property="extents" jdbcType="DECIMAL" />
+    <result column="PCACHE" property="pcache" jdbcType="VARCHAR" />
+    <result column="TS_TYPE" property="tsType" jdbcType="DECIMAL" />
+    <result column="TSNAME" property="tsname" jdbcType="VARCHAR" />
+    <result column="ISONLINE" property="isonline" jdbcType="DECIMAL" />
+    <result column="BLOCKSIZE" property="blocksize" jdbcType="DECIMAL" />
+    <result column="HSCOMPRESS" property="hscompress" jdbcType="DECIMAL" />
+    <result column="MAXSIZE" property="maxsize" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

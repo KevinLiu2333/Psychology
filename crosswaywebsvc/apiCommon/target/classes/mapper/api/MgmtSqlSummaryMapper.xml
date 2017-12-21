@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtSqlSummaryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtSqlSummary" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="ADDRESS" property="address" jdbcType="VARBINARY" />
+    <id column="HASH_VALUE" property="hashValue" jdbcType="DECIMAL" />
+    <id column="PLAN_HASH_VALUE" property="planHashValue" jdbcType="DECIMAL" />
+    <id column="PIECE" property="piece" jdbcType="DECIMAL" />
+    <result column="COLLECTION_TIMESTAMP" property="collectionTimestamp" jdbcType="DATE" />
+    <result column="SQL_TEXT" property="sqlText" jdbcType="VARCHAR" />
+    <result column="APPLICATION" property="application" jdbcType="VARCHAR" />
+    <result column="MODULE" property="module" jdbcType="VARCHAR" />
+    <result column="SHARABLE_MEM" property="sharableMem" jdbcType="DECIMAL" />
+    <result column="SORTS" property="sorts" jdbcType="DECIMAL" />
+    <result column="LOADED_VERSIONS" property="loadedVersions" jdbcType="DECIMAL" />
+    <result column="EXECUTIONS" property="executions" jdbcType="DECIMAL" />
+    <result column="LOADS" property="loads" jdbcType="DECIMAL" />
+    <result column="INVALIDATIONS" property="invalidations" jdbcType="DECIMAL" />
+    <result column="PARSE_CALLS" property="parseCalls" jdbcType="DECIMAL" />
+    <result column="DISK_READS" property="diskReads" jdbcType="DECIMAL" />
+    <result column="BUFFER_GETS" property="bufferGets" jdbcType="DECIMAL" />
+    <result column="ROWS_PROCESSED" property="rowsProcessed" jdbcType="DECIMAL" />
+    <result column="COMMAND_TYPE" property="commandType" jdbcType="DECIMAL" />
+    <result column="VERSION_COUNT" property="versionCount" jdbcType="DECIMAL" />
+    <result column="CPU_TIME" property="cpuTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_TIME" property="elapsedTime" jdbcType="DECIMAL" />
+    <result column="OUTLINE_SID" property="outlineSid" jdbcType="DECIMAL" />
+    <result column="OUTLINE_CATEGORY" property="outlineCategory" jdbcType="VARCHAR" />
+    <result column="PERSISTENT_MEM" property="persistentMem" jdbcType="DECIMAL" />
+    <result column="RUNTIME_MEM" property="runtimeMem" jdbcType="DECIMAL" />
+    <result column="OPTIMIZER_MODE" property="optimizerMode" jdbcType="VARCHAR" />
+    <result column="OPTIMIZER_COST" property="optimizerCost" jdbcType="DECIMAL" />
+    <result column="PARSING_USER" property="parsingUser" jdbcType="VARCHAR" />
+    <result column="PARSING_SCHEMA" property="parsingSchema" jdbcType="VARCHAR" />
+    <result column="ACTION" property="action" jdbcType="VARCHAR" />
+    <result column="LITERAL_HASH_VALUE" property="literalHashValue" jdbcType="DECIMAL" />
+    <result column="FIRST_LOAD_TIME" property="firstLoadTime" jdbcType="VARCHAR" />
+    <result column="LAST_LOAD_TIME" property="lastLoadTime" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

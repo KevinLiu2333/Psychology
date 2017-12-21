@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ResourceViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ResourceView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RES" property="res" jdbcType="OTHER" />
+    <result column="ANY_PATH" property="anyPath" jdbcType="VARCHAR" />
+    <result column="RESID" property="resid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

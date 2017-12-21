@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TriggerjavamMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Triggerjavam" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="METHODLENGTH" property="methodlength" jdbcType="DECIMAL" />
+    <result column="COOKIESIZE" property="cookiesize" jdbcType="DECIMAL" />
+    <result column="METHODNAME" property="methodname" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

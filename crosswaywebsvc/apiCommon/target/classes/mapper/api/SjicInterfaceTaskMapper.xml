@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SjicInterfaceTaskMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SjicInterfaceTask">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" jdbcType="OTHER" property="id" />
+    <result column="JKID" jdbcType="OTHER" property="jkid" />
+    <result column="CLASS_PATH" jdbcType="OTHER" property="classPath" />
+    <result column="UPDATE_TIME" jdbcType="DATE" property="updateTime" />
+    <result column="STATUS" jdbcType="OTHER" property="status" />
+  </resultMap>
+</mapper>

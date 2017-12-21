@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowSharedQueriesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowSharedQueries" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="XML_STRUCTURE" property="xmlStructure" jdbcType="VARCHAR" />
+    <result column="REPORT_LAYOUT_ID" property="reportLayoutId" jdbcType="DECIMAL" />
+    <result column="FORMAT" property="format" jdbcType="VARCHAR" />
+    <result column="FORMAT_ITEM" property="formatItem" jdbcType="VARCHAR" />
+    <result column="OUTPUT_FILE_NAME" property="outputFileName" jdbcType="VARCHAR" />
+    <result column="CONTENT_DISPOSITION" property="contentDisposition" jdbcType="VARCHAR" />
+    <result column="DOCUMENT_HEADER" property="documentHeader" jdbcType="VARCHAR" />
+    <result column="XML_ITEMS" property="xmlItems" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="QUERY_TEXT" property="queryText" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

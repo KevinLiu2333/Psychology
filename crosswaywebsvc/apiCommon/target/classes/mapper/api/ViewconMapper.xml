@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ViewconMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Viewcon" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="CON#" property="con" jdbcType="DECIMAL" />
+    <result column="CONNAME" property="conname" jdbcType="VARCHAR" />
+    <result column="TYPE#" property="type" jdbcType="DECIMAL" />
+    <result column="ROBJ#" property="robj" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="CON_TEXT" property="conText" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

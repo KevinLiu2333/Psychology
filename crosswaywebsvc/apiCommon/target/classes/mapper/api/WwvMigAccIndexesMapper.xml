@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigAccIndexesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigAccIndexes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="PROJECT_ID" property="projectId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="INDID" property="indid" jdbcType="DECIMAL" />
+    <result column="TBLID" property="tblid" jdbcType="DECIMAL" />
+    <result column="INDNAME" property="indname" jdbcType="VARCHAR" />
+    <result column="CNVINDEX" property="cnvindex" jdbcType="DECIMAL" />
+    <result column="ISPRIMARY" property="isprimary" jdbcType="DECIMAL" />
+    <result column="ISUNIQUE" property="isunique" jdbcType="DECIMAL" />
+    <result column="ISFOREIGN" property="isforeign" jdbcType="DECIMAL" />
+    <result column="IGNORENULLS" property="ignorenulls" jdbcType="DECIMAL" />
+    <result column="ISREQUIRED" property="isrequired" jdbcType="DECIMAL" />
+    <result column="DISTINCTCOUNT" property="distinctcount" jdbcType="DECIMAL" />
+    <result column="ISCLUSTERED" property="isclustered" jdbcType="DECIMAL" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

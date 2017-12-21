@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhActiveSessionHistoryBlMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhActiveSessionHistoryBl" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="SAMPLE_ID" property="sampleId" jdbcType="DECIMAL" />
+    <id column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="SAMPLE_TIME" property="sampleTime" jdbcType="OTHER" />
+    <result column="SESSION_SERIAL#" property="sessionSerial" jdbcType="DECIMAL" />
+    <result column="USER_ID" property="userId" jdbcType="DECIMAL" />
+    <result column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="SQL_CHILD_NUMBER" property="sqlChildNumber" jdbcType="DECIMAL" />
+    <result column="SQL_PLAN_HASH_VALUE" property="sqlPlanHashValue" jdbcType="DECIMAL" />
+    <result column="SERVICE_HASH" property="serviceHash" jdbcType="DECIMAL" />
+    <result column="SESSION_TYPE" property="sessionType" jdbcType="DECIMAL" />
+    <result column="SQL_OPCODE" property="sqlOpcode" jdbcType="DECIMAL" />
+    <result column="QC_SESSION_ID" property="qcSessionId" jdbcType="DECIMAL" />
+    <result column="QC_INSTANCE_ID" property="qcInstanceId" jdbcType="DECIMAL" />
+    <result column="CURRENT_OBJ#" property="currentObj" jdbcType="DECIMAL" />
+    <result column="CURRENT_FILE#" property="currentFile" jdbcType="DECIMAL" />
+    <result column="CURRENT_BLOCK#" property="currentBlock" jdbcType="DECIMAL" />
+    <result column="SEQ#" property="seq" jdbcType="DECIMAL" />
+    <result column="EVENT_ID" property="eventId" jdbcType="DECIMAL" />
+    <result column="P1" property="p1" jdbcType="DECIMAL" />
+    <result column="P2" property="p2" jdbcType="DECIMAL" />
+    <result column="P3" property="p3" jdbcType="DECIMAL" />
+    <result column="WAIT_TIME" property="waitTime" jdbcType="DECIMAL" />
+    <result column="TIME_WAITED" property="timeWaited" jdbcType="DECIMAL" />
+    <result column="PROGRAM" property="program" jdbcType="VARCHAR" />
+    <result column="MODULE" property="module" jdbcType="VARCHAR" />
+    <result column="ACTION" property="action" jdbcType="VARCHAR" />
+    <result column="CLIENT_ID" property="clientId" jdbcType="VARCHAR" />
+    <result column="FORCE_MATCHING_SIGNATURE" property="forceMatchingSignature" jdbcType="DECIMAL" />
+    <result column="BLOCKING_SESSION" property="blockingSession" jdbcType="DECIMAL" />
+    <result column="BLOCKING_SESSION_SERIAL#" property="blockingSessionSerial" jdbcType="DECIMAL" />
+    <result column="CONSUMER_GROUP_ID" property="consumerGroupId" jdbcType="DECIMAL" />
+    <result column="PLSQL_ENTRY_OBJECT_ID" property="plsqlEntryObjectId" jdbcType="DECIMAL" />
+    <result column="PLSQL_ENTRY_SUBPROGRAM_ID" property="plsqlEntrySubprogramId" jdbcType="DECIMAL" />
+    <result column="PLSQL_OBJECT_ID" property="plsqlObjectId" jdbcType="DECIMAL" />
+    <result column="PLSQL_SUBPROGRAM_ID" property="plsqlSubprogramId" jdbcType="DECIMAL" />
+    <result column="QC_SESSION_SERIAL#" property="qcSessionSerial" jdbcType="DECIMAL" />
+    <result column="REMOTE_INSTANCE#" property="remoteInstance" jdbcType="DECIMAL" />
+    <result column="SQL_PLAN_LINE_ID" property="sqlPlanLineId" jdbcType="DECIMAL" />
+    <result column="SQL_PLAN_OPERATION#" property="sqlPlanOperation" jdbcType="DECIMAL" />
+    <result column="SQL_PLAN_OPTIONS#" property="sqlPlanOptions" jdbcType="DECIMAL" />
+    <result column="SQL_EXEC_ID" property="sqlExecId" jdbcType="DECIMAL" />
+    <result column="SQL_EXEC_START" property="sqlExecStart" jdbcType="DATE" />
+    <result column="TIME_MODEL" property="timeModel" jdbcType="DECIMAL" />
+    <result column="TOP_LEVEL_SQL_ID" property="topLevelSqlId" jdbcType="VARCHAR" />
+    <result column="TOP_LEVEL_SQL_OPCODE" property="topLevelSqlOpcode" jdbcType="DECIMAL" />
+    <result column="CURRENT_ROW#" property="currentRow" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="BLOCKING_INST_ID" property="blockingInstId" jdbcType="DECIMAL" />
+    <result column="ECID" property="ecid" jdbcType="VARCHAR" />
+    <result column="TM_DELTA_TIME" property="tmDeltaTime" jdbcType="DECIMAL" />
+    <result column="TM_DELTA_CPU_TIME" property="tmDeltaCpuTime" jdbcType="DECIMAL" />
+    <result column="TM_DELTA_DB_TIME" property="tmDeltaDbTime" jdbcType="DECIMAL" />
+    <result column="DELTA_TIME" property="deltaTime" jdbcType="DECIMAL" />
+    <result column="DELTA_READ_IO_REQUESTS" property="deltaReadIoRequests" jdbcType="DECIMAL" />
+    <result column="DELTA_WRITE_IO_REQUESTS" property="deltaWriteIoRequests" jdbcType="DECIMAL" />
+    <result column="DELTA_READ_IO_BYTES" property="deltaReadIoBytes" jdbcType="DECIMAL" />
+    <result column="DELTA_WRITE_IO_BYTES" property="deltaWriteIoBytes" jdbcType="DECIMAL" />
+    <result column="DELTA_INTERCONNECT_IO_BYTES" property="deltaInterconnectIoBytes" jdbcType="DECIMAL" />
+    <result column="PGA_ALLOCATED" property="pgaAllocated" jdbcType="DECIMAL" />
+    <result column="TEMP_SPACE_ALLOCATED" property="tempSpaceAllocated" jdbcType="DECIMAL" />
+    <result column="TOP_LEVEL_CALL#" property="topLevelCall" jdbcType="DECIMAL" />
+    <result column="MACHINE" property="machine" jdbcType="VARCHAR" />
+    <result column="PORT" property="port" jdbcType="DECIMAL" />
+    <result column="XID" property="xid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowModelPageColsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowModelPageCols" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="MODEL_REGION_ID" property="modelRegionId" jdbcType="DECIMAL" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="COLUMN_DISPLAY_NAME" property="columnDisplayName" jdbcType="VARCHAR" />
+    <result column="COLUMN_SEQUENCE" property="columnSequence" jdbcType="DECIMAL" />
+    <result column="HELP_TEXT" property="helpText" jdbcType="VARCHAR" />
+    <result column="DISPLAY_AS_FORM" property="displayAsForm" jdbcType="VARCHAR" />
+    <result column="DISPLAY_AS_TAB_FORM" property="displayAsTabForm" jdbcType="VARCHAR" />
+    <result column="DATATYPE" property="datatype" jdbcType="VARCHAR" />
+    <result column="ALIGNMENT" property="alignment" jdbcType="VARCHAR" />
+    <result column="DISPLAY_WIDTH" property="displayWidth" jdbcType="DECIMAL" />
+    <result column="MAX_WIDTH" property="maxWidth" jdbcType="DECIMAL" />
+    <result column="HEIGHT" property="height" jdbcType="DECIMAL" />
+    <result column="FORMAT_MASK" property="formatMask" jdbcType="VARCHAR" />
+    <result column="HIDDEN_COLUMN" property="hiddenColumn" jdbcType="VARCHAR" />
+    <result column="SORT_SEQUENCE" property="sortSequence" jdbcType="DECIMAL" />
+    <result column="SORT_DIR" property="sortDir" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+  </resultMap>
+</mapper>

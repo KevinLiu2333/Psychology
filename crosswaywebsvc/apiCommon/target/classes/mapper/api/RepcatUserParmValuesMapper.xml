@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RepcatUserParmValuesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RepcatUserParmValues" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="USER_PARAMETER_ID" property="userParameterId" jdbcType="DECIMAL" />
+    <result column="TEMPLATE_PARAMETER_ID" property="templateParameterId" jdbcType="DECIMAL" />
+    <result column="USER_ID" property="userId" jdbcType="DECIMAL" />
+    <result column="PARM_VALUE" property="parmValue" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

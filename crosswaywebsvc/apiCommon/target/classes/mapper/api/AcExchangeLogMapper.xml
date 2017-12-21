@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AcExchangeLogMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AcExchangeLog">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="START_TIME" jdbcType="DATE" property="startTime" />
+    <result column="END_TIME" jdbcType="DATE" property="endTime" />
+    <result column="EXCHANGE_COUNT" jdbcType="VARCHAR" property="exchangeCount" />
+    <result column="FLAG" jdbcType="VARCHAR" property="flag" />
+    <result column="TRAN_NAME" jdbcType="VARCHAR" property="tranName" />
+    <result column="TRAN_ID" jdbcType="VARCHAR" property="tranId" />
+  </resultMap>
+</mapper>

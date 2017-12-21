@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.XsSessionRolesMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.XsSessionRoles">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ROLEINTID" jdbcType="DECIMAL" property="roleintid" />
+    <result column="ROLENAME" jdbcType="VARCHAR" property="rolename" />
+    <result column="ROLEFLAGS" jdbcType="DECIMAL" property="roleflags" />
+    <result column="SID" jdbcType="VARBINARY" property="sid" />
+    <result column="ROLEID" jdbcType="VARBINARY" property="roleid" />
+  </resultMap>
+</mapper>

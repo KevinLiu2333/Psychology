@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhSqlBindMetadataMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhSqlBindMetadata" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <id column="POSITION" property="position" jdbcType="DECIMAL" />
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="DUP_POSITION" property="dupPosition" jdbcType="DECIMAL" />
+    <result column="DATATYPE" property="datatype" jdbcType="DECIMAL" />
+    <result column="DATATYPE_STRING" property="datatypeString" jdbcType="VARCHAR" />
+    <result column="CHARACTER_SID" property="characterSid" jdbcType="DECIMAL" />
+    <result column="PRECISION" property="precision" jdbcType="DECIMAL" />
+    <result column="SCALE" property="scale" jdbcType="DECIMAL" />
+    <result column="MAX_LENGTH" property="maxLength" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

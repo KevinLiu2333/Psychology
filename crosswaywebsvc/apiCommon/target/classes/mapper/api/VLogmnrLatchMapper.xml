@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VLogmnrLatchMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VLogmnrLatch" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="CHILD_ADDR" property="childAddr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

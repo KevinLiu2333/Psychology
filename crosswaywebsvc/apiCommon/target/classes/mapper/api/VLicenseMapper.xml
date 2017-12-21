@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VLicenseMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VLicense" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SESSIONS_MAX" property="sessionsMax" jdbcType="DECIMAL" />
+    <result column="SESSIONS_WARNING" property="sessionsWarning" jdbcType="DECIMAL" />
+    <result column="SESSIONS_CURRENT" property="sessionsCurrent" jdbcType="DECIMAL" />
+    <result column="SESSIONS_HIGHWATER" property="sessionsHighwater" jdbcType="DECIMAL" />
+    <result column="USERS_MAX" property="usersMax" jdbcType="DECIMAL" />
+    <result column="CPU_COUNT_CURRENT" property="cpuCountCurrent" jdbcType="DECIMAL" />
+    <result column="CPU_CORE_COUNT_CURRENT" property="cpuCoreCountCurrent" jdbcType="DECIMAL" />
+    <result column="CPU_SOCKET_COUNT_CURRENT" property="cpuSocketCountCurrent" jdbcType="DECIMAL" />
+    <result column="CPU_COUNT_HIGHWATER" property="cpuCountHighwater" jdbcType="DECIMAL" />
+    <result column="CPU_CORE_COUNT_HIGHWATER" property="cpuCoreCountHighwater" jdbcType="DECIMAL" />
+    <result column="CPU_SOCKET_COUNT_HIGHWATER" property="cpuSocketCountHighwater" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

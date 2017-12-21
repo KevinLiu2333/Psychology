@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CtxUserIndexValuesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CtxUserIndexValues" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="IXV_INDEX_NAME" property="ixvIndexName" jdbcType="VARCHAR" />
+    <result column="IXV_CLASS" property="ixvClass" jdbcType="VARCHAR" />
+    <result column="IXV_OBJECT" property="ixvObject" jdbcType="VARCHAR" />
+    <result column="IXV_ATTRIBUTE" property="ixvAttribute" jdbcType="VARCHAR" />
+    <result column="IXV_VALUE" property="ixvValue" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

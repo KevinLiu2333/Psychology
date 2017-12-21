@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SnapObjcolMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SnapObjcol" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SOWNER" property="sowner" jdbcType="VARCHAR" />
+    <result column="VNAME" property="vname" jdbcType="VARCHAR" />
+    <result column="INSTSITE" property="instsite" jdbcType="DECIMAL" />
+    <result column="TABNUM" property="tabnum" jdbcType="DECIMAL" />
+    <result column="SNACOL" property="snacol" jdbcType="VARCHAR" />
+    <result column="MASCOL" property="mascol" jdbcType="VARCHAR" />
+    <result column="FLAG" property="flag" jdbcType="DECIMAL" />
+    <result column="STORAGE_TAB_OWNER" property="storageTabOwner" jdbcType="VARCHAR" />
+    <result column="STORAGE_TAB_NAME" property="storageTabName" jdbcType="VARCHAR" />
+    <result column="SNA_TYPE_OWNER" property="snaTypeOwner" jdbcType="VARCHAR" />
+    <result column="SNA_TYPE_NAME" property="snaTypeName" jdbcType="VARCHAR" />
+    <result column="MAS_TYPE_OWNER" property="masTypeOwner" jdbcType="VARCHAR" />
+    <result column="MAS_TYPE_NAME" property="masTypeName" jdbcType="VARCHAR" />
+    <result column="SNA_TYPE_OID" property="snaTypeOid" jdbcType="VARBINARY" />
+    <result column="SNA_TYPE_HASHCODE" property="snaTypeHashcode" jdbcType="VARBINARY" />
+    <result column="MAS_TYPE_OID" property="masTypeOid" jdbcType="VARBINARY" />
+    <result column="MAS_TYPE_HASHCODE" property="masTypeHashcode" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

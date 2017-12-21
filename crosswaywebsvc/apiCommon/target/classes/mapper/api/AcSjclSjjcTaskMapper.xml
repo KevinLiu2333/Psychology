@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AcSjclSjjcTaskMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AcSjclSjjcTask">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" jdbcType="OTHER" property="id" />
+    <result column="OPERATOR_ID" jdbcType="OTHER" property="operatorId" />
+    <result column="CREATE_TIME" jdbcType="DATE" property="createTime" />
+    <result column="TASK_NUMBER" jdbcType="OTHER" property="taskNumber" />
+    <result column="TASK_NAME" jdbcType="OTHER" property="taskName" />
+    <result column="RESOURCE_NAME" jdbcType="OTHER" property="resourceName" />
+    <result column="RESOURCE_TYPE" jdbcType="OTHER" property="resourceType" />
+    <result column="RESOURCE_TABLE" jdbcType="OTHER" property="resourceTable" />
+    <result column="PROVIDER_DEPARTMENT" jdbcType="OTHER" property="providerDepartment" />
+    <result column="ITEM_NAME" jdbcType="OTHER" property="itemName" />
+    <result column="ITEM_TYPE" jdbcType="OTHER" property="itemType" />
+    <result column="ITEM_CODE" jdbcType="OTHER" property="itemCode" />
+    <result column="TASK_RULES" jdbcType="OTHER" property="taskRules" />
+    <result column="JOB_ID" jdbcType="OTHER" property="jobId" />
+    <result column="TASK_DESC" jdbcType="OTHER" property="taskDesc" />
+    <result column="EXECUTION_MODE" jdbcType="OTHER" property="executionMode" />
+    <result column="LAST_UPDATE" jdbcType="DATE" property="lastUpdate" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuRmgrPlanDirectViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuRmgrPlanDirectView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="BASE_OBJ" property="baseObj" jdbcType="OTHER" />
+    <result column="GROUP_OR_SUBPLAN" property="groupOrSubplan" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="DECIMAL" />
+    <result column="CPU_P1" property="cpuP1" jdbcType="DECIMAL" />
+    <result column="CPU_P2" property="cpuP2" jdbcType="DECIMAL" />
+    <result column="CPU_P3" property="cpuP3" jdbcType="DECIMAL" />
+    <result column="CPU_P4" property="cpuP4" jdbcType="DECIMAL" />
+    <result column="CPU_P5" property="cpuP5" jdbcType="DECIMAL" />
+    <result column="CPU_P6" property="cpuP6" jdbcType="DECIMAL" />
+    <result column="CPU_P7" property="cpuP7" jdbcType="DECIMAL" />
+    <result column="CPU_P8" property="cpuP8" jdbcType="DECIMAL" />
+    <result column="ACTIVE_SESS_POOL_P1" property="activeSessPoolP1" jdbcType="DECIMAL" />
+    <result column="QUEUEING_P1" property="queueingP1" jdbcType="DECIMAL" />
+    <result column="PARALLEL_DEGREE_LIMIT_P1" property="parallelDegreeLimitP1" jdbcType="DECIMAL" />
+    <result column="SWITCH_GROUP" property="switchGroup" jdbcType="VARCHAR" />
+    <result column="SWITCH_TIME" property="switchTime" jdbcType="DECIMAL" />
+    <result column="SWITCH_ESTIMATE" property="switchEstimate" jdbcType="DECIMAL" />
+    <result column="MAX_EST_EXEC_TIME" property="maxEstExecTime" jdbcType="DECIMAL" />
+    <result column="UNDO_POOL" property="undoPool" jdbcType="DECIMAL" />
+    <result column="COMMENTS" property="comments" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="MANDATORY" property="mandatory" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

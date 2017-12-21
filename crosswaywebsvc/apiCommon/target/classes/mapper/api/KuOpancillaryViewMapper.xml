@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuOpancillaryViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuOpancillaryView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="BIND_NUM" property="bindNum" jdbcType="DECIMAL" />
+    <result column="PRIMOP_NUM" property="primopNum" jdbcType="DECIMAL" />
+    <result column="PRIMOP_OBJ" property="primopObj" jdbcType="OTHER" />
+    <result column="ARGS" property="args" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

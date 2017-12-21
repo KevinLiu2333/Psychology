@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TilesQuartzTaskMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.TilesQuartzTask">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="EXCUTE_TIME" jdbcType="VARCHAR" property="excuteTime" />
+    <result column="CURRENT_STATE" jdbcType="VARCHAR" property="currentState" />
+    <result column="JOB_CLASS" jdbcType="VARCHAR" property="jobClass" />
+    <result column="PROJECT_NAME" jdbcType="VARCHAR" property="projectName" />
+  </resultMap>
+</mapper>

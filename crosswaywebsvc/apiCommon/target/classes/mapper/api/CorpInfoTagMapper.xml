@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CorpInfoTagMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CorpInfoTag">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CORP_INFO_ID" jdbcType="VARCHAR" property="corpInfoId" />
+    <result column="CORP_TYPE" jdbcType="VARCHAR" property="corpType" />
+    <result column="CORP_TYPE_NAME" jdbcType="VARCHAR" property="corpTypeName" />
+    <result column="JDDM" jdbcType="VARCHAR" property="jddm" />
+    <result column="JDDM_NAME" jdbcType="VARCHAR" property="jddmName" />
+    <result column="CORP_STATUS" jdbcType="VARCHAR" property="corpStatus" />
+    <result column="CORP_STATUS_NAME" jdbcType="VARCHAR" property="corpStatusName" />
+    <result column="ESTABLISH_DATE" jdbcType="DATE" property="establishDate" />
+    <result column="INDUSTRY_CODE" jdbcType="VARCHAR" property="industryCode" />
+    <result column="INDUSTRY_CODE_NAME" jdbcType="VARCHAR" property="industryCodeName" />
+    <result column="REG_CAPITAL3" jdbcType="DECIMAL" property="regCapital3" />
+    <result column="CAPITAL_RANGE" jdbcType="VARCHAR" property="capitalRange" />
+    <result column="IS_XJR" jdbcType="VARCHAR" property="isXjr" />
+    <result column="IS_GQ" jdbcType="VARCHAR" property="isGq" />
+    <result column="IS_LHRH" jdbcType="VARCHAR" property="isLhrh" />
+    <result column="IS_LICENSE" jdbcType="VARCHAR" property="isLicense" />
+    <result column="IS_PUNISH" jdbcType="VARCHAR" property="isPunish" />
+  </resultMap>
+</mapper>

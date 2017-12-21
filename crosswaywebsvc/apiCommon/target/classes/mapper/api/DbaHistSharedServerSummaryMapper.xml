@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaHistSharedServerSummaryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaHistSharedServerSummary" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="NUM_SAMPLES" property="numSamples" jdbcType="DECIMAL" />
+    <result column="SAMPLE_TIME" property="sampleTime" jdbcType="DECIMAL" />
+    <result column="SAMPLED_TOTAL_CONN" property="sampledTotalConn" jdbcType="DECIMAL" />
+    <result column="SAMPLED_ACTIVE_CONN" property="sampledActiveConn" jdbcType="DECIMAL" />
+    <result column="SAMPLED_TOTAL_SRV" property="sampledTotalSrv" jdbcType="DECIMAL" />
+    <result column="SAMPLED_ACTIVE_SRV" property="sampledActiveSrv" jdbcType="DECIMAL" />
+    <result column="SAMPLED_TOTAL_DISP" property="sampledTotalDisp" jdbcType="DECIMAL" />
+    <result column="SAMPLED_ACTIVE_DISP" property="sampledActiveDisp" jdbcType="DECIMAL" />
+    <result column="SRV_BUSY" property="srvBusy" jdbcType="DECIMAL" />
+    <result column="SRV_IDLE" property="srvIdle" jdbcType="DECIMAL" />
+    <result column="SRV_IN_NET" property="srvInNet" jdbcType="DECIMAL" />
+    <result column="SRV_OUT_NET" property="srvOutNet" jdbcType="DECIMAL" />
+    <result column="SRV_MESSAGES" property="srvMessages" jdbcType="DECIMAL" />
+    <result column="SRV_BYTES" property="srvBytes" jdbcType="DECIMAL" />
+    <result column="CQ_WAIT" property="cqWait" jdbcType="DECIMAL" />
+    <result column="CQ_TOTALQ" property="cqTotalq" jdbcType="DECIMAL" />
+    <result column="DQ_TOTALQ" property="dqTotalq" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

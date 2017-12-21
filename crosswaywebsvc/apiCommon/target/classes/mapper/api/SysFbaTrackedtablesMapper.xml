@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SysFbaTrackedtablesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SysFbaTrackedtables" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="FA#" property="fa" jdbcType="DECIMAL" />
+    <result column="DROPSCN" property="dropscn" jdbcType="DECIMAL" />
+    <result column="OBJNAME" property="objname" jdbcType="VARCHAR" />
+    <result column="OWNERNAME" property="ownername" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="SPARE" property="spare" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

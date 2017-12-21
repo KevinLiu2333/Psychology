@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCsInclusionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCsInclusion" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="CS_INCLUSION_GUID" property="csInclusionGuid" jdbcType="VARBINARY" />
+    <result column="INCLUDED_CS_INAME" property="includedCsIname" jdbcType="VARCHAR" />
+    <result column="INCLUDED_CS_AUTHOR" property="includedCsAuthor" jdbcType="VARCHAR" />
+    <result column="INCLUDED_CS_VERSION" property="includedCsVersion" jdbcType="DECIMAL" />
+    <result column="CONTEXT_QUERY" property="contextQuery" jdbcType="VARCHAR" />
+    <result column="PARENT_CS_GUID" property="parentCsGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

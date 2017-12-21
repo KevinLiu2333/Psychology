@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.LocationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Locations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="LOCATION_ID" property="locationId" jdbcType="DECIMAL" />
+    <result column="STREET_ADDRESS" property="streetAddress" jdbcType="VARCHAR" />
+    <result column="POSTAL_CODE" property="postalCode" jdbcType="VARCHAR" />
+    <result column="CITY" property="city" jdbcType="VARCHAR" />
+    <result column="STATE_PROVINCE" property="stateProvince" jdbcType="VARCHAR" />
+    <result column="COUNTRY_ID" property="countryId" jdbcType="CHAR" />
+  </resultMap>
+</mapper>

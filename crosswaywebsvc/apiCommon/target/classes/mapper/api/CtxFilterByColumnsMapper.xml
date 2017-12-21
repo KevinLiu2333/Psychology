@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CtxFilterByColumnsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CtxFilterByColumns" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FBC_INDEX_OWNER" property="fbcIndexOwner" jdbcType="VARCHAR" />
+    <result column="FBC_INDEX_NAME" property="fbcIndexName" jdbcType="VARCHAR" />
+    <result column="FBC_TABLE_OWNER" property="fbcTableOwner" jdbcType="VARCHAR" />
+    <result column="FBC_TABLE_NAME" property="fbcTableName" jdbcType="VARCHAR" />
+    <result column="FBC_COLUMN_NAME" property="fbcColumnName" jdbcType="VARCHAR" />
+    <result column="FBC_COLUMN_TYPE" property="fbcColumnType" jdbcType="VARCHAR" />
+    <result column="FBC_SECTION_NAME" property="fbcSectionName" jdbcType="VARCHAR" />
+    <result column="FBC_SECTION_TYPE" property="fbcSectionType" jdbcType="VARCHAR" />
+    <result column="FBC_SECTION_ID" property="fbcSectionId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

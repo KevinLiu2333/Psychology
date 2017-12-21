@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CoreCorpLicenseMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CoreCorpLicense" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LICENSE_ID" property="licenseId" jdbcType="VARCHAR" />
+    <result column="CORE_CORP_ID" property="coreCorpId" jdbcType="VARCHAR" />
+    <result column="UNI_SC_ID" property="uniScId" jdbcType="VARCHAR" />
+    <result column="ORGAN_CODE" property="organCode" jdbcType="VARCHAR" />
+    <result column="CORP_NAME" property="corpName" jdbcType="VARCHAR" />
+    <result column="LICENSE_TYPE" property="licenseType" jdbcType="VARCHAR" />
+    <result column="UNIQUE_CODE" property="uniqueCode" jdbcType="VARCHAR" />
+    <result column="BUREAU_CODE" property="bureauCode" jdbcType="VARCHAR" />
+    <result column="LICENSE_NAME" property="licenseName" jdbcType="VARCHAR" />
+    <result column="LICENSE_LEVEL" property="licenseLevel" jdbcType="VARCHAR" />
+    <result column="LICENSE_STATUS" property="licenseStatus" jdbcType="VARCHAR" />
+    <result column="LICENSE_CODE" property="licenseCode" jdbcType="VARCHAR" />
+    <result column="LICENSE_DATA" property="licenseData" jdbcType="DATE" />
+    <result column="START_DATE" property="startDate" jdbcType="DATE" />
+    <result column="END_DATE" property="endDate" jdbcType="DATE" />
+    <result column="ECONOMIC_NATURE" property="economicNature" jdbcType="VARCHAR" />
+    <result column="TIME_LIMIT" property="timeLimit" jdbcType="VARCHAR" />
+    <result column="PERMISSION_SCOPE" property="permissionScope" jdbcType="VARCHAR" />
+    <result column="VALIDITY_AREA" property="validityArea" jdbcType="VARCHAR" />
+    <result column="VALIDITY" property="validity" jdbcType="CHAR" />
+  </resultMap>
+</mapper>

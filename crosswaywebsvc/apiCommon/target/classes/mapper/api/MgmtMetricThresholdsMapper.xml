@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtMetricThresholdsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtMetricThresholds" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COLL_NAME" property="collName" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE" property="keyValue" jdbcType="VARCHAR" />
+    <result column="KEY_OPERATOR" property="keyOperator" jdbcType="DECIMAL" />
+    <result column="IS_PUSH" property="isPush" jdbcType="DECIMAL" />
+    <result column="WARNING_OPERATOR" property="warningOperator" jdbcType="DECIMAL" />
+    <result column="WARNING_THRESHOLD" property="warningThreshold" jdbcType="VARCHAR" />
+    <result column="CRITICAL_OPERATOR" property="criticalOperator" jdbcType="DECIMAL" />
+    <result column="CRITICAL_THRESHOLD" property="criticalThreshold" jdbcType="VARCHAR" />
+    <result column="NUM_OCCURENCES" property="numOccurences" jdbcType="DECIMAL" />
+    <result column="NUM_WARNINGS" property="numWarnings" jdbcType="DECIMAL" />
+    <result column="NUM_CRITICALS" property="numCriticals" jdbcType="DECIMAL" />
+    <result column="EVAL_ORDER" property="evalOrder" jdbcType="DECIMAL" />
+    <result column="FIXIT_JOB" property="fixitJob" jdbcType="VARCHAR" />
+    <result column="MESSAGE" property="message" jdbcType="VARCHAR" />
+    <result column="MESSAGE_NLSID" property="messageNlsid" jdbcType="VARCHAR" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <result column="METRIC_GUID" property="metricGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

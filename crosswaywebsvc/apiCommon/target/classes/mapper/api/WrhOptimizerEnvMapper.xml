@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhOptimizerEnvMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhOptimizerEnv" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="OPTIMIZER_ENV_HASH_VALUE" property="optimizerEnvHashValue" jdbcType="DECIMAL" />
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="OPTIMIZER_ENV" property="optimizerEnv" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

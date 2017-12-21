@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtNotifyProfilesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtNotifyProfiles" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="PROFILE_NAME" property="profileName" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="ESCALATION_PROFILE_NAME" property="escalationProfileName" jdbcType="VARCHAR" />
+    <result column="ESCALATION_INTERVAL" property="escalationInterval" jdbcType="DECIMAL" />
+    <result column="NOTIFICATION_TTL" property="notificationTtl" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

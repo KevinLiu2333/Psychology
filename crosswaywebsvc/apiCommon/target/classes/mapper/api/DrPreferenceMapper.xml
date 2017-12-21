@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrPreferenceMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrPreference" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="PRE_ID" property="preId" jdbcType="DECIMAL" />
+    <result column="PRE_OWNER#" property="preOwner" jdbcType="DECIMAL" />
+    <result column="PRE_NAME" property="preName" jdbcType="VARCHAR" />
+    <result column="PRE_OBJ_ID" property="preObjId" jdbcType="DECIMAL" />
+    <result column="PRE_CLA_ID" property="preClaId" jdbcType="DECIMAL" />
+    <result column="PRE_VALID" property="preValid" jdbcType="CHAR" />
+  </resultMap>
+</mapper>

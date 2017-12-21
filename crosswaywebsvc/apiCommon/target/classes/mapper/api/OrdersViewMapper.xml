@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OrdersViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OrdersView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ORDER_ID" property="orderId" jdbcType="DECIMAL" />
+    <result column="ORDER_DATE" property="orderDate" jdbcType="DATE" />
+    <result column="ORDER_MODE" property="orderMode" jdbcType="VARCHAR" />
+    <result column="CUSTOMER_ID" property="customerId" jdbcType="DECIMAL" />
+    <result column="ORDER_STATUS" property="orderStatus" jdbcType="DECIMAL" />
+    <result column="ORDER_TOTAL" property="orderTotal" jdbcType="DECIMAL" />
+    <result column="SALES_REP_ID" property="salesRepId" jdbcType="DECIMAL" />
+    <result column="PROMOTION_ID" property="promotionId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

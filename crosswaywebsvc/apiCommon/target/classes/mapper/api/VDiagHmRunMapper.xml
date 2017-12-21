@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VDiagHmRunMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VDiagHmRun" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDX" property="indx" jdbcType="DECIMAL" />
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="ADR_PATH_IDX" property="adrPathIdx" jdbcType="VARCHAR" />
+    <result column="ADR_HOME" property="adrHome" jdbcType="VARCHAR" />
+    <result column="RUN_ID" property="runId" jdbcType="DECIMAL" />
+    <result column="RUN_NAME" property="runName" jdbcType="VARCHAR" />
+    <result column="CHECK_NAME" property="checkName" jdbcType="VARCHAR" />
+    <result column="NAME_ID" property="nameId" jdbcType="DECIMAL" />
+    <result column="MODE" property="mode" jdbcType="DECIMAL" />
+    <result column="START_TIME" property="startTime" jdbcType="OTHER" />
+    <result column="RESUME_TIME" property="resumeTime" jdbcType="OTHER" />
+    <result column="END_TIME" property="endTime" jdbcType="OTHER" />
+    <result column="MODIFIED_TIME" property="modifiedTime" jdbcType="OTHER" />
+    <result column="TIMEOUT" property="timeout" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="SRC_INCIDENT_ID" property="srcIncidentId" jdbcType="DECIMAL" />
+    <result column="NUM_INCIDENTS" property="numIncidents" jdbcType="DECIMAL" />
+    <result column="ERR_NUMBER" property="errNumber" jdbcType="DECIMAL" />
+    <result column="REPORT_FILE" property="reportFile" jdbcType="VARCHAR" />
+    <result column="ADDR" property="addr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.IndexStatsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.IndexStats" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HEIGHT" property="height" jdbcType="DECIMAL" />
+    <result column="BLOCKS" property="blocks" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="PARTITION_NAME" property="partitionName" jdbcType="VARCHAR" />
+    <result column="LF_ROWS" property="lfRows" jdbcType="DECIMAL" />
+    <result column="LF_BLKS" property="lfBlks" jdbcType="DECIMAL" />
+    <result column="LF_ROWS_LEN" property="lfRowsLen" jdbcType="DECIMAL" />
+    <result column="LF_BLK_LEN" property="lfBlkLen" jdbcType="DECIMAL" />
+    <result column="BR_ROWS" property="brRows" jdbcType="DECIMAL" />
+    <result column="BR_BLKS" property="brBlks" jdbcType="DECIMAL" />
+    <result column="BR_ROWS_LEN" property="brRowsLen" jdbcType="DECIMAL" />
+    <result column="BR_BLK_LEN" property="brBlkLen" jdbcType="DECIMAL" />
+    <result column="DEL_LF_ROWS" property="delLfRows" jdbcType="DECIMAL" />
+    <result column="DEL_LF_ROWS_LEN" property="delLfRowsLen" jdbcType="DECIMAL" />
+    <result column="DISTINCT_KEYS" property="distinctKeys" jdbcType="DECIMAL" />
+    <result column="MOST_REPEATED_KEY" property="mostRepeatedKey" jdbcType="DECIMAL" />
+    <result column="BTREE_SPACE" property="btreeSpace" jdbcType="DECIMAL" />
+    <result column="USED_SPACE" property="usedSpace" jdbcType="DECIMAL" />
+    <result column="PCT_USED" property="pctUsed" jdbcType="DECIMAL" />
+    <result column="ROWS_PER_KEY" property="rowsPerKey" jdbcType="DECIMAL" />
+    <result column="BLKS_GETS_PER_ACCESS" property="blksGetsPerAccess" jdbcType="DECIMAL" />
+    <result column="PRE_ROWS" property="preRows" jdbcType="DECIMAL" />
+    <result column="PRE_ROWS_LEN" property="preRowsLen" jdbcType="DECIMAL" />
+    <result column="OPT_CMPR_COUNT" property="optCmprCount" jdbcType="DECIMAL" />
+    <result column="OPT_CMPR_PCTSAVE" property="optCmprPctsave" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

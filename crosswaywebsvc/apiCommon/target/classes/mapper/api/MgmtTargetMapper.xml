@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtTargetMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtTarget" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="TYPE_VERSION" property="typeVersion" jdbcType="VARCHAR" />
+    <result column="TYPE_QUALIFIER1" property="typeQualifier1" jdbcType="VARCHAR" />
+    <result column="TYPE_QUALIFIER2" property="typeQualifier2" jdbcType="VARCHAR" />
+    <result column="TYPE_QUALIFIER3" property="typeQualifier3" jdbcType="VARCHAR" />
+    <result column="TYPE_QUALIFIER4" property="typeQualifier4" jdbcType="VARCHAR" />
+    <result column="TYPE_QUALIFIER5" property="typeQualifier5" jdbcType="VARCHAR" />
+    <result column="EMD_URL" property="emdUrl" jdbcType="VARCHAR" />
+    <result column="TIMEZONE_REGION" property="timezoneRegion" jdbcType="VARCHAR" />
+    <result column="DISPLAY_NAME" property="displayName" jdbcType="VARCHAR" />
+    <result column="HOST_NAME" property="hostName" jdbcType="VARCHAR" />
+    <result column="LAST_METRIC_LOAD_TIME" property="lastMetricLoadTime" jdbcType="DATE" />
+    <result column="TYPE_DISPLAY_NAME" property="typeDisplayName" jdbcType="VARCHAR" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

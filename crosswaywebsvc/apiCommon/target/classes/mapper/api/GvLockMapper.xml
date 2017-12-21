@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvLockMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvLock">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" jdbcType="DECIMAL" property="instId" />
+    <result column="SID" jdbcType="DECIMAL" property="sid" />
+    <result column="TYPE" jdbcType="VARCHAR" property="type" />
+    <result column="ID1" jdbcType="DECIMAL" property="id1" />
+    <result column="ID2" jdbcType="DECIMAL" property="id2" />
+    <result column="LMODE" jdbcType="DECIMAL" property="lmode" />
+    <result column="REQUEST" jdbcType="DECIMAL" property="request" />
+    <result column="CTIME" jdbcType="DECIMAL" property="ctime" />
+    <result column="BLOCK" jdbcType="DECIMAL" property="block" />
+    <result column="ADDR" jdbcType="VARBINARY" property="addr" />
+    <result column="KADDR" jdbcType="VARBINARY" property="kaddr" />
+  </resultMap>
+</mapper>

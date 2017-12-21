@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Cwm2AwcubeloadparmMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Cwm2Awcubeloadparm" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="IRID" property="irid" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="DATATYPE" property="datatype" jdbcType="VARCHAR" />
+    <result column="DEFAULT_VALUE" property="defaultValue" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

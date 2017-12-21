@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AcZyApplyDetailMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AcZyApplyDetail">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ZY_APPLY_DETAIL_ID" jdbcType="VARCHAR" property="zyApplyDetailId" />
+    <result column="ZY_APPLY_ID" jdbcType="VARCHAR" property="zyApplyId" />
+    <result column="ZY_ITEM_ID" jdbcType="VARCHAR" property="zyItemId" />
+    <result column="TYPE" jdbcType="VARCHAR" property="type" />
+    <result column="CHECK_CODE" jdbcType="VARCHAR" property="checkCode" />
+  </resultMap>
+</mapper>

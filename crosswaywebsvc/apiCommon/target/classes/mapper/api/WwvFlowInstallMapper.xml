@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowInstallMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowInstall" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="INCLUDE_IN_EXPORT_YN" property="includeInExportYn" jdbcType="VARCHAR" />
+    <result column="WELCOME_MESSAGE" property="welcomeMessage" jdbcType="VARCHAR" />
+    <result column="LICENSE_MESSAGE" property="licenseMessage" jdbcType="VARCHAR" />
+    <result column="CONFIGURATION_MESSAGE" property="configurationMessage" jdbcType="VARCHAR" />
+    <result column="BUILD_OPTIONS_MESSAGE" property="buildOptionsMessage" jdbcType="VARCHAR" />
+    <result column="VALIDATION_MESSAGE" property="validationMessage" jdbcType="VARCHAR" />
+    <result column="INSTALL_MESSAGE" property="installMessage" jdbcType="VARCHAR" />
+    <result column="INSTALL_SUCCESS_MESSAGE" property="installSuccessMessage" jdbcType="VARCHAR" />
+    <result column="INSTALL_FAILURE_MESSAGE" property="installFailureMessage" jdbcType="VARCHAR" />
+    <result column="GET_VERSION_SQL_QUERY" property="getVersionSqlQuery" jdbcType="VARCHAR" />
+    <result column="UPGRADE_MESSAGE" property="upgradeMessage" jdbcType="VARCHAR" />
+    <result column="UPGRADE_CONFIRM_MESSAGE" property="upgradeConfirmMessage" jdbcType="VARCHAR" />
+    <result column="UPGRADE_SUCCESS_MESSAGE" property="upgradeSuccessMessage" jdbcType="VARCHAR" />
+    <result column="UPGRADE_FAILURE_MESSAGE" property="upgradeFailureMessage" jdbcType="VARCHAR" />
+    <result column="DEINSTALL_MESSAGE" property="deinstallMessage" jdbcType="VARCHAR" />
+    <result column="DEINSTALL_SUCCESS_MESSAGE" property="deinstallSuccessMessage" jdbcType="VARCHAR" />
+    <result column="DEINSTALL_FAILURE_MESSAGE" property="deinstallFailureMessage" jdbcType="VARCHAR" />
+    <result column="PROMPT_SUBSTITUTION_01_YN" property="promptSubstitution01Yn" jdbcType="VARCHAR" />
+    <result column="PROMPT_SUBSTITUTION_02_YN" property="promptSubstitution02Yn" jdbcType="VARCHAR" />
+    <result column="PROMPT_SUBSTITUTION_03_YN" property="promptSubstitution03Yn" jdbcType="VARCHAR" />
+    <result column="PROMPT_SUBSTITUTION_04_YN" property="promptSubstitution04Yn" jdbcType="VARCHAR" />
+    <result column="PROMPT_SUBSTITUTION_05_YN" property="promptSubstitution05Yn" jdbcType="VARCHAR" />
+    <result column="PROMPT_SUBSTITUTION_06_YN" property="promptSubstitution06Yn" jdbcType="VARCHAR" />
+    <result column="PROMPT_SUBSTITUTION_07_YN" property="promptSubstitution07Yn" jdbcType="VARCHAR" />
+    <result column="PROMPT_SUBSTITUTION_08_YN" property="promptSubstitution08Yn" jdbcType="VARCHAR" />
+    <result column="PROMPT_SUBSTITUTION_09_YN" property="promptSubstitution09Yn" jdbcType="VARCHAR" />
+    <result column="PROMPT_SUBSTITUTION_10_YN" property="promptSubstitution10Yn" jdbcType="VARCHAR" />
+    <result column="PROMPT_SUBSTITUTION_11_YN" property="promptSubstitution11Yn" jdbcType="VARCHAR" />
+    <result column="PROMPT_SUBSTITUTION_12_YN" property="promptSubstitution12Yn" jdbcType="VARCHAR" />
+    <result column="PROMPT_SUBSTITUTION_13_YN" property="promptSubstitution13Yn" jdbcType="VARCHAR" />
+    <result column="PROMPT_SUBSTITUTION_14_YN" property="promptSubstitution14Yn" jdbcType="VARCHAR" />
+    <result column="PROMPT_SUBSTITUTION_15_YN" property="promptSubstitution15Yn" jdbcType="VARCHAR" />
+    <result column="PROMPT_SUBSTITUTION_16_YN" property="promptSubstitution16Yn" jdbcType="VARCHAR" />
+    <result column="PROMPT_SUBSTITUTION_17_YN" property="promptSubstitution17Yn" jdbcType="VARCHAR" />
+    <result column="PROMPT_SUBSTITUTION_18_YN" property="promptSubstitution18Yn" jdbcType="VARCHAR" />
+    <result column="PROMPT_SUBSTITUTION_19_YN" property="promptSubstitution19Yn" jdbcType="VARCHAR" />
+    <result column="PROMPT_SUBSTITUTION_20_YN" property="promptSubstitution20Yn" jdbcType="VARCHAR" />
+    <result column="INSTALL_PROMPT_01" property="installPrompt01" jdbcType="VARCHAR" />
+    <result column="INSTALL_PROMPT_02" property="installPrompt02" jdbcType="VARCHAR" />
+    <result column="INSTALL_PROMPT_03" property="installPrompt03" jdbcType="VARCHAR" />
+    <result column="INSTALL_PROMPT_04" property="installPrompt04" jdbcType="VARCHAR" />
+    <result column="INSTALL_PROMPT_05" property="installPrompt05" jdbcType="VARCHAR" />
+    <result column="INSTALL_PROMPT_06" property="installPrompt06" jdbcType="VARCHAR" />
+    <result column="INSTALL_PROMPT_07" property="installPrompt07" jdbcType="VARCHAR" />
+    <result column="INSTALL_PROMPT_08" property="installPrompt08" jdbcType="VARCHAR" />
+    <result column="INSTALL_PROMPT_09" property="installPrompt09" jdbcType="VARCHAR" />
+    <result column="INSTALL_PROMPT_10" property="installPrompt10" jdbcType="VARCHAR" />
+    <result column="INSTALL_PROMPT_11" property="installPrompt11" jdbcType="VARCHAR" />
+    <result column="INSTALL_PROMPT_12" property="installPrompt12" jdbcType="VARCHAR" />
+    <result column="INSTALL_PROMPT_13" property="installPrompt13" jdbcType="VARCHAR" />
+    <result column="INSTALL_PROMPT_14" property="installPrompt14" jdbcType="VARCHAR" />
+    <result column="INSTALL_PROMPT_15" property="installPrompt15" jdbcType="VARCHAR" />
+    <result column="INSTALL_PROMPT_16" property="installPrompt16" jdbcType="VARCHAR" />
+    <result column="INSTALL_PROMPT_17" property="installPrompt17" jdbcType="VARCHAR" />
+    <result column="INSTALL_PROMPT_18" property="installPrompt18" jdbcType="VARCHAR" />
+    <result column="INSTALL_PROMPT_19" property="installPrompt19" jdbcType="VARCHAR" />
+    <result column="INSTALL_PROMPT_20" property="installPrompt20" jdbcType="VARCHAR" />
+    <result column="PROMPT_IF_MULT_AUTH_YN" property="promptIfMultAuthYn" jdbcType="VARCHAR" />
+    <result column="TRIGGER_INSTALL_WHEN_COND" property="triggerInstallWhenCond" jdbcType="VARCHAR" />
+    <result column="TRIGGER_INSTALL_WHEN_EXP1" property="triggerInstallWhenExp1" jdbcType="VARCHAR" />
+    <result column="TRIGGER_INSTALL_WHEN_EXP2" property="triggerInstallWhenExp2" jdbcType="VARCHAR" />
+    <result column="TRIGGER_FAILURE_MESSAGE" property="triggerFailureMessage" jdbcType="VARCHAR" />
+    <result column="REQUIRED_FREE_KB" property="requiredFreeKb" jdbcType="DECIMAL" />
+    <result column="REQUIRED_SYS_PRIVS" property="requiredSysPrivs" jdbcType="VARCHAR" />
+    <result column="REQUIRED_NAMES_AVAILABLE" property="requiredNamesAvailable" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="DEINSTALL_SCRIPT" property="deinstallScript" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

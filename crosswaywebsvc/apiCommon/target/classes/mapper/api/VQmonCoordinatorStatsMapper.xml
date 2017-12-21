@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VQmonCoordinatorStatsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VQmonCoordinatorStats" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="QMNC_PID" property="qmncPid" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="NUM_SERVERS" property="numServers" jdbcType="DECIMAL" />
+    <result column="LAST_SERVER_START_TIME" property="lastServerStartTime" jdbcType="OTHER" />
+    <result column="LAST_SERVER_PID" property="lastServerPid" jdbcType="VARCHAR" />
+    <result column="NEXT_WAKEUP_TIME" property="nextWakeupTime" jdbcType="OTHER" />
+    <result column="NEXT_READY_TIME" property="nextReadyTime" jdbcType="OTHER" />
+    <result column="NEXT_EXPIRY_TIME" property="nextExpiryTime" jdbcType="OTHER" />
+    <result column="LAST_WAIT_TIME" property="lastWaitTime" jdbcType="OTHER" />
+    <result column="LAST_FAILURE" property="lastFailure" jdbcType="VARCHAR" />
+    <result column="LAST_FAILURE_TIME" property="lastFailureTime" jdbcType="OTHER" />
+    <result column="MAX_TASK_LATENCY" property="maxTaskLatency" jdbcType="VARCHAR" />
+    <result column="MIN_TASK_LATENCY" property="minTaskLatency" jdbcType="VARCHAR" />
+    <result column="TOTAL_TASK_LATENCY" property="totalTaskLatency" jdbcType="DECIMAL" />
+    <result column="TOTAL_TASKS_EXECUTED" property="totalTasksExecuted" jdbcType="DECIMAL" />
+    <result column="MAX_SERVERS" property="maxServers" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

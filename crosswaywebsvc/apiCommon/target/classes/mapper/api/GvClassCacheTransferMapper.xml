@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvClassCacheTransferMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvClassCacheTransfer" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="CLASS" property="class" jdbcType="CHAR" />
+    <result column="X_2_NULL" property="x2Null" jdbcType="DECIMAL" />
+    <result column="X_2_NULL_FORCED_WRITE" property="x2NullForcedWrite" jdbcType="DECIMAL" />
+    <result column="X_2_NULL_FORCED_STALE" property="x2NullForcedStale" jdbcType="DECIMAL" />
+    <result column="X_2_S" property="x2S" jdbcType="DECIMAL" />
+    <result column="X_2_S_FORCED_WRITE" property="x2SForcedWrite" jdbcType="DECIMAL" />
+    <result column="S_2_NULL" property="s2Null" jdbcType="DECIMAL" />
+    <result column="S_2_NULL_FORCED_STALE" property="s2NullForcedStale" jdbcType="DECIMAL" />
+    <result column="NULL_2_X" property="null2X" jdbcType="DECIMAL" />
+    <result column="S_2_X" property="s2X" jdbcType="DECIMAL" />
+    <result column="NULL_2_S" property="null2S" jdbcType="DECIMAL" />
+    <result column="CR_TRANSFER" property="crTransfer" jdbcType="DECIMAL" />
+    <result column="CURRENT_TRANSFER" property="currentTransfer" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

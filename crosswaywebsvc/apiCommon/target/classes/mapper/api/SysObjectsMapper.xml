@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SysObjectsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SysObjects" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <result column="OBJECT_TYPE_ID" property="objectTypeId" jdbcType="DECIMAL" />
+    <result column="SEGMENT_TYPE_ID" property="segmentTypeId" jdbcType="DECIMAL" />
+    <result column="OBJECT_ID" property="objectId" jdbcType="DECIMAL" />
+    <result column="HEADER_FILE" property="headerFile" jdbcType="DECIMAL" />
+    <result column="HEADER_BLOCK" property="headerBlock" jdbcType="DECIMAL" />
+    <result column="TS_NUMBER" property="tsNumber" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

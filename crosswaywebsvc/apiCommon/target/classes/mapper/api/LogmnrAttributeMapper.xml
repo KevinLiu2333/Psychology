@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.LogmnrAttributeMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.LogmnrAttribute" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="LOGMNR_UID" property="logmnrUid" jdbcType="DECIMAL" />
+    <id column="TOID" property="toid" jdbcType="VARBINARY" />
+    <id column="VERSION#" property="version" jdbcType="DECIMAL" />
+    <id column="ATTRIBUTE#" property="attribute" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="ATTR_VERSION#" property="attrVersion" jdbcType="DECIMAL" />
+    <result column="SYNOBJ#" property="synobj" jdbcType="DECIMAL" />
+    <result column="PROPERTIES" property="properties" jdbcType="DECIMAL" />
+    <result column="CHARSETID" property="charsetid" jdbcType="DECIMAL" />
+    <result column="CHARSETFORM" property="charsetform" jdbcType="DECIMAL" />
+    <result column="LENGTH" property="length" jdbcType="DECIMAL" />
+    <result column="PRECISION#" property="precision" jdbcType="DECIMAL" />
+    <result column="SCALE" property="scale" jdbcType="DECIMAL" />
+    <result column="EXTERNNAME" property="externname" jdbcType="VARCHAR" />
+    <result column="XFLAGS" property="xflags" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+    <result column="SPARE4" property="spare4" jdbcType="DECIMAL" />
+    <result column="SPARE5" property="spare5" jdbcType="DECIMAL" />
+    <result column="SETTER" property="setter" jdbcType="DECIMAL" />
+    <result column="GETTER" property="getter" jdbcType="DECIMAL" />
+    <result column="LOGMNR_FLAGS" property="logmnrFlags" jdbcType="DECIMAL" />
+    <result column="ATTR_TOID" property="attrToid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

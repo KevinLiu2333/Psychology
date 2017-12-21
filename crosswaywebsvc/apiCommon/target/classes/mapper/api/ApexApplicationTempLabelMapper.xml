@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationTempLabelMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationTempLabel" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="THEME_NUMBER" property="themeNumber" jdbcType="DECIMAL" />
+    <result column="THEME_CLASS" property="themeClass" jdbcType="VARCHAR" />
+    <result column="TEMPLATE_NAME" property="templateName" jdbcType="VARCHAR" />
+    <result column="BEFORE_LABEL" property="beforeLabel" jdbcType="VARCHAR" />
+    <result column="AFTER_LABEL" property="afterLabel" jdbcType="VARCHAR" />
+    <result column="IS_SUBSCRIBED" property="isSubscribed" jdbcType="VARCHAR" />
+    <result column="SUBSCRIBED_FROM" property="subscribedFrom" jdbcType="VARCHAR" />
+    <result column="ON_ERROR_BEFORE_LABEL" property="onErrorBeforeLabel" jdbcType="VARCHAR" />
+    <result column="ON_ERROR_AFTER_LABEL" property="onErrorAfterLabel" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="TRANSLATE_THIS_TEMPLATE" property="translateThisTemplate" jdbcType="VARCHAR" />
+    <result column="COMPONENT_COMMENT" property="componentComment" jdbcType="VARCHAR" />
+    <result column="LABEL_TEMPLATE_ID" property="labelTemplateId" jdbcType="DECIMAL" />
+    <result column="COMPONENT_SIGNATURE" property="componentSignature" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

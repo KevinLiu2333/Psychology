@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CdcChangeTablesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CdcChangeTables" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="CHANGE_SET_NAME" property="changeSetName" jdbcType="VARCHAR" />
+    <result column="SOURCE_SCHEMA_NAME" property="sourceSchemaName" jdbcType="VARCHAR" />
+    <result column="SOURCE_TABLE_NAME" property="sourceTableName" jdbcType="VARCHAR" />
+    <result column="CHANGE_TABLE_SCHEMA" property="changeTableSchema" jdbcType="VARCHAR" />
+    <result column="CHANGE_TABLE_NAME" property="changeTableName" jdbcType="VARCHAR" />
+    <result column="CREATED" property="created" jdbcType="DATE" />
+    <result column="CREATED_SCN" property="createdScn" jdbcType="DECIMAL" />
+    <result column="MVL_FLAG" property="mvlFlag" jdbcType="DECIMAL" />
+    <result column="CAPTURED_VALUES" property="capturedValues" jdbcType="VARCHAR" />
+    <result column="MVL_TEMP_LOG" property="mvlTempLog" jdbcType="VARCHAR" />
+    <result column="MVL_V7TRIGGER" property="mvlV7trigger" jdbcType="VARCHAR" />
+    <result column="LAST_ALTERED" property="lastAltered" jdbcType="DATE" />
+    <result column="LOWEST_SCN" property="lowestScn" jdbcType="DECIMAL" />
+    <result column="MVL_OLDEST_RID" property="mvlOldestRid" jdbcType="DECIMAL" />
+    <result column="MVL_OLDEST_PK" property="mvlOldestPk" jdbcType="DECIMAL" />
+    <result column="MVL_OLDEST_SEQ" property="mvlOldestSeq" jdbcType="DECIMAL" />
+    <result column="MVL_OLDEST_OID" property="mvlOldestOid" jdbcType="DECIMAL" />
+    <result column="MVL_OLDEST_NEW" property="mvlOldestNew" jdbcType="DECIMAL" />
+    <result column="MVL_OLDEST_RID_TIME" property="mvlOldestRidTime" jdbcType="DATE" />
+    <result column="MVL_OLDEST_PK_TIME" property="mvlOldestPkTime" jdbcType="DATE" />
+    <result column="MVL_OLDEST_SEQ_TIME" property="mvlOldestSeqTime" jdbcType="DATE" />
+    <result column="MVL_OLDEST_OID_TIME" property="mvlOldestOidTime" jdbcType="DATE" />
+    <result column="MVL_OLDEST_NEW_TIME" property="mvlOldestNewTime" jdbcType="DATE" />
+    <result column="MVL_BACKCOMPAT_VIEW" property="mvlBackcompatView" jdbcType="VARCHAR" />
+    <result column="MVL_PHYSMVL" property="mvlPhysmvl" jdbcType="VARCHAR" />
+    <result column="HIGHEST_SCN" property="highestScn" jdbcType="DECIMAL" />
+    <result column="HIGHEST_TIMESTAMP" property="highestTimestamp" jdbcType="DATE" />
+    <result column="CHANGE_TABLE_TYPE" property="changeTableType" jdbcType="DECIMAL" />
+    <result column="MAJOR_VERSION" property="majorVersion" jdbcType="DECIMAL" />
+    <result column="MINOR_VERSION" property="minorVersion" jdbcType="DECIMAL" />
+    <result column="SOURCE_TABLE_OBJ#" property="sourceTableObj" jdbcType="DECIMAL" />
+    <result column="SOURCE_TABLE_VER" property="sourceTableVer" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

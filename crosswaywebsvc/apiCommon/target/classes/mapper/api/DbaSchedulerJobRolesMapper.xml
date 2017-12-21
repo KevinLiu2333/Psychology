@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaSchedulerJobRolesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaSchedulerJobRoles" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="JOB_NAME" property="jobName" jdbcType="VARCHAR" />
+    <result column="JOB_SUBNAME" property="jobSubname" jdbcType="VARCHAR" />
+    <result column="JOB_CREATOR" property="jobCreator" jdbcType="VARCHAR" />
+    <result column="DATABASE_ROLE" property="databaseRole" jdbcType="VARCHAR" />
+    <result column="PROGRAM_OWNER" property="programOwner" jdbcType="VARCHAR" />
+    <result column="PROGRAM_NAME" property="programName" jdbcType="VARCHAR" />
+    <result column="JOB_TYPE" property="jobType" jdbcType="VARCHAR" />
+    <result column="JOB_ACTION" property="jobAction" jdbcType="VARCHAR" />
+    <result column="JOB_CLASS" property="jobClass" jdbcType="VARCHAR" />
+    <result column="SCHEDULE_OWNER" property="scheduleOwner" jdbcType="VARCHAR" />
+    <result column="SCHEDULE_NAME" property="scheduleName" jdbcType="VARCHAR" />
+    <result column="SCHEDULE_TYPE" property="scheduleType" jdbcType="VARCHAR" />
+    <result column="START_DATE" property="startDate" jdbcType="OTHER" />
+    <result column="REPEAT_INTERVAL" property="repeatInterval" jdbcType="VARCHAR" />
+    <result column="END_DATE" property="endDate" jdbcType="OTHER" />
+    <result column="LAST_START_DATE" property="lastStartDate" jdbcType="OTHER" />
+    <result column="ENABLED" property="enabled" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="COMMENTS" property="comments" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

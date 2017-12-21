@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VDnfsServersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VDnfsServers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="SVRNAME" property="svrname" jdbcType="VARCHAR" />
+    <result column="DIRNAME" property="dirname" jdbcType="VARCHAR" />
+    <result column="MNTPORT" property="mntport" jdbcType="DECIMAL" />
+    <result column="NFSPORT" property="nfsport" jdbcType="DECIMAL" />
+    <result column="WTMAX" property="wtmax" jdbcType="DECIMAL" />
+    <result column="RTMAX" property="rtmax" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

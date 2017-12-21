@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvPwfileUsersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvPwfileUsers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="SYSDBA" property="sysdba" jdbcType="VARCHAR" />
+    <result column="SYSOPER" property="sysoper" jdbcType="VARCHAR" />
+    <result column="SYSASM" property="sysasm" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MetaviewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Metaview" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="PROPERTIES" property="properties" jdbcType="DECIMAL" />
+    <result column="MODEL" property="model" jdbcType="VARCHAR" />
+    <result column="VERSION" property="version" jdbcType="DECIMAL" />
+    <result column="XMLTAG" property="xmltag" jdbcType="VARCHAR" />
+    <result column="UDT" property="udt" jdbcType="VARCHAR" />
+    <result column="SCHEMA" property="schema" jdbcType="VARCHAR" />
+    <result column="VIEWNAME" property="viewname" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

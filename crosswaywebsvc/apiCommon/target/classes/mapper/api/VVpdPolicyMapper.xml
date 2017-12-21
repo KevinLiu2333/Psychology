@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VVpdPolicyMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VVpdPolicy" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SQL_HASH" property="sqlHash" jdbcType="DECIMAL" />
+    <result column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="CHILD_NUMBER" property="childNumber" jdbcType="DECIMAL" />
+    <result column="OBJECT_OWNER" property="objectOwner" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="POLICY_GROUP" property="policyGroup" jdbcType="VARCHAR" />
+    <result column="POLICY" property="policy" jdbcType="VARCHAR" />
+    <result column="POLICY_FUNCTION_OWNER" property="policyFunctionOwner" jdbcType="VARCHAR" />
+    <result column="PREDICATE" property="predicate" jdbcType="VARCHAR" />
+    <result column="ADDRESS" property="address" jdbcType="VARBINARY" />
+    <result column="PARADDR" property="paraddr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

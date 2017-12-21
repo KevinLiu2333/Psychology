@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu8induMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu8indu" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="IOBJID" property="iobjid" jdbcType="DECIMAL" />
+    <result column="IDOBJID" property="idobjid" jdbcType="DECIMAL" />
+    <result column="INAME" property="iname" jdbcType="VARCHAR" />
+    <result column="IOWNER" property="iowner" jdbcType="VARCHAR" />
+    <result column="IOWNERID" property="iownerid" jdbcType="DECIMAL" />
+    <result column="ISPACE" property="ispace" jdbcType="VARCHAR" />
+    <result column="ITSNO" property="itsno" jdbcType="DECIMAL" />
+    <result column="IFILENO" property="ifileno" jdbcType="DECIMAL" />
+    <result column="IBLOCKNO" property="iblockno" jdbcType="DECIMAL" />
+    <result column="BTNAME" property="btname" jdbcType="VARCHAR" />
+    <result column="BTOBJID" property="btobjid" jdbcType="DECIMAL" />
+    <result column="BTOWNER" property="btowner" jdbcType="VARCHAR" />
+    <result column="BTOWNERID" property="btownerid" jdbcType="DECIMAL" />
+    <result column="BTPROPERTY" property="btproperty" jdbcType="DECIMAL" />
+    <result column="BTCLUSTERFLAG" property="btclusterflag" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="CLUSTER$" property="cluster" jdbcType="DECIMAL" />
+    <result column="PCTFREE$" property="pctfree" jdbcType="DECIMAL" />
+    <result column="INITRANS" property="initrans" jdbcType="DECIMAL" />
+    <result column="MAXTRANS" property="maxtrans" jdbcType="DECIMAL" />
+    <result column="BLEVEL" property="blevel" jdbcType="DECIMAL" />
+    <result column="BITMAP" property="bitmap" jdbcType="DECIMAL" />
+    <result column="DEFLOG" property="deflog" jdbcType="DECIMAL" />
+    <result column="TSDEFLOG" property="tsdeflog" jdbcType="DECIMAL" />
+    <result column="DEGREE" property="degree" jdbcType="DECIMAL" />
+    <result column="INSTANCES" property="instances" jdbcType="DECIMAL" />
+    <result column="TYPE" property="type" jdbcType="DECIMAL" />
+    <result column="ROWCNT" property="rowcnt" jdbcType="DECIMAL" />
+    <result column="LEAFCNT" property="leafcnt" jdbcType="DECIMAL" />
+    <result column="DISTKEY" property="distkey" jdbcType="DECIMAL" />
+    <result column="LBLKKEY" property="lblkkey" jdbcType="DECIMAL" />
+    <result column="DBLKKEY" property="dblkkey" jdbcType="DECIMAL" />
+    <result column="CLUFAC" property="clufac" jdbcType="DECIMAL" />
+    <result column="PRECCNT" property="preccnt" jdbcType="DECIMAL" />
+    <result column="IFLAGS" property="iflags" jdbcType="DECIMAL" />
+    <result column="SYSGENCONST" property="sysgenconst" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

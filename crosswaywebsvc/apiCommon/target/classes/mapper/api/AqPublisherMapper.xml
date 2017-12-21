@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AqPublisherMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AqPublisher" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PUB_ID" property="pubId" jdbcType="DECIMAL" />
+    <result column="QUEUE_ID" property="queueId" jdbcType="DECIMAL" />
+    <result column="P_NAME" property="pName" jdbcType="VARCHAR" />
+    <result column="P_ADDRESS" property="pAddress" jdbcType="VARCHAR" />
+    <result column="P_PROTOCOL" property="pProtocol" jdbcType="DECIMAL" />
+    <result column="P_RULE_NAME" property="pRuleName" jdbcType="VARCHAR" />
+    <result column="P_RULE" property="pRule" jdbcType="VARCHAR" />
+    <result column="P_RULESET" property="pRuleset" jdbcType="VARCHAR" />
+    <result column="P_TRANSFORMATION" property="pTransformation" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

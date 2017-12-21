@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtPurgePolicyTargetStateMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtPurgePolicyTargetState" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="POLICY_NAME" property="policyName" jdbcType="VARCHAR" />
+    <result column="CAN_ROLLUP_UPTO_TIME" property="canRollupUptoTime" jdbcType="DATE" />
+    <result column="ROLLEDUP_UPTO_TIME" property="rolledupUptoTime" jdbcType="DATE" />
+    <result column="TARGET_RETENTION_HOURS" property="targetRetentionHours" jdbcType="DECIMAL" />
+    <result column="LAST_APPLY_TIME" property="lastApplyTime" jdbcType="DATE" />
+    <result column="LAST_APPLY_STATUS" property="lastApplyStatus" jdbcType="DECIMAL" />
+    <result column="LAST_APPLY_MSG" property="lastApplyMsg" jdbcType="VARCHAR" />
+    <result column="LAST_APPLY_ROWS" property="lastApplyRows" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

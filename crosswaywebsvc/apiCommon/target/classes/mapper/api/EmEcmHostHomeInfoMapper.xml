@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.EmEcmHostHomeInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.EmEcmHostHomeInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HOST_NAME" property="hostName" jdbcType="VARCHAR" />
+    <result column="HOME_INFO" property="homeInfo" jdbcType="VARCHAR" />
+    <result column="OS_NAME" property="osName" jdbcType="VARCHAR" />
+    <result column="OS_BASE_VERSION" property="osBaseVersion" jdbcType="VARCHAR" />
+    <result column="OS_UPDATE_LEVEL" property="osUpdateLevel" jdbcType="VARCHAR" />
+    <result column="OS_ADDRESS_LENGTH_IN_BITS" property="osAddressLengthInBits" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

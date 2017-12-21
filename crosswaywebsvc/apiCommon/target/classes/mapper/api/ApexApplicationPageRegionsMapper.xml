@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationPageRegionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationPageRegions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="PAGE_ID" property="pageId" jdbcType="DECIMAL" />
+    <result column="PAGE_NAME" property="pageName" jdbcType="VARCHAR" />
+    <result column="REGION_NAME" property="regionName" jdbcType="VARCHAR" />
+    <result column="TEMPLATE" property="template" jdbcType="VARCHAR" />
+    <result column="TEMPLATE_ID" property="templateId" jdbcType="DECIMAL" />
+    <result column="STATIC_ID" property="staticId" jdbcType="VARCHAR" />
+    <result column="DISPLAY_SEQUENCE" property="displaySequence" jdbcType="DECIMAL" />
+    <result column="REGION_ATTRIBUTES_SUBSTITUTION" property="regionAttributesSubstitution" jdbcType="VARCHAR" />
+    <result column="DISPLAY_COLUMN" property="displayColumn" jdbcType="DECIMAL" />
+    <result column="DISPLAY_POSITION" property="displayPosition" jdbcType="VARCHAR" />
+    <result column="DISPLAY_POSITION_CODE" property="displayPositionCode" jdbcType="VARCHAR" />
+    <result column="BREADCRUMB_TEMPLATE" property="breadcrumbTemplate" jdbcType="VARCHAR" />
+    <result column="BREADCRUMB_TEMPLATE_ID" property="breadcrumbTemplateId" jdbcType="DECIMAL" />
+    <result column="LIST_TEMPLATE_OVERRIDE" property="listTemplateOverride" jdbcType="VARCHAR" />
+    <result column="LIST_TEMPLATE_OVERRIDE_ID" property="listTemplateOverrideId" jdbcType="DECIMAL" />
+    <result column="SOURCE_TYPE" property="sourceType" jdbcType="VARCHAR" />
+    <result column="ON_ERROR_MESSAGE" property="onErrorMessage" jdbcType="VARCHAR" />
+    <result column="AUTHORIZATION_SCHEME" property="authorizationScheme" jdbcType="VARCHAR" />
+    <result column="AUTHORIZATION_SCHEME_ID" property="authorizationSchemeId" jdbcType="VARCHAR" />
+    <result column="CONDITION_TYPE" property="conditionType" jdbcType="VARCHAR" />
+    <result column="CONDITION_EXPRESSION1" property="conditionExpression1" jdbcType="VARCHAR" />
+    <result column="CONDITION_EXPRESSION2" property="conditionExpression2" jdbcType="VARCHAR" />
+    <result column="REGION_HEADER_TEXT" property="regionHeaderText" jdbcType="VARCHAR" />
+    <result column="REGION_FOOTER_TEXT" property="regionFooterText" jdbcType="VARCHAR" />
+    <result column="REPORT_TEMPLATE" property="reportTemplate" jdbcType="VARCHAR" />
+    <result column="REPORT_TEMPLATE_ID" property="reportTemplateId" jdbcType="DECIMAL" />
+    <result column="REPORT_COLUMN_HEADINGS" property="reportColumnHeadings" jdbcType="VARCHAR" />
+    <result column="HEADINGS_TYPE" property="headingsType" jdbcType="VARCHAR" />
+    <result column="MAXIMUM_ROWS_TO_QUERY" property="maximumRowsToQuery" jdbcType="DECIMAL" />
+    <result column="PAGINATION_SCHEME" property="paginationScheme" jdbcType="VARCHAR" />
+    <result column="PAGINATION_DISPLAY_POSITION" property="paginationDisplayPosition" jdbcType="VARCHAR" />
+    <result column="AJAX_ENABLED" property="ajaxEnabled" jdbcType="VARCHAR" />
+    <result column="NUMBER_OF_ROWS_ITEM" property="numberOfRowsItem" jdbcType="VARCHAR" />
+    <result column="NO_DATA_FOUND_MESSAGE" property="noDataFoundMessage" jdbcType="VARCHAR" />
+    <result column="MORE_DATA_FOUND_MESSAGE" property="moreDataFoundMessage" jdbcType="VARCHAR" />
+    <result column="MAXIMUM_ROW_COUNT" property="maximumRowCount" jdbcType="DECIMAL" />
+    <result column="REPORT_NULL_VALUES_AS" property="reportNullValuesAs" jdbcType="VARCHAR" />
+    <result column="BREAKS" property="breaks" jdbcType="VARCHAR" />
+    <result column="ASCENDING_IMAGE" property="ascendingImage" jdbcType="VARCHAR" />
+    <result column="ASCENDING_IMAGE_ATTRIBUTES" property="ascendingImageAttributes" jdbcType="VARCHAR" />
+    <result column="DESCENDING_IMAGE" property="descendingImage" jdbcType="VARCHAR" />
+    <result column="DESCENDING_IMAGE_ATTRIBUTES" property="descendingImageAttributes" jdbcType="VARCHAR" />
+    <result column="FILENAME" property="filename" jdbcType="VARCHAR" />
+    <result column="SEPARATOR" property="separator" jdbcType="VARCHAR" />
+    <result column="ENCLOSED_BY" property="enclosedBy" jdbcType="VARCHAR" />
+    <result column="STRIP_HTML" property="stripHtml" jdbcType="VARCHAR" />
+    <result column="REPORT_COLUMN_SOURCE_TYPE" property="reportColumnSourceType" jdbcType="VARCHAR" />
+    <result column="MAX_DYNAMIC_REPORT_COLS" property="maxDynamicReportCols" jdbcType="DECIMAL" />
+    <result column="HTML_TABLE_CELL_ATTRIBUTES" property="htmlTableCellAttributes" jdbcType="VARCHAR" />
+    <result column="CUSTOMIZATION" property="customization" jdbcType="VARCHAR" />
+    <result column="CUSTOMIZATION_NAME" property="customizationName" jdbcType="VARCHAR" />
+    <result column="BUILD_OPTION" property="buildOption" jdbcType="VARCHAR" />
+    <result column="BUILD_OPTION_ID" property="buildOptionId" jdbcType="DECIMAL" />
+    <result column="REGION_CACHING" property="regionCaching" jdbcType="VARCHAR" />
+    <result column="TIMEOUT_CACHE_AFTER" property="timeoutCacheAfter" jdbcType="DECIMAL" />
+    <result column="CACHE_WHEN" property="cacheWhen" jdbcType="VARCHAR" />
+    <result column="CACHE_WHEN_EXPRESSION_1" property="cacheWhenExpression1" jdbcType="VARCHAR" />
+    <result column="CACHE_WHEN_EXPRESSION_2" property="cacheWhenExpression2" jdbcType="VARCHAR" />
+    <result column="SUM_DISPLAY_TEXT" property="sumDisplayText" jdbcType="VARCHAR" />
+    <result column="BREAK_DISPLAY_TEXT" property="breakDisplayText" jdbcType="VARCHAR" />
+    <result column="BEFORE_BREAK_DISPLAY_TEXT" property="beforeBreakDisplayText" jdbcType="VARCHAR" />
+    <result column="BREAK_COLUMN_DISPLAY_TEXT" property="breakColumnDisplayText" jdbcType="VARCHAR" />
+    <result column="AFTER_BREAK_DISPLAY_TEXT" property="afterBreakDisplayText" jdbcType="VARCHAR" />
+    <result column="BREAK_DISPLAY_FLAG" property="breakDisplayFlag" jdbcType="VARCHAR" />
+    <result column="REPEAT_HEADING_BREAK_FORMAT" property="repeatHeadingBreakFormat" jdbcType="VARCHAR" />
+    <result column="ENABLE_CSV_OUTPUT" property="enableCsvOutput" jdbcType="VARCHAR" />
+    <result column="CSV_LINK_LABEL" property="csvLinkLabel" jdbcType="VARCHAR" />
+    <result column="URL" property="url" jdbcType="VARCHAR" />
+    <result column="LINK_LABEL" property="linkLabel" jdbcType="VARCHAR" />
+    <result column="TRANSLATE_REGION_TITLE" property="translateRegionTitle" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="COMPONENT_COMMENT" property="componentComment" jdbcType="VARCHAR" />
+    <result column="REGION_ID" property="regionId" jdbcType="DECIMAL" />
+    <result column="ITEMS" property="items" jdbcType="DECIMAL" />
+    <result column="BUTTONS" property="buttons" jdbcType="DECIMAL" />
+    <result column="COMPONENT_SIGNATURE" property="componentSignature" jdbcType="VARCHAR" />
+    <result column="REGION_SOURCE" property="regionSource" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

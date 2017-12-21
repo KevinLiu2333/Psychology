@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.HsBaseDdMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.HsBaseDd">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DD_TABLE_ID" jdbcType="DECIMAL" property="ddTableId" />
+    <result column="DD_TABLE_NAME" jdbcType="VARCHAR" property="ddTableName" />
+    <result column="DD_TABLE_DESC" jdbcType="VARCHAR" property="ddTableDesc" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuSimpleTypeViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuSimpleTypeView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERSION_NUM" property="versionNum" jdbcType="DECIMAL" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="TYPE_NUM" property="typeNum" jdbcType="DECIMAL" />
+    <result column="PROPERTIES" property="properties" jdbcType="DECIMAL" />
+    <result column="ATTRIBUTE_NUM" property="attributeNum" jdbcType="DECIMAL" />
+    <result column="LOCAL_ATTRS" property="localAttrs" jdbcType="DECIMAL" />
+    <result column="METHOD_NUM" property="methodNum" jdbcType="DECIMAL" />
+    <result column="HIDMETHOD_NUM" property="hidmethodNum" jdbcType="DECIMAL" />
+    <result column="SCHEMA_OBJ" property="schemaObj" jdbcType="OTHER" />
+    <result column="TYPE_NAME" property="typeName" jdbcType="VARCHAR" />
+    <result column="TOID" property="toid" jdbcType="VARBINARY" />
+    <result column="TYPEID" property="typeid" jdbcType="VARBINARY" />
+    <result column="ROOTTOID" property="roottoid" jdbcType="VARBINARY" />
+    <result column="HASHCODE" property="hashcode" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

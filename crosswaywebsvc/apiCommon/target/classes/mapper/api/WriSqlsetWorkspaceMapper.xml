@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriSqlsetWorkspaceMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriSqlsetWorkspace" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="WORKSPACE_NAME" property="workspaceName" jdbcType="VARCHAR" />
+    <id column="SQLSET_NAME" property="sqlsetName" jdbcType="VARCHAR" />
+    <id column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <id column="PLAN_HASH_VALUE" property="planHashValue" jdbcType="DECIMAL" />
+    <result column="NEW_PLAN_HASH" property="newPlanHash" jdbcType="DECIMAL" />
+    <result column="PLAN_ID" property="planId" jdbcType="DECIMAL" />
+    <result column="ERROR_CODE" property="errorCode" jdbcType="DECIMAL" />
+    <result column="CONTROL_OPTIONS" property="controlOptions" jdbcType="CLOB" />
+    <result column="EXTRA_RESULT" property="extraResult" jdbcType="CLOB" />
+    <result column="ERROR_MESSAGE" property="errorMessage" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

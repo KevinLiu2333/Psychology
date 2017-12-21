@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DeflobMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Deflob">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DEFERRED_TRAN_ID" jdbcType="VARCHAR" property="deferredTranId" />
+    <result column="NCLOB_COL" jdbcType="OTHER" property="nclobCol" />
+    <result column="ID" jdbcType="VARBINARY" property="id" />
+    <result column="BLOB_COL" jdbcType="BLOB" property="blobCol" />
+    <result column="CLOB_COL" jdbcType="CLOB" property="clobCol" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtEcmCsaSnapshotInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtEcmCsaSnapshotInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ECM_SNAPSHOT_ID" property="ecmSnapshotId" jdbcType="VARBINARY" />
+    <result column="DISPLAY_TARGET_NAME" property="displayTargetName" jdbcType="VARCHAR" />
+    <result column="SNAPSHOT_TYPE" property="snapshotType" jdbcType="VARCHAR" />
+    <result column="START_TIMESTAMP" property="startTimestamp" jdbcType="DATE" />
+    <result column="ELAPSED_TIME" property="elapsedTime" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="MESSAGE" property="message" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowLovValuesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowLovValues" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="LIST_OWNER" property="listOwner" jdbcType="VARCHAR" />
+    <result column="LIST_NAME" property="listName" jdbcType="VARCHAR" />
+    <result column="LIST_DISPLAY_VALUE" property="listDisplayValue" jdbcType="VARCHAR" />
+    <result column="LIST_RETURN_VALUE" property="listReturnValue" jdbcType="VARCHAR" />
+    <result column="LIST_SEQUENCE" property="listSequence" jdbcType="DECIMAL" />
+    <result column="LIST_DISP_COND" property="listDispCond" jdbcType="VARCHAR" />
+    <result column="LIST_DISPLAY_COND_TYPE" property="listDisplayCondType" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

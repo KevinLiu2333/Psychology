@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaPartIndexesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaPartIndexes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="INDEX_NAME" property="indexName" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="PARTITIONING_TYPE" property="partitioningType" jdbcType="VARCHAR" />
+    <result column="SUBPARTITIONING_TYPE" property="subpartitioningType" jdbcType="VARCHAR" />
+    <result column="PARTITION_COUNT" property="partitionCount" jdbcType="DECIMAL" />
+    <result column="DEF_SUBPARTITION_COUNT" property="defSubpartitionCount" jdbcType="DECIMAL" />
+    <result column="PARTITIONING_KEY_COUNT" property="partitioningKeyCount" jdbcType="DECIMAL" />
+    <result column="SUBPARTITIONING_KEY_COUNT" property="subpartitioningKeyCount" jdbcType="DECIMAL" />
+    <result column="LOCALITY" property="locality" jdbcType="VARCHAR" />
+    <result column="ALIGNMENT" property="alignment" jdbcType="VARCHAR" />
+    <result column="DEF_TABLESPACE_NAME" property="defTablespaceName" jdbcType="VARCHAR" />
+    <result column="DEF_PCT_FREE" property="defPctFree" jdbcType="DECIMAL" />
+    <result column="DEF_INI_TRANS" property="defIniTrans" jdbcType="DECIMAL" />
+    <result column="DEF_MAX_TRANS" property="defMaxTrans" jdbcType="DECIMAL" />
+    <result column="DEF_INITIAL_EXTENT" property="defInitialExtent" jdbcType="VARCHAR" />
+    <result column="DEF_NEXT_EXTENT" property="defNextExtent" jdbcType="VARCHAR" />
+    <result column="DEF_MIN_EXTENTS" property="defMinExtents" jdbcType="VARCHAR" />
+    <result column="DEF_MAX_EXTENTS" property="defMaxExtents" jdbcType="VARCHAR" />
+    <result column="DEF_MAX_SIZE" property="defMaxSize" jdbcType="VARCHAR" />
+    <result column="DEF_PCT_INCREASE" property="defPctIncrease" jdbcType="VARCHAR" />
+    <result column="DEF_FREELISTS" property="defFreelists" jdbcType="DECIMAL" />
+    <result column="DEF_FREELIST_GROUPS" property="defFreelistGroups" jdbcType="DECIMAL" />
+    <result column="DEF_LOGGING" property="defLogging" jdbcType="VARCHAR" />
+    <result column="DEF_BUFFER_POOL" property="defBufferPool" jdbcType="VARCHAR" />
+    <result column="DEF_FLASH_CACHE" property="defFlashCache" jdbcType="VARCHAR" />
+    <result column="DEF_CELL_FLASH_CACHE" property="defCellFlashCache" jdbcType="VARCHAR" />
+    <result column="DEF_PARAMETERS" property="defParameters" jdbcType="VARCHAR" />
+    <result column="INTERVAL" property="interval" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

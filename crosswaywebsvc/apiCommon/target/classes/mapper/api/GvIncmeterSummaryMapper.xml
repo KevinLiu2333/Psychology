@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvIncmeterSummaryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvIncmeterSummary" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="SEVERITY_INDEX" property="severityIndex" jdbcType="VARCHAR" />
+    <result column="CRITICAL_INICDENTS" property="criticalInicdents" jdbcType="DECIMAL" />
+    <result column="WARNING_INCIDENTS" property="warningIncidents" jdbcType="DECIMAL" />
+    <result column="LAST_HOUR_INCIDENTS" property="lastHourIncidents" jdbcType="DECIMAL" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="OTHER" />
+    <result column="OLDEST_TRANSIENT_INC_CTIME" property="oldestTransientIncCtime" jdbcType="OTHER" />
+    <result column="OLDEST_PERSISTENT_INC_CTIME" property="oldestPersistentIncCtime" jdbcType="OTHER" />
+    <result column="LATEST_INC_CTIME" property="latestIncCtime" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

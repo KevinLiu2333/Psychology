@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VSqlPlanMonitorMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VSqlPlanMonitor" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="KEY" property="key" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="FIRST_REFRESH_TIME" property="firstRefreshTime" jdbcType="DATE" />
+    <result column="LAST_REFRESH_TIME" property="lastRefreshTime" jdbcType="DATE" />
+    <result column="FIRST_CHANGE_TIME" property="firstChangeTime" jdbcType="DATE" />
+    <result column="LAST_CHANGE_TIME" property="lastChangeTime" jdbcType="DATE" />
+    <result column="REFRESH_COUNT" property="refreshCount" jdbcType="DECIMAL" />
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="PROCESS_NAME" property="processName" jdbcType="VARCHAR" />
+    <result column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="SQL_EXEC_START" property="sqlExecStart" jdbcType="DATE" />
+    <result column="SQL_EXEC_ID" property="sqlExecId" jdbcType="DECIMAL" />
+    <result column="SQL_PLAN_HASH_VALUE" property="sqlPlanHashValue" jdbcType="DECIMAL" />
+    <result column="PLAN_PARENT_ID" property="planParentId" jdbcType="DECIMAL" />
+    <result column="PLAN_LINE_ID" property="planLineId" jdbcType="DECIMAL" />
+    <result column="PLAN_OPERATION" property="planOperation" jdbcType="VARCHAR" />
+    <result column="PLAN_OPTIONS" property="planOptions" jdbcType="VARCHAR" />
+    <result column="PLAN_OBJECT_OWNER" property="planObjectOwner" jdbcType="VARCHAR" />
+    <result column="PLAN_OBJECT_NAME" property="planObjectName" jdbcType="VARCHAR" />
+    <result column="PLAN_OBJECT_TYPE" property="planObjectType" jdbcType="VARCHAR" />
+    <result column="PLAN_DEPTH" property="planDepth" jdbcType="DECIMAL" />
+    <result column="PLAN_POSITION" property="planPosition" jdbcType="DECIMAL" />
+    <result column="PLAN_COST" property="planCost" jdbcType="DECIMAL" />
+    <result column="PLAN_CARDINALITY" property="planCardinality" jdbcType="DECIMAL" />
+    <result column="PLAN_BYTES" property="planBytes" jdbcType="DECIMAL" />
+    <result column="PLAN_TIME" property="planTime" jdbcType="DECIMAL" />
+    <result column="PLAN_PARTITION_START" property="planPartitionStart" jdbcType="VARCHAR" />
+    <result column="PLAN_PARTITION_STOP" property="planPartitionStop" jdbcType="VARCHAR" />
+    <result column="PLAN_CPU_COST" property="planCpuCost" jdbcType="DECIMAL" />
+    <result column="PLAN_IO_COST" property="planIoCost" jdbcType="DECIMAL" />
+    <result column="PLAN_TEMP_SPACE" property="planTempSpace" jdbcType="DECIMAL" />
+    <result column="STARTS" property="starts" jdbcType="DECIMAL" />
+    <result column="OUTPUT_ROWS" property="outputRows" jdbcType="DECIMAL" />
+    <result column="IO_INTERCONNECT_BYTES" property="ioInterconnectBytes" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_READ_REQUESTS" property="physicalReadRequests" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_READ_BYTES" property="physicalReadBytes" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_WRITE_REQUESTS" property="physicalWriteRequests" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_WRITE_BYTES" property="physicalWriteBytes" jdbcType="DECIMAL" />
+    <result column="WORKAREA_MEM" property="workareaMem" jdbcType="DECIMAL" />
+    <result column="WORKAREA_MAX_MEM" property="workareaMaxMem" jdbcType="DECIMAL" />
+    <result column="WORKAREA_TEMPSEG" property="workareaTempseg" jdbcType="DECIMAL" />
+    <result column="WORKAREA_MAX_TEMPSEG" property="workareaMaxTempseg" jdbcType="DECIMAL" />
+    <result column="SQL_CHILD_ADDRESS" property="sqlChildAddress" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

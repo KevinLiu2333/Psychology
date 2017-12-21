@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCsRqsHierarchyMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCsRqsHierarchy" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="CHILD_RQS_GUID" property="childRqsGuid" jdbcType="VARBINARY" />
+    <id column="PARENT_GUID" property="parentGuid" jdbcType="VARBINARY" />
+    <id column="CHILD_GUID" property="childGuid" jdbcType="VARBINARY" />
+    <result column="CHILD_TYPE" property="childType" jdbcType="DECIMAL" />
+    <result column="CHILD_POSITION" property="childPosition" jdbcType="DECIMAL" />
+    <result column="ROOT_CS_GUID" property="rootCsGuid" jdbcType="VARBINARY" />
+    <result column="PARENT_RQS_GUID" property="parentRqsGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

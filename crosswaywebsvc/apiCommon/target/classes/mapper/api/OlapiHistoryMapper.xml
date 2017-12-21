@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OlapiHistoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OlapiHistory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <id column="HIST_ID" property="histId" jdbcType="DECIMAL" />
+    <result column="START_TIME" property="startTime" jdbcType="TIMESTAMP" />
+    <result column="COLLECTING_STOP_TIME" property="collectingStopTime" jdbcType="TIMESTAMP" />
+    <result column="STOP_TIME" property="stopTime" jdbcType="TIMESTAMP" />
+    <result column="SESSION_COUNT" property="sessionCount" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

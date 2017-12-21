@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuListFilterTemp2Mapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuListFilterTemp2" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PROCESS_ORDER" property="processOrder" jdbcType="DECIMAL" />
+    <result column="DUPLICATE" property="duplicate" jdbcType="DECIMAL" />
+    <result column="OBJECT_SCHEMA" property="objectSchema" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="BASE_PROCESS_ORDER" property="baseProcessOrder" jdbcType="DECIMAL" />
+    <result column="PARENT_PROCESS_ORDER" property="parentProcessOrder" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

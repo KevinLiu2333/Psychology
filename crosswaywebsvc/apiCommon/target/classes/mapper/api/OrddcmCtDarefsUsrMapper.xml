@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OrddcmCtDarefsUsrMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OrddcmCtDarefsUsr" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DA_ID" property="daId" jdbcType="DECIMAL" />
+    <result column="DOC_ID" property="docId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

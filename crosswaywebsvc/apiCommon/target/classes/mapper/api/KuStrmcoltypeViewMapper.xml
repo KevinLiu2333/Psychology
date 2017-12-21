@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuStrmcoltypeViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuStrmcoltypeView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="COL_NUM" property="colNum" jdbcType="DECIMAL" />
+    <result column="INTCOL_NUM" property="intcolNum" jdbcType="DECIMAL" />
+    <result column="OWNER_NAME" property="ownerName" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="OPQFLAGS" property="opqflags" jdbcType="DECIMAL" />
+    <result column="VERSION" property="version" jdbcType="DECIMAL" />
+    <result column="TYPIDCOL_NUM" property="typidcolNum" jdbcType="DECIMAL" />
+    <result column="SUBTYPE_LIST" property="subtypeList" jdbcType="OTHER" />
+    <result column="TOID" property="toid" jdbcType="VARBINARY" />
+    <result column="HASHCODE" property="hashcode" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

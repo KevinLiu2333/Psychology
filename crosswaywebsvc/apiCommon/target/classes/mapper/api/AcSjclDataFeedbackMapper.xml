@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AcSjclDataFeedbackMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AcSjclDataFeedback">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" jdbcType="OTHER" property="id" />
+    <result column="TASK_NUMBER" jdbcType="OTHER" property="taskNumber" />
+    <result column="TASK_NAME" jdbcType="OTHER" property="taskName" />
+    <result column="TASK_RULES" jdbcType="OTHER" property="taskRules" />
+    <result column="RESOURCE_TABLE" jdbcType="OTHER" property="resourceTable" />
+    <result column="PROVIDER_DEPARTMENT" jdbcType="OTHER" property="providerDepartment" />
+    <result column="COUNT" jdbcType="DECIMAL" property="count" />
+    <result column="ERROR_COUNT" jdbcType="DECIMAL" property="errorCount" />
+    <result column="FEEDBACK" jdbcType="OTHER" property="feedback" />
+    <result column="CHECK_TIME" jdbcType="DATE" property="checkTime" />
+    <result column="FEEDBACK_TIME" jdbcType="DATE" property="feedbackTime" />
+  </resultMap>
+</mapper>

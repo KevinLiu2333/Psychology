@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VRmanEncryptionAlgorithmsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VRmanEncryptionAlgorithms" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ALGORITHM_ID" property="algorithmId" jdbcType="DECIMAL" />
+    <result column="ALGORITHM_NAME" property="algorithmName" jdbcType="VARCHAR" />
+    <result column="ALGORITHM_DESCRIPTION" property="algorithmDescription" jdbcType="VARCHAR" />
+    <result column="IS_DEFAULT" property="isDefault" jdbcType="VARCHAR" />
+    <result column="RESTORE_ONLY" property="restoreOnly" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

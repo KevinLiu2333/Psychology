@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuUserViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuUserView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="USER_ID" property="userId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="TYPE_NUM" property="typeNum" jdbcType="DECIMAL" />
+    <result column="PASSWORD" property="password" jdbcType="VARCHAR" />
+    <result column="DATATS" property="datats" jdbcType="VARCHAR" />
+    <result column="TEMPTS" property="tempts" jdbcType="VARCHAR" />
+    <result column="CTIME" property="ctime" jdbcType="DATE" />
+    <result column="PTIME" property="ptime" jdbcType="DATE" />
+    <result column="EXPTIME" property="exptime" jdbcType="DATE" />
+    <result column="LTIME" property="ltime" jdbcType="DATE" />
+    <result column="PROFNUM" property="profnum" jdbcType="DECIMAL" />
+    <result column="PROFNAME" property="profname" jdbcType="VARCHAR" />
+    <result column="USER_AUDIT" property="userAudit" jdbcType="VARCHAR" />
+    <result column="DEFROLE" property="defrole" jdbcType="DECIMAL" />
+    <result column="DEFGRP_NUM" property="defgrpNum" jdbcType="DECIMAL" />
+    <result column="DEFGRP_SEQ_NUM" property="defgrpSeqNum" jdbcType="DECIMAL" />
+    <result column="ASTATUS" property="astatus" jdbcType="DECIMAL" />
+    <result column="LCOUNT" property="lcount" jdbcType="DECIMAL" />
+    <result column="DEFSCHCLASS" property="defschclass" jdbcType="VARCHAR" />
+    <result column="EXT_USERNAME" property="extUsername" jdbcType="VARCHAR" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+    <result column="SPARE4" property="spare4" jdbcType="VARCHAR" />
+    <result column="SPARE5" property="spare5" jdbcType="VARCHAR" />
+    <result column="SPARE6" property="spare6" jdbcType="DATE" />
+  </resultMap>
+</mapper>

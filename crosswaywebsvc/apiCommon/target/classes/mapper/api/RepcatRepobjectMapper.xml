@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RepcatRepobjectMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RepcatRepobject">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAME" jdbcType="VARCHAR" property="sname" />
+    <result column="ONAME" jdbcType="VARCHAR" property="oname" />
+    <result column="TYPE" jdbcType="VARCHAR" property="type" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    <result column="GENERATION_STATUS" jdbcType="VARCHAR" property="generationStatus" />
+    <result column="ID" jdbcType="DECIMAL" property="id" />
+    <result column="OBJECT_COMMENT" jdbcType="VARCHAR" property="objectComment" />
+    <result column="GOWNER" jdbcType="VARCHAR" property="gowner" />
+    <result column="GNAME" jdbcType="VARCHAR" property="gname" />
+    <result column="TRIGFLAG" jdbcType="VARCHAR" property="trigflag" />
+    <result column="MIN_COMMUNICATION" jdbcType="VARCHAR" property="minCommunication" />
+    <result column="INTERNAL_PACKAGE_EXISTS" jdbcType="VARCHAR" property="internalPackageExists" />
+    <result column="RECEIVER_TRACING_ENABLED" jdbcType="VARCHAR" property="receiverTracingEnabled" />
+    <result column="NESTED_TABLE" jdbcType="VARCHAR" property="nestedTable" />
+    <result column="HASHCODE" jdbcType="VARCHAR" property="hashcode" />
+  </resultMap>
+</mapper>

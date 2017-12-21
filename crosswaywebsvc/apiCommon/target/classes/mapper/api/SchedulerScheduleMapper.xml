@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SchedulerScheduleMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SchedulerSchedule" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="RECURRENCE_EXPR" property="recurrenceExpr" jdbcType="VARCHAR" />
+    <result column="QUEUE_OWNER" property="queueOwner" jdbcType="VARCHAR" />
+    <result column="QUEUE_NAME" property="queueName" jdbcType="VARCHAR" />
+    <result column="QUEUE_AGENT" property="queueAgent" jdbcType="VARCHAR" />
+    <result column="REFERENCE_DATE" property="referenceDate" jdbcType="OTHER" />
+    <result column="END_DATE" property="endDate" jdbcType="OTHER" />
+    <result column="COMMENTS" property="comments" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="MAX_COUNT" property="maxCount" jdbcType="DECIMAL" />
+    <result column="FW_NAME" property="fwName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvSubscrRegistrationStatsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvSubscrRegistrationStats" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="REG_ID" property="regId" jdbcType="DECIMAL" />
+    <result column="NUM_NTFNS" property="numNtfns" jdbcType="DECIMAL" />
+    <result column="NUM_GROUPING_NTFNS" property="numGroupingNtfns" jdbcType="DECIMAL" />
+    <result column="NUM_NTFNS_CURRENT_GROUP" property="numNtfnsCurrentGroup" jdbcType="DECIMAL" />
+    <result column="LAST_NTFN_START_TIME" property="lastNtfnStartTime" jdbcType="OTHER" />
+    <result column="LAST_NTFN_SENT_TIME" property="lastNtfnSentTime" jdbcType="OTHER" />
+    <result column="TOTAL_EMON_LATENCY" property="totalEmonLatency" jdbcType="DECIMAL" />
+    <result column="EMON#" property="emon" jdbcType="DECIMAL" />
+    <result column="TOTAL_PAYLOAD_BYTES_SENT" property="totalPayloadBytesSent" jdbcType="DECIMAL" />
+    <result column="NUM_RETRIES" property="numRetries" jdbcType="DECIMAL" />
+    <result column="TOTAL_PLSQL_EXEC_TIME" property="totalPlsqlExecTime" jdbcType="DECIMAL" />
+    <result column="LAST_ERR" property="lastErr" jdbcType="VARCHAR" />
+    <result column="LAST_ERR_TIME" property="lastErrTime" jdbcType="OTHER" />
+    <result column="LAST_UPDATE_TIME" property="lastUpdateTime" jdbcType="OTHER" />
+    <result column="NUM_PENDING_NTFNS" property="numPendingNtfns" jdbcType="DECIMAL" />
+    <result column="ALL_EMON_SERVERS" property="allEmonServers" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

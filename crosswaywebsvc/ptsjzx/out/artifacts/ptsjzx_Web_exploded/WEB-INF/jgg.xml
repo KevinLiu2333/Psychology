@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ul class="passageway">
+	<li id="tb" class="mg-none">
+		<a class="pw-01" id="sjtb" href="/ptsjzx/wbj/toIndex?id=1" target="_blank">
+			数据填报
+		</a>
+	</li>
+	<li id="ntb" class="mg-none">
+		<a class="pw-01"
+			style="background:url(skins/images/index/icon_a06_h.png) no-repeat center">
+			数据填报
+		</a>
+	</li>
+	<li id="zyml">
+		<a class="pw-02" id="shyj" href="/ptsjzx/wbj/toIndex?id=60" target="_blank">
+			资源目录
+		</a>
+	</li>
+	<li id="tjtb">
+		<a class="pw-03" href="/ptsjzx/wbj/toIndex?id=8" target="_blank">
+			统计图表
+		</a>
+	</li>
+	<li id="zrrzt" class="mg-none">
+		<a class="pw-04" href="/ptsjzx/wbj/toIndex?id=3" target="_blank">
+			自然人专题
+		</a>
+	</li>
+	<li id="frzt">
+		<a class="pw-05" href="/ptsjzx/wbj/toIndex?id=6" target="_blank">
+			法人专题
+		</a>
+	</li>
+	<li id="cyyq">
+		<a class="pw-06" href="/ptsjzx/wbj/toIndex?id=9" target="_blank">
+			产业园区
+		</a>
+	</li>
+</ul>

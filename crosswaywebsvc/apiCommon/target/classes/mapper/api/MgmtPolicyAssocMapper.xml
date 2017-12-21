@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtPolicyAssocMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtPolicyAssoc" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OBJECT_GUID" property="objectGuid" jdbcType="VARBINARY" />
+    <id column="POLICY_GUID" property="policyGuid" jdbcType="VARBINARY" />
+    <id column="COLL_NAME" property="collName" jdbcType="VARCHAR" />
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="DECIMAL" />
+    <result column="POLICY_TYPE" property="policyType" jdbcType="DECIMAL" />
+    <result column="IS_ENABLED" property="isEnabled" jdbcType="DECIMAL" />
+    <result column="ADD_OR_DELETE" property="addOrDelete" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

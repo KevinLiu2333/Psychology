@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaExpFilesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaExpFiles" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="EXP_VERSION" property="expVersion" jdbcType="DECIMAL" />
+    <result column="EXP_TYPE" property="expType" jdbcType="VARCHAR" />
+    <result column="FILE_NAME" property="fileName" jdbcType="VARCHAR" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="TIMESTAMP" property="timestamp" jdbcType="DATE" />
+  </resultMap>
+</mapper>

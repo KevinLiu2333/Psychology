@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AqMgmtNotifyQtableGMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AqMgmtNotifyQtableG" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="MSGID" property="msgid" jdbcType="VARBINARY" />
+    <id column="SUBSCRIBER#" property="subscriber" jdbcType="DECIMAL" />
+    <id column="NAME" property="name" jdbcType="VARCHAR" />
+    <id column="ADDRESS#" property="address" jdbcType="DECIMAL" />
+    <result column="SIGN" property="sign" jdbcType="OTHER" />
+    <result column="DBS_SIGN" property="dbsSign" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

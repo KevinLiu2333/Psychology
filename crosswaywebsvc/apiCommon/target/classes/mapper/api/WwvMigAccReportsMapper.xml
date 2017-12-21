@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigAccReportsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigAccReports" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="PROJECT_ID" property="projectId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="REPORTID" property="reportid" jdbcType="DECIMAL" />
+    <result column="REPNAME" property="repname" jdbcType="VARCHAR" />
+    <result column="BACKCOLOR" property="backcolor" jdbcType="DECIMAL" />
+    <result column="REPCAPTION" property="repcaption" jdbcType="VARCHAR" />
+    <result column="COUNT" property="count" jdbcType="DECIMAL" />
+    <result column="DATEGROUPING" property="dategrouping" jdbcType="DECIMAL" />
+    <result column="FASTLASERPRINTING" property="fastlaserprinting" jdbcType="DECIMAL" />
+    <result column="FILTER" property="filter" jdbcType="VARCHAR" />
+    <result column="FILTERON" property="filteron" jdbcType="DECIMAL" />
+    <result column="GRIDX" property="gridx" jdbcType="DECIMAL" />
+    <result column="GRIDY" property="gridy" jdbcType="DECIMAL" />
+    <result column="GRPKEEPTOGETHER" property="grpkeeptogether" jdbcType="DECIMAL" />
+    <result column="HASMODULE" property="hasmodule" jdbcType="DECIMAL" />
+    <result column="HELPCONTEXTID" property="helpcontextid" jdbcType="DECIMAL" />
+    <result column="HELPFILE" property="helpfile" jdbcType="VARCHAR" />
+    <result column="HWND" property="hwnd" jdbcType="DECIMAL" />
+    <result column="LAYOUTFORPRINT" property="layoutforprint" jdbcType="DECIMAL" />
+    <result column="LOGICALPAGEWIDTH" property="logicalpagewidth" jdbcType="DECIMAL" />
+    <result column="MAXBUTTON" property="maxbutton" jdbcType="DECIMAL" />
+    <result column="MENUBAR" property="menubar" jdbcType="VARCHAR" />
+    <result column="MINBUTTON" property="minbutton" jdbcType="DECIMAL" />
+    <result column="ONACTIVATE" property="onactivate" jdbcType="VARCHAR" />
+    <result column="ONCLOSE" property="onclose" jdbcType="VARCHAR" />
+    <result column="ONDEACTIVATE" property="ondeactivate" jdbcType="VARCHAR" />
+    <result column="ONERROR" property="onerror" jdbcType="VARCHAR" />
+    <result column="ONNODATA" property="onnodata" jdbcType="VARCHAR" />
+    <result column="ONOPEN" property="onopen" jdbcType="VARCHAR" />
+    <result column="ONPAGE" property="onpage" jdbcType="VARCHAR" />
+    <result column="ORDERBY" property="orderby" jdbcType="VARCHAR" />
+    <result column="ORDERBYON" property="orderbyon" jdbcType="VARCHAR" />
+    <result column="PAGEFOOTER" property="pagefooter" jdbcType="DECIMAL" />
+    <result column="PAGEHEADER" property="pageheader" jdbcType="DECIMAL" />
+    <result column="PAINTING" property="painting" jdbcType="DECIMAL" />
+    <result column="PALETTESOURCE" property="palettesource" jdbcType="VARCHAR" />
+    <result column="PICTURE" property="picture" jdbcType="VARCHAR" />
+    <result column="PICTUREALIGNMENT" property="picturealignment" jdbcType="DECIMAL" />
+    <result column="PICTURESIZEMODE" property="picturesizemode" jdbcType="DECIMAL" />
+    <result column="PICTURETILING" property="picturetiling" jdbcType="DECIMAL" />
+    <result column="PICTURETYPE" property="picturetype" jdbcType="DECIMAL" />
+    <result column="RECORDLOCKS" property="recordlocks" jdbcType="DECIMAL" />
+    <result column="RECORDSOURCE" property="recordsource" jdbcType="VARCHAR" />
+    <result column="SHORTCUTMENUBAR" property="shortcutmenubar" jdbcType="VARCHAR" />
+    <result column="TAG" property="tag" jdbcType="VARCHAR" />
+    <result column="TOOLBAR" property="toolbar" jdbcType="VARCHAR" />
+    <result column="VISIBLE" property="visible" jdbcType="DECIMAL" />
+    <result column="WIDTH" property="width" jdbcType="DECIMAL" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

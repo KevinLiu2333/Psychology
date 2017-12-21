@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtManagementPluginsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtManagementPlugins" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <id column="MP_VERSION" property="mpVersion" jdbcType="VARCHAR" />
+    <result column="IMPORT_DATE" property="importDate" jdbcType="DATE" />
+    <result column="HWM_STATUS" property="hwmStatus" jdbcType="DECIMAL" />
+    <result column="FUNCTIONAL_DESCRIPTION" property="functionalDescription" jdbcType="VARCHAR" />
+    <result column="REQUIREMENTS_DESCRIPTION" property="requirementsDescription" jdbcType="VARCHAR" />
+    <result column="MP_GUID" property="mpGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

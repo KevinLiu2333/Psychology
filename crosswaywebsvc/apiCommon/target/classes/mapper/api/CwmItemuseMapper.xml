@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CwmItemuseMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CwmItemuse" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="IRID" property="irid" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="SHORTDESCRIPTION" property="shortdescription" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="CREATEDBY" property="createdby" jdbcType="VARCHAR" />
+    <result column="CREATEDON" property="createdon" jdbcType="DATE" />
+    <result column="LASTMODIFIEDBY" property="lastmodifiedby" jdbcType="VARCHAR" />
+    <result column="LASTMODIFIEDON" property="lastmodifiedon" jdbcType="DATE" />
+    <result column="TYPE_IRID" property="typeIrid" jdbcType="DECIMAL" />
+    <result column="NODE_IRID_1" property="nodeIrid1" jdbcType="DECIMAL" />
+    <result column="NODE_IRID" property="nodeIrid" jdbcType="DECIMAL" />
+    <result column="COMPLEXITEM_IRID" property="complexitemIrid" jdbcType="DECIMAL" />
+    <result column="SCRIPT" property="script" jdbcType="VARCHAR" />
+    <result column="ARGUMENT_IRID" property="argumentIrid" jdbcType="DECIMAL" />
+    <result column="FUNCTIONIMPLEMENTATION_IRID" property="functionimplementationIrid" jdbcType="DECIMAL" />
+    <result column="GENERATEDOBJECT_IRID" property="generatedobjectIrid" jdbcType="DECIMAL" />
+    <result column="MAP_IRID" property="mapIrid" jdbcType="DECIMAL" />
+    <result column="OPERATION_IRID" property="operationIrid" jdbcType="DECIMAL" />
+    <result column="OPERATION_IRID_1" property="operationIrid1" jdbcType="DECIMAL" />
+    <result column="MAPPABLE_IRID" property="mappableIrid" jdbcType="DECIMAL" />
+    <result column="ENTITYUSE_IRID" property="entityuseIrid" jdbcType="DECIMAL" />
+    <result column="ITEMUSE_IRID" property="itemuseIrid" jdbcType="DECIMAL" />
+    <result column="DATE_CHANGED" property="dateChanged" jdbcType="DATE" />
+    <result column="DATE_CREATED" property="dateCreated" jdbcType="DATE" />
+    <result column="FUNCTIONIMPLEMENTATION_FK_SEQ" property="functionimplementationFkSeq" jdbcType="DECIMAL" />
+    <result column="GENERATEDOBJECT_FK_SEQ" property="generatedobjectFkSeq" jdbcType="DECIMAL" />
+    <result column="INPUT_FK_SEQ" property="inputFkSeq" jdbcType="DECIMAL" />
+    <result column="IVID" property="ivid" jdbcType="DECIMAL" />
+    <result column="MAP_FK_SEQ" property="mapFkSeq" jdbcType="DECIMAL" />
+    <result column="NOTM" property="notm" jdbcType="DECIMAL" />
+    <result column="OUTPUT_FK_SEQ" property="outputFkSeq" jdbcType="DECIMAL" />
+    <result column="TYPES" property="types" jdbcType="DECIMAL" />
+    <result column="USER_CHANGED_BY" property="userChangedBy" jdbcType="VARCHAR" />
+    <result column="USER_CREATED_BY" property="userCreatedBy" jdbcType="VARCHAR" />
+    <result column="OBJECT_OWNER" property="objectOwner" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="SECONDARY_OBJECT_NAME" property="secondaryObjectName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrWaitingMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrWaiting" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WTG_CID" property="wtgCid" jdbcType="DECIMAL" />
+    <result column="WTG_ROWID" property="wtgRowid" jdbcType="OTHER" />
+    <result column="WTG_PID" property="wtgPid" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

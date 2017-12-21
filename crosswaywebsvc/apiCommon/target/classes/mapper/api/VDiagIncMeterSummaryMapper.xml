@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VDiagIncMeterSummaryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VDiagIncMeterSummary" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDX" property="indx" jdbcType="DECIMAL" />
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="ADR_PATH_IDX" property="adrPathIdx" jdbcType="VARCHAR" />
+    <result column="ADR_HOME" property="adrHome" jdbcType="VARCHAR" />
+    <result column="SUMMARY_ID" property="summaryId" jdbcType="DECIMAL" />
+    <result column="SEVERITY_INDEX" property="severityIndex" jdbcType="DECIMAL" />
+    <result column="CRITICAL_INCIDENTS" property="criticalIncidents" jdbcType="DECIMAL" />
+    <result column="WARNING_INCIDENTS" property="warningIncidents" jdbcType="DECIMAL" />
+    <result column="NUM_INCIDENTS_LASTHOUR" property="numIncidentsLasthour" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="OTHER" />
+    <result column="OLDEST_TRANSIENT_INC_CTIME" property="oldestTransientIncCtime" jdbcType="OTHER" />
+    <result column="OLDEST_PERSISTENT_INC_CTIME" property="oldestPersistentIncCtime" jdbcType="OTHER" />
+    <result column="LATEST_INC_CTIME" property="latestIncCtime" jdbcType="OTHER" />
+    <result column="ADDR" property="addr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

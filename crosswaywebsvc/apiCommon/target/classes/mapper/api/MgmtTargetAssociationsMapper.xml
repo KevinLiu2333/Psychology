@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtTargetAssociationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtTargetAssociations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ASSOC_DEF_NAME" property="assocDefName" jdbcType="VARCHAR" />
+    <result column="SOURCE_TARGET_NAME" property="sourceTargetName" jdbcType="VARCHAR" />
+    <result column="SOURCE_TARGET_TYPE" property="sourceTargetType" jdbcType="VARCHAR" />
+    <result column="ASSOC_TARGET_NAME" property="assocTargetName" jdbcType="VARCHAR" />
+    <result column="ASSOC_TARGET_TYPE" property="assocTargetType" jdbcType="VARCHAR" />
+    <result column="SCOPE_TARGET_NAME" property="scopeTargetName" jdbcType="VARCHAR" />
+    <result column="SCOPE_TARGET_TYPE" property="scopeTargetType" jdbcType="VARCHAR" />
+    <result column="ASSOCIATION_TYPE" property="associationType" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

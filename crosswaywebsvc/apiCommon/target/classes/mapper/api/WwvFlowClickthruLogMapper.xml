@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowClickthruLogMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowClickthruLog">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CLICKDATE" jdbcType="DATE" property="clickdate" />
+    <result column="CATEGORY" jdbcType="VARCHAR" property="category" />
+    <result column="ID" jdbcType="DECIMAL" property="id" />
+    <result column="FLOW_USER" jdbcType="VARCHAR" property="flowUser" />
+    <result column="IP" jdbcType="VARCHAR" property="ip" />
+    <result column="SECURITY_GROUP_ID" jdbcType="DECIMAL" property="securityGroupId" />
+  </resultMap>
+</mapper>

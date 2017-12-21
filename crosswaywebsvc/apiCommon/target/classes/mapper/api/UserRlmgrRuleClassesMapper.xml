@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserRlmgrRuleClassesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserRlmgrRuleClasses" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RULE_CLASS_NAME" property="ruleClassName" jdbcType="VARCHAR" />
+    <result column="ACTION_CALLBACK" property="actionCallback" jdbcType="VARCHAR" />
+    <result column="EVENT_STRUCTURE" property="eventStructure" jdbcType="VARCHAR" />
+    <result column="RULE_CLASS_PACK" property="ruleClassPack" jdbcType="VARCHAR" />
+    <result column="RCLS_RSLT_VIEW" property="rclsRsltView" jdbcType="VARCHAR" />
+    <result column="IS_COMPOSITE" property="isComposite" jdbcType="VARCHAR" />
+    <result column="SEQUENCE_ENB" property="sequenceEnb" jdbcType="VARCHAR" />
+    <result column="AUTOCOMMIT" property="autocommit" jdbcType="VARCHAR" />
+    <result column="CONSUMPTION" property="consumption" jdbcType="VARCHAR" />
+    <result column="DURATION" property="duration" jdbcType="VARCHAR" />
+    <result column="ORDERING" property="ordering" jdbcType="VARCHAR" />
+    <result column="EQUAL" property="equal" jdbcType="VARCHAR" />
+    <result column="DML_EVENTS" property="dmlEvents" jdbcType="VARCHAR" />
+    <result column="CNF_EVENTS" property="cnfEvents" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

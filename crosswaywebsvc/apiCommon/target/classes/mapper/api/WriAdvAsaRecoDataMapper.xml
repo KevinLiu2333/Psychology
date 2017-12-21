@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriAdvAsaRecoDataMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriAdvAsaRecoData" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <result column="CTIME" property="ctime" jdbcType="TIMESTAMP" />
+    <result column="SEGOWNER" property="segowner" jdbcType="VARCHAR" />
+    <result column="SEGNAME" property="segname" jdbcType="VARCHAR" />
+    <result column="SEGTYPE" property="segtype" jdbcType="VARCHAR" />
+    <result column="PARTNAME" property="partname" jdbcType="VARCHAR" />
+    <result column="TSNAME" property="tsname" jdbcType="VARCHAR" />
+    <result column="BENEFIT_TYPE" property="benefitType" jdbcType="DECIMAL" />
+    <result column="USP" property="usp" jdbcType="DECIMAL" />
+    <result column="ALSP" property="alsp" jdbcType="DECIMAL" />
+    <result column="REC" property="rec" jdbcType="DECIMAL" />
+    <result column="CHCT" property="chct" jdbcType="DECIMAL" />
+    <result column="CMD_ID" property="cmdId" jdbcType="DECIMAL" />
+    <result column="C1" property="c1" jdbcType="VARCHAR" />
+    <result column="C2" property="c2" jdbcType="VARCHAR" />
+    <result column="C3" property="c3" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

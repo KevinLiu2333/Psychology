@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.StreamsProcessParamsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.StreamsProcessParams" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PROCESS_TYPE" property="processType" jdbcType="DECIMAL" />
+    <result column="PROCESS#" property="process" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="VALUE" property="value" jdbcType="VARCHAR" />
+    <result column="USER_CHANGED_FLAG" property="userChangedFlag" jdbcType="DECIMAL" />
+    <result column="INTERNAL_FLAG" property="internalFlag" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

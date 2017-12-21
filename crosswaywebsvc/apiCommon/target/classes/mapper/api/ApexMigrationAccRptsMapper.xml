@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexMigrationAccRptsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexMigrationAccRpts" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PROJECT_ID" property="projectId" jdbcType="DECIMAL" />
+    <result column="PROJECT_NAME" property="projectName" jdbcType="VARCHAR" />
+    <result column="MIGRATION_TYPE" property="migrationType" jdbcType="VARCHAR" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="REPORT_ID" property="reportId" jdbcType="DECIMAL" />
+    <result column="REPORT_NAME" property="reportName" jdbcType="VARCHAR" />
+    <result column="REPORT_CAPTION" property="reportCaption" jdbcType="VARCHAR" />
+    <result column="GRIDX" property="gridx" jdbcType="DECIMAL" />
+    <result column="GRIDY" property="gridy" jdbcType="DECIMAL" />
+    <result column="HAS_MODULE" property="hasModule" jdbcType="DECIMAL" />
+    <result column="PAGE_FOOTER" property="pageFooter" jdbcType="DECIMAL" />
+    <result column="PAGE_HEADER" property="pageHeader" jdbcType="DECIMAL" />
+    <result column="RECORDSOURCE" property="recordsource" jdbcType="VARCHAR" />
+    <result column="TAG" property="tag" jdbcType="VARCHAR" />
+    <result column="VISIBLE" property="visible" jdbcType="DECIMAL" />
+    <result column="WIDTH" property="width" jdbcType="DECIMAL" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="SCHEMA" property="schema" jdbcType="VARCHAR" />
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="WORKSPACE_ID" property="workspaceId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

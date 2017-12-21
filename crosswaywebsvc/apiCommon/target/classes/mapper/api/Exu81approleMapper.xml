@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu81approleMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu81approle" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ROLE" property="role" jdbcType="VARCHAR" />
+    <result column="SCHEMA" property="schema" jdbcType="VARCHAR" />
+    <result column="PACKAGE" property="package" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

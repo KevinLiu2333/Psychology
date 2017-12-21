@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AqSysServiceMetricsTabTMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AqSysServiceMetricsTabT" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="NEXT_DATE" property="nextDate" jdbcType="TIMESTAMP" />
+    <id column="TXN_ID" property="txnId" jdbcType="VARCHAR" />
+    <id column="MSGID" property="msgid" jdbcType="VARBINARY" />
+    <result column="ACTION" property="action" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

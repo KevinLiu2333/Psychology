@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtJobScheduleMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtJobSchedule" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SCHEDULE_ID" property="scheduleId" jdbcType="VARBINARY" />
+    <result column="FREQUENCY_CODE" property="frequencyCode" jdbcType="DECIMAL" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="START_GRACE_PERIOD" property="startGracePeriod" jdbcType="DECIMAL" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="EXECUTION_HOURS" property="executionHours" jdbcType="DECIMAL" />
+    <result column="EXECUTION_MINUTES" property="executionMinutes" jdbcType="DECIMAL" />
+    <result column="INTERVAL" property="interval" jdbcType="DECIMAL" />
+    <result column="MONTHS" property="months" jdbcType="OTHER" />
+    <result column="DAYS" property="days" jdbcType="OTHER" />
+    <result column="TIMEZONE_INFO" property="timezoneInfo" jdbcType="DECIMAL" />
+    <result column="TIMEZONE_TARGET_INDEX" property="timezoneTargetIndex" jdbcType="DECIMAL" />
+    <result column="TIMEZONE_OFFSET" property="timezoneOffset" jdbcType="DECIMAL" />
+    <result column="TIMEZONE_REGION" property="timezoneRegion" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

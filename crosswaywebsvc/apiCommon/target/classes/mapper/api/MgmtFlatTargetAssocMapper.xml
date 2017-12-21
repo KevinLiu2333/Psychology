@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtFlatTargetAssocMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtFlatTargetAssoc" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="IS_MEMBERSHIP" property="isMembership" jdbcType="DECIMAL" />
+    <result column="IS_CONNECTED" property="isConnected" jdbcType="DECIMAL" />
+    <result column="MEMBERSHIP_COUNT" property="membershipCount" jdbcType="DECIMAL" />
+    <result column="REF_COUNT" property="refCount" jdbcType="DECIMAL" />
+    <result column="PROP_COUNT" property="propCount" jdbcType="DECIMAL" />
+    <result column="SOURCE_TARGET_GUID" property="sourceTargetGuid" jdbcType="VARBINARY" />
+    <result column="ASSOC_TARGET_GUID" property="assocTargetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

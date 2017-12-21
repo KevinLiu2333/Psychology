@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowRegionReportColumnMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowRegionReportColumn" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="REGION_ID" property="regionId" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="QUERY_COLUMN_ID" property="queryColumnId" jdbcType="DECIMAL" />
+    <result column="FORM_ELEMENT_ID" property="formElementId" jdbcType="DECIMAL" />
+    <result column="COLUMN_ALIAS" property="columnAlias" jdbcType="VARCHAR" />
+    <result column="COLUMN_DISPLAY_SEQUENCE" property="columnDisplaySequence" jdbcType="DECIMAL" />
+    <result column="COLUMN_HEADING" property="columnHeading" jdbcType="VARCHAR" />
+    <result column="COLUMN_FORMAT" property="columnFormat" jdbcType="VARCHAR" />
+    <result column="COLUMN_HTML_EXPRESSION" property="columnHtmlExpression" jdbcType="VARCHAR" />
+    <result column="COLUMN_CSS_CLASS" property="columnCssClass" jdbcType="VARCHAR" />
+    <result column="COLUMN_CSS_STYLE" property="columnCssStyle" jdbcType="VARCHAR" />
+    <result column="COLUMN_HIT_HIGHLIGHT" property="columnHitHighlight" jdbcType="VARCHAR" />
+    <result column="COLUMN_LINK" property="columnLink" jdbcType="VARCHAR" />
+    <result column="COLUMN_LINKTEXT" property="columnLinktext" jdbcType="VARCHAR" />
+    <result column="COLUMN_LINK_ATTR" property="columnLinkAttr" jdbcType="VARCHAR" />
+    <result column="COLUMN_LINK_CHECKSUM_TYPE" property="columnLinkChecksumType" jdbcType="VARCHAR" />
+    <result column="COLUMN_ALIGNMENT" property="columnAlignment" jdbcType="VARCHAR" />
+    <result column="HEADING_ALIGNMENT" property="headingAlignment" jdbcType="VARCHAR" />
+    <result column="DEFAULT_SORT_COLUMN_SEQUENCE" property="defaultSortColumnSequence" jdbcType="DECIMAL" />
+    <result column="DEFAULT_SORT_DIR" property="defaultSortDir" jdbcType="VARCHAR" />
+    <result column="DISABLE_SORT_COLUMN" property="disableSortColumn" jdbcType="VARCHAR" />
+    <result column="SUM_COLUMN" property="sumColumn" jdbcType="VARCHAR" />
+    <result column="HIDDEN_COLUMN" property="hiddenColumn" jdbcType="VARCHAR" />
+    <result column="DISPLAY_WHEN_COND_TYPE" property="displayWhenCondType" jdbcType="VARCHAR" />
+    <result column="DISPLAY_WHEN_CONDITION" property="displayWhenCondition" jdbcType="VARCHAR" />
+    <result column="DISPLAY_WHEN_CONDITION2" property="displayWhenCondition2" jdbcType="VARCHAR" />
+    <result column="REPORT_COLUMN_REQUIRED_ROLE" property="reportColumnRequiredRole" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="DISPLAY_AS" property="displayAs" jdbcType="VARCHAR" />
+    <result column="NAMED_LOV" property="namedLov" jdbcType="DECIMAL" />
+    <result column="INLINE_LOV" property="inlineLov" jdbcType="VARCHAR" />
+    <result column="LOV_SHOW_NULLS" property="lovShowNulls" jdbcType="VARCHAR" />
+    <result column="LOV_NULL_TEXT" property="lovNullText" jdbcType="VARCHAR" />
+    <result column="LOV_NULL_VALUE" property="lovNullValue" jdbcType="VARCHAR" />
+    <result column="COLUMN_WIDTH" property="columnWidth" jdbcType="DECIMAL" />
+    <result column="COLUMN_HEIGHT" property="columnHeight" jdbcType="DECIMAL" />
+    <result column="CATTRIBUTES" property="cattributes" jdbcType="VARCHAR" />
+    <result column="CATTRIBUTES_ELEMENT" property="cattributesElement" jdbcType="VARCHAR" />
+    <result column="COLUMN_COMMENT" property="columnComment" jdbcType="VARCHAR" />
+    <result column="PK_COL_SOURCE_TYPE" property="pkColSourceType" jdbcType="VARCHAR" />
+    <result column="DERIVED_COLUMN" property="derivedColumn" jdbcType="VARCHAR" />
+    <result column="COLUMN_DEFAULT" property="columnDefault" jdbcType="VARCHAR" />
+    <result column="COLUMN_DEFAULT_TYPE" property="columnDefaultType" jdbcType="VARCHAR" />
+    <result column="LOV_DISPLAY_EXTRA" property="lovDisplayExtra" jdbcType="VARCHAR" />
+    <result column="INCLUDE_IN_EXPORT" property="includeInExport" jdbcType="VARCHAR" />
+    <result column="PRINT_COL_WIDTH" property="printColWidth" jdbcType="VARCHAR" />
+    <result column="PRINT_COL_ALIGN" property="printColAlign" jdbcType="VARCHAR" />
+    <result column="REF_SCHEMA" property="refSchema" jdbcType="VARCHAR" />
+    <result column="REF_TABLE_NAME" property="refTableName" jdbcType="VARCHAR" />
+    <result column="REF_COLUMN_NAME" property="refColumnName" jdbcType="VARCHAR" />
+    <result column="PK_COL_SOURCE" property="pkColSource" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

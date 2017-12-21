@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.StreamsDefProcMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.StreamsDefProc" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="BASE_OBJ_NUM" property="baseObjNum" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="PACKAGE_NAME" property="packageName" jdbcType="VARCHAR" />
+    <result column="PROCEDURE_NAME" property="procedureName" jdbcType="VARCHAR" />
+    <result column="PARAM_NAME" property="paramName" jdbcType="VARCHAR" />
+    <result column="PARAM_TYPE" property="paramType" jdbcType="DECIMAL" />
+    <result column="NUMBER_VALUE" property="numberValue" jdbcType="DECIMAL" />
+    <result column="DATE_VALUE" property="dateValue" jdbcType="DATE" />
+    <result column="VARCHAR2_VALUE" property="varchar2Value" jdbcType="VARCHAR" />
+    <result column="NVARCHAR2_VALUE" property="nvarchar2Value" jdbcType="OTHER" />
+    <result column="NCLOB_VALUE" property="nclobValue" jdbcType="OTHER" />
+    <result column="RAW_VALUE" property="rawValue" jdbcType="VARBINARY" />
+    <result column="CLOB_VALUE" property="clobValue" jdbcType="CLOB" />
+    <result column="BLOB_VALUE" property="blobValue" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

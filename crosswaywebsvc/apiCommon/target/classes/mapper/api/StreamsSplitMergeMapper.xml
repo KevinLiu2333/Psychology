@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.StreamsSplitMergeMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.StreamsSplitMerge" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ORIGINAL_CAPTURE_NAME" property="originalCaptureName" jdbcType="VARCHAR" />
+    <result column="CLONED_CAPTURE_NAME" property="clonedCaptureName" jdbcType="VARCHAR" />
+    <result column="ORIGINAL_QUEUE_OWNER" property="originalQueueOwner" jdbcType="VARCHAR" />
+    <result column="ORIGINAL_QUEUE_NAME" property="originalQueueName" jdbcType="VARCHAR" />
+    <result column="CLONED_QUEUE_OWNER" property="clonedQueueOwner" jdbcType="VARCHAR" />
+    <result column="CLONED_QUEUE_NAME" property="clonedQueueName" jdbcType="VARCHAR" />
+    <result column="STREAMS_TYPE" property="streamsType" jdbcType="DECIMAL" />
+    <result column="ORIGINAL_STREAMS_NAME" property="originalStreamsName" jdbcType="VARCHAR" />
+    <result column="CLONED_STREAMS_NAME" property="clonedStreamsName" jdbcType="VARCHAR" />
+    <result column="ACTION_TYPE" property="actionType" jdbcType="DECIMAL" />
+    <result column="ACTION_THRESHOLD" property="actionThreshold" jdbcType="DECIMAL" />
+    <result column="ACTIVE" property="active" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="STATUS_UPDATE_TIME" property="statusUpdateTime" jdbcType="TIMESTAMP" />
+    <result column="CREATION_TIME" property="creationTime" jdbcType="TIMESTAMP" />
+    <result column="JOB_OWNER" property="jobOwner" jdbcType="VARCHAR" />
+    <result column="JOB_NAME" property="jobName" jdbcType="VARCHAR" />
+    <result column="SCHEDULE_OWNER" property="scheduleOwner" jdbcType="VARCHAR" />
+    <result column="SCHEDULE_NAME" property="scheduleName" jdbcType="VARCHAR" />
+    <result column="LAG" property="lag" jdbcType="DECIMAL" />
+    <result column="ERROR_NUMBER" property="errorNumber" jdbcType="DECIMAL" />
+    <result column="ERROR_MESSAGE" property="errorMessage" jdbcType="VARCHAR" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+    <result column="SPARE4" property="spare4" jdbcType="DECIMAL" />
+    <result column="SPARE5" property="spare5" jdbcType="VARCHAR" />
+    <result column="SPARE6" property="spare6" jdbcType="VARCHAR" />
+    <result column="SPARE7" property="spare7" jdbcType="VARCHAR" />
+    <result column="SPARE8" property="spare8" jdbcType="VARCHAR" />
+    <result column="SPARE9" property="spare9" jdbcType="DATE" />
+    <result column="SPARE10" property="spare10" jdbcType="DATE" />
+    <result column="SPARE11" property="spare11" jdbcType="DATE" />
+    <result column="SPARE12" property="spare12" jdbcType="DATE" />
+    <result column="SPARE13" property="spare13" jdbcType="TIMESTAMP" />
+    <result column="SPARE14" property="spare14" jdbcType="TIMESTAMP" />
+    <result column="SPARE15" property="spare15" jdbcType="TIMESTAMP" />
+    <result column="SPARE16" property="spare16" jdbcType="TIMESTAMP" />
+    <result column="RECOVERABLE_SCRIPT_ID" property="recoverableScriptId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

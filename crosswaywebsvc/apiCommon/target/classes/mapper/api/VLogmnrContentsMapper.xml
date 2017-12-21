@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VLogmnrContentsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VLogmnrContents" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SCN" property="scn" jdbcType="DECIMAL" />
+    <result column="START_SCN" property="startScn" jdbcType="DECIMAL" />
+    <result column="COMMIT_SCN" property="commitScn" jdbcType="DECIMAL" />
+    <result column="TIMESTAMP" property="timestamp" jdbcType="DATE" />
+    <result column="START_TIMESTAMP" property="startTimestamp" jdbcType="DATE" />
+    <result column="COMMIT_TIMESTAMP" property="commitTimestamp" jdbcType="DATE" />
+    <result column="XIDUSN" property="xidusn" jdbcType="DECIMAL" />
+    <result column="XIDSLT" property="xidslt" jdbcType="DECIMAL" />
+    <result column="XIDSQN" property="xidsqn" jdbcType="DECIMAL" />
+    <result column="PXIDUSN" property="pxidusn" jdbcType="DECIMAL" />
+    <result column="PXIDSLT" property="pxidslt" jdbcType="DECIMAL" />
+    <result column="PXIDSQN" property="pxidsqn" jdbcType="DECIMAL" />
+    <result column="TX_NAME" property="txName" jdbcType="VARCHAR" />
+    <result column="OPERATION" property="operation" jdbcType="VARCHAR" />
+    <result column="OPERATION_CODE" property="operationCode" jdbcType="DECIMAL" />
+    <result column="ROLLBACK" property="rollback" jdbcType="DECIMAL" />
+    <result column="SEG_OWNER" property="segOwner" jdbcType="VARCHAR" />
+    <result column="SEG_NAME" property="segName" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="SEG_TYPE" property="segType" jdbcType="DECIMAL" />
+    <result column="SEG_TYPE_NAME" property="segTypeName" jdbcType="VARCHAR" />
+    <result column="TABLE_SPACE" property="tableSpace" jdbcType="VARCHAR" />
+    <result column="ROW_ID" property="rowId" jdbcType="VARCHAR" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="OS_USERNAME" property="osUsername" jdbcType="VARCHAR" />
+    <result column="MACHINE_NAME" property="machineName" jdbcType="VARCHAR" />
+    <result column="AUDIT_SESSIONID" property="auditSessionid" jdbcType="DECIMAL" />
+    <result column="SESSION#" property="session" jdbcType="DECIMAL" />
+    <result column="SERIAL#" property="serial" jdbcType="DECIMAL" />
+    <result column="SESSION_INFO" property="sessionInfo" jdbcType="VARCHAR" />
+    <result column="THREAD#" property="thread" jdbcType="DECIMAL" />
+    <result column="SEQUENCE#" property="sequence" jdbcType="DECIMAL" />
+    <result column="RBASQN" property="rbasqn" jdbcType="DECIMAL" />
+    <result column="RBABLK" property="rbablk" jdbcType="DECIMAL" />
+    <result column="RBABYTE" property="rbabyte" jdbcType="DECIMAL" />
+    <result column="UBAFIL" property="ubafil" jdbcType="DECIMAL" />
+    <result column="UBABLK" property="ubablk" jdbcType="DECIMAL" />
+    <result column="UBAREC" property="ubarec" jdbcType="DECIMAL" />
+    <result column="UBASQN" property="ubasqn" jdbcType="DECIMAL" />
+    <result column="ABS_FILE#" property="absFile" jdbcType="DECIMAL" />
+    <result column="REL_FILE#" property="relFile" jdbcType="DECIMAL" />
+    <result column="DATA_BLK#" property="dataBlk" jdbcType="DECIMAL" />
+    <result column="DATA_OBJ#" property="dataObj" jdbcType="DECIMAL" />
+    <result column="DATA_OBJV#" property="dataObjv" jdbcType="DECIMAL" />
+    <result column="DATA_OBJD#" property="dataObjd" jdbcType="DECIMAL" />
+    <result column="SQL_REDO" property="sqlRedo" jdbcType="VARCHAR" />
+    <result column="SQL_UNDO" property="sqlUndo" jdbcType="VARCHAR" />
+    <result column="RS_ID" property="rsId" jdbcType="VARCHAR" />
+    <result column="SSN" property="ssn" jdbcType="DECIMAL" />
+    <result column="CSF" property="csf" jdbcType="DECIMAL" />
+    <result column="INFO" property="info" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="REDO_VALUE" property="redoValue" jdbcType="DECIMAL" />
+    <result column="UNDO_VALUE" property="undoValue" jdbcType="DECIMAL" />
+    <result column="SAFE_RESUME_SCN" property="safeResumeScn" jdbcType="DECIMAL" />
+    <result column="CSCN" property="cscn" jdbcType="DECIMAL" />
+    <result column="EDITION_NAME" property="editionName" jdbcType="VARCHAR" />
+    <result column="CLIENT_ID" property="clientId" jdbcType="VARCHAR" />
+    <result column="XID" property="xid" jdbcType="VARBINARY" />
+    <result column="PXID" property="pxid" jdbcType="VARBINARY" />
+    <result column="OBJECT_ID" property="objectId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbfsSfsVolMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbfsSfsVol" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TABID" property="tabid" jdbcType="DECIMAL" />
+    <id column="VOLID" property="volid" jdbcType="DECIMAL" />
+    <result column="VOLNAME" property="volname" jdbcType="VARCHAR" />
+    <result column="CREATED" property="created" jdbcType="TIMESTAMP" />
+    <result column="CSNAP#" property="csnap" jdbcType="DECIMAL" />
+    <result column="DVOLID" property="dvolid" jdbcType="DECIMAL" />
+    <result column="DSNAP#" property="dsnap" jdbcType="DECIMAL" />
+    <result column="DELETED" property="deleted" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

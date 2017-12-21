@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtIpReportDefElementsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtIpReportDefElements" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="REPORT_GUID" property="reportGuid" jdbcType="VARBINARY" />
+    <id column="ELEMENT_GUID" property="elementGuid" jdbcType="VARBINARY" />
+    <result column="ELEMENT_NAME_NLSID" property="elementNameNlsid" jdbcType="VARCHAR" />
+    <result column="ELEMENT_TYPE_NLSID" property="elementTypeNlsid" jdbcType="VARCHAR" />
+    <result column="HEADER_NLSID" property="headerNlsid" jdbcType="VARCHAR" />
+    <result column="ELEMENT_ORDER" property="elementOrder" jdbcType="DECIMAL" />
+    <result column="ELEMENT_ROW" property="elementRow" jdbcType="DECIMAL" />
+    <result column="SUPPRESS_RENDER" property="suppressRender" jdbcType="DECIMAL" />
+    <result column="IMAGE_GUID" property="imageGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

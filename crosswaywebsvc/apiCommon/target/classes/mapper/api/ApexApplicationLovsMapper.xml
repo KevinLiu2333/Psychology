@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationLovsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationLovs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="LIST_OF_VALUES_NAME" property="listOfValuesName" jdbcType="VARCHAR" />
+    <result column="LOV_TYPE" property="lovType" jdbcType="VARCHAR" />
+    <result column="LIST_OF_VALUES_QUERY" property="listOfValuesQuery" jdbcType="VARCHAR" />
+    <result column="LOV_ENTRIES" property="lovEntries" jdbcType="DECIMAL" />
+    <result column="IS_SUBSCRIBED" property="isSubscribed" jdbcType="VARCHAR" />
+    <result column="SUBSCRIBED_FROM" property="subscribedFrom" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="COMPONENT_COMMENT" property="componentComment" jdbcType="VARCHAR" />
+    <result column="LOV_ID" property="lovId" jdbcType="DECIMAL" />
+    <result column="REFERENCED_LOV_ID" property="referencedLovId" jdbcType="DECIMAL" />
+    <result column="COMPONENT_SIGNATURE" property="componentSignature" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

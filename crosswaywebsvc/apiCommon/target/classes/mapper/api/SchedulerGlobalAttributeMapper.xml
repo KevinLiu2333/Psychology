@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SchedulerGlobalAttributeMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SchedulerGlobalAttribute" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="VALUE" property="value" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="MODIFIED_INST" property="modifiedInst" jdbcType="DECIMAL" />
+    <result column="ADDITIONAL_INFO" property="additionalInfo" jdbcType="VARCHAR" />
+    <result column="ATTR_TSTAMP" property="attrTstamp" jdbcType="OTHER" />
+    <result column="ATTR_INTV" property="attrIntv" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

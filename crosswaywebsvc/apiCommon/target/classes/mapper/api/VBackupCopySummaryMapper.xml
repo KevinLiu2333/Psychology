@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VBackupCopySummaryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VBackupCopySummary" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NUM_COPIES" property="numCopies" jdbcType="DECIMAL" />
+    <result column="NUM_DISTINCT_COPIES" property="numDistinctCopies" jdbcType="DECIMAL" />
+    <result column="MIN_CHECKPOINT_CHANGE#" property="minCheckpointChange" jdbcType="DECIMAL" />
+    <result column="MAX_CHECKPOINT_CHANGE#" property="maxCheckpointChange" jdbcType="DECIMAL" />
+    <result column="MIN_CHECKPOINT_TIME" property="minCheckpointTime" jdbcType="DATE" />
+    <result column="MAX_CHECKPOINT_TIME" property="maxCheckpointTime" jdbcType="DATE" />
+    <result column="OUTPUT_BYTES" property="outputBytes" jdbcType="DECIMAL" />
+    <result column="OUTPUT_BYTES_DISPLAY" property="outputBytesDisplay" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

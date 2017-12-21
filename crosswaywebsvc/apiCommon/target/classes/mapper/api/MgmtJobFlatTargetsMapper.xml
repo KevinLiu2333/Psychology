@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtJobFlatTargetsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtJobFlatTargets" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="JOB_ID" property="jobId" jdbcType="VARBINARY" />
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <result column="TARGET_LIST_INDEX" property="targetListIndex" jdbcType="DECIMAL" />
+    <result column="ACTIVE" property="active" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

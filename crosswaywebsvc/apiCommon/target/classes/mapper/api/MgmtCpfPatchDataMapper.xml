@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCpfPatchDataMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCpfPatchData" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PATCH_ID" property="patchId" jdbcType="DECIMAL" />
+    <result column="PATCH_RELEASE_ID" property="patchReleaseId" jdbcType="DECIMAL" />
+    <result column="PATCH_PLATFORM_ID" property="patchPlatformId" jdbcType="DECIMAL" />
+    <result column="PATCH_PRODUCT_ID" property="patchProductId" jdbcType="DECIMAL" />
+    <result column="PATCH_TYPE" property="patchType" jdbcType="VARCHAR" />
+    <result column="PATCH_FIXES_BUG" property="patchFixesBug" jdbcType="DECIMAL" />
+    <result column="PATCH_AP_GUID" property="patchApGuid" jdbcType="VARBINARY" />
+    <result column="PATCH_GUID" property="patchGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

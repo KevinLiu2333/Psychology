@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtBcnTxnDefnMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtBcnTxnDefn" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="TXN_GUID" property="txnGuid" jdbcType="VARBINARY" />
+    <id column="TXN_TYPE" property="txnType" jdbcType="VARCHAR" />
+    <id column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="VERSION" property="version" jdbcType="DECIMAL" />
+    <result column="MODIFIED_DATE" property="modifiedDate" jdbcType="DATE" />
+    <result column="IS_REPRESENTATIVE" property="isRepresentative" jdbcType="CHAR" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

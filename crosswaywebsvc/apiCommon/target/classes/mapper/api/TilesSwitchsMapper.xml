@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TilesSwitchsMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.TilesSwitchs">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SWITCH_ID" jdbcType="VARCHAR" property="switchId" />
+    <result column="SWITCH_CODE" jdbcType="VARCHAR" property="switchCode" />
+    <result column="SWITCH_NAME" jdbcType="VARCHAR" property="switchName" />
+    <result column="SWITCH_VALUE" jdbcType="VARCHAR" property="switchValue" />
+  </resultMap>
+</mapper>

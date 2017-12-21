@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaRegistryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaRegistry" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COMP_ID" property="compId" jdbcType="VARCHAR" />
+    <result column="COMP_NAME" property="compName" jdbcType="VARCHAR" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="MODIFIED" property="modified" jdbcType="VARCHAR" />
+    <result column="NAMESPACE" property="namespace" jdbcType="VARCHAR" />
+    <result column="CONTROL" property="control" jdbcType="VARCHAR" />
+    <result column="SCHEMA" property="schema" jdbcType="VARCHAR" />
+    <result column="PROCEDURE" property="procedure" jdbcType="VARCHAR" />
+    <result column="STARTUP" property="startup" jdbcType="VARCHAR" />
+    <result column="PARENT_ID" property="parentId" jdbcType="VARCHAR" />
+    <result column="OTHER_SCHEMAS" property="otherSchemas" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

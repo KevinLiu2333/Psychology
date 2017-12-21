@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriAdvSqltPlanHashMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriAdvSqltPlanHash" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <id column="EXEC_NAME" property="execName" jdbcType="VARCHAR" />
+    <id column="OBJECT_ID" property="objectId" jdbcType="DECIMAL" />
+    <id column="ATTRIBUTE" property="attribute" jdbcType="DECIMAL" />
+    <result column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="PLAN_HASH" property="planHash" jdbcType="DECIMAL" />
+    <result column="PLAN_ID" property="planId" jdbcType="DECIMAL" />
+    <result column="SPARE_N1" property="spareN1" jdbcType="DECIMAL" />
+    <result column="SPARE_N2" property="spareN2" jdbcType="DECIMAL" />
+    <result column="SPARE_N3" property="spareN3" jdbcType="DECIMAL" />
+    <result column="SPARE_N4" property="spareN4" jdbcType="DECIMAL" />
+    <result column="SPARE_N5" property="spareN5" jdbcType="DECIMAL" />
+    <result column="SPARE_C1" property="spareC1" jdbcType="VARCHAR" />
+    <result column="SPARE_C2" property="spareC2" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

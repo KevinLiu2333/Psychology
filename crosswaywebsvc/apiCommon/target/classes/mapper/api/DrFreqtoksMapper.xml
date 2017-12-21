@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrFreqtoksMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrFreqtoks" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FQT_IDX_ID" property="fqtIdxId" jdbcType="DECIMAL" />
+    <result column="FQT_IXP_ID" property="fqtIxpId" jdbcType="DECIMAL" />
+    <result column="FQT_FLUSH_ID" property="fqtFlushId" jdbcType="DECIMAL" />
+    <result column="FQT_TOKEN" property="fqtToken" jdbcType="VARCHAR" />
+    <result column="FQT_TKTYPE" property="fqtTktype" jdbcType="DECIMAL" />
+    <result column="FQT_NUMOCC" property="fqtNumocc" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SysFbaDlMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SysFbaDl" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJN" property="objn" jdbcType="DECIMAL" />
+    <result column="LROWID" property="lrowid" jdbcType="VARCHAR" />
+    <result column="HROWID" property="hrowid" jdbcType="VARCHAR" />
+    <result column="USN" property="usn" jdbcType="DECIMAL" />
+    <result column="SLOT" property="slot" jdbcType="DECIMAL" />
+    <result column="SEQ" property="seq" jdbcType="DECIMAL" />
+    <result column="CSCN" property="cscn" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

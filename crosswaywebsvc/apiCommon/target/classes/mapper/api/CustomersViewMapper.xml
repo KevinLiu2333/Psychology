@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CustomersViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CustomersView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CUSTOMER_ID" property="customerId" jdbcType="DECIMAL" />
+    <result column="CUST_FIRST_NAME" property="custFirstName" jdbcType="VARCHAR" />
+    <result column="CUST_LAST_NAME" property="custLastName" jdbcType="VARCHAR" />
+    <result column="STREET_ADDRESS" property="streetAddress" jdbcType="VARCHAR" />
+    <result column="POSTAL_CODE" property="postalCode" jdbcType="VARCHAR" />
+    <result column="CITY" property="city" jdbcType="VARCHAR" />
+    <result column="STATE_PROVINCE" property="stateProvince" jdbcType="VARCHAR" />
+    <result column="COUNTRY_ID" property="countryId" jdbcType="CHAR" />
+    <result column="COUNTRY_NAME" property="countryName" jdbcType="VARCHAR" />
+    <result column="REGION_ID" property="regionId" jdbcType="DECIMAL" />
+    <result column="NLS_LANGUAGE" property="nlsLanguage" jdbcType="VARCHAR" />
+    <result column="NLS_TERRITORY" property="nlsTerritory" jdbcType="VARCHAR" />
+    <result column="CREDIT_LIMIT" property="creditLimit" jdbcType="DECIMAL" />
+    <result column="CUST_EMAIL" property="custEmail" jdbcType="VARCHAR" />
+    <result column="PRIMARY_PHONE_NUMBER" property="primaryPhoneNumber" jdbcType="VARCHAR" />
+    <result column="PHONE_NUMBER_2" property="phoneNumber2" jdbcType="VARCHAR" />
+    <result column="PHONE_NUMBER_3" property="phoneNumber3" jdbcType="VARCHAR" />
+    <result column="PHONE_NUMBER_4" property="phoneNumber4" jdbcType="VARCHAR" />
+    <result column="PHONE_NUMBER_5" property="phoneNumber5" jdbcType="VARCHAR" />
+    <result column="ACCOUNT_MGR_ID" property="accountMgrId" jdbcType="DECIMAL" />
+    <result column="LOCATION_GTYPE" property="locationGtype" jdbcType="DECIMAL" />
+    <result column="LOCATION_SRID" property="locationSrid" jdbcType="DECIMAL" />
+    <result column="LOCATION_X" property="locationX" jdbcType="DECIMAL" />
+    <result column="LOCATION_Y" property="locationY" jdbcType="DECIMAL" />
+    <result column="LOCATION_Z" property="locationZ" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

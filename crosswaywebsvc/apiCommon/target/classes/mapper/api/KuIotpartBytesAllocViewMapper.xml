@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuIotpartBytesAllocViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuIotpartBytesAllocView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="BYTES_ALLOC" property="bytesAlloc" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

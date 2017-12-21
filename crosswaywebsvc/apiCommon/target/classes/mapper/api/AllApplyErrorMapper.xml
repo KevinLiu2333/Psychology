@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllApplyErrorMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllApplyError" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="APPLY_NAME" property="applyName" jdbcType="VARCHAR" />
+    <result column="QUEUE_NAME" property="queueName" jdbcType="VARCHAR" />
+    <result column="QUEUE_OWNER" property="queueOwner" jdbcType="VARCHAR" />
+    <result column="LOCAL_TRANSACTION_ID" property="localTransactionId" jdbcType="VARCHAR" />
+    <result column="SOURCE_DATABASE" property="sourceDatabase" jdbcType="VARCHAR" />
+    <result column="SOURCE_TRANSACTION_ID" property="sourceTransactionId" jdbcType="VARCHAR" />
+    <result column="SOURCE_COMMIT_SCN" property="sourceCommitScn" jdbcType="DECIMAL" />
+    <result column="MESSAGE_NUMBER" property="messageNumber" jdbcType="DECIMAL" />
+    <result column="ERROR_NUMBER" property="errorNumber" jdbcType="DECIMAL" />
+    <result column="ERROR_MESSAGE" property="errorMessage" jdbcType="VARCHAR" />
+    <result column="RECIPIENT_ID" property="recipientId" jdbcType="DECIMAL" />
+    <result column="RECIPIENT_NAME" property="recipientName" jdbcType="VARCHAR" />
+    <result column="MESSAGE_COUNT" property="messageCount" jdbcType="DECIMAL" />
+    <result column="ERROR_CREATION_TIME" property="errorCreationTime" jdbcType="DATE" />
+    <result column="SOURCE_COMMIT_POSITION" property="sourceCommitPosition" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

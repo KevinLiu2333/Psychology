@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtHttpSessionObjectsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtHttpSessionObjects" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SESSION_ID" property="sessionId" jdbcType="VARCHAR" />
+    <id column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <id column="OBJECT_GUID" property="objectGuid" jdbcType="VARBINARY" />
+    <result column="OMS_FAILOVER_ID" property="omsFailoverId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

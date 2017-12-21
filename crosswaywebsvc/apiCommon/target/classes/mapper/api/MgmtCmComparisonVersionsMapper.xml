@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCmComparisonVersionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCmComparisonVersions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COMPARISON_VERSION" property="comparisonVersion" jdbcType="DECIMAL" />
+    <result column="VERSION_STATUS" property="versionStatus" jdbcType="VARCHAR" />
+    <result column="LEFT_VERSION" property="leftVersion" jdbcType="DECIMAL" />
+    <result column="RIGHT_VERSION" property="rightVersion" jdbcType="DECIMAL" />
+    <result column="COMPARISON_TIME" property="comparisonTime" jdbcType="DATE" />
+    <result column="TIMEZONE_REGION" property="timezoneRegion" jdbcType="VARCHAR" />
+    <result column="COMPARISON_GUID" property="comparisonGuid" jdbcType="VARBINARY" />
+    <result column="JOB_EXECUTION_ID" property="jobExecutionId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

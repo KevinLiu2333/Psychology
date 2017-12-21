@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllVersionHviewWdepthMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllVersionHviewWdepth" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERSION" property="version" jdbcType="DECIMAL" />
+    <result column="PARENT_VERSION" property="parentVersion" jdbcType="DECIMAL" />
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="DEPTH" property="depth" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

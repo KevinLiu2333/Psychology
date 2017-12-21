@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvBufferedSubscribersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvBufferedSubscribers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="QUEUE_ID" property="queueId" jdbcType="DECIMAL" />
+    <result column="QUEUE_SCHEMA" property="queueSchema" jdbcType="VARCHAR" />
+    <result column="QUEUE_NAME" property="queueName" jdbcType="VARCHAR" />
+    <result column="SUBSCRIBER_ID" property="subscriberId" jdbcType="DECIMAL" />
+    <result column="SUBSCRIBER_NAME" property="subscriberName" jdbcType="VARCHAR" />
+    <result column="SUBSCRIBER_ADDRESS" property="subscriberAddress" jdbcType="VARCHAR" />
+    <result column="PROTOCOL" property="protocol" jdbcType="DECIMAL" />
+    <result column="SUBSCRIBER_TYPE" property="subscriberType" jdbcType="VARCHAR" />
+    <result column="STARTUP_TIME" property="startupTime" jdbcType="DATE" />
+    <result column="LAST_BROWSED_SEQ" property="lastBrowsedSeq" jdbcType="DECIMAL" />
+    <result column="LAST_BROWSED_NUM" property="lastBrowsedNum" jdbcType="DECIMAL" />
+    <result column="LAST_DEQUEUED_SEQ" property="lastDequeuedSeq" jdbcType="DECIMAL" />
+    <result column="LAST_DEQUEUED_NUM" property="lastDequeuedNum" jdbcType="DECIMAL" />
+    <result column="CURRENT_ENQ_SEQ" property="currentEnqSeq" jdbcType="DECIMAL" />
+    <result column="NUM_MSGS" property="numMsgs" jdbcType="DECIMAL" />
+    <result column="CNUM_MSGS" property="cnumMsgs" jdbcType="DECIMAL" />
+    <result column="TOTAL_DEQUEUED_MSG" property="totalDequeuedMsg" jdbcType="DECIMAL" />
+    <result column="TOTAL_SPILLED_MSG" property="totalSpilledMsg" jdbcType="DECIMAL" />
+    <result column="EXPIRED_MSGS" property="expiredMsgs" jdbcType="DECIMAL" />
+    <result column="MESSAGE_LAG" property="messageLag" jdbcType="DECIMAL" />
+    <result column="ELAPSED_DEQUEUE_TIME" property="elapsedDequeueTime" jdbcType="DECIMAL" />
+    <result column="DEQUEUE_CPU_TIME" property="dequeueCpuTime" jdbcType="DECIMAL" />
+    <result column="LAST_DEQUEUE_TIME" property="lastDequeueTime" jdbcType="OTHER" />
+    <result column="OLDEST_MSG_ENQTM" property="oldestMsgEnqtm" jdbcType="OTHER" />
+    <result column="OLDEST_MSGID" property="oldestMsgid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VDispatcherConfigMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VDispatcherConfig" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CONF_INDX" property="confIndx" jdbcType="DECIMAL" />
+    <result column="NETWORK" property="network" jdbcType="VARCHAR" />
+    <result column="DISPATCHERS" property="dispatchers" jdbcType="DECIMAL" />
+    <result column="CONNECTIONS" property="connections" jdbcType="DECIMAL" />
+    <result column="SESSIONS" property="sessions" jdbcType="DECIMAL" />
+    <result column="POOL" property="pool" jdbcType="VARCHAR" />
+    <result column="TICKS" property="ticks" jdbcType="DECIMAL" />
+    <result column="INBD_TIMOUT" property="inbdTimout" jdbcType="DECIMAL" />
+    <result column="OUTBD_TIMOUT" property="outbdTimout" jdbcType="DECIMAL" />
+    <result column="MULTIPLEX" property="multiplex" jdbcType="VARCHAR" />
+    <result column="LISTENER" property="listener" jdbcType="VARCHAR" />
+    <result column="SERVICE" property="service" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

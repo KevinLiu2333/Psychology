@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvSqlareaMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvSqlarea" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="SQL_TEXT" property="sqlText" jdbcType="VARCHAR" />
+    <result column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="SHARABLE_MEM" property="sharableMem" jdbcType="DECIMAL" />
+    <result column="PERSISTENT_MEM" property="persistentMem" jdbcType="DECIMAL" />
+    <result column="RUNTIME_MEM" property="runtimeMem" jdbcType="DECIMAL" />
+    <result column="SORTS" property="sorts" jdbcType="DECIMAL" />
+    <result column="VERSION_COUNT" property="versionCount" jdbcType="DECIMAL" />
+    <result column="LOADED_VERSIONS" property="loadedVersions" jdbcType="DECIMAL" />
+    <result column="OPEN_VERSIONS" property="openVersions" jdbcType="DECIMAL" />
+    <result column="USERS_OPENING" property="usersOpening" jdbcType="DECIMAL" />
+    <result column="FETCHES" property="fetches" jdbcType="DECIMAL" />
+    <result column="EXECUTIONS" property="executions" jdbcType="DECIMAL" />
+    <result column="PX_SERVERS_EXECUTIONS" property="pxServersExecutions" jdbcType="DECIMAL" />
+    <result column="END_OF_FETCH_COUNT" property="endOfFetchCount" jdbcType="DECIMAL" />
+    <result column="USERS_EXECUTING" property="usersExecuting" jdbcType="DECIMAL" />
+    <result column="LOADS" property="loads" jdbcType="DECIMAL" />
+    <result column="FIRST_LOAD_TIME" property="firstLoadTime" jdbcType="VARCHAR" />
+    <result column="INVALIDATIONS" property="invalidations" jdbcType="DECIMAL" />
+    <result column="PARSE_CALLS" property="parseCalls" jdbcType="DECIMAL" />
+    <result column="DISK_READS" property="diskReads" jdbcType="DECIMAL" />
+    <result column="DIRECT_WRITES" property="directWrites" jdbcType="DECIMAL" />
+    <result column="BUFFER_GETS" property="bufferGets" jdbcType="DECIMAL" />
+    <result column="APPLICATION_WAIT_TIME" property="applicationWaitTime" jdbcType="DECIMAL" />
+    <result column="CONCURRENCY_WAIT_TIME" property="concurrencyWaitTime" jdbcType="DECIMAL" />
+    <result column="CLUSTER_WAIT_TIME" property="clusterWaitTime" jdbcType="DECIMAL" />
+    <result column="USER_IO_WAIT_TIME" property="userIoWaitTime" jdbcType="DECIMAL" />
+    <result column="PLSQL_EXEC_TIME" property="plsqlExecTime" jdbcType="DECIMAL" />
+    <result column="JAVA_EXEC_TIME" property="javaExecTime" jdbcType="DECIMAL" />
+    <result column="ROWS_PROCESSED" property="rowsProcessed" jdbcType="DECIMAL" />
+    <result column="COMMAND_TYPE" property="commandType" jdbcType="DECIMAL" />
+    <result column="OPTIMIZER_MODE" property="optimizerMode" jdbcType="VARCHAR" />
+    <result column="OPTIMIZER_COST" property="optimizerCost" jdbcType="DECIMAL" />
+    <result column="OPTIMIZER_ENV_HASH_VALUE" property="optimizerEnvHashValue" jdbcType="DECIMAL" />
+    <result column="PARSING_USER_ID" property="parsingUserId" jdbcType="DECIMAL" />
+    <result column="PARSING_SCHEMA_ID" property="parsingSchemaId" jdbcType="DECIMAL" />
+    <result column="PARSING_SCHEMA_NAME" property="parsingSchemaName" jdbcType="VARCHAR" />
+    <result column="KEPT_VERSIONS" property="keptVersions" jdbcType="DECIMAL" />
+    <result column="HASH_VALUE" property="hashValue" jdbcType="DECIMAL" />
+    <result column="OLD_HASH_VALUE" property="oldHashValue" jdbcType="DECIMAL" />
+    <result column="PLAN_HASH_VALUE" property="planHashValue" jdbcType="DECIMAL" />
+    <result column="MODULE" property="module" jdbcType="VARCHAR" />
+    <result column="MODULE_HASH" property="moduleHash" jdbcType="DECIMAL" />
+    <result column="ACTION" property="action" jdbcType="VARCHAR" />
+    <result column="ACTION_HASH" property="actionHash" jdbcType="DECIMAL" />
+    <result column="SERIALIZABLE_ABORTS" property="serializableAborts" jdbcType="DECIMAL" />
+    <result column="OUTLINE_CATEGORY" property="outlineCategory" jdbcType="VARCHAR" />
+    <result column="CPU_TIME" property="cpuTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_TIME" property="elapsedTime" jdbcType="DECIMAL" />
+    <result column="OUTLINE_SID" property="outlineSid" jdbcType="VARCHAR" />
+    <result column="REMOTE" property="remote" jdbcType="VARCHAR" />
+    <result column="OBJECT_STATUS" property="objectStatus" jdbcType="VARCHAR" />
+    <result column="LITERAL_HASH_VALUE" property="literalHashValue" jdbcType="DECIMAL" />
+    <result column="LAST_LOAD_TIME" property="lastLoadTime" jdbcType="DATE" />
+    <result column="IS_OBSOLETE" property="isObsolete" jdbcType="VARCHAR" />
+    <result column="IS_BIND_SENSITIVE" property="isBindSensitive" jdbcType="VARCHAR" />
+    <result column="IS_BIND_AWARE" property="isBindAware" jdbcType="VARCHAR" />
+    <result column="CHILD_LATCH" property="childLatch" jdbcType="DECIMAL" />
+    <result column="SQL_PROFILE" property="sqlProfile" jdbcType="VARCHAR" />
+    <result column="SQL_PATCH" property="sqlPatch" jdbcType="VARCHAR" />
+    <result column="SQL_PLAN_BASELINE" property="sqlPlanBaseline" jdbcType="VARCHAR" />
+    <result column="PROGRAM_ID" property="programId" jdbcType="DECIMAL" />
+    <result column="PROGRAM_LINE#" property="programLine" jdbcType="DECIMAL" />
+    <result column="EXACT_MATCHING_SIGNATURE" property="exactMatchingSignature" jdbcType="DECIMAL" />
+    <result column="FORCE_MATCHING_SIGNATURE" property="forceMatchingSignature" jdbcType="DECIMAL" />
+    <result column="LAST_ACTIVE_TIME" property="lastActiveTime" jdbcType="DATE" />
+    <result column="TYPECHECK_MEM" property="typecheckMem" jdbcType="DECIMAL" />
+    <result column="IO_CELL_OFFLOAD_ELIGIBLE_BYTES" property="ioCellOffloadEligibleBytes" jdbcType="DECIMAL" />
+    <result column="IO_INTERCONNECT_BYTES" property="ioInterconnectBytes" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_READ_REQUESTS" property="physicalReadRequests" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_READ_BYTES" property="physicalReadBytes" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_WRITE_REQUESTS" property="physicalWriteRequests" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_WRITE_BYTES" property="physicalWriteBytes" jdbcType="DECIMAL" />
+    <result column="OPTIMIZED_PHY_READ_REQUESTS" property="optimizedPhyReadRequests" jdbcType="DECIMAL" />
+    <result column="LOCKED_TOTAL" property="lockedTotal" jdbcType="DECIMAL" />
+    <result column="PINNED_TOTAL" property="pinnedTotal" jdbcType="DECIMAL" />
+    <result column="IO_CELL_UNCOMPRESSED_BYTES" property="ioCellUncompressedBytes" jdbcType="DECIMAL" />
+    <result column="IO_CELL_OFFLOAD_RETURNED_BYTES" property="ioCellOffloadReturnedBytes" jdbcType="DECIMAL" />
+    <result column="SQL_FULLTEXT" property="sqlFulltext" jdbcType="CLOB" />
+    <result column="OPTIMIZER_ENV" property="optimizerEnv" jdbcType="VARBINARY" />
+    <result column="ADDRESS" property="address" jdbcType="VARBINARY" />
+    <result column="LAST_ACTIVE_CHILD_ADDRESS" property="lastActiveChildAddress" jdbcType="VARBINARY" />
+    <result column="BIND_DATA" property="bindData" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

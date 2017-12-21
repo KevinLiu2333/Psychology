@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoCoordOpPathsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoCoordOpPaths" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CONCAT_OPERATION_ID" property="concatOperationId" jdbcType="DECIMAL" />
+    <result column="SINGLE_OPERATION_ID" property="singleOperationId" jdbcType="DECIMAL" />
+    <result column="SINGLE_OP_SOURCE_ID" property="singleOpSourceId" jdbcType="DECIMAL" />
+    <result column="SINGLE_OP_TARGET_ID" property="singleOpTargetId" jdbcType="DECIMAL" />
+    <result column="OP_PATH_STEP" property="opPathStep" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CtxThesPhrasesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CtxThesPhrases" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="THP_THESAURUS" property="thpThesaurus" jdbcType="VARCHAR" />
+    <result column="THP_PHRASE" property="thpPhrase" jdbcType="VARCHAR" />
+    <result column="THP_QUALIFIER" property="thpQualifier" jdbcType="VARCHAR" />
+    <result column="THP_SCOPE_NOTE" property="thpScopeNote" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationCachingMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationCaching" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="PAGE_ID" property="pageId" jdbcType="DECIMAL" />
+    <result column="PAGE_NAME" property="pageName" jdbcType="VARCHAR" />
+    <result column="CACHE_TYPE" property="cacheType" jdbcType="VARCHAR" />
+    <result column="LANGUAGE" property="language" jdbcType="VARCHAR" />
+    <result column="CACHING_USER" property="cachingUser" jdbcType="VARCHAR" />
+    <result column="CACHE_SIZE" property="cacheSize" jdbcType="DECIMAL" />
+    <result column="REGION_NAME" property="regionName" jdbcType="VARCHAR" />
+    <result column="CACHED_ON" property="cachedOn" jdbcType="DATE" />
+    <result column="CACHED_FOR_SECONDS" property="cachedForSeconds" jdbcType="DECIMAL" />
+    <result column="AGE_IN_SECONDS" property="ageInSeconds" jdbcType="DECIMAL" />
+    <result column="TIMEOUT_IN_SECONDS" property="timeoutInSeconds" jdbcType="DECIMAL" />
+    <result column="REGION_ID" property="regionId" jdbcType="DECIMAL" />
+    <result column="WORKSPACE_ID" property="workspaceId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

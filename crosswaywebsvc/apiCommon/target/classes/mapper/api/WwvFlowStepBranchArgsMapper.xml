@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowStepBranchArgsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowStepBranchArgs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FLOW_STEP_BRANCH_ID" property="flowStepBranchId" jdbcType="DECIMAL" />
+    <result column="BRANCH_ARG_SEQUENCE" property="branchArgSequence" jdbcType="DECIMAL" />
+    <result column="BRANCH_ARG_SOURCE_TYPE" property="branchArgSourceType" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="BRANCH_ARG_COMMENT" property="branchArgComment" jdbcType="VARCHAR" />
+    <result column="BRANCH_ARG_SOURCE" property="branchArgSource" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaHistMttrTargetAdviceMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaHistMttrTargetAdvice" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="MTTR_TARGET_FOR_ESTIMATE" property="mttrTargetForEstimate" jdbcType="DECIMAL" />
+    <result column="ADVICE_STATUS" property="adviceStatus" jdbcType="VARCHAR" />
+    <result column="DIRTY_LIMIT" property="dirtyLimit" jdbcType="DECIMAL" />
+    <result column="ESTD_CACHE_WRITES" property="estdCacheWrites" jdbcType="DECIMAL" />
+    <result column="ESTD_CACHE_WRITE_FACTOR" property="estdCacheWriteFactor" jdbcType="DECIMAL" />
+    <result column="ESTD_TOTAL_WRITES" property="estdTotalWrites" jdbcType="DECIMAL" />
+    <result column="ESTD_TOTAL_WRITE_FACTOR" property="estdTotalWriteFactor" jdbcType="DECIMAL" />
+    <result column="ESTD_TOTAL_IOS" property="estdTotalIos" jdbcType="DECIMAL" />
+    <result column="ESTD_TOTAL_IO_FACTOR" property="estdTotalIoFactor" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

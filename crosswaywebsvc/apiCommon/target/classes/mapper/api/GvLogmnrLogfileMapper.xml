@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvLogmnrLogfileMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvLogmnrLogfile" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="LOG_ID" property="logId" jdbcType="DECIMAL" />
+    <result column="FILENAME" property="filename" jdbcType="VARCHAR" />
+    <result column="LOW_TIME" property="lowTime" jdbcType="DECIMAL" />
+    <result column="NEXT_TIME" property="nextTime" jdbcType="DECIMAL" />
+    <result column="DB_ID" property="dbId" jdbcType="DECIMAL" />
+    <result column="DB_NAME" property="dbName" jdbcType="VARCHAR" />
+    <result column="RESET_SCNWRP" property="resetScnwrp" jdbcType="DECIMAL" />
+    <result column="RESET_SCNBAS" property="resetScnbas" jdbcType="DECIMAL" />
+    <result column="RESET_SCN_TIME" property="resetScnTime" jdbcType="DECIMAL" />
+    <result column="THREAD_ID" property="threadId" jdbcType="DECIMAL" />
+    <result column="THREAD_SQN" property="threadSqn" jdbcType="DECIMAL" />
+    <result column="LOW_SCNWRP" property="lowScnwrp" jdbcType="DECIMAL" />
+    <result column="LOW_SCNBAS" property="lowScnbas" jdbcType="DECIMAL" />
+    <result column="NEXT_SCNWRP" property="nextScnwrp" jdbcType="DECIMAL" />
+    <result column="NEXT_SCNBAS" property="nextScnbas" jdbcType="DECIMAL" />
+    <result column="FILE_STATE" property="fileState" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

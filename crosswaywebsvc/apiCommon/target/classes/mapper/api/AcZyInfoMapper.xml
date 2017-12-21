@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AcZyInfoMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AcZyInfo">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ZY_INFO_ID" jdbcType="VARCHAR" property="zyInfoId" />
+    <result column="ZY_NAME" jdbcType="VARCHAR" property="zyName" />
+    <result column="ZY_TABLE" jdbcType="VARCHAR" property="zyTable" />
+    <result column="ZY_ABSTRACT" jdbcType="VARCHAR" property="zyAbstract" />
+    <result column="TAG_LISTS" jdbcType="VARCHAR" property="tagLists" />
+    <result column="ZY_UNIT" jdbcType="VARCHAR" property="zyUnit" />
+    <result column="ZY_UPDATE" jdbcType="VARCHAR" property="zyUpdate" />
+    <result column="CREATE_TIME" jdbcType="DATE" property="createTime" />
+    <result column="OP_TIME" jdbcType="DATE" property="opTime" />
+    <result column="ITEM_COUNT" jdbcType="DECIMAL" property="itemCount" />
+    <result column="UNIT_ID" jdbcType="VARCHAR" property="unitId" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    <result column="AUDIT_RESULT" jdbcType="VARCHAR" property="auditResult" />
+    <result column="AUDIT_REASON" jdbcType="VARCHAR" property="auditReason" />
+    <result column="UPDATE_DESC" jdbcType="VARCHAR" property="updateDesc" />
+    <result column="DATA_ORGIN" jdbcType="VARCHAR" property="dataOrgin" />
+    <result column="DATA_SOURCE_ID" jdbcType="VARCHAR" property="dataSourceId" />
+    <result column="ZY_HOT" jdbcType="DECIMAL" property="zyHot" />
+  </resultMap>
+</mapper>

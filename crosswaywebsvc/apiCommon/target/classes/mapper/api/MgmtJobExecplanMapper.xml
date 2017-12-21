@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtJobExecplanMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtJobExecplan">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="JOB_TYPE_ID" jdbcType="VARBINARY" property="jobTypeId" />
+    <id column="STEP_NAME" jdbcType="VARCHAR" property="stepName" />
+    <id column="STEP_TYPE" jdbcType="DECIMAL" property="stepType" />
+    <result column="NESTED_JOB_TYPE" jdbcType="VARCHAR" property="nestedJobType" />
+    <result column="NESTED_JOB_TARGET_TYPE" jdbcType="VARCHAR" property="nestedJobTargetType" />
+    <result column="INCOMING_EDGE_TYPE" jdbcType="DECIMAL" property="incomingEdgeType" />
+    <result column="ORIGIN_STEP_NAME" jdbcType="VARCHAR" property="originStepName" />
+    <result column="ORIGIN_STEP_TYPE" jdbcType="DECIMAL" property="originStepType" />
+    <result column="SWITCH_VAR_NAME" jdbcType="VARCHAR" property="switchVarName" />
+    <result column="SWITCH_VAR_INDEX" jdbcType="VARCHAR" property="switchVarIndex" />
+    <result column="SWITCH_CASE_VAL" jdbcType="VARCHAR" property="switchCaseVal" />
+    <result column="ITERATE_PARAM" jdbcType="VARCHAR" property="iterateParam" />
+    <result column="ITERATE_PARAM_FILTER" jdbcType="VARCHAR" property="iterateParamFilter" />
+    <result column="NUM_CHILDREN" jdbcType="DECIMAL" property="numChildren" />
+    <result column="STEPSET_NAME" jdbcType="VARCHAR" property="stepsetName" />
+    <result column="STEPSET_STATUS" jdbcType="VARCHAR" property="stepsetStatus" />
+    <result column="COMMAND_NAME" jdbcType="VARCHAR" property="commandName" />
+    <result column="RESTART_MODE" jdbcType="DECIMAL" property="restartMode" />
+    <result column="ALL_PARAMS" jdbcType="DECIMAL" property="allParams" />
+    <result column="ALL_TARGETS" jdbcType="DECIMAL" property="allTargets" />
+    <result column="HALT_ON_FAILURE" jdbcType="DECIMAL" property="haltOnFailure" />
+    <result column="STEP_NLSID" jdbcType="VARCHAR" property="stepNlsid" />
+    <result column="STEP_DEFAULT" jdbcType="VARCHAR" property="stepDefault" />
+    <result column="FLATTENED_TARGETS" jdbcType="DECIMAL" property="flattenedTargets" />
+    <result column="TRUSTED" jdbcType="DECIMAL" property="trusted" />
+  </resultMap>
+</mapper>

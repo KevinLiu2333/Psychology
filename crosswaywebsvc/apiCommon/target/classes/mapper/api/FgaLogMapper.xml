@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.FgaLogMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.FgaLog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SESSIONID" property="sessionid" jdbcType="DECIMAL" />
+    <result column="TIMESTAMP#" property="timestamp" jdbcType="DATE" />
+    <result column="DBUID" property="dbuid" jdbcType="VARCHAR" />
+    <result column="OSUID" property="osuid" jdbcType="VARCHAR" />
+    <result column="OSHST" property="oshst" jdbcType="VARCHAR" />
+    <result column="CLIENTID" property="clientid" jdbcType="VARCHAR" />
+    <result column="EXTID" property="extid" jdbcType="VARCHAR" />
+    <result column="OBJ$SCHEMA" property="objSchema" jdbcType="VARCHAR" />
+    <result column="OBJ$NAME" property="objName" jdbcType="VARCHAR" />
+    <result column="POLICYNAME" property="policyname" jdbcType="VARCHAR" />
+    <result column="SCN" property="scn" jdbcType="DECIMAL" />
+    <result column="SQLTEXT" property="sqltext" jdbcType="VARCHAR" />
+    <result column="SQLBIND" property="sqlbind" jdbcType="VARCHAR" />
+    <result column="COMMENT$TEXT" property="commentText" jdbcType="VARCHAR" />
+    <result column="STMT_TYPE" property="stmtType" jdbcType="DECIMAL" />
+    <result column="NTIMESTAMP#" property="ntimestamp" jdbcType="TIMESTAMP" />
+    <result column="PROXY$SID" property="proxySid" jdbcType="DECIMAL" />
+    <result column="USER$GUID" property="userGuid" jdbcType="VARCHAR" />
+    <result column="INSTANCE#" property="instance" jdbcType="DECIMAL" />
+    <result column="PROCESS#" property="process" jdbcType="VARCHAR" />
+    <result column="AUDITID" property="auditid" jdbcType="VARCHAR" />
+    <result column="STATEMENT" property="statement" jdbcType="DECIMAL" />
+    <result column="ENTRYID" property="entryid" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="OBJ$EDITION" property="objEdition" jdbcType="VARCHAR" />
+    <result column="LSQLTEXT" property="lsqltext" jdbcType="CLOB" />
+    <result column="PLHOL" property="plhol" jdbcType="LONGVARCHAR" />
+    <result column="XID" property="xid" jdbcType="VARBINARY" />
+    <result column="LSQLBIND" property="lsqlbind" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

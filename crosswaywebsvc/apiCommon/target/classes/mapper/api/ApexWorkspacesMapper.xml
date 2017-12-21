@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexWorkspacesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexWorkspaces" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="SCHEMAS" property="schemas" jdbcType="DECIMAL" />
+    <result column="LAST_PURGED_SESSION" property="lastPurgedSession" jdbcType="DATE" />
+    <result column="SESSIONS" property="sessions" jdbcType="DECIMAL" />
+    <result column="APPLICATIONS" property="applications" jdbcType="DECIMAL" />
+    <result column="APPLICATION_PAGES" property="applicationPages" jdbcType="DECIMAL" />
+    <result column="APEX_USERS" property="apexUsers" jdbcType="DECIMAL" />
+    <result column="APEX_DEVELOPERS" property="apexDevelopers" jdbcType="DECIMAL" />
+    <result column="APEX_WORKSPACE_ADMINISTRATORS" property="apexWorkspaceAdministrators" jdbcType="DECIMAL" />
+    <result column="FILES" property="files" jdbcType="DECIMAL" />
+    <result column="SQL_SCRIPTS" property="sqlScripts" jdbcType="DECIMAL" />
+    <result column="TRANSLATION_MESSAGES" property="translationMessages" jdbcType="DECIMAL" />
+    <result column="FILE_STORAGE" property="fileStorage" jdbcType="DECIMAL" />
+    <result column="LAST_LOGGED_PAGE_VIEW" property="lastLoggedPageView" jdbcType="DATE" />
+    <result column="PAGE_VIEWS" property="pageViews" jdbcType="DECIMAL" />
+    <result column="WORKSPACE_ID" property="workspaceId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCurrentViolationMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCurrentViolation" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="POLICY_GUID" property="policyGuid" jdbcType="VARBINARY" />
+    <id column="KEY_VALUE" property="keyValue" jdbcType="VARCHAR" />
+    <result column="COLLECTION_TIMESTAMP" property="collectionTimestamp" jdbcType="DATE" />
+    <result column="VIOLATION_LEVEL" property="violationLevel" jdbcType="DECIMAL" />
+    <result column="VIOLATION_TYPE" property="violationType" jdbcType="DECIMAL" />
+    <result column="ANNOTATED_FLAG" property="annotatedFlag" jdbcType="DECIMAL" />
+    <result column="VALUE" property="value" jdbcType="DECIMAL" />
+    <result column="STRING_VALUE" property="stringValue" jdbcType="VARCHAR" />
+    <result column="MESSAGE" property="message" jdbcType="VARCHAR" />
+    <result column="MESSAGE_NLSID" property="messageNlsid" jdbcType="VARCHAR" />
+    <result column="MESSAGE_PARAMS" property="messageParams" jdbcType="VARCHAR" />
+    <result column="ACTION_MESSAGE" property="actionMessage" jdbcType="VARCHAR" />
+    <result column="ACTION_MESSAGE_NLSID" property="actionMessageNlsid" jdbcType="VARCHAR" />
+    <result column="ACTION_MESSAGE_PARAMS" property="actionMessageParams" jdbcType="VARCHAR" />
+    <result column="ADVISORY_ID" property="advisoryId" jdbcType="VARCHAR" />
+    <result column="EXEMPT_CODE" property="exemptCode" jdbcType="DECIMAL" />
+    <result column="EXEMPT_UNTIL" property="exemptUntil" jdbcType="DATE" />
+    <result column="EXEMPT_BY" property="exemptBy" jdbcType="VARCHAR" />
+    <result column="LOAD_TIMESTAMP" property="loadTimestamp" jdbcType="DATE" />
+    <result column="CFG_COLL_NAME" property="cfgCollName" jdbcType="VARCHAR" />
+    <result column="CFG_KEY_VALUE" property="cfgKeyValue" jdbcType="VARCHAR" />
+    <result column="CFG_KEY_OPERATOR" property="cfgKeyOperator" jdbcType="DECIMAL" />
+    <result column="VIOLATION_GUID" property="violationGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

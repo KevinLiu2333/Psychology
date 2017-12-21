@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VMapCompListMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VMapCompList" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ELEM_IDX" property="elemIdx" jdbcType="DECIMAL" />
+    <result column="NUM_COMP" property="numComp" jdbcType="DECIMAL" />
+    <result column="COMP1_NAME" property="comp1Name" jdbcType="VARCHAR" />
+    <result column="COMP1_VAL" property="comp1Val" jdbcType="VARCHAR" />
+    <result column="COMP2_NAME" property="comp2Name" jdbcType="VARCHAR" />
+    <result column="COMP2_VAL" property="comp2Val" jdbcType="VARCHAR" />
+    <result column="COMP3_NAME" property="comp3Name" jdbcType="VARCHAR" />
+    <result column="COMP3_VAL" property="comp3Val" jdbcType="VARCHAR" />
+    <result column="COMP4_NAME" property="comp4Name" jdbcType="VARCHAR" />
+    <result column="COMP4_VAL" property="comp4Val" jdbcType="VARCHAR" />
+    <result column="COMP5_NAME" property="comp5Name" jdbcType="VARCHAR" />
+    <result column="COMP5_VAL" property="comp5Val" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

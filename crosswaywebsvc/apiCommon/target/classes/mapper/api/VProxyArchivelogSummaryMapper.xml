@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VProxyArchivelogSummaryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VProxyArchivelogSummary" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NUM_FILES_BACKED" property="numFilesBacked" jdbcType="DECIMAL" />
+    <result column="NUM_DISTINCT_FILES_BACKED" property="numDistinctFilesBacked" jdbcType="DECIMAL" />
+    <result column="MIN_FIRST_CHANGE#" property="minFirstChange" jdbcType="DECIMAL" />
+    <result column="MAX_NEXT_CHANGE#" property="maxNextChange" jdbcType="DECIMAL" />
+    <result column="MIN_FIRST_TIME" property="minFirstTime" jdbcType="DATE" />
+    <result column="MAX_NEXT_TIME" property="maxNextTime" jdbcType="DATE" />
+    <result column="OUTPUT_BYTES" property="outputBytes" jdbcType="DECIMAL" />
+    <result column="OUTPUT_BYTES_DISPLAY" property="outputBytesDisplay" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

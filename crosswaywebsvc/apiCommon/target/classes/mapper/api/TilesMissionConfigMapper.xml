@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TilesMissionConfigMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.TilesMissionConfig">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TASK_ID" jdbcType="OTHER" property="taskId" />
+    <result column="TASK_NAME" jdbcType="OTHER" property="taskName" />
+    <result column="TASK_FREQ_DAY" jdbcType="OTHER" property="taskFreqDay" />
+    <result column="TASK_FREQ_TIME" jdbcType="OTHER" property="taskFreqTime" />
+    <result column="TASK_DESC" jdbcType="OTHER" property="taskDesc" />
+    <result column="TASK_FLAG" jdbcType="OTHER" property="taskFlag" />
+    <result column="CREATE_DATE" jdbcType="DATE" property="createDate" />
+    <result column="LOG_TYPE" jdbcType="OTHER" property="logType" />
+    <result column="IS_IGNORE_WARNING" jdbcType="OTHER" property="isIgnoreWarning" />
+  </resultMap>
+</mapper>

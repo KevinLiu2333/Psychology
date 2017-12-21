@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Cwm2AwNextPermCustMeasMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Cwm2AwNextPermCustMeas" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="AW_ACCESS_VIEW_NAME" property="awAccessViewName" jdbcType="VARCHAR" />
+    <result column="NUM_CUST_MEASURE" property="numCustMeasure" jdbcType="VARCHAR" />
+    <result column="TEXT_CUST_MEASURE" property="textCustMeasure" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

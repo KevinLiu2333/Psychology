@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TbsSpaceUsageMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.TbsSpaceUsage" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TSN" property="tsn" jdbcType="DECIMAL" />
+    <result column="USER#" property="user" jdbcType="DECIMAL" />
+    <result column="BLOCKS" property="blocks" jdbcType="DECIMAL" />
+    <result column="MAXBLOCKS" property="maxblocks" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

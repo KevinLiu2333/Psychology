@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VDiagDirExtMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VDiagDirExt" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDX" property="indx" jdbcType="DECIMAL" />
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="ADR_PATH_IDX" property="adrPathIdx" jdbcType="VARCHAR" />
+    <result column="ADR_HOME" property="adrHome" jdbcType="VARCHAR" />
+    <result column="PHYSICAL_PATH" property="physicalPath" jdbcType="VARCHAR" />
+    <result column="LOGICAL_PATH" property="logicalPath" jdbcType="VARCHAR" />
+    <result column="PHYSICAL_FILENAME" property="physicalFilename" jdbcType="VARCHAR" />
+    <result column="LOGICAL_FILENAME" property="logicalFilename" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="DECIMAL" />
+    <result column="LEVEL" property="level" jdbcType="DECIMAL" />
+    <result column="CREATION_TIMESTAMP" property="creationTimestamp" jdbcType="OTHER" />
+    <result column="MODIFICATION_TIMESTAMP" property="modificationTimestamp" jdbcType="OTHER" />
+    <result column="ROOT_DIR" property="rootDir" jdbcType="VARCHAR" />
+    <result column="ADDR" property="addr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

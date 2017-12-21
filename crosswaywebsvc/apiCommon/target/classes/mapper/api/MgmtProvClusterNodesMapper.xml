@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtProvClusterNodesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtProvClusterNodes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="NODE_GUID" property="nodeGuid" jdbcType="VARBINARY" />
+    <id column="CLUSTER_GUID" property="clusterGuid" jdbcType="VARBINARY" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="LAST_MODIFIED_TIME" property="lastModifiedTime" jdbcType="OTHER" />
+    <result column="PROV_ASN_GUID" property="provAsnGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

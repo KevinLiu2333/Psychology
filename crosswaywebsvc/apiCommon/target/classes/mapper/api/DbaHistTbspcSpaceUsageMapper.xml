@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaHistTbspcSpaceUsageMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaHistTbspcSpaceUsage" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="TABLESPACE_ID" property="tablespaceId" jdbcType="DECIMAL" />
+    <result column="TABLESPACE_SIZE" property="tablespaceSize" jdbcType="DECIMAL" />
+    <result column="TABLESPACE_MAXSIZE" property="tablespaceMaxsize" jdbcType="DECIMAL" />
+    <result column="TABLESPACE_USEDSIZE" property="tablespaceUsedsize" jdbcType="DECIMAL" />
+    <result column="RTIME" property="rtime" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

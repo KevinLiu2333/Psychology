@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VWalletMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VWallet" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CERT_ID" property="certId" jdbcType="VARCHAR" />
+    <result column="DN" property="dn" jdbcType="VARCHAR" />
+    <result column="SERIAL_NUM" property="serialNum" jdbcType="VARCHAR" />
+    <result column="ISSUER" property="issuer" jdbcType="VARCHAR" />
+    <result column="KEYSIZE" property="keysize" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RepcatSitesNewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RepcatSitesNew" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="EXTENSION_ID" property="extensionId" jdbcType="VARBINARY" />
+    <id column="GOWNER" property="gowner" jdbcType="VARCHAR" />
+    <id column="GNAME" property="gname" jdbcType="VARCHAR" />
+    <id column="DBLINK" property="dblink" jdbcType="VARCHAR" />
+    <result column="FULL_INSTANTIATION" property="fullInstantiation" jdbcType="VARCHAR" />
+    <result column="MASTER_STATUS" property="masterStatus" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

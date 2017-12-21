@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuRefgroupViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuRefgroupView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="REFNAME" property="refname" jdbcType="VARCHAR" />
+    <result column="OWNER_NUM" property="ownerNum" jdbcType="DECIMAL" />
+    <result column="REFOWNER" property="refowner" jdbcType="VARCHAR" />
+    <result column="REFGROUP" property="refgroup" jdbcType="DECIMAL" />
+    <result column="REF_MAKE_USER" property="refMakeUser" jdbcType="VARCHAR" />
+    <result column="REF_MAKE_DBA" property="refMakeDba" jdbcType="VARCHAR" />
+    <result column="REF_CHILD" property="refChild" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

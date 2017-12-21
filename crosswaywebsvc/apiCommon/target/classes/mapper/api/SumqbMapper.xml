@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SumqbMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Sumqb" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SUMOBJ#" property="sumobj" jdbcType="DECIMAL" />
+    <result column="NODEID" property="nodeid" jdbcType="DECIMAL" />
+    <result column="PFLAGS" property="pflags" jdbcType="DECIMAL" />
+    <result column="XPFLAGS" property="xpflags" jdbcType="DECIMAL" />
+    <result column="SFLAGS" property="sflags" jdbcType="DECIMAL" />
+    <result column="STATE" property="state" jdbcType="DECIMAL" />
+    <result column="TEXTLEN" property="textlen" jdbcType="DECIMAL" />
+    <result column="MARKER" property="marker" jdbcType="VARCHAR" />
+    <result column="MARKERLEN" property="markerlen" jdbcType="DECIMAL" />
+    <result column="HASHVAL" property="hashval" jdbcType="DECIMAL" />
+    <result column="HASHVAL2" property="hashval2" jdbcType="DECIMAL" />
+    <result column="RORDER" property="rorder" jdbcType="DECIMAL" />
+    <result column="SORDER" property="sorder" jdbcType="DECIMAL" />
+    <result column="LEAFCNT" property="leafcnt" jdbcType="DECIMAL" />
+    <result column="ORIGNODE" property="orignode" jdbcType="DECIMAL" />
+    <result column="PARENT" property="parent" jdbcType="DECIMAL" />
+    <result column="OPTTYP" property="opttyp" jdbcType="DECIMAL" />
+    <result column="SELCNT" property="selcnt" jdbcType="DECIMAL" />
+    <result column="FROMPO" property="frompo" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="NUMDETAILTAB" property="numdetailtab" jdbcType="DECIMAL" />
+    <result column="NUMAGGREGATES" property="numaggregates" jdbcType="DECIMAL" />
+    <result column="NUMKEYCOLUMNS" property="numkeycolumns" jdbcType="DECIMAL" />
+    <result column="NUMJOINS" property="numjoins" jdbcType="DECIMAL" />
+    <result column="NUMINLINES" property="numinlines" jdbcType="DECIMAL" />
+    <result column="NUMWHRNODES" property="numwhrnodes" jdbcType="DECIMAL" />
+    <result column="NUMHAVNODES" property="numhavnodes" jdbcType="DECIMAL" />
+    <result column="TEXT" property="text" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtObAdminClientDbMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtObAdminClientDb" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OB_TARGET_GUID" property="obTargetGuid" jdbcType="VARBINARY" />
+    <id column="OB_ADMIN_TARGET_GUID" property="obAdminTargetGuid" jdbcType="VARBINARY" />
+    <result column="OB_CLIENT_HOST" property="obClientHost" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

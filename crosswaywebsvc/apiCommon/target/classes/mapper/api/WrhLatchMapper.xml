@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhLatchMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhLatch" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="LATCH_HASH" property="latchHash" jdbcType="DECIMAL" />
+    <result column="LEVEL#" property="level" jdbcType="DECIMAL" />
+    <result column="GETS" property="gets" jdbcType="DECIMAL" />
+    <result column="MISSES" property="misses" jdbcType="DECIMAL" />
+    <result column="SLEEPS" property="sleeps" jdbcType="DECIMAL" />
+    <result column="IMMEDIATE_GETS" property="immediateGets" jdbcType="DECIMAL" />
+    <result column="IMMEDIATE_MISSES" property="immediateMisses" jdbcType="DECIMAL" />
+    <result column="SPIN_GETS" property="spinGets" jdbcType="DECIMAL" />
+    <result column="SLEEP1" property="sleep1" jdbcType="DECIMAL" />
+    <result column="SLEEP2" property="sleep2" jdbcType="DECIMAL" />
+    <result column="SLEEP3" property="sleep3" jdbcType="DECIMAL" />
+    <result column="SLEEP4" property="sleep4" jdbcType="DECIMAL" />
+    <result column="WAIT_TIME" property="waitTime" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

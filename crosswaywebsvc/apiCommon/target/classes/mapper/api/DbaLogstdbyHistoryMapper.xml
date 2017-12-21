@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaLogstdbyHistoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaLogstdbyHistory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="STREAM_SEQUENCE#" property="streamSequence" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="SOURCE" property="source" jdbcType="VARCHAR" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="FIRST_CHANGE#" property="firstChange" jdbcType="DECIMAL" />
+    <result column="LAST_CHANGE#" property="lastChange" jdbcType="DECIMAL" />
+    <result column="FIRST_TIME" property="firstTime" jdbcType="DATE" />
+    <result column="LAST_TIME" property="lastTime" jdbcType="DATE" />
+    <result column="DGNAME" property="dgname" jdbcType="VARCHAR" />
+    <result column="MERGE_CHANGE#" property="mergeChange" jdbcType="DECIMAL" />
+    <result column="PROCESSED_CHANGE#" property="processedChange" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

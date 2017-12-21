@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TGaRkxxMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.TGaRkxx" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="RID" property="rid" jdbcType="VARCHAR" />
+    <result column="SYRKLBDM" property="syrklbdm" jdbcType="VARCHAR" />
+    <result column="SYRKLBHZ" property="syrklbhz" jdbcType="VARCHAR" />
+    <result column="ZYLBDM" property="zylbdm" jdbcType="VARCHAR" />
+    <result column="ZYLBHZ" property="zylbhz" jdbcType="VARCHAR" />
+    <result column="XM" property="xm" jdbcType="VARCHAR" />
+    <result column="XBHZ" property="xbhz" jdbcType="VARCHAR" />
+    <result column="XBDM" property="xbdm" jdbcType="VARCHAR" />
+    <result column="MZDM" property="mzdm" jdbcType="VARCHAR" />
+    <result column="MZHZ" property="mzhz" jdbcType="VARCHAR" />
+    <result column="CSRQ" property="csrq" jdbcType="DECIMAL" />
+    <result column="HJDXZQHDM" property="hjdxzqhdm" jdbcType="VARCHAR" />
+    <result column="HJDXZQHHZ" property="hjdxzqhhz" jdbcType="VARCHAR" />
+    <result column="JZDXZQHDM" property="jzdxzqhdm" jdbcType="VARCHAR" />
+    <result column="JZDXZQHHZ" property="jzdxzqhhz" jdbcType="VARCHAR" />
+    <result column="WHCDDM" property="whcddm" jdbcType="VARCHAR" />
+    <result column="WHCDHZ" property="whcdhz" jdbcType="VARCHAR" />
+    <result column="HYZKDM" property="hyzkdm" jdbcType="VARCHAR" />
+    <result column="HYZKHZ" property="hyzkhz" jdbcType="VARCHAR" />
+    <result column="ZY" property="zy" jdbcType="VARCHAR" />
+    <result column="NL" property="nl" jdbcType="DECIMAL" />
+    <result column="HJDJDHZ" property="hjdjdhz" jdbcType="VARCHAR" />
+    <result column="ZJHM" property="zjhm" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

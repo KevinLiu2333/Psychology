@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VDlmTrafficControllerMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VDlmTrafficController" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOCAL_NID" property="localNid" jdbcType="DECIMAL" />
+    <result column="REMOTE_NID" property="remoteNid" jdbcType="DECIMAL" />
+    <result column="REMOTE_RID" property="remoteRid" jdbcType="DECIMAL" />
+    <result column="REMOTE_INC" property="remoteInc" jdbcType="DECIMAL" />
+    <result column="TCKT_AVAIL" property="tcktAvail" jdbcType="DECIMAL" />
+    <result column="TCKT_LIMIT" property="tcktLimit" jdbcType="DECIMAL" />
+    <result column="TCKT_RCVD" property="tcktRcvd" jdbcType="DECIMAL" />
+    <result column="TCKT_WAIT" property="tcktWait" jdbcType="VARCHAR" />
+    <result column="SND_SEQ_NO" property="sndSeqNo" jdbcType="DECIMAL" />
+    <result column="RCV_SEQ_NO" property="rcvSeqNo" jdbcType="DECIMAL" />
+    <result column="SND_Q_LEN" property="sndQLen" jdbcType="DECIMAL" />
+    <result column="SND_Q_MAX" property="sndQMax" jdbcType="DECIMAL" />
+    <result column="SND_Q_TOT" property="sndQTot" jdbcType="DECIMAL" />
+    <result column="SND_Q_TM_BASE" property="sndQTmBase" jdbcType="DECIMAL" />
+    <result column="SND_Q_TM_WRAP" property="sndQTmWrap" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="SND_PROXY" property="sndProxy" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

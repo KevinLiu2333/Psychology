@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtSoftwareDependenciesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtSoftwareDependencies" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HOST_NAME" property="hostName" jdbcType="VARCHAR" />
+    <result column="REFERENCER_HOME_NAME" property="referencerHomeName" jdbcType="VARCHAR" />
+    <result column="REFERENCER_HOME_LOCATION" property="referencerHomeLocation" jdbcType="VARCHAR" />
+    <result column="REFERENCER_NAME" property="referencerName" jdbcType="VARCHAR" />
+    <result column="REFERENCER_BASE_VERSION" property="referencerBaseVersion" jdbcType="VARCHAR" />
+    <result column="REFERENCED_HOME_NAME" property="referencedHomeName" jdbcType="VARCHAR" />
+    <result column="REFERENCED_HOME_LOCATION" property="referencedHomeLocation" jdbcType="VARCHAR" />
+    <result column="REFERENCED_NAME" property="referencedName" jdbcType="VARCHAR" />
+    <result column="REFERENCED_BASE_VERSION" property="referencedBaseVersion" jdbcType="VARCHAR" />
+    <result column="DEPENDENCY_TYPE" property="dependencyType" jdbcType="VARCHAR" />
+    <result column="SNAPSHOT_GUID" property="snapshotGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SuiteStatTermResultMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SuiteStatTermResult" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="UPDATE_TIME" property="updateTime" jdbcType="DATE" />
+    <result column="TERM_ID" property="termId" jdbcType="VARCHAR" />
+    <result column="RESULT1" property="result1" jdbcType="CLOB" />
+    <result column="RESULT2" property="result2" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

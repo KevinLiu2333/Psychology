@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaParallelExecuteTasksMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaParallelExecuteTasks" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TASK_OWNER" property="taskOwner" jdbcType="VARCHAR" />
+    <result column="TASK_NAME" property="taskName" jdbcType="VARCHAR" />
+    <result column="CHUNK_TYPE" property="chunkType" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="TABLE_OWNER" property="tableOwner" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="NUMBER_COLUMN" property="numberColumn" jdbcType="VARCHAR" />
+    <result column="TASK_COMMENT" property="taskComment" jdbcType="VARCHAR" />
+    <result column="JOB_PREFIX" property="jobPrefix" jdbcType="VARCHAR" />
+    <result column="LANGUAGE_FLAG" property="languageFlag" jdbcType="DECIMAL" />
+    <result column="EDITION" property="edition" jdbcType="VARCHAR" />
+    <result column="APPLY_CROSSEDITION_TRIGGER" property="applyCrosseditionTrigger" jdbcType="VARCHAR" />
+    <result column="FIRE_APPLY_TRIGGER" property="fireApplyTrigger" jdbcType="VARCHAR" />
+    <result column="PARALLEL_LEVEL" property="parallelLevel" jdbcType="DECIMAL" />
+    <result column="JOB_CLASS" property="jobClass" jdbcType="VARCHAR" />
+    <result column="SQL_STMT" property="sqlStmt" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

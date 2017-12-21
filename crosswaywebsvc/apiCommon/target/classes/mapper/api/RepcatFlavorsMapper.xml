@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RepcatFlavorsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RepcatFlavors" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FLAVOR_ID" property="flavorId" jdbcType="DECIMAL" />
+    <result column="GOWNER" property="gowner" jdbcType="VARCHAR" />
+    <result column="GNAME" property="gname" jdbcType="VARCHAR" />
+    <result column="FNAME" property="fname" jdbcType="VARCHAR" />
+    <result column="CREATION_DATE" property="creationDate" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="DECIMAL" />
+    <result column="PUBLISHED" property="published" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

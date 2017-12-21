@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllIndextypeArraytypesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllIndextypeArraytypes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="INDEXTYPE_NAME" property="indextypeName" jdbcType="VARCHAR" />
+    <result column="BASE_TYPE_SCHEMA" property="baseTypeSchema" jdbcType="VARCHAR" />
+    <result column="BASE_TYPE_NAME" property="baseTypeName" jdbcType="VARCHAR" />
+    <result column="BASE_TYPE" property="baseType" jdbcType="VARCHAR" />
+    <result column="ARRAY_TYPE_SCHEMA" property="arrayTypeSchema" jdbcType="VARCHAR" />
+    <result column="ARRAY_TYPE_NAME" property="arrayTypeName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

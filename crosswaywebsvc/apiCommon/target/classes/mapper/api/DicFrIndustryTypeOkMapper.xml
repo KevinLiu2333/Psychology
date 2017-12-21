@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DicFrIndustryTypeOkMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DicFrIndustryTypeOk" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="VALUE" property="value" jdbcType="VARCHAR" />
+    <result column="V_LEVEL" property="vLevel" jdbcType="CHAR" />
+    <result column="V_PARENT" property="vParent" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

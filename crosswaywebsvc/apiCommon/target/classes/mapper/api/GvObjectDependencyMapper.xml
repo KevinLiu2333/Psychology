@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvObjectDependencyMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvObjectDependency" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="FROM_HASH" property="fromHash" jdbcType="DECIMAL" />
+    <result column="TO_OWNER" property="toOwner" jdbcType="VARCHAR" />
+    <result column="TO_NAME" property="toName" jdbcType="VARCHAR" />
+    <result column="TO_HASH" property="toHash" jdbcType="DECIMAL" />
+    <result column="TO_TYPE" property="toType" jdbcType="DECIMAL" />
+    <result column="FROM_ADDRESS" property="fromAddress" jdbcType="VARBINARY" />
+    <result column="TO_ADDRESS" property="toAddress" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

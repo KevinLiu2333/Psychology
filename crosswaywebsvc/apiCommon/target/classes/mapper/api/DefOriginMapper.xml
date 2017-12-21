@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DefOriginMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DefOrigin" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ORIGIN_DB" property="originDb" jdbcType="VARCHAR" />
+    <result column="ORIGIN_DBLINK" property="originDblink" jdbcType="VARCHAR" />
+    <result column="INUSR" property="inusr" jdbcType="DECIMAL" />
+    <result column="CSCN" property="cscn" jdbcType="DECIMAL" />
+    <result column="ENQ_TID" property="enqTid" jdbcType="VARCHAR" />
+    <result column="RECO_SEQ_NO" property="recoSeqNo" jdbcType="DECIMAL" />
+    <result column="CATCHUP" property="catchup" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

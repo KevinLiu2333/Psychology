@@ -1,0 +1,329 @@
+/*重置*/
+* {
+	font-size: 16px;
+	font-family:"Microsoft YaHei", "微软雅黑", "宋体", Arial, Helvetica, sans-serif;
+	color: #333;
+}
+body, dt, dd, dl, li, ul, h1, h2, h3, h4, h5, input, p {
+	margin: 0;
+	padding: 0;
+}
+li, ul, dt, dd, dl, h1, h2, h3, h4, h5, a {
+	line-height: none;
+	text-decoration: none;
+	list-style: none;
+}
+h1, h2, h3, h4, h5 {
+	font-weight: normal;
+	line-height: normal;
+}
+img {
+	border: none;
+}
+body{
+	width:1280px;
+	height:720px;
+	background-color:#000;
+}
+
+/*人口库*/
+
+.nav{
+	float:left;
+}
+.nav tr td{
+	height:172.5px;
+	background:url(../images/nav_bg.png) repeat-x left top;
+	text-align:center;
+}
+.nav tr td.nav_cur{
+	background:url(../images/nav_cur.png) repeat-x left top;
+}
+.nav tr td a,.nav tr td a:link,.nav tr td a:visited{
+	font-size:18px;
+	color:#fff;
+	line-height:22px;
+}
+.content{
+	float:left;
+	width:1236px;
+	height:708px;
+	padding:6px 0;
+}
+.content h1{
+	background:url(../images/con_tit.png) no-repeat left center;
+	font-size:18px;
+	color:#fff;
+	line-height:33px;
+	padding-left:10px;
+}
+.conbox_w600{
+	float:left;
+	width:600px;
+	margin-right:6px;
+}
+.conbox_w600 li{
+	background:url(../images/con_bg02.png) repeat-x left top;
+	margin-top:6px;
+}
+.conbox_w600 li span{
+	position:relative;
+	display:block;
+	height:228px;
+	padding-top:1px;
+}
+.conbox_w600 li:first-child{
+	background:url(../images/con_bg01.png) repeat-x left top;
+	margin-top:0;
+}
+.conbox_w600 li:first-child span{
+	height:139px;
+	margin-top:0;
+}
+.con_bg01 dl{
+	float:right;
+	width:200px;
+	margin-top:28px;
+}
+.con_bg01 dl:first-child{
+	float:left;
+}
+.con_bg01 dl dt{
+	font-size:18px;
+	color:#fff;
+	line-height:30px;
+	text-align:center;
+}
+.con_bg01 dl dd{
+	font-size:28px;
+	color:#ffd212;
+	line-height:34px;
+	text-align:center;
+}
+.con_bg01 dl:first-child dd{
+	color:#b1da4e;
+}
+.increase{
+	position:absolute;
+	top:20px;
+	left:250px;
+	width:100px;
+	height:100px;
+	background:url(../images/ball.png) no-repeat center;
+}
+.increase h2,.increase h3,.increase h4{
+	color:#fff;
+	text-align:center;
+}
+.increase h2{
+	font-size:12px;
+	line-height:14px;
+	margin-top:10px;
+}
+.increase h3,.increase h4{
+	font-size:18px;
+	line-height:20px;
+	font-weight:bold;
+}
+.con_bg02 dl{
+	float:right;
+	width:124px;
+	margin:28px;
+}
+.con_bg02 dl:first-child{
+	float:left;
+}
+.con_bg02 dl dt{
+	font-size:26px;
+	color:#fbd961;
+	line-height:52px;
+	text-align:center;
+	margin-bottom:16px;
+}
+.con_bg02 dl:first-child dt{
+	color:#ff8464;
+}
+.con_bg02 dl dd{
+	background-color:#414b54;
+	font-size:12px;
+	color:#fff;
+	line-height:24px;
+	text-align:center;
+	border-radius:6px;
+	padding:10px;
+}
+.con_bg02 dl dd b{
+	font-size:18px;
+	font-weight:normal;
+	color:#fbd961;
+	line-height:24px;
+	border-radius:6px;
+	margin:0 5px;
+}
+.con_bg02 dl:first-child dd b{
+	color:#ff8464;
+}
+.ring_percentage{
+	position:absolute;
+	top:0;
+	left:160px;
+	width:280px;
+	height:228px;
+}
+.conbox_w626{
+	float:right;
+	width:626px;
+	height:709px;
+	background:url(../images/con_bg03.png) repeat-x;
+	}
+.conbox_w626>img{
+	margin:0 auto;
+	}
+.conbox_w626 li{
+	float:left;
+	width:202px;
+	height:129px;
+	margin-top:28px;
+	background:url(../images/con_bg04.png) repeat-x;
+	}
+.conbox_w626 .li_left{
+	float:left;
+	width:202px;
+	height:129px;
+	margin-top:28px;
+	margin-left:10px;
+	background:url(../images/con_bg04.png) repeat-x;
+	}
+.conbox_w626 li span{
+	display:block;
+	color:#fff;
+	margin:33px 38px;
+	font-size:18px;
+	text-align:center;
+	line-height:27px;
+	vertical-align:middle;
+	}
+.conbox_w626 li span img{
+	line-height:27px;
+	vertical-align:middle;
+	margin-right:17px;
+	}
+.conbox_w626 li span b{
+	color:#ff6600;
+	font-size:20px;
+	margin-left:45px;
+	font-weight:normal;
+	}
+.conbox_w626 li span i{
+	color:#fff;
+	font-size:15px;
+	font-style:normal;
+	}
+
+/*房屋库*/
+.conbox_w1228{
+	float:left;
+	}
+.con_1{
+	float:left;
+	width:1228px;
+	height:172px;
+	margin-bottom:6px;
+	background:url(../images/con_bg02.png) repeat-x left top;
+	}
+.con_1 dl{
+	float:left;
+	display:block;
+	width:320px;
+	height:100px;
+	margin-top:32px;
+	margin-left:80px;
+	}
+.con_1 dl dt{
+	float:left;
+	}
+.con_1 dl dt img{
+	margin-right:19px;
+	}
+.con_1 dl dd{
+	float:left;
+	font-size:17px;
+	color:#fff;
+	}
+.sapn_01{
+	font-size:29px;
+	color:#b1da4e;
+	}
+.sapn_02{
+	font-size:29px;
+	color:#ffd212;
+	}
+.sapn_03{
+	font-size:29px;
+	color:#f57d31;
+	}
+.con_2{
+	float:left;
+	width:1228px;
+	height:262px;
+	margin-bottom:6px;
+	background:url(../images/con_bg02.png) repeat-x left top;
+	}
+.con_2 img{
+	margin:20px 40px;
+	}
+
+/*法人库*/
+.con_3{
+	float:left;
+	width:610px;
+	height:262px;
+	margin-bottom:6px;
+	margin-right:7px;
+	background:url(../images/con_bg02.png) repeat-x left top;
+	}
+.con_3 img{
+	margin:20px 40px;
+	}
+/*交换监控*/
+.con_3 table{
+	margin-top:10px;
+	}
+.con_3 table tr td{
+	font-size:16px;
+	height:42px;
+	line-height:20px;
+	color:#fff;	
+	}
+.con_3 table tr td span{
+	display:inline-block;
+	width:42px;
+	height:17px;
+	font-size:10px;
+	text-align:center;
+	line-height:16px;
+	color:#fff;
+	margin-right:10px;
+	background-color:#71a903;
+	border-radius:7px;
+	}
+.div_0{
+	float:left;
+	width:282px;
+	height:56px;
+	margin-left:15px;
+	padding-top:12px;
+	font-size:17px;
+	color:#fff;
+	text-align:center;
+	background:url(../images/con_bg05.png) left top repeat-x;
+	}
+.div_0 b{
+	margin-top:20px;
+	margin-left:8px;
+	margin-right:8px;
+	font-size:23px;
+	color:#ff6600;
+	font-weight:normal;
+	text-align:center;
+	}

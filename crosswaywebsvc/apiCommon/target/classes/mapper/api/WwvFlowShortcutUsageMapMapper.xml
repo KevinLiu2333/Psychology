@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowShortcutUsageMapMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowShortcutUsageMap" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SHORTCUT_ID" property="shortcutId" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="REFERENCE_ID" property="referenceId" jdbcType="DECIMAL" />
+    <result column="REFERENCE_ID_TYPE" property="referenceIdType" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

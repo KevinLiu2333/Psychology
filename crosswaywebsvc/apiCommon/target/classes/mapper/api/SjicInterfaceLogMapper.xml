@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SjicInterfaceLogMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SjicInterfaceLog">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" jdbcType="OTHER" property="id" />
+    <result column="JKID" jdbcType="OTHER" property="jkid" />
+    <result column="NAME" jdbcType="OTHER" property="name" />
+    <result column="DEPARTMENT" jdbcType="OTHER" property="department" />
+    <result column="USER" jdbcType="OTHER" property="user" />
+    <result column="START_TIME" jdbcType="DATE" property="startTime" />
+    <result column="REQMSG" jdbcType="OTHER" property="reqmsg" />
+    <result column="RESMSG" jdbcType="OTHER" property="resmsg" />
+    <result column="TRANSFER_TIME" jdbcType="DECIMAL" property="transferTime" />
+    <result column="TRANSFER_FLAG" jdbcType="DECIMAL" property="transferFlag" />
+    <result column="ERRMSG" jdbcType="OTHER" property="errmsg" />
+  </resultMap>
+</mapper>

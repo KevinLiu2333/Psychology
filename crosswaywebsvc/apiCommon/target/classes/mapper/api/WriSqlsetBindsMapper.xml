@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriSqlsetBindsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriSqlsetBinds" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="STMT_ID" property="stmtId" jdbcType="DECIMAL" />
+    <id column="PLAN_HASH_VALUE" property="planHashValue" jdbcType="DECIMAL" />
+    <id column="POSITION" property="position" jdbcType="DECIMAL" />
+    <result column="VALUE" property="value" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

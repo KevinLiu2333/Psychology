@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaApplyErrorMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaApplyError">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOCAL_TRANSACTION_ID" jdbcType="VARCHAR" property="localTransactionId" />
+    <result column="SOURCE_TRANSACTION_ID" jdbcType="VARCHAR" property="sourceTransactionId" />
+    <result column="SOURCE_DATABASE" jdbcType="VARCHAR" property="sourceDatabase" />
+    <result column="QUEUE_OWNER" jdbcType="VARCHAR" property="queueOwner" />
+    <result column="QUEUE_NAME" jdbcType="VARCHAR" property="queueName" />
+    <result column="APPLY#" jdbcType="DECIMAL" property="apply" />
+    <result column="MESSAGE_NUMBER" jdbcType="DECIMAL" property="messageNumber" />
+    <result column="MESSAGE_COUNT" jdbcType="DECIMAL" property="messageCount" />
+    <result column="MIN_STEP_NO" jdbcType="DECIMAL" property="minStepNo" />
+    <result column="RECIPIENT_ID" jdbcType="DECIMAL" property="recipientId" />
+    <result column="RECIPIENT_NAME" jdbcType="VARCHAR" property="recipientName" />
+    <result column="SOURCE_COMMIT_SCN" jdbcType="DECIMAL" property="sourceCommitScn" />
+    <result column="ERROR_NUMBER" jdbcType="DECIMAL" property="errorNumber" />
+    <result column="ERROR_MESSAGE" jdbcType="VARCHAR" property="errorMessage" />
+    <result column="AQ_TRANSACTION_ID" jdbcType="VARCHAR" property="aqTransactionId" />
+    <result column="ERROR_CREATION_TIME" jdbcType="DATE" property="errorCreationTime" />
+    <result column="SPARE1" jdbcType="DECIMAL" property="spare1" />
+    <result column="SPARE2" jdbcType="DECIMAL" property="spare2" />
+    <result column="SPARE3" jdbcType="DECIMAL" property="spare3" />
+    <result column="SPARE5" jdbcType="VARCHAR" property="spare5" />
+    <result column="EXTERNAL_SOURCE_POS" jdbcType="VARBINARY" property="externalSourcePos" />
+    <result column="SPARE4" jdbcType="VARBINARY" property="spare4" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RuleSetTeMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RuleSetTe" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RS_OBJ#" property="rsObj" jdbcType="DECIMAL" />
+    <result column="EC_OBJ#" property="ecObj" jdbcType="DECIMAL" />
+    <result column="TAB_ID" property="tabId" jdbcType="DECIMAL" />
+    <result column="SRCHCOLS" property="srchcols" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

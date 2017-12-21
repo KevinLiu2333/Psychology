@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AccountManagersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AccountManagers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ACCT_MGR" property="acctMgr" jdbcType="DECIMAL" />
+    <result column="REGION" property="region" jdbcType="DECIMAL" />
+    <result column="COUNTRY" property="country" jdbcType="CHAR" />
+    <result column="PROVINCE" property="province" jdbcType="VARCHAR" />
+    <result column="NUM_CUSTOMERS" property="numCustomers" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

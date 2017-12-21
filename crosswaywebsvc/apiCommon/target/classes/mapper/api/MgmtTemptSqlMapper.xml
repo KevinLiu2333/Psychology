@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtTemptSqlMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtTemptSql" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="HASH_VALUE" property="hashValue" jdbcType="DECIMAL" />
+    <result column="ELAPSED_TIME" property="elapsedTime" jdbcType="DECIMAL" />
+    <result column="EXECUTIONS" property="executions" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

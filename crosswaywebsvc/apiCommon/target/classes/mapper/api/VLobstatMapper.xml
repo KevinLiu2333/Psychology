@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VLobstatMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VLobstat" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="LOBTSN" property="lobtsn" jdbcType="DECIMAL" />
+    <result column="LOBRDBA" property="lobrdba" jdbcType="DECIMAL" />
+    <result column="LOBOBJID" property="lobobjid" jdbcType="DECIMAL" />
+    <result column="LOBCURRTIME" property="lobcurrtime" jdbcType="DECIMAL" />
+    <result column="LOBEXPMQL" property="lobexpmql" jdbcType="DECIMAL" />
+    <result column="LOBSQLMQL" property="lobsqlmql" jdbcType="DECIMAL" />
+    <result column="LOBSPCANALTIME" property="lobspcanaltime" jdbcType="DECIMAL" />
+    <result column="LOBUNDORETTIME" property="lobundorettime" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

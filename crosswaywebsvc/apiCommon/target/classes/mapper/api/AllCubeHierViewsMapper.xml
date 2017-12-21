@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllCubeHierViewsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllCubeHierViews" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="DIMENSION_NAME" property="dimensionName" jdbcType="VARCHAR" />
+    <result column="HIERARCHY_NAME" property="hierarchyName" jdbcType="VARCHAR" />
+    <result column="VIEW_NAME" property="viewName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

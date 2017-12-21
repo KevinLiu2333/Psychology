@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaApplyInstGlobalMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaApplyInstGlobal" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SOURCE_DATABASE" property="sourceDatabase" jdbcType="VARCHAR" />
+    <result column="INSTANTIATION_EXTERNAL_POS" property="instantiationExternalPos" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

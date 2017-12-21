@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoGrMosaic3Mapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoGrMosaic3" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="P" property="p" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

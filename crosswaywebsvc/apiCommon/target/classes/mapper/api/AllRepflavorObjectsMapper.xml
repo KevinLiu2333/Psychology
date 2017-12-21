@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllRepflavorObjectsMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllRepflavorObjects">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FLAVOR_ID" jdbcType="DECIMAL" property="flavorId" />
+    <result column="GNAME" jdbcType="VARCHAR" property="gname" />
+    <result column="SNAME" jdbcType="VARCHAR" property="sname" />
+    <result column="ONAME" jdbcType="VARCHAR" property="oname" />
+    <result column="TYPE" jdbcType="DECIMAL" property="type" />
+    <result column="PUBLISHED" jdbcType="VARCHAR" property="published" />
+    <result column="GOWNER" jdbcType="VARCHAR" property="gowner" />
+    <result column="VERSION#" jdbcType="DECIMAL" property="version" />
+    <result column="COLUMNS_PRESENT" jdbcType="VARBINARY" property="columnsPresent" />
+    <result column="FLAG" jdbcType="VARBINARY" property="flag" />
+    <result column="HASHCODE" jdbcType="VARBINARY" property="hashcode" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaPartLobsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaPartLobs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TABLE_OWNER" property="tableOwner" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="LOB_NAME" property="lobName" jdbcType="VARCHAR" />
+    <result column="LOB_INDEX_NAME" property="lobIndexName" jdbcType="VARCHAR" />
+    <result column="DEF_CHUNK" property="defChunk" jdbcType="DECIMAL" />
+    <result column="DEF_PCTVERSION" property="defPctversion" jdbcType="DECIMAL" />
+    <result column="DEF_CACHE" property="defCache" jdbcType="VARCHAR" />
+    <result column="DEF_IN_ROW" property="defInRow" jdbcType="VARCHAR" />
+    <result column="DEF_TABLESPACE_NAME" property="defTablespaceName" jdbcType="VARCHAR" />
+    <result column="DEF_INITIAL_EXTENT" property="defInitialExtent" jdbcType="VARCHAR" />
+    <result column="DEF_NEXT_EXTENT" property="defNextExtent" jdbcType="VARCHAR" />
+    <result column="DEF_MIN_EXTENTS" property="defMinExtents" jdbcType="VARCHAR" />
+    <result column="DEF_MAX_EXTENTS" property="defMaxExtents" jdbcType="VARCHAR" />
+    <result column="DEF_MAX_SIZE" property="defMaxSize" jdbcType="VARCHAR" />
+    <result column="DEF_RETENTION" property="defRetention" jdbcType="VARCHAR" />
+    <result column="DEF_MINRET" property="defMinret" jdbcType="VARCHAR" />
+    <result column="DEF_PCT_INCREASE" property="defPctIncrease" jdbcType="VARCHAR" />
+    <result column="DEF_FREELISTS" property="defFreelists" jdbcType="VARCHAR" />
+    <result column="DEF_FREELIST_GROUPS" property="defFreelistGroups" jdbcType="VARCHAR" />
+    <result column="DEF_LOGGING" property="defLogging" jdbcType="VARCHAR" />
+    <result column="DEF_BUFFER_POOL" property="defBufferPool" jdbcType="VARCHAR" />
+    <result column="DEF_FLASH_CACHE" property="defFlashCache" jdbcType="VARCHAR" />
+    <result column="DEF_CELL_FLASH_CACHE" property="defCellFlashCache" jdbcType="VARCHAR" />
+    <result column="DEF_ENCRYPT" property="defEncrypt" jdbcType="VARCHAR" />
+    <result column="DEF_COMPRESS" property="defCompress" jdbcType="VARCHAR" />
+    <result column="DEF_DEDUPLICATE" property="defDeduplicate" jdbcType="VARCHAR" />
+    <result column="DEF_SECUREFILE" property="defSecurefile" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

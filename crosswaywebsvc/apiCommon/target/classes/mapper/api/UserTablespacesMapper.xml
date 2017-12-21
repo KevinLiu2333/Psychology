@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserTablespacesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserTablespaces" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TABLESPACE_NAME" property="tablespaceName" jdbcType="VARCHAR" />
+    <result column="BLOCK_SIZE" property="blockSize" jdbcType="DECIMAL" />
+    <result column="INITIAL_EXTENT" property="initialExtent" jdbcType="DECIMAL" />
+    <result column="NEXT_EXTENT" property="nextExtent" jdbcType="DECIMAL" />
+    <result column="MIN_EXTENTS" property="minExtents" jdbcType="DECIMAL" />
+    <result column="MAX_EXTENTS" property="maxExtents" jdbcType="DECIMAL" />
+    <result column="MAX_SIZE" property="maxSize" jdbcType="DECIMAL" />
+    <result column="PCT_INCREASE" property="pctIncrease" jdbcType="DECIMAL" />
+    <result column="MIN_EXTLEN" property="minExtlen" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="CONTENTS" property="contents" jdbcType="VARCHAR" />
+    <result column="LOGGING" property="logging" jdbcType="VARCHAR" />
+    <result column="FORCE_LOGGING" property="forceLogging" jdbcType="VARCHAR" />
+    <result column="EXTENT_MANAGEMENT" property="extentManagement" jdbcType="VARCHAR" />
+    <result column="ALLOCATION_TYPE" property="allocationType" jdbcType="VARCHAR" />
+    <result column="SEGMENT_SPACE_MANAGEMENT" property="segmentSpaceManagement" jdbcType="VARCHAR" />
+    <result column="DEF_TAB_COMPRESSION" property="defTabCompression" jdbcType="VARCHAR" />
+    <result column="RETENTION" property="retention" jdbcType="VARCHAR" />
+    <result column="BIGFILE" property="bigfile" jdbcType="VARCHAR" />
+    <result column="PREDICATE_EVALUATION" property="predicateEvaluation" jdbcType="VARCHAR" />
+    <result column="ENCRYPTED" property="encrypted" jdbcType="VARCHAR" />
+    <result column="COMPRESS_FOR" property="compressFor" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

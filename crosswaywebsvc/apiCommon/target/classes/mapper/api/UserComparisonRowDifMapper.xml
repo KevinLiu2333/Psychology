@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserComparisonRowDifMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserComparisonRowDif">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COMPARISON_NAME" jdbcType="VARCHAR" property="comparisonName" />
+    <result column="SCAN_ID" jdbcType="DECIMAL" property="scanId" />
+    <result column="LOCAL_ROWID" jdbcType="OTHER" property="localRowid" />
+    <result column="REMOTE_ROWID" jdbcType="OTHER" property="remoteRowid" />
+    <result column="INDEX_VALUE" jdbcType="VARCHAR" property="indexValue" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    <result column="LAST_UPDATE_TIME" jdbcType="TIMESTAMP" property="lastUpdateTime" />
+  </resultMap>
+</mapper>

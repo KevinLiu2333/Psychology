@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuQtabStorageViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuQtabStorageView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="TS_NUM" property="tsNum" jdbcType="DECIMAL" />
+    <result column="TS_NAME" property="tsName" jdbcType="VARCHAR" />
+    <result column="PCT_FREE" property="pctFree" jdbcType="DECIMAL" />
+    <result column="PCT_USED" property="pctUsed" jdbcType="DECIMAL" />
+    <result column="INITRANS" property="initrans" jdbcType="DECIMAL" />
+    <result column="MAXTRANS" property="maxtrans" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

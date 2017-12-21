@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuIndStatsViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuIndStatsView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="BASE_OBJ_NUM" property="baseObjNum" jdbcType="DECIMAL" />
+    <result column="BASE_TAB_OBJ" property="baseTabObj" jdbcType="OTHER" />
+    <result column="BASE_IND_OBJ" property="baseIndObj" jdbcType="OTHER" />
+    <result column="TYPE_NUM" property="typeNum" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="COLS" property="cols" jdbcType="DECIMAL" />
+    <result column="ROWCNT" property="rowcnt" jdbcType="DECIMAL" />
+    <result column="LEAFCNT" property="leafcnt" jdbcType="DECIMAL" />
+    <result column="DISTKEY" property="distkey" jdbcType="DECIMAL" />
+    <result column="LBLKKEY" property="lblkkey" jdbcType="DECIMAL" />
+    <result column="DBLKKEY" property="dblkkey" jdbcType="DECIMAL" />
+    <result column="CLUFAC" property="clufac" jdbcType="DECIMAL" />
+    <result column="BLEVEL" property="blevel" jdbcType="DECIMAL" />
+    <result column="IND_FLAGS" property="indFlags" jdbcType="DECIMAL" />
+    <result column="OBJ_FLAGS" property="objFlags" jdbcType="DECIMAL" />
+    <result column="SAMPLE_SIZE" property="sampleSize" jdbcType="DECIMAL" />
+    <result column="ANALYZETIME" property="analyzetime" jdbcType="VARCHAR" />
+    <result column="CACHE_INFO" property="cacheInfo" jdbcType="OTHER" />
+    <result column="PARTITION_LIST" property="partitionList" jdbcType="OTHER" />
+    <result column="CNST_COL_LIST" property="cnstColList" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

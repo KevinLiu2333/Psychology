@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCsRuleSimpleTestMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCsRuleSimpleTest" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="RULE_GUID" property="ruleGuid" jdbcType="VARBINARY" />
+    <id column="POSITION" property="position" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="VARCHAR" />
+    <result column="OPERATOR" property="operator" jdbcType="DECIMAL" />
+    <result column="VALUE" property="value" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

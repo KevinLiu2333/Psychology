@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TGaLogMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.TGaLog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="START_TIME" property="startTime" jdbcType="VARCHAR" />
+    <result column="INPUTNUM" property="inputnum" jdbcType="DECIMAL" />
+    <result column="JWRYNUM" property="jwrynum" jdbcType="DECIMAL" />
+    <result column="LHRYNUM" property="lhrynum" jdbcType="DECIMAL" />
+    <result column="TABLENAME" property="tablename" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

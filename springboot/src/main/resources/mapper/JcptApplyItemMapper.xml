@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.springboot.mapper.JcptApplyItemMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.springboot.model.JcptApplyItem">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="APPLY_ID" jdbcType="DECIMAL" property="applyId" />
+    <result column="APPLY_UNIT" jdbcType="VARCHAR" property="applyUnit" />
+    <result column="DEPT_NAME" jdbcType="VARCHAR" property="deptName" />
+    <result column="UNIT_CATEGORY" jdbcType="VARCHAR" property="unitCategory" />
+    <result column="APPLY_CATEGORY" jdbcType="VARCHAR" property="applyCategory" />
+    <result column="APPLY_ITEM" jdbcType="VARCHAR" property="applyItem" />
+    <result column="COUNTERPART" jdbcType="VARCHAR" property="counterpart" />
+    <result column="MAN_STAGE" jdbcType="VARCHAR" property="manStage" />
+    <result column="SERVICE_LINK" jdbcType="VARCHAR" property="serviceLink" />
+    <result column="APPLY_MESAURE" jdbcType="VARCHAR" property="applyMesaure" />
+    <result column="APPLY_MODE" jdbcType="VARCHAR" property="applyMode" />
+    <result column="COV_LEVEL" jdbcType="VARCHAR" property="covLevel" />
+    <result column="APPLY_RATE" jdbcType="VARCHAR" property="applyRate" />
+    <result column="SYS_SUPORT" jdbcType="VARCHAR" property="sysSuport" />
+    <result column="DEPT_CODE" jdbcType="VARCHAR" property="deptCode" />
+  </resultMap>
+</mapper>

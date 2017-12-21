@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigOlbOltCanvasMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigOlbOltCanvas" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="OBJECTLIBRARYTAB_ID" property="objectlibrarytabId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="BEVEL" property="bevel" jdbcType="VARCHAR" />
+    <result column="CANVASTYPE" property="canvastype" jdbcType="VARCHAR" />
+    <result column="VISIBLE" property="visible" jdbcType="VARCHAR" />
+    <result column="TABATTACHMENTEDGE" property="tabattachmentedge" jdbcType="VARCHAR" />
+    <result column="TABSTYLE" property="tabstyle" jdbcType="VARCHAR" />
+    <result column="RAISEONENTER" property="raiseonenter" jdbcType="VARCHAR" />
+    <result column="DISPLAYVIEWPORT" property="displayviewport" jdbcType="VARCHAR" />
+    <result column="FOREGROUNDCOLOR" property="foregroundcolor" jdbcType="VARCHAR" />
+    <result column="BACKCOLOR" property="backcolor" jdbcType="VARCHAR" />
+    <result column="WIDTH" property="width" jdbcType="VARCHAR" />
+    <result column="HEIGHT" property="height" jdbcType="VARCHAR" />
+    <result column="VIEWPORTWIDTH" property="viewportwidth" jdbcType="VARCHAR" />
+    <result column="VIEWPORTHEIGHT" property="viewportheight" jdbcType="VARCHAR" />
+    <result column="VIEWPORTYPOSITIONONCANVAS" property="viewportypositiononcanvas" jdbcType="VARCHAR" />
+    <result column="VIEWPORTXPOSITIONONCANVAS" property="viewportxpositiononcanvas" jdbcType="VARCHAR" />
+    <result column="DIRTYINFO" property="dirtyinfo" jdbcType="VARCHAR" />
+    <result column="WINDOWNAME" property="windowname" jdbcType="VARCHAR" />
+    <result column="PARENTTYPE" property="parenttype" jdbcType="VARCHAR" />
+    <result column="PARENTNAME" property="parentname" jdbcType="VARCHAR" />
+    <result column="PARENTMODULE" property="parentmodule" jdbcType="VARCHAR" />
+    <result column="PARENTMODULETYPE" property="parentmoduletype" jdbcType="VARCHAR" />
+    <result column="SHOWVERTICALSCROLLBAR" property="showverticalscrollbar" jdbcType="VARCHAR" />
+    <result column="SHOWHORIZONTALSCROLLBAR" property="showhorizontalscrollbar" jdbcType="VARCHAR" />
+    <result column="VIEWPORTXPOSITION" property="viewportxposition" jdbcType="VARCHAR" />
+    <result column="VIEWPORTYPOSITION" property="viewportyposition" jdbcType="VARCHAR" />
+    <result column="FILLPATTERN" property="fillpattern" jdbcType="VARCHAR" />
+    <result column="VISUALATTRIBUTENAME" property="visualattributename" jdbcType="VARCHAR" />
+    <result column="FONTSPACING" property="fontspacing" jdbcType="VARCHAR" />
+    <result column="FONTWEIGHT" property="fontweight" jdbcType="VARCHAR" />
+    <result column="FONTSTYLE" property="fontstyle" jdbcType="VARCHAR" />
+    <result column="FONTSIZE" property="fontsize" jdbcType="VARCHAR" />
+    <result column="FONTNAME" property="fontname" jdbcType="VARCHAR" />
+    <result column="SUBCLASSOBJECTGROUP" property="subclassobjectgroup" jdbcType="VARCHAR" />
+    <result column="LANGUAGEDIRECTION" property="languagedirection" jdbcType="VARCHAR" />
+    <result column="PERSISTENTCLIENTINFOLENGTH" property="persistentclientinfolength" jdbcType="VARCHAR" />
+    <result column="TABACTIONSTYLE" property="tabactionstyle" jdbcType="VARCHAR" />
+    <result column="TABWIDTHSTYLE" property="tabwidthstyle" jdbcType="VARCHAR" />
+    <result column="HELPBOOKTOPIC" property="helpbooktopic" jdbcType="VARCHAR" />
+    <result column="PARENTFILENAME" property="parentfilename" jdbcType="VARCHAR" />
+    <result column="PARENTFILEPATH" property="parentfilepath" jdbcType="VARCHAR" />
+    <result column="POPUPMENUNAME" property="popupmenuname" jdbcType="VARCHAR" />
+    <result column="SMARTCLASS" property="smartclass" jdbcType="VARCHAR" />
+    <result column="SELECT_FOR_APP" property="selectForApp" jdbcType="VARCHAR" />
+    <result column="APPLICABLE" property="applicable" jdbcType="VARCHAR" />
+    <result column="COMPLETE" property="complete" jdbcType="VARCHAR" />
+    <result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+    <result column="ASSIGNEE" property="assignee" jdbcType="VARCHAR" />
+    <result column="NOTES" property="notes" jdbcType="VARCHAR" />
+    <result column="TAGS" property="tags" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="CANVAS_COMMENT" property="canvasComment" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SuiteColRelationConfigMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SuiteColRelationConfig" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RELATION_ID" property="relationId" jdbcType="VARCHAR" />
+    <result column="DREAMFORM_ID" property="dreamformId" jdbcType="VARCHAR" />
+    <result column="EDIT_COL" property="editCol" jdbcType="VARCHAR" />
+    <result column="TABLE_ID" property="tableId" jdbcType="VARCHAR" />
+    <result column="REL_COL" property="relCol" jdbcType="VARCHAR" />
+    <result column="LIST_NUM" property="listNum" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

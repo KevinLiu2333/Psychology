@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriSegadvObjlistMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriSegadvObjlist" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="AUTO_TASKID" property="autoTaskid" jdbcType="DECIMAL" />
+    <result column="TS_ID" property="tsId" jdbcType="DECIMAL" />
+    <result column="OBJN" property="objn" jdbcType="DECIMAL" />
+    <result column="OBJD" property="objd" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <result column="REASON" property="reason" jdbcType="VARCHAR" />
+    <result column="REASON_VALUE" property="reasonValue" jdbcType="DECIMAL" />
+    <result column="CREATION_TIME" property="creationTime" jdbcType="TIMESTAMP" />
+    <result column="PROC_TASKID" property="procTaskid" jdbcType="DECIMAL" />
+    <result column="END_TIME" property="endTime" jdbcType="TIMESTAMP" />
+    <result column="SEGMENT_OWNER" property="segmentOwner" jdbcType="VARCHAR" />
+    <result column="SEGMENT_NAME" property="segmentName" jdbcType="VARCHAR" />
+    <result column="PARTITION_NAME" property="partitionName" jdbcType="VARCHAR" />
+    <result column="SEGMENT_TYPE" property="segmentType" jdbcType="VARCHAR" />
+    <result column="TABLESPACE_NAME" property="tablespaceName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

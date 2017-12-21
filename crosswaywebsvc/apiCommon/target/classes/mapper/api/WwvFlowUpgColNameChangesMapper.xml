@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowUpgColNameChangesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowUpgColNameChanges" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OLD_TABLE_NAME" property="oldTableName" jdbcType="VARCHAR" />
+    <id column="OLD_COLUMN_NAME" property="oldColumnName" jdbcType="VARCHAR" />
+    <result column="NEW_COLUMN_NAME" property="newColumnName" jdbcType="VARCHAR" />
+    <result column="CHANGE_DATE" property="changeDate" jdbcType="DATE" />
+    <result column="CHANGE_MADE" property="changeMade" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

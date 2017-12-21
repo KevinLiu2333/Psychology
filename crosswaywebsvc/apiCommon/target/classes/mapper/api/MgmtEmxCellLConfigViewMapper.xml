@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtEmxCellLConfigViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtEmxCellLConfigView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="CELLNAME" property="cellname" jdbcType="VARCHAR" />
+    <result column="REALMNAME" property="realmname" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="CELLDISK" property="celldisk" jdbcType="VARCHAR" />
+    <result column="ERRORCOUNT" property="errorcount" jdbcType="DECIMAL" />
+    <result column="RAIDLEVEL" property="raidlevel" jdbcType="VARCHAR" />
+    <result column="DEVICENAME" property="devicename" jdbcType="VARCHAR" />
+    <result column="LUNSIZE" property="lunsize" jdbcType="DECIMAL" />
+    <result column="LUNUID" property="lunuid" jdbcType="VARCHAR" />
+    <result column="LUNAUTOCREATE" property="lunautocreate" jdbcType="VARCHAR" />
+    <result column="PHYSICALDISKS" property="physicaldisks" jdbcType="VARCHAR" />
+    <result column="START_TIMESTAMP" property="startTimestamp" jdbcType="DATE" />
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="ECM_SNAPSHOT_ID" property="ecmSnapshotId" jdbcType="VARBINARY" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

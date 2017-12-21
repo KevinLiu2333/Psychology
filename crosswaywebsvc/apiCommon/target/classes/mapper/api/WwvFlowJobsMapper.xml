@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowJobsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowJobs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="JOB" property="job" jdbcType="DECIMAL" />
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="ENDUSER" property="enduser" jdbcType="VARCHAR" />
+    <result column="CREATED" property="created" jdbcType="DATE" />
+    <result column="MODIFIED" property="modified" jdbcType="DATE" />
+    <result column="COMPLETED" property="completed" jdbcType="DATE" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="SYSTEM_STATUS" property="systemStatus" jdbcType="VARCHAR" />
+    <result column="SYSTEM_MODIFIED" property="systemModified" jdbcType="DATE" />
+    <result column="WHAT" property="what" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

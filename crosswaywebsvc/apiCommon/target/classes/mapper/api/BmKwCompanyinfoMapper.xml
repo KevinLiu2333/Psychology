@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.BmKwCompanyinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.BmKwCompanyinfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="CODE" property="code" jdbcType="VARCHAR" />
+    <result column="REGISTERMONEY" property="registermoney" jdbcType="DECIMAL" />
+    <result column="REGISTERTIME" property="registertime" jdbcType="TIMESTAMP" />
+    <result column="REGISTERADDRESS" property="registeraddress" jdbcType="VARCHAR" />
+    <result column="FOREIGNSCALE" property="foreignscale" jdbcType="DECIMAL" />
+    <result column="POSTCODE" property="postcode" jdbcType="VARCHAR" />
+    <result column="REGISTERTYPE" property="registertype" jdbcType="VARCHAR" />
+    <result column="BELONGSTREENAME" property="belongstreename" jdbcType="VARCHAR" />
+    <result column="LEGAL" property="legal" jdbcType="VARCHAR" />
+    <result column="LEGALTEL" property="legaltel" jdbcType="VARCHAR" />
+    <result column="TOTALINCOME" property="totalincome" jdbcType="DECIMAL" />
+    <result column="NETPROFIT" property="netprofit" jdbcType="DECIMAL" />
+    <result column="TOTALTAX" property="totaltax" jdbcType="DECIMAL" />
+    <result column="PRODUCTINCOME" property="productincome" jdbcType="DECIMAL" />
+    <result column="TOTALFOREIGNMONEY" property="totalforeignmoney" jdbcType="DECIMAL" />
+    <result column="TECHCOST" property="techcost" jdbcType="DECIMAL" />
+    <result column="TOTALASSETS" property="totalassets" jdbcType="DECIMAL" />
+    <result column="TOTALLIABILITIES" property="totalliabilities" jdbcType="DECIMAL" />
+    <result column="CONTRACTMAN" property="contractman" jdbcType="VARCHAR" />
+    <result column="CONTRACTPHONE" property="contractphone" jdbcType="VARCHAR" />
+    <result column="CONTRACTMAIL" property="contractmail" jdbcType="VARCHAR" />
+    <result column="CONTRACTTEL" property="contracttel" jdbcType="VARCHAR" />
+    <result column="CONTRACTFAX" property="contractfax" jdbcType="VARCHAR" />
+    <result column="HIGHTECH" property="hightech" jdbcType="VARCHAR" />
+    <result column="CONTRACTADDRESS" property="contractaddress" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

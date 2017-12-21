@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserRlm4jRuleclassesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserRlm4jRuleclasses" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DB_OWNER" property="dbOwner" jdbcType="VARCHAR" />
+    <result column="RULECLASS_NAME" property="ruleclassName" jdbcType="VARCHAR" />
+    <result column="EVTST_NAME" property="evtstName" jdbcType="VARCHAR" />
+    <result column="JAVA_PACKAGE" property="javaPackage" jdbcType="VARCHAR" />
+    <result column="JAVA_CLASS" property="javaClass" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

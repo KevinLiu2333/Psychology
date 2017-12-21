@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VPersistentQueuesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VPersistentQueues" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="QUEUE_ID" property="queueId" jdbcType="DECIMAL" />
+    <result column="QUEUE_TABLE_ID" property="queueTableId" jdbcType="DECIMAL" />
+    <result column="QUEUE_SCHEMA" property="queueSchema" jdbcType="VARCHAR" />
+    <result column="QUEUE_NAME" property="queueName" jdbcType="VARCHAR" />
+    <result column="FIRST_ACTIVITY_TIME" property="firstActivityTime" jdbcType="TIMESTAMP" />
+    <result column="ENQUEUED_MSGS" property="enqueuedMsgs" jdbcType="DECIMAL" />
+    <result column="DEQUEUED_MSGS" property="dequeuedMsgs" jdbcType="DECIMAL" />
+    <result column="BROWSED_MSGS" property="browsedMsgs" jdbcType="DECIMAL" />
+    <result column="ELAPSED_ENQUEUE_TIME" property="elapsedEnqueueTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_DEQUEUE_TIME" property="elapsedDequeueTime" jdbcType="DECIMAL" />
+    <result column="ENQUEUE_CPU_TIME" property="enqueueCpuTime" jdbcType="DECIMAL" />
+    <result column="DEQUEUE_CPU_TIME" property="dequeueCpuTime" jdbcType="DECIMAL" />
+    <result column="AVG_MSG_AGE" property="avgMsgAge" jdbcType="DECIMAL" />
+    <result column="DEQUEUED_MSG_LATENCY" property="dequeuedMsgLatency" jdbcType="DECIMAL" />
+    <result column="ELAPSED_TRANSFORMATION_TIME" property="elapsedTransformationTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_RULE_EVALUATION_TIME" property="elapsedRuleEvaluationTime" jdbcType="DECIMAL" />
+    <result column="ENQUEUED_EXPIRY_MSGS" property="enqueuedExpiryMsgs" jdbcType="DECIMAL" />
+    <result column="ENQUEUED_DELAY_MSGS" property="enqueuedDelayMsgs" jdbcType="DECIMAL" />
+    <result column="MSGS_MADE_EXPIRED" property="msgsMadeExpired" jdbcType="DECIMAL" />
+    <result column="MSGS_MADE_READY" property="msgsMadeReady" jdbcType="DECIMAL" />
+    <result column="LAST_ENQUEUE_TIME" property="lastEnqueueTime" jdbcType="TIMESTAMP" />
+    <result column="LAST_DEQUEUE_TIME" property="lastDequeueTime" jdbcType="TIMESTAMP" />
+    <result column="LAST_TM_EXPIRY_TIME" property="lastTmExpiryTime" jdbcType="TIMESTAMP" />
+    <result column="LAST_TM_READY_TIME" property="lastTmReadyTime" jdbcType="TIMESTAMP" />
+    <result column="ENQUEUE_TRANSACTIONS" property="enqueueTransactions" jdbcType="DECIMAL" />
+    <result column="DEQUEUE_TRANSACTIONS" property="dequeueTransactions" jdbcType="DECIMAL" />
+    <result column="EXECUTION_COUNT" property="executionCount" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

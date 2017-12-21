@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WfsFeatureinstancemetadataMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WfsFeatureinstancemetadata" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FEATURETYPEID" property="featuretypeid" jdbcType="DECIMAL" />
+    <result column="FEATUREID" property="featureid" jdbcType="VARCHAR" />
+    <result column="ISLOCKED" property="islocked" jdbcType="VARCHAR" />
+    <result column="LOCKEXPIRY" property="lockexpiry" jdbcType="DECIMAL" />
+    <result column="LOCKACQUIRETIME" property="lockacquiretime" jdbcType="TIMESTAMP" />
+    <result column="LOCKID" property="lockid" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaRedefinitionErrorsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaRedefinitionErrors" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <result column="OBJECT_OWNER" property="objectOwner" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="BASE_TABLE_OWNER" property="baseTableOwner" jdbcType="VARCHAR" />
+    <result column="BASE_TABLE_NAME" property="baseTableName" jdbcType="VARCHAR" />
+    <result column="EDITION_NAME" property="editionName" jdbcType="VARCHAR" />
+    <result column="DDL_TXT" property="ddlTxt" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

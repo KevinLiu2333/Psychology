@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OpancillaryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Opancillary" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="BIND#" property="bind" jdbcType="DECIMAL" />
+    <result column="PRIMOP#" property="primop" jdbcType="DECIMAL" />
+    <result column="PRIMBIND#" property="primbind" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

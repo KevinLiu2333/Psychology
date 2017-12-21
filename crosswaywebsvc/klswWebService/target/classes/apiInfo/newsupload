@@ -1,0 +1,21 @@
+接口地址：192.168.1.65:8021/news/upload
+
+支持格式：json
+
+请求方式：POST
+
+参数名        			 类型          		     必填          	说明
+username       String         是         	用户名，默认为手机号
+type           String         是        	用户类型，tea为老师，stu为学生,org为机构
+dirName		   String		     是		用户上传文件类型 image为图片，media为视频	
+ticket		   String		     是		用户发送请求的凭据	
+contents	   String		     是		用户发送新闻的内容	
+title		   String		     是		用户发送新闻的标题
+返回值：
+
+格式：json
+参数名        			 类型              	说明
+status			String		"S"为成功,"W"为警告,"E"为错误
+message  		String		返回状态的详细说明
+data 			Object   	具体返回数据
+

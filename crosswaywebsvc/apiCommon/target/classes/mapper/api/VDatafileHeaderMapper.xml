@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VDatafileHeaderMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VDatafileHeader" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FILE#" property="file" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="ERROR" property="error" jdbcType="VARCHAR" />
+    <result column="FORMAT" property="format" jdbcType="DECIMAL" />
+    <result column="RECOVER" property="recover" jdbcType="VARCHAR" />
+    <result column="FUZZY" property="fuzzy" jdbcType="VARCHAR" />
+    <result column="CREATION_CHANGE#" property="creationChange" jdbcType="DECIMAL" />
+    <result column="CREATION_TIME" property="creationTime" jdbcType="DATE" />
+    <result column="TABLESPACE_NAME" property="tablespaceName" jdbcType="VARCHAR" />
+    <result column="TS#" property="ts" jdbcType="DECIMAL" />
+    <result column="RFILE#" property="rfile" jdbcType="DECIMAL" />
+    <result column="RESETLOGS_CHANGE#" property="resetlogsChange" jdbcType="DECIMAL" />
+    <result column="RESETLOGS_TIME" property="resetlogsTime" jdbcType="DATE" />
+    <result column="CHECKPOINT_CHANGE#" property="checkpointChange" jdbcType="DECIMAL" />
+    <result column="CHECKPOINT_TIME" property="checkpointTime" jdbcType="DATE" />
+    <result column="CHECKPOINT_COUNT" property="checkpointCount" jdbcType="DECIMAL" />
+    <result column="BYTES" property="bytes" jdbcType="DECIMAL" />
+    <result column="BLOCKS" property="blocks" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="SPACE_HEADER" property="spaceHeader" jdbcType="VARCHAR" />
+    <result column="LAST_DEALLOC_CHANGE#" property="lastDeallocChange" jdbcType="VARCHAR" />
+    <result column="UNDO_OPT_CURRENT_CHANGE#" property="undoOptCurrentChange" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

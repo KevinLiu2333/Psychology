@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.FgrFileGroupFilesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.FgrFileGroupFiles" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FILE_NAME" property="fileName" jdbcType="VARCHAR" />
+    <result column="CREATOR" property="creator" jdbcType="VARCHAR" />
+    <result column="CREATION_TIME" property="creationTime" jdbcType="OTHER" />
+    <result column="FILE_DIR_OBJ" property="fileDirObj" jdbcType="VARCHAR" />
+    <result column="FILE_SIZE" property="fileSize" jdbcType="DECIMAL" />
+    <result column="FILE_BLOCKSIZE" property="fileBlocksize" jdbcType="DECIMAL" />
+    <result column="FILE_TYPE" property="fileType" jdbcType="VARCHAR" />
+    <result column="USER_COMMENT" property="userComment" jdbcType="VARCHAR" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="VARCHAR" />
+    <result column="SPARE4" property="spare4" jdbcType="VARCHAR" />
+    <result column="VERSION_GUID" property="versionGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllXscSecurityClassStatusMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllXscSecurityClassStatus" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CLASS_NAME" property="className" jdbcType="VARCHAR" />
+    <result column="TARGET_NAMESPACE" property="targetNamespace" jdbcType="VARCHAR" />
+    <result column="ENABLE" property="enable" jdbcType="VARCHAR" />
+    <result column="DISABLED_BY_CLASS_NAME" property="disabledByClassName" jdbcType="VARCHAR" />
+    <result column="DISABLED_BY_CLASS_TARGET_NS" property="disabledByClassTargetNs" jdbcType="VARCHAR" />
+    <result column="MUTABLE" property="mutable" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

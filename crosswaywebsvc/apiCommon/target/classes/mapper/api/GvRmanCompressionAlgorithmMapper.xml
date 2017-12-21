@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvRmanCompressionAlgorithmMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvRmanCompressionAlgorithm" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="ALGORITHM_NAME" property="algorithmName" jdbcType="VARCHAR" />
+    <result column="INITIAL_RELEASE" property="initialRelease" jdbcType="VARCHAR" />
+    <result column="TERMINAL_RELEASE" property="terminalRelease" jdbcType="VARCHAR" />
+    <result column="ALGORITHM_DESCRIPTION" property="algorithmDescription" jdbcType="VARCHAR" />
+    <result column="ALGORITHM_COMPATIBILITY" property="algorithmCompatibility" jdbcType="VARCHAR" />
+    <result column="IS_VALID" property="isValid" jdbcType="VARCHAR" />
+    <result column="REQUIRES_ACO" property="requiresAco" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

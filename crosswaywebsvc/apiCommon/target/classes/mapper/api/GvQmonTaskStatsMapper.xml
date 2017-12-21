@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvQmonTaskStatsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvQmonTaskStats" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="TASK_NAME" property="taskName" jdbcType="VARCHAR" />
+    <result column="TASK_TYPE" property="taskType" jdbcType="VARCHAR" />
+    <result column="LAST_CREATED_TASKNUM" property="lastCreatedTasknum" jdbcType="DECIMAL" />
+    <result column="NUM_TASKS" property="numTasks" jdbcType="DECIMAL" />
+    <result column="TOTAL_TASK_RUN_TIME" property="totalTaskRunTime" jdbcType="DECIMAL" />
+    <result column="TOTAL_TASK_RUNS" property="totalTaskRuns" jdbcType="DECIMAL" />
+    <result column="TOTAL_TASK_FAILURES" property="totalTaskFailures" jdbcType="DECIMAL" />
+    <result column="METRIC_TYPE" property="metricType" jdbcType="VARCHAR" />
+    <result column="METRIC_VALUE" property="metricValue" jdbcType="DECIMAL" />
+    <result column="LAST_FAILURE" property="lastFailure" jdbcType="VARCHAR" />
+    <result column="LAST_FAILURE_TIME" property="lastFailureTime" jdbcType="OTHER" />
+    <result column="LAST_FAILURE_TASKNUM" property="lastFailureTasknum" jdbcType="DECIMAL" />
+    <result column="REMARK" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtGroupDerivedMembershipsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtGroupDerivedMemberships" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COMPOSITE_TARGET_NAME" property="compositeTargetName" jdbcType="VARCHAR" />
+    <result column="COMPOSITE_TARGET_TYPE" property="compositeTargetType" jdbcType="VARCHAR" />
+    <result column="MEMBER_TARGET_NAME" property="memberTargetName" jdbcType="VARCHAR" />
+    <result column="MEMBER_TARGET_TYPE" property="memberTargetType" jdbcType="VARCHAR" />
+    <result column="COMPOSITE_TARGET_GUID" property="compositeTargetGuid" jdbcType="VARBINARY" />
+    <result column="MEMBER_TARGET_GUID" property="memberTargetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

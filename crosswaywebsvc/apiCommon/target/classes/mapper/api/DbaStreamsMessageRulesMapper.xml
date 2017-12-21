@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaStreamsMessageRulesMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaStreamsMessageRules">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="STREAMS_NAME" jdbcType="VARCHAR" property="streamsName" />
+    <result column="STREAMS_TYPE" jdbcType="DECIMAL" property="streamsType" />
+    <result column="MSG_TYPE_OWNER" jdbcType="VARCHAR" property="msgTypeOwner" />
+    <result column="MSG_TYPE_NAME" jdbcType="VARCHAR" property="msgTypeName" />
+    <result column="MSG_RULE_VAR" jdbcType="VARCHAR" property="msgRuleVar" />
+    <result column="RULE_OWNER" jdbcType="VARCHAR" property="ruleOwner" />
+    <result column="RULE_NAME" jdbcType="VARCHAR" property="ruleName" />
+    <result column="RULE_CONDITION" jdbcType="VARCHAR" property="ruleCondition" />
+    <result column="SPARE1" jdbcType="DECIMAL" property="spare1" />
+    <result column="SPARE2" jdbcType="DECIMAL" property="spare2" />
+    <result column="SPARE3" jdbcType="DECIMAL" property="spare3" />
+    <result column="SPARE4" jdbcType="VARCHAR" property="spare4" />
+    <result column="SPARE5" jdbcType="VARCHAR" property="spare5" />
+  </resultMap>
+</mapper>

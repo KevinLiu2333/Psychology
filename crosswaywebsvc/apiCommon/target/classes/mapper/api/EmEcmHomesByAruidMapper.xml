@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.EmEcmHomesByAruidMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.EmEcmHomesByAruid" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PLATFORM" property="platform" jdbcType="VARCHAR" />
+    <result column="HOST" property="host" jdbcType="VARCHAR" />
+    <result column="HOME_LOCATION" property="homeLocation" jdbcType="VARCHAR" />
+    <result column="HOME_NAME" property="homeName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="ADDRESS_SIZE" property="addressSize" jdbcType="VARCHAR" />
+    <result column="ID_TYPE" property="idType" jdbcType="VARCHAR" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="PLATFORM_ID" property="platformId" jdbcType="DECIMAL" />
+    <result column="HOME_ID" property="homeId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

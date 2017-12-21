@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.PfFwUsedMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.PfFwUsed" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FW_USED_ID" property="fwUsedId" jdbcType="VARCHAR" />
+    <result column="FW_INFO_ID" property="fwInfoId" jdbcType="VARCHAR" />
+    <result column="UNIT_ID" property="unitId" jdbcType="VARCHAR" />
+    <result column="UNIT_NAME" property="unitName" jdbcType="VARCHAR" />
+    <result column="FW_LOG_ID" property="fwLogId" jdbcType="VARCHAR" />
+    <result column="NIAN" property="nian" jdbcType="VARCHAR" />
+    <result column="YUE" property="yue" jdbcType="VARCHAR" />
+    <result column="TIAN" property="tian" jdbcType="VARCHAR" />
+    <result column="XIAOSHI" property="xiaoshi" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

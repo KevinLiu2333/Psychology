@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCollectionTemplateCredsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCollectionTemplateCreds" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OBJECT_GUID" property="objectGuid" jdbcType="VARBINARY" />
+    <id column="OBJECT_TYPE" property="objectType" jdbcType="DECIMAL" />
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="METRIC_GUID" property="metricGuid" jdbcType="VARBINARY" />
+    <id column="COLL_NAME" property="collName" jdbcType="VARCHAR" />
+    <id column="CREDENTIAL_SET_NAME" property="credentialSetName" jdbcType="VARCHAR" />
+    <result column="PDP_DATA" property="pdpData" jdbcType="VARCHAR" />
+    <result column="CREDENTIAL_GUID" property="credentialGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

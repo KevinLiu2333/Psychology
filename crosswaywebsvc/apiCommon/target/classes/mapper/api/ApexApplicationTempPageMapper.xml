@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationTempPageMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationTempPage" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="TEMPLATE_NAME" property="templateName" jdbcType="VARCHAR" />
+    <result column="SUCCESS_MESSAGE" property="successMessage" jdbcType="VARCHAR" />
+    <result column="CURRENT_TAB" property="currentTab" jdbcType="VARCHAR" />
+    <result column="CURRENT_TAB_FONT_ATTR" property="currentTabFontAttr" jdbcType="VARCHAR" />
+    <result column="NON_CURRENT_TAB" property="nonCurrentTab" jdbcType="VARCHAR" />
+    <result column="NON_CURRENT_TAB_FONT_ATTR" property="nonCurrentTabFontAttr" jdbcType="VARCHAR" />
+    <result column="CURRENT_IMAGE_TAB" property="currentImageTab" jdbcType="VARCHAR" />
+    <result column="NON_CURRENT_IMAGE_TAB" property="nonCurrentImageTab" jdbcType="VARCHAR" />
+    <result column="CURRENT_PARENT_TAB" property="currentParentTab" jdbcType="VARCHAR" />
+    <result column="CURRENT_PARENT_TAB_ATTR" property="currentParentTabAttr" jdbcType="VARCHAR" />
+    <result column="NONCURRENT_PARENT_TAB" property="noncurrentParentTab" jdbcType="VARCHAR" />
+    <result column="NONCURRENT_PARENT_TAB_ATTR" property="noncurrentParentTabAttr" jdbcType="VARCHAR" />
+    <result column="NAVIGATION_BAR" property="navigationBar" jdbcType="VARCHAR" />
+    <result column="NAVBAR_ENTRY" property="navbarEntry" jdbcType="VARCHAR" />
+    <result column="MESSAGE" property="message" jdbcType="VARCHAR" />
+    <result column="MULTICOLUMN_REGION_TABLE_ATTR" property="multicolumnRegionTableAttr" jdbcType="VARCHAR" />
+    <result column="ERROR_PAGE_TEMPLATE" property="errorPageTemplate" jdbcType="VARCHAR" />
+    <result column="IS_SUBSCRIBED" property="isSubscribed" jdbcType="VARCHAR" />
+    <result column="SUBSCRIBED_FROM" property="subscribedFrom" jdbcType="VARCHAR" />
+    <result column="THEME_NUMBER" property="themeNumber" jdbcType="DECIMAL" />
+    <result column="THEME_CLASS" property="themeClass" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="TRANSLATABLE" property="translatable" jdbcType="VARCHAR" />
+    <result column="COMPONENT_COMMENT" property="componentComment" jdbcType="VARCHAR" />
+    <result column="TEMPLATE_ID" property="templateId" jdbcType="DECIMAL" />
+    <result column="COMPONENT_SIGNATURE" property="componentSignature" jdbcType="VARCHAR" />
+    <result column="HEADER_TEMPLATE" property="headerTemplate" jdbcType="CLOB" />
+    <result column="PAGE_BODY" property="pageBody" jdbcType="CLOB" />
+    <result column="FOOTER_TEMPLATE" property="footerTemplate" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

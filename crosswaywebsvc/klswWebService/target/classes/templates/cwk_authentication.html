@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>克洛斯威钢琴端后台管理系统</title>
+<link rel="stylesheet" href="/css/bootstrap.css" />
+<link rel="stylesheet" href="/css/css.css" />
+<link href="/css/zzsc.css" type="text/css" rel="stylesheet" />
+<script src="/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function() {
+		
+		/* 页面加载完成，动态添加资历证书图片链接 */
+		var certificates = $(".certificate");
+		for(var i=0; i<certificates.length; i++) {
+			var element = certificates.eq(i);
+			var paths = element.val().split(";");
+			for(var j=0; j<paths.length; j++) {
+				var no = j + 1;
+				if(paths[j] != "") {
+					var a_link = "<a target='_blank' href='http://wk-static.klsw.com" + paths[j] + "'><button>图片" + no + "</button></a>&nbsp;&nbsp;&nbsp;"
+					element.before(a_link);
+				}
+			}
+		}
+		
+		/* 页面加载完成，动态添加身份证图片链接 */
+		var identityCards = $(".identity");
+		for(var i=0; i<identityCards.length; i++) {
+			var element = identityCards.eq(i);
+			var paths = element.val().split(";");
+			for(var j=0; j<paths.length; j++) {
+				var no = j + 1;
+				if(paths[j] != "") {
+					var a_link = "<a target='_blank' href='http://wk-static.klsw.com" + paths[j] + "'><button>图片" + no + "</button></a>&nbsp;&nbsp;&nbsp;"
+					element.before(a_link);
+				}
+			}
+		}
+		
+		
+		/* 导航栏操作 */
+		$(".subNav").click(function() {
+				$(this).toggleClass("currentDd").siblings(".subNav")
+						.removeClass("currentDd")
+				$(this).toggleClass("currentDt").siblings(".subNav")
+						.removeClass("currentDt")
+
+					/* // 修改数字控制速度， slideUp(500)控制卷起速度
+					$(this).next(".navContent").slideToggle(500).siblings(".navContent").slideUp(500); */
+		});
+
+		/* 页面跳转操作 */
+		$("#goto").click(function() {
+				var pageNum = $("#pageNum").val();
+
+				var count = $("#count").html();
+
+				var pageSize = $("#pageSize").html();
+
+				var totalPages = (count % pageSize == 0) ? count / pageSize
+						: (count / pageSize + 1);
+
+				if (pageNum > 0 && pageNum <= totalPages) {
+					location.href = "/manage/authenticationList?pageNum="
+							+ pageNum;
+				}
+		});
+		
+		/* 认证通过操作 */
+		$(".agree").click(function() {
+			var teacherId = $(this).val();
+			var flag = confirm("认证通过");
+			if (flag) {
+				location.href = "/manage/bgAuthentication?teacherId=" + teacherId + "&authenticationProcess=2";
+			} 
+		});
+
+		/* 认证不通过操作 */
+		$(".disAgree").click(function() {
+			var teacherId = $(this).val();
+			var flag = confirm("认证不通过");
+			if (flag) {
+				location.href = "/manage/bgAuthentication?teacherId=" + teacherId + "&authenticationProcess=3";
+			}
+		});
+	});
+</script>
+</head>
+
+<body>
+	<div th:include="common/head"></div>
+	<!-- 顶部 -->
+	<div id="middle">
+		<div th:include="common/left"></div>
+
+		<div class="right" id="mainFrame">
+
+			<div class="right_cont">
+				<ul class="breadcrumb">当前位置： 认证列表</ul>
+
+				<table class="table table-bordered table-striped table-hover">
+					<tbody>
+						<tr align="center">
+							<td width="11%" nowrap="nowrap"><strong>用户名</strong></td>
+							<td width="11%" nowrap="nowrap"><strong>用户昵称</strong></td>
+							<td width="11%" nowrap="nowrap"><strong>真实姓名</strong></td>
+							<td width="11%" nowrap="nowrap"><strong>授课级别</strong></td>
+							<td width="17%" nowrap="nowrap"><strong>资历证书</strong></td>
+							<td width="15%" nowrap="nowrap"><strong>身份证扫描件（正面+反面）</strong></td>
+							<td width="12" nowrap="nowrap"><strong>当前认证进度</strong></td>
+							<td width="12%" nowrap="nowrap"><strong> 操作 </strong></td>
+						</tr>
+
+						<tr align="center"
+							th:each="authentication:${authenticationList.list}"
+							th:if="${authenticationList}">
+							<td nowrap="nowrap" th:text="${authentication.name}"></td>
+							<td nowrap="nowrap" th:text="${authentication.nickname}"></td>
+							<td nowrap="nowrap" th:text="${authentication.realName}"></td>
+							<td nowrap="nowrap" th:text="${authentication.teachGrade}"></td>
+							<td nowrap="nowrap" align="left">
+								<input type="hidden" class="certificate" th:value="${authentication.certificatePath}" th:if="${authentication.certificatePath!=null}" />
+							</td>
+							<td nowrap="nowrap" align="left">
+								<input type="hidden" class="identity"  th:value="${authentication.identityCard}" />
+							</td>
+							<td nowrap="nowrap" th:if="${authentication.authenticationProcess == 0}">未提交认证</td>
+							<td nowrap="nowrap" th:if="${authentication.authenticationProcess == 1}">正在认证中</td>
+							<td nowrap="nowrap" th:if="${authentication.authenticationProcess == 2}">已通过认证</td>
+							<td nowrap="nowrap" th:if="${authentication.authenticationProcess == 3}">未通过认证</td>
+							<td nowrap="nowrap">
+								<button th:value="${authentication.id}" class="agree">通过</button>
+								 &nbsp;&nbsp;&nbsp;&nbsp;
+								<button th:value="${authentication.id}" class="disAgree">不通过</button>
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
+				<div class="fan">
+					<a class="fenye"
+						th:href="'/manage/authenticationList?pageNum='+${authenticationList.firstPage}">首页</a>
+					&nbsp;&nbsp;&nbsp;<a class="fenye"
+						th:href="'/manage/authenticationList?pageNum='+${authenticationList.pageNum-1}">上一页</a>
+					&nbsp;&nbsp;&nbsp;<a class="fenye"
+						th:href="'/manage/authenticationList?pageNum='+${authenticationList.pageNum+1}">下一页</a>
+					&nbsp;&nbsp;&nbsp;<a class="fenye"
+						th:href="'/manage/authenticationList?pageNum='+${authenticationList.lastPage}">尾页</a>
+					共 <span id="count" th:text="${authenticationList.total}"></span>
+					条&nbsp;&nbsp;&nbsp;页次： <span
+						th:text="${authenticationList.pageNum}+'/'+${authenticationList.pages}"></span>
+					&nbsp;&nbsp;&nbsp;转到： <input id="pageNum" type="text" size="3" />
+					&nbsp;页&nbsp;&nbsp;&nbsp; <input id="goto" type="button" value="GO" />
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllErrorsAeMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllErrorsAe" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="SEQUENCE" property="sequence" jdbcType="DECIMAL" />
+    <result column="LINE" property="line" jdbcType="DECIMAL" />
+    <result column="POSITION" property="position" jdbcType="DECIMAL" />
+    <result column="TEXT" property="text" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE" property="attribute" jdbcType="VARCHAR" />
+    <result column="MESSAGE_NUMBER" property="messageNumber" jdbcType="DECIMAL" />
+    <result column="EDITION_NAME" property="editionName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

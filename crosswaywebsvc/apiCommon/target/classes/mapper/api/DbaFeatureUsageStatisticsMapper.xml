@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaFeatureUsageStatisticsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaFeatureUsageStatistics" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="DETECTED_USAGES" property="detectedUsages" jdbcType="DECIMAL" />
+    <result column="TOTAL_SAMPLES" property="totalSamples" jdbcType="DECIMAL" />
+    <result column="CURRENTLY_USED" property="currentlyUsed" jdbcType="VARCHAR" />
+    <result column="FIRST_USAGE_DATE" property="firstUsageDate" jdbcType="DATE" />
+    <result column="LAST_USAGE_DATE" property="lastUsageDate" jdbcType="DATE" />
+    <result column="AUX_COUNT" property="auxCount" jdbcType="DECIMAL" />
+    <result column="LAST_SAMPLE_DATE" property="lastSampleDate" jdbcType="DATE" />
+    <result column="LAST_SAMPLE_PERIOD" property="lastSamplePeriod" jdbcType="DECIMAL" />
+    <result column="SAMPLE_INTERVAL" property="sampleInterval" jdbcType="DECIMAL" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="FEATURE_INFO" property="featureInfo" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

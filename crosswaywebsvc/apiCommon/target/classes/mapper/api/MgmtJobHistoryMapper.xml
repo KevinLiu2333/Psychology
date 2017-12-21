@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtJobHistoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtJobHistory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="STEP_ID" property="stepId" jdbcType="DECIMAL" />
+    <result column="SOURCE_STEP_ID" property="sourceStepId" jdbcType="DECIMAL" />
+    <result column="ORIGINAL_STEP_ID" property="originalStepId" jdbcType="DECIMAL" />
+    <result column="RESTART_MODE" property="restartMode" jdbcType="DECIMAL" />
+    <result column="STEP_NAME" property="stepName" jdbcType="VARCHAR" />
+    <result column="STEP_TYPE" property="stepType" jdbcType="DECIMAL" />
+    <result column="COMMAND_TYPE" property="commandType" jdbcType="DECIMAL" />
+    <result column="ITERATE_PARAM" property="iterateParam" jdbcType="VARCHAR" />
+    <result column="ITERATE_PARAM_INDEX" property="iterateParamIndex" jdbcType="DECIMAL" />
+    <result column="PARENT_STEP_ID" property="parentStepId" jdbcType="DECIMAL" />
+    <result column="STEP_STATUS" property="stepStatus" jdbcType="DECIMAL" />
+    <result column="STEP_STATUS_CODE" property="stepStatusCode" jdbcType="DECIMAL" />
+    <result column="STEP_STATUS_CODE_CATEGORY" property="stepStatusCodeCategory" jdbcType="DECIMAL" />
+    <result column="NUM_CHILDREN" property="numChildren" jdbcType="DECIMAL" />
+    <result column="NUM_CHILDREN_COMPLETED" property="numChildrenCompleted" jdbcType="DECIMAL" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="TIMEZONE_REGION" property="timezoneRegion" jdbcType="VARCHAR" />
+    <result column="SEQUENCE_NUMBER" property="sequenceNumber" jdbcType="DECIMAL" />
+    <result column="DISPATCHER_ID" property="dispatcherId" jdbcType="DECIMAL" />
+    <result column="OMS_NAME" property="omsName" jdbcType="VARCHAR" />
+    <result column="JOB_ID" property="jobId" jdbcType="VARBINARY" />
+    <result column="EXECUTION_ID" property="executionId" jdbcType="VARBINARY" />
+    <result column="OUTPUT_ID" property="outputId" jdbcType="VARBINARY" />
+    <result column="ERROR_ID" property="errorId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

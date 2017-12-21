@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrThsBtMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrThsBt" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="THB_THP_ID" property="thbThpId" jdbcType="DECIMAL" />
+    <result column="THB_TYPE" property="thbType" jdbcType="VARCHAR" />
+    <result column="THB_BT" property="thbBt" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaRepddlMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaRepddl" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOG_ID" property="logId" jdbcType="DECIMAL" />
+    <result column="SOURCE" property="source" jdbcType="VARCHAR" />
+    <result column="ROLE" property="role" jdbcType="VARCHAR" />
+    <result column="MASTER" property="master" jdbcType="VARCHAR" />
+    <result column="LINE" property="line" jdbcType="DECIMAL" />
+    <result column="TEXT" property="text" jdbcType="VARCHAR" />
+    <result column="DDL_NUM" property="ddlNum" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

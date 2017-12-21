@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuTabPartobjViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuTabPartobjView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="PARTOBJ" property="partobj" jdbcType="OTHER" />
+    <result column="PARTCOLS" property="partcols" jdbcType="OTHER" />
+    <result column="SUBPARTCOLS" property="subpartcols" jdbcType="OTHER" />
+    <result column="PART_LIST" property="partList" jdbcType="OTHER" />
+    <result column="COMPART_LIST" property="compartList" jdbcType="OTHER" />
+    <result column="TSUBPARTS" property="tsubparts" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

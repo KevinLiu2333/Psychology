@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VDnfsChannelsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VDnfsChannels" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PNUM" property="pnum" jdbcType="DECIMAL" />
+    <result column="SVRNAME" property="svrname" jdbcType="VARCHAR" />
+    <result column="PATH" property="path" jdbcType="VARCHAR" />
+    <result column="LOCAL" property="local" jdbcType="VARCHAR" />
+    <result column="CH_ID" property="chId" jdbcType="DECIMAL" />
+    <result column="SVR_ID" property="svrId" jdbcType="DECIMAL" />
+    <result column="SENDS" property="sends" jdbcType="DECIMAL" />
+    <result column="RECVS" property="recvs" jdbcType="DECIMAL" />
+    <result column="PINGS" property="pings" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

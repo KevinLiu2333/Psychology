@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.FlashbackTransactionQueryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.FlashbackTransactionQuery" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="START_SCN" property="startScn" jdbcType="DECIMAL" />
+    <result column="START_TIMESTAMP" property="startTimestamp" jdbcType="DATE" />
+    <result column="COMMIT_SCN" property="commitScn" jdbcType="DECIMAL" />
+    <result column="COMMIT_TIMESTAMP" property="commitTimestamp" jdbcType="DATE" />
+    <result column="LOGON_USER" property="logonUser" jdbcType="VARCHAR" />
+    <result column="UNDO_CHANGE#" property="undoChange" jdbcType="DECIMAL" />
+    <result column="OPERATION" property="operation" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="TABLE_OWNER" property="tableOwner" jdbcType="VARCHAR" />
+    <result column="ROW_ID" property="rowId" jdbcType="VARCHAR" />
+    <result column="UNDO_SQL" property="undoSql" jdbcType="VARCHAR" />
+    <result column="XID" property="xid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

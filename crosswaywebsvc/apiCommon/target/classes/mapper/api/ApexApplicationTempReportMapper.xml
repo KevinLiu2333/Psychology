@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationTempReportMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationTempReport" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="TEMPLATE_NAME" property="templateName" jdbcType="VARCHAR" />
+    <result column="TEMPLATE_TYPE" property="templateType" jdbcType="VARCHAR" />
+    <result column="BEFORE_COLUMN_HEADING" property="beforeColumnHeading" jdbcType="VARCHAR" />
+    <result column="COLUMN_HEADING_TEMPLATE" property="columnHeadingTemplate" jdbcType="VARCHAR" />
+    <result column="AFTER_COLUMN_HEADING" property="afterColumnHeading" jdbcType="VARCHAR" />
+    <result column="COL_TEMPLATE_CONDITION1" property="colTemplateCondition1" jdbcType="VARCHAR" />
+    <result column="COL_TEMPLATE_DISPLAY_COND1" property="colTemplateDisplayCond1" jdbcType="VARCHAR" />
+    <result column="COL_TEMPLATE_CONDITION2" property="colTemplateCondition2" jdbcType="VARCHAR" />
+    <result column="COL_TEMPLATE_DISPLAY_COND2" property="colTemplateDisplayCond2" jdbcType="VARCHAR" />
+    <result column="COL_TEMPLATE_CONDITION3" property="colTemplateCondition3" jdbcType="VARCHAR" />
+    <result column="COL_TEMPLATE_DISPLAY_COND3" property="colTemplateDisplayCond3" jdbcType="VARCHAR" />
+    <result column="COL_TEMPLATE_CONDITION4" property="colTemplateCondition4" jdbcType="VARCHAR" />
+    <result column="COL_TEMPLATE_DISPLAY_COND4" property="colTemplateDisplayCond4" jdbcType="VARCHAR" />
+    <result column="COL_TEMPLATE_BEFORE_ROWS" property="colTemplateBeforeRows" jdbcType="VARCHAR" />
+    <result column="COL_TEMPLATE_AFTER_ROWS" property="colTemplateAfterRows" jdbcType="VARCHAR" />
+    <result column="COL_TEMPLATE_BEFORE_FIRST" property="colTemplateBeforeFirst" jdbcType="VARCHAR" />
+    <result column="COL_TEMPLATE_AFTER_LAST" property="colTemplateAfterLast" jdbcType="VARCHAR" />
+    <result column="PAGINATION_TEMPLATE" property="paginationTemplate" jdbcType="VARCHAR" />
+    <result column="NEXT_PAGE_TEMPLATE" property="nextPageTemplate" jdbcType="VARCHAR" />
+    <result column="PREVIOUS_PAGE_TEMPLATE" property="previousPageTemplate" jdbcType="VARCHAR" />
+    <result column="NEXT_SET_TEMPLATE" property="nextSetTemplate" jdbcType="VARCHAR" />
+    <result column="PREVIOUS_SET_TEMPLATE" property="previousSetTemplate" jdbcType="VARCHAR" />
+    <result column="ROW_STYLE_MOUSE_OVER" property="rowStyleMouseOver" jdbcType="VARCHAR" />
+    <result column="ROW_STYLE_CHECKED" property="rowStyleChecked" jdbcType="VARCHAR" />
+    <result column="IS_SUBSCRIBED" property="isSubscribed" jdbcType="VARCHAR" />
+    <result column="SUBSCRIBED_FROM" property="subscribedFrom" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="THEME_NUMBER" property="themeNumber" jdbcType="DECIMAL" />
+    <result column="THEME_CLASS" property="themeClass" jdbcType="VARCHAR" />
+    <result column="TRANSLATE_THIS_TEMPLATE" property="translateThisTemplate" jdbcType="VARCHAR" />
+    <result column="COMPONENT_COMMENT" property="componentComment" jdbcType="VARCHAR" />
+    <result column="COMPONENT_SIGNATURE" property="componentSignature" jdbcType="VARCHAR" />
+    <result column="TEMPLATE_ID" property="templateId" jdbcType="DECIMAL" />
+    <result column="COL_TEMPLATE1" property="colTemplate1" jdbcType="CLOB" />
+    <result column="COL_TEMPLATE2" property="colTemplate2" jdbcType="CLOB" />
+    <result column="COL_TEMPLATE3" property="colTemplate3" jdbcType="CLOB" />
+    <result column="COL_TEMPLATE4" property="colTemplate4" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

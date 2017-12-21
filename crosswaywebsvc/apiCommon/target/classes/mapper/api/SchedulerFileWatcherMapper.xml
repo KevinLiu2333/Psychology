@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SchedulerFileWatcherMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SchedulerFileWatcher" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="DIRECTORY_PATH" property="directoryPath" jdbcType="VARCHAR" />
+    <result column="FILE_NAME" property="fileName" jdbcType="VARCHAR" />
+    <result column="DESTINATION" property="destination" jdbcType="VARCHAR" />
+    <result column="DESTOID" property="destoid" jdbcType="DECIMAL" />
+    <result column="CREDOID" property="credoid" jdbcType="DECIMAL" />
+    <result column="MIN_FILE_SIZE" property="minFileSize" jdbcType="DECIMAL" />
+    <result column="STEADY_STATE_DURATION" property="steadyStateDuration" jdbcType="OTHER" />
+    <result column="COMMENTS" property="comments" jdbcType="VARCHAR" />
+    <result column="LAST_MODIFIED_TIME" property="lastModifiedTime" jdbcType="OTHER" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

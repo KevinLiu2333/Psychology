@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtDbFileGttMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtDbFileGtt" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TABLESPACE_NAME" property="tablespaceName" jdbcType="VARCHAR" />
+    <id column="FILE_ID" property="fileId" jdbcType="DECIMAL" />
+    <result column="MEG" property="meg" jdbcType="DECIMAL" />
+    <result column="MAX_MEG" property="maxMeg" jdbcType="DECIMAL" />
+    <result column="FILE_NAME" property="fileName" jdbcType="VARCHAR" />
+    <result column="TS#" property="ts" jdbcType="DECIMAL" />
+    <result column="BLOCKSIZE" property="blocksize" jdbcType="DECIMAL" />
+    <result column="FLAG" property="flag" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

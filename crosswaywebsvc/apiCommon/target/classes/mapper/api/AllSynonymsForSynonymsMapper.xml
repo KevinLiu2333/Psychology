@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllSynonymsForSynonymsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllSynonymsForSynonyms" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SYN_ID" property="synId" jdbcType="DECIMAL" />
+    <result column="SYN_OWNER" property="synOwner" jdbcType="VARCHAR" />
+    <result column="SYN_NAME" property="synName" jdbcType="VARCHAR" />
+    <result column="BASE_SYN_ID" property="baseSynId" jdbcType="DECIMAL" />
+    <result column="BASE_SYN_OWNER" property="baseSynOwner" jdbcType="VARCHAR" />
+    <result column="BASE_SYN_NAME" property="baseSynName" jdbcType="VARCHAR" />
+    <result column="SYN_NODE" property="synNode" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

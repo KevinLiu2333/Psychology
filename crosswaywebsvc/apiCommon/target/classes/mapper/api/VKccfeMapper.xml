@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VKccfeMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VKccfe" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDX" property="indx" jdbcType="DECIMAL" />
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="FENUM" property="fenum" jdbcType="DECIMAL" />
+    <result column="FECSZ" property="fecsz" jdbcType="DECIMAL" />
+    <result column="FEBSZ" property="febsz" jdbcType="DECIMAL" />
+    <result column="FESTA" property="festa" jdbcType="DECIMAL" />
+    <result column="FECRC_SCN" property="fecrcScn" jdbcType="VARCHAR" />
+    <result column="FECRC_TIM" property="fecrcTim" jdbcType="VARCHAR" />
+    <result column="FECRC_THR" property="fecrcThr" jdbcType="DECIMAL" />
+    <result column="FECRC_RBA_SEQ" property="fecrcRbaSeq" jdbcType="DECIMAL" />
+    <result column="FECRC_RBA_BNO" property="fecrcRbaBno" jdbcType="DECIMAL" />
+    <result column="FECRC_RBA_BOF" property="fecrcRbaBof" jdbcType="DECIMAL" />
+    <result column="FECPS" property="fecps" jdbcType="VARCHAR" />
+    <result column="FECPT" property="fecpt" jdbcType="VARCHAR" />
+    <result column="FECPC" property="fecpc" jdbcType="DECIMAL" />
+    <result column="FESTS" property="fests" jdbcType="VARCHAR" />
+    <result column="FESTT" property="festt" jdbcType="VARCHAR" />
+    <result column="FEBSC" property="febsc" jdbcType="VARCHAR" />
+    <result column="FEFNH" property="fefnh" jdbcType="DECIMAL" />
+    <result column="FEFNT" property="fefnt" jdbcType="DECIMAL" />
+    <result column="FEDUP" property="fedup" jdbcType="DECIMAL" />
+    <result column="FEURS" property="feurs" jdbcType="VARCHAR" />
+    <result column="FEURT" property="feurt" jdbcType="VARCHAR" />
+    <result column="FEOFS" property="feofs" jdbcType="VARCHAR" />
+    <result column="FEONC_SCN" property="feoncScn" jdbcType="VARCHAR" />
+    <result column="FEONC_TIM" property="feoncTim" jdbcType="VARCHAR" />
+    <result column="FEONC_THR" property="feoncThr" jdbcType="DECIMAL" />
+    <result column="FEONC_RBA_SEQ" property="feoncRbaSeq" jdbcType="DECIMAL" />
+    <result column="FEONC_RBA_BNO" property="feoncRbaBno" jdbcType="DECIMAL" />
+    <result column="FEONC_RBA_BOF" property="feoncRbaBof" jdbcType="DECIMAL" />
+    <result column="FEPOR" property="fepor" jdbcType="DECIMAL" />
+    <result column="FETSN" property="fetsn" jdbcType="DECIMAL" />
+    <result column="FETSI" property="fetsi" jdbcType="DECIMAL" />
+    <result column="FERFN" property="ferfn" jdbcType="DECIMAL" />
+    <result column="FEPFT" property="fepft" jdbcType="DECIMAL" />
+    <result column="FEDOR" property="fedor" jdbcType="DECIMAL" />
+    <result column="FEPDI" property="fepdi" jdbcType="DECIMAL" />
+    <result column="FEFDB" property="fefdb" jdbcType="DECIMAL" />
+    <result column="FEPLG_SCN" property="feplgScn" jdbcType="VARCHAR" />
+    <result column="FEPAX" property="fepax" jdbcType="DECIMAL" />
+    <result column="FEFLG" property="feflg" jdbcType="DECIMAL" />
+    <result column="FEPLUS" property="feplus" jdbcType="DECIMAL" />
+    <result column="FEPRLS" property="feprls" jdbcType="DECIMAL" />
+    <result column="FEPRLT" property="feprlt" jdbcType="DATE" />
+    <result column="FEFCRS" property="fefcrs" jdbcType="DECIMAL" />
+    <result column="FEFCRT" property="fefcrt" jdbcType="DATE" />
+    <result column="FEFCPS" property="fefcps" jdbcType="DECIMAL" />
+    <result column="FEFCPT" property="fefcpt" jdbcType="DATE" />
+    <result column="FEMVST" property="femvst" jdbcType="DECIMAL" />
+    <result column="ADDR" property="addr" jdbcType="VARBINARY" />
+    <result column="FECRC_ETB" property="fecrcEtb" jdbcType="VARBINARY" />
+    <result column="FEONC_ETB" property="feoncEtb" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VBackupSetSummaryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VBackupSetSummary" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NUM_BACKUPSETS" property="numBackupsets" jdbcType="DECIMAL" />
+    <result column="OLDEST_BACKUP_TIME" property="oldestBackupTime" jdbcType="DATE" />
+    <result column="NEWEST_BACKUP_TIME" property="newestBackupTime" jdbcType="DATE" />
+    <result column="OUTPUT_BYTES" property="outputBytes" jdbcType="DECIMAL" />
+    <result column="ORIGINAL_INPUT_BYTES" property="originalInputBytes" jdbcType="DECIMAL" />
+    <result column="ORIGINAL_INPRATE_BYTES" property="originalInprateBytes" jdbcType="DECIMAL" />
+    <result column="OUTPUT_RATE_BYTES" property="outputRateBytes" jdbcType="DECIMAL" />
+    <result column="COMPRESSION_RATIO" property="compressionRatio" jdbcType="DECIMAL" />
+    <result column="ORIGINAL_INPUT_BYTES_DISPLAY" property="originalInputBytesDisplay" jdbcType="VARCHAR" />
+    <result column="OUTPUT_BYTES_DISPLAY" property="outputBytesDisplay" jdbcType="VARCHAR" />
+    <result column="ORIGINAL_INPRATE_BYTES_DISPLAY" property="originalInprateBytesDisplay" jdbcType="VARCHAR" />
+    <result column="OUTPUT_RATE_BYTES_DISPLAY" property="outputRateBytesDisplay" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

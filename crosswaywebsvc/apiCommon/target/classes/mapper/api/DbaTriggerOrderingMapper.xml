@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaTriggerOrderingMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaTriggerOrdering">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TRIGGER_OWNER" jdbcType="VARCHAR" property="triggerOwner" />
+    <result column="TRIGGER_NAME" jdbcType="VARCHAR" property="triggerName" />
+    <result column="REFERENCED_TRIGGER_OWNER" jdbcType="VARCHAR" property="referencedTriggerOwner" />
+    <result column="REFERENCED_TRIGGER_NAME" jdbcType="VARCHAR" property="referencedTriggerName" />
+    <result column="ORDERING_TYPE" jdbcType="VARCHAR" property="orderingType" />
+  </resultMap>
+</mapper>

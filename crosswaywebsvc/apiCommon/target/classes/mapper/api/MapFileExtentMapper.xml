@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MapFileExtentMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MapFileExtent" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FILE_IDX" property="fileIdx" jdbcType="DECIMAL" />
+    <result column="EXT_NUM" property="extNum" jdbcType="DECIMAL" />
+    <result column="EXT_DEV_OFF" property="extDevOff" jdbcType="DECIMAL" />
+    <result column="EXT_SIZE" property="extSize" jdbcType="DECIMAL" />
+    <result column="EXT_FILE_OFF" property="extFileOff" jdbcType="DECIMAL" />
+    <result column="EXT_TYPE" property="extType" jdbcType="DECIMAL" />
+    <result column="ELEM_NAME" property="elemName" jdbcType="VARCHAR" />
+    <result column="ELEM_IDX" property="elemIdx" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

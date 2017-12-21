@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvReplqueueMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvReplqueue" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="TXNS_ENQUEUED" property="txnsEnqueued" jdbcType="DECIMAL" />
+    <result column="CALLS_ENQUEUED" property="callsEnqueued" jdbcType="DECIMAL" />
+    <result column="TXNS_PURGED" property="txnsPurged" jdbcType="DECIMAL" />
+    <result column="LAST_ENQUEUE_TIME" property="lastEnqueueTime" jdbcType="DATE" />
+    <result column="LAST_PURGE_TIME" property="lastPurgeTime" jdbcType="DATE" />
+  </resultMap>
+</mapper>

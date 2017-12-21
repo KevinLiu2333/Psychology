@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaStreamsTpPathBottleneckMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaStreamsTpPathBottleneck" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PATH_ID" property="pathId" jdbcType="DECIMAL" />
+    <result column="COMPONENT_ID" property="componentId" jdbcType="DECIMAL" />
+    <result column="COMPONENT_NAME" property="componentName" jdbcType="VARCHAR" />
+    <result column="COMPONENT_DB" property="componentDb" jdbcType="VARCHAR" />
+    <result column="COMPONENT_TYPE" property="componentType" jdbcType="VARCHAR" />
+    <result column="TOP_SESSION_ID" property="topSessionId" jdbcType="DECIMAL" />
+    <result column="TOP_SESSION_SERIAL#" property="topSessionSerial" jdbcType="DECIMAL" />
+    <result column="ACTION_NAME" property="actionName" jdbcType="VARCHAR" />
+    <result column="BOTTLENECK_IDENTIFIED" property="bottleneckIdentified" jdbcType="VARCHAR" />
+    <result column="ADVISOR_RUN_ID" property="advisorRunId" jdbcType="DECIMAL" />
+    <result column="ADVISOR_RUN_TIME" property="advisorRunTime" jdbcType="DATE" />
+    <result column="ADVISOR_RUN_REASON" property="advisorRunReason" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

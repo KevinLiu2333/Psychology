@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllStreamsStmtsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllStreamsStmts" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HANDLER_NAME" property="handlerName" jdbcType="VARCHAR" />
+    <result column="EXECUTION_SEQUENCE" property="executionSequence" jdbcType="DECIMAL" />
+    <result column="CREATION_TIME" property="creationTime" jdbcType="TIMESTAMP" />
+    <result column="MODIFICATION_TIME" property="modificationTime" jdbcType="TIMESTAMP" />
+    <result column="STATEMENT" property="statement" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

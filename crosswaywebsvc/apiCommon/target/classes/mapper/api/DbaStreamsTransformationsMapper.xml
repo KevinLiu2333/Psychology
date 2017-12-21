@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaStreamsTransformationsMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaStreamsTransformations">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RULE_OWNER" jdbcType="VARCHAR" property="ruleOwner" />
+    <result column="RULE_NAME" jdbcType="VARCHAR" property="ruleName" />
+    <result column="TRANSFORM_TYPE" jdbcType="VARCHAR" property="transformType" />
+    <result column="FROM_SCHEMA_NAME" jdbcType="VARCHAR" property="fromSchemaName" />
+    <result column="TO_SCHEMA_NAME" jdbcType="VARCHAR" property="toSchemaName" />
+    <result column="FROM_TABLE_NAME" jdbcType="VARCHAR" property="fromTableName" />
+    <result column="TO_TABLE_NAME" jdbcType="VARCHAR" property="toTableName" />
+    <result column="SCHEMA_NAME" jdbcType="VARCHAR" property="schemaName" />
+    <result column="TABLE_NAME" jdbcType="VARCHAR" property="tableName" />
+    <result column="FROM_COLUMN_NAME" jdbcType="VARCHAR" property="fromColumnName" />
+    <result column="TO_COLUMN_NAME" jdbcType="VARCHAR" property="toColumnName" />
+    <result column="COLUMN_NAME" jdbcType="VARCHAR" property="columnName" />
+    <result column="COLUMN_VALUE" jdbcType="OTHER" property="columnValue" />
+    <result column="COLUMN_TYPE" jdbcType="VARCHAR" property="columnType" />
+    <result column="COLUMN_FUNCTION" jdbcType="VARCHAR" property="columnFunction" />
+    <result column="VALUE_TYPE" jdbcType="VARCHAR" property="valueType" />
+    <result column="USER_FUNCTION_NAME" jdbcType="VARCHAR" property="userFunctionName" />
+    <result column="SUBSETTING_OPERATION" jdbcType="VARCHAR" property="subsettingOperation" />
+    <result column="DML_CONDITION" jdbcType="VARCHAR" property="dmlCondition" />
+    <result column="DECLARATIVE_TYPE" jdbcType="VARCHAR" property="declarativeType" />
+    <result column="PRECEDENCE" jdbcType="DECIMAL" property="precedence" />
+    <result column="STEP_NUMBER" jdbcType="DECIMAL" property="stepNumber" />
+  </resultMap>
+</mapper>

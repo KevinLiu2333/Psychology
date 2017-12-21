@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbfsSfsTabMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbfsSfsTab" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TABID" property="tabid" jdbcType="DECIMAL" />
+    <result column="SCHEMA_NAME" property="schemaName" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="PTABLE_NAME" property="ptableName" jdbcType="VARCHAR" />
+    <result column="VERSION#" property="version" jdbcType="VARCHAR" />
+    <result column="CREATED" property="created" jdbcType="TIMESTAMP" />
+    <result column="FORMATTED" property="formatted" jdbcType="TIMESTAMP" />
+    <result column="PROPERTIES" property="properties" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

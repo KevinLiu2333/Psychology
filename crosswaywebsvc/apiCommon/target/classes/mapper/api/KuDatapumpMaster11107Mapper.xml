@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuDatapumpMaster11107Mapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuDatapumpMaster11107" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PROCESS_ORDER" property="processOrder" jdbcType="DECIMAL" />
+    <result column="DUPLICATE" property="duplicate" jdbcType="DECIMAL" />
+    <result column="DUMP_FILEID" property="dumpFileid" jdbcType="DECIMAL" />
+    <result column="DUMP_POSITION" property="dumpPosition" jdbcType="DECIMAL" />
+    <result column="DUMP_LENGTH" property="dumpLength" jdbcType="DECIMAL" />
+    <result column="DUMP_ORIG_LENGTH" property="dumpOrigLength" jdbcType="DECIMAL" />
+    <result column="DUMP_ALLOCATION" property="dumpAllocation" jdbcType="DECIMAL" />
+    <result column="COMPLETED_ROWS" property="completedRows" jdbcType="DECIMAL" />
+    <result column="ERROR_COUNT" property="errorCount" jdbcType="DECIMAL" />
+    <result column="ELAPSED_TIME" property="elapsedTime" jdbcType="DECIMAL" />
+    <result column="OBJECT_TYPE_PATH" property="objectTypePath" jdbcType="VARCHAR" />
+    <result column="OBJECT_PATH_SEQNO" property="objectPathSeqno" jdbcType="DECIMAL" />
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <result column="IN_PROGRESS" property="inProgress" jdbcType="CHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="OBJECT_LONG_NAME" property="objectLongName" jdbcType="VARCHAR" />
+    <result column="OBJECT_SCHEMA" property="objectSchema" jdbcType="VARCHAR" />
+    <result column="ORIGINAL_OBJECT_SCHEMA" property="originalObjectSchema" jdbcType="VARCHAR" />
+    <result column="ORIGINAL_OBJECT_NAME" property="originalObjectName" jdbcType="VARCHAR" />
+    <result column="PARTITION_NAME" property="partitionName" jdbcType="VARCHAR" />
+    <result column="SUBPARTITION_NAME" property="subpartitionName" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="TRIGFLAG" property="trigflag" jdbcType="DECIMAL" />
+    <result column="CREATION_LEVEL" property="creationLevel" jdbcType="DECIMAL" />
+    <result column="COMPLETION_TIME" property="completionTime" jdbcType="DATE" />
+    <result column="OBJECT_TABLESPACE" property="objectTablespace" jdbcType="VARCHAR" />
+    <result column="SIZE_ESTIMATE" property="sizeEstimate" jdbcType="DECIMAL" />
+    <result column="OBJECT_ROW" property="objectRow" jdbcType="DECIMAL" />
+    <result column="PROCESSING_STATE" property="processingState" jdbcType="CHAR" />
+    <result column="PROCESSING_STATUS" property="processingStatus" jdbcType="CHAR" />
+    <result column="BASE_PROCESS_ORDER" property="baseProcessOrder" jdbcType="DECIMAL" />
+    <result column="BASE_OBJECT_TYPE" property="baseObjectType" jdbcType="VARCHAR" />
+    <result column="BASE_OBJECT_NAME" property="baseObjectName" jdbcType="VARCHAR" />
+    <result column="BASE_OBJECT_SCHEMA" property="baseObjectSchema" jdbcType="VARCHAR" />
+    <result column="ANCESTOR_PROCESS_ORDER" property="ancestorProcessOrder" jdbcType="DECIMAL" />
+    <result column="DOMAIN_PROCESS_ORDER" property="domainProcessOrder" jdbcType="DECIMAL" />
+    <result column="PARALLELIZATION" property="parallelization" jdbcType="DECIMAL" />
+    <result column="UNLOAD_METHOD" property="unloadMethod" jdbcType="DECIMAL" />
+    <result column="LOAD_METHOD" property="loadMethod" jdbcType="DECIMAL" />
+    <result column="GRANULES" property="granules" jdbcType="DECIMAL" />
+    <result column="SCN" property="scn" jdbcType="DECIMAL" />
+    <result column="GRANTOR" property="grantor" jdbcType="VARCHAR" />
+    <result column="PARENT_PROCESS_ORDER" property="parentProcessOrder" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="VALUE_T" property="valueT" jdbcType="VARCHAR" />
+    <result column="VALUE_N" property="valueN" jdbcType="DECIMAL" />
+    <result column="IS_DEFAULT" property="isDefault" jdbcType="DECIMAL" />
+    <result column="FILE_TYPE" property="fileType" jdbcType="DECIMAL" />
+    <result column="USER_DIRECTORY" property="userDirectory" jdbcType="VARCHAR" />
+    <result column="USER_FILE_NAME" property="userFileName" jdbcType="VARCHAR" />
+    <result column="FILE_NAME" property="fileName" jdbcType="VARCHAR" />
+    <result column="EXTEND_SIZE" property="extendSize" jdbcType="DECIMAL" />
+    <result column="FILE_MAX_SIZE" property="fileMaxSize" jdbcType="DECIMAL" />
+    <result column="PROCESS_NAME" property="processName" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATE" property="lastUpdate" jdbcType="DATE" />
+    <result column="WORK_ITEM" property="workItem" jdbcType="VARCHAR" />
+    <result column="OBJECT_NUMBER" property="objectNumber" jdbcType="DECIMAL" />
+    <result column="COMPLETED_BYTES" property="completedBytes" jdbcType="DECIMAL" />
+    <result column="TOTAL_BYTES" property="totalBytes" jdbcType="DECIMAL" />
+    <result column="METADATA_IO" property="metadataIo" jdbcType="DECIMAL" />
+    <result column="DATA_IO" property="dataIo" jdbcType="DECIMAL" />
+    <result column="CUMULATIVE_TIME" property="cumulativeTime" jdbcType="DECIMAL" />
+    <result column="PACKET_NUMBER" property="packetNumber" jdbcType="DECIMAL" />
+    <result column="OLD_VALUE" property="oldValue" jdbcType="VARCHAR" />
+    <result column="SEED" property="seed" jdbcType="DECIMAL" />
+    <result column="LAST_FILE" property="lastFile" jdbcType="DECIMAL" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="OPERATION" property="operation" jdbcType="VARCHAR" />
+    <result column="JOB_MODE" property="jobMode" jdbcType="VARCHAR" />
+    <result column="CONTROL_QUEUE" property="controlQueue" jdbcType="VARCHAR" />
+    <result column="STATUS_QUEUE" property="statusQueue" jdbcType="VARCHAR" />
+    <result column="REMOTE_LINK" property="remoteLink" jdbcType="VARCHAR" />
+    <result column="VERSION" property="version" jdbcType="DECIMAL" />
+    <result column="JOB_VERSION" property="jobVersion" jdbcType="VARCHAR" />
+    <result column="DB_VERSION" property="dbVersion" jdbcType="VARCHAR" />
+    <result column="TIMEZONE" property="timezone" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="PHASE" property="phase" jdbcType="DECIMAL" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="BLOCK_SIZE" property="blockSize" jdbcType="DECIMAL" />
+    <result column="METADATA_BUFFER_SIZE" property="metadataBufferSize" jdbcType="DECIMAL" />
+    <result column="DATA_BUFFER_SIZE" property="dataBufferSize" jdbcType="DECIMAL" />
+    <result column="DEGREE" property="degree" jdbcType="DECIMAL" />
+    <result column="PLATFORM" property="platform" jdbcType="VARCHAR" />
+    <result column="ABORT_STEP" property="abortStep" jdbcType="DECIMAL" />
+    <result column="INSTANCE" property="instance" jdbcType="VARCHAR" />
+    <result column="CLUSTER_OK" property="clusterOk" jdbcType="DECIMAL" />
+    <result column="SERVICE_NAME" property="serviceName" jdbcType="VARCHAR" />
+    <result column="XML_CLOB" property="xmlClob" jdbcType="CLOB" />
+    <result column="GUID" property="guid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

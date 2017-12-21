@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigFrmPropertyclassMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigFrmPropertyclass" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FORMMODULE_ID" property="formmoduleId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="ITEMTYPE" property="itemtype" jdbcType="VARCHAR" />
+    <result column="JUSTIFICATION" property="justification" jdbcType="VARCHAR" />
+    <result column="BEVEL" property="bevel" jdbcType="VARCHAR" />
+    <result column="VISUALATTRIBUTENAME" property="visualattributename" jdbcType="VARCHAR" />
+    <result column="HEIGHT" property="height" jdbcType="VARCHAR" />
+    <result column="WIDTH" property="width" jdbcType="VARCHAR" />
+    <result column="FONTNAME" property="fontname" jdbcType="VARCHAR" />
+    <result column="FONTSPACING" property="fontspacing" jdbcType="VARCHAR" />
+    <result column="FONTSTYLE" property="fontstyle" jdbcType="VARCHAR" />
+    <result column="FONTSIZE" property="fontsize" jdbcType="VARCHAR" />
+    <result column="FONTWEIGHT" property="fontweight" jdbcType="VARCHAR" />
+    <result column="FILLPATTERN" property="fillpattern" jdbcType="VARCHAR" />
+    <result column="BACKCOLOR" property="backcolor" jdbcType="VARCHAR" />
+    <result column="FOREGROUNDCOLOR" property="foregroundcolor" jdbcType="VARCHAR" />
+    <result column="DIRTYINFO" property="dirtyinfo" jdbcType="VARCHAR" />
+    <result column="SELECT_FOR_APP" property="selectForApp" jdbcType="VARCHAR" />
+    <result column="TITLE" property="title" jdbcType="VARCHAR" />
+    <result column="PARENTTYPE" property="parenttype" jdbcType="VARCHAR" />
+    <result column="PARENTNAME" property="parentname" jdbcType="VARCHAR" />
+    <result column="PARENTMODULE" property="parentmodule" jdbcType="VARCHAR" />
+    <result column="PARENTMODULETYPE" property="parentmoduletype" jdbcType="VARCHAR" />
+    <result column="SHOWVERTICALSCROLLBAR" property="showverticalscrollbar" jdbcType="VARCHAR" />
+    <result column="SHOWHORIZONTALSCROLLBAR" property="showhorizontalscrollbar" jdbcType="VARCHAR" />
+    <result column="INHERITMENU" property="inheritmenu" jdbcType="VARCHAR" />
+    <result column="MOVEALLOWED" property="moveallowed" jdbcType="VARCHAR" />
+    <result column="HORIZONTALTOOLBARCANVASNAME" property="horizontaltoolbarcanvasname" jdbcType="VARCHAR" />
+    <result column="XPOSITION" property="xposition" jdbcType="VARCHAR" />
+    <result column="YPOSITION" property="yposition" jdbcType="VARCHAR" />
+    <result column="ICONFILENAME" property="iconfilename" jdbcType="VARCHAR" />
+    <result column="WINDOWSTYLE" property="windowstyle" jdbcType="VARCHAR" />
+    <result column="HIDEONEXIT" property="hideonexit" jdbcType="VARCHAR" />
+    <result column="CLEARALLOWED" property="clearallowed" jdbcType="VARCHAR" />
+    <result column="MINIMIZEALLOWED" property="minimizeallowed" jdbcType="VARCHAR" />
+    <result column="DISTANCEBETWEENRECORDS" property="distancebetweenrecords" jdbcType="VARCHAR" />
+    <result column="VISIBLE" property="visible" jdbcType="VARCHAR" />
+    <result column="ICONIC" property="iconic" jdbcType="VARCHAR" />
+    <result column="QUERYALLOWED" property="queryallowed" jdbcType="VARCHAR" />
+    <result column="AUTOHINT" property="autohint" jdbcType="VARCHAR" />
+    <result column="ENABLED" property="enabled" jdbcType="VARCHAR" />
+    <result column="MOUSENAVIGATE" property="mousenavigate" jdbcType="VARCHAR" />
+    <result column="DEFAULTBUTTON" property="defaultbutton" jdbcType="VARCHAR" />
+    <result column="VIEWPORTXPOSITION" property="viewportxposition" jdbcType="VARCHAR" />
+    <result column="VIEWPORTYPOSITION" property="viewportyposition" jdbcType="VARCHAR" />
+    <result column="VIEWPORTWIDTH" property="viewportwidth" jdbcType="VARCHAR" />
+    <result column="RAISEONENTER" property="raiseonenter" jdbcType="VARCHAR" />
+    <result column="CANVASTYPE" property="canvastype" jdbcType="VARCHAR" />
+    <result column="WINDOWNAME" property="windowname" jdbcType="VARCHAR" />
+    <result column="RESIZEALLOWED" property="resizeallowed" jdbcType="VARCHAR" />
+    <result column="MODAL" property="modal" jdbcType="VARCHAR" />
+    <result column="KEYBOARDNAVIGABLE" property="keyboardnavigable" jdbcType="VARCHAR" />
+    <result column="VIEWPORTHEIGHT" property="viewportheight" jdbcType="VARCHAR" />
+    <result column="VIEWPORTXPOSITIONONCANVAS" property="viewportxpositiononcanvas" jdbcType="VARCHAR" />
+    <result column="VIEWPORTYPOSITIONONCANVAS" property="viewportypositiononcanvas" jdbcType="VARCHAR" />
+    <result column="MAXIMIZEALLOWED" property="maximizeallowed" jdbcType="VARCHAR" />
+    <result column="LISTSTYLE" property="liststyle" jdbcType="VARCHAR" />
+    <result column="APPLICABLE" property="applicable" jdbcType="VARCHAR" />
+    <result column="COMPLETE" property="complete" jdbcType="VARCHAR" />
+    <result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+    <result column="ASSIGNEE" property="assignee" jdbcType="VARCHAR" />
+    <result column="NOTES" property="notes" jdbcType="VARCHAR" />
+    <result column="TAGS" property="tags" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

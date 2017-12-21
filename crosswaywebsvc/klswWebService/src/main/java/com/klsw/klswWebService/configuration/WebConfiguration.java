@@ -13,8 +13,8 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * WEB配置
- * @author Hkj
  *
+ * @author Hkj
  */
 @Configuration
 public class WebConfiguration extends WebMvcConfigurerAdapter {

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.NetAclMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.NetAcl" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HOST" property="host" jdbcType="VARCHAR" />
+    <result column="LOWER_PORT" property="lowerPort" jdbcType="DECIMAL" />
+    <result column="UPPER_PORT" property="upperPort" jdbcType="DECIMAL" />
+    <result column="ACLID" property="aclid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

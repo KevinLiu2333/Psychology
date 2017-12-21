@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TsmSrcMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.TsmSrc" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SRC_DB_NAME" property="srcDbName" jdbcType="VARCHAR" />
+    <result column="SRC_INST_NAME" property="srcInstName" jdbcType="VARCHAR" />
+    <result column="SRC_INST_ID" property="srcInstId" jdbcType="VARCHAR" />
+    <result column="SRC_INST_START_TIME" property="srcInstStartTime" jdbcType="OTHER" />
+    <result column="SEQUENCE#" property="sequence" jdbcType="DECIMAL" />
+    <result column="SRC_SID" property="srcSid" jdbcType="DECIMAL" />
+    <result column="SRC_SERIAL#" property="srcSerial" jdbcType="DECIMAL" />
+    <result column="SRC_STATE" property="srcState" jdbcType="DECIMAL" />
+    <result column="CONNECT_STRING" property="connectString" jdbcType="VARCHAR" />
+    <result column="SRC_START_TIME" property="srcStartTime" jdbcType="OTHER" />
+    <result column="COST" property="cost" jdbcType="DECIMAL" />
+    <result column="FAILURE_REASON" property="failureReason" jdbcType="DECIMAL" />
+    <result column="SRC_END_TIME" property="srcEndTime" jdbcType="OTHER" />
+    <result column="ROUNDTRIPS" property="roundtrips" jdbcType="DECIMAL" />
+    <result column="SRC_USERID" property="srcUserid" jdbcType="DECIMAL" />
+    <result column="SRC_SCHEMAID" property="srcSchemaid" jdbcType="DECIMAL" />
+    <result column="DST_DB_NAME" property="dstDbName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

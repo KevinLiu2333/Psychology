@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtHcNicDetailsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtHcNicDetails" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="VARCHAR" />
+    <result column="MAX_TRANSFER_UNIT" property="maxTransferUnit" jdbcType="DECIMAL" />
+    <result column="INET_ADDRESS" property="inetAddress" jdbcType="VARCHAR" />
+    <result column="MASK" property="mask" jdbcType="VARCHAR" />
+    <result column="BROADCAST_ADDRESS" property="broadcastAddress" jdbcType="VARCHAR" />
+    <result column="MAC_ADDRESS" property="macAddress" jdbcType="VARCHAR" />
+    <result column="HOSTNAME_ALIASES" property="hostnameAliases" jdbcType="VARCHAR" />
+    <result column="SNAPSHOT_GUID" property="snapshotGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

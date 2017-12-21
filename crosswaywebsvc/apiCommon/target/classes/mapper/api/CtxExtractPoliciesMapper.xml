@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CtxExtractPoliciesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CtxExtractPolicies" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="EPL_NAME" property="eplName" jdbcType="VARCHAR" />
+    <result column="EPL_OWNER" property="eplOwner" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

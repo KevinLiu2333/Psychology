@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OdciWarningsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OdciWarnings" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="C1" property="c1" jdbcType="DECIMAL" />
+    <result column="C2" property="c2" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

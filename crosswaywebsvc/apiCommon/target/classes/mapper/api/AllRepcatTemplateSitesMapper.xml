@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllRepcatTemplateSitesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllRepcatTemplateSites" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="REFRESH_TEMPLATE_NAME" property="refreshTemplateName" jdbcType="VARCHAR" />
+    <result column="REFRESH_GROUP_NAME" property="refreshGroupName" jdbcType="VARCHAR" />
+    <result column="TEMPLATE_OWNER" property="templateOwner" jdbcType="VARCHAR" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="SITE_NAME" property="siteName" jdbcType="VARCHAR" />
+    <result column="REPAPI_SITE_NAME" property="repapiSiteName" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="INSTANTIATION_DATE" property="instantiationDate" jdbcType="DATE" />
+  </resultMap>
+</mapper>

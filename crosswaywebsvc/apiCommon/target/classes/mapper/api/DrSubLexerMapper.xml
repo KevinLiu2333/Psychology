@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrSubLexerMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrSubLexer" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SLX_PRE_ID" property="slxPreId" jdbcType="DECIMAL" />
+    <id column="SLX_LANGUAGE" property="slxLanguage" jdbcType="VARCHAR" />
+    <result column="SLX_ALT_VALUE" property="slxAltValue" jdbcType="VARCHAR" />
+    <result column="SLX_SUB_PRE_ID" property="slxSubPreId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

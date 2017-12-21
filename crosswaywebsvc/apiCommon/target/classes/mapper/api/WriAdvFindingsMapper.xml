@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriAdvFindingsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriAdvFindings" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="EXEC_NAME" property="execName" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="DECIMAL" />
+    <result column="PARENT" property="parent" jdbcType="DECIMAL" />
+    <result column="OBJ_ID" property="objId" jdbcType="DECIMAL" />
+    <result column="IMPACT_MSG_ID" property="impactMsgId" jdbcType="DECIMAL" />
+    <result column="IMPACT_VAL" property="impactVal" jdbcType="DECIMAL" />
+    <result column="MSG_ID" property="msgId" jdbcType="DECIMAL" />
+    <result column="MORE_INFO_ID" property="moreInfoId" jdbcType="DECIMAL" />
+    <result column="NAME_MSG_CODE" property="nameMsgCode" jdbcType="VARCHAR" />
+    <result column="FILTERED" property="filtered" jdbcType="CHAR" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

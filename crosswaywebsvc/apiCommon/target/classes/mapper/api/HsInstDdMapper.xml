@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.HsInstDdMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.HsInstDd">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DD_TABLE_NAME" jdbcType="VARCHAR" property="ddTableName" />
+    <result column="DD_TABLE_DESC" jdbcType="VARCHAR" property="ddTableDesc" />
+    <result column="TRANSLATION_TYPE" jdbcType="CHAR" property="translationType" />
+    <result column="TRANSLATION_TEXT" jdbcType="VARCHAR" property="translationText" />
+    <result column="FDS_CLASS_NAME" jdbcType="VARCHAR" property="fdsClassName" />
+    <result column="FDS_INST_NAME" jdbcType="VARCHAR" property="fdsInstName" />
+    <result column="DD_TABLE_ID" jdbcType="DECIMAL" property="ddTableId" />
+    <result column="FDS_CLASS_ID" jdbcType="DECIMAL" property="fdsClassId" />
+    <result column="FDS_INST_ID" jdbcType="DECIMAL" property="fdsInstId" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ExfExpsetstatsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ExfExpsetstats" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ESETOWNER" property="esetowner" jdbcType="VARCHAR" />
+    <id column="ESETTABLE" property="esettable" jdbcType="VARCHAR" />
+    <id column="ESETCOLUMN" property="esetcolumn" jdbcType="VARCHAR" />
+    <id column="PREDLHS" property="predlhs" jdbcType="VARCHAR" />
+    <result column="NOEQPREDS" property="noeqpreds" jdbcType="DECIMAL" />
+    <result column="NOLTPREDS" property="noltpreds" jdbcType="DECIMAL" />
+    <result column="NOGTPREDS" property="nogtpreds" jdbcType="DECIMAL" />
+    <result column="NOLTEQPRS" property="nolteqprs" jdbcType="DECIMAL" />
+    <result column="NOGTEQPRS" property="nogteqprs" jdbcType="DECIMAL" />
+    <result column="NONEQPRS" property="noneqprs" jdbcType="DECIMAL" />
+    <result column="NOISNLPRS" property="noisnlprs" jdbcType="DECIMAL" />
+    <result column="NOISNNLPRS" property="noisnnlprs" jdbcType="DECIMAL" />
+    <result column="NOBETPREDS" property="nobetpreds" jdbcType="DECIMAL" />
+    <result column="NONVLPREDS" property="nonvlpreds" jdbcType="DECIMAL" />
+    <result column="NOLIKEPRS" property="nolikeprs" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

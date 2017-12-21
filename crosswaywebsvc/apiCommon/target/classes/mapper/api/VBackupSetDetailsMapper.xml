@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VBackupSetDetailsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VBackupSetDetails" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SESSION_KEY" property="sessionKey" jdbcType="DECIMAL" />
+    <result column="SESSION_RECID" property="sessionRecid" jdbcType="DECIMAL" />
+    <result column="SESSION_STAMP" property="sessionStamp" jdbcType="DECIMAL" />
+    <result column="BS_KEY" property="bsKey" jdbcType="DECIMAL" />
+    <result column="RECID" property="recid" jdbcType="DECIMAL" />
+    <result column="STAMP" property="stamp" jdbcType="DECIMAL" />
+    <result column="SET_STAMP" property="setStamp" jdbcType="DECIMAL" />
+    <result column="SET_COUNT" property="setCount" jdbcType="DECIMAL" />
+    <result column="BACKUP_TYPE" property="backupType" jdbcType="VARCHAR" />
+    <result column="CONTROLFILE_INCLUDED" property="controlfileIncluded" jdbcType="VARCHAR" />
+    <result column="INCREMENTAL_LEVEL" property="incrementalLevel" jdbcType="DECIMAL" />
+    <result column="PIECES" property="pieces" jdbcType="DECIMAL" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="COMPLETION_TIME" property="completionTime" jdbcType="DATE" />
+    <result column="ELAPSED_SECONDS" property="elapsedSeconds" jdbcType="DECIMAL" />
+    <result column="BLOCK_SIZE" property="blockSize" jdbcType="DECIMAL" />
+    <result column="KEEP" property="keep" jdbcType="VARCHAR" />
+    <result column="KEEP_UNTIL" property="keepUntil" jdbcType="DATE" />
+    <result column="KEEP_OPTIONS" property="keepOptions" jdbcType="VARCHAR" />
+    <result column="DEVICE_TYPE" property="deviceType" jdbcType="VARCHAR" />
+    <result column="COMPRESSED" property="compressed" jdbcType="VARCHAR" />
+    <result column="NUM_COPIES" property="numCopies" jdbcType="DECIMAL" />
+    <result column="OUTPUT_BYTES" property="outputBytes" jdbcType="DECIMAL" />
+    <result column="ORIGINAL_INPUT_BYTES" property="originalInputBytes" jdbcType="DECIMAL" />
+    <result column="COMPRESSION_RATIO" property="compressionRatio" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="CHAR" />
+    <result column="ORIGINAL_INPRATE_BYTES" property="originalInprateBytes" jdbcType="DECIMAL" />
+    <result column="OUTPUT_RATE_BYTES" property="outputRateBytes" jdbcType="DECIMAL" />
+    <result column="ORIGINAL_INPUT_BYTES_DISPLAY" property="originalInputBytesDisplay" jdbcType="VARCHAR" />
+    <result column="OUTPUT_BYTES_DISPLAY" property="outputBytesDisplay" jdbcType="VARCHAR" />
+    <result column="ORIGINAL_INPRATE_BYTES_DISPLAY" property="originalInprateBytesDisplay" jdbcType="VARCHAR" />
+    <result column="OUTPUT_RATE_BYTES_DISPLAY" property="outputRateBytesDisplay" jdbcType="VARCHAR" />
+    <result column="TIME_TAKEN_DISPLAY" property="timeTakenDisplay" jdbcType="VARCHAR" />
+    <result column="ENCRYPTED" property="encrypted" jdbcType="VARCHAR" />
+    <result column="BACKED_BY_OSB" property="backedByOsb" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

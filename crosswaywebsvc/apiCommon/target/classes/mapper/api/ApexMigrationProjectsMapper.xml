@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexMigrationProjectsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexMigrationProjects" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PROJECT_ID" property="projectId" jdbcType="DECIMAL" />
+    <result column="PROJECT_NAME" property="projectName" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="ACCDB_PATHNAME" property="accdbPathname" jdbcType="VARCHAR" />
+    <result column="JETVERSION" property="jetversion" jdbcType="FLOAT" />
+    <result column="MIGRATION_TYPE" property="migrationType" jdbcType="VARCHAR" />
+    <result column="ACCESSVERSION" property="accessversion" jdbcType="VARCHAR" />
+    <result column="PROJECT_OWNER" property="projectOwner" jdbcType="VARCHAR" />
+    <result column="SCHEMA" property="schema" jdbcType="VARCHAR" />
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="WORKSPACE_ID" property="workspaceId" jdbcType="DECIMAL" />
+    <result column="LAST_MODIFIED_ON" property="lastModifiedOn" jdbcType="DATE" />
+    <result column="LAST_MODIFIED_BY" property="lastModifiedBy" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

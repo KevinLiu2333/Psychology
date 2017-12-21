@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.BslnBaselinesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.BslnBaselines" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="BSLN_GUID" property="bslnGuid" jdbcType="VARBINARY" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="INSTANCE_NAME" property="instanceName" jdbcType="VARCHAR" />
+    <result column="BASELINE_ID" property="baselineId" jdbcType="DECIMAL" />
+    <result column="TIMEGROUPING" property="timegrouping" jdbcType="VARCHAR" />
+    <result column="AUTO_TIMEGROUP" property="autoTimegroup" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="LAST_COMPUTE_DATE" property="lastComputeDate" jdbcType="DATE" />
+  </resultMap>
+</mapper>

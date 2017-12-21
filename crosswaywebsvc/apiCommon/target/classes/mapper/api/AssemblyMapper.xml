@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AssemblyMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Assembly" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="FILESPEC" property="filespec" jdbcType="VARCHAR" />
+    <result column="SECURITY_LEVEL" property="securityLevel" jdbcType="DECIMAL" />
+    <result column="IDENTITY" property="identity" jdbcType="VARCHAR" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="AUDIT$" property="audit" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

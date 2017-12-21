@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvBackupSetMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvBackupSet" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="RECID" property="recid" jdbcType="DECIMAL" />
+    <result column="STAMP" property="stamp" jdbcType="DECIMAL" />
+    <result column="SET_STAMP" property="setStamp" jdbcType="DECIMAL" />
+    <result column="SET_COUNT" property="setCount" jdbcType="DECIMAL" />
+    <result column="BACKUP_TYPE" property="backupType" jdbcType="VARCHAR" />
+    <result column="CONTROLFILE_INCLUDED" property="controlfileIncluded" jdbcType="VARCHAR" />
+    <result column="INCREMENTAL_LEVEL" property="incrementalLevel" jdbcType="DECIMAL" />
+    <result column="PIECES" property="pieces" jdbcType="DECIMAL" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="COMPLETION_TIME" property="completionTime" jdbcType="DATE" />
+    <result column="ELAPSED_SECONDS" property="elapsedSeconds" jdbcType="DECIMAL" />
+    <result column="BLOCK_SIZE" property="blockSize" jdbcType="DECIMAL" />
+    <result column="INPUT_FILE_SCAN_ONLY" property="inputFileScanOnly" jdbcType="VARCHAR" />
+    <result column="KEEP" property="keep" jdbcType="VARCHAR" />
+    <result column="KEEP_UNTIL" property="keepUntil" jdbcType="DATE" />
+    <result column="KEEP_OPTIONS" property="keepOptions" jdbcType="VARCHAR" />
+    <result column="MULTI_SECTION" property="multiSection" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

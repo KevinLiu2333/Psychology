@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriSegadvCntrltabMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriSegadvCntrltab" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="AUTO_TASKID" property="autoTaskid" jdbcType="DECIMAL" />
+    <result column="SNAPID" property="snapid" jdbcType="DECIMAL" />
+    <result column="SEGMENTS_SELECTED" property="segmentsSelected" jdbcType="DECIMAL" />
+    <result column="SEGMENTS_PROCESSED" property="segmentsProcessed" jdbcType="DECIMAL" />
+    <result column="TABLESPACE_SELECTED" property="tablespaceSelected" jdbcType="DECIMAL" />
+    <result column="TABLESPACE_PROCESSED" property="tablespaceProcessed" jdbcType="DECIMAL" />
+    <result column="RECOMMENDATIONS_COUNT" property="recommendationsCount" jdbcType="DECIMAL" />
+    <result column="START_TIME" property="startTime" jdbcType="TIMESTAMP" />
+    <result column="END_TIME" property="endTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

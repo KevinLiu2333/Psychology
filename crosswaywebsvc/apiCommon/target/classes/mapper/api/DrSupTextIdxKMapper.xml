@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrSupTextIdxKMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrSupTextIdxK" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TEXTKEY" property="textkey" jdbcType="OTHER" />
+    <result column="DOCID" property="docid" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

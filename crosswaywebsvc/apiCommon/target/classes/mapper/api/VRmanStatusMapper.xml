@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VRmanStatusMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VRmanStatus" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="RECID" property="recid" jdbcType="DECIMAL" />
+    <result column="STAMP" property="stamp" jdbcType="DECIMAL" />
+    <result column="PARENT_RECID" property="parentRecid" jdbcType="DECIMAL" />
+    <result column="PARENT_STAMP" property="parentStamp" jdbcType="DECIMAL" />
+    <result column="SESSION_RECID" property="sessionRecid" jdbcType="DECIMAL" />
+    <result column="SESSION_STAMP" property="sessionStamp" jdbcType="DECIMAL" />
+    <result column="ROW_LEVEL" property="rowLevel" jdbcType="DECIMAL" />
+    <result column="ROW_TYPE" property="rowType" jdbcType="VARCHAR" />
+    <result column="COMMAND_ID" property="commandId" jdbcType="VARCHAR" />
+    <result column="OPERATION" property="operation" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="MBYTES_PROCESSED" property="mbytesProcessed" jdbcType="DECIMAL" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="INPUT_BYTES" property="inputBytes" jdbcType="DECIMAL" />
+    <result column="OUTPUT_BYTES" property="outputBytes" jdbcType="DECIMAL" />
+    <result column="OPTIMIZED" property="optimized" jdbcType="VARCHAR" />
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <result column="OUTPUT_DEVICE_TYPE" property="outputDeviceType" jdbcType="VARCHAR" />
+    <result column="OSB_ALLOCATED" property="osbAllocated" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

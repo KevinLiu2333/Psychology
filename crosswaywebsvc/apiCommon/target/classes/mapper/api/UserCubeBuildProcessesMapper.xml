@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserCubeBuildProcessesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserCubeBuildProcesses" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="BUILD_PROCESS_NAME" property="buildProcessName" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="OTHER" />
+    <result column="BUILD_PROCESS" property="buildProcess" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

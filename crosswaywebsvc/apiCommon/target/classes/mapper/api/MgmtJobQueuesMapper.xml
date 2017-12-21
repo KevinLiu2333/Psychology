@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtJobQueuesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtJobQueues" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="QUEUE_ID" property="queueId" jdbcType="VARBINARY" />
+    <result column="QUEUE_NAME" property="queueName" jdbcType="VARCHAR" />
+    <result column="SCHEDULE_DURATION" property="scheduleDuration" jdbcType="DECIMAL" />
+    <result column="ENABLED" property="enabled" jdbcType="DECIMAL" />
+    <result column="ACTIVE" property="active" jdbcType="DECIMAL" />
+    <result column="MAX_QUEUE_INDEX" property="maxQueueIndex" jdbcType="DECIMAL" />
+    <result column="CONCURRENCY_FACTOR" property="concurrencyFactor" jdbcType="DECIMAL" />
+    <result column="NUM_SCHEDULED_EXECUTIONS" property="numScheduledExecutions" jdbcType="DECIMAL" />
+    <result column="NUM_EXECUTIONS" property="numExecutions" jdbcType="DECIMAL" />
+    <result column="SCHEDULE_GUID" property="scheduleGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

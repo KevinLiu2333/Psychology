@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCmSynchImpactReportsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCmSynchImpactReports" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SYNCH_VERSION" property="synchVersion" jdbcType="DECIMAL" />
+    <result column="MESSAGE_TYPE" property="messageType" jdbcType="VARCHAR" />
+    <result column="MESSAGE_SEVERITY" property="messageSeverity" jdbcType="DECIMAL" />
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="DECIMAL" />
+    <result column="OBJECT_SCHEMA" property="objectSchema" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="SYNCH_GUID" property="synchGuid" jdbcType="VARBINARY" />
+    <result column="PROBLEM" property="problem" jdbcType="BLOB" />
+    <result column="ACTION" property="action" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

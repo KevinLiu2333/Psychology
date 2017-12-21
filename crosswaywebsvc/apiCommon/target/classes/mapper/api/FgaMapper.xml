@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.FgaMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Fga" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="PNAME" property="pname" jdbcType="VARCHAR" />
+    <result column="PTXT" property="ptxt" jdbcType="VARCHAR" />
+    <result column="PFSCHMA" property="pfschma" jdbcType="VARCHAR" />
+    <result column="PPNAME" property="ppname" jdbcType="VARCHAR" />
+    <result column="PFNAME" property="pfname" jdbcType="VARCHAR" />
+    <result column="PCOL" property="pcol" jdbcType="VARCHAR" />
+    <result column="ENABLE_FLAG" property="enableFlag" jdbcType="DECIMAL" />
+    <result column="STMT_TYPE" property="stmtType" jdbcType="DECIMAL" />
+    <result column="POWNER#" property="powner" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

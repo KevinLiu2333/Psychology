@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaStreamsUnsupported112Mapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaStreamsUnsupported112" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="TPROPERTY" property="tproperty" jdbcType="DECIMAL" />
+    <result column="TTRIGFLAG" property="ttrigflag" jdbcType="DECIMAL" />
+    <result column="OFLAGS" property="oflags" jdbcType="DECIMAL" />
+    <result column="TFLAGS" property="tflags" jdbcType="DECIMAL" />
+    <result column="REASON" property="reason" jdbcType="VARCHAR" />
+    <result column="COMPATIBLE" property="compatible" jdbcType="DECIMAL" />
+    <result column="AUTO_FILTERED" property="autoFiltered" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCollectionWorkersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCollectionWorkers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="WORKER_ID" property="workerId" jdbcType="DECIMAL" />
+    <result column="TASK_CLASS_LIST" property="taskClassList" jdbcType="VARCHAR" />
+    <result column="WORKER_STATUS" property="workerStatus" jdbcType="DECIMAL" />
+    <result column="JOB_ID" property="jobId" jdbcType="DECIMAL" />
+    <result column="WORKER_START_TIME" property="workerStartTime" jdbcType="DATE" />
+  </resultMap>
+</mapper>

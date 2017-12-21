@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.JcptQueryLogMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.JcptQueryLog">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="DEPT_NAME" jdbcType="DECIMAL" property="deptName" />
+    <result column="CTIME" jdbcType="TIMESTAMP" property="ctime" />
+    <result column="YYQD_ID" jdbcType="DECIMAL" property="yyqdId" />
+    <result column="CORP_NAME" jdbcType="VARCHAR" property="corpName" />
+    <result column="STATUS" jdbcType="DECIMAL" property="status" />
+    <result column="USERNAME" jdbcType="VARCHAR" property="username" />
+    <result column="USER_ID" jdbcType="DECIMAL" property="userId" />
+    <result column="APPLY_ITEM" jdbcType="VARCHAR" property="applyItem" />
+    <result column="MSG_CLASS" jdbcType="VARCHAR" property="msgClass" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowMenuOptionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowMenuOptions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="PARENT_ID" property="parentId" jdbcType="DECIMAL" />
+    <result column="MENU_ID" property="menuId" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="OPTION_SEQUENCE" property="optionSequence" jdbcType="DECIMAL" />
+    <result column="SHORT_NAME" property="shortName" jdbcType="VARCHAR" />
+    <result column="LONG_NAME" property="longName" jdbcType="VARCHAR" />
+    <result column="LINK" property="link" jdbcType="VARCHAR" />
+    <result column="PAGE_ID" property="pageId" jdbcType="DECIMAL" />
+    <result column="ALSO_CURRENT_FOR_PAGES" property="alsoCurrentForPages" jdbcType="VARCHAR" />
+    <result column="DISPLAY_WHEN_COND_TYPE" property="displayWhenCondType" jdbcType="VARCHAR" />
+    <result column="DISPLAY_WHEN_CONDITION" property="displayWhenCondition" jdbcType="VARCHAR" />
+    <result column="DISPLAY_WHEN_CONDITION2" property="displayWhenCondition2" jdbcType="VARCHAR" />
+    <result column="SECURITY_SCHEME" property="securityScheme" jdbcType="VARCHAR" />
+    <result column="REQUIRED_PATCH" property="requiredPatch" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="MENU_OPTION_COMMENT" property="menuOptionComment" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

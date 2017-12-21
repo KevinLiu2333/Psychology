@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCstmzChartsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCstmzCharts" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CHART_TYPE" property="chartType" jdbcType="DECIMAL" />
+    <result column="DISPLAY_ORDER" property="displayOrder" jdbcType="DECIMAL" />
+    <result column="TARGETS_COUNT" property="targetsCount" jdbcType="DECIMAL" />
+    <result column="COMP_CHART_GUID" property="compChartGuid" jdbcType="VARBINARY" />
+    <result column="COMP_TARGET_GUID" property="compTargetGuid" jdbcType="VARBINARY" />
+    <result column="MEMBER_METRIC_GUID" property="memberMetricGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

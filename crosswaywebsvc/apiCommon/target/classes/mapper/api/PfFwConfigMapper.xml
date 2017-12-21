@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.PfFwConfigMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.PfFwConfig">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FW_CONFIG_ID" jdbcType="VARCHAR" property="fwConfigId" />
+    <result column="ZY_ITEM_ID" jdbcType="VARCHAR" property="zyItemId" />
+    <result column="FW_INFO_ID" jdbcType="VARCHAR" property="fwInfoId" />
+    <result column="CONFIG_TYPE" jdbcType="VARCHAR" property="configType" />
+    <result column="PARAM_VALID" jdbcType="VARCHAR" property="paramValid" />
+    <result column="FW_APPLY_ID" jdbcType="VARCHAR" property="fwApplyId" />
+    <result column="OP_TYPE" jdbcType="VARCHAR" property="opType" />
+    <result column="OP_VALUE" jdbcType="VARCHAR" property="opValue" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuRmgrInitConsumerViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuRmgrInitConsumerView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="USER_NUM" property="userNum" jdbcType="DECIMAL" />
+    <result column="GRANTEE" property="grantee" jdbcType="VARCHAR" />
+    <result column="GRANTED_GROUP" property="grantedGroup" jdbcType="VARCHAR" />
+    <result column="GRANT_OPTION" property="grantOption" jdbcType="DECIMAL" />
+    <result column="DEFSCHCLASS" property="defschclass" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

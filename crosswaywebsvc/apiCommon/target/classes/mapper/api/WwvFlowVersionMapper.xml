@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowVersionMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowVersion">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SEQ" jdbcType="DECIMAL" property="seq" />
+    <result column="DATE_APPLIED" jdbcType="DATE" property="dateApplied" />
+    <result column="MAJOR_VERSION" jdbcType="DECIMAL" property="majorVersion" />
+    <result column="MINOR_VERSION" jdbcType="DECIMAL" property="minorVersion" />
+    <result column="PATCH_VERSION" jdbcType="DECIMAL" property="patchVersion" />
+    <result column="BANNER" jdbcType="VARCHAR" property="banner" />
+    <result column="COMMENTS" jdbcType="VARCHAR" property="comments" />
+  </resultMap>
+</mapper>

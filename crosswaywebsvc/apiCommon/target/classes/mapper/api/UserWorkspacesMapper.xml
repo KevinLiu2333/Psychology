@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserWorkspacesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserWorkspaces" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="WORKSPACE_ID" property="workspaceId" jdbcType="DECIMAL" />
+    <result column="PARENT_WORKSPACE" property="parentWorkspace" jdbcType="VARCHAR" />
+    <result column="PARENT_SAVEPOINT" property="parentSavepoint" jdbcType="VARCHAR" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="CREATETIME" property="createtime" jdbcType="DATE" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="FREEZE_STATUS" property="freezeStatus" jdbcType="VARCHAR" />
+    <result column="FREEZE_MODE" property="freezeMode" jdbcType="VARCHAR" />
+    <result column="FREEZE_WRITER" property="freezeWriter" jdbcType="VARCHAR" />
+    <result column="FREEZE_OWNER" property="freezeOwner" jdbcType="VARCHAR" />
+    <result column="SESSION_DURATION" property="sessionDuration" jdbcType="VARCHAR" />
+    <result column="CURRENT_SESSION" property="currentSession" jdbcType="VARCHAR" />
+    <result column="RESOLVE_STATUS" property="resolveStatus" jdbcType="VARCHAR" />
+    <result column="RESOLVE_USER" property="resolveUser" jdbcType="VARCHAR" />
+    <result column="CONTINUALLY_REFRESHED" property="continuallyRefreshed" jdbcType="VARCHAR" />
+    <result column="WORKSPACE_LOCKMODE" property="workspaceLockmode" jdbcType="VARCHAR" />
+    <result column="WORKSPACE_LOCKMODE_OVERRIDE" property="workspaceLockmodeOverride" jdbcType="VARCHAR" />
+    <result column="MP_ROOT_WORKSPACE" property="mpRootWorkspace" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

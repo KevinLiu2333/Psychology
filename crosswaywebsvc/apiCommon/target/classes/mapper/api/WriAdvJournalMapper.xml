@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriAdvJournalMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriAdvJournal" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <id column="SEQ_ID" property="seqId" jdbcType="DECIMAL" />
+    <result column="EXEC_NAME" property="execName" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="DECIMAL" />
+    <result column="MSG_ID" property="msgId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

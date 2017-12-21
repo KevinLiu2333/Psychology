@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtProvisionHwSearchMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtProvisionHwSearch" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HOSTNAME" property="hostname" jdbcType="VARCHAR" />
+    <result column="NEW_HOSTNAME" property="newHostname" jdbcType="VARCHAR" />
+    <result column="PURPOSE" property="purpose" jdbcType="VARCHAR" />
+    <result column="SERIAL_NUMBER" property="serialNumber" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="COMPONENT_URN" property="componentUrn" jdbcType="VARCHAR" />
+    <result column="NETWORK_URN" property="networkUrn" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="SYSTEM_CONFIG" property="systemConfig" jdbcType="VARCHAR" />
+    <result column="MEM" property="mem" jdbcType="DECIMAL" />
+    <result column="FREQ" property="freq" jdbcType="DECIMAL" />
+    <result column="CPU_COUNT" property="cpuCount" jdbcType="DECIMAL" />
+    <result column="HW_GUID" property="hwGuid" jdbcType="VARBINARY" />
+    <result column="CURRENT_ASN_GUID" property="currentAsnGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

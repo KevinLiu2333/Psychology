@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CwmCubeMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CwmCube" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="IRID" property="irid" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="SHORTDESCRIPTION" property="shortdescription" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="CREATEDBY" property="createdby" jdbcType="VARCHAR" />
+    <result column="CREATEDON" property="createdon" jdbcType="DATE" />
+    <result column="LASTMODIFIEDBY" property="lastmodifiedby" jdbcType="VARCHAR" />
+    <result column="LASTMODIFIEDON" property="lastmodifiedon" jdbcType="DATE" />
+    <result column="DISPLAYNAME" property="displayname" jdbcType="VARCHAR" />
+    <result column="DATAMODEL_IRID" property="datamodelIrid" jdbcType="DECIMAL" />
+    <result column="PHYSICALNAME" property="physicalname" jdbcType="VARCHAR" />
+    <result column="ISDEPLOYABLE" property="isdeployable" jdbcType="VARCHAR" />
+    <result column="ISREADONLY" property="isreadonly" jdbcType="VARCHAR" />
+    <result column="FACTTABLEMAP_IRID" property="facttablemapIrid" jdbcType="DECIMAL" />
+    <result column="DATAMODEL_FK_SEQ" property="datamodelFkSeq" jdbcType="DECIMAL" />
+    <result column="DATE_CHANGED" property="dateChanged" jdbcType="DATE" />
+    <result column="DATE_CREATED" property="dateCreated" jdbcType="DATE" />
+    <result column="IVID" property="ivid" jdbcType="DECIMAL" />
+    <result column="NOTM" property="notm" jdbcType="DECIMAL" />
+    <result column="TYPES" property="types" jdbcType="DECIMAL" />
+    <result column="USER_CHANGED_BY" property="userChangedBy" jdbcType="VARCHAR" />
+    <result column="USER_CREATED_BY" property="userCreatedBy" jdbcType="VARCHAR" />
+    <result column="MVSUMMARYCODE" property="mvsummarycode" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

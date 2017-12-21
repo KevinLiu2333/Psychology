@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrrReplayUcGraphMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrrReplayUcGraph" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="TIME" property="time" jdbcType="DATE" />
+    <result column="USER_CALLS" property="userCalls" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

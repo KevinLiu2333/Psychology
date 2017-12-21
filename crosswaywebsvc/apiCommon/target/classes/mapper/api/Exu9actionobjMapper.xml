@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu9actionobjMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu9actionobj" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="OBJID" property="objid" jdbcType="DECIMAL" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="OWNERID" property="ownerid" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="TYPE#" property="type" jdbcType="DECIMAL" />
+    <result column="LEVEL#" property="level" jdbcType="DECIMAL" />
+    <result column="PACKAGE" property="package" jdbcType="VARCHAR" />
+    <result column="PKG_SCHEMA" property="pkgSchema" jdbcType="VARCHAR" />
+    <result column="NAMESPACE" property="namespace" jdbcType="DECIMAL" />
+    <result column="CLASS" property="class" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

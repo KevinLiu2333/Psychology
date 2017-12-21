@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvGcElementMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvGcElement" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="INDX" property="indx" jdbcType="DECIMAL" />
+    <result column="CLASS" property="class" jdbcType="DECIMAL" />
+    <result column="GC_ELEMENT_NAME" property="gcElementName" jdbcType="DECIMAL" />
+    <result column="MODE_HELD" property="modeHeld" jdbcType="DECIMAL" />
+    <result column="BLOCK_COUNT" property="blockCount" jdbcType="DECIMAL" />
+    <result column="RELEASING" property="releasing" jdbcType="DECIMAL" />
+    <result column="ACQUIRING" property="acquiring" jdbcType="DECIMAL" />
+    <result column="WRITING" property="writing" jdbcType="DECIMAL" />
+    <result column="RECOVERING" property="recovering" jdbcType="DECIMAL" />
+    <result column="LOCAL" property="local" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="GC_ELEMENT_ADDR" property="gcElementAddr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

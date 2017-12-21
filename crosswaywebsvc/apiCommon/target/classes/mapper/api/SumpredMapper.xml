@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SumpredMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Sumpred" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SUMOBJ#" property="sumobj" jdbcType="DECIMAL" />
+    <result column="NODEID" property="nodeid" jdbcType="DECIMAL" />
+    <result column="PNODEID" property="pnodeid" jdbcType="DECIMAL" />
+    <result column="CLAUSEID" property="clauseid" jdbcType="DECIMAL" />
+    <result column="NODETYPE" property="nodetype" jdbcType="DECIMAL" />
+    <result column="QBCID" property="qbcid" jdbcType="DECIMAL" />
+    <result column="NUMCHILD" property="numchild" jdbcType="DECIMAL" />
+    <result column="RELOP" property="relop" jdbcType="DECIMAL" />
+    <result column="LOPTYPE" property="loptype" jdbcType="DECIMAL" />
+    <result column="ROPTYPE" property="roptype" jdbcType="DECIMAL" />
+    <result column="LDOBJ#" property="ldobj" jdbcType="DECIMAL" />
+    <result column="RDOBJ#" property="rdobj" jdbcType="DECIMAL" />
+    <result column="LCOLID" property="lcolid" jdbcType="DECIMAL" />
+    <result column="RCOLID" property="rcolid" jdbcType="DECIMAL" />
+    <result column="LAGGTYPE" property="laggtype" jdbcType="DECIMAL" />
+    <result column="RAGGTYPE" property="raggtype" jdbcType="DECIMAL" />
+    <result column="LCANOTXT" property="lcanotxt" jdbcType="VARCHAR" />
+    <result column="RCANOTXT" property="rcanotxt" jdbcType="VARCHAR" />
+    <result column="LCANOTXTLEN" property="lcanotxtlen" jdbcType="DECIMAL" />
+    <result column="RCANOTXTLEN" property="rcanotxtlen" jdbcType="DECIMAL" />
+    <result column="LTXT" property="ltxt" jdbcType="VARCHAR" />
+    <result column="RTXT" property="rtxt" jdbcType="VARCHAR" />
+    <result column="LTXTLEN" property="ltxtlen" jdbcType="DECIMAL" />
+    <result column="RTXTLEN" property="rtxtlen" jdbcType="DECIMAL" />
+    <result column="VALUELEN" property="valuelen" jdbcType="DECIMAL" />
+    <result column="NUMVAL" property="numval" jdbcType="DECIMAL" />
+    <result column="COLPOS" property="colpos" jdbcType="DECIMAL" />
+    <result column="LFLAGS" property="lflags" jdbcType="DECIMAL" />
+    <result column="RFLAGS" property="rflags" jdbcType="DECIMAL" />
+    <result column="LINLINE#" property="linline" jdbcType="DECIMAL" />
+    <result column="RINLINE#" property="rinline" jdbcType="DECIMAL" />
+    <result column="LINSTANCE#" property="linstance" jdbcType="DECIMAL" />
+    <result column="RINSTANCE#" property="rinstance" jdbcType="DECIMAL" />
+    <result column="VALUE" property="value" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

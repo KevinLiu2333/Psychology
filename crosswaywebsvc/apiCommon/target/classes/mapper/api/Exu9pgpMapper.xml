@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu9pgpMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu9pgp" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="POLGRP" property="polgrp" jdbcType="VARCHAR" />
+    <result column="OBJOWN" property="objown" jdbcType="VARCHAR" />
+    <result column="OBJNAM" property="objnam" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

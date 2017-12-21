@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtProvisionStatusOpMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtProvisionStatusOp" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PROV_TARGET_TYPE" property="provTargetType" jdbcType="VARCHAR" />
+    <result column="LAST_MODIFIED_TIME" property="lastModifiedTime" jdbcType="OTHER" />
+    <result column="OP_TYPE" property="opType" jdbcType="VARCHAR" />
+    <result column="JOB_ID" property="jobId" jdbcType="VARCHAR" />
+    <result column="STATUS_MSG" property="statusMsg" jdbcType="VARCHAR" />
+    <result column="FRACTION_COMPLETE" property="fractionComplete" jdbcType="FLOAT" />
+    <result column="CREATION_TIME" property="creationTime" jdbcType="OTHER" />
+    <result column="PROV_TGT_GUID" property="provTgtGuid" jdbcType="VARBINARY" />
+    <result column="ASSIGNMENT_GUID" property="assignmentGuid" jdbcType="VARBINARY" />
+    <result column="OP_GUID" property="opGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrActivelogsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrActivelogs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ALOGS_SID" property="alogsSid" jdbcType="DECIMAL" />
+    <result column="ALOGS_SNO" property="alogsSno" jdbcType="DECIMAL" />
+    <result column="ALOGS_FILENAME" property="alogsFilename" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

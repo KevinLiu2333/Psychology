@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaPendingTransactionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaPendingTransactions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FORMATID" property="formatid" jdbcType="DECIMAL" />
+    <result column="GLOBALID" property="globalid" jdbcType="VARBINARY" />
+    <result column="BRANCHID" property="branchid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

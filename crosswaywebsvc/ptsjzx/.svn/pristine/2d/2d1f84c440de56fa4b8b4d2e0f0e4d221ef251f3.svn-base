@@ -1,0 +1,49 @@
+package com.wonders.ws;
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import net.sf.json.JSONObject;
+import net.sf.json.xml.XMLSerializer;
+
+import com.wonders.api.entity.ApiLogWebService;
+import com.wonders.api.entity.ApiServiceUser;
+
+public class WsUitl {
+	public static ApiLogWebService createlog(ApiServiceUser serviceUser, int result) {
+		ApiLogWebService log = new ApiLogWebService();
+		log.setCallDate(new Date());
+		log.setCallResult(result);
+		log.setCallServiceId(serviceUser.getServiceId());
+		log.setDeptId(serviceUser.getDeptId());
+		log.setKey(serviceUser.getKey());
+		log.setUserId(serviceUser.getUserId());
+		log.setUserLoginname(serviceUser.getUserDispalyname());
+		log.setCallServiceName(serviceUser.getServiceName());
+		return log;
+	}
+
+	@SuppressWarnings("rawtypes")
+	public static String ListResult(List list, String returntype) {
+		if (list == null) {
+			return getResult(null, returntype);
+		}
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("data", list);
+		return getResult(map, returntype);
+	}
+
+	public static String getResult(Object object, String returntype) {
+		if (object == null) {
+			object = "{ errorMsg:\"结果为空！\" }";
+		}
+		JSONObject json = JSONObject.fromObject(object);
+		if (returntype.equals("xml")) {
+			return new XMLSerializer().write(json);
+		} else {
+			return json.toString();
+		}
+	}
+}

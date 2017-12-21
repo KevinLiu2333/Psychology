@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigAccTablesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigAccTables" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="PROJECT_ID" property="projectId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="TBLID" property="tblid" jdbcType="DECIMAL" />
+    <result column="TBLNAME" property="tblname" jdbcType="VARCHAR" />
+    <result column="PRIMARYKEY" property="primarykey" jdbcType="DECIMAL" />
+    <result column="CNVTABLESTRUCT" property="cnvtablestruct" jdbcType="DECIMAL" />
+    <result column="CNVMOVEDATA" property="cnvmovedata" jdbcType="DECIMAL" />
+    <result column="CNVRI" property="cnvri" jdbcType="DECIMAL" />
+    <result column="CNVVALIDATION" property="cnvvalidation" jdbcType="DECIMAL" />
+    <result column="CNVDEFAULT" property="cnvdefault" jdbcType="DECIMAL" />
+    <result column="CNVADDTIMESTAMP" property="cnvaddtimestamp" jdbcType="DECIMAL" />
+    <result column="ATTACHTABLEBACKTOACCESS" property="attachtablebacktoaccess" jdbcType="DECIMAL" />
+    <result column="SAVEPASSWORD" property="savepassword" jdbcType="DECIMAL" />
+    <result column="CNVMAKEUPDATEABLE" property="cnvmakeupdateable" jdbcType="DECIMAL" />
+    <result column="RETAINLOCALCOPY" property="retainlocalcopy" jdbcType="DECIMAL" />
+    <result column="SYNCWITHSERVER" property="syncwithserver" jdbcType="DECIMAL" />
+    <result column="OWNERID" property="ownerid" jdbcType="DECIMAL" />
+    <result column="VALIDATIONTEXT" property="validationtext" jdbcType="VARCHAR" />
+    <result column="VALIDATIONRULE" property="validationrule" jdbcType="VARCHAR" />
+    <result column="NUMBEROFROWS" property="numberofrows" jdbcType="DECIMAL" />
+    <result column="CACHINGTABLE" property="cachingtable" jdbcType="DECIMAL" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTES" property="attributes" jdbcType="DECIMAL" />
+    <result column="CONFLICTTABLE" property="conflicttable" jdbcType="DECIMAL" />
+    <result column="DATECREATED" property="datecreated" jdbcType="DATE" />
+    <result column="LASTUPDATED" property="lastupdated" jdbcType="DATE" />
+    <result column="RECORDCOUNT" property="recordcount" jdbcType="DECIMAL" />
+    <result column="ORDERBYON" property="orderbyon" jdbcType="DECIMAL" />
+    <result column="REPLICAFILTER" property="replicafilter" jdbcType="DECIMAL" />
+    <result column="SOURCETABLENAME" property="sourcetablename" jdbcType="VARCHAR" />
+    <result column="UPDATABLE" property="updatable" jdbcType="DECIMAL" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllApplyEnqueueMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllApplyEnqueue" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RULE_OWNER" property="ruleOwner" jdbcType="VARCHAR" />
+    <result column="RULE_NAME" property="ruleName" jdbcType="VARCHAR" />
+    <result column="DESTINATION_QUEUE_NAME" property="destinationQueueName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoAnnotationTextMetadataMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoAnnotationTextMetadata" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="F_TABLE_SCHEMA" property="fTableSchema" jdbcType="VARCHAR" />
+    <id column="F_TABLE_NAME" property="fTableName" jdbcType="VARCHAR" />
+    <id column="F_TEXT_COLUMN" property="fTextColumn" jdbcType="VARCHAR" />
+    <result column="F_TABLE_CATALOG" property="fTableCatalog" jdbcType="VARCHAR" />
+    <result column="MAP_BASE_SCALE" property="mapBaseScale" jdbcType="DECIMAL" />
+    <result column="TEXT_DEFAULT_EXPRESSION" property="textDefaultExpression" jdbcType="VARCHAR" />
+    <result column="TEXT_DEFAULT_ATTRIBUTES" property="textDefaultAttributes" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaStreamsColumnsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaStreamsColumns" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="SYNC_CAPTURE_VERSION" property="syncCaptureVersion" jdbcType="DECIMAL" />
+    <result column="SYNC_CAPTURE_REASON" property="syncCaptureReason" jdbcType="VARCHAR" />
+    <result column="APPLY_VERSION" property="applyVersion" jdbcType="DECIMAL" />
+    <result column="APPLY_REASON" property="applyReason" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

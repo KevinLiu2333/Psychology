@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaSchedulerRunningJobsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaSchedulerRunningJobs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="JOB_NAME" property="jobName" jdbcType="VARCHAR" />
+    <result column="JOB_SUBNAME" property="jobSubname" jdbcType="VARCHAR" />
+    <result column="JOB_STYLE" property="jobStyle" jdbcType="VARCHAR" />
+    <result column="DETACHED" property="detached" jdbcType="VARCHAR" />
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="SLAVE_PROCESS_ID" property="slaveProcessId" jdbcType="DECIMAL" />
+    <result column="SLAVE_OS_PROCESS_ID" property="slaveOsProcessId" jdbcType="VARCHAR" />
+    <result column="RUNNING_INSTANCE" property="runningInstance" jdbcType="DECIMAL" />
+    <result column="RESOURCE_CONSUMER_GROUP" property="resourceConsumerGroup" jdbcType="VARCHAR" />
+    <result column="ELAPSED_TIME" property="elapsedTime" jdbcType="OTHER" />
+    <result column="CPU_USED" property="cpuUsed" jdbcType="OTHER" />
+    <result column="DESTINATION_OWNER" property="destinationOwner" jdbcType="VARCHAR" />
+    <result column="DESTINATION" property="destination" jdbcType="VARCHAR" />
+    <result column="CREDENTIAL_OWNER" property="credentialOwner" jdbcType="VARCHAR" />
+    <result column="CREDENTIAL_NAME" property="credentialName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

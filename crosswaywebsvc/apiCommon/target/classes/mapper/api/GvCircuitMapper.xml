@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvCircuitMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvCircuit" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="QUEUE" property="queue" jdbcType="VARCHAR" />
+    <result column="MESSAGE0" property="message0" jdbcType="DECIMAL" />
+    <result column="MESSAGE1" property="message1" jdbcType="DECIMAL" />
+    <result column="MESSAGE2" property="message2" jdbcType="DECIMAL" />
+    <result column="MESSAGE3" property="message3" jdbcType="DECIMAL" />
+    <result column="MESSAGES" property="messages" jdbcType="DECIMAL" />
+    <result column="BYTES" property="bytes" jdbcType="DECIMAL" />
+    <result column="BREAKS" property="breaks" jdbcType="DECIMAL" />
+    <result column="PRESENTATION" property="presentation" jdbcType="VARCHAR" />
+    <result column="CIRCUIT" property="circuit" jdbcType="VARBINARY" />
+    <result column="DISPATCHER" property="dispatcher" jdbcType="VARBINARY" />
+    <result column="SERVER" property="server" jdbcType="VARBINARY" />
+    <result column="WAITER" property="waiter" jdbcType="VARBINARY" />
+    <result column="SADDR" property="saddr" jdbcType="VARBINARY" />
+    <result column="PCIRCUIT" property="pcircuit" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

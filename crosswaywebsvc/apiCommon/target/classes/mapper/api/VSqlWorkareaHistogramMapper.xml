@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VSqlWorkareaHistogramMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VSqlWorkareaHistogram" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOW_OPTIMAL_SIZE" property="lowOptimalSize" jdbcType="DECIMAL" />
+    <result column="HIGH_OPTIMAL_SIZE" property="highOptimalSize" jdbcType="DECIMAL" />
+    <result column="OPTIMAL_EXECUTIONS" property="optimalExecutions" jdbcType="DECIMAL" />
+    <result column="ONEPASS_EXECUTIONS" property="onepassExecutions" jdbcType="DECIMAL" />
+    <result column="MULTIPASSES_EXECUTIONS" property="multipassesExecutions" jdbcType="DECIMAL" />
+    <result column="TOTAL_EXECUTIONS" property="totalExecutions" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

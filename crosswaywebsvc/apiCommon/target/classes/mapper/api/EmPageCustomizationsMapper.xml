@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.EmPageCustomizationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.EmPageCustomizations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="PAGE_NAME" property="pageName" jdbcType="VARCHAR" />
+    <id column="CUST_NAME" property="custName" jdbcType="VARCHAR" />
+    <id column="CONDITION_SET_ID" property="conditionSetId" jdbcType="VARBINARY" />
+    <result column="CUST_VALUE" property="custValue" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

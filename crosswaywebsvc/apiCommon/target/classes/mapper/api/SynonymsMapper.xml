@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SynonymsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Synonyms" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAME" property="sname" jdbcType="VARCHAR" />
+    <result column="SYNTYPE" property="syntype" jdbcType="VARCHAR" />
+    <result column="CREATOR" property="creator" jdbcType="VARCHAR" />
+    <result column="TNAME" property="tname" jdbcType="VARCHAR" />
+    <result column="DATABASE" property="database" jdbcType="VARCHAR" />
+    <result column="TABTYPE" property="tabtype" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

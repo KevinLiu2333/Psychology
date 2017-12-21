@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SuiteMsgMailConfigMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SuiteMsgMailConfig">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="MAIL_ID" jdbcType="OTHER" property="mailId" />
+    <result column="MAIL_NAME" jdbcType="OTHER" property="mailName" />
+    <result column="HOST_ADD" jdbcType="OTHER" property="hostAdd" />
+    <result column="PORT_ADD" jdbcType="OTHER" property="portAdd" />
+    <result column="USER_NAME" jdbcType="OTHER" property="userName" />
+    <result column="PASSWORD" jdbcType="OTHER" property="password" />
+    <result column="SEND_NAME" jdbcType="OTHER" property="sendName" />
+    <result column="CREATE_TIME" jdbcType="DATE" property="createTime" />
+    <result column="FLAG" jdbcType="DECIMAL" property="flag" />
+  </resultMap>
+</mapper>

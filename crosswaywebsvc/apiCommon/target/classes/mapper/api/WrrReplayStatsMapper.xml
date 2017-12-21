@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrrReplayStatsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrrReplayStats" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="STARTUP_TIME" property="startupTime" jdbcType="DATE" />
+    <result column="HOST_NAME" property="hostName" jdbcType="VARCHAR" />
+    <result column="PARALLEL" property="parallel" jdbcType="VARCHAR" />
+    <result column="USER_CALLS" property="userCalls" jdbcType="DECIMAL" />
+    <result column="DBTIME" property="dbtime" jdbcType="DECIMAL" />
+    <result column="NETWORK_TIME" property="networkTime" jdbcType="DECIMAL" />
+    <result column="THINK_TIME" property="thinkTime" jdbcType="DECIMAL" />
+    <result column="TIME_GAIN" property="timeGain" jdbcType="DECIMAL" />
+    <result column="TIME_LOSS" property="timeLoss" jdbcType="DECIMAL" />
+    <result column="TIME_PAUSED" property="timePaused" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

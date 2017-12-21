@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaHistEventHistogramMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaHistEventHistogram" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="EVENT_ID" property="eventId" jdbcType="DECIMAL" />
+    <result column="EVENT_NAME" property="eventName" jdbcType="VARCHAR" />
+    <result column="WAIT_CLASS_ID" property="waitClassId" jdbcType="DECIMAL" />
+    <result column="WAIT_CLASS" property="waitClass" jdbcType="VARCHAR" />
+    <result column="WAIT_TIME_MILLI" property="waitTimeMilli" jdbcType="DECIMAL" />
+    <result column="WAIT_COUNT" property="waitCount" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

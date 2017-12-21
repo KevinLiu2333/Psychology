@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllAwLoadCubeAggMeasuresMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllAwLoadCubeAggMeasures" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CUBE_OWNER" property="cubeOwner" jdbcType="VARCHAR" />
+    <result column="CUBE_NAME" property="cubeName" jdbcType="VARCHAR" />
+    <result column="LOAD_NAME" property="loadName" jdbcType="VARCHAR" />
+    <result column="AGGREGATION_NAME" property="aggregationName" jdbcType="VARCHAR" />
+    <result column="MEASURE_NAME" property="measureName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

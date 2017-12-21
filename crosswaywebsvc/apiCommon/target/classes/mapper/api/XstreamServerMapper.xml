@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.XstreamServerMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.XstreamServer" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SERVER_NAME" property="serverName" jdbcType="VARCHAR" />
+    <result column="APP_SRC_DATABASE" property="appSrcDatabase" jdbcType="VARCHAR" />
+    <result column="CAPTURE_NAME" property="captureName" jdbcType="VARCHAR" />
+    <result column="CAP_SRC_DATABASE" property="capSrcDatabase" jdbcType="VARCHAR" />
+    <result column="QUEUE_OWNER" property="queueOwner" jdbcType="VARCHAR" />
+    <result column="QUEUE_NAME" property="queueName" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="USER_COMMENT" property="userComment" jdbcType="VARCHAR" />
+    <result column="CREATE_DATE" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+    <result column="SPARE4" property="spare4" jdbcType="TIMESTAMP" />
+    <result column="SPARE5" property="spare5" jdbcType="VARCHAR" />
+    <result column="SPARE6" property="spare6" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.HsFdsInstMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.HsFdsInst">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FDS_INST_NAME" jdbcType="VARCHAR" property="fdsInstName" />
+    <result column="FDS_INST_COMMENTS" jdbcType="VARCHAR" property="fdsInstComments" />
+    <result column="FDS_CLASS_NAME" jdbcType="VARCHAR" property="fdsClassName" />
+    <result column="FDS_INST_ID" jdbcType="DECIMAL" property="fdsInstId" />
+    <result column="FDS_CLASS_ID" jdbcType="DECIMAL" property="fdsClassId" />
+  </resultMap>
+</mapper>

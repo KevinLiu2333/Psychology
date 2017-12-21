@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WmRicTableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WmRicTable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="CT_OWNER" property="ctOwner" jdbcType="VARCHAR" />
+    <id column="RIC_NAME" property="ricName" jdbcType="VARCHAR" />
+    <result column="CT_NAME" property="ctName" jdbcType="VARCHAR" />
+    <result column="PT_OWNER" property="ptOwner" jdbcType="VARCHAR" />
+    <result column="PT_NAME" property="ptName" jdbcType="VARCHAR" />
+    <result column="CT_COLS" property="ctCols" jdbcType="VARCHAR" />
+    <result column="PT_COLS" property="ptCols" jdbcType="VARCHAR" />
+    <result column="PT_UNIQUE_CONST_NAME" property="ptUniqueConstName" jdbcType="VARCHAR" />
+    <result column="MY_MODE" property="myMode" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

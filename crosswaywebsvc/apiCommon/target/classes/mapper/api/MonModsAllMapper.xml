@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MonModsAllMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MonModsAll" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="INSERTS" property="inserts" jdbcType="DECIMAL" />
+    <result column="UPDATES" property="updates" jdbcType="DECIMAL" />
+    <result column="DELETES" property="deletes" jdbcType="DECIMAL" />
+    <result column="TIMESTAMP" property="timestamp" jdbcType="DATE" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="DROP_SEGMENTS" property="dropSegments" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

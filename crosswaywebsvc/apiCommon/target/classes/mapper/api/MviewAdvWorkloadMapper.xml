@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MviewAdvWorkloadMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MviewAdvWorkload" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="QUERYID#" property="queryid" jdbcType="DECIMAL" />
+    <result column="COLLECTIONID#" property="collectionid" jdbcType="DECIMAL" />
+    <result column="COLLECTTIME" property="collecttime" jdbcType="DATE" />
+    <result column="APPLICATION" property="application" jdbcType="VARCHAR" />
+    <result column="CARDINALITY" property="cardinality" jdbcType="DECIMAL" />
+    <result column="RESULTSIZE" property="resultsize" jdbcType="DECIMAL" />
+    <result column="UNAME" property="uname" jdbcType="VARCHAR" />
+    <result column="QDATE" property="qdate" jdbcType="DATE" />
+    <result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+    <result column="EXEC_TIME" property="execTime" jdbcType="DECIMAL" />
+    <result column="SQL_TEXTLEN" property="sqlTextlen" jdbcType="DECIMAL" />
+    <result column="SQL_HASH" property="sqlHash" jdbcType="DECIMAL" />
+    <result column="FREQUENCY" property="frequency" jdbcType="DECIMAL" />
+    <result column="SQL_TEXT" property="sqlText" jdbcType="LONGVARCHAR" />
+    <result column="SQL_ADDR" property="sqlAddr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

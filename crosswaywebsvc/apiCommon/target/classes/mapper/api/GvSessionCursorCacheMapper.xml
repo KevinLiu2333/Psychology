@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvSessionCursorCacheMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvSessionCursorCache" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="MAXIMUM" property="maximum" jdbcType="DECIMAL" />
+    <result column="COUNT" property="count" jdbcType="DECIMAL" />
+    <result column="OPENS" property="opens" jdbcType="DECIMAL" />
+    <result column="HITS" property="hits" jdbcType="DECIMAL" />
+    <result column="HIT_RATIO" property="hitRatio" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

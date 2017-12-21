@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowTreesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowTrees" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="TREE_NAME" property="treeName" jdbcType="VARCHAR" />
+    <result column="TREE_TYPE" property="treeType" jdbcType="VARCHAR" />
+    <result column="TREE_QUERY" property="treeQuery" jdbcType="VARCHAR" />
+    <result column="FLOW_ITEM" property="flowItem" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="MAX_LEVELS" property="maxLevels" jdbcType="DECIMAL" />
+    <result column="UNEXPANDED_PARENT" property="unexpandedParent" jdbcType="VARCHAR" />
+    <result column="UNEXPANDED_PARENT_LAST" property="unexpandedParentLast" jdbcType="VARCHAR" />
+    <result column="EXPANDED_PARENT" property="expandedParent" jdbcType="VARCHAR" />
+    <result column="EXPANDED_PARENT_LAST" property="expandedParentLast" jdbcType="VARCHAR" />
+    <result column="LEAF_NODE" property="leafNode" jdbcType="VARCHAR" />
+    <result column="LEAF_NODE_LAST" property="leafNodeLast" jdbcType="VARCHAR" />
+    <result column="DRILL_UP" property="drillUp" jdbcType="VARCHAR" />
+    <result column="NAME_LINK_ANCHOR_TAG" property="nameLinkAnchorTag" jdbcType="VARCHAR" />
+    <result column="NAME_LINK_NOT_ANCHOR_TAG" property="nameLinkNotAnchorTag" jdbcType="VARCHAR" />
+    <result column="INDENT_VERTICAL_LINE" property="indentVerticalLine" jdbcType="VARCHAR" />
+    <result column="INDENT_VERTICAL_LINE_LAST" property="indentVerticalLineLast" jdbcType="VARCHAR" />
+    <result column="BEFORE_TREE" property="beforeTree" jdbcType="VARCHAR" />
+    <result column="AFTER_TREE" property="afterTree" jdbcType="VARCHAR" />
+    <result column="LEVEL_1_TEMPLATE" property="level1Template" jdbcType="VARCHAR" />
+    <result column="LEVEL_2_TEMPLATE" property="level2Template" jdbcType="VARCHAR" />
+    <result column="LEVEL_3_TEMPLATE" property="level3Template" jdbcType="VARCHAR" />
+    <result column="LEVEL_4_TEMPLATE" property="level4Template" jdbcType="VARCHAR" />
+    <result column="LEVEL_5_TEMPLATE" property="level5Template" jdbcType="VARCHAR" />
+    <result column="LEVEL_6_TEMPLATE" property="level6Template" jdbcType="VARCHAR" />
+    <result column="LEVEL_7_TEMPLATE" property="level7Template" jdbcType="VARCHAR" />
+    <result column="LEVEL_8_TEMPLATE" property="level8Template" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="TREE_COMMENT" property="treeComment" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

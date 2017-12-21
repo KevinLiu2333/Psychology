@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvFilemetricMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvFilemetric" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="BEGIN_TIME" property="beginTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="INTSIZE_CSEC" property="intsizeCsec" jdbcType="DECIMAL" />
+    <result column="FILE_ID" property="fileId" jdbcType="DECIMAL" />
+    <result column="CREATION_TIME" property="creationTime" jdbcType="DECIMAL" />
+    <result column="AVERAGE_READ_TIME" property="averageReadTime" jdbcType="DECIMAL" />
+    <result column="AVERAGE_WRITE_TIME" property="averageWriteTime" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_READS" property="physicalReads" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_WRITES" property="physicalWrites" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_BLOCK_READS" property="physicalBlockReads" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_BLOCK_WRITES" property="physicalBlockWrites" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

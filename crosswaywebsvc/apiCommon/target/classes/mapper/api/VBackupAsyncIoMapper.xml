@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VBackupAsyncIoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VBackupAsyncIo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="SERIAL" property="serial" jdbcType="DECIMAL" />
+    <result column="USE_COUNT" property="useCount" jdbcType="DECIMAL" />
+    <result column="RMAN_STATUS_RECID" property="rmanStatusRecid" jdbcType="DECIMAL" />
+    <result column="RMAN_STATUS_STAMP" property="rmanStatusStamp" jdbcType="DECIMAL" />
+    <result column="DEVICE_TYPE" property="deviceType" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="FILENAME" property="filename" jdbcType="VARCHAR" />
+    <result column="SET_COUNT" property="setCount" jdbcType="DECIMAL" />
+    <result column="SET_STAMP" property="setStamp" jdbcType="DECIMAL" />
+    <result column="BUFFER_SIZE" property="bufferSize" jdbcType="DECIMAL" />
+    <result column="BUFFER_COUNT" property="bufferCount" jdbcType="DECIMAL" />
+    <result column="TOTAL_BYTES" property="totalBytes" jdbcType="DECIMAL" />
+    <result column="OPEN_TIME" property="openTime" jdbcType="DATE" />
+    <result column="CLOSE_TIME" property="closeTime" jdbcType="DATE" />
+    <result column="ELAPSED_TIME" property="elapsedTime" jdbcType="DECIMAL" />
+    <result column="MAXOPENFILES" property="maxopenfiles" jdbcType="DECIMAL" />
+    <result column="BYTES" property="bytes" jdbcType="DECIMAL" />
+    <result column="EFFECTIVE_BYTES_PER_SECOND" property="effectiveBytesPerSecond" jdbcType="DECIMAL" />
+    <result column="IO_COUNT" property="ioCount" jdbcType="DECIMAL" />
+    <result column="READY" property="ready" jdbcType="DECIMAL" />
+    <result column="SHORT_WAITS" property="shortWaits" jdbcType="DECIMAL" />
+    <result column="SHORT_WAIT_TIME_TOTAL" property="shortWaitTimeTotal" jdbcType="DECIMAL" />
+    <result column="SHORT_WAIT_TIME_MAX" property="shortWaitTimeMax" jdbcType="DECIMAL" />
+    <result column="LONG_WAITS" property="longWaits" jdbcType="DECIMAL" />
+    <result column="LONG_WAIT_TIME_TOTAL" property="longWaitTimeTotal" jdbcType="DECIMAL" />
+    <result column="LONG_WAIT_TIME_MAX" property="longWaitTimeMax" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.XdbRootInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.XdbRootInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RESOURCE_ROOT" property="resourceRoot" jdbcType="OTHER" />
+    <result column="FTP_PORT" property="ftpPort" jdbcType="DECIMAL" />
+    <result column="FTP_PROTOCOL" property="ftpProtocol" jdbcType="VARCHAR" />
+    <result column="HTTP_PORT" property="httpPort" jdbcType="DECIMAL" />
+    <result column="HTTP_PROTOCOL" property="httpProtocol" jdbcType="VARCHAR" />
+    <result column="HTTP_HOST" property="httpHost" jdbcType="VARCHAR" />
+    <result column="HTTP2_PORT" property="http2Port" jdbcType="DECIMAL" />
+    <result column="HTTP2_PROTOCOL" property="http2Protocol" jdbcType="VARCHAR" />
+    <result column="HTTP2_HOST" property="http2Host" jdbcType="VARCHAR" />
+    <result column="NFS_PORT" property="nfsPort" jdbcType="DECIMAL" />
+    <result column="NFS_PROTOCOL" property="nfsProtocol" jdbcType="VARCHAR" />
+    <result column="RCLIST" property="rclist" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

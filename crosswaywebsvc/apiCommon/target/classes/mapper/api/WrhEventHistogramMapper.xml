@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhEventHistogramMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhEventHistogram" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="EVENT_ID" property="eventId" jdbcType="DECIMAL" />
+    <id column="WAIT_TIME_MILLI" property="waitTimeMilli" jdbcType="DECIMAL" />
+    <result column="WAIT_COUNT" property="waitCount" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

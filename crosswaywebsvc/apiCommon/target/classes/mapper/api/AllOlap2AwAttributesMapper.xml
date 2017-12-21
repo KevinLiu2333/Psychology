@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllOlap2AwAttributesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllOlap2AwAttributes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="AW_OWNER" property="awOwner" jdbcType="VARCHAR" />
+    <result column="AW_NAME" property="awName" jdbcType="VARCHAR" />
+    <result column="AW_DIMENSION_NAME" property="awDimensionName" jdbcType="VARCHAR" />
+    <result column="AW_LOGICAL_NAME" property="awLogicalName" jdbcType="VARCHAR" />
+    <result column="AW_PHYSICAL_OBJECT" property="awPhysicalObject" jdbcType="VARCHAR" />
+    <result column="DISPLAY_NAME" property="displayName" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_TYPE" property="attributeType" jdbcType="VARCHAR" />
+    <result column="SOURCE_OWNER" property="sourceOwner" jdbcType="VARCHAR" />
+    <result column="SOURCE_DIMENSION_NAME" property="sourceDimensionName" jdbcType="VARCHAR" />
+    <result column="SOURCE_NAME" property="sourceName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

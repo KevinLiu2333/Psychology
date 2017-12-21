@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCsParameterMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCsParameter" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="PARAM_GUID" property="paramGuid" jdbcType="VARBINARY" />
+    <result column="PARAM_INAME" property="paramIname" jdbcType="VARCHAR" />
+    <result column="PARAM_TYPE" property="paramType" jdbcType="DECIMAL" />
+    <result column="PARAM_VALUE" property="paramValue" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="PROHIBIT_CHANGES" property="prohibitChanges" jdbcType="DECIMAL" />
+    <result column="NUM_CHOICES" property="numChoices" jdbcType="DECIMAL" />
+    <result column="MUST_MATCH" property="mustMatch" jdbcType="DECIMAL" />
+    <result column="LOWER_BOUND" property="lowerBound" jdbcType="DECIMAL" />
+    <result column="UPPER_BOUND" property="upperBound" jdbcType="DECIMAL" />
+    <result column="CS_GUID" property="csGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

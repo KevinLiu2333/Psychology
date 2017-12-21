@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VSqlWorkareaMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VSqlWorkarea" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HASH_VALUE" property="hashValue" jdbcType="DECIMAL" />
+    <result column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="CHILD_NUMBER" property="childNumber" jdbcType="DECIMAL" />
+    <result column="OPERATION_TYPE" property="operationType" jdbcType="VARCHAR" />
+    <result column="OPERATION_ID" property="operationId" jdbcType="DECIMAL" />
+    <result column="POLICY" property="policy" jdbcType="VARCHAR" />
+    <result column="ESTIMATED_OPTIMAL_SIZE" property="estimatedOptimalSize" jdbcType="DECIMAL" />
+    <result column="ESTIMATED_ONEPASS_SIZE" property="estimatedOnepassSize" jdbcType="DECIMAL" />
+    <result column="LAST_MEMORY_USED" property="lastMemoryUsed" jdbcType="DECIMAL" />
+    <result column="LAST_EXECUTION" property="lastExecution" jdbcType="VARCHAR" />
+    <result column="LAST_DEGREE" property="lastDegree" jdbcType="DECIMAL" />
+    <result column="TOTAL_EXECUTIONS" property="totalExecutions" jdbcType="DECIMAL" />
+    <result column="OPTIMAL_EXECUTIONS" property="optimalExecutions" jdbcType="DECIMAL" />
+    <result column="ONEPASS_EXECUTIONS" property="onepassExecutions" jdbcType="DECIMAL" />
+    <result column="MULTIPASSES_EXECUTIONS" property="multipassesExecutions" jdbcType="DECIMAL" />
+    <result column="ACTIVE_TIME" property="activeTime" jdbcType="DECIMAL" />
+    <result column="MAX_TEMPSEG_SIZE" property="maxTempsegSize" jdbcType="DECIMAL" />
+    <result column="LAST_TEMPSEG_SIZE" property="lastTempsegSize" jdbcType="DECIMAL" />
+    <result column="ADDRESS" property="address" jdbcType="VARBINARY" />
+    <result column="WORKAREA_ADDRESS" property="workareaAddress" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

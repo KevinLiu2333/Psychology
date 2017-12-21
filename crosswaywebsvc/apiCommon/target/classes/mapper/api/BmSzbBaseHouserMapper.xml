@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.BmSzbBaseHouserMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.BmSzbBaseHouser" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HOUSE_ID" property="houseId" jdbcType="VARCHAR" />
+    <result column="MENPAI_NO" property="menpaiNo" jdbcType="DECIMAL" />
+    <result column="SHI_NO" property="shiNo" jdbcType="VARCHAR" />
+    <result column="HOUSE_ADDRESS" property="houseAddress" jdbcType="VARCHAR" />
+    <result column="HOUSE_STRUCTURE" property="houseStructure" jdbcType="VARCHAR" />
+    <result column="HOUSE_AREA" property="houseArea" jdbcType="DECIMAL" />
+    <result column="QU_CODE" property="quCode" jdbcType="VARCHAR" />
+    <result column="ZHEN_CODE" property="zhenCode" jdbcType="VARCHAR" />
+    <result column="CUNJU_CODE" property="cunjuCode" jdbcType="VARCHAR" />
+    <result column="CREATE_DATE" property="createDate" jdbcType="DATE" />
+    <result column="MODIFY_DATE" property="modifyDate" jdbcType="DATE" />
+    <result column="VALIDITY" property="validity" jdbcType="VARCHAR" />
+    <result column="HOUSE_NAME" property="houseName" jdbcType="VARCHAR" />
+    <result column="ZHUANG_NO" property="zhuangNo" jdbcType="VARCHAR" />
+    <result column="HOUSE_ESTATE" property="houseEstate" jdbcType="VARCHAR" />
+    <result column="ROOM_NO" property="roomNo" jdbcType="VARCHAR" />
+    <result column="XZQH_CODE" property="xzqhCode" jdbcType="VARCHAR" />
+    <result column="HOUSE_JG" property="houseJg" jdbcType="VARCHAR" />
+    <result column="BUILD_AREA" property="buildArea" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

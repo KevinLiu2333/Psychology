@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllOlapLevelKeyColumnUsesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllOlapLevelKeyColumnUses" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="DIMENSION_NAME" property="dimensionName" jdbcType="VARCHAR" />
+    <result column="LEVEL_NAME" property="levelName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="POSITION" property="position" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

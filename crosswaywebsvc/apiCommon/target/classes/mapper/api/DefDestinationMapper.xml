@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DefDestinationMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DefDestination" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBLINK" property="dblink" jdbcType="VARCHAR" />
+    <id column="CATCHUP" property="catchup" jdbcType="VARBINARY" />
+    <result column="LAST_DELIVERED" property="lastDelivered" jdbcType="DECIMAL" />
+    <result column="LAST_ENQ_TID" property="lastEnqTid" jdbcType="VARCHAR" />
+    <result column="LAST_SEQ" property="lastSeq" jdbcType="DECIMAL" />
+    <result column="DISABLED" property="disabled" jdbcType="CHAR" />
+    <result column="JOB" property="job" jdbcType="DECIMAL" />
+    <result column="LAST_TXN_COUNT" property="lastTxnCount" jdbcType="DECIMAL" />
+    <result column="LAST_ERROR_NUMBER" property="lastErrorNumber" jdbcType="DECIMAL" />
+    <result column="LAST_ERROR_MESSAGE" property="lastErrorMessage" jdbcType="VARCHAR" />
+    <result column="APPLY_INIT" property="applyInit" jdbcType="VARCHAR" />
+    <result column="ALTERNATE" property="alternate" jdbcType="CHAR" />
+    <result column="TOTAL_TXN_COUNT" property="totalTxnCount" jdbcType="DECIMAL" />
+    <result column="TOTAL_PROP_TIME_THROUGHPUT" property="totalPropTimeThroughput" jdbcType="DECIMAL" />
+    <result column="TOTAL_PROP_TIME_LATENCY" property="totalPropTimeLatency" jdbcType="DECIMAL" />
+    <result column="TO_COMMUNICATION_SIZE" property="toCommunicationSize" jdbcType="DECIMAL" />
+    <result column="FROM_COMMUNICATION_SIZE" property="fromCommunicationSize" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+    <result column="SPARE4" property="spare4" jdbcType="DECIMAL" />
+    <result column="FLAG" property="flag" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriAdvDirectiveDefsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriAdvDirectiveDefs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="ADVISOR_ID" property="advisorId" jdbcType="DECIMAL" />
+    <result column="DOMAIN" property="domain" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="TYPE#" property="type" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="METADATA_ID" property="metadataId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

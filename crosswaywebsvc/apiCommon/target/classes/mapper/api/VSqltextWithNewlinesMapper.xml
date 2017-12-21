@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VSqltextWithNewlinesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VSqltextWithNewlines" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HASH_VALUE" property="hashValue" jdbcType="DECIMAL" />
+    <result column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="COMMAND_TYPE" property="commandType" jdbcType="DECIMAL" />
+    <result column="PIECE" property="piece" jdbcType="DECIMAL" />
+    <result column="SQL_TEXT" property="sqlText" jdbcType="VARCHAR" />
+    <result column="ADDRESS" property="address" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WmRemovedWorkspacesTableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WmRemovedWorkspacesTable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="WORKSPACE_ID" property="workspaceId" jdbcType="DECIMAL" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="WORKSPACE_NAME" property="workspaceName" jdbcType="VARCHAR" />
+    <result column="PARENT_WORKSPACE_NAME" property="parentWorkspaceName" jdbcType="VARCHAR" />
+    <result column="PARENT_WORKSPACE_ID" property="parentWorkspaceId" jdbcType="DECIMAL" />
+    <result column="CREATETIME" property="createtime" jdbcType="DATE" />
+    <result column="RETIRETIME" property="retiretime" jdbcType="DATE" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="MP_ROOT_ID" property="mpRootId" jdbcType="DECIMAL" />
+    <result column="ISREFRESHED" property="isrefreshed" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

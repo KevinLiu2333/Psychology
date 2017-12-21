@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtMetricCollectionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtMetricCollections" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COLL_NAME" property="collName" jdbcType="VARCHAR" />
+    <result column="IS_REPOSITORY" property="isRepository" jdbcType="DECIMAL" />
+    <result column="STORE_METRIC" property="storeMetric" jdbcType="VARCHAR" />
+    <result column="SCHEDULE" property="schedule" jdbcType="DECIMAL" />
+    <result column="SCHEDULE_EX" property="scheduleEx" jdbcType="VARCHAR" />
+    <result column="LAST_COLLECTED_TIMESTAMP" property="lastCollectedTimestamp" jdbcType="DATE" />
+    <result column="STATUS_MESSAGE" property="statusMessage" jdbcType="VARCHAR" />
+    <result column="SUSPENDED" property="suspended" jdbcType="DECIMAL" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <result column="METRIC_GUID" property="metricGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

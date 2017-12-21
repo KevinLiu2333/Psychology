@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AcSjclSjdbBctaskMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AcSjclSjdbBctask">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" jdbcType="OTHER" property="id" />
+    <result column="TASK_NAME" jdbcType="OTHER" property="taskName" />
+    <result column="TASK_NUMBER" jdbcType="OTHER" property="taskNumber" />
+    <result column="TASK_RULES" jdbcType="OTHER" property="taskRules" />
+    <result column="REFER_TABLE" jdbcType="OTHER" property="referTable" />
+    <result column="TARGET_TABLE" jdbcType="OTHER" property="targetTable" />
+    <result column="ZJ_DATA" jdbcType="OTHER" property="zjData" />
+    <result column="JS_DATA" jdbcType="OTHER" property="jsData" />
+    <result column="BD_DATE" jdbcType="DATE" property="bdDate" />
+    <result column="ITEM_CODE" jdbcType="OTHER" property="itemCode" />
+    <result column="ITEM_NAME" jdbcType="OTHER" property="itemName" />
+    <result column="TASK_DESC" jdbcType="OTHER" property="taskDesc" />
+  </resultMap>
+</mapper>

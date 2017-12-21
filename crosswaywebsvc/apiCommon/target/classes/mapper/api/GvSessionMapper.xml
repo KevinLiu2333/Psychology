@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvSessionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvSession" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="SERIAL#" property="serial" jdbcType="DECIMAL" />
+    <result column="AUDSID" property="audsid" jdbcType="DECIMAL" />
+    <result column="USER#" property="user" jdbcType="DECIMAL" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="COMMAND" property="command" jdbcType="DECIMAL" />
+    <result column="OWNERID" property="ownerid" jdbcType="DECIMAL" />
+    <result column="TADDR" property="taddr" jdbcType="VARCHAR" />
+    <result column="LOCKWAIT" property="lockwait" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="SERVER" property="server" jdbcType="VARCHAR" />
+    <result column="SCHEMA#" property="schema" jdbcType="DECIMAL" />
+    <result column="SCHEMANAME" property="schemaname" jdbcType="VARCHAR" />
+    <result column="OSUSER" property="osuser" jdbcType="VARCHAR" />
+    <result column="PROCESS" property="process" jdbcType="VARCHAR" />
+    <result column="MACHINE" property="machine" jdbcType="VARCHAR" />
+    <result column="PORT" property="port" jdbcType="DECIMAL" />
+    <result column="TERMINAL" property="terminal" jdbcType="VARCHAR" />
+    <result column="PROGRAM" property="program" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="SQL_HASH_VALUE" property="sqlHashValue" jdbcType="DECIMAL" />
+    <result column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="SQL_CHILD_NUMBER" property="sqlChildNumber" jdbcType="DECIMAL" />
+    <result column="SQL_EXEC_START" property="sqlExecStart" jdbcType="DATE" />
+    <result column="SQL_EXEC_ID" property="sqlExecId" jdbcType="DECIMAL" />
+    <result column="PREV_HASH_VALUE" property="prevHashValue" jdbcType="DECIMAL" />
+    <result column="PREV_SQL_ID" property="prevSqlId" jdbcType="VARCHAR" />
+    <result column="PREV_CHILD_NUMBER" property="prevChildNumber" jdbcType="DECIMAL" />
+    <result column="PREV_EXEC_START" property="prevExecStart" jdbcType="DATE" />
+    <result column="PREV_EXEC_ID" property="prevExecId" jdbcType="DECIMAL" />
+    <result column="PLSQL_ENTRY_OBJECT_ID" property="plsqlEntryObjectId" jdbcType="DECIMAL" />
+    <result column="PLSQL_ENTRY_SUBPROGRAM_ID" property="plsqlEntrySubprogramId" jdbcType="DECIMAL" />
+    <result column="PLSQL_OBJECT_ID" property="plsqlObjectId" jdbcType="DECIMAL" />
+    <result column="PLSQL_SUBPROGRAM_ID" property="plsqlSubprogramId" jdbcType="DECIMAL" />
+    <result column="MODULE" property="module" jdbcType="VARCHAR" />
+    <result column="MODULE_HASH" property="moduleHash" jdbcType="DECIMAL" />
+    <result column="ACTION" property="action" jdbcType="VARCHAR" />
+    <result column="ACTION_HASH" property="actionHash" jdbcType="DECIMAL" />
+    <result column="CLIENT_INFO" property="clientInfo" jdbcType="VARCHAR" />
+    <result column="FIXED_TABLE_SEQUENCE" property="fixedTableSequence" jdbcType="DECIMAL" />
+    <result column="ROW_WAIT_OBJ#" property="rowWaitObj" jdbcType="DECIMAL" />
+    <result column="ROW_WAIT_FILE#" property="rowWaitFile" jdbcType="DECIMAL" />
+    <result column="ROW_WAIT_BLOCK#" property="rowWaitBlock" jdbcType="DECIMAL" />
+    <result column="ROW_WAIT_ROW#" property="rowWaitRow" jdbcType="DECIMAL" />
+    <result column="TOP_LEVEL_CALL#" property="topLevelCall" jdbcType="DECIMAL" />
+    <result column="LOGON_TIME" property="logonTime" jdbcType="DATE" />
+    <result column="LAST_CALL_ET" property="lastCallEt" jdbcType="DECIMAL" />
+    <result column="PDML_ENABLED" property="pdmlEnabled" jdbcType="VARCHAR" />
+    <result column="FAILOVER_TYPE" property="failoverType" jdbcType="VARCHAR" />
+    <result column="FAILOVER_METHOD" property="failoverMethod" jdbcType="VARCHAR" />
+    <result column="FAILED_OVER" property="failedOver" jdbcType="VARCHAR" />
+    <result column="RESOURCE_CONSUMER_GROUP" property="resourceConsumerGroup" jdbcType="VARCHAR" />
+    <result column="PDML_STATUS" property="pdmlStatus" jdbcType="VARCHAR" />
+    <result column="PDDL_STATUS" property="pddlStatus" jdbcType="VARCHAR" />
+    <result column="PQ_STATUS" property="pqStatus" jdbcType="VARCHAR" />
+    <result column="CURRENT_QUEUE_DURATION" property="currentQueueDuration" jdbcType="DECIMAL" />
+    <result column="CLIENT_IDENTIFIER" property="clientIdentifier" jdbcType="VARCHAR" />
+    <result column="BLOCKING_SESSION_STATUS" property="blockingSessionStatus" jdbcType="VARCHAR" />
+    <result column="BLOCKING_INSTANCE" property="blockingInstance" jdbcType="DECIMAL" />
+    <result column="BLOCKING_SESSION" property="blockingSession" jdbcType="DECIMAL" />
+    <result column="FINAL_BLOCKING_SESSION_STATUS" property="finalBlockingSessionStatus" jdbcType="VARCHAR" />
+    <result column="FINAL_BLOCKING_INSTANCE" property="finalBlockingInstance" jdbcType="DECIMAL" />
+    <result column="FINAL_BLOCKING_SESSION" property="finalBlockingSession" jdbcType="DECIMAL" />
+    <result column="SEQ#" property="seq" jdbcType="DECIMAL" />
+    <result column="EVENT#" property="event" jdbcType="DECIMAL" />
+    <result column="EVENT" property="event" jdbcType="VARCHAR" />
+    <result column="P1TEXT" property="p1text" jdbcType="VARCHAR" />
+    <result column="P1" property="p1" jdbcType="DECIMAL" />
+    <result column="P2TEXT" property="p2text" jdbcType="VARCHAR" />
+    <result column="P2" property="p2" jdbcType="DECIMAL" />
+    <result column="P3TEXT" property="p3text" jdbcType="VARCHAR" />
+    <result column="P3" property="p3" jdbcType="DECIMAL" />
+    <result column="WAIT_CLASS_ID" property="waitClassId" jdbcType="DECIMAL" />
+    <result column="WAIT_CLASS#" property="waitClass" jdbcType="DECIMAL" />
+    <result column="WAIT_CLASS" property="waitClass" jdbcType="VARCHAR" />
+    <result column="WAIT_TIME" property="waitTime" jdbcType="DECIMAL" />
+    <result column="SECONDS_IN_WAIT" property="secondsInWait" jdbcType="DECIMAL" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="WAIT_TIME_MICRO" property="waitTimeMicro" jdbcType="DECIMAL" />
+    <result column="TIME_REMAINING_MICRO" property="timeRemainingMicro" jdbcType="DECIMAL" />
+    <result column="TIME_SINCE_LAST_WAIT_MICRO" property="timeSinceLastWaitMicro" jdbcType="DECIMAL" />
+    <result column="SERVICE_NAME" property="serviceName" jdbcType="VARCHAR" />
+    <result column="SQL_TRACE" property="sqlTrace" jdbcType="VARCHAR" />
+    <result column="SQL_TRACE_WAITS" property="sqlTraceWaits" jdbcType="VARCHAR" />
+    <result column="SQL_TRACE_BINDS" property="sqlTraceBinds" jdbcType="VARCHAR" />
+    <result column="SQL_TRACE_PLAN_STATS" property="sqlTracePlanStats" jdbcType="VARCHAR" />
+    <result column="SESSION_EDITION_ID" property="sessionEditionId" jdbcType="DECIMAL" />
+    <result column="CREATOR_SERIAL#" property="creatorSerial" jdbcType="DECIMAL" />
+    <result column="ECID" property="ecid" jdbcType="VARCHAR" />
+    <result column="SADDR" property="saddr" jdbcType="VARBINARY" />
+    <result column="PADDR" property="paddr" jdbcType="VARBINARY" />
+    <result column="SQL_ADDRESS" property="sqlAddress" jdbcType="VARBINARY" />
+    <result column="PREV_SQL_ADDR" property="prevSqlAddr" jdbcType="VARBINARY" />
+    <result column="P1RAW" property="p1raw" jdbcType="VARBINARY" />
+    <result column="P2RAW" property="p2raw" jdbcType="VARBINARY" />
+    <result column="P3RAW" property="p3raw" jdbcType="VARBINARY" />
+    <result column="CREATOR_ADDR" property="creatorAddr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

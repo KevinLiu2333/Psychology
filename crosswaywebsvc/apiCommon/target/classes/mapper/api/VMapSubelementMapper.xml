@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VMapSubelementMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VMapSubelement" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CHILD_IDX" property="childIdx" jdbcType="DECIMAL" />
+    <result column="PARENT_IDX" property="parentIdx" jdbcType="DECIMAL" />
+    <result column="SUB_NUM" property="subNum" jdbcType="DECIMAL" />
+    <result column="SUB_SIZE" property="subSize" jdbcType="DECIMAL" />
+    <result column="ELEM_OFFSET" property="elemOffset" jdbcType="DECIMAL" />
+    <result column="SUB_FLAGS" property="subFlags" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

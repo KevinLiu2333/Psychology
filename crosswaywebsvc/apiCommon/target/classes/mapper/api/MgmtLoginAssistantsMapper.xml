@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtLoginAssistantsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtLoginAssistants" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="LOGIN_ASST_NAME" property="loginAsstName" jdbcType="VARCHAR" />
+    <result column="LOGIN_INDEX" property="loginIndex" jdbcType="DECIMAL" />
+    <result column="LOGIN_ASST_CLASSNAME" property="loginAsstClassname" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

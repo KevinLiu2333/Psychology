@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu8tabcMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu8tabc" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJID" property="objid" jdbcType="DECIMAL" />
+    <result column="DOBJID" property="dobjid" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="OWNERID" property="ownerid" jdbcType="DECIMAL" />
+    <result column="TABLESPACE" property="tablespace" jdbcType="VARCHAR" />
+    <result column="TSNO" property="tsno" jdbcType="DECIMAL" />
+    <result column="FILENO" property="fileno" jdbcType="DECIMAL" />
+    <result column="BLOCKNO" property="blockno" jdbcType="DECIMAL" />
+    <result column="AUDIT$" property="audit" jdbcType="VARCHAR" />
+    <result column="COMMENT$" property="comment" jdbcType="VARCHAR" />
+    <result column="CLUSTERFLAG" property="clusterflag" jdbcType="DECIMAL" />
+    <result column="MTIME" property="mtime" jdbcType="DATE" />
+    <result column="MODIFIED" property="modified" jdbcType="DECIMAL" />
+    <result column="TABNO" property="tabno" jdbcType="DECIMAL" />
+    <result column="PCTFREE$" property="pctfree" jdbcType="DECIMAL" />
+    <result column="PCTUSED$" property="pctused" jdbcType="DECIMAL" />
+    <result column="INITRANS" property="initrans" jdbcType="DECIMAL" />
+    <result column="MAXTRANS" property="maxtrans" jdbcType="DECIMAL" />
+    <result column="DEGREE" property="degree" jdbcType="DECIMAL" />
+    <result column="INSTANCES" property="instances" jdbcType="DECIMAL" />
+    <result column="CACHE" property="cache" jdbcType="DECIMAL" />
+    <result column="TEMPFLAGS" property="tempflags" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="DEFLOG" property="deflog" jdbcType="DECIMAL" />
+    <result column="TSDEFLOG" property="tsdeflog" jdbcType="DECIMAL" />
+    <result column="RECPBLK" property="recpblk" jdbcType="DECIMAL" />
+    <result column="SECONDARYOBJ" property="secondaryobj" jdbcType="DECIMAL" />
+    <result column="ROWCNT" property="rowcnt" jdbcType="DECIMAL" />
+    <result column="BLKCNT" property="blkcnt" jdbcType="DECIMAL" />
+    <result column="AVGRLEN" property="avgrlen" jdbcType="DECIMAL" />
+    <result column="TFLAGS" property="tflags" jdbcType="DECIMAL" />
+    <result column="TRIGFLAG" property="trigflag" jdbcType="DECIMAL" />
+    <result column="OBJSTATUS" property="objstatus" jdbcType="DECIMAL" />
+    <result column="XDBOOL" property="xdbool" jdbcType="DECIMAL" />
+    <result column="ROID" property="roid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

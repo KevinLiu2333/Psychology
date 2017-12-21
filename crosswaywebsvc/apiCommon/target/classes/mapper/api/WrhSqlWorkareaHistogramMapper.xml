@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhSqlWorkareaHistogramMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhSqlWorkareaHistogram" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="LOW_OPTIMAL_SIZE" property="lowOptimalSize" jdbcType="DECIMAL" />
+    <id column="HIGH_OPTIMAL_SIZE" property="highOptimalSize" jdbcType="DECIMAL" />
+    <result column="OPTIMAL_EXECUTIONS" property="optimalExecutions" jdbcType="DECIMAL" />
+    <result column="ONEPASS_EXECUTIONS" property="onepassExecutions" jdbcType="DECIMAL" />
+    <result column="MULTIPASSES_EXECUTIONS" property="multipassesExecutions" jdbcType="DECIMAL" />
+    <result column="TOTAL_EXECUTIONS" property="totalExecutions" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

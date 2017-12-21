@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VSessionBlockersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VSessionBlockers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="SESS_SERIAL#" property="sessSerial" jdbcType="DECIMAL" />
+    <result column="WAIT_ID" property="waitId" jdbcType="DECIMAL" />
+    <result column="WAIT_EVENT" property="waitEvent" jdbcType="DECIMAL" />
+    <result column="WAIT_EVENT_TEXT" property="waitEventText" jdbcType="VARCHAR" />
+    <result column="BLOCKER_INSTANCE_ID" property="blockerInstanceId" jdbcType="DECIMAL" />
+    <result column="BLOCKER_SID" property="blockerSid" jdbcType="DECIMAL" />
+    <result column="BLOCKER_SESS_SERIAL#" property="blockerSessSerial" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

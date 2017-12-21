@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoTinPcSysdataTableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoTinPcSysdataTable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DEP_TABLE_SCHEMA" property="depTableSchema" jdbcType="VARCHAR" />
+    <id column="DEP_TABLE_NAME" property="depTableName" jdbcType="VARCHAR" />
+    <result column="SDO_OWNER" property="sdoOwner" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

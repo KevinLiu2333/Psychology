@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtProvisionClusNodeCntMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtProvisionClusNodeCnt" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NODE_COUNT" property="nodeCount" jdbcType="DECIMAL" />
+    <result column="CLUSTER_GUID" property="clusterGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AwAwxmlMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AwAwxml" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PS#" property="ps" jdbcType="DECIMAL" />
+    <result column="GEN#" property="gen" jdbcType="DECIMAL" />
+    <result column="EXTNUM" property="extnum" jdbcType="DECIMAL" />
+    <result column="OBJNAME" property="objname" jdbcType="VARCHAR" />
+    <result column="PARTNAME" property="partname" jdbcType="VARCHAR" />
+    <result column="AWLOB" property="awlob" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

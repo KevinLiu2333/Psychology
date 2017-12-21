@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuTablespaceViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuTablespaceView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="TS_NUM" property="tsNum" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="OWNER_NUM" property="ownerNum" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="CONTENTS" property="contents" jdbcType="DECIMAL" />
+    <result column="UNDOFILE_NUM" property="undofileNum" jdbcType="DECIMAL" />
+    <result column="UNDOBLOCK_NUM" property="undoblockNum" jdbcType="DECIMAL" />
+    <result column="BLOCKSIZE" property="blocksize" jdbcType="DECIMAL" />
+    <result column="INC_NUM" property="incNum" jdbcType="DECIMAL" />
+    <result column="SCNWRP" property="scnwrp" jdbcType="DECIMAL" />
+    <result column="SCNBAS" property="scnbas" jdbcType="DECIMAL" />
+    <result column="DFLMINEXT" property="dflminext" jdbcType="DECIMAL" />
+    <result column="DFLMAXEXT" property="dflmaxext" jdbcType="DECIMAL" />
+    <result column="DFLINIT" property="dflinit" jdbcType="DECIMAL" />
+    <result column="DFLINCR" property="dflincr" jdbcType="DECIMAL" />
+    <result column="DFLMINLEN" property="dflminlen" jdbcType="DECIMAL" />
+    <result column="DFLEXTPCT" property="dflextpct" jdbcType="DECIMAL" />
+    <result column="DFLOGGING" property="dflogging" jdbcType="DECIMAL" />
+    <result column="AFFSTRENGTH" property="affstrength" jdbcType="DECIMAL" />
+    <result column="BITMAPPED" property="bitmapped" jdbcType="DECIMAL" />
+    <result column="PLUGGED" property="plugged" jdbcType="DECIMAL" />
+    <result column="DIRECTALLOWED" property="directallowed" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="PITRSCNWRP" property="pitrscnwrp" jdbcType="DECIMAL" />
+    <result column="PITRSCNBAS" property="pitrscnbas" jdbcType="DECIMAL" />
+    <result column="OWNERINSTANCE" property="ownerinstance" jdbcType="VARCHAR" />
+    <result column="BACKUPOWNER" property="backupowner" jdbcType="VARCHAR" />
+    <result column="GROUPNAME" property="groupname" jdbcType="VARCHAR" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="VARCHAR" />
+    <result column="SPARE4" property="spare4" jdbcType="DATE" />
+    <result column="FILESPEC" property="filespec" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

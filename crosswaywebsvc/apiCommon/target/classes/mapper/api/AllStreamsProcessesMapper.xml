@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllStreamsProcessesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllStreamsProcesses" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="STREAMS_TYPE" property="streamsType" jdbcType="VARCHAR" />
+    <result column="STREAMS_NAME" property="streamsName" jdbcType="VARCHAR" />
+    <result column="RULE_SET_OWNER" property="ruleSetOwner" jdbcType="VARCHAR" />
+    <result column="RULE_SET_NAME" property="ruleSetName" jdbcType="VARCHAR" />
+    <result column="NEGATIVE_RULE_SET_OWNER" property="negativeRuleSetOwner" jdbcType="VARCHAR" />
+    <result column="NEGATIVE_RULE_SET_NAME" property="negativeRuleSetName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

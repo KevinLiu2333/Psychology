@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvRuleMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvRule" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="RULE_SET_OBJECT_ID" property="ruleSetObjectId" jdbcType="DECIMAL" />
+    <result column="EVALUATION_CONTEXT_OBJECT_ID" property="evaluationContextObjectId" jdbcType="DECIMAL" />
+    <result column="RULE_OWNER" property="ruleOwner" jdbcType="VARCHAR" />
+    <result column="RULE_NAME" property="ruleName" jdbcType="VARCHAR" />
+    <result column="RULE_CONDITION" property="ruleCondition" jdbcType="VARCHAR" />
+    <result column="TRUE_HITS" property="trueHits" jdbcType="DECIMAL" />
+    <result column="MAYBE_HITS" property="maybeHits" jdbcType="DECIMAL" />
+    <result column="SQL_EVALUATIONS" property="sqlEvaluations" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

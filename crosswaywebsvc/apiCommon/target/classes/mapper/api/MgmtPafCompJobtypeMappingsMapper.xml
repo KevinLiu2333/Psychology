@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtPafCompJobtypeMappingsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtPafCompJobtypeMappings" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="MAPPING_GUID" property="mappingGuid" jdbcType="VARCHAR" />
+    <result column="COMPONENT_SUBTYPE" property="componentSubtype" jdbcType="VARCHAR" />
+    <result column="JOBTYPE_GUID" property="jobtypeGuid" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED" property="lastUpdated" jdbcType="DATE" />
+    <result column="CONTENT0" property="content0" jdbcType="VARCHAR" />
+    <result column="CONTENT1" property="content1" jdbcType="VARCHAR" />
+    <result column="CONTENT2" property="content2" jdbcType="VARCHAR" />
+    <result column="CONTENT3" property="content3" jdbcType="VARCHAR" />
+    <result column="CONTENT4" property="content4" jdbcType="VARCHAR" />
+    <result column="CONTENT5" property="content5" jdbcType="VARCHAR" />
+    <result column="CONTENT6" property="content6" jdbcType="VARCHAR" />
+    <result column="CONTENT7" property="content7" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

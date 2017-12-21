@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.LogmnrcGsbaMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.LogmnrcGsba" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="LOGMNR_UID" property="logmnrUid" jdbcType="DECIMAL" />
+    <id column="AS_OF_SCN" property="asOfScn" jdbcType="DECIMAL" />
+    <result column="FDO_LENGTH" property="fdoLength" jdbcType="DECIMAL" />
+    <result column="CHARSETID" property="charsetid" jdbcType="DECIMAL" />
+    <result column="NCHARSETID" property="ncharsetid" jdbcType="DECIMAL" />
+    <result column="DBTIMEZONE_LEN" property="dbtimezoneLen" jdbcType="DECIMAL" />
+    <result column="DBTIMEZONE_VALUE" property="dbtimezoneValue" jdbcType="VARCHAR" />
+    <result column="LOGMNR_SPARE1" property="logmnrSpare1" jdbcType="DECIMAL" />
+    <result column="LOGMNR_SPARE2" property="logmnrSpare2" jdbcType="DECIMAL" />
+    <result column="LOGMNR_SPARE3" property="logmnrSpare3" jdbcType="VARCHAR" />
+    <result column="LOGMNR_SPARE4" property="logmnrSpare4" jdbcType="DATE" />
+    <result column="FDO_VALUE" property="fdoValue" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

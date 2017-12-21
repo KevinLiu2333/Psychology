@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CdcSubscribedTablesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CdcSubscribedTables" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HANDLE" property="handle" jdbcType="DECIMAL" />
+    <result column="CHANGE_TABLE_OBJ#" property="changeTableObj" jdbcType="DECIMAL" />
+    <result column="VIEW_NAME" property="viewName" jdbcType="VARCHAR" />
+    <result column="VIEW_STATUS" property="viewStatus" jdbcType="VARCHAR" />
+    <result column="MV_FLAG" property="mvFlag" jdbcType="DECIMAL" />
+    <result column="MV_COLVEC" property="mvColvec" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

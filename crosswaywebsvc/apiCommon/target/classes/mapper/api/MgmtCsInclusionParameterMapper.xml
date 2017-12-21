@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCsInclusionParameterMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCsInclusionParameter" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="CS_INCLUSION_GUID" property="csInclusionGuid" jdbcType="VARBINARY" />
+    <id column="PARAM_INAME" property="paramIname" jdbcType="VARCHAR" />
+    <result column="PARAM_OVERRIDE_VALUE" property="paramOverrideValue" jdbcType="VARCHAR" />
+    <result column="REF_PARAM_INAME" property="refParamIname" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

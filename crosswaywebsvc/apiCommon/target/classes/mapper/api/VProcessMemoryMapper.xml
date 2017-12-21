@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VProcessMemoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VProcessMemory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PID" property="pid" jdbcType="DECIMAL" />
+    <result column="SERIAL#" property="serial" jdbcType="DECIMAL" />
+    <result column="CATEGORY" property="category" jdbcType="VARCHAR" />
+    <result column="ALLOCATED" property="allocated" jdbcType="DECIMAL" />
+    <result column="USED" property="used" jdbcType="DECIMAL" />
+    <result column="MAX_ALLOCATED" property="maxAllocated" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

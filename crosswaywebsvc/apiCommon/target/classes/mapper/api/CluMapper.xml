@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CluMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Clu" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="DATAOBJ#" property="dataobj" jdbcType="DECIMAL" />
+    <result column="TS#" property="ts" jdbcType="DECIMAL" />
+    <result column="FILE#" property="file" jdbcType="DECIMAL" />
+    <result column="BLOCK#" property="block" jdbcType="DECIMAL" />
+    <result column="COLS" property="cols" jdbcType="DECIMAL" />
+    <result column="PCTFREE$" property="pctfree" jdbcType="DECIMAL" />
+    <result column="PCTUSED$" property="pctused" jdbcType="DECIMAL" />
+    <result column="INITRANS" property="initrans" jdbcType="DECIMAL" />
+    <result column="MAXTRANS" property="maxtrans" jdbcType="DECIMAL" />
+    <result column="SIZE$" property="size" jdbcType="DECIMAL" />
+    <result column="HASHFUNC" property="hashfunc" jdbcType="VARCHAR" />
+    <result column="HASHKEYS" property="hashkeys" jdbcType="DECIMAL" />
+    <result column="FUNC" property="func" jdbcType="DECIMAL" />
+    <result column="EXTIND" property="extind" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="DEGREE" property="degree" jdbcType="DECIMAL" />
+    <result column="INSTANCES" property="instances" jdbcType="DECIMAL" />
+    <result column="AVGCHN" property="avgchn" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+    <result column="SPARE4" property="spare4" jdbcType="DECIMAL" />
+    <result column="SPARE5" property="spare5" jdbcType="VARCHAR" />
+    <result column="SPARE6" property="spare6" jdbcType="VARCHAR" />
+    <result column="SPARE7" property="spare7" jdbcType="DATE" />
+  </resultMap>
+</mapper>

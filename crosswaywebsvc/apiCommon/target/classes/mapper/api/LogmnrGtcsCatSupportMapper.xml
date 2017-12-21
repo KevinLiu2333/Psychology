@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.LogmnrGtcsCatSupportMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.LogmnrGtcsCatSupport" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOGMNR_UID" property="logmnrUid" jdbcType="DECIMAL" />
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="OBJV#" property="objv" jdbcType="DECIMAL" />
+    <result column="SEGCOL#" property="segcol" jdbcType="DECIMAL" />
+    <result column="INTCOL#" property="intcol" jdbcType="DECIMAL" />
+    <result column="COL#" property="col" jdbcType="DECIMAL" />
+    <result column="COLNAME" property="colname" jdbcType="VARCHAR" />
+    <result column="TYPE#" property="type" jdbcType="DECIMAL" />
+    <result column="LENGTH" property="length" jdbcType="DECIMAL" />
+    <result column="PRECISION" property="precision" jdbcType="DECIMAL" />
+    <result column="SCALE" property="scale" jdbcType="DECIMAL" />
+    <result column="INTERVAL_LEADING_PRECISION" property="intervalLeadingPrecision" jdbcType="DECIMAL" />
+    <result column="INTERVAL_TRAILING_PRECISION" property="intervalTrailingPrecision" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="CHARSETID" property="charsetid" jdbcType="DECIMAL" />
+    <result column="CHARSETFORM" property="charsetform" jdbcType="DECIMAL" />
+    <result column="LOGMNRCOLFLAGS" property="logmnrcolflags" jdbcType="VARCHAR" />
+    <result column="XTYPESCHEMANAME" property="xtypeschemaname" jdbcType="VARCHAR" />
+    <result column="XTYPENAME" property="xtypename" jdbcType="VARCHAR" />
+    <result column="XFQCOLNAME" property="xfqcolname" jdbcType="VARCHAR" />
+    <result column="XTOPINTCOL" property="xtopintcol" jdbcType="DECIMAL" />
+    <result column="XREFFEDTABLEOBJN" property="xreffedtableobjn" jdbcType="DECIMAL" />
+    <result column="XREFFEDTABLEOBJV" property="xreffedtableobjv" jdbcType="DECIMAL" />
+    <result column="XCOLTYPEFLAGS" property="xcoltypeflags" jdbcType="DECIMAL" />
+    <result column="XOPQTYPETYPE" property="xopqtypetype" jdbcType="DECIMAL" />
+    <result column="XOPQTYPEFLAGS" property="xopqtypeflags" jdbcType="DECIMAL" />
+    <result column="XOPQLOBINTCOL" property="xopqlobintcol" jdbcType="DECIMAL" />
+    <result column="XOPQOBJINTCOL" property="xopqobjintcol" jdbcType="DECIMAL" />
+    <result column="XXMLINTCOL" property="xxmlintcol" jdbcType="DECIMAL" />
+    <result column="EAOWNER#" property="eaowner" jdbcType="DECIMAL" />
+    <result column="EAMKEYID" property="eamkeyid" jdbcType="VARCHAR" />
+    <result column="EAENCALG" property="eaencalg" jdbcType="DECIMAL" />
+    <result column="EAINTALG" property="eaintalg" jdbcType="DECIMAL" />
+    <result column="EAKLCLEN" property="eaklclen" jdbcType="DECIMAL" />
+    <result column="EAFLAGS" property="eaflags" jdbcType="DECIMAL" />
+    <result column="EACOLKLC" property="eacolklc" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

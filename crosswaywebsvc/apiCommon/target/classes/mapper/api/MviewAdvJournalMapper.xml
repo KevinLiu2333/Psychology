@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MviewAdvJournalMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MviewAdvJournal" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="RUNID#" property="runid" jdbcType="DECIMAL" />
+    <id column="SEQ#" property="seq" jdbcType="DECIMAL" />
+    <result column="TIMESTAMP" property="timestamp" jdbcType="DATE" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="NUM" property="num" jdbcType="DECIMAL" />
+    <result column="TEXTLEN" property="textlen" jdbcType="DECIMAL" />
+    <result column="TEXT" property="text" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

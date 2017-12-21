@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllSchedulerRunningChainsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllSchedulerRunningChains" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="JOB_NAME" property="jobName" jdbcType="VARCHAR" />
+    <result column="JOB_SUBNAME" property="jobSubname" jdbcType="VARCHAR" />
+    <result column="CHAIN_OWNER" property="chainOwner" jdbcType="VARCHAR" />
+    <result column="CHAIN_NAME" property="chainName" jdbcType="VARCHAR" />
+    <result column="STEP_NAME" property="stepName" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="ERROR_CODE" property="errorCode" jdbcType="DECIMAL" />
+    <result column="COMPLETED" property="completed" jdbcType="VARCHAR" />
+    <result column="START_DATE" property="startDate" jdbcType="OTHER" />
+    <result column="END_DATE" property="endDate" jdbcType="OTHER" />
+    <result column="DURATION" property="duration" jdbcType="OTHER" />
+    <result column="SKIP" property="skip" jdbcType="VARCHAR" />
+    <result column="PAUSE" property="pause" jdbcType="VARCHAR" />
+    <result column="RESTART_ON_RECOVERY" property="restartOnRecovery" jdbcType="VARCHAR" />
+    <result column="RESTART_ON_FAILURE" property="restartOnFailure" jdbcType="VARCHAR" />
+    <result column="STEP_JOB_SUBNAME" property="stepJobSubname" jdbcType="VARCHAR" />
+    <result column="STEP_JOB_LOG_ID" property="stepJobLogId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

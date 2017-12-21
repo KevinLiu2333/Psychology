@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvSharedPoolReservedMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvSharedPoolReserved" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="FREE_SPACE" property="freeSpace" jdbcType="DECIMAL" />
+    <result column="AVG_FREE_SIZE" property="avgFreeSize" jdbcType="DECIMAL" />
+    <result column="FREE_COUNT" property="freeCount" jdbcType="DECIMAL" />
+    <result column="MAX_FREE_SIZE" property="maxFreeSize" jdbcType="DECIMAL" />
+    <result column="USED_SPACE" property="usedSpace" jdbcType="DECIMAL" />
+    <result column="AVG_USED_SIZE" property="avgUsedSize" jdbcType="DECIMAL" />
+    <result column="USED_COUNT" property="usedCount" jdbcType="DECIMAL" />
+    <result column="MAX_USED_SIZE" property="maxUsedSize" jdbcType="DECIMAL" />
+    <result column="REQUESTS" property="requests" jdbcType="DECIMAL" />
+    <result column="REQUEST_MISSES" property="requestMisses" jdbcType="DECIMAL" />
+    <result column="LAST_MISS_SIZE" property="lastMissSize" jdbcType="DECIMAL" />
+    <result column="MAX_MISS_SIZE" property="maxMissSize" jdbcType="DECIMAL" />
+    <result column="REQUEST_FAILURES" property="requestFailures" jdbcType="DECIMAL" />
+    <result column="LAST_FAILURE_SIZE" property="lastFailureSize" jdbcType="DECIMAL" />
+    <result column="ABORTED_REQUEST_THRESHOLD" property="abortedRequestThreshold" jdbcType="DECIMAL" />
+    <result column="ABORTED_REQUESTS" property="abortedRequests" jdbcType="DECIMAL" />
+    <result column="LAST_ABORTED_SIZE" property="lastAbortedSize" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

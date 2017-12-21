@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvNfsClientsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvNfsClients" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="CLIENTID" property="clientid" jdbcType="DECIMAL" />
+    <result column="PRINCIPAL" property="principal" jdbcType="VARCHAR" />
+    <result column="CLIENTOPAQUEIDENTIFIER" property="clientopaqueidentifier" jdbcType="VARCHAR" />
+    <result column="LEASEEXPIRY" property="leaseexpiry" jdbcType="DECIMAL" />
+    <result column="CLIENTADDR" property="clientaddr" jdbcType="VARCHAR" />
+    <result column="CONFIRMED" property="confirmed" jdbcType="VARCHAR" />
+    <result column="VERIFIER" property="verifier" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

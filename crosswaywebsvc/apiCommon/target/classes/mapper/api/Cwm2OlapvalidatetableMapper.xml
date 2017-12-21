@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Cwm2OlapvalidatetableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Cwm2Olapvalidatetable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ENTITY_SEQUENCE" property="entitySequence" jdbcType="DECIMAL" />
+    <result column="ENTITY_IRID" property="entityIrid" jdbcType="DECIMAL" />
+    <result column="ENTITY_TYPE" property="entityType" jdbcType="VARCHAR" />
+    <result column="ENTITY_STATUS" property="entityStatus" jdbcType="VARCHAR" />
+    <result column="ENTITY_COMMENT" property="entityComment" jdbcType="VARCHAR" />
+    <result column="CUBE_OWNER" property="cubeOwner" jdbcType="VARCHAR" />
+    <result column="CUBE_NAME" property="cubeName" jdbcType="VARCHAR" />
+    <result column="DIMENSION_OWNER" property="dimensionOwner" jdbcType="VARCHAR" />
+    <result column="DIMENSION_NAME" property="dimensionName" jdbcType="VARCHAR" />
+    <result column="DIMENSIONATTRIBUTE_NAME" property="dimensionattributeName" jdbcType="VARCHAR" />
+    <result column="HIERARCHY_NAME" property="hierarchyName" jdbcType="VARCHAR" />
+    <result column="HIERARCHY_SORT_POSITION" property="hierarchySortPosition" jdbcType="DECIMAL" />
+    <result column="HIERARCHY_SORT_SORTPOS" property="hierarchySortSortpos" jdbcType="DECIMAL" />
+    <result column="LEVEL_NAME" property="levelName" jdbcType="VARCHAR" />
+    <result column="LEVEL_DEPTH" property="levelDepth" jdbcType="DECIMAL" />
+    <result column="LEVEL_KEY_POSITION" property="levelKeyPosition" jdbcType="DECIMAL" />
+    <result column="LEVELATTRIBUTE_NAME" property="levelattributeName" jdbcType="VARCHAR" />
+    <result column="FACTTABLE_OWNER" property="facttableOwner" jdbcType="VARCHAR" />
+    <result column="FACTTABLE_NAME" property="facttableName" jdbcType="VARCHAR" />
+    <result column="FACTTABLEMEASURE_NAME" property="facttablemeasureName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtStorageReportDataMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtStorageReportData">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ECM_SNAPSHOT_ID" jdbcType="VARBINARY" property="ecmSnapshotId" />
+    <id column="KEY_VALUE" jdbcType="VARBINARY" property="keyValue" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="STORAGE_LAYER" jdbcType="VARCHAR" property="storageLayer" />
+    <result column="EM_QUERY_FLAG" jdbcType="VARCHAR" property="emQueryFlag" />
+    <result column="ENTITY_TYPE" jdbcType="VARCHAR" property="entityType" />
+    <result column="RAWSIZEB" jdbcType="DECIMAL" property="rawsizeb" />
+    <result column="SIZEB" jdbcType="DECIMAL" property="sizeb" />
+    <result column="USEDB" jdbcType="DECIMAL" property="usedb" />
+    <result column="FREEB" jdbcType="DECIMAL" property="freeb" />
+    <result column="A1" jdbcType="VARCHAR" property="a1" />
+    <result column="A2" jdbcType="VARCHAR" property="a2" />
+    <result column="A3" jdbcType="VARCHAR" property="a3" />
+    <result column="A4" jdbcType="VARCHAR" property="a4" />
+    <result column="A5" jdbcType="VARCHAR" property="a5" />
+    <result column="A6" jdbcType="VARCHAR" property="a6" />
+    <result column="A7" jdbcType="VARCHAR" property="a7" />
+    <result column="A8" jdbcType="VARCHAR" property="a8" />
+    <result column="GLOBAL_UNIQUE_ID" jdbcType="VARBINARY" property="globalUniqueId" />
+  </resultMap>
+</mapper>

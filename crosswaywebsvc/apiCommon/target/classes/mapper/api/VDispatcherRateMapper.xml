@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VDispatcherRateMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VDispatcherRate" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="CUR_LOOP_RATE" property="curLoopRate" jdbcType="DECIMAL" />
+    <result column="CUR_EVENT_RATE" property="curEventRate" jdbcType="DECIMAL" />
+    <result column="CUR_EVENTS_PER_LOOP" property="curEventsPerLoop" jdbcType="DECIMAL" />
+    <result column="CUR_MSG_RATE" property="curMsgRate" jdbcType="DECIMAL" />
+    <result column="CUR_SVR_BUF_RATE" property="curSvrBufRate" jdbcType="DECIMAL" />
+    <result column="CUR_SVR_BYTE_RATE" property="curSvrByteRate" jdbcType="DECIMAL" />
+    <result column="CUR_SVR_BYTE_PER_BUF" property="curSvrBytePerBuf" jdbcType="DECIMAL" />
+    <result column="CUR_CLT_BUF_RATE" property="curCltBufRate" jdbcType="DECIMAL" />
+    <result column="CUR_CLT_BYTE_RATE" property="curCltByteRate" jdbcType="DECIMAL" />
+    <result column="CUR_CLT_BYTE_PER_BUF" property="curCltBytePerBuf" jdbcType="DECIMAL" />
+    <result column="CUR_BUF_RATE" property="curBufRate" jdbcType="DECIMAL" />
+    <result column="CUR_BYTE_RATE" property="curByteRate" jdbcType="DECIMAL" />
+    <result column="CUR_BYTE_PER_BUF" property="curBytePerBuf" jdbcType="DECIMAL" />
+    <result column="CUR_IN_CONNECT_RATE" property="curInConnectRate" jdbcType="DECIMAL" />
+    <result column="CUR_OUT_CONNECT_RATE" property="curOutConnectRate" jdbcType="DECIMAL" />
+    <result column="CUR_RECONNECT_RATE" property="curReconnectRate" jdbcType="DECIMAL" />
+    <result column="MAX_LOOP_RATE" property="maxLoopRate" jdbcType="DECIMAL" />
+    <result column="MAX_EVENT_RATE" property="maxEventRate" jdbcType="DECIMAL" />
+    <result column="MAX_EVENTS_PER_LOOP" property="maxEventsPerLoop" jdbcType="DECIMAL" />
+    <result column="MAX_MSG_RATE" property="maxMsgRate" jdbcType="DECIMAL" />
+    <result column="MAX_SVR_BUF_RATE" property="maxSvrBufRate" jdbcType="DECIMAL" />
+    <result column="MAX_SVR_BYTE_RATE" property="maxSvrByteRate" jdbcType="DECIMAL" />
+    <result column="MAX_SVR_BYTE_PER_BUF" property="maxSvrBytePerBuf" jdbcType="DECIMAL" />
+    <result column="MAX_CLT_BUF_RATE" property="maxCltBufRate" jdbcType="DECIMAL" />
+    <result column="MAX_CLT_BYTE_RATE" property="maxCltByteRate" jdbcType="DECIMAL" />
+    <result column="MAX_CLT_BYTE_PER_BUF" property="maxCltBytePerBuf" jdbcType="DECIMAL" />
+    <result column="MAX_BUF_RATE" property="maxBufRate" jdbcType="DECIMAL" />
+    <result column="MAX_BYTE_RATE" property="maxByteRate" jdbcType="DECIMAL" />
+    <result column="MAX_BYTE_PER_BUF" property="maxBytePerBuf" jdbcType="DECIMAL" />
+    <result column="MAX_IN_CONNECT_RATE" property="maxInConnectRate" jdbcType="DECIMAL" />
+    <result column="MAX_OUT_CONNECT_RATE" property="maxOutConnectRate" jdbcType="DECIMAL" />
+    <result column="MAX_RECONNECT_RATE" property="maxReconnectRate" jdbcType="DECIMAL" />
+    <result column="AVG_LOOP_RATE" property="avgLoopRate" jdbcType="DECIMAL" />
+    <result column="AVG_EVENT_RATE" property="avgEventRate" jdbcType="DECIMAL" />
+    <result column="AVG_EVENTS_PER_LOOP" property="avgEventsPerLoop" jdbcType="DECIMAL" />
+    <result column="AVG_MSG_RATE" property="avgMsgRate" jdbcType="DECIMAL" />
+    <result column="AVG_SVR_BUF_RATE" property="avgSvrBufRate" jdbcType="DECIMAL" />
+    <result column="AVG_SVR_BYTE_RATE" property="avgSvrByteRate" jdbcType="DECIMAL" />
+    <result column="AVG_SVR_BYTE_PER_BUF" property="avgSvrBytePerBuf" jdbcType="DECIMAL" />
+    <result column="AVG_CLT_BUF_RATE" property="avgCltBufRate" jdbcType="DECIMAL" />
+    <result column="AVG_CLT_BYTE_RATE" property="avgCltByteRate" jdbcType="DECIMAL" />
+    <result column="AVG_CLT_BYTE_PER_BUF" property="avgCltBytePerBuf" jdbcType="DECIMAL" />
+    <result column="AVG_BUF_RATE" property="avgBufRate" jdbcType="DECIMAL" />
+    <result column="AVG_BYTE_RATE" property="avgByteRate" jdbcType="DECIMAL" />
+    <result column="AVG_BYTE_PER_BUF" property="avgBytePerBuf" jdbcType="DECIMAL" />
+    <result column="AVG_IN_CONNECT_RATE" property="avgInConnectRate" jdbcType="DECIMAL" />
+    <result column="AVG_OUT_CONNECT_RATE" property="avgOutConnectRate" jdbcType="DECIMAL" />
+    <result column="AVG_RECONNECT_RATE" property="avgReconnectRate" jdbcType="DECIMAL" />
+    <result column="TTL_LOOPS" property="ttlLoops" jdbcType="DECIMAL" />
+    <result column="TTL_MSG" property="ttlMsg" jdbcType="DECIMAL" />
+    <result column="TTL_SVR_BUF" property="ttlSvrBuf" jdbcType="DECIMAL" />
+    <result column="TTL_CLT_BUF" property="ttlCltBuf" jdbcType="DECIMAL" />
+    <result column="TTL_BUF" property="ttlBuf" jdbcType="DECIMAL" />
+    <result column="TTL_IN_CONNECT" property="ttlInConnect" jdbcType="DECIMAL" />
+    <result column="TTL_OUT_CONNECT" property="ttlOutConnect" jdbcType="DECIMAL" />
+    <result column="TTL_RECONNECT" property="ttlReconnect" jdbcType="DECIMAL" />
+    <result column="SCALE_LOOPS" property="scaleLoops" jdbcType="DECIMAL" />
+    <result column="SCALE_MSG" property="scaleMsg" jdbcType="DECIMAL" />
+    <result column="SCALE_SVR_BUF" property="scaleSvrBuf" jdbcType="DECIMAL" />
+    <result column="SCALE_CLT_BUF" property="scaleCltBuf" jdbcType="DECIMAL" />
+    <result column="SCALE_BUF" property="scaleBuf" jdbcType="DECIMAL" />
+    <result column="SCALE_IN_CONNECT" property="scaleInConnect" jdbcType="DECIMAL" />
+    <result column="SCALE_OUT_CONNECT" property="scaleOutConnect" jdbcType="DECIMAL" />
+    <result column="SCALE_RECONNECT" property="scaleReconnect" jdbcType="DECIMAL" />
+    <result column="PADDR" property="paddr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

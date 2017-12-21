@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VMapLibraryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VMapLibrary" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LIB_IDX" property="libIdx" jdbcType="DECIMAL" />
+    <result column="LIB_NAME" property="libName" jdbcType="VARCHAR" />
+    <result column="VENDOR_NAME" property="vendorName" jdbcType="VARCHAR" />
+    <result column="PROTOCOL_NUM" property="protocolNum" jdbcType="DECIMAL" />
+    <result column="VERSION_NUM" property="versionNum" jdbcType="VARCHAR" />
+    <result column="PATH_NAME" property="pathName" jdbcType="VARCHAR" />
+    <result column="MAP_FILE" property="mapFile" jdbcType="VARCHAR" />
+    <result column="FILE_CFGID" property="fileCfgid" jdbcType="VARCHAR" />
+    <result column="MAP_ELEM" property="mapElem" jdbcType="VARCHAR" />
+    <result column="ELEM_CFGID" property="elemCfgid" jdbcType="VARCHAR" />
+    <result column="MAP_SYNC" property="mapSync" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaOpbindingsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaOpbindings" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="OPERATOR_NAME" property="operatorName" jdbcType="VARCHAR" />
+    <result column="BINDING#" property="binding" jdbcType="DECIMAL" />
+    <result column="FUNCTION_NAME" property="functionName" jdbcType="VARCHAR" />
+    <result column="RETURN_SCHEMA" property="returnSchema" jdbcType="VARCHAR" />
+    <result column="RETURN_TYPE" property="returnType" jdbcType="VARCHAR" />
+    <result column="IMPLEMENTATION_TYPE_SCHEMA" property="implementationTypeSchema" jdbcType="VARCHAR" />
+    <result column="IMPLEMENTATION_TYPE" property="implementationType" jdbcType="VARCHAR" />
+    <result column="PROPERTY" property="property" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

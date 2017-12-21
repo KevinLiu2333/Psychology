@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhProcessMemorySummaryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhProcessMemorySummary" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="CATEGORY" property="category" jdbcType="VARCHAR" />
+    <result column="NUM_PROCESSES" property="numProcesses" jdbcType="DECIMAL" />
+    <result column="NON_ZERO_ALLOCS" property="nonZeroAllocs" jdbcType="DECIMAL" />
+    <result column="USED_TOTAL" property="usedTotal" jdbcType="DECIMAL" />
+    <result column="ALLOCATED_TOTAL" property="allocatedTotal" jdbcType="DECIMAL" />
+    <result column="ALLOCATED_STDDEV" property="allocatedStddev" jdbcType="DECIMAL" />
+    <result column="ALLOCATED_MAX" property="allocatedMax" jdbcType="DECIMAL" />
+    <result column="MAX_ALLOCATED_MAX" property="maxAllocatedMax" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

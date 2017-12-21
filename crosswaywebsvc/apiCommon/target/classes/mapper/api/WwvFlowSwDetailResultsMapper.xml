@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowSwDetailResultsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowSwDetailResults" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="RESULT_ID" property="resultId" jdbcType="DECIMAL" />
+    <result column="FILE_ID" property="fileId" jdbcType="DECIMAL" />
+    <result column="SEQ_ID" property="seqId" jdbcType="DECIMAL" />
+    <result column="STMT_NUM" property="stmtNum" jdbcType="DECIMAL" />
+    <result column="RESULT_SIZE" property="resultSize" jdbcType="DECIMAL" />
+    <result column="RESULT_ROWS" property="resultRows" jdbcType="DECIMAL" />
+    <result column="MSG" property="msg" jdbcType="VARCHAR" />
+    <result column="SUCCESS" property="success" jdbcType="VARCHAR" />
+    <result column="FAILURE" property="failure" jdbcType="VARCHAR" />
+    <result column="STARTED" property="started" jdbcType="DATE" />
+    <result column="START_TIME" property="startTime" jdbcType="DECIMAL" />
+    <result column="ENDED" property="ended" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DECIMAL" />
+    <result column="RUN_COMPLETE" property="runComplete" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED" property="lastUpdated" jdbcType="DATE" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="STMT_TEXT" property="stmtText" jdbcType="CLOB" />
+    <result column="RESULT" property="result" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

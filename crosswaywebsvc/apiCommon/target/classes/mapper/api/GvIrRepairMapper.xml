@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvIrRepairMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvIrRepair" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="REPAIR_ID" property="repairId" jdbcType="DECIMAL" />
+    <result column="ADVISE_ID" property="adviseId" jdbcType="DECIMAL" />
+    <result column="SUMMARY" property="summary" jdbcType="VARCHAR" />
+    <result column="RANK" property="rank" jdbcType="DECIMAL" />
+    <result column="TIME_DETECTED" property="timeDetected" jdbcType="DATE" />
+    <result column="EXECUTED" property="executed" jdbcType="DATE" />
+    <result column="ESTIMATED_DATA_LOSS" property="estimatedDataLoss" jdbcType="VARCHAR" />
+    <result column="DETAILED_DESCRIPTION" property="detailedDescription" jdbcType="VARCHAR" />
+    <result column="REPAIR_SCRIPT" property="repairScript" jdbcType="VARCHAR" />
+    <result column="ESTIMATED_REPAIR_TIME" property="estimatedRepairTime" jdbcType="DECIMAL" />
+    <result column="ACTUAL_REPAIR_TIME" property="actualRepairTime" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

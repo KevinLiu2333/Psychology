@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuMViewLogViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuMViewLogView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="MOWNER" property="mowner" jdbcType="VARCHAR" />
+    <result column="MASTER" property="master" jdbcType="VARCHAR" />
+    <result column="OLDEST" property="oldest" jdbcType="DATE" />
+    <result column="OLDEST_PK" property="oldestPk" jdbcType="VARCHAR" />
+    <result column="OSCN" property="oscn" jdbcType="DECIMAL" />
+    <result column="YOUNGEST" property="youngest" jdbcType="VARCHAR" />
+    <result column="YSCN" property="yscn" jdbcType="DECIMAL" />
+    <result column="LOG" property="log" jdbcType="VARCHAR" />
+    <result column="TRIG" property="trig" jdbcType="VARCHAR" />
+    <result column="FLAG" property="flag" jdbcType="DECIMAL" />
+    <result column="MTIME" property="mtime" jdbcType="VARCHAR" />
+    <result column="TEMP_LOG" property="tempLog" jdbcType="VARCHAR" />
+    <result column="OLDEST_OID" property="oldestOid" jdbcType="VARCHAR" />
+    <result column="OLDEST_NEW" property="oldestNew" jdbcType="VARCHAR" />
+    <result column="OLDEST_SEQ" property="oldestSeq" jdbcType="VARCHAR" />
+    <result column="GLOBAL_DB_NAME" property="globalDbName" jdbcType="VARCHAR" />
+    <result column="PURGE_START" property="purgeStart" jdbcType="VARCHAR" />
+    <result column="PURGE_NEXT" property="purgeNext" jdbcType="VARCHAR" />
+    <result column="FC_COUNT" property="fcCount" jdbcType="DECIMAL" />
+    <result column="FC_LIST" property="fcList" jdbcType="OTHER" />
+    <result column="LM_COUNT" property="lmCount" jdbcType="DECIMAL" />
+    <result column="LM_LIST" property="lmList" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

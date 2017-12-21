@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtFailoverTableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtFailoverTable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="FAILOVER_ID" property="failoverId" jdbcType="DECIMAL" />
+    <result column="LAST_TIME_STAMP" property="lastTimeStamp" jdbcType="DATE" />
+    <result column="HOST_URL" property="hostUrl" jdbcType="VARCHAR" />
+    <result column="HEARTBEAT_INTERVAL" property="heartbeatInterval" jdbcType="DECIMAL" />
+    <result column="LAST_TIME_STAMP_UTC" property="lastTimeStampUtc" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

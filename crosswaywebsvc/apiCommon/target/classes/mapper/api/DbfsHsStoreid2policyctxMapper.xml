@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbfsHsStoreid2policyctxMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbfsHsStoreid2policyctx" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="POLICYTYPE" property="policytype" jdbcType="DECIMAL" />
+    <result column="STOREID" property="storeid" jdbcType="DECIMAL" />
+    <result column="POLICYCTX" property="policyctx" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

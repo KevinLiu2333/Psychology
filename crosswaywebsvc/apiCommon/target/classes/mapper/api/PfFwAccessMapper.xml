@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.PfFwAccessMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.PfFwAccess">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FW_ACCESS_ID" jdbcType="VARCHAR" property="fwAccessId" />
+    <result column="FW_INFO_ID" jdbcType="VARCHAR" property="fwInfoId" />
+    <result column="METHOD_KEY" jdbcType="VARCHAR" property="methodKey" />
+    <result column="UNIT_KEY" jdbcType="VARCHAR" property="unitKey" />
+    <result column="USED_STATUS" jdbcType="VARCHAR" property="usedStatus" />
+    <result column="ACCESS_TYPE" jdbcType="VARCHAR" property="accessType" />
+    <result column="ACCESS_END_DATE" jdbcType="DATE" property="accessEndDate" />
+    <result column="ACCESS_MEMO" jdbcType="VARCHAR" property="accessMemo" />
+    <result column="FW_CODE" jdbcType="VARCHAR" property="fwCode" />
+  </resultMap>
+</mapper>

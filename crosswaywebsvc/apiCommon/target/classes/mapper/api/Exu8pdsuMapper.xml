@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu8pdsuMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu8pdsu" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJID" property="objid" jdbcType="DECIMAL" />
+    <result column="TYPE" property="type" jdbcType="DECIMAL" />
+    <result column="OWNERID" property="ownerid" jdbcType="DECIMAL" />
+    <result column="PTYPE" property="ptype" jdbcType="DECIMAL" />
+    <result column="SUBPTYPE" property="subptype" jdbcType="DECIMAL" />
+    <result column="PFLAG" property="pflag" jdbcType="DECIMAL" />
+    <result column="PCNT" property="pcnt" jdbcType="DECIMAL" />
+    <result column="PKCNT" property="pkcnt" jdbcType="DECIMAL" />
+    <result column="PCTFREE$" property="pctfree" jdbcType="DECIMAL" />
+    <result column="PCTUSED$" property="pctused" jdbcType="DECIMAL" />
+    <result column="INITRANS" property="initrans" jdbcType="DECIMAL" />
+    <result column="MAXTRANS" property="maxtrans" jdbcType="DECIMAL" />
+    <result column="INIEXTS" property="iniexts" jdbcType="DECIMAL" />
+    <result column="EXTSIZE" property="extsize" jdbcType="DECIMAL" />
+    <result column="MINEXTS" property="minexts" jdbcType="DECIMAL" />
+    <result column="MAXEXTS" property="maxexts" jdbcType="DECIMAL" />
+    <result column="EXTPCT" property="extpct" jdbcType="DECIMAL" />
+    <result column="FLISTS" property="flists" jdbcType="DECIMAL" />
+    <result column="FREEGRP" property="freegrp" jdbcType="DECIMAL" />
+    <result column="TSNAME" property="tsname" jdbcType="VARCHAR" />
+    <result column="DEFLOG" property="deflog" jdbcType="DECIMAL" />
+    <result column="PCACHE" property="pcache" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Cwm2TempValuesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Cwm2TempValues" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INT_VAR" property="intVar" jdbcType="DECIMAL" />
+    <result column="NUM_VAR" property="numVar" jdbcType="DECIMAL" />
+    <result column="TEXT_VAR" property="textVar" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

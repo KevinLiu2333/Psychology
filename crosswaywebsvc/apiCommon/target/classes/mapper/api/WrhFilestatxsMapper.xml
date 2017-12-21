@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhFilestatxsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhFilestatxs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="FILE#" property="file" jdbcType="DECIMAL" />
+    <result column="CREATION_CHANGE#" property="creationChange" jdbcType="DECIMAL" />
+    <result column="PHYRDS" property="phyrds" jdbcType="DECIMAL" />
+    <result column="PHYWRTS" property="phywrts" jdbcType="DECIMAL" />
+    <result column="SINGLEBLKRDS" property="singleblkrds" jdbcType="DECIMAL" />
+    <result column="READTIM" property="readtim" jdbcType="DECIMAL" />
+    <result column="WRITETIM" property="writetim" jdbcType="DECIMAL" />
+    <result column="SINGLEBLKRDTIM" property="singleblkrdtim" jdbcType="DECIMAL" />
+    <result column="PHYBLKRD" property="phyblkrd" jdbcType="DECIMAL" />
+    <result column="PHYBLKWRT" property="phyblkwrt" jdbcType="DECIMAL" />
+    <result column="WAIT_COUNT" property="waitCount" jdbcType="DECIMAL" />
+    <result column="TIME" property="time" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

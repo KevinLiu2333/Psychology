@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuClusterViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuClusterView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="SCHEMA_OBJ" property="schemaObj" jdbcType="OTHER" />
+    <result column="COL_LIST" property="colList" jdbcType="OTHER" />
+    <result column="TS_NAME" property="tsName" jdbcType="VARCHAR" />
+    <result column="BLOCKSIZE" property="blocksize" jdbcType="DECIMAL" />
+    <result column="TSNO" property="tsno" jdbcType="DECIMAL" />
+    <result column="FILENO" property="fileno" jdbcType="DECIMAL" />
+    <result column="BLOCKNO" property="blockno" jdbcType="DECIMAL" />
+    <result column="PCT_FREE" property="pctFree" jdbcType="DECIMAL" />
+    <result column="PCT_USED" property="pctUsed" jdbcType="DECIMAL" />
+    <result column="INITRANS" property="initrans" jdbcType="DECIMAL" />
+    <result column="MAXTRANS" property="maxtrans" jdbcType="DECIMAL" />
+    <result column="SIZE_T" property="sizeT" jdbcType="DECIMAL" />
+    <result column="HASHFUNC" property="hashfunc" jdbcType="VARCHAR" />
+    <result column="HASHKEYS" property="hashkeys" jdbcType="DECIMAL" />
+    <result column="FUNCTION" property="function" jdbcType="DECIMAL" />
+    <result column="EXTIND" property="extind" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="DEGREE" property="degree" jdbcType="DECIMAL" />
+    <result column="INSTANCES" property="instances" jdbcType="DECIMAL" />
+    <result column="AVGCHN" property="avgchn" jdbcType="DECIMAL" />
+    <result column="FUNCLEN" property="funclen" jdbcType="DECIMAL" />
+    <result column="FUNCTXT" property="functxt" jdbcType="VARCHAR" />
+    <result column="FUNC_VCNT" property="funcVcnt" jdbcType="OTHER" />
+    <result column="STORAGE" property="storage" jdbcType="OTHER" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+    <result column="SPARE4" property="spare4" jdbcType="DECIMAL" />
+    <result column="SPARE5" property="spare5" jdbcType="VARCHAR" />
+    <result column="SPARE6" property="spare6" jdbcType="VARCHAR" />
+    <result column="SPARE7" property="spare7" jdbcType="DATE" />
+    <result column="FUNC_CLOB" property="funcClob" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.JobMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Job" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="JOB" property="job" jdbcType="DECIMAL" />
+    <result column="LOWNER" property="lowner" jdbcType="VARCHAR" />
+    <result column="POWNER" property="powner" jdbcType="VARCHAR" />
+    <result column="COWNER" property="cowner" jdbcType="VARCHAR" />
+    <result column="LAST_DATE" property="lastDate" jdbcType="DATE" />
+    <result column="THIS_DATE" property="thisDate" jdbcType="DATE" />
+    <result column="NEXT_DATE" property="nextDate" jdbcType="DATE" />
+    <result column="TOTAL" property="total" jdbcType="DECIMAL" />
+    <result column="INTERVAL#" property="interval" jdbcType="VARCHAR" />
+    <result column="FAILURES" property="failures" jdbcType="DECIMAL" />
+    <result column="FLAG" property="flag" jdbcType="DECIMAL" />
+    <result column="WHAT" property="what" jdbcType="VARCHAR" />
+    <result column="NLSENV" property="nlsenv" jdbcType="VARCHAR" />
+    <result column="CUR_SES_LABEL" property="curSesLabel" jdbcType="OTHER" />
+    <result column="CLEARANCE_HI" property="clearanceHi" jdbcType="OTHER" />
+    <result column="CLEARANCE_LO" property="clearanceLo" jdbcType="OTHER" />
+    <result column="CHARENV" property="charenv" jdbcType="VARCHAR" />
+    <result column="FIELD1" property="field1" jdbcType="DECIMAL" />
+    <result column="SCHEDULER_FLAGS" property="schedulerFlags" jdbcType="DECIMAL" />
+    <result column="XID" property="xid" jdbcType="VARCHAR" />
+    <result column="ENV" property="env" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

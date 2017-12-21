@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WmNestedColumnsTableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WmNestedColumnsTable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <id column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <id column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="POSITION" property="position" jdbcType="DECIMAL" />
+    <result column="TYPE_OWNER" property="typeOwner" jdbcType="VARCHAR" />
+    <result column="TYPE_NAME" property="typeName" jdbcType="VARCHAR" />
+    <result column="NT_OWNER" property="ntOwner" jdbcType="VARCHAR" />
+    <result column="NT_NAME" property="ntName" jdbcType="VARCHAR" />
+    <result column="NT_STORE" property="ntStore" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

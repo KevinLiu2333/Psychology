@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserRepcatUserParmValuesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserRepcatUserParmValues" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="REFRESH_TEMPLATE_NAME" property="refreshTemplateName" jdbcType="VARCHAR" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="REFRESH_GROUP_NAME" property="refreshGroupName" jdbcType="VARCHAR" />
+    <result column="TEMPLATE_COMMENT" property="templateComment" jdbcType="VARCHAR" />
+    <result column="PUBLIC_TEMPLATE" property="publicTemplate" jdbcType="VARCHAR" />
+    <result column="PARAMETER_NAME" property="parameterName" jdbcType="VARCHAR" />
+    <result column="PROMPT_STRING" property="promptString" jdbcType="VARCHAR" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="DEFAULT_PARM_VALUE" property="defaultParmValue" jdbcType="CLOB" />
+    <result column="PARM_VALUE" property="parmValue" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

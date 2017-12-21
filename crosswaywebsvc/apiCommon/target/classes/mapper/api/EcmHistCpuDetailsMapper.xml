@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.EcmHistCpuDetailsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.EcmHistCpuDetails" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VENDOR_NAME" property="vendorName" jdbcType="VARCHAR" />
+    <result column="FREQ_IN_MHZ" property="freqInMhz" jdbcType="DECIMAL" />
+    <result column="ECACHE_IN_MB" property="ecacheInMb" jdbcType="DECIMAL" />
+    <result column="IMPL" property="impl" jdbcType="VARCHAR" />
+    <result column="REVISION" property="revision" jdbcType="VARCHAR" />
+    <result column="MASK" property="mask" jdbcType="VARCHAR" />
+    <result column="COUNT" property="count" jdbcType="DECIMAL" />
+    <result column="ECM_SNAPSHOT_ID" property="ecmSnapshotId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

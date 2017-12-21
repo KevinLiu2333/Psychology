@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu8sequMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu8sequ" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="OWNERID" property="ownerid" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="OBJID" property="objid" jdbcType="DECIMAL" />
+    <result column="CURVAL" property="curval" jdbcType="DECIMAL" />
+    <result column="MINVAL" property="minval" jdbcType="DECIMAL" />
+    <result column="MAXVAL" property="maxval" jdbcType="DECIMAL" />
+    <result column="INCR" property="incr" jdbcType="DECIMAL" />
+    <result column="CACHE" property="cache" jdbcType="DECIMAL" />
+    <result column="CYCLE" property="cycle" jdbcType="DECIMAL" />
+    <result column="ORDER$" property="order" jdbcType="DECIMAL" />
+    <result column="AUDT" property="audt" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

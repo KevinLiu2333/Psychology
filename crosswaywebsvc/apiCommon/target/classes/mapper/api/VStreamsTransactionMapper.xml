@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VStreamsTransactionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VStreamsTransaction" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="STREAMS_NAME" property="streamsName" jdbcType="VARCHAR" />
+    <result column="STREAMS_TYPE" property="streamsType" jdbcType="VARCHAR" />
+    <result column="XIDUSN" property="xidusn" jdbcType="DECIMAL" />
+    <result column="XIDSLT" property="xidslt" jdbcType="DECIMAL" />
+    <result column="XIDSQN" property="xidsqn" jdbcType="DECIMAL" />
+    <result column="CUMULATIVE_MESSAGE_COUNT" property="cumulativeMessageCount" jdbcType="DECIMAL" />
+    <result column="TOTAL_MESSAGE_COUNT" property="totalMessageCount" jdbcType="DECIMAL" />
+    <result column="FIRST_MESSAGE_TIME" property="firstMessageTime" jdbcType="DATE" />
+    <result column="FIRST_MESSAGE_NUMBER" property="firstMessageNumber" jdbcType="DECIMAL" />
+    <result column="LAST_MESSAGE_TIME" property="lastMessageTime" jdbcType="DATE" />
+    <result column="LAST_MESSAGE_NUMBER" property="lastMessageNumber" jdbcType="DECIMAL" />
+    <result column="TRANSACTION_ID" property="transactionId" jdbcType="VARCHAR" />
+    <result column="FIRST_MESSAGE_POSITION" property="firstMessagePosition" jdbcType="VARBINARY" />
+    <result column="LAST_MESSAGE_POSITION" property="lastMessagePosition" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

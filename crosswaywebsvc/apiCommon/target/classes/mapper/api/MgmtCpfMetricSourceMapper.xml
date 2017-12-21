@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCpfMetricSourceMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCpfMetricSource" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="CONTAINER_GUID" property="containerGuid" jdbcType="VARBINARY" />
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="HOST_NAME" property="hostName" jdbcType="VARCHAR" />
+    <id column="HOME_LOCATION" property="homeLocation" jdbcType="VARCHAR" />
+    <id column="ADVISORY_NAME" property="advisoryName" jdbcType="VARCHAR" />
+    <result column="IMPACT" property="impact" jdbcType="VARCHAR" />
+    <result column="ADVISORY_ABSTRACT" property="advisoryAbstract" jdbcType="VARCHAR" />
+    <result column="HOME_LOCATION_DISPLAY" property="homeLocationDisplay" jdbcType="VARCHAR" />
+    <result column="ADVISORY_URL" property="advisoryUrl" jdbcType="VARCHAR" />
+    <result column="PATCH_GUIDS" property="patchGuids" jdbcType="VARCHAR" />
+    <result column="PATCHES" property="patches" jdbcType="VARCHAR" />
+    <result column="IS_VALID" property="isValid" jdbcType="VARCHAR" />
+    <result column="CPF_VIOLATION_GUID" property="cpfViolationGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

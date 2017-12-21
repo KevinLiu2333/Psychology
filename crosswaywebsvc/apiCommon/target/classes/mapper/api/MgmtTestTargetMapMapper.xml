@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtTestTargetMapMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtTestTargetMap" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <id column="TARGET_META_VER" property="targetMetaVer" jdbcType="VARCHAR" />
+    <id column="CAT_PROP1" property="catProp1" jdbcType="VARCHAR" />
+    <id column="CAT_PROP2" property="catProp2" jdbcType="VARCHAR" />
+    <id column="CAT_PROP3" property="catProp3" jdbcType="VARCHAR" />
+    <id column="CAT_PROP4" property="catProp4" jdbcType="VARCHAR" />
+    <id column="CAT_PROP5" property="catProp5" jdbcType="VARCHAR" />
+    <id column="TEST_TYPE" property="testType" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VSqlSharedCursorMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VSqlSharedCursor" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="CHILD_NUMBER" property="childNumber" jdbcType="DECIMAL" />
+    <result column="UNBOUND_CURSOR" property="unboundCursor" jdbcType="VARCHAR" />
+    <result column="SQL_TYPE_MISMATCH" property="sqlTypeMismatch" jdbcType="VARCHAR" />
+    <result column="OPTIMIZER_MISMATCH" property="optimizerMismatch" jdbcType="VARCHAR" />
+    <result column="OUTLINE_MISMATCH" property="outlineMismatch" jdbcType="VARCHAR" />
+    <result column="STATS_ROW_MISMATCH" property="statsRowMismatch" jdbcType="VARCHAR" />
+    <result column="LITERAL_MISMATCH" property="literalMismatch" jdbcType="VARCHAR" />
+    <result column="FORCE_HARD_PARSE" property="forceHardParse" jdbcType="VARCHAR" />
+    <result column="EXPLAIN_PLAN_CURSOR" property="explainPlanCursor" jdbcType="VARCHAR" />
+    <result column="BUFFERED_DML_MISMATCH" property="bufferedDmlMismatch" jdbcType="VARCHAR" />
+    <result column="PDML_ENV_MISMATCH" property="pdmlEnvMismatch" jdbcType="VARCHAR" />
+    <result column="INST_DRTLD_MISMATCH" property="instDrtldMismatch" jdbcType="VARCHAR" />
+    <result column="SLAVE_QC_MISMATCH" property="slaveQcMismatch" jdbcType="VARCHAR" />
+    <result column="TYPECHECK_MISMATCH" property="typecheckMismatch" jdbcType="VARCHAR" />
+    <result column="AUTH_CHECK_MISMATCH" property="authCheckMismatch" jdbcType="VARCHAR" />
+    <result column="BIND_MISMATCH" property="bindMismatch" jdbcType="VARCHAR" />
+    <result column="DESCRIBE_MISMATCH" property="describeMismatch" jdbcType="VARCHAR" />
+    <result column="LANGUAGE_MISMATCH" property="languageMismatch" jdbcType="VARCHAR" />
+    <result column="TRANSLATION_MISMATCH" property="translationMismatch" jdbcType="VARCHAR" />
+    <result column="BIND_EQUIV_FAILURE" property="bindEquivFailure" jdbcType="VARCHAR" />
+    <result column="INSUFF_PRIVS" property="insuffPrivs" jdbcType="VARCHAR" />
+    <result column="INSUFF_PRIVS_REM" property="insuffPrivsRem" jdbcType="VARCHAR" />
+    <result column="REMOTE_TRANS_MISMATCH" property="remoteTransMismatch" jdbcType="VARCHAR" />
+    <result column="LOGMINER_SESSION_MISMATCH" property="logminerSessionMismatch" jdbcType="VARCHAR" />
+    <result column="INCOMP_LTRL_MISMATCH" property="incompLtrlMismatch" jdbcType="VARCHAR" />
+    <result column="OVERLAP_TIME_MISMATCH" property="overlapTimeMismatch" jdbcType="VARCHAR" />
+    <result column="EDITION_MISMATCH" property="editionMismatch" jdbcType="VARCHAR" />
+    <result column="MV_QUERY_GEN_MISMATCH" property="mvQueryGenMismatch" jdbcType="VARCHAR" />
+    <result column="USER_BIND_PEEK_MISMATCH" property="userBindPeekMismatch" jdbcType="VARCHAR" />
+    <result column="TYPCHK_DEP_MISMATCH" property="typchkDepMismatch" jdbcType="VARCHAR" />
+    <result column="NO_TRIGGER_MISMATCH" property="noTriggerMismatch" jdbcType="VARCHAR" />
+    <result column="FLASHBACK_CURSOR" property="flashbackCursor" jdbcType="VARCHAR" />
+    <result column="ANYDATA_TRANSFORMATION" property="anydataTransformation" jdbcType="VARCHAR" />
+    <result column="INCOMPLETE_CURSOR" property="incompleteCursor" jdbcType="VARCHAR" />
+    <result column="TOP_LEVEL_RPI_CURSOR" property="topLevelRpiCursor" jdbcType="VARCHAR" />
+    <result column="DIFFERENT_LONG_LENGTH" property="differentLongLength" jdbcType="VARCHAR" />
+    <result column="LOGICAL_STANDBY_APPLY" property="logicalStandbyApply" jdbcType="VARCHAR" />
+    <result column="DIFF_CALL_DURN" property="diffCallDurn" jdbcType="VARCHAR" />
+    <result column="BIND_UACS_DIFF" property="bindUacsDiff" jdbcType="VARCHAR" />
+    <result column="PLSQL_CMP_SWITCHS_DIFF" property="plsqlCmpSwitchsDiff" jdbcType="VARCHAR" />
+    <result column="CURSOR_PARTS_MISMATCH" property="cursorPartsMismatch" jdbcType="VARCHAR" />
+    <result column="STB_OBJECT_MISMATCH" property="stbObjectMismatch" jdbcType="VARCHAR" />
+    <result column="CROSSEDITION_TRIGGER_MISMATCH" property="crosseditionTriggerMismatch" jdbcType="VARCHAR" />
+    <result column="PQ_SLAVE_MISMATCH" property="pqSlaveMismatch" jdbcType="VARCHAR" />
+    <result column="TOP_LEVEL_DDL_MISMATCH" property="topLevelDdlMismatch" jdbcType="VARCHAR" />
+    <result column="MULTI_PX_MISMATCH" property="multiPxMismatch" jdbcType="VARCHAR" />
+    <result column="BIND_PEEKED_PQ_MISMATCH" property="bindPeekedPqMismatch" jdbcType="VARCHAR" />
+    <result column="MV_REWRITE_MISMATCH" property="mvRewriteMismatch" jdbcType="VARCHAR" />
+    <result column="ROLL_INVALID_MISMATCH" property="rollInvalidMismatch" jdbcType="VARCHAR" />
+    <result column="OPTIMIZER_MODE_MISMATCH" property="optimizerModeMismatch" jdbcType="VARCHAR" />
+    <result column="PX_MISMATCH" property="pxMismatch" jdbcType="VARCHAR" />
+    <result column="MV_STALEOBJ_MISMATCH" property="mvStaleobjMismatch" jdbcType="VARCHAR" />
+    <result column="FLASHBACK_TABLE_MISMATCH" property="flashbackTableMismatch" jdbcType="VARCHAR" />
+    <result column="LITREP_COMP_MISMATCH" property="litrepCompMismatch" jdbcType="VARCHAR" />
+    <result column="PLSQL_DEBUG" property="plsqlDebug" jdbcType="VARCHAR" />
+    <result column="LOAD_OPTIMIZER_STATS" property="loadOptimizerStats" jdbcType="VARCHAR" />
+    <result column="ACL_MISMATCH" property="aclMismatch" jdbcType="VARCHAR" />
+    <result column="FLASHBACK_ARCHIVE_MISMATCH" property="flashbackArchiveMismatch" jdbcType="VARCHAR" />
+    <result column="LOCK_USER_SCHEMA_FAILED" property="lockUserSchemaFailed" jdbcType="VARCHAR" />
+    <result column="REMOTE_MAPPING_MISMATCH" property="remoteMappingMismatch" jdbcType="VARCHAR" />
+    <result column="LOAD_RUNTIME_HEAP_FAILED" property="loadRuntimeHeapFailed" jdbcType="VARCHAR" />
+    <result column="HASH_MATCH_FAILED" property="hashMatchFailed" jdbcType="VARCHAR" />
+    <result column="PURGED_CURSOR" property="purgedCursor" jdbcType="VARCHAR" />
+    <result column="BIND_LENGTH_UPGRADEABLE" property="bindLengthUpgradeable" jdbcType="VARCHAR" />
+    <result column="ADDRESS" property="address" jdbcType="VARBINARY" />
+    <result column="CHILD_ADDRESS" property="childAddress" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

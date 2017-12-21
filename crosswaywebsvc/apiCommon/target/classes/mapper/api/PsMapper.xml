@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.PsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Ps" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="AWSEQ#" property="awseq" jdbcType="DECIMAL" />
+    <result column="PSNUMBER" property="psnumber" jdbcType="DECIMAL" />
+    <result column="PSGEN" property="psgen" jdbcType="DECIMAL" />
+    <result column="MAPOFFSET" property="mapoffset" jdbcType="DECIMAL" />
+    <result column="MAXPAGES" property="maxpages" jdbcType="DECIMAL" />
+    <result column="GELREC" property="gelrec" jdbcType="DECIMAL" />
+    <result column="MAPREC" property="maprec" jdbcType="DECIMAL" />
+    <result column="ALMAP" property="almap" jdbcType="VARBINARY" />
+    <result column="HEADER" property="header" jdbcType="VARBINARY" />
+    <result column="GELOB" property="gelob" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

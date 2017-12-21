@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SuiteDatafileMtdmInfoMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SuiteDatafileMtdmInfo">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="DATABASE_ID" jdbcType="VARCHAR" property="databaseId" />
+    <result column="UPDATE_TIME" jdbcType="DATE" property="updateTime" />
+    <result column="SQL_STR" jdbcType="CLOB" property="sqlStr" />
+  </resultMap>
+</mapper>

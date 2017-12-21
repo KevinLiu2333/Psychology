@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CdcPropagationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CdcPropagations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PROPAGATION_NAME" property="propagationName" jdbcType="VARCHAR" />
+    <result column="DESTQUEUE_PUBLISHER" property="destqueuePublisher" jdbcType="VARCHAR" />
+    <result column="DESTQUEUE_NAME" property="destqueueName" jdbcType="VARCHAR" />
+    <result column="STAGING_DATABASE" property="stagingDatabase" jdbcType="VARCHAR" />
+    <result column="SOURCEID_NAME" property="sourceidName" jdbcType="VARCHAR" />
+    <result column="SOURCE_CLASS" property="sourceClass" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

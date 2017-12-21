@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VStreamsCaptureMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VStreamsCapture" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="SERIAL#" property="serial" jdbcType="DECIMAL" />
+    <result column="CAPTURE#" property="capture" jdbcType="DECIMAL" />
+    <result column="CAPTURE_NAME" property="captureName" jdbcType="VARCHAR" />
+    <result column="LOGMINER_ID" property="logminerId" jdbcType="DECIMAL" />
+    <result column="STARTUP_TIME" property="startupTime" jdbcType="DATE" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="TOTAL_PREFILTER_DISCARDED" property="totalPrefilterDiscarded" jdbcType="DECIMAL" />
+    <result column="TOTAL_PREFILTER_KEPT" property="totalPrefilterKept" jdbcType="DECIMAL" />
+    <result column="TOTAL_PREFILTER_EVALUATIONS" property="totalPrefilterEvaluations" jdbcType="DECIMAL" />
+    <result column="TOTAL_MESSAGES_CAPTURED" property="totalMessagesCaptured" jdbcType="DECIMAL" />
+    <result column="CAPTURE_TIME" property="captureTime" jdbcType="DATE" />
+    <result column="CAPTURE_MESSAGE_NUMBER" property="captureMessageNumber" jdbcType="DECIMAL" />
+    <result column="CAPTURE_MESSAGE_CREATE_TIME" property="captureMessageCreateTime" jdbcType="DATE" />
+    <result column="TOTAL_MESSAGES_CREATED" property="totalMessagesCreated" jdbcType="DECIMAL" />
+    <result column="TOTAL_FULL_EVALUATIONS" property="totalFullEvaluations" jdbcType="DECIMAL" />
+    <result column="TOTAL_MESSAGES_ENQUEUED" property="totalMessagesEnqueued" jdbcType="DECIMAL" />
+    <result column="ENQUEUE_TIME" property="enqueueTime" jdbcType="DATE" />
+    <result column="ENQUEUE_MESSAGE_NUMBER" property="enqueueMessageNumber" jdbcType="DECIMAL" />
+    <result column="ENQUEUE_MESSAGE_CREATE_TIME" property="enqueueMessageCreateTime" jdbcType="DATE" />
+    <result column="AVAILABLE_MESSAGE_NUMBER" property="availableMessageNumber" jdbcType="DECIMAL" />
+    <result column="AVAILABLE_MESSAGE_CREATE_TIME" property="availableMessageCreateTime" jdbcType="DATE" />
+    <result column="ELAPSED_CAPTURE_TIME" property="elapsedCaptureTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_RULE_TIME" property="elapsedRuleTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_ENQUEUE_TIME" property="elapsedEnqueueTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_LCR_TIME" property="elapsedLcrTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_REDO_WAIT_TIME" property="elapsedRedoWaitTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_PAUSE_TIME" property="elapsedPauseTime" jdbcType="DECIMAL" />
+    <result column="STATE_CHANGED_TIME" property="stateChangedTime" jdbcType="DATE" />
+    <result column="APPLY_NAME" property="applyName" jdbcType="VARCHAR" />
+    <result column="APPLY_DBLINK" property="applyDblink" jdbcType="VARCHAR" />
+    <result column="APPLY_MESSAGES_SENT" property="applyMessagesSent" jdbcType="DECIMAL" />
+    <result column="APPLY_BYTES_SENT" property="applyBytesSent" jdbcType="DECIMAL" />
+    <result column="OPTIMIZATION" property="optimization" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

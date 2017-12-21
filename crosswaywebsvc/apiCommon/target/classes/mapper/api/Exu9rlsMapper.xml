@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu9rlsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu9rls" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJOWN" property="objown" jdbcType="VARCHAR" />
+    <result column="OBJNAM" property="objnam" jdbcType="VARCHAR" />
+    <result column="POLGRP" property="polgrp" jdbcType="VARCHAR" />
+    <result column="POLICY" property="policy" jdbcType="VARCHAR" />
+    <result column="POLOWN" property="polown" jdbcType="VARCHAR" />
+    <result column="POLSCH" property="polsch" jdbcType="VARCHAR" />
+    <result column="POLFUN" property="polfun" jdbcType="VARCHAR" />
+    <result column="STMT" property="stmt" jdbcType="VARCHAR" />
+    <result column="CHKOPT" property="chkopt" jdbcType="DECIMAL" />
+    <result column="ENABLED" property="enabled" jdbcType="DECIMAL" />
+    <result column="SPOLICY" property="spolicy" jdbcType="DECIMAL" />
+    <result column="POLTYP" property="poltyp" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

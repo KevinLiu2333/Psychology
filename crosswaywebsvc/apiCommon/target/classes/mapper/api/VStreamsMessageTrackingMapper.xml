@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VStreamsMessageTrackingMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VStreamsMessageTracking" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TRACKING_LABEL" property="trackingLabel" jdbcType="VARCHAR" />
+    <result column="COMPONENT_NAME" property="componentName" jdbcType="VARCHAR" />
+    <result column="COMPONENT_TYPE" property="componentType" jdbcType="VARCHAR" />
+    <result column="ACTION" property="action" jdbcType="VARCHAR" />
+    <result column="ACTION_DETAILS" property="actionDetails" jdbcType="VARCHAR" />
+    <result column="TIMESTAMP" property="timestamp" jdbcType="OTHER" />
+    <result column="MESSAGE_CREATION_TIME" property="messageCreationTime" jdbcType="DATE" />
+    <result column="MESSAGE_NUMBER" property="messageNumber" jdbcType="DECIMAL" />
+    <result column="SOURCE_DATABASE_NAME" property="sourceDatabaseName" jdbcType="VARCHAR" />
+    <result column="OBJECT_OWNER" property="objectOwner" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="XID" property="xid" jdbcType="VARCHAR" />
+    <result column="COMMAND_TYPE" property="commandType" jdbcType="VARCHAR" />
+    <result column="TAG" property="tag" jdbcType="VARBINARY" />
+    <result column="TRACKING_ID" property="trackingId" jdbcType="VARBINARY" />
+    <result column="MESSAGE_POSITION" property="messagePosition" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

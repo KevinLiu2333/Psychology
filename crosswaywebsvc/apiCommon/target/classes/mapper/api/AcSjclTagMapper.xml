@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AcSjclTagMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AcSjclTag">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" jdbcType="OTHER" property="id" />
+    <result column="TAG_NAME" jdbcType="OTHER" property="tagName" />
+    <result column="TAG_TYPE" jdbcType="OTHER" property="tagType" />
+    <result column="TAG_LEVEL" jdbcType="DECIMAL" property="tagLevel" />
+    <result column="TAG_DESC" jdbcType="OTHER" property="tagDesc" />
+    <result column="PRE_TAG_ID" jdbcType="OTHER" property="preTagId" />
+    <result column="PRE_TAG_NAME" jdbcType="OTHER" property="preTagName" />
+    <result column="TAG_NUMBER" jdbcType="OTHER" property="tagNumber" />
+    <result column="T_STATUS" jdbcType="OTHER" property="tStatus" />
+    <result column="T_DO" jdbcType="DECIMAL" property="tDo" />
+    <result column="T_ACCESS" jdbcType="DECIMAL" property="tAccess" />
+    <result column="OPERATOR_ID" jdbcType="OTHER" property="operatorId" />
+    <result column="CREATE_DATE" jdbcType="DATE" property="createDate" />
+    <result column="LAST_UPDATE" jdbcType="DATE" property="lastUpdate" />
+    <result column="TAG_PROPERTY" jdbcType="OTHER" property="tagProperty" />
+  </resultMap>
+</mapper>

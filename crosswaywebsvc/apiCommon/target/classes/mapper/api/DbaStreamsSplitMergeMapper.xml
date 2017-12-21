@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaStreamsSplitMergeMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaStreamsSplitMerge" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ORIGINAL_CAPTURE_NAME" property="originalCaptureName" jdbcType="VARCHAR" />
+    <result column="CLONED_CAPTURE_NAME" property="clonedCaptureName" jdbcType="VARCHAR" />
+    <result column="ORIGINAL_CAPTURE_STATUS" property="originalCaptureStatus" jdbcType="VARCHAR" />
+    <result column="CLONED_CAPTURE_STATUS" property="clonedCaptureStatus" jdbcType="VARCHAR" />
+    <result column="ORIGINAL_STREAMS_NAME" property="originalStreamsName" jdbcType="VARCHAR" />
+    <result column="CLONED_STREAMS_NAME" property="clonedStreamsName" jdbcType="VARCHAR" />
+    <result column="STREAMS_TYPE" property="streamsType" jdbcType="VARCHAR" />
+    <result column="SCRIPT_STATUS" property="scriptStatus" jdbcType="VARCHAR" />
+    <result column="ACTION_TYPE" property="actionType" jdbcType="VARCHAR" />
+    <result column="ACTION_THRESHOLD" property="actionThreshold" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="STATUS_UPDATE_TIME" property="statusUpdateTime" jdbcType="TIMESTAMP" />
+    <result column="CREATION_TIME" property="creationTime" jdbcType="TIMESTAMP" />
+    <result column="LAG" property="lag" jdbcType="DECIMAL" />
+    <result column="JOB_OWNER" property="jobOwner" jdbcType="VARCHAR" />
+    <result column="JOB_NAME" property="jobName" jdbcType="VARCHAR" />
+    <result column="JOB_STATE" property="jobState" jdbcType="VARCHAR" />
+    <result column="JOB_NEXT_RUN_DATE" property="jobNextRunDate" jdbcType="VARCHAR" />
+    <result column="ERROR_NUMBER" property="errorNumber" jdbcType="DECIMAL" />
+    <result column="ERROR_MESSAGE" property="errorMessage" jdbcType="VARCHAR" />
+    <result column="RECOVERABLE_SCRIPT_ID" property="recoverableScriptId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

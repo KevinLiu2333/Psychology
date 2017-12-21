@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhStreamsCaptureMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhStreamsCapture" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="CAPTURE_NAME" property="captureName" jdbcType="VARCHAR" />
+    <result column="STARTUP_TIME" property="startupTime" jdbcType="DATE" />
+    <result column="LAG" property="lag" jdbcType="DECIMAL" />
+    <result column="TOTAL_MESSAGES_CAPTURED" property="totalMessagesCaptured" jdbcType="DECIMAL" />
+    <result column="TOTAL_MESSAGES_ENQUEUED" property="totalMessagesEnqueued" jdbcType="DECIMAL" />
+    <result column="ELAPSED_RULE_TIME" property="elapsedRuleTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_ENQUEUE_TIME" property="elapsedEnqueueTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_REDO_WAIT_TIME" property="elapsedRedoWaitTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_PAUSE_TIME" property="elapsedPauseTime" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

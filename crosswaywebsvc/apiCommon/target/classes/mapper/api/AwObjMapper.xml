@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AwObjMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AwObj" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="AWSEQ#" property="awseq" jdbcType="DECIMAL" />
+    <result column="OID" property="oid" jdbcType="DECIMAL" />
+    <result column="OBJNAME" property="objname" jdbcType="VARCHAR" />
+    <result column="GEN#" property="gen" jdbcType="DECIMAL" />
+    <result column="OBJTYPE" property="objtype" jdbcType="DECIMAL" />
+    <result column="PARTNAME" property="partname" jdbcType="VARCHAR" />
+    <result column="OBJDEF" property="objdef" jdbcType="BLOB" />
+    <result column="OBJVALUE" property="objvalue" jdbcType="BLOB" />
+    <result column="COMPCODE" property="compcode" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VXyptDataMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VXyptData">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ZYDM" jdbcType="VARCHAR" property="zydm" />
+    <result column="JTSX" jdbcType="VARCHAR" property="jtsx" />
+    <result column="XXLB" jdbcType="VARCHAR" property="xxlb" />
+    <result column="DWMC" jdbcType="VARCHAR" property="dwmc" />
+    <result column="FYZRR" jdbcType="VARCHAR" property="fyzrr" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="ZJHM" jdbcType="VARCHAR" property="zjhm" />
+    <result column="A1" jdbcType="VARCHAR" property="a1" />
+    <result column="A2" jdbcType="VARCHAR" property="a2" />
+    <result column="A3" jdbcType="VARCHAR" property="a3" />
+    <result column="A4" jdbcType="VARCHAR" property="a4" />
+    <result column="A5" jdbcType="VARCHAR" property="a5" />
+    <result column="A6" jdbcType="VARCHAR" property="a6" />
+    <result column="A7" jdbcType="VARCHAR" property="a7" />
+    <result column="A8" jdbcType="VARCHAR" property="a8" />
+    <result column="A9" jdbcType="VARCHAR" property="a9" />
+    <result column="A10" jdbcType="VARCHAR" property="a10" />
+    <result column="A11" jdbcType="VARCHAR" property="a11" />
+    <result column="A12" jdbcType="VARCHAR" property="a12" />
+    <result column="A13" jdbcType="VARCHAR" property="a13" />
+    <result column="A14" jdbcType="VARCHAR" property="a14" />
+    <result column="A15" jdbcType="VARCHAR" property="a15" />
+    <result column="A16" jdbcType="VARCHAR" property="a16" />
+    <result column="A17" jdbcType="VARCHAR" property="a17" />
+    <result column="A18" jdbcType="VARCHAR" property="a18" />
+    <result column="A19" jdbcType="VARCHAR" property="a19" />
+    <result column="A20" jdbcType="VARCHAR" property="a20" />
+    <result column="MAINID" jdbcType="VARCHAR" property="mainid" />
+    <result column="ID" jdbcType="VARCHAR" property="id" />
+  </resultMap>
+</mapper>

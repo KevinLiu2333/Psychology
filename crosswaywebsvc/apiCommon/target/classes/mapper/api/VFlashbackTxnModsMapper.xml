@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VFlashbackTxnModsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VFlashbackTxnMods" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COMPENSATING_TXN_NAME" property="compensatingTxnName" jdbcType="VARCHAR" />
+    <result column="TXN_NAME" property="txnName" jdbcType="VARCHAR" />
+    <result column="INTERESTING" property="interesting" jdbcType="DECIMAL" />
+    <result column="ORIGINAL" property="original" jdbcType="DECIMAL" />
+    <result column="BACKOUT_SEQ" property="backoutSeq" jdbcType="DECIMAL" />
+    <result column="UNDO_SQL" property="undoSql" jdbcType="VARCHAR" />
+    <result column="UNDO_SQL_SQN" property="undoSqlSqn" jdbcType="DECIMAL" />
+    <result column="UNDO_SQL_SUB_SQN" property="undoSqlSubSqn" jdbcType="DECIMAL" />
+    <result column="BACKOUT_SQL_ID" property="backoutSqlId" jdbcType="DECIMAL" />
+    <result column="OPERATION" property="operation" jdbcType="VARCHAR" />
+    <result column="BACKEDOUT" property="backedout" jdbcType="DECIMAL" />
+    <result column="CONFLICT_MOD" property="conflictMod" jdbcType="DECIMAL" />
+    <result column="MODS_PER_LCR" property="modsPerLcr" jdbcType="DECIMAL" />
+    <result column="COMPENSATING_XID" property="compensatingXid" jdbcType="VARBINARY" />
+    <result column="XID" property="xid" jdbcType="VARBINARY" />
+    <result column="PARENT_XID" property="parentXid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

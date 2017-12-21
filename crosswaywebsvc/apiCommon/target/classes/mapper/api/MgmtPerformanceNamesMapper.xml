@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtPerformanceNamesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtPerformanceNames" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="JOB_NAME" property="jobName" jdbcType="VARCHAR" />
+    <result column="DISPLAY_NAME" property="displayName" jdbcType="VARCHAR" />
+    <result column="DBMS_JOBNAME" property="dbmsJobname" jdbcType="VARCHAR" />
+    <result column="IS_DBMSJOB" property="isDbmsjob" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtPafJobtypeParamsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtPafJobtypeParams" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="JOBTYPE_GUID" property="jobtypeGuid" jdbcType="VARCHAR" />
+    <id column="PARAM_NAME" property="paramName" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="PARAM_VALUE" property="paramValue" jdbcType="VARCHAR" />
+    <result column="IMPLICIT" property="implicit" jdbcType="CHAR" />
+    <result column="SECRET_STATUS" property="secretStatus" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="PARAM_ORDER" property="paramOrder" jdbcType="DECIMAL" />
+    <result column="PARAM_GROUP" property="paramGroup" jdbcType="VARCHAR" />
+    <result column="CONTENT0" property="content0" jdbcType="VARCHAR" />
+    <result column="CONTENT1" property="content1" jdbcType="VARCHAR" />
+    <result column="CONTENT2" property="content2" jdbcType="VARCHAR" />
+    <result column="CONTENT3" property="content3" jdbcType="VARCHAR" />
+    <result column="CONTENT4" property="content4" jdbcType="VARCHAR" />
+    <result column="CONTENT5" property="content5" jdbcType="VARCHAR" />
+    <result column="CONTENT6" property="content6" jdbcType="VARCHAR" />
+    <result column="CONTENT7" property="content7" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigRptGrpDataitemMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigRptGrpDataitem" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="GROUP_ID" property="groupId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="ITEMID_READONLY" property="itemidReadonly" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="DATATYPE" property="datatype" jdbcType="VARCHAR" />
+    <result column="ORACLEDATATYPE" property="oracledatatype" jdbcType="VARCHAR" />
+    <result column="JAVADATATYPE" property="javadatatype" jdbcType="VARCHAR" />
+    <result column="WIDTH" property="width" jdbcType="VARCHAR" />
+    <result column="COLUMNORDER" property="columnorder" jdbcType="VARCHAR" />
+    <result column="LABEL" property="label" jdbcType="VARCHAR" />
+    <result column="DEFAULTWIDTH" property="defaultwidth" jdbcType="VARCHAR" />
+    <result column="DEFAULTHEIGHT" property="defaultheight" jdbcType="VARCHAR" />
+    <result column="VALUEIFNULL" property="valueifnull" jdbcType="VARCHAR" />
+    <result column="INPUTMASK" property="inputmask" jdbcType="VARCHAR" />
+    <result column="SOURCECOLUMN" property="sourcecolumn" jdbcType="VARCHAR" />
+    <result column="READFROMFILE" property="readfromfile" jdbcType="VARCHAR" />
+    <result column="FILEFORMAT" property="fileformat" jdbcType="VARCHAR" />
+    <result column="BREAKORDER" property="breakorder" jdbcType="VARCHAR" />
+    <result column="PLSQLREFID_READONLY" property="plsqlrefidReadonly" jdbcType="VARCHAR" />
+    <result column="COLUMNFLAGS" property="columnflags" jdbcType="VARCHAR" />
+    <result column="DEFAULTLABEL" property="defaultlabel" jdbcType="VARCHAR" />
+    <result column="SELECT_FOR_APP" property="selectForApp" jdbcType="VARCHAR" />
+    <result column="APPLICABLE" property="applicable" jdbcType="VARCHAR" />
+    <result column="COMPLETE" property="complete" jdbcType="VARCHAR" />
+    <result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+    <result column="ASSIGNEE" property="assignee" jdbcType="VARCHAR" />
+    <result column="NOTES" property="notes" jdbcType="VARCHAR" />
+    <result column="TAGS" property="tags" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

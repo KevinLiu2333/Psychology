@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ColMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Col">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" jdbcType="DECIMAL" property="obj" />
+    <result column="COL#" jdbcType="DECIMAL" property="col" />
+    <result column="SEGCOL#" jdbcType="DECIMAL" property="segcol" />
+    <result column="SEGCOLLENGTH" jdbcType="DECIMAL" property="segcollength" />
+    <result column="OFFSET" jdbcType="DECIMAL" property="offset" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="TYPE#" jdbcType="DECIMAL" property="type" />
+    <result column="LENGTH" jdbcType="DECIMAL" property="length" />
+    <result column="FIXEDSTORAGE" jdbcType="DECIMAL" property="fixedstorage" />
+    <result column="PRECISION#" jdbcType="DECIMAL" property="precision" />
+    <result column="SCALE" jdbcType="DECIMAL" property="scale" />
+    <result column="NULL$" jdbcType="DECIMAL" property="null" />
+    <result column="DEFLENGTH" jdbcType="DECIMAL" property="deflength" />
+    <result column="INTCOL#" jdbcType="DECIMAL" property="intcol" />
+    <result column="PROPERTY" jdbcType="DECIMAL" property="property" />
+    <result column="CHARSETID" jdbcType="DECIMAL" property="charsetid" />
+    <result column="CHARSETFORM" jdbcType="DECIMAL" property="charsetform" />
+    <result column="SPARE1" jdbcType="DECIMAL" property="spare1" />
+    <result column="SPARE2" jdbcType="DECIMAL" property="spare2" />
+    <result column="SPARE3" jdbcType="DECIMAL" property="spare3" />
+    <result column="SPARE4" jdbcType="VARCHAR" property="spare4" />
+    <result column="SPARE5" jdbcType="VARCHAR" property="spare5" />
+    <result column="SPARE6" jdbcType="DATE" property="spare6" />
+    <result column="DEFAULT$" jdbcType="LONGVARCHAR" property="default" />
+  </resultMap>
+</mapper>

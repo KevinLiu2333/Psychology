@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SmVersionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SmVersion" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERSION_TEXT" property="versionText" jdbcType="CHAR" />
+    <result column="VERSION_NUMBER" property="versionNumber" jdbcType="DECIMAL" />
+    <result column="CREATED" property="created" jdbcType="DATE" />
+  </resultMap>
+</mapper>

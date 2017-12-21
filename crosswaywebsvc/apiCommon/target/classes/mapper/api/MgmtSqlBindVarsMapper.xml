@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtSqlBindVarsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtSqlBindVars" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="COLLECTION_TIMESTAMP" property="collectionTimestamp" jdbcType="DATE" />
+    <id column="METRIC_NAME" property="metricName" jdbcType="VARCHAR" />
+    <id column="DIGEST" property="digest" jdbcType="VARBINARY" />
+    <result column="LOAD_TIMESTAMP" property="loadTimestamp" jdbcType="DATE" />
+    <result column="APPLICATION" property="application" jdbcType="VARCHAR" />
+    <result column="MODULE" property="module" jdbcType="VARCHAR" />
+    <result column="SHARABLE_MEM" property="sharableMem" jdbcType="DECIMAL" />
+    <result column="PERSISTENT_MEM" property="persistentMem" jdbcType="DECIMAL" />
+    <result column="RUNTIME_MEM" property="runtimeMem" jdbcType="DECIMAL" />
+    <result column="LOADED_VERSIONS" property="loadedVersions" jdbcType="DECIMAL" />
+    <result column="EXECUTIONS" property="executions" jdbcType="DECIMAL" />
+    <result column="LOADS" property="loads" jdbcType="DECIMAL" />
+    <result column="INVALIDATIONS" property="invalidations" jdbcType="DECIMAL" />
+    <result column="PARSE_CALLS" property="parseCalls" jdbcType="DECIMAL" />
+    <result column="PARSING_USER" property="parsingUser" jdbcType="VARCHAR" />
+    <result column="KEPT_VERSIONS" property="keptVersions" jdbcType="DECIMAL" />
+    <result column="HASH_VALUE" property="hashValue" jdbcType="DECIMAL" />
+    <result column="ACTION" property="action" jdbcType="VARCHAR" />
+    <result column="NORMALIZED_DIGEST" property="normalizedDigest" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

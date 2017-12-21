@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VFilePingMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VFilePing" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FILE_NUMBER" property="fileNumber" jdbcType="DECIMAL" />
+    <result column="FREQUENCY" property="frequency" jdbcType="DECIMAL" />
+    <result column="X_2_NULL" property="x2Null" jdbcType="DECIMAL" />
+    <result column="X_2_NULL_FORCED_WRITE" property="x2NullForcedWrite" jdbcType="DECIMAL" />
+    <result column="X_2_NULL_FORCED_STALE" property="x2NullForcedStale" jdbcType="DECIMAL" />
+    <result column="X_2_S" property="x2S" jdbcType="DECIMAL" />
+    <result column="X_2_S_FORCED_WRITE" property="x2SForcedWrite" jdbcType="DECIMAL" />
+    <result column="X_2_SSX" property="x2Ssx" jdbcType="DECIMAL" />
+    <result column="X_2_SSX_FORCED_WRITE" property="x2SsxForcedWrite" jdbcType="DECIMAL" />
+    <result column="S_2_NULL" property="s2Null" jdbcType="DECIMAL" />
+    <result column="S_2_NULL_FORCED_STALE" property="s2NullForcedStale" jdbcType="DECIMAL" />
+    <result column="SS_2_NULL" property="ss2Null" jdbcType="DECIMAL" />
+    <result column="SS_2_RLS" property="ss2Rls" jdbcType="DECIMAL" />
+    <result column="WRB" property="wrb" jdbcType="DECIMAL" />
+    <result column="WRB_FORCED_WRITE" property="wrbForcedWrite" jdbcType="DECIMAL" />
+    <result column="RBR" property="rbr" jdbcType="DECIMAL" />
+    <result column="RBR_FORCED_WRITE" property="rbrForcedWrite" jdbcType="DECIMAL" />
+    <result column="RBR_FORCED_STALE" property="rbrForcedStale" jdbcType="DECIMAL" />
+    <result column="CBR" property="cbr" jdbcType="DECIMAL" />
+    <result column="CBR_FORCED_WRITE" property="cbrForcedWrite" jdbcType="DECIMAL" />
+    <result column="NULL_2_X" property="null2X" jdbcType="DECIMAL" />
+    <result column="S_2_X" property="s2X" jdbcType="DECIMAL" />
+    <result column="SSX_2_X" property="ssx2X" jdbcType="DECIMAL" />
+    <result column="NULL_2_S" property="null2S" jdbcType="DECIMAL" />
+    <result column="NULL_2_SS" property="null2Ss" jdbcType="DECIMAL" />
+    <result column="OP_2_SS" property="op2Ss" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

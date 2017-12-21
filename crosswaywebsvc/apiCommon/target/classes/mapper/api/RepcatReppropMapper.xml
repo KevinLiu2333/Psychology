@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RepcatReppropMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RepcatRepprop">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAME" jdbcType="VARCHAR" property="sname" />
+    <result column="ONAME" jdbcType="VARCHAR" property="oname" />
+    <result column="TYPE" jdbcType="VARCHAR" property="type" />
+    <result column="DBLINK" jdbcType="VARCHAR" property="dblink" />
+    <result column="HOW" jdbcType="VARCHAR" property="how" />
+    <result column="PROPAGATE_COMMENT" jdbcType="VARCHAR" property="propagateComment" />
+  </resultMap>
+</mapper>

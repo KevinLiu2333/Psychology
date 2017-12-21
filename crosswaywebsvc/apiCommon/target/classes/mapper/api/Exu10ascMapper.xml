@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu10ascMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu10asc" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TOBJID" property="tobjid" jdbcType="DECIMAL" />
+    <result column="POBJID" property="pobjid" jdbcType="DECIMAL" />
+    <result column="TOWNERID" property="townerid" jdbcType="DECIMAL" />
+    <result column="COLNAME" property="colname" jdbcType="VARCHAR" />
+    <result column="INTCOL" property="intcol" jdbcType="DECIMAL" />
+    <result column="DISTCOUNT" property="distcount" jdbcType="DECIMAL" />
+    <result column="DENSITY" property="density" jdbcType="DECIMAL" />
+    <result column="NULLCOUNT" property="nullcount" jdbcType="DECIMAL" />
+    <result column="AVGCLN" property="avgcln" jdbcType="DECIMAL" />
+    <result column="CFLAGS" property="cflags" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="LOWVAL" property="lowval" jdbcType="VARBINARY" />
+    <result column="HIVAL" property="hival" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

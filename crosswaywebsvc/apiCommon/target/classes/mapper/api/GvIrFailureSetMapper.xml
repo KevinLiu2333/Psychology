@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvIrFailureSetMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvIrFailureSet" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="ADVISE_ID" property="adviseId" jdbcType="DECIMAL" />
+    <result column="FAILURE_ID" property="failureId" jdbcType="DECIMAL" />
+    <result column="MANUAL_REPAIRS_ONLY" property="manualRepairsOnly" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

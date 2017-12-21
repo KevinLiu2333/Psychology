@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.EmIpwInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.EmIpwInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="PWD_IDX" property="pwdIdx" jdbcType="VARCHAR" />
+    <result column="IPW" property="ipw" jdbcType="VARCHAR" />
+    <result column="DESC_STR" property="descStr" jdbcType="VARCHAR" />
+    <result column="PWD_TYPE" property="pwdType" jdbcType="VARCHAR" />
+    <result column="EXPIRE_DATE" property="expireDate" jdbcType="DATE" />
+  </resultMap>
+</mapper>

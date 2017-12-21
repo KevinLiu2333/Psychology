@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuStrmcolViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuStrmcolView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="COL_NUM" property="colNum" jdbcType="DECIMAL" />
+    <result column="INTCOL_NUM" property="intcolNum" jdbcType="DECIMAL" />
+    <result column="SEGCOL_NUM" property="segcolNum" jdbcType="DECIMAL" />
+    <result column="COL_SORTKEY" property="colSortkey" jdbcType="DECIMAL" />
+    <result column="BASE_INTCOL_NUM" property="baseIntcolNum" jdbcType="DECIMAL" />
+    <result column="BASE_COL_TYPE" property="baseColType" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="ATTRNAME" property="attrname" jdbcType="VARCHAR" />
+    <result column="TYPE_NUM" property="typeNum" jdbcType="DECIMAL" />
+    <result column="LENGTH" property="length" jdbcType="DECIMAL" />
+    <result column="PRECISION_NUM" property="precisionNum" jdbcType="DECIMAL" />
+    <result column="SCALE" property="scale" jdbcType="DECIMAL" />
+    <result column="NOT_NULL" property="notNull" jdbcType="DECIMAL" />
+    <result column="CHARSETID" property="charsetid" jdbcType="DECIMAL" />
+    <result column="CHARSETFORM" property="charsetform" jdbcType="DECIMAL" />
+    <result column="CHARLENGTH" property="charlength" jdbcType="DECIMAL" />
+    <result column="LOB_PROPERTY" property="lobProperty" jdbcType="DECIMAL" />
+    <result column="TYPEMD" property="typemd" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

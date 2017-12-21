@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Ku101AuditViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Ku101AuditView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="USER_NUM" property="userNum" jdbcType="DECIMAL" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="PROXY_NUM" property="proxyNum" jdbcType="DECIMAL" />
+    <result column="AUDIT_OPTION" property="auditOption" jdbcType="VARCHAR" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="SUCCESS" property="success" jdbcType="DECIMAL" />
+    <result column="FAILURE" property="failure" jdbcType="DECIMAL" />
+    <result column="OPTION_NUM" property="optionNum" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

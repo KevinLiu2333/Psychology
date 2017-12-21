@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrrReplayScnOrderMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrrReplayScnOrder" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="POST_COMMIT_SCN" property="postCommitScn" jdbcType="DECIMAL" />
+    <id column="STREAM_ID" property="streamId" jdbcType="DECIMAL" />
+    <result column="CALL_ID" property="callId" jdbcType="DECIMAL" />
+    <result column="CALL_TIME" property="callTime" jdbcType="DECIMAL" />
+    <result column="MODULE" property="module" jdbcType="VARCHAR" />
+    <result column="ACTION" property="action" jdbcType="VARCHAR" />
+    <result column="ECID" property="ecid" jdbcType="VARCHAR" />
+    <result column="ECID_HASH" property="ecidHash" jdbcType="DECIMAL" />
+    <result column="VALID" property="valid" jdbcType="CHAR" />
+  </resultMap>
+</mapper>

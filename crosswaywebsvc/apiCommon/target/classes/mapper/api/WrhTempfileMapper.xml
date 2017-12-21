@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhTempfileMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhTempfile" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="FILE#" property="file" jdbcType="DECIMAL" />
+    <id column="CREATION_CHANGE#" property="creationChange" jdbcType="DECIMAL" />
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="FILENAME" property="filename" jdbcType="VARCHAR" />
+    <result column="TS#" property="ts" jdbcType="DECIMAL" />
+    <result column="TSNAME" property="tsname" jdbcType="VARCHAR" />
+    <result column="BLOCK_SIZE" property="blockSize" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

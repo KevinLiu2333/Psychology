@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowUsersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowUsers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="USER_ID" property="userId" jdbcType="DECIMAL" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="FIRST_NAME" property="firstName" jdbcType="VARCHAR" />
+    <result column="LAST_NAME" property="lastName" jdbcType="VARCHAR" />
+    <result column="KNOWN_AS" property="knownAs" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATE_DATE" property="lastUpdateDate" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="CREATION_DATE" property="creationDate" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="START_DATE" property="startDate" jdbcType="DATE" />
+    <result column="END_DATE" property="endDate" jdbcType="DATE" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="PASSWORD_DATE" property="passwordDate" jdbcType="DATE" />
+    <result column="PASSWORD_ACCESSES_LEFT" property="passwordAccessesLeft" jdbcType="DECIMAL" />
+    <result column="PASSWORD_LIFESPAN_ACCESSES" property="passwordLifespanAccesses" jdbcType="DECIMAL" />
+    <result column="PASSWORD_LIFESPAN_DAYS" property="passwordLifespanDays" jdbcType="DECIMAL" />
+    <result column="EMPLOYEE_ID" property="employeeId" jdbcType="DECIMAL" />
+    <result column="PERSON_TYPE" property="personType" jdbcType="VARCHAR" />
+    <result column="EMAIL_ADDRESS" property="emailAddress" jdbcType="VARCHAR" />
+    <result column="PERSON_ID" property="personId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="DEFAULT_SCHEMA" property="defaultSchema" jdbcType="VARCHAR" />
+    <result column="ALLOW_ACCESS_TO_SCHEMAS" property="allowAccessToSchemas" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_01" property="attribute01" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_02" property="attribute02" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_03" property="attribute03" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_04" property="attribute04" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_05" property="attribute05" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_06" property="attribute06" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_07" property="attribute07" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_08" property="attribute08" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_09" property="attribute09" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_10" property="attribute10" jdbcType="VARCHAR" />
+    <result column="LAST_LOGIN" property="lastLogin" jdbcType="DATE" />
+    <result column="BUILDER_LOGIN_COUNT" property="builderLoginCount" jdbcType="DECIMAL" />
+    <result column="LAST_AGENT" property="lastAgent" jdbcType="VARCHAR" />
+    <result column="LAST_IP" property="lastIp" jdbcType="VARCHAR" />
+    <result column="ACCOUNT_LOCKED" property="accountLocked" jdbcType="VARCHAR" />
+    <result column="ACCOUNT_EXPIRY" property="accountExpiry" jdbcType="DATE" />
+    <result column="FAILED_ACCESS_ATTEMPTS" property="failedAccessAttempts" jdbcType="DECIMAL" />
+    <result column="FIRST_PASSWORD_USE_OCCURRED" property="firstPasswordUseOccurred" jdbcType="VARCHAR" />
+    <result column="CHANGE_PASSWORD_ON_FIRST_USE" property="changePasswordOnFirstUse" jdbcType="VARCHAR" />
+    <result column="LAST_FAILED_LOGIN" property="lastFailedLogin" jdbcType="DATE" />
+  </resultMap>
+</mapper>

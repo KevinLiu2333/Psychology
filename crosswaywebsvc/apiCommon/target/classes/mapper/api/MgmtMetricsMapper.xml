@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtMetricsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtMetrics" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <id column="METRIC_NAME" property="metricName" jdbcType="VARCHAR" />
+    <id column="METRIC_COLUMN" property="metricColumn" jdbcType="VARCHAR" />
+    <id column="TYPE_META_VER" property="typeMetaVer" jdbcType="VARCHAR" />
+    <id column="CATEGORY_PROP_1" property="categoryProp1" jdbcType="VARCHAR" />
+    <id column="CATEGORY_PROP_2" property="categoryProp2" jdbcType="VARCHAR" />
+    <id column="CATEGORY_PROP_3" property="categoryProp3" jdbcType="VARCHAR" />
+    <id column="CATEGORY_PROP_4" property="categoryProp4" jdbcType="VARCHAR" />
+    <id column="CATEGORY_PROP_5" property="categoryProp5" jdbcType="VARCHAR" />
+    <result column="METRIC_TYPE" property="metricType" jdbcType="DECIMAL" />
+    <result column="USAGE_TYPE" property="usageType" jdbcType="DECIMAL" />
+    <result column="COLUMN_LABEL" property="columnLabel" jdbcType="VARCHAR" />
+    <result column="COLUMN_LABEL_NLSID" property="columnLabelNlsid" jdbcType="VARCHAR" />
+    <result column="METRIC_LABEL" property="metricLabel" jdbcType="VARCHAR" />
+    <result column="METRIC_LABEL_NLSID" property="metricLabelNlsid" jdbcType="VARCHAR" />
+    <result column="KEY_COLUMN" property="keyColumn" jdbcType="VARCHAR" />
+    <result column="KEY_ORDER" property="keyOrder" jdbcType="DECIMAL" />
+    <result column="NUM_KEYS" property="numKeys" jdbcType="DECIMAL" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION_NLSID" property="descriptionNlsid" jdbcType="VARCHAR" />
+    <result column="UNIT" property="unit" jdbcType="VARCHAR" />
+    <result column="UNIT_NLSID" property="unitNlsid" jdbcType="VARCHAR" />
+    <result column="SHORT_NAME" property="shortName" jdbcType="VARCHAR" />
+    <result column="SHORT_NAME_NLSID" property="shortNameNlsid" jdbcType="VARCHAR" />
+    <result column="IS_FOR_SUMMARY" property="isForSummary" jdbcType="DECIMAL" />
+    <result column="KEYS_FROM_MULT_COLLS" property="keysFromMultColls" jdbcType="DECIMAL" />
+    <result column="STATEFULL" property="statefull" jdbcType="DECIMAL" />
+    <result column="IS_REPOSITORY" property="isRepository" jdbcType="DECIMAL" />
+    <result column="AUTHOR" property="author" jdbcType="VARCHAR" />
+    <result column="SOURCE_TYPE" property="sourceType" jdbcType="DECIMAL" />
+    <result column="SOURCE" property="source" jdbcType="VARCHAR" />
+    <result column="LOAD_TIMESTAMP" property="loadTimestamp" jdbcType="DATE" />
+    <result column="IS_TRANSPOSED" property="isTransposed" jdbcType="DECIMAL" />
+    <result column="IS_TEST_METRIC" property="isTestMetric" jdbcType="DECIMAL" />
+    <result column="HAS_PUSH" property="hasPush" jdbcType="DECIMAL" />
+    <result column="HAS_PULL" property="hasPull" jdbcType="DECIMAL" />
+    <result column="REMOTE" property="remote" jdbcType="DECIMAL" />
+    <result column="REPO_TIMING_ENABLED" property="repoTimingEnabled" jdbcType="DECIMAL" />
+    <result column="NON_THRESHOLDED_ALERTS" property="nonThresholdedAlerts" jdbcType="DECIMAL" />
+    <result column="KEYONLY_THRESHOLDS" property="keyonlyThresholds" jdbcType="DECIMAL" />
+    <result column="IS_LONG_RUNNING" property="isLongRunning" jdbcType="DECIMAL" />
+    <result column="IS_RENDERABLE" property="isRenderable" jdbcType="DECIMAL" />
+    <result column="EVAL_FUNC" property="evalFunc" jdbcType="VARCHAR" />
+    <result column="METRIC_GUID" property="metricGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

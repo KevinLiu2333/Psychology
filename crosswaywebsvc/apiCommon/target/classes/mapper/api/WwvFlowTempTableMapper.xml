@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowTempTableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowTempTable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="R" property="r" jdbcType="DECIMAL" />
+    <result column="C001" property="c001" jdbcType="VARCHAR" />
+    <result column="C002" property="c002" jdbcType="VARCHAR" />
+    <result column="C003" property="c003" jdbcType="VARCHAR" />
+    <result column="C004" property="c004" jdbcType="VARCHAR" />
+    <result column="C005" property="c005" jdbcType="VARCHAR" />
+    <result column="C006" property="c006" jdbcType="VARCHAR" />
+    <result column="C007" property="c007" jdbcType="VARCHAR" />
+    <result column="C008" property="c008" jdbcType="VARCHAR" />
+    <result column="C009" property="c009" jdbcType="VARCHAR" />
+    <result column="C010" property="c010" jdbcType="VARCHAR" />
+    <result column="C011" property="c011" jdbcType="VARCHAR" />
+    <result column="C012" property="c012" jdbcType="VARCHAR" />
+    <result column="C013" property="c013" jdbcType="VARCHAR" />
+    <result column="C014" property="c014" jdbcType="VARCHAR" />
+    <result column="C015" property="c015" jdbcType="VARCHAR" />
+    <result column="C016" property="c016" jdbcType="VARCHAR" />
+    <result column="C017" property="c017" jdbcType="VARCHAR" />
+    <result column="C018" property="c018" jdbcType="VARCHAR" />
+    <result column="C019" property="c019" jdbcType="VARCHAR" />
+    <result column="C020" property="c020" jdbcType="VARCHAR" />
+    <result column="C021" property="c021" jdbcType="VARCHAR" />
+    <result column="C022" property="c022" jdbcType="VARCHAR" />
+    <result column="C023" property="c023" jdbcType="VARCHAR" />
+    <result column="C024" property="c024" jdbcType="VARCHAR" />
+    <result column="C025" property="c025" jdbcType="VARCHAR" />
+    <result column="C026" property="c026" jdbcType="VARCHAR" />
+    <result column="C027" property="c027" jdbcType="VARCHAR" />
+    <result column="C028" property="c028" jdbcType="VARCHAR" />
+    <result column="C029" property="c029" jdbcType="VARCHAR" />
+    <result column="C030" property="c030" jdbcType="VARCHAR" />
+    <result column="C031" property="c031" jdbcType="VARCHAR" />
+    <result column="C032" property="c032" jdbcType="VARCHAR" />
+    <result column="C033" property="c033" jdbcType="VARCHAR" />
+    <result column="C034" property="c034" jdbcType="VARCHAR" />
+    <result column="C035" property="c035" jdbcType="VARCHAR" />
+    <result column="C036" property="c036" jdbcType="VARCHAR" />
+    <result column="C037" property="c037" jdbcType="VARCHAR" />
+    <result column="C038" property="c038" jdbcType="VARCHAR" />
+    <result column="C039" property="c039" jdbcType="VARCHAR" />
+    <result column="C040" property="c040" jdbcType="VARCHAR" />
+    <result column="C041" property="c041" jdbcType="VARCHAR" />
+    <result column="C042" property="c042" jdbcType="VARCHAR" />
+    <result column="C043" property="c043" jdbcType="VARCHAR" />
+    <result column="C044" property="c044" jdbcType="VARCHAR" />
+    <result column="C045" property="c045" jdbcType="VARCHAR" />
+    <result column="C046" property="c046" jdbcType="VARCHAR" />
+    <result column="C047" property="c047" jdbcType="VARCHAR" />
+    <result column="C048" property="c048" jdbcType="VARCHAR" />
+    <result column="C049" property="c049" jdbcType="VARCHAR" />
+    <result column="C050" property="c050" jdbcType="VARCHAR" />
+    <result column="C051" property="c051" jdbcType="VARCHAR" />
+    <result column="C052" property="c052" jdbcType="VARCHAR" />
+    <result column="C053" property="c053" jdbcType="VARCHAR" />
+    <result column="C054" property="c054" jdbcType="VARCHAR" />
+    <result column="C055" property="c055" jdbcType="VARCHAR" />
+    <result column="C056" property="c056" jdbcType="VARCHAR" />
+    <result column="C057" property="c057" jdbcType="VARCHAR" />
+    <result column="C058" property="c058" jdbcType="VARCHAR" />
+    <result column="C059" property="c059" jdbcType="VARCHAR" />
+    <result column="C060" property="c060" jdbcType="VARCHAR" />
+    <result column="C061" property="c061" jdbcType="VARCHAR" />
+    <result column="C062" property="c062" jdbcType="VARCHAR" />
+    <result column="C063" property="c063" jdbcType="VARCHAR" />
+    <result column="C064" property="c064" jdbcType="VARCHAR" />
+    <result column="C065" property="c065" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

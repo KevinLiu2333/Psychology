@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtTargetMetricCollectionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtTargetMetricCollections" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="METRIC_NAME" property="metricName" jdbcType="VARCHAR" />
+    <result column="METRIC_COLUMN" property="metricColumn" jdbcType="VARCHAR" />
+    <result column="COLLECTION_NAME" property="collectionName" jdbcType="VARCHAR" />
+    <result column="IS_ENABLED" property="isEnabled" jdbcType="DECIMAL" />
+    <result column="IS_REPOSITORY" property="isRepository" jdbcType="DECIMAL" />
+    <result column="FREQUENCY_CODE" property="frequencyCode" jdbcType="VARCHAR" />
+    <result column="COLLECTION_FREQUENCY" property="collectionFrequency" jdbcType="VARCHAR" />
+    <result column="UPLOAD_POLICY" property="uploadPolicy" jdbcType="DECIMAL" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <result column="METRIC_GUID" property="metricGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

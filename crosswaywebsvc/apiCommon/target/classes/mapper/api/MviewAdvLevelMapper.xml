@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MviewAdvLevelMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MviewAdvLevel" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="RUNID#" property="runid" jdbcType="DECIMAL" />
+    <id column="LEVELID#" property="levelid" jdbcType="DECIMAL" />
+    <result column="DIMOBJ#" property="dimobj" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="TBLOBJ#" property="tblobj" jdbcType="DECIMAL" />
+    <result column="LEVELNAME" property="levelname" jdbcType="VARCHAR" />
+    <result column="COLUMNLIST" property="columnlist" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.PstubtblMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Pstubtbl" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="DBNAME" property="dbname" jdbcType="VARCHAR" />
+    <result column="LUN" property="lun" jdbcType="VARCHAR" />
+    <result column="LUTYPE" property="lutype" jdbcType="VARCHAR" />
+    <result column="LINENO" property="lineno" jdbcType="DECIMAL" />
+    <result column="LINE" property="line" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

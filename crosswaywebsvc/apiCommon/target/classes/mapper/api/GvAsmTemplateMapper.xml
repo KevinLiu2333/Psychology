@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvAsmTemplateMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvAsmTemplate" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="GROUP_NUMBER" property="groupNumber" jdbcType="DECIMAL" />
+    <result column="ENTRY_NUMBER" property="entryNumber" jdbcType="DECIMAL" />
+    <result column="REDUNDANCY" property="redundancy" jdbcType="VARCHAR" />
+    <result column="STRIPE" property="stripe" jdbcType="VARCHAR" />
+    <result column="SYSTEM" property="system" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="PRIMARY_REGION" property="primaryRegion" jdbcType="VARCHAR" />
+    <result column="MIRROR_REGION" property="mirrorRegion" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

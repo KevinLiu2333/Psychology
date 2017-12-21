@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuFindNtabAttrcolViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuFindNtabAttrcolView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER_NAME" property="ownerName" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="COL_NAME" property="colName" jdbcType="VARCHAR" />
+    <result column="ATTR_COLNAME" property="attrColname" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AqAqMemMcSMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AqAqMemMcS">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SUBSCRIBER_ID" jdbcType="DECIMAL" property="subscriberId" />
+    <result column="QUEUE_NAME" jdbcType="VARCHAR" property="queueName" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="ADDRESS" jdbcType="VARCHAR" property="address" />
+    <result column="PROTOCOL" jdbcType="DECIMAL" property="protocol" />
+    <result column="SUBSCRIBER_TYPE" jdbcType="DECIMAL" property="subscriberType" />
+    <result column="RULE_NAME" jdbcType="VARCHAR" property="ruleName" />
+    <result column="TRANS_NAME" jdbcType="VARCHAR" property="transName" />
+    <result column="RULESET_NAME" jdbcType="VARCHAR" property="rulesetName" />
+    <result column="NEGATIVE_RULESET_NAME" jdbcType="VARCHAR" property="negativeRulesetName" />
+    <result column="CREATION_TIME" jdbcType="OTHER" property="creationTime" />
+    <result column="MODIFICATION_TIME" jdbcType="OTHER" property="modificationTime" />
+    <result column="DELETION_TIME" jdbcType="OTHER" property="deletionTime" />
+    <result column="SCN_AT_REMOVE" jdbcType="DECIMAL" property="scnAtRemove" />
+    <result column="SCN_AT_ADD" jdbcType="DECIMAL" property="scnAtAdd" />
+  </resultMap>
+</mapper>

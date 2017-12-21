@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CwmFactleveluseMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CwmFactleveluse" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="IRID" property="irid" jdbcType="DECIMAL" />
+    <result column="FACTLEVELGROUP_IRID" property="factlevelgroupIrid" jdbcType="DECIMAL" />
+    <result column="LEVEL_IRID" property="levelIrid" jdbcType="DECIMAL" />
+    <result column="FOREIGNKEY_IRID" property="foreignkeyIrid" jdbcType="DECIMAL" />
+    <result column="CUBEDIMENSIONUSE_IRID" property="cubedimensionuseIrid" jdbcType="DECIMAL" />
+    <result column="DATE_CHANGED" property="dateChanged" jdbcType="DATE" />
+    <result column="DATE_CREATED" property="dateCreated" jdbcType="DATE" />
+    <result column="IVID" property="ivid" jdbcType="DECIMAL" />
+    <result column="NOTM" property="notm" jdbcType="DECIMAL" />
+    <result column="TYPES" property="types" jdbcType="DECIMAL" />
+    <result column="USER_CHANGED_BY" property="userChangedBy" jdbcType="VARCHAR" />
+    <result column="USER_CREATED_BY" property="userCreatedBy" jdbcType="VARCHAR" />
+    <result column="DIMENSION_OWNER" property="dimensionOwner" jdbcType="VARCHAR" />
+    <result column="DIMENSION_NAME" property="dimensionName" jdbcType="VARCHAR" />
+    <result column="LEVEL_NAME" property="levelName" jdbcType="VARCHAR" />
+    <result column="FOREIGN_KEY_OWNER" property="foreignKeyOwner" jdbcType="VARCHAR" />
+    <result column="FOREIGN_KEY_NAME" property="foreignKeyName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

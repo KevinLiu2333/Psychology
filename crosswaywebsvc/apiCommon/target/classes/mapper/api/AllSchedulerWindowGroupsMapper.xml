@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllSchedulerWindowGroupsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllSchedulerWindowGroups" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WINDOW_GROUP_NAME" property="windowGroupName" jdbcType="VARCHAR" />
+    <result column="ENABLED" property="enabled" jdbcType="VARCHAR" />
+    <result column="NUMBER_OF_WINDOWS" property="numberOfWindows" jdbcType="DECIMAL" />
+    <result column="NEXT_START_DATE" property="nextStartDate" jdbcType="VARCHAR" />
+    <result column="COMMENTS" property="comments" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

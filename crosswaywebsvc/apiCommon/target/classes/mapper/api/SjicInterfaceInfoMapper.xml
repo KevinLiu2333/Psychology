@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SjicInterfaceInfoMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SjicInterfaceInfo">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" jdbcType="OTHER" property="id" />
+    <result column="NAME" jdbcType="OTHER" property="name" />
+    <result column="TYPE" jdbcType="OTHER" property="type" />
+    <result column="DEPARTMENT" jdbcType="OTHER" property="department" />
+    <result column="ADDRESS" jdbcType="OTHER" property="address" />
+    <result column="UPDATE_TIME" jdbcType="DATE" property="updateTime" />
+    <result column="STATUS" jdbcType="OTHER" property="status" />
+    <result column="SPACE_NAME" jdbcType="OTHER" property="spaceName" />
+    <result column="SERVICE_NAME" jdbcType="OTHER" property="serviceName" />
+    <result column="PARAM" jdbcType="OTHER" property="param" />
+    <result column="PARAM_TYPE" jdbcType="OTHER" property="paramType" />
+    <result column="DATA" jdbcType="OTHER" property="data" />
+    <result column="JOIN_ID" jdbcType="OTHER" property="joinId" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoTxnIdxExpUpdRgnMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoTxnIdxExpUpdRgn" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SDO_TXN_IDX_ID" property="sdoTxnIdxId" jdbcType="VARCHAR" />
+    <id column="RID" property="rid" jdbcType="VARCHAR" />
+    <result column="START_1" property="start1" jdbcType="DECIMAL" />
+    <result column="END_1" property="end1" jdbcType="DECIMAL" />
+    <result column="START_2" property="start2" jdbcType="DECIMAL" />
+    <result column="END_2" property="end2" jdbcType="DECIMAL" />
+    <result column="START_3" property="start3" jdbcType="DECIMAL" />
+    <result column="END_3" property="end3" jdbcType="DECIMAL" />
+    <result column="START_4" property="start4" jdbcType="DECIMAL" />
+    <result column="END_4" property="end4" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

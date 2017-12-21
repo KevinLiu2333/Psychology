@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SchedulerProgramMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SchedulerProgram" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="ACTION" property="action" jdbcType="VARCHAR" />
+    <result column="NUMBER_OF_ARGS" property="numberOfArgs" jdbcType="DECIMAL" />
+    <result column="COMMENTS" property="comments" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="SCHEDULE_LIMIT" property="scheduleLimit" jdbcType="OTHER" />
+    <result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+    <result column="JOB_WEIGHT" property="jobWeight" jdbcType="DECIMAL" />
+    <result column="MAX_RUNS" property="maxRuns" jdbcType="DECIMAL" />
+    <result column="MAX_FAILURES" property="maxFailures" jdbcType="DECIMAL" />
+    <result column="MAX_RUN_DURATION" property="maxRunDuration" jdbcType="OTHER" />
+    <result column="NLS_ENV" property="nlsEnv" jdbcType="VARCHAR" />
+    <result column="RUN_COUNT" property="runCount" jdbcType="DECIMAL" />
+    <result column="ENV" property="env" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaHistRsrcConsumerGroupMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaHistRsrcConsumerGroup" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="SEQUENCE#" property="sequence" jdbcType="DECIMAL" />
+    <result column="CONSUMER_GROUP_ID" property="consumerGroupId" jdbcType="DECIMAL" />
+    <result column="CONSUMER_GROUP_NAME" property="consumerGroupName" jdbcType="VARCHAR" />
+    <result column="REQUESTS" property="requests" jdbcType="DECIMAL" />
+    <result column="CPU_WAIT_TIME" property="cpuWaitTime" jdbcType="DECIMAL" />
+    <result column="CPU_WAITS" property="cpuWaits" jdbcType="DECIMAL" />
+    <result column="CONSUMED_CPU_TIME" property="consumedCpuTime" jdbcType="DECIMAL" />
+    <result column="YIELDS" property="yields" jdbcType="DECIMAL" />
+    <result column="ACTIVE_SESS_LIMIT_HIT" property="activeSessLimitHit" jdbcType="DECIMAL" />
+    <result column="UNDO_LIMIT_HIT" property="undoLimitHit" jdbcType="DECIMAL" />
+    <result column="SWITCHES_IN_CPU_TIME" property="switchesInCpuTime" jdbcType="DECIMAL" />
+    <result column="SWITCHES_OUT_CPU_TIME" property="switchesOutCpuTime" jdbcType="DECIMAL" />
+    <result column="SWITCHES_IN_IO_MEGABYTES" property="switchesInIoMegabytes" jdbcType="DECIMAL" />
+    <result column="SWITCHES_OUT_IO_MEGABYTES" property="switchesOutIoMegabytes" jdbcType="DECIMAL" />
+    <result column="SWITCHES_IN_IO_REQUESTS" property="switchesInIoRequests" jdbcType="DECIMAL" />
+    <result column="SWITCHES_OUT_IO_REQUESTS" property="switchesOutIoRequests" jdbcType="DECIMAL" />
+    <result column="SQL_CANCELED" property="sqlCanceled" jdbcType="DECIMAL" />
+    <result column="ACTIVE_SESS_KILLED" property="activeSessKilled" jdbcType="DECIMAL" />
+    <result column="IDLE_SESS_KILLED" property="idleSessKilled" jdbcType="DECIMAL" />
+    <result column="IDLE_BLKR_SESS_KILLED" property="idleBlkrSessKilled" jdbcType="DECIMAL" />
+    <result column="QUEUED_TIME" property="queuedTime" jdbcType="DECIMAL" />
+    <result column="QUEUE_TIME_OUTS" property="queueTimeOuts" jdbcType="DECIMAL" />
+    <result column="IO_SERVICE_TIME" property="ioServiceTime" jdbcType="DECIMAL" />
+    <result column="IO_SERVICE_WAITS" property="ioServiceWaits" jdbcType="DECIMAL" />
+    <result column="SMALL_READ_MEGABYTES" property="smallReadMegabytes" jdbcType="DECIMAL" />
+    <result column="SMALL_WRITE_MEGABYTES" property="smallWriteMegabytes" jdbcType="DECIMAL" />
+    <result column="LARGE_READ_MEGABYTES" property="largeReadMegabytes" jdbcType="DECIMAL" />
+    <result column="LARGE_WRITE_MEGABYTES" property="largeWriteMegabytes" jdbcType="DECIMAL" />
+    <result column="SMALL_READ_REQUESTS" property="smallReadRequests" jdbcType="DECIMAL" />
+    <result column="SMALL_WRITE_REQUESTS" property="smallWriteRequests" jdbcType="DECIMAL" />
+    <result column="LARGE_READ_REQUESTS" property="largeReadRequests" jdbcType="DECIMAL" />
+    <result column="LARGE_WRITE_REQUESTS" property="largeWriteRequests" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

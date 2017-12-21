@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrPolicyTabMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrPolicyTab" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PLT_POLICY" property="pltPolicy" jdbcType="CHAR" />
+    <result column="PLT_LANGCOL" property="pltLangcol" jdbcType="CHAR" />
+  </resultMap>
+</mapper>

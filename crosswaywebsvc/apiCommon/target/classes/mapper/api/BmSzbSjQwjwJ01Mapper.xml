@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.BmSzbSjQwjwJ01Mapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.BmSzbSjQwjwJ01" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="QWJW_J01_ID" property="qwjwJ01Id" jdbcType="VARCHAR" />
+    <result column="ID_CARD" property="idCard" jdbcType="VARCHAR" />
+    <result column="GL_TYPE" property="glType" jdbcType="VARCHAR" />
+    <result column="IF_MARRY" property="ifMarry" jdbcType="VARCHAR" />
+    <result column="HJ_PLACE" property="hjPlace" jdbcType="VARCHAR" />
+    <result column="HJ_ADDRESS" property="hjAddress" jdbcType="VARCHAR" />
+    <result column="JZ_PLACE" property="jzPlace" jdbcType="VARCHAR" />
+    <result column="JZ_ADDRESS" property="jzAddress" jdbcType="VARCHAR" />
+    <result column="PHONE" property="phone" jdbcType="VARCHAR" />
+    <result column="ZN1_NAME" property="zn1Name" jdbcType="VARCHAR" />
+    <result column="ZN2_NAME" property="zn2Name" jdbcType="VARCHAR" />
+    <result column="ZN3_NAME" property="zn3Name" jdbcType="VARCHAR" />
+    <result column="IF_CARD" property="ifCard" jdbcType="VARCHAR" />
+    <result column="DSZN_CARD_NO" property="dsznCardNo" jdbcType="VARCHAR" />
+    <result column="BYCS" property="bycs" jdbcType="VARCHAR" />
+    <result column="PO_NAME" property="poName" jdbcType="VARCHAR" />
+    <result column="BELONG_TOWN" property="belongTown" jdbcType="VARCHAR" />
+    <result column="BELONG_COMMUNITY" property="belongCommunity" jdbcType="VARCHAR" />
+    <result column="TASK_NO" property="taskNo" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

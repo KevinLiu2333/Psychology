@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SchedulerFilewatcherResendMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SchedulerFilewatcherResend" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DESTINATION" property="destination" jdbcType="VARCHAR" />
+    <result column="FW_OWNER" property="fwOwner" jdbcType="VARCHAR" />
+    <result column="FW_NAME" property="fwName" jdbcType="VARCHAR" />
+    <result column="INS_TSTAMP" property="insTstamp" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

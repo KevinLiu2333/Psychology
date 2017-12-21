@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu8colnnMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu8colnn" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TOBJID" property="tobjid" jdbcType="DECIMAL" />
+    <result column="INTCOLID" property="intcolid" jdbcType="DECIMAL" />
+    <result column="CONNAME" property="conname" jdbcType="VARCHAR" />
+    <result column="ISNULL" property="isnull" jdbcType="DECIMAL" />
+    <result column="ENABLED" property="enabled" jdbcType="DECIMAL" />
+    <result column="DEFER" property="defer" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

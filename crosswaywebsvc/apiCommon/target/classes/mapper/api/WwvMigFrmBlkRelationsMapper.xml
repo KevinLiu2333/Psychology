@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigFrmBlkRelationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigFrmBlkRelations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="BLOCK_ID" property="blockId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="RELATIONTYPE" property="relationtype" jdbcType="VARCHAR" />
+    <result column="AUTOQUERY" property="autoquery" jdbcType="VARCHAR" />
+    <result column="DELETERECORD" property="deleterecord" jdbcType="VARCHAR" />
+    <result column="DETAILBLOCK" property="detailblock" jdbcType="VARCHAR" />
+    <result column="JOINCONDITION" property="joincondition" jdbcType="VARCHAR" />
+    <result column="PREVENTMASTERLESSOPERATIONS" property="preventmasterlessoperations" jdbcType="VARCHAR" />
+    <result column="DEFERRED" property="deferred" jdbcType="VARCHAR" />
+    <result column="DIRTYINFO" property="dirtyinfo" jdbcType="VARCHAR" />
+    <result column="DETAILITEMREF" property="detailitemref" jdbcType="VARCHAR" />
+    <result column="SUBCLASSSUBOBJECT" property="subclasssubobject" jdbcType="VARCHAR" />
+    <result column="PERSISTENTCLIENTINFOLENGTH" property="persistentclientinfolength" jdbcType="VARCHAR" />
+    <result column="SELECT_FOR_APP" property="selectForApp" jdbcType="VARCHAR" />
+    <result column="APPLICABLE" property="applicable" jdbcType="VARCHAR" />
+    <result column="COMPLETE" property="complete" jdbcType="VARCHAR" />
+    <result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+    <result column="ASSIGNEE" property="assignee" jdbcType="VARCHAR" />
+    <result column="NOTES" property="notes" jdbcType="VARCHAR" />
+    <result column="TAGS" property="tags" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="RELATION_COMMENT" property="relationComment" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

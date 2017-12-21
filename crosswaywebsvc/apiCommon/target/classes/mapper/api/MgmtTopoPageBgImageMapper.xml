@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtTopoPageBgImageMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtTopoPageBgImage" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TOPO_PAGE_TYPE" property="topoPageType" jdbcType="VARCHAR" />
+    <id column="PAGE_INSTANCE_ID" property="pageInstanceId" jdbcType="VARCHAR" />
+    <result column="IMAGE_NAME" property="imageName" jdbcType="VARCHAR" />
+    <result column="IMAGE_DATA" property="imageData" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

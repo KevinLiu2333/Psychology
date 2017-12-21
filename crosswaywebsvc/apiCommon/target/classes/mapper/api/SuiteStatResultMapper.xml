@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SuiteStatResultMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SuiteStatResult" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="COUNT_TIME" property="countTime" jdbcType="DATE" />
+    <result column="STAT_ID" property="statId" jdbcType="VARCHAR" />
+    <result column="RESULT" property="result" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowStandardJsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowStandardJs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="JAVASCRIPT_NAME" property="javascriptName" jdbcType="VARCHAR" />
+    <result column="JAVASCRIPT_SYNTAX" property="javascriptSyntax" jdbcType="VARCHAR" />
+    <result column="EXAMPLE_01" property="example01" jdbcType="VARCHAR" />
+    <result column="EXAMPLE_02" property="example02" jdbcType="VARCHAR" />
+    <result column="EXAMPLE_03" property="example03" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

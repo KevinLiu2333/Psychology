@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriAdvSqlaColvolMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriAdvSqlaColvol" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <id column="TABLE#" property="table" jdbcType="DECIMAL" />
+    <id column="COL#" property="col" jdbcType="DECIMAL" />
+    <result column="TABLE_OWNER#" property="tableOwner" jdbcType="DECIMAL" />
+    <result column="UPD_FREQ" property="updFreq" jdbcType="DECIMAL" />
+    <result column="UPD_ROWS" property="updRows" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaWorkloadReplayDivergenceMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaWorkloadReplayDivergence" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="REPLAY_ID" property="replayId" jdbcType="DECIMAL" />
+    <result column="TIMESTAMP" property="timestamp" jdbcType="OTHER" />
+    <result column="DIVERGENCE_TYPE" property="divergenceType" jdbcType="DECIMAL" />
+    <result column="IS_QUERY_DATA_DIVERGENCE" property="isQueryDataDivergence" jdbcType="VARCHAR" />
+    <result column="IS_DML_DATA_DIVERGENCE" property="isDmlDataDivergence" jdbcType="VARCHAR" />
+    <result column="IS_ERROR_DIVERGENCE" property="isErrorDivergence" jdbcType="VARCHAR" />
+    <result column="IS_THREAD_FAILURE" property="isThreadFailure" jdbcType="VARCHAR" />
+    <result column="EXPECTED_ROW_COUNT" property="expectedRowCount" jdbcType="DECIMAL" />
+    <result column="OBSERVED_ROW_COUNT" property="observedRowCount" jdbcType="DECIMAL" />
+    <result column="EXPECTED_ERROR#" property="expectedError" jdbcType="DECIMAL" />
+    <result column="EXPECTED_ERROR_MESSAGE" property="expectedErrorMessage" jdbcType="VARCHAR" />
+    <result column="OBSERVED_ERROR#" property="observedError" jdbcType="DECIMAL" />
+    <result column="OBSERVED_ERROR_MESSAGE" property="observedErrorMessage" jdbcType="VARCHAR" />
+    <result column="STREAM_ID" property="streamId" jdbcType="DECIMAL" />
+    <result column="CALL_COUNTER" property="callCounter" jdbcType="DECIMAL" />
+    <result column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="SESSION_SERIAL#" property="sessionSerial" jdbcType="DECIMAL" />
+    <result column="SERVICE" property="service" jdbcType="VARCHAR" />
+    <result column="MODULE" property="module" jdbcType="VARCHAR" />
+    <result column="ACTION" property="action" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.BmSzbSjQmzjF02Mapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.BmSzbSjQmzjF02" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="QMZJ_F02_ID" property="qmzjF02Id" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="SEX" property="sex" jdbcType="VARCHAR" />
+    <result column="ID_CARD" property="idCard" jdbcType="VARCHAR" />
+    <result column="ADDRESS" property="address" jdbcType="VARCHAR" />
+    <result column="TEL" property="tel" jdbcType="VARCHAR" />
+    <result column="PERSON_FROM" property="personFrom" jdbcType="VARCHAR" />
+    <result column="PXQK" property="pxqk" jdbcType="VARCHAR" />
+    <result column="JOB" property="job" jdbcType="VARCHAR" />
+    <result column="BELONG_TOWN" property="belongTown" jdbcType="VARCHAR" />
+    <result column="BELONG_COMMUNITY" property="belongCommunity" jdbcType="VARCHAR" />
+    <result column="TASK_NO" property="taskNo" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

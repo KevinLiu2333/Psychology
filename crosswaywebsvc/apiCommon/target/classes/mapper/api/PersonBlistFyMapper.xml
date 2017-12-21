@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.PersonBlistFyMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.PersonBlistFy">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="ID_NO" jdbcType="VARCHAR" property="idNo" />
+    <result column="OBLIGATION" jdbcType="DECIMAL" property="obligation" />
+    <result column="CASE_NO" jdbcType="VARCHAR" property="caseNo" />
+    <result column="SOURCE_DEPT" jdbcType="VARCHAR" property="sourceDept" />
+  </resultMap>
+</mapper>

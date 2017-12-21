@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllMviewJoinsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllMviewJoins" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="MVIEW_NAME" property="mviewName" jdbcType="VARCHAR" />
+    <result column="DETAILOBJ1_OWNER" property="detailobj1Owner" jdbcType="VARCHAR" />
+    <result column="DETAILOBJ1_RELATION" property="detailobj1Relation" jdbcType="VARCHAR" />
+    <result column="DETAILOBJ1_COLUMN" property="detailobj1Column" jdbcType="VARCHAR" />
+    <result column="OPERATOR" property="operator" jdbcType="CHAR" />
+    <result column="OPERATOR_TYPE" property="operatorType" jdbcType="VARCHAR" />
+    <result column="DETAILOBJ2_OWNER" property="detailobj2Owner" jdbcType="VARCHAR" />
+    <result column="DETAILOBJ2_RELATION" property="detailobj2Relation" jdbcType="VARCHAR" />
+    <result column="DETAILOBJ2_COLUMN" property="detailobj2Column" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

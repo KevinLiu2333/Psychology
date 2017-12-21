@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvStreamsApplyServerMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvStreamsApplyServer" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="SERIAL#" property="serial" jdbcType="DECIMAL" />
+    <result column="APPLY#" property="apply" jdbcType="DECIMAL" />
+    <result column="APPLY_NAME" property="applyName" jdbcType="VARCHAR" />
+    <result column="SERVER_ID" property="serverId" jdbcType="DECIMAL" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="XIDUSN" property="xidusn" jdbcType="DECIMAL" />
+    <result column="XIDSLT" property="xidslt" jdbcType="DECIMAL" />
+    <result column="XIDSQN" property="xidsqn" jdbcType="DECIMAL" />
+    <result column="COMMITSCN" property="commitscn" jdbcType="DECIMAL" />
+    <result column="DEP_XIDUSN" property="depXidusn" jdbcType="DECIMAL" />
+    <result column="DEP_XIDSLT" property="depXidslt" jdbcType="DECIMAL" />
+    <result column="DEP_XIDSQN" property="depXidsqn" jdbcType="DECIMAL" />
+    <result column="DEP_COMMITSCN" property="depCommitscn" jdbcType="DECIMAL" />
+    <result column="MESSAGE_SEQUENCE" property="messageSequence" jdbcType="DECIMAL" />
+    <result column="TOTAL_ASSIGNED" property="totalAssigned" jdbcType="DECIMAL" />
+    <result column="TOTAL_ADMIN" property="totalAdmin" jdbcType="DECIMAL" />
+    <result column="TOTAL_ROLLBACKS" property="totalRollbacks" jdbcType="DECIMAL" />
+    <result column="TOTAL_MESSAGES_APPLIED" property="totalMessagesApplied" jdbcType="DECIMAL" />
+    <result column="APPLY_TIME" property="applyTime" jdbcType="DATE" />
+    <result column="APPLIED_MESSAGE_NUMBER" property="appliedMessageNumber" jdbcType="DECIMAL" />
+    <result column="APPLIED_MESSAGE_CREATE_TIME" property="appliedMessageCreateTime" jdbcType="DATE" />
+    <result column="ELAPSED_DEQUEUE_TIME" property="elapsedDequeueTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_APPLY_TIME" property="elapsedApplyTime" jdbcType="DECIMAL" />
+    <result column="TRANSACTION_ID" property="transactionId" jdbcType="VARCHAR" />
+    <result column="DEP_TRANSACTION_ID" property="depTransactionId" jdbcType="VARCHAR" />
+    <result column="COMMIT_POSITION" property="commitPosition" jdbcType="VARBINARY" />
+    <result column="DEP_COMMIT_POSITION" property="depCommitPosition" jdbcType="VARBINARY" />
+    <result column="LAST_APPLY_POSITION" property="lastApplyPosition" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

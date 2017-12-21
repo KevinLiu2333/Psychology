@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaDataFilesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaDataFiles" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FILE_NAME" property="fileName" jdbcType="VARCHAR" />
+    <result column="FILE_ID" property="fileId" jdbcType="DECIMAL" />
+    <result column="TABLESPACE_NAME" property="tablespaceName" jdbcType="VARCHAR" />
+    <result column="BYTES" property="bytes" jdbcType="DECIMAL" />
+    <result column="BLOCKS" property="blocks" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="RELATIVE_FNO" property="relativeFno" jdbcType="DECIMAL" />
+    <result column="AUTOEXTENSIBLE" property="autoextensible" jdbcType="VARCHAR" />
+    <result column="MAXBYTES" property="maxbytes" jdbcType="DECIMAL" />
+    <result column="MAXBLOCKS" property="maxblocks" jdbcType="DECIMAL" />
+    <result column="INCREMENT_BY" property="incrementBy" jdbcType="DECIMAL" />
+    <result column="USER_BYTES" property="userBytes" jdbcType="DECIMAL" />
+    <result column="USER_BLOCKS" property="userBlocks" jdbcType="DECIMAL" />
+    <result column="ONLINE_STATUS" property="onlineStatus" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

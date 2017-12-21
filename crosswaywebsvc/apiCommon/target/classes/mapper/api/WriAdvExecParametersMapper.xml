@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriAdvExecParametersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriAdvExecParameters" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <id column="EXEC_NAME" property="execName" jdbcType="VARCHAR" />
+    <id column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="VALUE" property="value" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

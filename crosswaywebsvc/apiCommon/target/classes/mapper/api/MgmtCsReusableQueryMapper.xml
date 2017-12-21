@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCsReusableQueryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCsReusableQuery" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="REUSABLE_QUERY_GUID" property="reusableQueryGuid" jdbcType="VARBINARY" />
+    <result column="REUSABLE_QUERY_INAME" property="reusableQueryIname" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="REUSABLE_QUERY" property="reusableQuery" jdbcType="VARCHAR" />
+    <result column="CS_GUID" property="csGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

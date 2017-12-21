@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrClassMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrClass" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CLA_ID" property="claId" jdbcType="DECIMAL" />
+    <result column="CLA_NAME" property="claName" jdbcType="VARCHAR" />
+    <result column="CLA_DESC" property="claDesc" jdbcType="VARCHAR" />
+    <result column="CLA_SYSTEM" property="claSystem" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

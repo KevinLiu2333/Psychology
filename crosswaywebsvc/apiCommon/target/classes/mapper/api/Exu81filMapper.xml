@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu81filMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu81fil" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FNAME" property="fname" jdbcType="VARCHAR" />
+    <result column="FSIZE" property="fsize" jdbcType="DECIMAL" />
+    <result column="MAXEXTEND" property="maxextend" jdbcType="DECIMAL" />
+    <result column="INC" property="inc" jdbcType="DECIMAL" />
+    <result column="TSID" property="tsid" jdbcType="DECIMAL" />
+    <result column="BITMAP" property="bitmap" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

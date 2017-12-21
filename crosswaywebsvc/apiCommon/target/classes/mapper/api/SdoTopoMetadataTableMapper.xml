@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoTopoMetadataTableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoTopoMetadataTable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SDO_OWNER" property="sdoOwner" jdbcType="VARCHAR" />
+    <result column="TOPOLOGY" property="topology" jdbcType="VARCHAR" />
+    <result column="TOPOLOGY_ID" property="topologyId" jdbcType="DECIMAL" />
+    <result column="TOPO_GEOMETRY_LAYERS" property="topoGeometryLayers" jdbcType="OTHER" />
+    <result column="TOLERANCE" property="tolerance" jdbcType="DECIMAL" />
+    <result column="SRID" property="srid" jdbcType="DECIMAL" />
+    <result column="DIGITS_RIGHT_OF_DECIMAL" property="digitsRightOfDecimal" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

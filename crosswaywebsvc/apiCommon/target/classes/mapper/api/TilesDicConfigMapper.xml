@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TilesDicConfigMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.TilesDicConfig">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DIC_ID" jdbcType="VARCHAR" property="dicId" />
+    <result column="DIC_NAME" jdbcType="VARCHAR" property="dicName" />
+    <result column="DIC_TYPE" jdbcType="VARCHAR" property="dicType" />
+    <result column="KEY_DATA_TYPE" jdbcType="VARCHAR" property="keyDataType" />
+    <result column="TABLE_NAME" jdbcType="VARCHAR" property="tableName" />
+    <result column="ITEM_KEY_COLUMN" jdbcType="VARCHAR" property="itemKeyColumn" />
+    <result column="ITEM_NAME_COLUMN" jdbcType="VARCHAR" property="itemNameColumn" />
+    <result column="APPEND_SQL" jdbcType="VARCHAR" property="appendSql" />
+    <result column="DIC_DESC" jdbcType="VARCHAR" property="dicDesc" />
+    <result column="VALUE_LIST" jdbcType="CLOB" property="valueList" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.StreamsApplyProcessMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.StreamsApplyProcess" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="APPLY#" property="apply" jdbcType="DECIMAL" />
+    <result column="APPLY_NAME" property="applyName" jdbcType="VARCHAR" />
+    <result column="QUEUE_OWNER" property="queueOwner" jdbcType="VARCHAR" />
+    <result column="QUEUE_NAME" property="queueName" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="RULESET_OWNER" property="rulesetOwner" jdbcType="VARCHAR" />
+    <result column="RULESET_NAME" property="rulesetName" jdbcType="VARCHAR" />
+    <result column="MESSAGE_HANDLER" property="messageHandler" jdbcType="VARCHAR" />
+    <result column="DDL_HANDLER" property="ddlHandler" jdbcType="VARCHAR" />
+    <result column="PRECOMMIT_HANDLER" property="precommitHandler" jdbcType="VARCHAR" />
+    <result column="APPLY_USERID" property="applyUserid" jdbcType="DECIMAL" />
+    <result column="APPLY_DBLINK" property="applyDblink" jdbcType="VARCHAR" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+    <result column="NEGATIVE_RULESET_OWNER" property="negativeRulesetOwner" jdbcType="VARCHAR" />
+    <result column="NEGATIVE_RULESET_NAME" property="negativeRulesetName" jdbcType="VARCHAR" />
+    <result column="START_DATE" property="startDate" jdbcType="DATE" />
+    <result column="END_DATE" property="endDate" jdbcType="DATE" />
+    <result column="ERROR_NUMBER" property="errorNumber" jdbcType="DECIMAL" />
+    <result column="ERROR_MESSAGE" property="errorMessage" jdbcType="VARCHAR" />
+    <result column="STATUS_CHANGE_TIME" property="statusChangeTime" jdbcType="DATE" />
+    <result column="UA_NOTIFICATION_HANDLER" property="uaNotificationHandler" jdbcType="VARCHAR" />
+    <result column="UA_RULESET_OWNER" property="uaRulesetOwner" jdbcType="VARCHAR" />
+    <result column="UA_RULESET_NAME" property="uaRulesetName" jdbcType="VARCHAR" />
+    <result column="QUEUE_OID" property="queueOid" jdbcType="VARBINARY" />
+    <result column="APPLY_TAG" property="applyTag" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

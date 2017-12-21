@@ -1,0 +1,149 @@
+/*重置*/
+* {
+	font-size: 16px;
+	font-family: "微软雅黑";
+	color: #333;
+}
+body, dt, dd, dl, li, ul, h1, h2, h3, h4, h5, input, p {
+	margin: 0;
+	padding: 0;
+}
+li, ul, dt, dd, dl, h1, h2, h3, h4, h5, a {
+	line-height: none;
+	text-decoration: none;
+	list-style: none;
+}
+h1, h2, h3, h4, h5 {
+	font-weight: normal;
+	line-height: normal;
+}
+img {
+	border: none;
+}
+html,body{
+	width:100%;
+	height:100%;
+}
+/*index*/
+
+#header{
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+}
+#menu{
+	position:absolute;
+	left:0;
+	top:60px;
+	bottom:0;
+}
+#position{
+	position:absolute;
+	left:200px;
+	top:60px;
+	right:0;
+}
+#content{
+	position:absolute;
+	left:200px;
+	right:0;
+	top:97px;
+	bottom:0;
+}
+
+.header{
+	height:60px;
+	background:#2e97cd;
+}
+.header h1{
+	float:left;
+	width:148px;
+	/*  background:url(../../images/index/logo.png) no-repeat 15px center;*/
+	font-size:20px;
+	color:#fff;
+	line-height:60px;
+	padding-left:52px;
+}
+.header span{
+	display:block;
+	float:right;
+	width:116px;
+	background:#2a88b9;
+	color:#fff;
+	padding-left:16px;
+}
+.header span a img{
+	padding:20px 10px;
+}
+.menu{
+	width:200px;
+	background:#ffffff;
+	overflow:auto;
+}
+.menu dl{
+	margin-top:1px;
+}
+.menu dl dt{
+	background:no-repeat 164px center;
+	background-color:#c5e8f7;
+	background-image:url(../images/arrow_06.png);
+	background-size:10px;
+	font-size:16px;
+	color:#2682a9;
+	line-height:36px;
+	padding-left:30px;
+	cursor:pointer;
+}
+.menu dl .menu_tCon{
+	background-image:url(../images/arrow_03.png);
+}
+.menu dl dd{
+	padding:5px 0;
+	display:none;
+}
+.menu dl dd a,.menu dl dd a:link,.menu dl dd a:visited{
+	display:block;
+	font-size:14px;
+	color:#333;
+	line-height:32px;
+	border-left:7px solid #f0f9fd;
+	margin:2px 0;
+}
+.menu dl dd .menu_cCon,.menu dl dd .menu_cCon:link,.menu dl dd .menu_cCon:visited{
+	background:#e47751;
+	color:#fff;
+	border-left:7px solid #dc563c;
+}
+.menu dl dd a img{
+	vertical-align:middle;
+	margin-left:13px;
+	margin-right:6px;
+	margin-top:-2px;
+}
+.gg{
+	background:no-repeat 164px center;
+	background-color:#c5e8f7;
+	background-size:10px;
+	font-size:16px;
+	color:#333;
+	line-height:36px;
+	padding-left:30px;
+	cursor:pointer;
+}
+.gg a{
+	color:#2682a9;
+}
+.position{
+	background:#f0f0f0 url(../images/home_03.png) no-repeat 23px center;
+	font-size:14px;
+	color:#333333;
+	line-height:36px;
+	border-bottom:1px solid #dddddd;
+	padding-left:46px;
+}
+.content iframe{
+	display:block;
+	width:100%;
+	height:100%;
+}

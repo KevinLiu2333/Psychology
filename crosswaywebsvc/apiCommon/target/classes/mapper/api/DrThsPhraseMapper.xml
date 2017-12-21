@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrThsPhraseMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrThsPhrase" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="THP_ID" property="thpId" jdbcType="DECIMAL" />
+    <result column="THP_THSID" property="thpThsid" jdbcType="DECIMAL" />
+    <result column="THP_PHRASE" property="thpPhrase" jdbcType="VARCHAR" />
+    <result column="THP_QUALIFY" property="thpQualify" jdbcType="VARCHAR" />
+    <result column="THP_NOTE" property="thpNote" jdbcType="VARCHAR" />
+    <result column="THP_RINGID" property="thpRingid" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

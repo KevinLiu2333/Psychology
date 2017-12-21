@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationPageCompMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationPageComp" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="PAGE_ID" property="pageId" jdbcType="DECIMAL" />
+    <result column="PAGE_NAME" property="pageName" jdbcType="VARCHAR" />
+    <result column="ITEM_NAME" property="itemName" jdbcType="VARCHAR" />
+    <result column="EXECUTION_SEQUENCE" property="executionSequence" jdbcType="DECIMAL" />
+    <result column="COMPUTATION_POINT" property="computationPoint" jdbcType="VARCHAR" />
+    <result column="COMPUTATION_TYPE" property="computationType" jdbcType="VARCHAR" />
+    <result column="COMPUTATION" property="computation" jdbcType="VARCHAR" />
+    <result column="CONDITION_TYPE" property="conditionType" jdbcType="VARCHAR" />
+    <result column="CONDITION_EXPRESSION1" property="conditionExpression1" jdbcType="VARCHAR" />
+    <result column="CONDITION_EXPRESSION2" property="conditionExpression2" jdbcType="VARCHAR" />
+    <result column="ERROR_MESSAGE" property="errorMessage" jdbcType="VARCHAR" />
+    <result column="BUILD_OPTION" property="buildOption" jdbcType="VARCHAR" />
+    <result column="AUTHORIZATION_SCHEME" property="authorizationScheme" jdbcType="VARCHAR" />
+    <result column="AUTHORIZATION_SCHEME_ID" property="authorizationSchemeId" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="COMPONENT_COMMENT" property="componentComment" jdbcType="VARCHAR" />
+    <result column="COMPONENT_SIGNATURE" property="componentSignature" jdbcType="VARCHAR" />
+    <result column="COMPUTATION_ID" property="computationId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

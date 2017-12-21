@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvSqlPlanStatisticsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvSqlPlanStatistics" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="HASH_VALUE" property="hashValue" jdbcType="DECIMAL" />
+    <result column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="PLAN_HASH_VALUE" property="planHashValue" jdbcType="DECIMAL" />
+    <result column="CHILD_NUMBER" property="childNumber" jdbcType="DECIMAL" />
+    <result column="OPERATION_ID" property="operationId" jdbcType="DECIMAL" />
+    <result column="EXECUTIONS" property="executions" jdbcType="DECIMAL" />
+    <result column="LAST_STARTS" property="lastStarts" jdbcType="DECIMAL" />
+    <result column="STARTS" property="starts" jdbcType="DECIMAL" />
+    <result column="LAST_OUTPUT_ROWS" property="lastOutputRows" jdbcType="DECIMAL" />
+    <result column="OUTPUT_ROWS" property="outputRows" jdbcType="DECIMAL" />
+    <result column="LAST_CR_BUFFER_GETS" property="lastCrBufferGets" jdbcType="DECIMAL" />
+    <result column="CR_BUFFER_GETS" property="crBufferGets" jdbcType="DECIMAL" />
+    <result column="LAST_CU_BUFFER_GETS" property="lastCuBufferGets" jdbcType="DECIMAL" />
+    <result column="CU_BUFFER_GETS" property="cuBufferGets" jdbcType="DECIMAL" />
+    <result column="LAST_DISK_READS" property="lastDiskReads" jdbcType="DECIMAL" />
+    <result column="DISK_READS" property="diskReads" jdbcType="DECIMAL" />
+    <result column="LAST_DISK_WRITES" property="lastDiskWrites" jdbcType="DECIMAL" />
+    <result column="DISK_WRITES" property="diskWrites" jdbcType="DECIMAL" />
+    <result column="LAST_ELAPSED_TIME" property="lastElapsedTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_TIME" property="elapsedTime" jdbcType="DECIMAL" />
+    <result column="ADDRESS" property="address" jdbcType="VARBINARY" />
+    <result column="CHILD_ADDRESS" property="childAddress" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

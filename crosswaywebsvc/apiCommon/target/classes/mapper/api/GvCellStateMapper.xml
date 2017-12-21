@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvCellStateMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvCellState" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="CELL_NAME" property="cellName" jdbcType="VARCHAR" />
+    <result column="STATISTICS_TYPE" property="statisticsType" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="STATISTICS_VALUE" property="statisticsValue" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

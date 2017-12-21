@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu92fptMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu92fpt" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TNAME" property="tname" jdbcType="VARCHAR" />
+    <result column="TOWNER" property="towner" jdbcType="VARCHAR" />
+    <result column="OWNERID" property="ownerid" jdbcType="DECIMAL" />
+    <result column="MTIME" property="mtime" jdbcType="VARCHAR" />
+    <result column="OBJNO" property="objno" jdbcType="DECIMAL" />
+    <result column="DOBJNO" property="dobjno" jdbcType="DECIMAL" />
+    <result column="AUDIT$" property="audit" jdbcType="VARCHAR" />
+    <result column="SQLVER" property="sqlver" jdbcType="VARCHAR" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="TYPOBJSTATUS" property="typobjstatus" jdbcType="DECIMAL" />
+    <result column="TVERSION" property="tversion" jdbcType="DECIMAL" />
+    <result column="DEPORDER" property="deporder" jdbcType="DECIMAL" />
+    <result column="TABOBJNO" property="tabobjno" jdbcType="DECIMAL" />
+    <result column="TOID" property="toid" jdbcType="VARBINARY" />
+    <result column="THASHCODE" property="thashcode" jdbcType="VARBINARY" />
+    <result column="TYPEID" property="typeid" jdbcType="VARBINARY" />
+    <result column="ROOTTOID" property="roottoid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

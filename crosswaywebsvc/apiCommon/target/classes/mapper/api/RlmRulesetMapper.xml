@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RlmRulesetMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RlmRuleset" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="RSET_OWNER" property="rsetOwner" jdbcType="VARCHAR" />
+    <id column="RSET_NAME" property="rsetName" jdbcType="VARCHAR" />
+    <result column="RSET_PACK" property="rsetPack" jdbcType="VARCHAR" />
+    <result column="RSET_EVENTST" property="rsetEventst" jdbcType="VARCHAR" />
+    <result column="ACTION_CBK" property="actionCbk" jdbcType="VARCHAR" />
+    <result column="RSET_RSLTVW" property="rsetRsltvw" jdbcType="VARCHAR" />
+    <result column="RSET_RSLTTAB" property="rsetRslttab" jdbcType="VARCHAR" />
+    <result column="RSET_PRMEXPT" property="rsetPrmexpt" jdbcType="VARCHAR" />
+    <result column="RSET_PRMOBJT" property="rsetPrmobjt" jdbcType="VARCHAR" />
+    <result column="RSET_PRMRSLT" property="rsetPrmrslt" jdbcType="VARCHAR" />
+    <result column="RSET_STATUS" property="rsetStatus" jdbcType="DECIMAL" />
+    <result column="RSET_PROP" property="rsetProp" jdbcType="DECIMAL" />
+    <result column="RSET_DURMIN" property="rsetDurmin" jdbcType="DECIMAL" />
+    <result column="RSET_DURTCL" property="rsetDurtcl" jdbcType="VARCHAR" />
+    <result column="RSET_ORDRCL" property="rsetOrdrcl" jdbcType="VARCHAR" />
+    <result column="RSET_REWOCL" property="rsetRewocl" jdbcType="VARCHAR" />
+    <result column="RSET_STGCLS" property="rsetStgcls" jdbcType="VARCHAR" />
+    <result column="RSET_EQCLS" property="rsetEqcls" jdbcType="VARCHAR" />
+    <result column="RSET_OBJNM" property="rsetObjnm" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

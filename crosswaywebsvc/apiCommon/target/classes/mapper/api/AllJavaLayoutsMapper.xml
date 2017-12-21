@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllJavaLayoutsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllJavaLayouts" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="INTERFACES" property="interfaces" jdbcType="DECIMAL" />
+    <result column="INNER_CLASSES" property="innerClasses" jdbcType="DECIMAL" />
+    <result column="FIELDS" property="fields" jdbcType="DECIMAL" />
+    <result column="STATIC_FIELDS" property="staticFields" jdbcType="DECIMAL" />
+    <result column="METHODS" property="methods" jdbcType="DECIMAL" />
+    <result column="STATIC_METHODS" property="staticMethods" jdbcType="DECIMAL" />
+    <result column="NATIVE_METHODS" property="nativeMethods" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaHistSnapshotMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaHistSnapshot" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="STARTUP_TIME" property="startupTime" jdbcType="OTHER" />
+    <result column="BEGIN_INTERVAL_TIME" property="beginIntervalTime" jdbcType="OTHER" />
+    <result column="END_INTERVAL_TIME" property="endIntervalTime" jdbcType="OTHER" />
+    <result column="FLUSH_ELAPSED" property="flushElapsed" jdbcType="OTHER" />
+    <result column="SNAP_LEVEL" property="snapLevel" jdbcType="DECIMAL" />
+    <result column="ERROR_COUNT" property="errorCount" jdbcType="DECIMAL" />
+    <result column="SNAP_FLAG" property="snapFlag" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

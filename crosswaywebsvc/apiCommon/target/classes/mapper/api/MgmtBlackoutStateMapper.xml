@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtBlackoutStateMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtBlackoutState" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="BLACKOUT_GUID" property="blackoutGuid" jdbcType="VARBINARY" />
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="BLACKOUT_CODE" property="blackoutCode" jdbcType="DECIMAL" />
+    <id column="COLLECTION_TIMESTAMP" property="collectionTimestamp" jdbcType="DATE" />
+    <result column="LOAD_TIMESTAMP" property="loadTimestamp" jdbcType="DATE" />
+    <result column="TARGET_STATUS" property="targetStatus" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

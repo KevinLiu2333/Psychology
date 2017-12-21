@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowUserAccessLogVMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowUserAccessLogV" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOGIN_NAME" property="loginName" jdbcType="VARCHAR" />
+    <result column="AUTHENTICATION_METHOD" property="authenticationMethod" jdbcType="VARCHAR" />
+    <result column="APPLICATION" property="application" jdbcType="DECIMAL" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="ACCESS_DATE" property="accessDate" jdbcType="DATE" />
+    <result column="IP_ADDRESS" property="ipAddress" jdbcType="VARCHAR" />
+    <result column="REMOTE_USER" property="remoteUser" jdbcType="VARCHAR" />
+    <result column="AUTHENTICATION_RESULT" property="authenticationResult" jdbcType="DECIMAL" />
+    <result column="CUSTOM_STATUS_TEXT" property="customStatusText" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

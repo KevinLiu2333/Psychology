@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigFrmEditorMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigFrmEditor" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FORMMODULE_ID" property="formmoduleId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="TITLE" property="title" jdbcType="VARCHAR" />
+    <result column="HEIGHT" property="height" jdbcType="VARCHAR" />
+    <result column="WIDTH" property="width" jdbcType="VARCHAR" />
+    <result column="XPOSITION" property="xposition" jdbcType="VARCHAR" />
+    <result column="YPOSITION" property="yposition" jdbcType="VARCHAR" />
+    <result column="DIRTYINFO" property="dirtyinfo" jdbcType="VARCHAR" />
+    <result column="PARENTTYPE" property="parenttype" jdbcType="DECIMAL" />
+    <result column="PARENTNAME" property="parentname" jdbcType="VARCHAR" />
+    <result column="PARENTMODULE" property="parentmodule" jdbcType="VARCHAR" />
+    <result column="PARENTMODULETYPE" property="parentmoduletype" jdbcType="VARCHAR" />
+    <result column="BOTTOMTITLE" property="bottomtitle" jdbcType="VARCHAR" />
+    <result column="SHOWHORIZONTALSCROLLBAR" property="showhorizontalscrollbar" jdbcType="VARCHAR" />
+    <result column="SHOWVERTICALSCROLLBAR" property="showverticalscrollbar" jdbcType="VARCHAR" />
+    <result column="SUBCLASSOBJECTGROUP" property="subclassobjectgroup" jdbcType="VARCHAR" />
+    <result column="BACKCOLOR" property="backcolor" jdbcType="VARCHAR" />
+    <result column="FOREGROUNDCOLOR" property="foregroundcolor" jdbcType="VARCHAR" />
+    <result column="FONTSPACING" property="fontspacing" jdbcType="VARCHAR" />
+    <result column="FONTWEIGHT" property="fontweight" jdbcType="VARCHAR" />
+    <result column="FONTSTYLE" property="fontstyle" jdbcType="VARCHAR" />
+    <result column="FONTSIZE" property="fontsize" jdbcType="VARCHAR" />
+    <result column="FONTNAME" property="fontname" jdbcType="VARCHAR" />
+    <result column="PERSISTENTCLIENTINFOLENGTH" property="persistentclientinfolength" jdbcType="VARCHAR" />
+    <result column="WRAPSTYLE" property="wrapstyle" jdbcType="VARCHAR" />
+    <result column="FILLPATTERN" property="fillpattern" jdbcType="VARCHAR" />
+    <result column="PARENTFILENAME" property="parentfilename" jdbcType="VARCHAR" />
+    <result column="PARENTFILEPATH" property="parentfilepath" jdbcType="VARCHAR" />
+    <result column="VISUALATTRIBUTENAME" property="visualattributename" jdbcType="VARCHAR" />
+    <result column="SMARTCLASS" property="smartclass" jdbcType="VARCHAR" />
+    <result column="SELECT_FOR_APP" property="selectForApp" jdbcType="VARCHAR" />
+    <result column="APPLICABLE" property="applicable" jdbcType="VARCHAR" />
+    <result column="COMPLETE" property="complete" jdbcType="VARCHAR" />
+    <result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+    <result column="ASSIGNEE" property="assignee" jdbcType="VARCHAR" />
+    <result column="NOTES" property="notes" jdbcType="VARCHAR" />
+    <result column="TAGS" property="tags" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="EDITOR_COMMENT" property="editorComment" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

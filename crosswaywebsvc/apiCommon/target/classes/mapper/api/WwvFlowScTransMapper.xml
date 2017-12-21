@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowScTransMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowScTrans" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <id column="TRANSACTION_ID" property="transactionId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="TRANSACTION_USER" property="transactionUser" jdbcType="VARCHAR" />
+    <result column="TRANSACTION_SCHEMA" property="transactionSchema" jdbcType="VARCHAR" />
+    <result column="TRANSACTION_TYPE" property="transactionType" jdbcType="VARCHAR" />
+    <result column="TRANSACTION_STATUS" property="transactionStatus" jdbcType="VARCHAR" />
+    <result column="TRANSACTION_ROWS" property="transactionRows" jdbcType="DECIMAL" />
+    <result column="TRANSACTION_BINDS" property="transactionBinds" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="UPDATED_ON" property="updatedOn" jdbcType="DATE" />
+    <result column="TRANSACTION_SQL" property="transactionSql" jdbcType="CLOB" />
+    <result column="TRANSACTION_RESULT" property="transactionResult" jdbcType="CLOB" />
+    <result column="TRANSACTION_OUTPUT" property="transactionOutput" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

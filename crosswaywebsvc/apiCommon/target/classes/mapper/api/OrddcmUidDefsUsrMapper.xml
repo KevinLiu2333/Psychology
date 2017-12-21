@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OrddcmUidDefsUsrMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OrddcmUidDefsUsr" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="UDID" property="udid" jdbcType="DECIMAL" />
+    <result column="DICOM_UID" property="dicomUid" jdbcType="VARCHAR" />
+    <result column="DOC_ID" property="docId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="CLASSIFICATION" property="classification" jdbcType="VARCHAR" />
+    <result column="ISLE" property="isle" jdbcType="DECIMAL" />
+    <result column="ISEVR" property="isevr" jdbcType="DECIMAL" />
+    <result column="ISCOMPRESSED" property="iscompressed" jdbcType="DECIMAL" />
+    <result column="ISRETIRED" property="isretired" jdbcType="DECIMAL" />
+    <result column="CONTENTTYPE" property="contenttype" jdbcType="VARCHAR" />
+    <result column="UID_DESC" property="uidDesc" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

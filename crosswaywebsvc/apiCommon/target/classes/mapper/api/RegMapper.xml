@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RegMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Reg" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="REG_ID" property="regId" jdbcType="DECIMAL" />
+    <result column="SUBSCRIPTION_NAME" property="subscriptionName" jdbcType="VARCHAR" />
+    <result column="LOCATION_NAME" property="locationName" jdbcType="VARCHAR" />
+    <result column="USER#" property="user" jdbcType="DECIMAL" />
+    <result column="CONTEXT_SIZE" property="contextSize" jdbcType="DECIMAL" />
+    <result column="NAMESPACE" property="namespace" jdbcType="DECIMAL" />
+    <result column="PRESENTATION" property="presentation" jdbcType="DECIMAL" />
+    <result column="VERSION" property="version" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="ANY_CONTEXT" property="anyContext" jdbcType="OTHER" />
+    <result column="CONTEXT_TYPE" property="contextType" jdbcType="DECIMAL" />
+    <result column="QOSFLAGS" property="qosflags" jdbcType="DECIMAL" />
+    <result column="PAYLOAD_CALLBACK" property="payloadCallback" jdbcType="VARCHAR" />
+    <result column="TIMEOUT" property="timeout" jdbcType="TIMESTAMP" />
+    <result column="REG_TIME" property="regTime" jdbcType="OTHER" />
+    <result column="NTFN_GROUPING_CLASS" property="ntfnGroupingClass" jdbcType="DECIMAL" />
+    <result column="NTFN_GROUPING_VALUE" property="ntfnGroupingValue" jdbcType="DECIMAL" />
+    <result column="NTFN_GROUPING_TYPE" property="ntfnGroupingType" jdbcType="DECIMAL" />
+    <result column="NTFN_GROUPING_START_TIME" property="ntfnGroupingStartTime" jdbcType="OTHER" />
+    <result column="NTFN_GROUPING_REPEAT_COUNT" property="ntfnGroupingRepeatCount" jdbcType="DECIMAL" />
+    <result column="GROUPING_INST_ID" property="groupingInstId" jdbcType="DECIMAL" />
+    <result column="STATE" property="state" jdbcType="DECIMAL" />
+    <result column="USER_CONTEXT" property="userContext" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.StreamsPropagationProcessMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.StreamsPropagationProcess" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PROPAGATION_NAME" property="propagationName" jdbcType="VARCHAR" />
+    <result column="SOURCE_QUEUE_SCHEMA" property="sourceQueueSchema" jdbcType="VARCHAR" />
+    <result column="SOURCE_QUEUE" property="sourceQueue" jdbcType="VARCHAR" />
+    <result column="DESTINATION_QUEUE_SCHEMA" property="destinationQueueSchema" jdbcType="VARCHAR" />
+    <result column="DESTINATION_QUEUE" property="destinationQueue" jdbcType="VARCHAR" />
+    <result column="DESTINATION_DBLINK" property="destinationDblink" jdbcType="VARCHAR" />
+    <result column="RULESET_SCHEMA" property="rulesetSchema" jdbcType="VARCHAR" />
+    <result column="RULESET" property="ruleset" jdbcType="VARCHAR" />
+    <result column="NEGATIVE_RULESET_SCHEMA" property="negativeRulesetSchema" jdbcType="VARCHAR" />
+    <result column="NEGATIVE_RULESET" property="negativeRuleset" jdbcType="VARCHAR" />
+    <result column="ORIGINAL_PROPAGATION_NAME" property="originalPropagationName" jdbcType="VARCHAR" />
+    <result column="ORIGINAL_SOURCE_QUEUE_SCHEMA" property="originalSourceQueueSchema" jdbcType="VARCHAR" />
+    <result column="ORIGINAL_SOURCE_QUEUE" property="originalSourceQueue" jdbcType="VARCHAR" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="VARCHAR" />
+    <result column="ACKED_SCN" property="ackedScn" jdbcType="DECIMAL" />
+    <result column="AUTO_MERGE_THRESHOLD" property="autoMergeThreshold" jdbcType="DECIMAL" />
+    <result column="CREATION_TIME" property="creationTime" jdbcType="DATE" />
+    <result column="ERROR_DATE" property="errorDate" jdbcType="DATE" />
+    <result column="ERROR_MSG" property="errorMsg" jdbcType="VARCHAR" />
+    <result column="UNSCHEDULE_TIME" property="unscheduleTime" jdbcType="DATE" />
+    <result column="SEQNUM" property="seqnum" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+    <result column="SPARE4" property="spare4" jdbcType="DECIMAL" />
+    <result column="SPARE5" property="spare5" jdbcType="DATE" />
+    <result column="SPARE6" property="spare6" jdbcType="DATE" />
+    <result column="SPARE7" property="spare7" jdbcType="VARCHAR" />
+    <result column="SPARE8" property="spare8" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

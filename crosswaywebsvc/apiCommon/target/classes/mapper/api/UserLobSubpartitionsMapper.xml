@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserLobSubpartitionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserLobSubpartitions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="LOB_NAME" property="lobName" jdbcType="VARCHAR" />
+    <result column="LOB_PARTITION_NAME" property="lobPartitionName" jdbcType="VARCHAR" />
+    <result column="SUBPARTITION_NAME" property="subpartitionName" jdbcType="VARCHAR" />
+    <result column="LOB_SUBPARTITION_NAME" property="lobSubpartitionName" jdbcType="VARCHAR" />
+    <result column="LOB_INDSUBPART_NAME" property="lobIndsubpartName" jdbcType="VARCHAR" />
+    <result column="SUBPARTITION_POSITION" property="subpartitionPosition" jdbcType="DECIMAL" />
+    <result column="CHUNK" property="chunk" jdbcType="DECIMAL" />
+    <result column="PCTVERSION" property="pctversion" jdbcType="DECIMAL" />
+    <result column="CACHE" property="cache" jdbcType="VARCHAR" />
+    <result column="IN_ROW" property="inRow" jdbcType="VARCHAR" />
+    <result column="TABLESPACE_NAME" property="tablespaceName" jdbcType="VARCHAR" />
+    <result column="INITIAL_EXTENT" property="initialExtent" jdbcType="VARCHAR" />
+    <result column="NEXT_EXTENT" property="nextExtent" jdbcType="VARCHAR" />
+    <result column="MIN_EXTENTS" property="minExtents" jdbcType="VARCHAR" />
+    <result column="MAX_EXTENTS" property="maxExtents" jdbcType="VARCHAR" />
+    <result column="MAX_SIZE" property="maxSize" jdbcType="VARCHAR" />
+    <result column="RETENTION" property="retention" jdbcType="VARCHAR" />
+    <result column="MINRETENTION" property="minretention" jdbcType="VARCHAR" />
+    <result column="PCT_INCREASE" property="pctIncrease" jdbcType="VARCHAR" />
+    <result column="FREELISTS" property="freelists" jdbcType="VARCHAR" />
+    <result column="FREELIST_GROUPS" property="freelistGroups" jdbcType="VARCHAR" />
+    <result column="LOGGING" property="logging" jdbcType="VARCHAR" />
+    <result column="BUFFER_POOL" property="bufferPool" jdbcType="VARCHAR" />
+    <result column="FLASH_CACHE" property="flashCache" jdbcType="VARCHAR" />
+    <result column="CELL_FLASH_CACHE" property="cellFlashCache" jdbcType="VARCHAR" />
+    <result column="ENCRYPT" property="encrypt" jdbcType="VARCHAR" />
+    <result column="COMPRESSION" property="compression" jdbcType="VARCHAR" />
+    <result column="DEDUPLICATION" property="deduplication" jdbcType="VARCHAR" />
+    <result column="SECUREFILE" property="securefile" jdbcType="VARCHAR" />
+    <result column="SEGMENT_CREATED" property="segmentCreated" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

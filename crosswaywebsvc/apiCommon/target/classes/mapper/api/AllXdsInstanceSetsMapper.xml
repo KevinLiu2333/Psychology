@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllXdsInstanceSetsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllXdsInstanceSets" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SCHEMA_NAME" property="schemaName" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="INSTANCE_SET" property="instanceSet" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="STATIC" property="static" jdbcType="VARCHAR" />
+    <result column="EVAL_RULE" property="evalRule" jdbcType="VARCHAR" />
+    <result column="ACL_FILE" property="aclFile" jdbcType="VARCHAR" />
+    <result column="ACL_LOCATION" property="aclLocation" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

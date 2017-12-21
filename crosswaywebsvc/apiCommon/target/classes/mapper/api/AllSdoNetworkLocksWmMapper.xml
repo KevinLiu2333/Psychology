@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllSdoNetworkLocksWmMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllSdoNetworkLocksWm" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="LOCK_ID" property="lockId" jdbcType="DECIMAL" />
+    <result column="NETWORK" property="network" jdbcType="VARCHAR" />
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="ORIGINAL_NODE_FILTER" property="originalNodeFilter" jdbcType="VARCHAR" />
+    <result column="ORIGINAL_LINK_FILTER" property="originalLinkFilter" jdbcType="VARCHAR" />
+    <result column="ORIGINAL_PATH_FILTER" property="originalPathFilter" jdbcType="VARCHAR" />
+    <result column="ADJUSTED_NODE_FILTER" property="adjustedNodeFilter" jdbcType="VARCHAR" />
+    <result column="ADJUSTED_LINK_FILTER" property="adjustedLinkFilter" jdbcType="VARCHAR" />
+    <result column="ADJUSTED_PATH_FILTER" property="adjustedPathFilter" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

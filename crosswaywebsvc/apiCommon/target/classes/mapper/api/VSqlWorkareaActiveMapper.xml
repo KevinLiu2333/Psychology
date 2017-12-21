@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VSqlWorkareaActiveMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VSqlWorkareaActive" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SQL_HASH_VALUE" property="sqlHashValue" jdbcType="DECIMAL" />
+    <result column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="SQL_EXEC_START" property="sqlExecStart" jdbcType="DATE" />
+    <result column="SQL_EXEC_ID" property="sqlExecId" jdbcType="DECIMAL" />
+    <result column="OPERATION_TYPE" property="operationType" jdbcType="VARCHAR" />
+    <result column="OPERATION_ID" property="operationId" jdbcType="DECIMAL" />
+    <result column="POLICY" property="policy" jdbcType="VARCHAR" />
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="QCINST_ID" property="qcinstId" jdbcType="DECIMAL" />
+    <result column="QCSID" property="qcsid" jdbcType="DECIMAL" />
+    <result column="ACTIVE_TIME" property="activeTime" jdbcType="DECIMAL" />
+    <result column="WORK_AREA_SIZE" property="workAreaSize" jdbcType="DECIMAL" />
+    <result column="EXPECTED_SIZE" property="expectedSize" jdbcType="DECIMAL" />
+    <result column="ACTUAL_MEM_USED" property="actualMemUsed" jdbcType="DECIMAL" />
+    <result column="MAX_MEM_USED" property="maxMemUsed" jdbcType="DECIMAL" />
+    <result column="NUMBER_PASSES" property="numberPasses" jdbcType="DECIMAL" />
+    <result column="TEMPSEG_SIZE" property="tempsegSize" jdbcType="DECIMAL" />
+    <result column="TABLESPACE" property="tablespace" jdbcType="VARCHAR" />
+    <result column="SEGRFNO#" property="segrfno" jdbcType="DECIMAL" />
+    <result column="SEGBLK#" property="segblk" jdbcType="DECIMAL" />
+    <result column="WORKAREA_ADDRESS" property="workareaAddress" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

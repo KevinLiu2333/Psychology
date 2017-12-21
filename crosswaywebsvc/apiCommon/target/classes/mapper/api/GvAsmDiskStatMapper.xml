@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvAsmDiskStatMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvAsmDiskStat" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="GROUP_NUMBER" property="groupNumber" jdbcType="DECIMAL" />
+    <result column="DISK_NUMBER" property="diskNumber" jdbcType="DECIMAL" />
+    <result column="COMPOUND_INDEX" property="compoundIndex" jdbcType="DECIMAL" />
+    <result column="INCARNATION" property="incarnation" jdbcType="DECIMAL" />
+    <result column="MOUNT_STATUS" property="mountStatus" jdbcType="VARCHAR" />
+    <result column="HEADER_STATUS" property="headerStatus" jdbcType="VARCHAR" />
+    <result column="MODE_STATUS" property="modeStatus" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="REDUNDANCY" property="redundancy" jdbcType="VARCHAR" />
+    <result column="LIBRARY" property="library" jdbcType="VARCHAR" />
+    <result column="OS_MB" property="osMb" jdbcType="DECIMAL" />
+    <result column="TOTAL_MB" property="totalMb" jdbcType="DECIMAL" />
+    <result column="FREE_MB" property="freeMb" jdbcType="DECIMAL" />
+    <result column="HOT_USED_MB" property="hotUsedMb" jdbcType="DECIMAL" />
+    <result column="COLD_USED_MB" property="coldUsedMb" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="FAILGROUP" property="failgroup" jdbcType="VARCHAR" />
+    <result column="LABEL" property="label" jdbcType="VARCHAR" />
+    <result column="PATH" property="path" jdbcType="VARCHAR" />
+    <result column="UDID" property="udid" jdbcType="VARCHAR" />
+    <result column="PRODUCT" property="product" jdbcType="VARCHAR" />
+    <result column="CREATE_DATE" property="createDate" jdbcType="DATE" />
+    <result column="MOUNT_DATE" property="mountDate" jdbcType="DATE" />
+    <result column="REPAIR_TIMER" property="repairTimer" jdbcType="DECIMAL" />
+    <result column="READS" property="reads" jdbcType="DECIMAL" />
+    <result column="WRITES" property="writes" jdbcType="DECIMAL" />
+    <result column="READ_ERRS" property="readErrs" jdbcType="DECIMAL" />
+    <result column="WRITE_ERRS" property="writeErrs" jdbcType="DECIMAL" />
+    <result column="READ_TIME" property="readTime" jdbcType="DECIMAL" />
+    <result column="WRITE_TIME" property="writeTime" jdbcType="DECIMAL" />
+    <result column="BYTES_READ" property="bytesRead" jdbcType="DECIMAL" />
+    <result column="BYTES_WRITTEN" property="bytesWritten" jdbcType="DECIMAL" />
+    <result column="PREFERRED_READ" property="preferredRead" jdbcType="VARCHAR" />
+    <result column="HASH_VALUE" property="hashValue" jdbcType="DECIMAL" />
+    <result column="HOT_READS" property="hotReads" jdbcType="DECIMAL" />
+    <result column="HOT_WRITES" property="hotWrites" jdbcType="DECIMAL" />
+    <result column="HOT_BYTES_READ" property="hotBytesRead" jdbcType="DECIMAL" />
+    <result column="HOT_BYTES_WRITTEN" property="hotBytesWritten" jdbcType="DECIMAL" />
+    <result column="COLD_READS" property="coldReads" jdbcType="DECIMAL" />
+    <result column="COLD_WRITES" property="coldWrites" jdbcType="DECIMAL" />
+    <result column="COLD_BYTES_READ" property="coldBytesRead" jdbcType="DECIMAL" />
+    <result column="COLD_BYTES_WRITTEN" property="coldBytesWritten" jdbcType="DECIMAL" />
+    <result column="VOTING_FILE" property="votingFile" jdbcType="VARCHAR" />
+    <result column="SECTOR_SIZE" property="sectorSize" jdbcType="DECIMAL" />
+    <result column="FAILGROUP_TYPE" property="failgroupType" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

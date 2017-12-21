@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtLicenseConfirmationMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtLicenseConfirmation" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <result column="CONFIRMATION" property="confirmation" jdbcType="VARCHAR" />
+    <result column="CONFIRMED_BY" property="confirmedBy" jdbcType="VARCHAR" />
+    <result column="CONFIRMED_TIME" property="confirmedTime" jdbcType="DATE" />
+  </resultMap>
+</mapper>

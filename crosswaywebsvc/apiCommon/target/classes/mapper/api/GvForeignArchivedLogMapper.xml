@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvForeignArchivedLogMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvForeignArchivedLog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="RECID" property="recid" jdbcType="DECIMAL" />
+    <result column="STAMP" property="stamp" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="DEST_ID" property="destId" jdbcType="DECIMAL" />
+    <result column="THREAD#" property="thread" jdbcType="DECIMAL" />
+    <result column="SEQUENCE#" property="sequence" jdbcType="DECIMAL" />
+    <result column="RESETLOGS_CHANGE#" property="resetlogsChange" jdbcType="DECIMAL" />
+    <result column="RESETLOGS_TIME" property="resetlogsTime" jdbcType="DATE" />
+    <result column="RESETLOGS_ID" property="resetlogsId" jdbcType="DECIMAL" />
+    <result column="FIRST_CHANGE#" property="firstChange" jdbcType="DECIMAL" />
+    <result column="FIRST_TIME" property="firstTime" jdbcType="DATE" />
+    <result column="NEXT_CHANGE#" property="nextChange" jdbcType="DECIMAL" />
+    <result column="NEXT_TIME" property="nextTime" jdbcType="DATE" />
+    <result column="BLOCKS" property="blocks" jdbcType="DECIMAL" />
+    <result column="BLOCK_SIZE" property="blockSize" jdbcType="DECIMAL" />
+    <result column="CREATOR" property="creator" jdbcType="VARCHAR" />
+    <result column="REGISTRAR" property="registrar" jdbcType="VARCHAR" />
+    <result column="ARCHIVED" property="archived" jdbcType="VARCHAR" />
+    <result column="APPLIED" property="applied" jdbcType="VARCHAR" />
+    <result column="DELETED" property="deleted" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="COMPLETION_TIME" property="completionTime" jdbcType="DATE" />
+    <result column="DICTIONARY_BEGIN" property="dictionaryBegin" jdbcType="VARCHAR" />
+    <result column="DICTIONARY_END" property="dictionaryEnd" jdbcType="VARCHAR" />
+    <result column="END_OF_REDO" property="endOfRedo" jdbcType="VARCHAR" />
+    <result column="ARCHIVAL_THREAD#" property="archivalThread" jdbcType="DECIMAL" />
+    <result column="IS_RECOVERY_DEST_FILE" property="isRecoveryDestFile" jdbcType="VARCHAR" />
+    <result column="COMPRESSED" property="compressed" jdbcType="VARCHAR" />
+    <result column="FAL" property="fal" jdbcType="VARCHAR" />
+    <result column="END_OF_REDO_TYPE" property="endOfRedoType" jdbcType="VARCHAR" />
+    <result column="SOURCE_DBID" property="sourceDbid" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.BmSzbSjQnwB01Mapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.BmSzbSjQnwB01" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="QNW_B01_ID" property="qnwB01Id" jdbcType="VARCHAR" />
+    <result column="RESGITER_NO" property="resgiterNo" jdbcType="VARCHAR" />
+    <result column="ID_CARD" property="idCard" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="SEX" property="sex" jdbcType="VARCHAR" />
+    <result column="AGE" property="age" jdbcType="DECIMAL" />
+    <result column="EDUCATION" property="education" jdbcType="VARCHAR" />
+    <result column="MANAGE_AERA" property="manageAera" jdbcType="DECIMAL" />
+    <result column="CONTRACT_YEARS" property="contractYears" jdbcType="DECIMAL" />
+    <result column="FAMILY_PEOPLE_COUNT" property="familyPeopleCount" jdbcType="DECIMAL" />
+    <result column="FARM_PEOPLE_COUNT" property="farmPeopleCount" jdbcType="DECIMAL" />
+    <result column="ADDRESS" property="address" jdbcType="VARCHAR" />
+    <result column="TEL" property="tel" jdbcType="VARCHAR" />
+    <result column="FARM_TYPE" property="farmType" jdbcType="VARCHAR" />
+    <result column="BELONG_TOWN" property="belongTown" jdbcType="VARCHAR" />
+    <result column="BELONG_COMMUNITY" property="belongCommunity" jdbcType="VARCHAR" />
+    <result column="TASK_NO" property="taskNo" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

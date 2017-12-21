@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvRecoveryStatusMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvRecoveryStatus" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="RECOVERY_CHECKPOINT" property="recoveryCheckpoint" jdbcType="DATE" />
+    <result column="THREAD" property="thread" jdbcType="DECIMAL" />
+    <result column="SEQUENCE_NEEDED" property="sequenceNeeded" jdbcType="DECIMAL" />
+    <result column="SCN_NEEDED" property="scnNeeded" jdbcType="VARCHAR" />
+    <result column="TIME_NEEDED" property="timeNeeded" jdbcType="DATE" />
+    <result column="PREVIOUS_LOG_NAME" property="previousLogName" jdbcType="VARCHAR" />
+    <result column="PREVIOUS_LOG_STATUS" property="previousLogStatus" jdbcType="VARCHAR" />
+    <result column="REASON" property="reason" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

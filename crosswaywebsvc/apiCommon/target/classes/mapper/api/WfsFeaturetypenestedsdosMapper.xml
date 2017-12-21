@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WfsFeaturetypenestedsdosMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WfsFeaturetypenestedsdos" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FEATURETYPEID" property="featuretypeid" jdbcType="DECIMAL" />
+    <result column="OBJNAMESPACE" property="objnamespace" jdbcType="VARCHAR" />
+    <result column="OBJNAME" property="objname" jdbcType="VARCHAR" />
+    <result column="OBJNAMEINDEX" property="objnameindex" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

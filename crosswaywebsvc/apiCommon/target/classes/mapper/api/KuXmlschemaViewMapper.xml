@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuXmlschemaViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuXmlschemaView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="OWNER_NUM" property="ownerNum" jdbcType="DECIMAL" />
+    <result column="OWNER_NAME" property="ownerName" jdbcType="VARCHAR" />
+    <result column="URL" property="url" jdbcType="VARCHAR" />
+    <result column="LOCAL" property="local" jdbcType="DECIMAL" />
+    <result column="SCHEMA_LEVEL" property="schemaLevel" jdbcType="DECIMAL" />
+    <result column="SCHEMAOID" property="schemaoid" jdbcType="VARBINARY" />
+    <result column="SCHEMA_VAL" property="schemaVal" jdbcType="CLOB" />
+    <result column="STRIPPED_VAL" property="strippedVal" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

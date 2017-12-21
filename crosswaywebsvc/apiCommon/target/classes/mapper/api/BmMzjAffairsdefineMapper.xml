@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.BmMzjAffairsdefineMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.BmMzjAffairsdefine" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="AFFAIRSCODE" property="affairscode" jdbcType="VARCHAR" />
+    <result column="AFFAIRSNAME" property="affairsname" jdbcType="VARCHAR" />
+    <result column="ORGANCODE" property="organcode" jdbcType="VARCHAR" />
+    <result column="ORGANNAME" property="organname" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

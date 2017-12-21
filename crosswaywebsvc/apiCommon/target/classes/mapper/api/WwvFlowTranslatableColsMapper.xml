@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowTranslatableColsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowTranslatableCols" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="TABLE_PK" property="tablePk" jdbcType="VARCHAR" />
+    <result column="FLOW_ID_COLUMN" property="flowIdColumn" jdbcType="VARCHAR" />
+    <result column="PAGE_ID_COLUMN" property="pageIdColumn" jdbcType="VARCHAR" />
+    <result column="DATATYPE" property="datatype" jdbcType="VARCHAR" />
+    <result column="TEMPLATE_TRANSLATABLE" property="templateTranslatable" jdbcType="VARCHAR" />
+    <result column="COLUMN_DESCRIPTION" property="columnDescription" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

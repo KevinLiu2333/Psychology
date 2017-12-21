@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VAwSessionInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VAwSessionInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="CLIENT_TYPE" property="clientType" jdbcType="VARCHAR" />
+    <result column="SESSION_STATE" property="sessionState" jdbcType="VARCHAR" />
+    <result column="SESSION_HANDLE" property="sessionHandle" jdbcType="DECIMAL" />
+    <result column="USERID" property="userid" jdbcType="VARCHAR" />
+    <result column="TOTAL_TRANSACTION" property="totalTransaction" jdbcType="DECIMAL" />
+    <result column="TRANSACTION_TIME" property="transactionTime" jdbcType="DECIMAL" />
+    <result column="TOTAL_TRANSACTION_TIME" property="totalTransactionTime" jdbcType="DECIMAL" />
+    <result column="AVERAGE_TRANSACTION_TIME" property="averageTransactionTime" jdbcType="DECIMAL" />
+    <result column="TRANSACTION_CPU_TIME" property="transactionCpuTime" jdbcType="DECIMAL" />
+    <result column="TOTAL_TRANSACTION_CPU_TIME" property="totalTransactionCpuTime" jdbcType="DECIMAL" />
+    <result column="AVERAGE_TRANSACTION_CPU_TIME" property="averageTransactionCpuTime" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

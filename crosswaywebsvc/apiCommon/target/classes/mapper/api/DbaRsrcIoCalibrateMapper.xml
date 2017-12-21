@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaRsrcIoCalibrateMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaRsrcIoCalibrate" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="START_TIME" property="startTime" jdbcType="TIMESTAMP" />
+    <result column="END_TIME" property="endTime" jdbcType="TIMESTAMP" />
+    <result column="MAX_IOPS" property="maxIops" jdbcType="DECIMAL" />
+    <result column="MAX_MBPS" property="maxMbps" jdbcType="DECIMAL" />
+    <result column="MAX_PMBPS" property="maxPmbps" jdbcType="DECIMAL" />
+    <result column="LATENCY" property="latency" jdbcType="DECIMAL" />
+    <result column="NUM_PHYSICAL_DISKS" property="numPhysicalDisks" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CtxIndexObjectsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CtxIndexObjects" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="IXO_INDEX_OWNER" property="ixoIndexOwner" jdbcType="VARCHAR" />
+    <result column="IXO_INDEX_NAME" property="ixoIndexName" jdbcType="VARCHAR" />
+    <result column="IXO_CLASS" property="ixoClass" jdbcType="VARCHAR" />
+    <result column="IXO_OBJECT" property="ixoObject" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

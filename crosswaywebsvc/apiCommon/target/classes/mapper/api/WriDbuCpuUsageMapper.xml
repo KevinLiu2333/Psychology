@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriDbuCpuUsageMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriDbuCpuUsage" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="VERSION" property="version" jdbcType="VARCHAR" />
+    <id column="TIMESTAMP" property="timestamp" jdbcType="DATE" />
+    <result column="CPU_COUNT" property="cpuCount" jdbcType="DECIMAL" />
+    <result column="CPU_CORE_COUNT" property="cpuCoreCount" jdbcType="DECIMAL" />
+    <result column="CPU_SOCKET_COUNT" property="cpuSocketCount" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

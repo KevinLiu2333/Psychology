@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VBufferedPublishersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VBufferedPublishers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="QUEUE_ID" property="queueId" jdbcType="DECIMAL" />
+    <result column="QUEUE_SCHEMA" property="queueSchema" jdbcType="VARCHAR" />
+    <result column="QUEUE_NAME" property="queueName" jdbcType="VARCHAR" />
+    <result column="SENDER_NAME" property="senderName" jdbcType="VARCHAR" />
+    <result column="SENDER_ADDRESS" property="senderAddress" jdbcType="VARCHAR" />
+    <result column="SENDER_PROTOCOL" property="senderProtocol" jdbcType="DECIMAL" />
+    <result column="NUM_MSGS" property="numMsgs" jdbcType="DECIMAL" />
+    <result column="CNUM_MSGS" property="cnumMsgs" jdbcType="DECIMAL" />
+    <result column="LAST_ENQUEUED_MSG" property="lastEnqueuedMsg" jdbcType="DECIMAL" />
+    <result column="UNBROWSED_MSGS" property="unbrowsedMsgs" jdbcType="DECIMAL" />
+    <result column="OVERSPILLED_MSGS" property="overspilledMsgs" jdbcType="DECIMAL" />
+    <result column="MEMORY_USAGE" property="memoryUsage" jdbcType="DECIMAL" />
+    <result column="ELAPSED_ENQUEUE_TIME" property="elapsedEnqueueTime" jdbcType="DECIMAL" />
+    <result column="ENQUEUE_CPU_TIME" property="enqueueCpuTime" jdbcType="DECIMAL" />
+    <result column="LAST_ENQUEUE_TIME" property="lastEnqueueTime" jdbcType="OTHER" />
+    <result column="PUBLISHER_STATE" property="publisherState" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

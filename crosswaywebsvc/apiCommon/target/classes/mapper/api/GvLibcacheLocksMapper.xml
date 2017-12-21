@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvLibcacheLocksMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvLibcacheLocks" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="REFCOUNT" property="refcount" jdbcType="DECIMAL" />
+    <result column="MODE_HELD" property="modeHeld" jdbcType="DECIMAL" />
+    <result column="MODE_REQUESTED" property="modeRequested" jdbcType="DECIMAL" />
+    <result column="SAVEPOINT_NUMBER" property="savepointNumber" jdbcType="DECIMAL" />
+    <result column="ADDR" property="addr" jdbcType="VARBINARY" />
+    <result column="HOLDING_USER_SESSION" property="holdingUserSession" jdbcType="VARBINARY" />
+    <result column="HOLDING_SESSION" property="holdingSession" jdbcType="VARBINARY" />
+    <result column="OBJECT_HANDLE" property="objectHandle" jdbcType="VARBINARY" />
+    <result column="LOCK_HELD" property="lockHeld" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

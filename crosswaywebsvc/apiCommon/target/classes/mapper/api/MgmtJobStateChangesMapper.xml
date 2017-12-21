@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtJobStateChangesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtJobStateChanges" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="STATE_CHANGE_GUID" property="stateChangeGuid" jdbcType="VARBINARY" />
+    <result column="STEP_ID" property="stepId" jdbcType="DECIMAL" />
+    <result column="LOGGED" property="logged" jdbcType="TIMESTAMP" />
+    <result column="OCCURRED" property="occurred" jdbcType="DATE" />
+    <result column="NEWSTATE" property="newstate" jdbcType="DECIMAL" />
+    <result column="STATUS_BUCKET" property="statusBucket" jdbcType="DECIMAL" />
+    <result column="TYPE" property="type" jdbcType="DECIMAL" />
+    <result column="JOB_ID" property="jobId" jdbcType="VARBINARY" />
+    <result column="EXECUTION_ID" property="executionId" jdbcType="VARBINARY" />
+    <result column="VIOLATION_GUID" property="violationGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

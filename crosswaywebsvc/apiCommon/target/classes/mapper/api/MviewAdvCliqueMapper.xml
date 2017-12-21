@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MviewAdvCliqueMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MviewAdvClique" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="CLIQUEID#" property="cliqueid" jdbcType="DECIMAL" />
+    <result column="RUNID#" property="runid" jdbcType="DECIMAL" />
+    <result column="CLIQUEDESLEN" property="cliquedeslen" jdbcType="DECIMAL" />
+    <result column="HASHVALUE" property="hashvalue" jdbcType="DECIMAL" />
+    <result column="FREQUENCY" property="frequency" jdbcType="DECIMAL" />
+    <result column="BYTECOST" property="bytecost" jdbcType="DECIMAL" />
+    <result column="ROWSIZE" property="rowsize" jdbcType="DECIMAL" />
+    <result column="NUMROWS" property="numrows" jdbcType="DECIMAL" />
+    <result column="CLIQUEDES" property="cliquedes" jdbcType="LONGVARBINARY" />
+  </resultMap>
+</mapper>

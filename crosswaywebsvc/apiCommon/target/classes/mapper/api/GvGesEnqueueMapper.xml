@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvGesEnqueueMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvGesEnqueue" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="GRANT_LEVEL" property="grantLevel" jdbcType="VARCHAR" />
+    <result column="REQUEST_LEVEL" property="requestLevel" jdbcType="VARCHAR" />
+    <result column="RESOURCE_NAME1" property="resourceName1" jdbcType="VARCHAR" />
+    <result column="RESOURCE_NAME2" property="resourceName2" jdbcType="VARCHAR" />
+    <result column="PID" property="pid" jdbcType="DECIMAL" />
+    <result column="TRANSACTION_ID0" property="transactionId0" jdbcType="DECIMAL" />
+    <result column="TRANSACTION_ID1" property="transactionId1" jdbcType="DECIMAL" />
+    <result column="GROUP_ID" property="groupId" jdbcType="DECIMAL" />
+    <result column="OPEN_OPT_DEADLOCK" property="openOptDeadlock" jdbcType="DECIMAL" />
+    <result column="OPEN_OPT_PERSISTENT" property="openOptPersistent" jdbcType="DECIMAL" />
+    <result column="OPEN_OPT_PROCESS_OWNED" property="openOptProcessOwned" jdbcType="DECIMAL" />
+    <result column="OPEN_OPT_NO_XID" property="openOptNoXid" jdbcType="DECIMAL" />
+    <result column="CONVERT_OPT_GETVALUE" property="convertOptGetvalue" jdbcType="DECIMAL" />
+    <result column="CONVERT_OPT_PUTVALUE" property="convertOptPutvalue" jdbcType="DECIMAL" />
+    <result column="CONVERT_OPT_NOVALUE" property="convertOptNovalue" jdbcType="DECIMAL" />
+    <result column="CONVERT_OPT_DUBVALUE" property="convertOptDubvalue" jdbcType="DECIMAL" />
+    <result column="CONVERT_OPT_NOQUEUE" property="convertOptNoqueue" jdbcType="DECIMAL" />
+    <result column="CONVERT_OPT_EXPRESS" property="convertOptExpress" jdbcType="DECIMAL" />
+    <result column="CONVERT_OPT_NODEADLOCKWAIT" property="convertOptNodeadlockwait" jdbcType="DECIMAL" />
+    <result column="CONVERT_OPT_NODEADLOCKBLOCK" property="convertOptNodeadlockblock" jdbcType="DECIMAL" />
+    <result column="WHICH_QUEUE" property="whichQueue" jdbcType="DECIMAL" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="AST_EVENT0" property="astEvent0" jdbcType="DECIMAL" />
+    <result column="OWNER_NODE" property="ownerNode" jdbcType="DECIMAL" />
+    <result column="BLOCKED" property="blocked" jdbcType="DECIMAL" />
+    <result column="BLOCKER" property="blocker" jdbcType="DECIMAL" />
+    <result column="HANDLE" property="handle" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

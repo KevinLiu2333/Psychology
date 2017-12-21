@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.FweekPscatSalesMvMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.FweekPscatSalesMv" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WEEK_ENDING_DAY" property="weekEndingDay" jdbcType="DATE" />
+    <result column="PROD_SUBCATEGORY" property="prodSubcategory" jdbcType="VARCHAR" />
+    <result column="DOLLARS" property="dollars" jdbcType="DECIMAL" />
+    <result column="CHANNEL_ID" property="channelId" jdbcType="DECIMAL" />
+    <result column="PROMO_ID" property="promoId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

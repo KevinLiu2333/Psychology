@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OlsDirBusinessesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OlsDirBusinesses" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="BUSINESS_ID" property="businessId" jdbcType="DECIMAL" />
+    <result column="BUSINESS_NAME" property="businessName" jdbcType="VARCHAR" />
+    <result column="CHAIN_ID" property="chainId" jdbcType="DECIMAL" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="PHONE" property="phone" jdbcType="VARCHAR" />
+    <result column="COUNTRY" property="country" jdbcType="VARCHAR" />
+    <result column="COUNTRY_SUBDIVISION" property="countrySubdivision" jdbcType="VARCHAR" />
+    <result column="COUNTRY_SECONDARY_SUBDIV" property="countrySecondarySubdiv" jdbcType="VARCHAR" />
+    <result column="MUNICIPALITY" property="municipality" jdbcType="VARCHAR" />
+    <result column="MUNICIPALITY_SUBDIVISION" property="municipalitySubdivision" jdbcType="VARCHAR" />
+    <result column="POSTAL_CODE" property="postalCode" jdbcType="VARCHAR" />
+    <result column="POSTAL_CODE_EXT" property="postalCodeExt" jdbcType="VARCHAR" />
+    <result column="STREET" property="street" jdbcType="VARCHAR" />
+    <result column="INTERSECTING_STREET" property="intersectingStreet" jdbcType="VARCHAR" />
+    <result column="BUILDING" property="building" jdbcType="VARCHAR" />
+    <result column="PARAMETERS" property="parameters" jdbcType="OTHER" />
+    <result column="GEOM" property="geom" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

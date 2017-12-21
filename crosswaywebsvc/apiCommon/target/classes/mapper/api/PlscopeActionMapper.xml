@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.PlscopeActionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.PlscopeAction" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="ACTION#" property="action" jdbcType="DECIMAL" />
+    <result column="SIGNATURE" property="signature" jdbcType="VARCHAR" />
+    <result column="ACTION" property="action" jdbcType="DECIMAL" />
+    <result column="LINE" property="line" jdbcType="DECIMAL" />
+    <result column="COL" property="col" jdbcType="DECIMAL" />
+    <result column="CONTEXT#" property="context" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

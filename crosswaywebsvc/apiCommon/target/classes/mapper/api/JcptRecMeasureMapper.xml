@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.JcptRecMeasureMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.JcptRecMeasure" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="UNIT_CATEGORY" property="unitCategory" jdbcType="VARCHAR" />
+    <result column="UNIT_NAME" property="unitName" jdbcType="VARCHAR" />
+    <result column="DEPT_NAME" property="deptName" jdbcType="VARCHAR" />
+    <result column="TREAT_OBJECT" property="treatObject" jdbcType="VARCHAR" />
+    <result column="MEASURE" property="measure" jdbcType="VARCHAR" />
+    <result column="SUG_DEPT" property="sugDept" jdbcType="VARCHAR" />
+    <result column="SYSTEM_BASIS" property="systemBasis" jdbcType="VARCHAR" />
+    <result column="ITEM_PROP" property="itemProp" jdbcType="DECIMAL" />
+    <result column="DEPT_CODE" property="deptCode" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

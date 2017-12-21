@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtEcmHostpatchHostsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtEcmHostpatchHosts" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="HOST_GUID" property="hostGuid" jdbcType="VARBINARY" />
+    <result column="OUT_OF_DATE_PKGS" property="outOfDatePkgs" jdbcType="DECIMAL" />
+    <result column="ROGUE_PKGS" property="roguePkgs" jdbcType="DECIMAL" />
+    <result column="NEED_REBOOT_PKGS" property="needRebootPkgs" jdbcType="DECIMAL" />
+    <result column="GROUP_GUID" property="groupGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

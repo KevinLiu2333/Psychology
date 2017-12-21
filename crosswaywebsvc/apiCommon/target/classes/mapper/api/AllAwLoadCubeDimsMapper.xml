@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllAwLoadCubeDimsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllAwLoadCubeDims" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CUBE_OWNER" property="cubeOwner" jdbcType="VARCHAR" />
+    <result column="CUBE_NAME" property="cubeName" jdbcType="VARCHAR" />
+    <result column="CUBELOAD_NAME" property="cubeloadName" jdbcType="VARCHAR" />
+    <result column="COMPSPEC_NAME" property="compspecName" jdbcType="VARCHAR" />
+    <result column="COMPOSITE_NAME" property="compositeName" jdbcType="VARCHAR" />
+    <result column="SEGWIDTH" property="segwidth" jdbcType="DECIMAL" />
+    <result column="COMPSPEC_POSITION" property="compspecPosition" jdbcType="DECIMAL" />
+    <result column="DIMENSION_OWNER" property="dimensionOwner" jdbcType="VARCHAR" />
+    <result column="DIMENSION_NAME" property="dimensionName" jdbcType="VARCHAR" />
+    <result column="COMPOSITE_POSITION" property="compositePosition" jdbcType="DECIMAL" />
+    <result column="NESTED_LEVEL" property="nestedLevel" jdbcType="DECIMAL" />
+    <result column="NESTED_TYPE" property="nestedType" jdbcType="VARCHAR" />
+    <result column="NESTED_NAME" property="nestedName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

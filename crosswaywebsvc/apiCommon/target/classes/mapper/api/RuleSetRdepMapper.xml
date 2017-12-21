@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RuleSetRdepMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RuleSetRdep" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RS_OBJ#" property="rsObj" jdbcType="DECIMAL" />
+    <result column="DP_OBJ#" property="dpObj" jdbcType="DECIMAL" />
+    <result column="DP_TMSP" property="dpTmsp" jdbcType="DATE" />
+    <result column="EC_OBJ#" property="ecObj" jdbcType="DECIMAL" />
+    <result column="RULE_ID" property="ruleId" jdbcType="DECIMAL" />
+    <result column="ISIN_DP" property="isinDp" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriAdvSqlaStmtsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriAdvSqlaStmts" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <result column="WORKLOAD_ID" property="workloadId" jdbcType="DECIMAL" />
+    <result column="STMT_ID" property="stmtId" jdbcType="DECIMAL" />
+    <result column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="PRE_COST" property="preCost" jdbcType="DECIMAL" />
+    <result column="POST_COST" property="postCost" jdbcType="DECIMAL" />
+    <result column="IMP" property="imp" jdbcType="DECIMAL" />
+    <result column="REC_ID" property="recId" jdbcType="DECIMAL" />
+    <result column="VALIDATED" property="validated" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

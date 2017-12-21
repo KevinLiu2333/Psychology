@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationPageIrCondMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationPageIrCond" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="PAGE_ID" property="pageId" jdbcType="DECIMAL" />
+    <result column="INTERACTIVE_REPORT_ID" property="interactiveReportId" jdbcType="DECIMAL" />
+    <result column="REPORT_ID" property="reportId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_USER" property="applicationUser" jdbcType="VARCHAR" />
+    <result column="REPORT_NAME" property="reportName" jdbcType="VARCHAR" />
+    <result column="CONDITION_ID" property="conditionId" jdbcType="DECIMAL" />
+    <result column="CONDITION_NAME" property="conditionName" jdbcType="VARCHAR" />
+    <result column="CONDITION_TYPE" property="conditionType" jdbcType="VARCHAR" />
+    <result column="CONDITION_COLUMN_NAME" property="conditionColumnName" jdbcType="VARCHAR" />
+    <result column="CONDITION_OPERATOR" property="conditionOperator" jdbcType="VARCHAR" />
+    <result column="CONDITION_EXPRESSION" property="conditionExpression" jdbcType="VARCHAR" />
+    <result column="CONDITION_EXPRESSION2" property="conditionExpression2" jdbcType="VARCHAR" />
+    <result column="CONDITION_SQL" property="conditionSql" jdbcType="VARCHAR" />
+    <result column="CONDITION_DISPLAY" property="conditionDisplay" jdbcType="VARCHAR" />
+    <result column="CONDITION_ENABLED" property="conditionEnabled" jdbcType="VARCHAR" />
+    <result column="HIGHLIGHT_SEQUENCE" property="highlightSequence" jdbcType="DECIMAL" />
+    <result column="HIGHLIGHT_ROW_COLOR" property="highlightRowColor" jdbcType="VARCHAR" />
+    <result column="HIGHLIGHT_ROW_FONT_COLOR" property="highlightRowFontColor" jdbcType="VARCHAR" />
+    <result column="HIGHLIGHT_CELL_COLOR" property="highlightCellColor" jdbcType="VARCHAR" />
+    <result column="HIGHLIGHT_CELL_FONT_COLOR" property="highlightCellFontColor" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VDiagHmRecommendationMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VDiagHmRecommendation" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDX" property="indx" jdbcType="DECIMAL" />
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="ADR_PATH_IDX" property="adrPathIdx" jdbcType="VARCHAR" />
+    <result column="ADR_HOME" property="adrHome" jdbcType="VARCHAR" />
+    <result column="RECOMMENDATION_ID" property="recommendationId" jdbcType="DECIMAL" />
+    <result column="FDG_ID" property="fdgId" jdbcType="DECIMAL" />
+    <result column="RUN_ID" property="runId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="NAME_ID" property="nameId" jdbcType="DECIMAL" />
+    <result column="TYPE" property="type" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="RANK" property="rank" jdbcType="DECIMAL" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="OTHER" />
+    <result column="END_TIME" property="endTime" jdbcType="OTHER" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="EST_REPAIR_TIME" property="estRepairTime" jdbcType="DECIMAL" />
+    <result column="ACT_REPAIR_TIME" property="actRepairTime" jdbcType="DECIMAL" />
+    <result column="DATA_LOSS_TIME" property="dataLossTime" jdbcType="DECIMAL" />
+    <result column="MSG_GRPID" property="msgGrpid" jdbcType="DECIMAL" />
+    <result column="NUM_MSG" property="numMsg" jdbcType="DECIMAL" />
+    <result column="REPAIR_SCRIPT" property="repairScript" jdbcType="VARCHAR" />
+    <result column="ADDR" property="addr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

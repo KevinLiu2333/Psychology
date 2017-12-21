@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu8libuMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu8libu" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOWNER" property="lowner" jdbcType="VARCHAR" />
+    <result column="LIBNAME" property="libname" jdbcType="VARCHAR" />
+    <result column="OWNERID" property="ownerid" jdbcType="DECIMAL" />
+    <result column="FILENAME" property="filename" jdbcType="VARCHAR" />
+    <result column="AUDIT$" property="audit" jdbcType="VARCHAR" />
+    <result column="MTIME" property="mtime" jdbcType="VARCHAR" />
+    <result column="OBJNO" property="objno" jdbcType="DECIMAL" />
+    <result column="ISSTATIC" property="isstatic" jdbcType="DECIMAL" />
+    <result column="ISTRUSTED" property="istrusted" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

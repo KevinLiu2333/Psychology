@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvHsAgentMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvHsAgent" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="AGENT_ID" property="agentId" jdbcType="DECIMAL" />
+    <result column="MACHINE" property="machine" jdbcType="VARCHAR" />
+    <result column="PROCESS" property="process" jdbcType="VARCHAR" />
+    <result column="PROGRAM" property="program" jdbcType="VARCHAR" />
+    <result column="OSUSER" property="osuser" jdbcType="VARCHAR" />
+    <result column="STARTTIME" property="starttime" jdbcType="DATE" />
+    <result column="AGENT_TYPE" property="agentType" jdbcType="DECIMAL" />
+    <result column="FDS_CLASS_ID" property="fdsClassId" jdbcType="DECIMAL" />
+    <result column="FDS_INST_ID" property="fdsInstId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SumdetailMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Sumdetail" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SUMOBJ#" property="sumobj" jdbcType="DECIMAL" />
+    <result column="DETAILOBJ#" property="detailobj" jdbcType="DECIMAL" />
+    <result column="QBCID" property="qbcid" jdbcType="DECIMAL" />
+    <result column="DETAILOBJTYPE" property="detailobjtype" jdbcType="DECIMAL" />
+    <result column="DETAILALIAS" property="detailalias" jdbcType="VARCHAR" />
+    <result column="REFRESHSCN" property="refreshscn" jdbcType="DECIMAL" />
+    <result column="DETAILEUT" property="detaileut" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="VARCHAR" />
+    <result column="SPARE4" property="spare4" jdbcType="DATE" />
+    <result column="INLINE#" property="inline" jdbcType="DECIMAL" />
+    <result column="INSTANCE#" property="instance" jdbcType="DECIMAL" />
+    <result column="DATALESS" property="dataless" jdbcType="DECIMAL" />
+    <result column="TABSCNCTR" property="tabscnctr" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

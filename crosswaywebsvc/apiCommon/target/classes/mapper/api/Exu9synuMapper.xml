@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu9synuMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu9synu" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SYNNAM" property="synnam" jdbcType="VARCHAR" />
+    <result column="SYNNAM2" property="synnam2" jdbcType="VARCHAR" />
+    <result column="SYNTAB" property="syntab" jdbcType="VARCHAR" />
+    <result column="TABOWN" property="tabown" jdbcType="VARCHAR" />
+    <result column="TABNODE" property="tabnode" jdbcType="VARCHAR" />
+    <result column="PUBLIC$" property="public" jdbcType="DECIMAL" />
+    <result column="SYNOWN" property="synown" jdbcType="VARCHAR" />
+    <result column="SYNOWNID" property="synownid" jdbcType="DECIMAL" />
+    <result column="TABOWNID" property="tabownid" jdbcType="DECIMAL" />
+    <result column="SYNOBJNO" property="synobjno" jdbcType="DECIMAL" />
+    <result column="SYNTIME" property="syntime" jdbcType="DATE" />
+  </resultMap>
+</mapper>

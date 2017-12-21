@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WmParconflictNextversViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WmParconflictNextversView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERSION" property="version" jdbcType="DECIMAL" />
+    <result column="NEXT_VERS" property="nextVers" jdbcType="VARCHAR" />
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="SPLIT" property="split" jdbcType="DECIMAL" />
+    <result column="VTID" property="vtid" jdbcType="DECIMAL" />
+    <result column="AFTERSYNC" property="aftersync" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

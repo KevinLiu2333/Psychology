@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvEnqueueStatMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvEnqueueStat" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="EQ_TYPE" property="eqType" jdbcType="VARCHAR" />
+    <result column="TOTAL_REQ#" property="totalReq" jdbcType="DECIMAL" />
+    <result column="TOTAL_WAIT#" property="totalWait" jdbcType="DECIMAL" />
+    <result column="SUCC_REQ#" property="succReq" jdbcType="DECIMAL" />
+    <result column="FAILED_REQ#" property="failedReq" jdbcType="DECIMAL" />
+    <result column="CUM_WAIT_TIME" property="cumWaitTime" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

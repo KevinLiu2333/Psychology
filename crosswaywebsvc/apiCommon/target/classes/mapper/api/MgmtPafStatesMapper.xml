@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtPafStatesMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtPafStates">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="STATE_GUID" jdbcType="VARCHAR" property="stateGuid" />
+    <result column="INSTANCE_GUID" jdbcType="VARCHAR" property="instanceGuid" />
+    <result column="STEP_GUID" jdbcType="VARCHAR" property="stepGuid" />
+    <result column="PARENT_STATE_GUID" jdbcType="VARCHAR" property="parentStateGuid" />
+    <result column="STATE_TYPE" jdbcType="DECIMAL" property="stateType" />
+    <result column="STATUS" jdbcType="DECIMAL" property="status" />
+    <result column="REASON_CODE" jdbcType="DECIMAL" property="reasonCode" />
+    <result column="REASON_RSC_ID" jdbcType="VARCHAR" property="reasonRscId" />
+    <result column="REASON_RSC_ARGS" jdbcType="VARCHAR" property="reasonRscArgs" />
+    <result column="REASON_EXCEPTION" jdbcType="VARCHAR" property="reasonException" />
+    <result column="STATE_INDEX" jdbcType="DECIMAL" property="stateIndex" />
+    <result column="STARTED" jdbcType="DATE" property="started" />
+    <result column="LAST_UPDATED" jdbcType="DATE" property="lastUpdated" />
+    <result column="COMPLETED" jdbcType="DATE" property="completed" />
+    <result column="TARGET_NAME" jdbcType="VARCHAR" property="targetName" />
+    <result column="TARGET_TYPE" jdbcType="VARCHAR" property="targetType" />
+    <result column="CURRENT_STATE_GUID" jdbcType="VARCHAR" property="currentStateGuid" />
+    <result column="JOB_ID" jdbcType="VARCHAR" property="jobId" />
+    <result column="EXEC_ID" jdbcType="VARCHAR" property="execId" />
+    <result column="JOB_STATUS" jdbcType="DECIMAL" property="jobStatus" />
+    <result column="NOTE" jdbcType="VARCHAR" property="note" />
+    <result column="CONTENT0" jdbcType="VARCHAR" property="content0" />
+    <result column="CONTENT1" jdbcType="VARCHAR" property="content1" />
+    <result column="CONTENT2" jdbcType="VARCHAR" property="content2" />
+    <result column="CONTENT3" jdbcType="VARCHAR" property="content3" />
+    <result column="CONTENT4" jdbcType="VARCHAR" property="content4" />
+    <result column="CONTENT5" jdbcType="VARCHAR" property="content5" />
+    <result column="CONTENT6" jdbcType="VARCHAR" property="content6" />
+    <result column="CONTENT7" jdbcType="VARCHAR" property="content7" />
+    <result column="JOB_NAME" jdbcType="VARCHAR" property="jobName" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaOutlinesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaOutlines" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="CATEGORY" property="category" jdbcType="VARCHAR" />
+    <result column="USED" property="used" jdbcType="VARCHAR" />
+    <result column="TIMESTAMP" property="timestamp" jdbcType="DATE" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="COMPATIBLE" property="compatible" jdbcType="VARCHAR" />
+    <result column="ENABLED" property="enabled" jdbcType="VARCHAR" />
+    <result column="FORMAT" property="format" jdbcType="VARCHAR" />
+    <result column="MIGRATED" property="migrated" jdbcType="VARCHAR" />
+    <result column="SQL_TEXT" property="sqlText" jdbcType="LONGVARCHAR" />
+    <result column="SIGNATURE" property="signature" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

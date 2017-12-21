@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowWorksheetPrivsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowWorksheetPrivs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="WORKSHEET_ID" property="worksheetId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_USER" property="applicationUser" jdbcType="VARCHAR" />
+    <result column="VIEW_PRIV" property="viewPriv" jdbcType="VARCHAR" />
+    <result column="EDIT_PRIV" property="editPriv" jdbcType="VARCHAR" />
+    <result column="DEVELOP_PRIV" property="developPriv" jdbcType="VARCHAR" />
+    <result column="ROW_FILTER_1_DB_COL" property="rowFilter1DbCol" jdbcType="VARCHAR" />
+    <result column="ROW_FILTER_1_EXPR" property="rowFilter1Expr" jdbcType="VARCHAR" />
+    <result column="ROW_FILTER_1_VALUE" property="rowFilter1Value" jdbcType="VARCHAR" />
+    <result column="ROW_FILTER_2_DB_COL" property="rowFilter2DbCol" jdbcType="VARCHAR" />
+    <result column="ROW_FILTER_2_EXPR" property="rowFilter2Expr" jdbcType="VARCHAR" />
+    <result column="ROW_FILTER_2_VALUE" property="rowFilter2Value" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="UPDATED_ON" property="updatedOn" jdbcType="DATE" />
+    <result column="UPDATED_BY" property="updatedBy" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

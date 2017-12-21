@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VMapExtElementMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VMapExtElement" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ELEM_IDX" property="elemIdx" jdbcType="DECIMAL" />
+    <result column="NUM_ATTRB" property="numAttrb" jdbcType="DECIMAL" />
+    <result column="ATTRB1_NAME" property="attrb1Name" jdbcType="VARCHAR" />
+    <result column="ATTRB1_VAL" property="attrb1Val" jdbcType="VARCHAR" />
+    <result column="ATTRB2_NAME" property="attrb2Name" jdbcType="VARCHAR" />
+    <result column="ATTRB2_VAL" property="attrb2Val" jdbcType="VARCHAR" />
+    <result column="ATTRB3_NAME" property="attrb3Name" jdbcType="VARCHAR" />
+    <result column="ATTRB3_VAL" property="attrb3Val" jdbcType="VARCHAR" />
+    <result column="ATTRB4_NAME" property="attrb4Name" jdbcType="VARCHAR" />
+    <result column="ATTRB4_VAL" property="attrb4Val" jdbcType="VARCHAR" />
+    <result column="ATTRB5_NAME" property="attrb5Name" jdbcType="VARCHAR" />
+    <result column="ATTRB5_VAL" property="attrb5Val" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

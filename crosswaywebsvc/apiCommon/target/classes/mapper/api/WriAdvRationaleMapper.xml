@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriAdvRationaleMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriAdvRationale" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="EXEC_NAME" property="execName" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="REC_ID" property="recId" jdbcType="DECIMAL" />
+    <result column="IMPACT_MSG_ID" property="impactMsgId" jdbcType="DECIMAL" />
+    <result column="IMPACT_VAL" property="impactVal" jdbcType="DECIMAL" />
+    <result column="OBJ_ID" property="objId" jdbcType="DECIMAL" />
+    <result column="MSG_ID" property="msgId" jdbcType="DECIMAL" />
+    <result column="ATTR1" property="attr1" jdbcType="VARCHAR" />
+    <result column="ATTR2" property="attr2" jdbcType="VARCHAR" />
+    <result column="ATTR3" property="attr3" jdbcType="VARCHAR" />
+    <result column="ATTR4" property="attr4" jdbcType="VARCHAR" />
+    <result column="ATTR5" property="attr5" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

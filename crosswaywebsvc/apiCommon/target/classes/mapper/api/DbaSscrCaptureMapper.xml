@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaSscrCaptureMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaSscrCapture" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DB_NAME" property="dbName" jdbcType="VARCHAR" />
+    <result column="INST_NAME" property="instName" jdbcType="VARCHAR" />
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="SESSION_SERIAL#" property="sessionSerial" jdbcType="DECIMAL" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="SCHEMA_NAME" property="schemaName" jdbcType="VARCHAR" />
+    <result column="SEQUENCE#" property="sequence" jdbcType="DECIMAL" />
+    <result column="CAPTURE_MODE" property="captureMode" jdbcType="VARCHAR" />
+    <result column="CAPTURE_SCOPE" property="captureScope" jdbcType="VARCHAR" />
+    <result column="CAPTURE_FORMAT" property="captureFormat" jdbcType="VARCHAR" />
+    <result column="CAPTURE_DIR" property="captureDir" jdbcType="VARCHAR" />
+    <result column="CAPTURE_TIME" property="captureTime" jdbcType="TIMESTAMP" />
+    <result column="CAPTURE_LOCATOR" property="captureLocator" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

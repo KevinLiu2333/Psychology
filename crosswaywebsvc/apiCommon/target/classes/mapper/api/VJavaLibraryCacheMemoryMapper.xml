@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VJavaLibraryCacheMemoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VJavaLibraryCacheMemory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LC_NAMESPACE" property="lcNamespace" jdbcType="VARCHAR" />
+    <result column="LC_INUSE_MEMORY_OBJECTS" property="lcInuseMemoryObjects" jdbcType="DECIMAL" />
+    <result column="LC_INUSE_MEMORY_SIZE" property="lcInuseMemorySize" jdbcType="DECIMAL" />
+    <result column="LC_FREEABLE_MEMORY_OBJECTS" property="lcFreeableMemoryObjects" jdbcType="DECIMAL" />
+    <result column="LC_FREEABLE_MEMORY_SIZE" property="lcFreeableMemorySize" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.StreamsApplyProgressMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.StreamsApplyProgress" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="APPLY#" property="apply" jdbcType="DECIMAL" />
+    <result column="SOURCE_DB_NAME" property="sourceDbName" jdbcType="VARCHAR" />
+    <result column="XIDUSN" property="xidusn" jdbcType="DECIMAL" />
+    <result column="XIDSLT" property="xidslt" jdbcType="DECIMAL" />
+    <result column="XIDSQN" property="xidsqn" jdbcType="DECIMAL" />
+    <result column="COMMIT_SCN" property="commitScn" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="TRANSACTION_ID" property="transactionId" jdbcType="VARCHAR" />
+    <result column="COMMIT_POSITION" property="commitPosition" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

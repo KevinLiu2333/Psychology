@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OlsDirCategoriesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OlsDirCategories" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="CATEGORY_ID" property="categoryId" jdbcType="VARCHAR" />
+    <id column="CATEGORY_TYPE_ID" property="categoryTypeId" jdbcType="DECIMAL" />
+    <result column="CATEGORY_NAME" property="categoryName" jdbcType="VARCHAR" />
+    <result column="PARENT_ID" property="parentId" jdbcType="VARCHAR" />
+    <result column="PARAMETERS" property="parameters" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

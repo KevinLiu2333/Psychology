@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SuiteFormConfigMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SuiteFormConfig" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DREAMFORM_ID" property="dreamformId" jdbcType="VARCHAR" />
+    <result column="DREAMFORM_NAME" property="dreamformName" jdbcType="VARCHAR" />
+    <result column="CONFIG_ID" property="configId" jdbcType="VARCHAR" />
+    <result column="DREAMFORM_THEME_ID" property="dreamformThemeId" jdbcType="DECIMAL" />
+    <result column="DREAMFORM_EDIT_COLS" property="dreamformEditCols" jdbcType="VARCHAR" />
+    <result column="CREATE_USER" property="createUser" jdbcType="VARCHAR" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="DATE" />
+    <result column="IF_HAVE_CHILD" property="ifHaveChild" jdbcType="VARCHAR" />
+    <result column="CHILD_TABLE_ID" property="childTableId" jdbcType="DECIMAL" />
+    <result column="CHILD_EDIT_COLS" property="childEditCols" jdbcType="VARCHAR" />
+    <result column="PARENT_TABLE_COL" property="parentTableCol" jdbcType="VARCHAR" />
+    <result column="CHILD_TABLE_COL" property="childTableCol" jdbcType="VARCHAR" />
+    <result column="FORM_COL_NUM" property="formColNum" jdbcType="VARCHAR" />
+    <result column="TAG_WHERE_SQL" property="tagWhereSql" jdbcType="VARCHAR" />
+    <result column="DREAMFORM_CONTENT" property="dreamformContent" jdbcType="CLOB" />
+    <result column="DREAMFORM_CONTENT_LIST" property="dreamformContentList" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

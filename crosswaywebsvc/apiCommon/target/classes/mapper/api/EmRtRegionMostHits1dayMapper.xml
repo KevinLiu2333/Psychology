@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.EmRtRegionMostHits1dayMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.EmRtRegionMostHits1day" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COMPOSITE_TARGET_NAME" property="compositeTargetName" jdbcType="VARCHAR" />
+    <result column="COMPOSITE_TARGET_TYPE" property="compositeTargetType" jdbcType="VARCHAR" />
+    <result column="METRIC_NAME" property="metricName" jdbcType="VARCHAR" />
+    <result column="VISITOR_REGION" property="visitorRegion" jdbcType="VARCHAR" />
+    <result column="RESPONSE_TIME_AVERAGE" property="responseTimeAverage" jdbcType="DECIMAL" />
+    <result column="RESPONSE_TIME_MINIMUM" property="responseTimeMinimum" jdbcType="DECIMAL" />
+    <result column="RESPONSE_TIME_MAXIMUM" property="responseTimeMaximum" jdbcType="DECIMAL" />
+    <result column="RESPONSE_TIME_STDDEV" property="responseTimeStddev" jdbcType="DECIMAL" />
+    <result column="HITS" property="hits" jdbcType="DECIMAL" />
+    <result column="COMPOSITE_TARGET_GUID" property="compositeTargetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoCoordOpParamValsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoCoordOpParamVals" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="COORD_OP_ID" property="coordOpId" jdbcType="DECIMAL" />
+    <id column="PARAMETER_ID" property="parameterId" jdbcType="DECIMAL" />
+    <result column="COORD_OP_METHOD_ID" property="coordOpMethodId" jdbcType="DECIMAL" />
+    <result column="PARAMETER_VALUE" property="parameterValue" jdbcType="FLOAT" />
+    <result column="PARAM_VALUE_FILE_REF" property="paramValueFileRef" jdbcType="VARCHAR" />
+    <result column="PARAM_VALUE_XML" property="paramValueXml" jdbcType="OTHER" />
+    <result column="UOM_ID" property="uomId" jdbcType="DECIMAL" />
+    <result column="PARAM_VALUE_FILE" property="paramValueFile" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllSqlsetBindsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllSqlsetBinds" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SQLSET_NAME" property="sqlsetName" jdbcType="VARCHAR" />
+    <result column="SQLSET_OWNER" property="sqlsetOwner" jdbcType="VARCHAR" />
+    <result column="SQLSET_ID" property="sqlsetId" jdbcType="DECIMAL" />
+    <result column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="FORCE_MATCHING_SIGNATURE" property="forceMatchingSignature" jdbcType="DECIMAL" />
+    <result column="PLAN_HASH_VALUE" property="planHashValue" jdbcType="DECIMAL" />
+    <result column="POSITION" property="position" jdbcType="DECIMAL" />
+    <result column="VALUE" property="value" jdbcType="OTHER" />
+    <result column="CAPTURED" property="captured" jdbcType="CHAR" />
+    <result column="SQL_SEQ" property="sqlSeq" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

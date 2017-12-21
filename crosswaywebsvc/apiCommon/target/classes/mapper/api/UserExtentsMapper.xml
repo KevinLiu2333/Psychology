@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserExtentsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserExtents" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SEGMENT_NAME" property="segmentName" jdbcType="VARCHAR" />
+    <result column="PARTITION_NAME" property="partitionName" jdbcType="VARCHAR" />
+    <result column="SEGMENT_TYPE" property="segmentType" jdbcType="VARCHAR" />
+    <result column="TABLESPACE_NAME" property="tablespaceName" jdbcType="VARCHAR" />
+    <result column="EXTENT_ID" property="extentId" jdbcType="DECIMAL" />
+    <result column="BYTES" property="bytes" jdbcType="DECIMAL" />
+    <result column="BLOCKS" property="blocks" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

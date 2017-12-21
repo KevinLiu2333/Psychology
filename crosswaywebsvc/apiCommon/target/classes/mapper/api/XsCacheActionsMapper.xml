@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.XsCacheActionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.XsCacheActions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ROW_KEY" property="rowKey" jdbcType="DECIMAL" />
+    <result column="TIME_VAL" property="timeVal" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

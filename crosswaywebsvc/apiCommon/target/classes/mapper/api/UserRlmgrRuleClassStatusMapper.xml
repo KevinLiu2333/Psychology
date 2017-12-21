@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserRlmgrRuleClassStatusMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserRlmgrRuleClassStatus" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RULE_CLASS_NAME" property="ruleClassName" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="STATUS_CODE" property="statusCode" jdbcType="DECIMAL" />
+    <result column="NEXT_OPERATION" property="nextOperation" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

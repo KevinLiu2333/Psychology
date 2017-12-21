@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VMapFileIoStackMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VMapFileIoStack" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FILE_MAP_IDX" property="fileMapIdx" jdbcType="DECIMAL" />
+    <result column="DEPTH" property="depth" jdbcType="DECIMAL" />
+    <result column="ELEM_IDX" property="elemIdx" jdbcType="DECIMAL" />
+    <result column="CU_SIZE" property="cuSize" jdbcType="DECIMAL" />
+    <result column="STRIDE" property="stride" jdbcType="DECIMAL" />
+    <result column="NUM_CU" property="numCu" jdbcType="DECIMAL" />
+    <result column="ELEM_OFFSET" property="elemOffset" jdbcType="DECIMAL" />
+    <result column="FILE_OFFSET" property="fileOffset" jdbcType="DECIMAL" />
+    <result column="DATA_TYPE" property="dataType" jdbcType="VARCHAR" />
+    <result column="PARITY_POS" property="parityPos" jdbcType="DECIMAL" />
+    <result column="PARITY_PERIOD" property="parityPeriod" jdbcType="DECIMAL" />
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="PARENT_ID" property="parentId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

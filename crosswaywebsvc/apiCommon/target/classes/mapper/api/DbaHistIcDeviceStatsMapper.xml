@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaHistIcDeviceStatsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaHistIcDeviceStats" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="IF_NAME" property="ifName" jdbcType="VARCHAR" />
+    <result column="IP_ADDR" property="ipAddr" jdbcType="VARCHAR" />
+    <result column="NET_MASK" property="netMask" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="VARCHAR" />
+    <result column="MTU" property="mtu" jdbcType="DECIMAL" />
+    <result column="BYTES_RECEIVED" property="bytesReceived" jdbcType="DECIMAL" />
+    <result column="PACKETS_RECEIVED" property="packetsReceived" jdbcType="DECIMAL" />
+    <result column="RECEIVE_ERRORS" property="receiveErrors" jdbcType="DECIMAL" />
+    <result column="RECEIVE_DROPPED" property="receiveDropped" jdbcType="DECIMAL" />
+    <result column="RECEIVE_BUF_OR" property="receiveBufOr" jdbcType="DECIMAL" />
+    <result column="RECEIVE_FRAME_ERR" property="receiveFrameErr" jdbcType="DECIMAL" />
+    <result column="BYTES_SENT" property="bytesSent" jdbcType="DECIMAL" />
+    <result column="PACKETS_SENT" property="packetsSent" jdbcType="DECIMAL" />
+    <result column="SEND_ERRORS" property="sendErrors" jdbcType="DECIMAL" />
+    <result column="SENDS_DROPPED" property="sendsDropped" jdbcType="DECIMAL" />
+    <result column="SEND_BUF_OR" property="sendBufOr" jdbcType="DECIMAL" />
+    <result column="SEND_CARRIER_LOST" property="sendCarrierLost" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

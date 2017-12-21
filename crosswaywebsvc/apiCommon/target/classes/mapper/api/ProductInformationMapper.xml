@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ProductInformationMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ProductInformation" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="PRODUCT_ID" property="productId" jdbcType="DECIMAL" />
+    <result column="PRODUCT_NAME" property="productName" jdbcType="VARCHAR" />
+    <result column="PRODUCT_DESCRIPTION" property="productDescription" jdbcType="VARCHAR" />
+    <result column="CATEGORY_ID" property="categoryId" jdbcType="DECIMAL" />
+    <result column="WEIGHT_CLASS" property="weightClass" jdbcType="DECIMAL" />
+    <result column="WARRANTY_PERIOD" property="warrantyPeriod" jdbcType="OTHER" />
+    <result column="SUPPLIER_ID" property="supplierId" jdbcType="DECIMAL" />
+    <result column="PRODUCT_STATUS" property="productStatus" jdbcType="VARCHAR" />
+    <result column="LIST_PRICE" property="listPrice" jdbcType="DECIMAL" />
+    <result column="MIN_PRICE" property="minPrice" jdbcType="DECIMAL" />
+    <result column="CATALOG_URL" property="catalogUrl" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

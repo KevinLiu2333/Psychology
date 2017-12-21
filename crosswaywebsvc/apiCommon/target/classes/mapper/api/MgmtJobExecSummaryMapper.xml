@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtJobExecSummaryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtJobExecSummary" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="EXECUTION_ID" property="executionId" jdbcType="VARBINARY" />
+    <result column="TARGET_LIST_INDEX" property="targetListIndex" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="STATUS_CODE" property="statusCode" jdbcType="DECIMAL" />
+    <result column="STATUS_CODE_CATEGORY" property="statusCodeCategory" jdbcType="DECIMAL" />
+    <result column="STATUS_BUCKET" property="statusBucket" jdbcType="DECIMAL" />
+    <result column="STATUS_DETAIL" property="statusDetail" jdbcType="DECIMAL" />
+    <result column="SCHEDULED_TIME" property="scheduledTime" jdbcType="DATE" />
+    <result column="EXPECTED_START_TIME" property="expectedStartTime" jdbcType="DATE" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="TIMEZONE_REGION" property="timezoneRegion" jdbcType="VARCHAR" />
+    <result column="SUSPEND_EVENT" property="suspendEvent" jdbcType="VARCHAR" />
+    <result column="SUSPEND_TIME" property="suspendTime" jdbcType="DATE" />
+    <result column="SUSPEND_TIMEOUT" property="suspendTimeout" jdbcType="DECIMAL" />
+    <result column="QUEUE_INDEX" property="queueIndex" jdbcType="DECIMAL" />
+    <result column="JOB_ID" property="jobId" jdbcType="VARBINARY" />
+    <result column="JOB_TYPE_ID" property="jobTypeId" jdbcType="VARBINARY" />
+    <result column="SOURCE_EXECUTION_ID" property="sourceExecutionId" jdbcType="VARBINARY" />
+    <result column="QUEUE_ID" property="queueId" jdbcType="VARBINARY" />
+    <result column="TRIGGERING_SEVERITY" property="triggeringSeverity" jdbcType="VARBINARY" />
+    <result column="DELETED_TARGET_GUID" property="deletedTargetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

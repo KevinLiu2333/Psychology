@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllSummariesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllSummaries" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="SUMMARY_NAME" property="summaryName" jdbcType="VARCHAR" />
+    <result column="CONTAINER_OWNER" property="containerOwner" jdbcType="VARCHAR" />
+    <result column="CONTAINER_NAME" property="containerName" jdbcType="VARCHAR" />
+    <result column="LAST_REFRESH_SCN" property="lastRefreshScn" jdbcType="DECIMAL" />
+    <result column="LAST_REFRESH_DATE" property="lastRefreshDate" jdbcType="DATE" />
+    <result column="REFRESH_METHOD" property="refreshMethod" jdbcType="VARCHAR" />
+    <result column="SUMMARY" property="summary" jdbcType="VARCHAR" />
+    <result column="FULLREFRESHTIM" property="fullrefreshtim" jdbcType="DECIMAL" />
+    <result column="INCREFRESHTIM" property="increfreshtim" jdbcType="DECIMAL" />
+    <result column="CONTAINS_VIEWS" property="containsViews" jdbcType="VARCHAR" />
+    <result column="UNUSABLE" property="unusable" jdbcType="VARCHAR" />
+    <result column="RESTRICTED_SYNTAX" property="restrictedSyntax" jdbcType="VARCHAR" />
+    <result column="INC_REFRESHABLE" property="incRefreshable" jdbcType="VARCHAR" />
+    <result column="KNOWN_STALE" property="knownStale" jdbcType="VARCHAR" />
+    <result column="QUERY_LEN" property="queryLen" jdbcType="DECIMAL" />
+    <result column="QUERY" property="query" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

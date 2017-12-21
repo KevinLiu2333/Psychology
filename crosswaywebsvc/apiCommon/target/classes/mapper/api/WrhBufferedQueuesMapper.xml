@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhBufferedQueuesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhBufferedQueues" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="QUEUE_SCHEMA" property="queueSchema" jdbcType="VARCHAR" />
+    <id column="QUEUE_NAME" property="queueName" jdbcType="VARCHAR" />
+    <result column="STARTUP_TIME" property="startupTime" jdbcType="DATE" />
+    <result column="QUEUE_ID" property="queueId" jdbcType="DECIMAL" />
+    <result column="NUM_MSGS" property="numMsgs" jdbcType="DECIMAL" />
+    <result column="SPILL_MSGS" property="spillMsgs" jdbcType="DECIMAL" />
+    <result column="CNUM_MSGS" property="cnumMsgs" jdbcType="DECIMAL" />
+    <result column="CSPILL_MSGS" property="cspillMsgs" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

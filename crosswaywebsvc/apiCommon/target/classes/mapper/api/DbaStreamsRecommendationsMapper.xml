@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaStreamsRecommendationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaStreamsRecommendations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="BENEFIT_ID" property="benefitId" jdbcType="DECIMAL" />
+    <result column="BENEFIT_ARG1" property="benefitArg1" jdbcType="VARCHAR" />
+    <result column="BENEFIT_ARG2" property="benefitArg2" jdbcType="VARCHAR" />
+    <result column="BENEFIT_ARG3" property="benefitArg3" jdbcType="VARCHAR" />
+    <result column="BENEFIT_ARG4" property="benefitArg4" jdbcType="VARCHAR" />
+    <result column="BENEFIT_ARG5" property="benefitArg5" jdbcType="VARCHAR" />
+    <result column="ADVISOR_TYPE" property="advisorType" jdbcType="VARCHAR" />
+    <result column="RUN_TIME" property="runTime" jdbcType="DATE" />
+  </resultMap>
+</mapper>

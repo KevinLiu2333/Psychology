@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuConstraint2ViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuConstraint2View" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER_NUM" property="ownerNum" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="CON_NUM" property="conNum" jdbcType="DECIMAL" />
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="NUMCOLS" property="numcols" jdbcType="DECIMAL" />
+    <result column="CONTYPE" property="contype" jdbcType="DECIMAL" />
+    <result column="ROBJ_NUM" property="robjNum" jdbcType="DECIMAL" />
+    <result column="RCON_NUM" property="rconNum" jdbcType="DECIMAL" />
+    <result column="RRULES" property="rrules" jdbcType="VARCHAR" />
+    <result column="MATCH_NUM" property="matchNum" jdbcType="DECIMAL" />
+    <result column="REFACT" property="refact" jdbcType="DECIMAL" />
+    <result column="ENABLED" property="enabled" jdbcType="DECIMAL" />
+    <result column="INTCOLS" property="intcols" jdbcType="DECIMAL" />
+    <result column="MTIME" property="mtime" jdbcType="DATE" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="SCHEMA_OBJ" property="schemaObj" jdbcType="OTHER" />
+    <result column="SRC_COL_LIST" property="srcColList" jdbcType="OTHER" />
+    <result column="TGT_COL_LIST" property="tgtColList" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

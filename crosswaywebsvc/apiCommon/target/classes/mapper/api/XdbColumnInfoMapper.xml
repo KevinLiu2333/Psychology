@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.XdbColumnInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.XdbColumnInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SCHEMA_REF" property="schemaRef" jdbcType="OTHER" />
+    <result column="ELNUM" property="elnum" jdbcType="DECIMAL" />
+    <result column="COLNUM" property="colnum" jdbcType="DECIMAL" />
+    <result column="PROPINFO" property="propinfo" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

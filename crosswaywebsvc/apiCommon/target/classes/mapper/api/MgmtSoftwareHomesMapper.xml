@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtSoftwareHomesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtSoftwareHomes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HOST_NAME" property="hostName" jdbcType="VARCHAR" />
+    <result column="HOME_NAME" property="homeName" jdbcType="VARCHAR" />
+    <result column="HOME_TYPE" property="homeType" jdbcType="VARCHAR" />
+    <result column="HOME_LOCATION" property="homeLocation" jdbcType="VARCHAR" />
+    <result column="SNAPSHOT_GUID" property="snapshotGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaSummaryDetailTablesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaSummaryDetailTables" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="SUMMARY_NAME" property="summaryName" jdbcType="VARCHAR" />
+    <result column="DETAIL_OWNER" property="detailOwner" jdbcType="VARCHAR" />
+    <result column="DETAIL_RELATION" property="detailRelation" jdbcType="VARCHAR" />
+    <result column="DETAIL_TYPE" property="detailType" jdbcType="VARCHAR" />
+    <result column="DETAIL_ALIAS" property="detailAlias" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

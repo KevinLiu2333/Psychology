@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvHvmasterInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvHvmasterInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="HV_ID" property="hvId" jdbcType="DECIMAL" />
+    <result column="CURRENT_MASTER" property="currentMaster" jdbcType="DECIMAL" />
+    <result column="PREVIOUS_MASTER" property="previousMaster" jdbcType="DECIMAL" />
+    <result column="REMASTER_CNT" property="remasterCnt" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

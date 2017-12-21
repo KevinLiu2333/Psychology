@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.BmSzbSjQnwC01Mapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.BmSzbSjQnwC01" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="QNW_C01_ID" property="qnwC01Id" jdbcType="VARCHAR" />
+    <result column="TDSRF_NAME" property="tdsrfName" jdbcType="VARCHAR" />
+    <result column="AREA" property="area" jdbcType="DECIMAL" />
+    <result column="MANAGE_YEARS" property="manageYears" jdbcType="DECIMAL" />
+    <result column="PRICE" property="price" jdbcType="DECIMAL" />
+    <result column="PLANT_TYPE" property="plantType" jdbcType="VARCHAR" />
+    <result column="SRF_TYPE" property="srfType" jdbcType="VARCHAR" />
+    <result column="BELONG_TOWN" property="belongTown" jdbcType="VARCHAR" />
+    <result column="BELONG_COMMUNITY" property="belongCommunity" jdbcType="VARCHAR" />
+    <result column="TASK_NO" property="taskNo" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

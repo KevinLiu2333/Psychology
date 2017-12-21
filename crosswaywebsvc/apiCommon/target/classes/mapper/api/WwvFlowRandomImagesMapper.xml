@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowRandomImagesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowRandomImages" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="IMAGE_NAME" property="imageName" jdbcType="VARCHAR" />
+    <result column="IMAGE_CODE" property="imageCode" jdbcType="VARCHAR" />
+    <result column="BLOB_CONTENT" property="blobContent" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

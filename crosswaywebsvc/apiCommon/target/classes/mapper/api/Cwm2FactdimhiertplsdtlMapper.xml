@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Cwm2FactdimhiertplsdtlMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Cwm2Factdimhiertplsdtl" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="IRID" property="irid" jdbcType="DECIMAL" />
+    <result column="CUBE_IRID" property="cubeIrid" jdbcType="DECIMAL" />
+    <result column="FACTDIMHIER_IRID" property="factdimhierIrid" jdbcType="DECIMAL" />
+    <result column="HIER_IRID" property="hierIrid" jdbcType="DECIMAL" />
+    <result column="POSITION" property="position" jdbcType="DECIMAL" />
+    <result column="CREATEDDATE" property="createddate" jdbcType="DATE" />
+    <result column="UPDATEDDATE" property="updateddate" jdbcType="DATE" />
+    <result column="LASTCHANGEUSER" property="lastchangeuser" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SnapLogdepMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SnapLogdep" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TABLEOBJ#" property="tableobj" jdbcType="DECIMAL" />
+    <result column="SNAPID" property="snapid" jdbcType="DECIMAL" />
+    <result column="SNAPTIME" property="snaptime" jdbcType="DATE" />
+    <result column="RSCN" property="rscn" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

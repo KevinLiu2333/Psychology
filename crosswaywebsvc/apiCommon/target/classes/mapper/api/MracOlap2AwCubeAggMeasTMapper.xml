@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MracOlap2AwCubeAggMeasTMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MracOlap2AwCubeAggMeasT" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="AW_OWNER" property="awOwner" jdbcType="VARCHAR" />
+    <result column="AW_NAME" property="awName" jdbcType="VARCHAR" />
+    <result column="AW_CUBE_NAME" property="awCubeName" jdbcType="VARCHAR" />
+    <result column="AW_AGGSPEC_NAME" property="awAggspecName" jdbcType="VARCHAR" />
+    <result column="AW_MEASURE_NAME" property="awMeasureName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

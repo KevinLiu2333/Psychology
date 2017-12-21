@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DefscheduleMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Defschedule">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DBLINK" jdbcType="VARCHAR" property="dblink" />
+    <result column="JOB" jdbcType="DECIMAL" property="job" />
+    <result column="INTERVAL" jdbcType="VARCHAR" property="interval" />
+    <result column="NEXT_DATE" jdbcType="DATE" property="nextDate" />
+    <result column="LAST_DATE" jdbcType="DATE" property="lastDate" />
+    <result column="DISABLED" jdbcType="CHAR" property="disabled" />
+    <result column="LAST_TXN_COUNT" jdbcType="DECIMAL" property="lastTxnCount" />
+    <result column="LAST_ERROR_NUMBER" jdbcType="DECIMAL" property="lastErrorNumber" />
+    <result column="LAST_ERROR_MESSAGE" jdbcType="VARCHAR" property="lastErrorMessage" />
+    <result column="TOTAL_TXN_COUNT" jdbcType="DECIMAL" property="totalTxnCount" />
+    <result column="AVG_THROUGHPUT" jdbcType="DECIMAL" property="avgThroughput" />
+    <result column="AVG_LATENCY" jdbcType="DECIMAL" property="avgLatency" />
+    <result column="TOTAL_BYTES_SENT" jdbcType="DECIMAL" property="totalBytesSent" />
+    <result column="TOTAL_BYTES_RECEIVED" jdbcType="DECIMAL" property="totalBytesReceived" />
+    <result column="TOTAL_ROUND_TRIPS" jdbcType="DECIMAL" property="totalRoundTrips" />
+    <result column="TOTAL_ADMIN_COUNT" jdbcType="DECIMAL" property="totalAdminCount" />
+    <result column="TOTAL_ERROR_COUNT" jdbcType="DECIMAL" property="totalErrorCount" />
+    <result column="TOTAL_SLEEP_TIME" jdbcType="DECIMAL" property="totalSleepTime" />
+    <result column="DISABLED_INTERNALLY_SET" jdbcType="VARCHAR" property="disabledInternallySet" />
+    <result column="CATCHUP" jdbcType="VARBINARY" property="catchup" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtProvHardwareMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtProvHardware" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="HW_GUID" property="hwGuid" jdbcType="VARBINARY" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="HOSTNAME" property="hostname" jdbcType="VARCHAR" />
+    <result column="NEW_HOSTNAME" property="newHostname" jdbcType="VARCHAR" />
+    <result column="MAC_ADDRESS1" property="macAddress1" jdbcType="VARCHAR" />
+    <result column="MAC_ADDRESS2" property="macAddress2" jdbcType="VARCHAR" />
+    <result column="MAC_ADDRESS3" property="macAddress3" jdbcType="VARCHAR" />
+    <result column="MAC_ADDRESS4" property="macAddress4" jdbcType="VARCHAR" />
+    <result column="INTERFACE_NAME1" property="interfaceName1" jdbcType="VARCHAR" />
+    <result column="INTERFACE_NAME2" property="interfaceName2" jdbcType="VARCHAR" />
+    <result column="INTERFACE_NAME3" property="interfaceName3" jdbcType="VARCHAR" />
+    <result column="INTERFACE_NAME4" property="interfaceName4" jdbcType="VARCHAR" />
+    <result column="SERIAL_NUMBER" property="serialNumber" jdbcType="VARCHAR" />
+    <result column="RF_ID" property="rfId" jdbcType="VARCHAR" />
+    <result column="PURPOSE" property="purpose" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

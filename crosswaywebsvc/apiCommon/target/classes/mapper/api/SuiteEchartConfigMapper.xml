@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SuiteEchartConfigMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SuiteEchartConfig">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="GENERATE_TIME" jdbcType="DATE" property="generateTime" />
+    <result column="OPERATE_COUNT" jdbcType="DECIMAL" property="operateCount" />
+    <result column="TITLE" jdbcType="VARCHAR" property="title" />
+    <result column="TAG_LIST" jdbcType="VARCHAR" property="tagList" />
+    <result column="ECHART_TYPE" jdbcType="VARCHAR" property="echartType" />
+    <result column="PARAMETER" jdbcType="VARCHAR" property="parameter" />
+    <result column="LEGENDTOKEY" jdbcType="VARCHAR" property="legendtokey" />
+    <result column="OPTION_CONFIG" jdbcType="CLOB" property="optionConfig" />
+    <result column="DESCRIPTION" jdbcType="CLOB" property="description" />
+  </resultMap>
+</mapper>

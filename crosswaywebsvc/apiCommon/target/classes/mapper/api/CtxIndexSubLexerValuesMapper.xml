@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CtxIndexSubLexerValuesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CtxIndexSubLexerValues" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ISV_INDEX_OWNER" property="isvIndexOwner" jdbcType="VARCHAR" />
+    <result column="ISV_INDEX_NAME" property="isvIndexName" jdbcType="VARCHAR" />
+    <result column="ISV_LANGUAGE" property="isvLanguage" jdbcType="VARCHAR" />
+    <result column="ISV_OBJECT" property="isvObject" jdbcType="VARCHAR" />
+    <result column="ISV_ATTRIBUTE" property="isvAttribute" jdbcType="VARCHAR" />
+    <result column="ISV_VALUE" property="isvValue" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

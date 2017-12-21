@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowListItemsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowListItems" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="LIST_ID" property="listId" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="SUB_ITEM_COUNT" property="subItemCount" jdbcType="DECIMAL" />
+    <result column="PARENT_LIST_ITEM_ID" property="parentListItemId" jdbcType="DECIMAL" />
+    <result column="LIST_ITEM_TYPE" property="listItemType" jdbcType="VARCHAR" />
+    <result column="LIST_ITEM_STATUS" property="listItemStatus" jdbcType="VARCHAR" />
+    <result column="ITEM_DISPLAYED" property="itemDisplayed" jdbcType="VARCHAR" />
+    <result column="LIST_ITEM_DISPLAY_SEQUENCE" property="listItemDisplaySequence" jdbcType="DECIMAL" />
+    <result column="LIST_ITEM_LINK_TEXT" property="listItemLinkText" jdbcType="VARCHAR" />
+    <result column="LIST_ITEM_LINK_TARGET" property="listItemLinkTarget" jdbcType="VARCHAR" />
+    <result column="LIST_ITEM_ICON" property="listItemIcon" jdbcType="VARCHAR" />
+    <result column="LIST_ITEM_ICON_ATTRIBUTES" property="listItemIconAttributes" jdbcType="VARCHAR" />
+    <result column="LIST_ITEM_ICON_EXP" property="listItemIconExp" jdbcType="VARCHAR" />
+    <result column="LIST_ITEM_ICON_EXP_ATTR" property="listItemIconExpAttr" jdbcType="VARCHAR" />
+    <result column="LIST_ITEM_OWNER" property="listItemOwner" jdbcType="VARCHAR" />
+    <result column="LIST_ITEM_CURRENT_FOR_PAGES" property="listItemCurrentForPages" jdbcType="VARCHAR" />
+    <result column="LIST_ITEM_CURRENT_TYPE" property="listItemCurrentType" jdbcType="VARCHAR" />
+    <result column="LIST_ITEM_DISP_COND_TYPE" property="listItemDispCondType" jdbcType="VARCHAR" />
+    <result column="LIST_ITEM_DISP_CONDITION" property="listItemDispCondition" jdbcType="VARCHAR" />
+    <result column="LIST_ITEM_DISP_COND_TYPE2" property="listItemDispCondType2" jdbcType="VARCHAR" />
+    <result column="LIST_ITEM_DISP_CONDITION2" property="listItemDispCondition2" jdbcType="VARCHAR" />
+    <result column="LIST_COUNTCLICKS_Y_N" property="listCountclicksYN" jdbcType="VARCHAR" />
+    <result column="LIST_COUNTCLICKS_CAT" property="listCountclicksCat" jdbcType="VARCHAR" />
+    <result column="LIST_TEXT_01" property="listText01" jdbcType="VARCHAR" />
+    <result column="LIST_TEXT_02" property="listText02" jdbcType="VARCHAR" />
+    <result column="LIST_TEXT_03" property="listText03" jdbcType="VARCHAR" />
+    <result column="LIST_TEXT_04" property="listText04" jdbcType="VARCHAR" />
+    <result column="LIST_TEXT_05" property="listText05" jdbcType="VARCHAR" />
+    <result column="LIST_TEXT_06" property="listText06" jdbcType="VARCHAR" />
+    <result column="LIST_TEXT_07" property="listText07" jdbcType="VARCHAR" />
+    <result column="LIST_TEXT_08" property="listText08" jdbcType="VARCHAR" />
+    <result column="LIST_TEXT_09" property="listText09" jdbcType="VARCHAR" />
+    <result column="LIST_TEXT_10" property="listText10" jdbcType="VARCHAR" />
+    <result column="LIST_TEXT_11" property="listText11" jdbcType="VARCHAR" />
+    <result column="LIST_TEXT_12" property="listText12" jdbcType="VARCHAR" />
+    <result column="LIST_TEXT_13" property="listText13" jdbcType="VARCHAR" />
+    <result column="LIST_TEXT_14" property="listText14" jdbcType="VARCHAR" />
+    <result column="LIST_TEXT_15" property="listText15" jdbcType="VARCHAR" />
+    <result column="LIST_TEXT_16" property="listText16" jdbcType="VARCHAR" />
+    <result column="LIST_TEXT_17" property="listText17" jdbcType="VARCHAR" />
+    <result column="LIST_TEXT_18" property="listText18" jdbcType="VARCHAR" />
+    <result column="LIST_TEXT_19" property="listText19" jdbcType="VARCHAR" />
+    <result column="LIST_TEXT_20" property="listText20" jdbcType="VARCHAR" />
+    <result column="REQUIRED_PATCH" property="requiredPatch" jdbcType="DECIMAL" />
+    <result column="SECURITY_SCHEME" property="securityScheme" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LIST_ITEM_COMMENT" property="listItemComment" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

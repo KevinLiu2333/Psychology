@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaClustersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaClusters" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="CLUSTER_NAME" property="clusterName" jdbcType="VARCHAR" />
+    <result column="TABLESPACE_NAME" property="tablespaceName" jdbcType="VARCHAR" />
+    <result column="PCT_FREE" property="pctFree" jdbcType="DECIMAL" />
+    <result column="PCT_USED" property="pctUsed" jdbcType="DECIMAL" />
+    <result column="KEY_SIZE" property="keySize" jdbcType="DECIMAL" />
+    <result column="INI_TRANS" property="iniTrans" jdbcType="DECIMAL" />
+    <result column="MAX_TRANS" property="maxTrans" jdbcType="DECIMAL" />
+    <result column="INITIAL_EXTENT" property="initialExtent" jdbcType="DECIMAL" />
+    <result column="NEXT_EXTENT" property="nextExtent" jdbcType="DECIMAL" />
+    <result column="MIN_EXTENTS" property="minExtents" jdbcType="DECIMAL" />
+    <result column="MAX_EXTENTS" property="maxExtents" jdbcType="DECIMAL" />
+    <result column="PCT_INCREASE" property="pctIncrease" jdbcType="DECIMAL" />
+    <result column="FREELISTS" property="freelists" jdbcType="DECIMAL" />
+    <result column="FREELIST_GROUPS" property="freelistGroups" jdbcType="DECIMAL" />
+    <result column="AVG_BLOCKS_PER_KEY" property="avgBlocksPerKey" jdbcType="DECIMAL" />
+    <result column="CLUSTER_TYPE" property="clusterType" jdbcType="VARCHAR" />
+    <result column="FUNCTION" property="function" jdbcType="VARCHAR" />
+    <result column="HASHKEYS" property="hashkeys" jdbcType="DECIMAL" />
+    <result column="DEGREE" property="degree" jdbcType="VARCHAR" />
+    <result column="INSTANCES" property="instances" jdbcType="VARCHAR" />
+    <result column="CACHE" property="cache" jdbcType="VARCHAR" />
+    <result column="BUFFER_POOL" property="bufferPool" jdbcType="VARCHAR" />
+    <result column="FLASH_CACHE" property="flashCache" jdbcType="VARCHAR" />
+    <result column="CELL_FLASH_CACHE" property="cellFlashCache" jdbcType="VARCHAR" />
+    <result column="SINGLE_TABLE" property="singleTable" jdbcType="VARCHAR" />
+    <result column="DEPENDENCIES" property="dependencies" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

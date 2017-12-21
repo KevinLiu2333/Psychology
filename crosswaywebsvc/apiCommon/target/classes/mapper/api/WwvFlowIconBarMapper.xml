@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowIconBarMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowIconBar" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="ICON_SEQUENCE" property="iconSequence" jdbcType="DECIMAL" />
+    <result column="ICON_IMAGE" property="iconImage" jdbcType="VARCHAR" />
+    <result column="ICON_IMAGE2" property="iconImage2" jdbcType="VARCHAR" />
+    <result column="ICON_IMAGE3" property="iconImage3" jdbcType="VARCHAR" />
+    <result column="ICON_SUBTEXT" property="iconSubtext" jdbcType="VARCHAR" />
+    <result column="ICON_SUBTEXT2" property="iconSubtext2" jdbcType="VARCHAR" />
+    <result column="ICON_SUBTEXT3" property="iconSubtext3" jdbcType="VARCHAR" />
+    <result column="ICON_TARGET" property="iconTarget" jdbcType="VARCHAR" />
+    <result column="ICON_IMAGE_ALT" property="iconImageAlt" jdbcType="VARCHAR" />
+    <result column="ICON_HEIGHT" property="iconHeight" jdbcType="DECIMAL" />
+    <result column="ICON_WIDTH" property="iconWidth" jdbcType="DECIMAL" />
+    <result column="ICON_HEIGHT2" property="iconHeight2" jdbcType="DECIMAL" />
+    <result column="ICON_WIDTH2" property="iconWidth2" jdbcType="DECIMAL" />
+    <result column="ICON_HEIGHT3" property="iconHeight3" jdbcType="DECIMAL" />
+    <result column="ICON_WIDTH3" property="iconWidth3" jdbcType="DECIMAL" />
+    <result column="ICON_BAR_DISP_COND" property="iconBarDispCond" jdbcType="VARCHAR" />
+    <result column="ICON_BAR_DISP_COND_TYPE" property="iconBarDispCondType" jdbcType="VARCHAR" />
+    <result column="ICON_BAR_FLOW_COND_INSTR" property="iconBarFlowCondInstr" jdbcType="VARCHAR" />
+    <result column="BEGINS_ON_NEW_LINE" property="beginsOnNewLine" jdbcType="VARCHAR" />
+    <result column="CELL_COLSPAN" property="cellColspan" jdbcType="DECIMAL" />
+    <result column="ONCLICK" property="onclick" jdbcType="VARCHAR" />
+    <result column="REQUIRED_PATCH" property="requiredPatch" jdbcType="DECIMAL" />
+    <result column="SECURITY_SCHEME" property="securityScheme" jdbcType="VARCHAR" />
+    <result column="REFERENCE_ID" property="referenceId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="ICON_BAR_COMMENT" property="iconBarComment" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

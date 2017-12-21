@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OlsDirCategorizationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OlsDirCategorizations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="BUSINESS_ID" property="businessId" jdbcType="DECIMAL" />
+    <id column="CATEGORY_ID" property="categoryId" jdbcType="VARCHAR" />
+    <id column="CATEGORY_TYPE_ID" property="categoryTypeId" jdbcType="DECIMAL" />
+    <result column="CATEGORIZATION_TYPE" property="categorizationType" jdbcType="VARCHAR" />
+    <result column="USER_SPECIFIC_CATEG" property="userSpecificCateg" jdbcType="VARCHAR" />
+    <result column="PARAMETERS" property="parameters" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

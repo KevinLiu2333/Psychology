@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtDeltaSnapMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtDeltaSnap" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DELTA_GUID" property="deltaGuid" jdbcType="VARBINARY" />
+    <result column="TRANSACTION_ID" property="transactionId" jdbcType="VARCHAR" />
+    <result column="DELTA_TIMESTAMP" property="deltaTimestamp" jdbcType="DATE" />
+    <result column="DELTA_TYPE" property="deltaType" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="SNAPSHOT_TYPE" property="snapshotType" jdbcType="VARCHAR" />
+    <result column="NEW_LEFT_TARGET_NAME" property="newLeftTargetName" jdbcType="VARCHAR" />
+    <result column="NEW_LEFT_TIMESTAMP" property="newLeftTimestamp" jdbcType="DATE" />
+    <result column="OLD_RIGHT_TIMESTAMP" property="oldRightTimestamp" jdbcType="DATE" />
+    <result column="OLD_RIGHT_TARGET_NAME" property="oldRightTargetName" jdbcType="VARCHAR" />
+    <result column="NEW_LEFT_SNAPSHOT_GUID" property="newLeftSnapshotGuid" jdbcType="VARBINARY" />
+    <result column="OLD_RIGHT_SNAPSHOT_GUID" property="oldRightSnapshotGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

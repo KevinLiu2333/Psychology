@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VFastStartTransactionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VFastStartTransactions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="USN" property="usn" jdbcType="DECIMAL" />
+    <result column="SLT" property="slt" jdbcType="DECIMAL" />
+    <result column="SEQ" property="seq" jdbcType="DECIMAL" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="UNDOBLOCKSDONE" property="undoblocksdone" jdbcType="DECIMAL" />
+    <result column="UNDOBLOCKSTOTAL" property="undoblockstotal" jdbcType="DECIMAL" />
+    <result column="PID" property="pid" jdbcType="DECIMAL" />
+    <result column="CPUTIME" property="cputime" jdbcType="DECIMAL" />
+    <result column="PARENTUSN" property="parentusn" jdbcType="DECIMAL" />
+    <result column="PARENTSLT" property="parentslt" jdbcType="DECIMAL" />
+    <result column="PARENTSEQ" property="parentseq" jdbcType="DECIMAL" />
+    <result column="RCVSERVERS" property="rcvservers" jdbcType="DECIMAL" />
+    <result column="XID" property="xid" jdbcType="VARBINARY" />
+    <result column="PXID" property="pxid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

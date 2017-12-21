@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigReportMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigReport" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FILE_ID" property="fileId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="DTDVERSION" property="dtdversion" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="TITLE" property="title" jdbcType="VARCHAR" />
+    <result column="BEFOREPARAMETERFORMTRIGGER" property="beforeparameterformtrigger" jdbcType="VARCHAR" />
+    <result column="AFTERPARAMETERFORMTRIGGER" property="afterparameterformtrigger" jdbcType="VARCHAR" />
+    <result column="BEFOREREPORTTRIGGER" property="beforereporttrigger" jdbcType="VARCHAR" />
+    <result column="BETWEENPAGESTRIGGER" property="betweenpagestrigger" jdbcType="VARCHAR" />
+    <result column="AFTERREPORTTRIGGER" property="afterreporttrigger" jdbcType="VARCHAR" />
+    <result column="UNITOFMEASUREMENT" property="unitofmeasurement" jdbcType="VARCHAR" />
+    <result column="PREVIEWERTITLE" property="previewertitle" jdbcType="VARCHAR" />
+    <result column="DESIGNINCHARACTERUNITS" property="designincharacterunits" jdbcType="VARCHAR" />
+    <result column="XMLTAG" property="xmltag" jdbcType="VARCHAR" />
+    <result column="XMLTAGATTRS" property="xmltagattrs" jdbcType="VARCHAR" />
+    <result column="XMLPROLOGTYPE" property="xmlprologtype" jdbcType="VARCHAR" />
+    <result column="XMLPROLOGVALUE" property="xmlprologvalue" jdbcType="VARCHAR" />
+    <result column="XMLPROLOGTEXT" property="xmlprologtext" jdbcType="VARCHAR" />
+    <result column="XMLPROLOGFILE" property="xmlprologfile" jdbcType="VARCHAR" />
+    <result column="AUTHOR" property="author" jdbcType="VARCHAR" />
+    <result column="SELECT_FOR_APP" property="selectForApp" jdbcType="VARCHAR" />
+    <result column="APPLICABLE" property="applicable" jdbcType="VARCHAR" />
+    <result column="COMPLETE" property="complete" jdbcType="VARCHAR" />
+    <result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+    <result column="ASSIGNEE" property="assignee" jdbcType="VARCHAR" />
+    <result column="NOTES" property="notes" jdbcType="VARCHAR" />
+    <result column="TAGS" property="tags" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

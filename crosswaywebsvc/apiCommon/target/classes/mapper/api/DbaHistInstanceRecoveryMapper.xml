@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaHistInstanceRecoveryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaHistInstanceRecovery" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="RECOVERY_ESTIMATED_IOS" property="recoveryEstimatedIos" jdbcType="DECIMAL" />
+    <result column="ACTUAL_REDO_BLKS" property="actualRedoBlks" jdbcType="DECIMAL" />
+    <result column="TARGET_REDO_BLKS" property="targetRedoBlks" jdbcType="DECIMAL" />
+    <result column="LOG_FILE_SIZE_REDO_BLKS" property="logFileSizeRedoBlks" jdbcType="DECIMAL" />
+    <result column="LOG_CHKPT_TIMEOUT_REDO_BLKS" property="logChkptTimeoutRedoBlks" jdbcType="DECIMAL" />
+    <result column="LOG_CHKPT_INTERVAL_REDO_BLKS" property="logChkptIntervalRedoBlks" jdbcType="DECIMAL" />
+    <result column="FAST_START_IO_TARGET_REDO_BLKS" property="fastStartIoTargetRedoBlks" jdbcType="DECIMAL" />
+    <result column="TARGET_MTTR" property="targetMttr" jdbcType="DECIMAL" />
+    <result column="ESTIMATED_MTTR" property="estimatedMttr" jdbcType="DECIMAL" />
+    <result column="CKPT_BLOCK_WRITES" property="ckptBlockWrites" jdbcType="DECIMAL" />
+    <result column="OPTIMAL_LOGFILE_SIZE" property="optimalLogfileSize" jdbcType="DECIMAL" />
+    <result column="ESTD_CLUSTER_AVAILABLE_TIME" property="estdClusterAvailableTime" jdbcType="DECIMAL" />
+    <result column="WRITES_MTTR" property="writesMttr" jdbcType="DECIMAL" />
+    <result column="WRITES_LOGFILE_SIZE" property="writesLogfileSize" jdbcType="DECIMAL" />
+    <result column="WRITES_LOG_CHECKPOINT_SETTINGS" property="writesLogCheckpointSettings" jdbcType="DECIMAL" />
+    <result column="WRITES_OTHER_SETTINGS" property="writesOtherSettings" jdbcType="DECIMAL" />
+    <result column="WRITES_AUTOTUNE" property="writesAutotune" jdbcType="DECIMAL" />
+    <result column="WRITES_FULL_THREAD_CKPT" property="writesFullThreadCkpt" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

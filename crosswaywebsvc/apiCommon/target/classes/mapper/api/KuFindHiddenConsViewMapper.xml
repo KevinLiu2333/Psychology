@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuFindHiddenConsViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuFindHiddenConsView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CON_NUM" property="conNum" jdbcType="DECIMAL" />
+    <result column="CONSTR_NAME" property="constrName" jdbcType="VARCHAR" />
+    <result column="OWNER_NAME" property="ownerName" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="INTCOL_NUM" property="intcolNum" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

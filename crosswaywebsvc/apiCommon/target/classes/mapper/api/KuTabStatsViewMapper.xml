@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuTabStatsViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuTabStatsView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="BASE_OBJ" property="baseObj" jdbcType="OTHER" />
+    <result column="NESTED_TAB_NAME" property="nestedTabName" jdbcType="VARCHAR" />
+    <result column="COLUMN_LIST" property="columnList" jdbcType="OTHER" />
+    <result column="TAB_INFO" property="tabInfo" jdbcType="OTHER" />
+    <result column="PTAB_INFO_LIST" property="ptabInfoList" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

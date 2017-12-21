@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrSlowqrysMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrSlowqrys" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SQ_IDX_ID" property="sqIdxId" jdbcType="DECIMAL" />
+    <result column="SQ_IXP_ID" property="sqIxpId" jdbcType="DECIMAL" />
+    <result column="SQ_QRY_HASH" property="sqQryHash" jdbcType="DECIMAL" />
+    <result column="SQ_TEXT_QRY" property="sqTextQry" jdbcType="VARCHAR" />
+    <result column="SQ_TQRY_LEN" property="sqTqryLen" jdbcType="DECIMAL" />
+    <result column="SQ_WHEN_RUN" property="sqWhenRun" jdbcType="DATE" />
+    <result column="SQ_TIME_TAKEN" property="sqTimeTaken" jdbcType="DECIMAL" />
+    <result column="SQ_QUERY" property="sqQuery" jdbcType="VARCHAR" />
+    <result column="SQ_QRY_LEN" property="sqQryLen" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

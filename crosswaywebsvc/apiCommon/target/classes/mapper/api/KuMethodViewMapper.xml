@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuMethodViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuMethodView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERSION_NUM" property="versionNum" jdbcType="DECIMAL" />
+    <result column="METHOD_NUM" property="methodNum" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="PROPERTIES" property="properties" jdbcType="DECIMAL" />
+    <result column="PARAMETERS_NUM" property="parametersNum" jdbcType="DECIMAL" />
+    <result column="RESULTS" property="results" jdbcType="DECIMAL" />
+    <result column="XFLAGS" property="xflags" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+    <result column="EXTERNVARNAME" property="externvarname" jdbcType="VARCHAR" />
+    <result column="ARGUMENT_LIST" property="argumentList" jdbcType="OTHER" />
+    <result column="PROCEDUREINFO" property="procedureinfo" jdbcType="OTHER" />
+    <result column="PROCJAVA" property="procjava" jdbcType="OTHER" />
+    <result column="PROCPLSQL" property="procplsql" jdbcType="OTHER" />
+    <result column="PROCC" property="procc" jdbcType="OTHER" />
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="TOID" property="toid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

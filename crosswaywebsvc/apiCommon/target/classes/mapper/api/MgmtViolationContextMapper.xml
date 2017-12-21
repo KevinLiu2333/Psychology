@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtViolationContextMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtViolationContext" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="POLICY_GUID" property="policyGuid" jdbcType="VARBINARY" />
+    <id column="KEY_VALUE" property="keyValue" jdbcType="VARCHAR" />
+    <id column="COLLECTION_TIMESTAMP" property="collectionTimestamp" jdbcType="DATE" />
+    <id column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="COLUMN_TYPE" property="columnType" jdbcType="DECIMAL" />
+    <result column="COLUMN_VALUE" property="columnValue" jdbcType="DECIMAL" />
+    <result column="COLUMN_STR_VALUE" property="columnStrValue" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

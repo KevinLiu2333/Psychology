@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SuiteLoggerErrorMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SuiteLoggerError">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ERROR_LOG_ID" jdbcType="VARCHAR" property="errorLogId" />
+    <result column="ERROR_CODE" jdbcType="VARCHAR" property="errorCode" />
+    <result column="ERROR_TYPE" jdbcType="VARCHAR" property="errorType" />
+    <result column="ERROR_TIME" jdbcType="DATE" property="errorTime" />
+    <result column="ERROR_BUS_ID" jdbcType="VARCHAR" property="errorBusId" />
+    <result column="ERROR_CONTENT" jdbcType="CLOB" property="errorContent" />
+  </resultMap>
+</mapper>

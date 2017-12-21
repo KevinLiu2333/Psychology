@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllSchedulerJobLogMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllSchedulerJobLog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOG_ID" property="logId" jdbcType="DECIMAL" />
+    <result column="LOG_DATE" property="logDate" jdbcType="OTHER" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="JOB_NAME" property="jobName" jdbcType="VARCHAR" />
+    <result column="JOB_SUBNAME" property="jobSubname" jdbcType="VARCHAR" />
+    <result column="JOB_CLASS" property="jobClass" jdbcType="VARCHAR" />
+    <result column="OPERATION" property="operation" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="CLIENT_ID" property="clientId" jdbcType="VARCHAR" />
+    <result column="GLOBAL_UID" property="globalUid" jdbcType="VARCHAR" />
+    <result column="CREDENTIAL_OWNER" property="credentialOwner" jdbcType="VARCHAR" />
+    <result column="CREDENTIAL_NAME" property="credentialName" jdbcType="VARCHAR" />
+    <result column="DESTINATION_OWNER" property="destinationOwner" jdbcType="VARCHAR" />
+    <result column="DESTINATION" property="destination" jdbcType="VARCHAR" />
+    <result column="ADDITIONAL_INFO" property="additionalInfo" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

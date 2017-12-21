@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VPropagationReceiverMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VPropagationReceiver" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SRC_QUEUE_SCHEMA" property="srcQueueSchema" jdbcType="VARCHAR" />
+    <result column="SRC_QUEUE_NAME" property="srcQueueName" jdbcType="VARCHAR" />
+    <result column="SRC_DBNAME" property="srcDbname" jdbcType="VARCHAR" />
+    <result column="DST_QUEUE_SCHEMA" property="dstQueueSchema" jdbcType="VARCHAR" />
+    <result column="DST_QUEUE_NAME" property="dstQueueName" jdbcType="VARCHAR" />
+    <result column="STARTUP_TIME" property="startupTime" jdbcType="DATE" />
+    <result column="HIGH_WATER_MARK" property="highWaterMark" jdbcType="DECIMAL" />
+    <result column="ACKNOWLEDGEMENT" property="acknowledgement" jdbcType="DECIMAL" />
+    <result column="LAST_RECEIVED_MSG" property="lastReceivedMsg" jdbcType="DECIMAL" />
+    <result column="TOTAL_MSGS" property="totalMsgs" jdbcType="DECIMAL" />
+    <result column="ELAPSED_UNPICKLE_TIME" property="elapsedUnpickleTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_RULE_TIME" property="elapsedRuleTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_ENQUEUE_TIME" property="elapsedEnqueueTime" jdbcType="DECIMAL" />
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="SERIAL#" property="serial" jdbcType="DECIMAL" />
+    <result column="SPID" property="spid" jdbcType="VARCHAR" />
+    <result column="PROPAGATION_NAME" property="propagationName" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="LAST_RECEIVED_MSG_POSITION" property="lastReceivedMsgPosition" jdbcType="VARBINARY" />
+    <result column="ACKNOWLEGEMENT_POSITION" property="acknowlegementPosition" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvSortSegmentMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvSortSegment" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="TABLESPACE_NAME" property="tablespaceName" jdbcType="VARCHAR" />
+    <result column="SEGMENT_FILE" property="segmentFile" jdbcType="DECIMAL" />
+    <result column="SEGMENT_BLOCK" property="segmentBlock" jdbcType="DECIMAL" />
+    <result column="EXTENT_SIZE" property="extentSize" jdbcType="DECIMAL" />
+    <result column="CURRENT_USERS" property="currentUsers" jdbcType="DECIMAL" />
+    <result column="TOTAL_EXTENTS" property="totalExtents" jdbcType="DECIMAL" />
+    <result column="TOTAL_BLOCKS" property="totalBlocks" jdbcType="DECIMAL" />
+    <result column="USED_EXTENTS" property="usedExtents" jdbcType="DECIMAL" />
+    <result column="USED_BLOCKS" property="usedBlocks" jdbcType="DECIMAL" />
+    <result column="FREE_EXTENTS" property="freeExtents" jdbcType="DECIMAL" />
+    <result column="FREE_BLOCKS" property="freeBlocks" jdbcType="DECIMAL" />
+    <result column="ADDED_EXTENTS" property="addedExtents" jdbcType="DECIMAL" />
+    <result column="EXTENT_HITS" property="extentHits" jdbcType="DECIMAL" />
+    <result column="FREED_EXTENTS" property="freedExtents" jdbcType="DECIMAL" />
+    <result column="FREE_REQUESTS" property="freeRequests" jdbcType="DECIMAL" />
+    <result column="MAX_SIZE" property="maxSize" jdbcType="DECIMAL" />
+    <result column="MAX_BLOCKS" property="maxBlocks" jdbcType="DECIMAL" />
+    <result column="MAX_USED_SIZE" property="maxUsedSize" jdbcType="DECIMAL" />
+    <result column="MAX_USED_BLOCKS" property="maxUsedBlocks" jdbcType="DECIMAL" />
+    <result column="MAX_SORT_SIZE" property="maxSortSize" jdbcType="DECIMAL" />
+    <result column="MAX_SORT_BLOCKS" property="maxSortBlocks" jdbcType="DECIMAL" />
+    <result column="RELATIVE_FNO" property="relativeFno" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

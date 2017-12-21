@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SysUncompressedSegsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SysUncompressedSegs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TABOWNER" property="tabowner" jdbcType="VARCHAR" />
+    <result column="TABNAME" property="tabname" jdbcType="VARCHAR" />
+    <result column="PARTNAME" property="partname" jdbcType="VARCHAR" />
+    <result column="TSNAME" property="tsname" jdbcType="VARCHAR" />
+    <result column="TBSID" property="tbsid" jdbcType="DECIMAL" />
+    <result column="SEGSIZE" property="segsize" jdbcType="DECIMAL" />
+    <result column="SEGOBJD" property="segobjd" jdbcType="DECIMAL" />
+    <result column="SEGOBJN" property="segobjn" jdbcType="DECIMAL" />
+    <result column="SEGMENT_TYPE" property="segmentType" jdbcType="VARCHAR" />
+    <result column="TOTAL_INDEXES" property="totalIndexes" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

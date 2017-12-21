@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllSdoIndexInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllSdoIndexInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SDO_INDEX_OWNER" property="sdoIndexOwner" jdbcType="VARCHAR" />
+    <result column="INDEX_NAME" property="indexName" jdbcType="VARCHAR" />
+    <result column="TABLE_OWNER" property="tableOwner" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="SDO_INDEX_TYPE" property="sdoIndexType" jdbcType="VARCHAR" />
+    <result column="SDO_INDEX_TABLE" property="sdoIndexTable" jdbcType="VARCHAR" />
+    <result column="SDO_INDEX_STATUS" property="sdoIndexStatus" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

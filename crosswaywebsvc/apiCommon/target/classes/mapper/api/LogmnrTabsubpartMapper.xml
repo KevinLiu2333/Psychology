@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.LogmnrTabsubpartMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.LogmnrTabsubpart" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="LOGMNR_UID" property="logmnrUid" jdbcType="DECIMAL" />
+    <id column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <id column="POBJ#" property="pobj" jdbcType="DECIMAL" />
+    <result column="DATAOBJ#" property="dataobj" jdbcType="DECIMAL" />
+    <result column="SUBPART#" property="subpart" jdbcType="DECIMAL" />
+    <result column="TS#" property="ts" jdbcType="DECIMAL" />
+    <result column="LOGMNR_FLAGS" property="logmnrFlags" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

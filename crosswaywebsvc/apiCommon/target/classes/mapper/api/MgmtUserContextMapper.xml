@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtUserContextMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtUserContext" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="CLIENT_IDENTIFIER" property="clientIdentifier" jdbcType="VARCHAR" />
+    <id column="ATTRIBUTE" property="attribute" jdbcType="DECIMAL" />
+    <result column="VALUE" property="value" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

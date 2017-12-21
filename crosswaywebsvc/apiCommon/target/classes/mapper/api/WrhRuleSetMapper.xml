@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhRuleSetMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhRuleSet" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <id column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="STARTUP_TIME" property="startupTime" jdbcType="DATE" />
+    <result column="CPU_TIME" property="cpuTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_TIME" property="elapsedTime" jdbcType="DECIMAL" />
+    <result column="EVALUATIONS" property="evaluations" jdbcType="DECIMAL" />
+    <result column="SQL_FREE_EVALUATIONS" property="sqlFreeEvaluations" jdbcType="DECIMAL" />
+    <result column="SQL_EXECUTIONS" property="sqlExecutions" jdbcType="DECIMAL" />
+    <result column="RELOADS" property="reloads" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

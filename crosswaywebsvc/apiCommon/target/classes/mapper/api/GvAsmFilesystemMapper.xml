@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvAsmFilesystemMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvAsmFilesystem" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="FS_NAME" property="fsName" jdbcType="VARCHAR" />
+    <result column="AVAILABLE_TIME" property="availableTime" jdbcType="DATE" />
+    <result column="BLOCK_SIZE" property="blockSize" jdbcType="DECIMAL" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="CORRUPT" property="corrupt" jdbcType="VARCHAR" />
+    <result column="NUM_VOL" property="numVol" jdbcType="DECIMAL" />
+    <result column="TOTAL_SIZE" property="totalSize" jdbcType="DECIMAL" />
+    <result column="TOTAL_FREE" property="totalFree" jdbcType="DECIMAL" />
+    <result column="TOTAL_SNAP_SPACE_USAGE" property="totalSnapSpaceUsage" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

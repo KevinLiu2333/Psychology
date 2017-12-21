@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationPagesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationPages" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="PAGE_ID" property="pageId" jdbcType="DECIMAL" />
+    <result column="PAGE_NAME" property="pageName" jdbcType="VARCHAR" />
+    <result column="PAGE_TITLE" property="pageTitle" jdbcType="VARCHAR" />
+    <result column="MEDIA_TYPE" property="mediaType" jdbcType="VARCHAR" />
+    <result column="TAB_SET" property="tabSet" jdbcType="VARCHAR" />
+    <result column="PAGE_ALIAS" property="pageAlias" jdbcType="VARCHAR" />
+    <result column="PAGE_FUNCTION" property="pageFunction" jdbcType="VARCHAR" />
+    <result column="ALLOW_DUPLICATE_SUBMISSIONS" property="allowDuplicateSubmissions" jdbcType="VARCHAR" />
+    <result column="INCLUDE_APEX_CSS_JS_YN" property="includeApexCssJsYn" jdbcType="VARCHAR" />
+    <result column="FOCUS_CURSOR" property="focusCursor" jdbcType="VARCHAR" />
+    <result column="HEADER_TEXT" property="headerText" jdbcType="VARCHAR" />
+    <result column="BODY_HEADER" property="bodyHeader" jdbcType="VARCHAR" />
+    <result column="FOOTER_TEXT" property="footerText" jdbcType="VARCHAR" />
+    <result column="PAGE_TEMPLATE" property="pageTemplate" jdbcType="VARCHAR" />
+    <result column="AUTHORIZATION_SCHEME" property="authorizationScheme" jdbcType="VARCHAR" />
+    <result column="AUTHORIZATION_SCHEME_ID" property="authorizationSchemeId" jdbcType="VARCHAR" />
+    <result column="BUILD_OPTION" property="buildOption" jdbcType="VARCHAR" />
+    <result column="PAGE_HTML_ONLOAD" property="pageHtmlOnload" jdbcType="VARCHAR" />
+    <result column="PAGE_REQUIRES_AUTHENTICATION" property="pageRequiresAuthentication" jdbcType="VARCHAR" />
+    <result column="PAGE_ACCESS_PROTECTION" property="pageAccessProtection" jdbcType="VARCHAR" />
+    <result column="REGIONS" property="regions" jdbcType="DECIMAL" />
+    <result column="ITEMS" property="items" jdbcType="DECIMAL" />
+    <result column="BUTTONS" property="buttons" jdbcType="DECIMAL" />
+    <result column="COMPUTATIONS" property="computations" jdbcType="DECIMAL" />
+    <result column="VALIDATIONS" property="validations" jdbcType="DECIMAL" />
+    <result column="PROCESSES" property="processes" jdbcType="DECIMAL" />
+    <result column="BRANCHES" property="branches" jdbcType="DECIMAL" />
+    <result column="REPORT_COLUMNS" property="reportColumns" jdbcType="DECIMAL" />
+    <result column="PAGE_GROUP" property="pageGroup" jdbcType="VARCHAR" />
+    <result column="PAGE_GROUP_ID" property="pageGroupId" jdbcType="DECIMAL" />
+    <result column="ON_DUP_SUBMISSION_GOTO_URL" property="onDupSubmissionGotoUrl" jdbcType="VARCHAR" />
+    <result column="ERROR_NOTIFICATION_TEXT" property="errorNotificationText" jdbcType="VARCHAR" />
+    <result column="FORM_AUTOCOMPLETE" property="formAutocomplete" jdbcType="VARCHAR" />
+    <result column="CACHED" property="cached" jdbcType="VARCHAR" />
+    <result column="CACHE_TIMEOUT_SECONDS" property="cacheTimeoutSeconds" jdbcType="DECIMAL" />
+    <result column="CACHED_BY_USER" property="cachedByUser" jdbcType="VARCHAR" />
+    <result column="CACHE_CONDITION_TYPE" property="cacheConditionType" jdbcType="VARCHAR" />
+    <result column="CACHE_CONDITION_EXP_1" property="cacheConditionExp1" jdbcType="VARCHAR" />
+    <result column="CACHE_CONDITION_EXP_2" property="cacheConditionExp2" jdbcType="VARCHAR" />
+    <result column="PAGE_COMMENT" property="pageComment" jdbcType="VARCHAR" />
+    <result column="CACHED_REGIONS" property="cachedRegions" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="COMPONENT_SIGNATURE" property="componentSignature" jdbcType="VARCHAR" />
+    <result column="HELP_TEXT" property="helpText" jdbcType="CLOB" />
+    <result column="PAGE_HTML_HEADER" property="pageHtmlHeader" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

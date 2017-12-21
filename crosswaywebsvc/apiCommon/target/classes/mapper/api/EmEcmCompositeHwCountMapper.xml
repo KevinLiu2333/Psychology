@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.EmEcmCompositeHwCountMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.EmEcmCompositeHwCount" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COMPOSITE_TARGET_TYPE" property="compositeTargetType" jdbcType="VARCHAR" />
+    <result column="COMPOSITE_TARGET_NAME" property="compositeTargetName" jdbcType="VARCHAR" />
+    <result column="SYSTEM_CONFIG" property="systemConfig" jdbcType="VARCHAR" />
+    <result column="MACHINE_ARCHITECTURE" property="machineArchitecture" jdbcType="VARCHAR" />
+    <result column="NUM_HOSTS" property="numHosts" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

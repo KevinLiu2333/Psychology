@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvSessIoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvSessIo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="BLOCK_GETS" property="blockGets" jdbcType="DECIMAL" />
+    <result column="CONSISTENT_GETS" property="consistentGets" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_READS" property="physicalReads" jdbcType="DECIMAL" />
+    <result column="BLOCK_CHANGES" property="blockChanges" jdbcType="DECIMAL" />
+    <result column="CONSISTENT_CHANGES" property="consistentChanges" jdbcType="DECIMAL" />
+    <result column="OPTIMIZED_PHYSICAL_READS" property="optimizedPhysicalReads" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

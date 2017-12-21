@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvAdvisorProgressMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvAdvisorProgress" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="SERIAL#" property="serial" jdbcType="DECIMAL" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="OPNAME" property="opname" jdbcType="VARCHAR" />
+    <result column="ADVISOR_NAME" property="advisorName" jdbcType="VARCHAR" />
+    <result column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <result column="TARGET_DESC" property="targetDesc" jdbcType="VARCHAR" />
+    <result column="SOFAR" property="sofar" jdbcType="DECIMAL" />
+    <result column="TOTALWORK" property="totalwork" jdbcType="DECIMAL" />
+    <result column="UNITS" property="units" jdbcType="VARCHAR" />
+    <result column="BENEFIT_SOFAR" property="benefitSofar" jdbcType="DECIMAL" />
+    <result column="BENEFIT_MAX" property="benefitMax" jdbcType="DECIMAL" />
+    <result column="FINDINGS" property="findings" jdbcType="DECIMAL" />
+    <result column="RECOMMENDATIONS" property="recommendations" jdbcType="DECIMAL" />
+    <result column="TIME_REMAINING" property="timeRemaining" jdbcType="DECIMAL" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="LAST_UPDATE_TIME" property="lastUpdateTime" jdbcType="DATE" />
+    <result column="ELAPSED_SECONDS" property="elapsedSeconds" jdbcType="DECIMAL" />
+    <result column="ADVISOR_METRIC1" property="advisorMetric1" jdbcType="DECIMAL" />
+    <result column="METRIC1_DESC" property="metric1Desc" jdbcType="VARCHAR" />
+    <result column="EXECUTION_TYPE" property="executionType" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

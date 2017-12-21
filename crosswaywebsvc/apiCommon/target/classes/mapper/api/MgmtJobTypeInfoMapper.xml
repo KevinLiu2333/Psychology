@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtJobTypeInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtJobTypeInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="JOB_TYPE_ID" property="jobTypeId" jdbcType="VARBINARY" />
+    <result column="JOB_TYPE" property="jobType" jdbcType="VARCHAR" />
+    <result column="JOB_TYPE_DESCRIPTION" property="jobTypeDescription" jdbcType="VARCHAR" />
+    <result column="JOB_TYPE_OWNER" property="jobTypeOwner" jdbcType="VARCHAR" />
+    <result column="JOB_TYPE_CATEGORY" property="jobTypeCategory" jdbcType="DECIMAL" />
+    <result column="LAST_MODIFIED_BY" property="lastModifiedBy" jdbcType="VARCHAR" />
+    <result column="LAST_MODIFIED_DATE" property="lastModifiedDate" jdbcType="DATE" />
+    <result column="ALL_TARGET_TYPES" property="allTargetTypes" jdbcType="DECIMAL" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="MAJOR_VERSION" property="majorVersion" jdbcType="DECIMAL" />
+    <result column="MINOR_VERSION1" property="minorVersion1" jdbcType="DECIMAL" />
+    <result column="MINOR_VERSION2" property="minorVersion2" jdbcType="DECIMAL" />
+    <result column="AGENT_BOUND" property="agentBound" jdbcType="DECIMAL" />
+    <result column="LOCK_ACTION" property="lockAction" jdbcType="DECIMAL" />
+    <result column="SINGLE_TARGET" property="singleTarget" jdbcType="DECIMAL" />
+    <result column="DEFAULT_TARGET_TYPE" property="defaultTargetType" jdbcType="VARCHAR" />
+    <result column="SUSPENDABLE" property="suspendable" jdbcType="DECIMAL" />
+    <result column="EDITABLE" property="editable" jdbcType="DECIMAL" />
+    <result column="SUSPEND_ON_NOCREDS" property="suspendOnNocreds" jdbcType="DECIMAL" />
+    <result column="RESTARTABLE" property="restartable" jdbcType="DECIMAL" />
+    <result column="JOB_TYPE_NLSID" property="jobTypeNlsid" jdbcType="VARCHAR" />
+    <result column="JOB_TYPE_DEFAULT" property="jobTypeDefault" jdbcType="VARCHAR" />
+    <result column="CREATE_TEXT_NLSID" property="createTextNlsid" jdbcType="VARCHAR" />
+    <result column="CREATE_TEXT_DEFAULT" property="createTextDefault" jdbcType="VARCHAR" />
+    <result column="DELETE_TEXT_NLSID" property="deleteTextNlsid" jdbcType="VARCHAR" />
+    <result column="DELETE_TEXT_DEFAULT" property="deleteTextDefault" jdbcType="VARCHAR" />
+    <result column="TRUSTED" property="trusted" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

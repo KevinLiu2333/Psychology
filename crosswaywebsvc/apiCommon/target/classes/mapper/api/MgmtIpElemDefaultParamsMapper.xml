@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtIpElemDefaultParamsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtIpElemDefaultParams" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ELEMENT_NAME_NLSID" property="elementNameNlsid" jdbcType="VARCHAR" />
+    <id column="ELEMENT_TYPE_NLSID" property="elementTypeNlsid" jdbcType="VARCHAR" />
+    <id column="PARAM" property="param" jdbcType="VARCHAR" />
+    <result column="VALUE" property="value" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

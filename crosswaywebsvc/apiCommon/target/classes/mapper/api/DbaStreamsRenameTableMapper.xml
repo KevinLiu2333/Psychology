@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaStreamsRenameTableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaStreamsRenameTable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RULE_OWNER" property="ruleOwner" jdbcType="VARCHAR" />
+    <result column="RULE_NAME" property="ruleName" jdbcType="VARCHAR" />
+    <result column="FROM_SCHEMA_NAME" property="fromSchemaName" jdbcType="VARCHAR" />
+    <result column="TO_SCHEMA_NAME" property="toSchemaName" jdbcType="VARCHAR" />
+    <result column="FROM_TABLE_NAME" property="fromTableName" jdbcType="VARCHAR" />
+    <result column="TO_TABLE_NAME" property="toTableName" jdbcType="VARCHAR" />
+    <result column="PRECEDENCE" property="precedence" jdbcType="DECIMAL" />
+    <result column="STEP_NUMBER" property="stepNumber" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

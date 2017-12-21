@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OraKglr7DependenciesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OraKglr7Dependencies" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="DECIMAL" />
+    <result column="PARENT_OWNER" property="parentOwner" jdbcType="VARCHAR" />
+    <result column="PARENT_NAME" property="parentName" jdbcType="VARCHAR" />
+    <result column="PARENT_TYPE" property="parentType" jdbcType="DECIMAL" />
+    <result column="PARENT_LINK_NAME" property="parentLinkName" jdbcType="VARCHAR" />
+    <result column="PARENT_TIMESTAMP" property="parentTimestamp" jdbcType="DATE" />
+    <result column="ORDER_NUMBER" property="orderNumber" jdbcType="DECIMAL" />
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

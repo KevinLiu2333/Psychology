@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtEcmVisibleSnapshotsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtEcmVisibleSnapshots" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAPSHOT_TYPE" property="snapshotType" jdbcType="VARCHAR" />
+    <result column="START_TIMESTAMP" property="startTimestamp" jdbcType="DATE" />
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="DISPLAY_TARGET_NAME" property="displayTargetName" jdbcType="VARCHAR" />
+    <result column="DISPLAY_TARGET_TYPE" property="displayTargetType" jdbcType="VARCHAR" />
+    <result column="ELAPSED_TIME" property="elapsedTime" jdbcType="DECIMAL" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="IS_CURRENT" property="isCurrent" jdbcType="VARCHAR" />
+    <result column="MESSAGE" property="message" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="CREATOR" property="creator" jdbcType="VARCHAR" />
+    <result column="SAVED_TIMESTAMP" property="savedTimestamp" jdbcType="DATE" />
+    <result column="ECM_SNAPSHOT_ID" property="ecmSnapshotId" jdbcType="VARBINARY" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

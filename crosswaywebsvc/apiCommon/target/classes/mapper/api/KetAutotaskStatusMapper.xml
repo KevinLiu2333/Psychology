@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KetAutotaskStatusMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KetAutotaskStatus" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DUMMY_KEY" property="dummyKey" jdbcType="DECIMAL" />
+    <result column="AUTOTASK_STATUS" property="autotaskStatus" jdbcType="DECIMAL" />
+    <result column="ABA_STATE" property="abaState" jdbcType="DECIMAL" />
+    <result column="ABA_STATE_TIME" property="abaStateTime" jdbcType="OTHER" />
+    <result column="ABA_OS_PID" property="abaOsPid" jdbcType="VARCHAR" />
+    <result column="ABA_START_TIME" property="abaStartTime" jdbcType="OTHER" />
+    <result column="MW_NAME" property="mwName" jdbcType="VARCHAR" />
+    <result column="MW_START_TIME" property="mwStartTime" jdbcType="OTHER" />
+    <result column="MW_RECORD_TIME" property="mwRecordTime" jdbcType="OTHER" />
+    <result column="INSTANCE_NAME" property="instanceName" jdbcType="VARCHAR" />
+    <result column="RECONCILE_TIME" property="reconcileTime" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

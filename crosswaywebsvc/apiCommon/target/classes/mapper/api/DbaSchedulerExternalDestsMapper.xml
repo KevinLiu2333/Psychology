@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaSchedulerExternalDestsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaSchedulerExternalDests" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DESTINATION_NAME" property="destinationName" jdbcType="VARCHAR" />
+    <result column="HOSTNAME" property="hostname" jdbcType="VARCHAR" />
+    <result column="PORT" property="port" jdbcType="DECIMAL" />
+    <result column="IP_ADDRESS" property="ipAddress" jdbcType="VARCHAR" />
+    <result column="ENABLED" property="enabled" jdbcType="VARCHAR" />
+    <result column="COMMENTS" property="comments" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VtableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Vtable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="VINDEX" property="vindex" jdbcType="DECIMAL" />
+    <result column="ITYPEOWNER" property="itypeowner" jdbcType="VARCHAR" />
+    <result column="ITYPENAME" property="itypename" jdbcType="VARCHAR" />
+    <result column="IMETHOD#" property="imethod" jdbcType="DECIMAL" />
+    <result column="IFLAGS" property="iflags" jdbcType="DECIMAL" />
+    <result column="ITYPETOID" property="itypetoid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

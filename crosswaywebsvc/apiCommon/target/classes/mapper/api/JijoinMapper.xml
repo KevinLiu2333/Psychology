@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.JijoinMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Jijoin" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="TAB1OBJ#" property="tab1obj" jdbcType="DECIMAL" />
+    <result column="TAB1COL#" property="tab1col" jdbcType="DECIMAL" />
+    <result column="TAB2OBJ#" property="tab2obj" jdbcType="DECIMAL" />
+    <result column="TAB2COL#" property="tab2col" jdbcType="DECIMAL" />
+    <result column="JOINOP" property="joinop" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="TAB1INST#" property="tab1inst" jdbcType="DECIMAL" />
+    <result column="TAB2INST#" property="tab2inst" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

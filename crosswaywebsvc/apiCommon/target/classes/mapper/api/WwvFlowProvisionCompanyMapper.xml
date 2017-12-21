@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowProvisionCompanyMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowProvisionCompany" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="COMPANY_NAME" property="companyName" jdbcType="VARCHAR" />
+    <result column="ADMIN_FIRST_NAME" property="adminFirstName" jdbcType="VARCHAR" />
+    <result column="ADMIN_LAST_NAME" property="adminLastName" jdbcType="VARCHAR" />
+    <result column="ADMIN_TITLE" property="adminTitle" jdbcType="VARCHAR" />
+    <result column="ADMIN_EMAIL" property="adminEmail" jdbcType="VARCHAR" />
+    <result column="ADMIN_PHONE" property="adminPhone" jdbcType="VARCHAR" />
+    <result column="ADMIN_ID" property="adminId" jdbcType="DECIMAL" />
+    <result column="ADMIN_USERID" property="adminUserid" jdbcType="VARCHAR" />
+    <result column="COMPANY_ADDRESS" property="companyAddress" jdbcType="VARCHAR" />
+    <result column="CITY" property="city" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="ZIP" property="zip" jdbcType="VARCHAR" />
+    <result column="COUNTRY" property="country" jdbcType="VARCHAR" />
+    <result column="COMPANY_TYPE" property="companyType" jdbcType="VARCHAR" />
+    <result column="COMPANY_WEBSITE" property="companyWebsite" jdbcType="VARCHAR" />
+    <result column="NUMBER_OF_EMPLOYEES" property="numberOfEmployees" jdbcType="VARCHAR" />
+    <result column="COMPANY_PHONE" property="companyPhone" jdbcType="VARCHAR" />
+    <result column="COMPANY_FAX" property="companyFax" jdbcType="VARCHAR" />
+    <result column="ORACLE_PARTNER" property="oraclePartner" jdbcType="VARCHAR" />
+    <result column="HOW_DID_YOU_HEAR_ABOUT_US" property="howDidYouHearAboutUs" jdbcType="VARCHAR" />
+    <result column="SERVICE_USE_STATUS" property="serviceUseStatus" jdbcType="VARCHAR" />
+    <result column="DATABASE_SIZE" property="databaseSize" jdbcType="DECIMAL" />
+    <result column="SERVICE_START_DATE" property="serviceStartDate" jdbcType="DATE" />
+    <result column="SERVICE_TERMINATION_DATE" property="serviceTerminationDate" jdbcType="DATE" />
+    <result column="SCHEMA_NAME" property="schemaName" jdbcType="VARCHAR" />
+    <result column="ESTIMATED_END_USERS" property="estimatedEndUsers" jdbcType="DECIMAL" />
+    <result column="PAGE_VIEWS_PER_DAY" property="pageViewsPerDay" jdbcType="DECIMAL" />
+    <result column="PROJECT_DESCRIPTION" property="projectDescription" jdbcType="VARCHAR" />
+    <result column="PROJECT_JUSTIFICATION" property="projectJustification" jdbcType="VARCHAR" />
+    <result column="PROJECT_APPROVAL_DATE" property="projectApprovalDate" jdbcType="DATE" />
+    <result column="PROJECT_ACTUAL_BEGIN_DATE" property="projectActualBeginDate" jdbcType="DATE" />
+    <result column="PROJECT_ACTUAL_END_DATE" property="projectActualEndDate" jdbcType="DATE" />
+    <result column="PROJECT_STATUS" property="projectStatus" jdbcType="VARCHAR" />
+    <result column="WORK_LOG" property="workLog" jdbcType="VARCHAR" />
+    <result column="REQUEST_DATE" property="requestDate" jdbcType="DATE" />
+  </resultMap>
+</mapper>

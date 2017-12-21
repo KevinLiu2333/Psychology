@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriSchControlMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriSchControl" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SCHEDULE_ID" property="scheduleId" jdbcType="DECIMAL" />
+    <result column="SCHEDULE_MODE" property="scheduleMode" jdbcType="DECIMAL" />
+    <result column="START_CALIBRATE" property="startCalibrate" jdbcType="DECIMAL" />
+    <result column="LAST_VOTE" property="lastVote" jdbcType="DECIMAL" />
+    <result column="NUM_VOTES" property="numVotes" jdbcType="DECIMAL" />
+    <result column="SYNCED_TIME" property="syncedTime" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

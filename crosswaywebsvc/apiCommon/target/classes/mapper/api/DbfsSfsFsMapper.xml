@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbfsSfsFsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbfsSfsFs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="STORE_OWNER" property="storeOwner" jdbcType="VARCHAR" />
+    <result column="STORE_NAME" property="storeName" jdbcType="VARCHAR" />
+    <result column="TABID" property="tabid" jdbcType="DECIMAL" />
+    <result column="VOLID" property="volid" jdbcType="DECIMAL" />
+    <result column="SNAP#" property="snap" jdbcType="DECIMAL" />
+    <result column="CREATED" property="created" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

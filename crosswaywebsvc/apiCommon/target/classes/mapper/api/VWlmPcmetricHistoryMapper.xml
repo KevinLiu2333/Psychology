@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VWlmPcmetricHistoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VWlmPcmetricHistory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="BEGIN_TIME" property="beginTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="INTSIZE_CSEC" property="intsizeCsec" jdbcType="DECIMAL" />
+    <result column="PC_NAME_HASH" property="pcNameHash" jdbcType="DECIMAL" />
+    <result column="PC_NAME" property="pcName" jdbcType="VARCHAR" />
+    <result column="CALLSPERSEC" property="callspersec" jdbcType="DECIMAL" />
+    <result column="ERRCALLSPERSEC" property="errcallspersec" jdbcType="DECIMAL" />
+    <result column="RESPONSETIMEPERCALL" property="responsetimepercall" jdbcType="OTHER" />
+    <result column="CPUPERCALL" property="cpupercall" jdbcType="OTHER" />
+    <result column="CPUWAITPERCALL" property="cpuwaitpercall" jdbcType="OTHER" />
+    <result column="IOPERCALL" property="iopercall" jdbcType="OTHER" />
+    <result column="IOWAITPERCALL" property="iowaitpercall" jdbcType="OTHER" />
+    <result column="GCPERCALL" property="gcpercall" jdbcType="OTHER" />
+    <result column="GCWAITPERCALL" property="gcwaitpercall" jdbcType="OTHER" />
+    <result column="NIWAITPERCALL" property="niwaitpercall" jdbcType="OTHER" />
+    <result column="SCHWAITPERCALL" property="schwaitpercall" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

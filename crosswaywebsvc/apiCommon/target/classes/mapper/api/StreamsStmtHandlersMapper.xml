@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.StreamsStmtHandlersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.StreamsStmtHandlers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HANDLER_ID" property="handlerId" jdbcType="DECIMAL" />
+    <result column="HANDLER_NAME" property="handlerName" jdbcType="VARCHAR" />
+    <result column="HANDLER_COMMENT" property="handlerComment" jdbcType="VARCHAR" />
+    <result column="CREATION_TIME" property="creationTime" jdbcType="TIMESTAMP" />
+    <result column="MODIFICATION_TIME" property="modificationTime" jdbcType="TIMESTAMP" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="VARCHAR" />
+    <result column="SPARE4" property="spare4" jdbcType="TIMESTAMP" />
+    <result column="HANDLER_FLAG" property="handlerFlag" jdbcType="VARBINARY" />
+    <result column="SPARE5" property="spare5" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

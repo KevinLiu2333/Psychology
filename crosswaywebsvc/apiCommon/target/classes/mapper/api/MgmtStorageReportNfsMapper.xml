@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtStorageReportNfsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtStorageReportNfs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="FILESYSTEM" property="filesystem" jdbcType="VARCHAR" />
+    <result column="MOUNTPOINT" property="mountpoint" jdbcType="VARCHAR" />
+    <result column="SIZEB" property="sizeb" jdbcType="DECIMAL" />
+    <result column="USEDB" property="usedb" jdbcType="DECIMAL" />
+    <result column="FREEB" property="freeb" jdbcType="DECIMAL" />
+    <result column="NFS_SERVER" property="nfsServer" jdbcType="VARCHAR" />
+    <result column="NFS_SERVER_IP_ADDRESS" property="nfsServerIpAddress" jdbcType="VARCHAR" />
+    <result column="NFS_VENDOR" property="nfsVendor" jdbcType="VARCHAR" />
+    <result column="MOUNT_PRIVILEGE" property="mountPrivilege" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

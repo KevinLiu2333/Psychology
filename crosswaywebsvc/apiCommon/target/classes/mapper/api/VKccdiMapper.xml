@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VKccdiMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VKccdi" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDX" property="indx" jdbcType="DECIMAL" />
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="DICTS" property="dicts" jdbcType="VARCHAR" />
+    <result column="DIDBN" property="didbn" jdbcType="VARCHAR" />
+    <result column="DIRDB" property="dirdb" jdbcType="DECIMAL" />
+    <result column="DICCT" property="dicct" jdbcType="VARCHAR" />
+    <result column="DIFLG" property="diflg" jdbcType="DECIMAL" />
+    <result column="DIIRS" property="diirs" jdbcType="VARCHAR" />
+    <result column="DIRLS" property="dirls" jdbcType="VARCHAR" />
+    <result column="DIRLC" property="dirlc" jdbcType="VARCHAR" />
+    <result column="DIRLC_I" property="dirlcI" jdbcType="DECIMAL" />
+    <result column="DIPRS" property="diprs" jdbcType="VARCHAR" />
+    <result column="DIPRC" property="diprc" jdbcType="VARCHAR" />
+    <result column="DIPRC_I" property="diprcI" jdbcType="DECIMAL" />
+    <result column="DIRDC" property="dirdc" jdbcType="DECIMAL" />
+    <result column="DINDF" property="dindf" jdbcType="DECIMAL" />
+    <result column="DINTF" property="dintf" jdbcType="DECIMAL" />
+    <result column="DINOF" property="dinof" jdbcType="DECIMAL" />
+    <result column="DICPT" property="dicpt" jdbcType="DECIMAL" />
+    <result column="DISCN" property="discn" jdbcType="VARCHAR" />
+    <result column="DINET" property="dinet" jdbcType="DECIMAL" />
+    <result column="DINOT" property="dinot" jdbcType="DECIMAL" />
+    <result column="DIOTH" property="dioth" jdbcType="DECIMAL" />
+    <result column="DIOTT" property="diott" jdbcType="DECIMAL" />
+    <result column="DIMLM" property="dimlm" jdbcType="DECIMAL" />
+    <result column="DIMDM" property="dimdm" jdbcType="DECIMAL" />
+    <result column="DIARH" property="diarh" jdbcType="DECIMAL" />
+    <result column="DIART" property="diart" jdbcType="DECIMAL" />
+    <result column="DIPRT" property="diprt" jdbcType="DECIMAL" />
+    <result column="DIFAS" property="difas" jdbcType="VARCHAR" />
+    <result column="DICKP_SCN" property="dickpScn" jdbcType="VARCHAR" />
+    <result column="DICKP_TIM" property="dickpTim" jdbcType="VARCHAR" />
+    <result column="DICSQ" property="dicsq" jdbcType="DECIMAL" />
+    <result column="DIDBI" property="didbi" jdbcType="DECIMAL" />
+    <result column="DISSC_SCN" property="disscScn" jdbcType="VARCHAR" />
+    <result column="DISSC_TIM" property="disscTim" jdbcType="VARCHAR" />
+    <result column="DISFP" property="disfp" jdbcType="DECIMAL" />
+    <result column="DIBSC" property="dibsc" jdbcType="DECIMAL" />
+    <result column="DIPOFB" property="dipofb" jdbcType="DECIMAL" />
+    <result column="DIPNFB" property="dipnfb" jdbcType="DECIMAL" />
+    <result column="DICOFB" property="dicofb" jdbcType="DECIMAL" />
+    <result column="DICNFB" property="dicnfb" jdbcType="DECIMAL" />
+    <result column="DIVTS" property="divts" jdbcType="VARCHAR" />
+    <result column="DICID" property="dicid" jdbcType="DECIMAL" />
+    <result column="DIDOR" property="didor" jdbcType="DECIMAL" />
+    <result column="DISLH" property="dislh" jdbcType="DECIMAL" />
+    <result column="DISLT" property="dislt" jdbcType="DECIMAL" />
+    <result column="DIRAE" property="dirae" jdbcType="DECIMAL" />
+    <result column="DIACID" property="diacid" jdbcType="DECIMAL" />
+    <result column="DIARS" property="diars" jdbcType="VARCHAR" />
+    <result column="DISOS" property="disos" jdbcType="DECIMAL" />
+    <result column="DIDGD" property="didgd" jdbcType="DECIMAL" />
+    <result column="DIMLA" property="dimla" jdbcType="DECIMAL" />
+    <result column="DIPDB" property="dipdb" jdbcType="DECIMAL" />
+    <result column="DIFL2" property="difl2" jdbcType="DECIMAL" />
+    <result column="DIPLID" property="diplid" jdbcType="DECIMAL" />
+    <result column="DIPLN" property="dipln" jdbcType="VARCHAR" />
+    <result column="DICUR_SCN" property="dicurScn" jdbcType="VARCHAR" />
+    <result column="DIDBUN" property="didbun" jdbcType="VARCHAR" />
+    <result column="DIFSTS" property="difsts" jdbcType="DECIMAL" />
+    <result column="DIFOPR" property="difopr" jdbcType="DECIMAL" />
+    <result column="DIFTHS" property="difths" jdbcType="DECIMAL" />
+    <result column="DIFTGT" property="diftgt" jdbcType="VARCHAR" />
+    <result column="DIFOBS" property="difobs" jdbcType="VARCHAR" />
+    <result column="DIDBOP" property="didbop" jdbcType="DECIMAL" />
+    <result column="ADDR" property="addr" jdbcType="VARBINARY" />
+    <result column="DIETB" property="dietb" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowListTemplatesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowListTemplates" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="LIST_TEMPLATE_NAME" property="listTemplateName" jdbcType="VARCHAR" />
+    <result column="LIST_TEMPLATE_BEFORE_ROWS" property="listTemplateBeforeRows" jdbcType="VARCHAR" />
+    <result column="LIST_TEMPLATE_AFTER_ROWS" property="listTemplateAfterRows" jdbcType="VARCHAR" />
+    <result column="BETWEEN_ITEMS" property="betweenItems" jdbcType="VARCHAR" />
+    <result column="BEFORE_SUB_LIST" property="beforeSubList" jdbcType="VARCHAR" />
+    <result column="AFTER_SUB_LIST" property="afterSubList" jdbcType="VARCHAR" />
+    <result column="BETWEEN_SUB_LIST_ITEMS" property="betweenSubListItems" jdbcType="VARCHAR" />
+    <result column="REFERENCE_ID" property="referenceId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="THEME_ID" property="themeId" jdbcType="DECIMAL" />
+    <result column="THEME_CLASS_ID" property="themeClassId" jdbcType="DECIMAL" />
+    <result column="TRANSLATE_THIS_TEMPLATE" property="translateThisTemplate" jdbcType="VARCHAR" />
+    <result column="LIST_TEMPLATE_COMMENT" property="listTemplateComment" jdbcType="VARCHAR" />
+    <result column="LIST_TEMPLATE_CURRENT" property="listTemplateCurrent" jdbcType="CLOB" />
+    <result column="LIST_TEMPLATE_NONCURRENT" property="listTemplateNoncurrent" jdbcType="CLOB" />
+    <result column="SUB_LIST_ITEM_CURRENT" property="subListItemCurrent" jdbcType="CLOB" />
+    <result column="SUB_LIST_ITEM_NONCURRENT" property="subListItemNoncurrent" jdbcType="CLOB" />
+    <result column="ITEM_TEMPLATE_CURR_W_CHILD" property="itemTemplateCurrWChild" jdbcType="CLOB" />
+    <result column="ITEM_TEMPLATE_NONCURR_W_CHILD" property="itemTemplateNoncurrWChild" jdbcType="CLOB" />
+    <result column="SUB_TEMPLATE_CURR_W_CHILD" property="subTemplateCurrWChild" jdbcType="CLOB" />
+    <result column="SUB_TEMPLATE_NONCURR_W_CHILD" property="subTemplateNoncurrWChild" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Sdo3dthemesTableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Sdo3dthemesTable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SDO_OWNER" property="sdoOwner" jdbcType="VARCHAR" />
+    <id column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="BASE_TABLE" property="baseTable" jdbcType="VARCHAR" />
+    <result column="THEME_COLUMN" property="themeColumn" jdbcType="VARCHAR" />
+    <result column="STYLE_COLUMN" property="styleColumn" jdbcType="VARCHAR" />
+    <result column="THEME_TYPE" property="themeType" jdbcType="VARCHAR" />
+    <result column="DEFINITION" property="definition" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

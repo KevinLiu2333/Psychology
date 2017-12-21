@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigAccRelationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigAccRelations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="PROJECT_ID" property="projectId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="RELID" property="relid" jdbcType="DECIMAL" />
+    <result column="RELNAME" property="relname" jdbcType="VARCHAR" />
+    <result column="PARENTTBLID" property="parenttblid" jdbcType="DECIMAL" />
+    <result column="CHILDTBLID" property="childtblid" jdbcType="DECIMAL" />
+    <result column="ISUNIQUE" property="isunique" jdbcType="DECIMAL" />
+    <result column="ISENFORCED" property="isenforced" jdbcType="DECIMAL" />
+    <result column="ISINHERITED" property="isinherited" jdbcType="DECIMAL" />
+    <result column="ISUPDATECASCADE" property="isupdatecascade" jdbcType="DECIMAL" />
+    <result column="ISDELETECASCADE" property="isdeletecascade" jdbcType="DECIMAL" />
+    <result column="CNVRELATION" property="cnvrelation" jdbcType="DECIMAL" />
+    <result column="DATE_CREATED" property="dateCreated" jdbcType="DATE" />
+    <result column="DATE_MODIFIED" property="dateModified" jdbcType="DATE" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VQmonTasksMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VQmonTasks" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TASK_NAME" property="taskName" jdbcType="VARCHAR" />
+    <result column="TASK_NUMBER" property="taskNumber" jdbcType="DECIMAL" />
+    <result column="TASK_TYPE" property="taskType" jdbcType="VARCHAR" />
+    <result column="TASK_SUBMIT_TIME" property="taskSubmitTime" jdbcType="OTHER" />
+    <result column="TASK_READY_TIME" property="taskReadyTime" jdbcType="OTHER" />
+    <result column="TASK_EXPIRY_TIME" property="taskExpiryTime" jdbcType="OTHER" />
+    <result column="TASK_START_TIME" property="taskStartTime" jdbcType="OTHER" />
+    <result column="TASK_STATUS" property="taskStatus" jdbcType="VARCHAR" />
+    <result column="SERVER_NAME" property="serverName" jdbcType="VARCHAR" />
+    <result column="MAX_RETRIES" property="maxRetries" jdbcType="DECIMAL" />
+    <result column="NUM_RUNS" property="numRuns" jdbcType="DECIMAL" />
+    <result column="NUM_FAILURES" property="numFailures" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

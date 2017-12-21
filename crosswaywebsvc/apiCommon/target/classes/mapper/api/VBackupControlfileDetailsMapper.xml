@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VBackupControlfileDetailsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VBackupControlfileDetails" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="BTYPE" property="btype" jdbcType="CHAR" />
+    <result column="BTYPE_KEY" property="btypeKey" jdbcType="DECIMAL" />
+    <result column="SESSION_KEY" property="sessionKey" jdbcType="DECIMAL" />
+    <result column="SESSION_RECID" property="sessionRecid" jdbcType="DECIMAL" />
+    <result column="SESSION_STAMP" property="sessionStamp" jdbcType="DECIMAL" />
+    <result column="ID1" property="id1" jdbcType="DECIMAL" />
+    <result column="ID2" property="id2" jdbcType="DECIMAL" />
+    <result column="CREATION_TIME" property="creationTime" jdbcType="DATE" />
+    <result column="RESETLOGS_CHANGE#" property="resetlogsChange" jdbcType="DECIMAL" />
+    <result column="RESETLOGS_TIME" property="resetlogsTime" jdbcType="DATE" />
+    <result column="CHECKPOINT_CHANGE#" property="checkpointChange" jdbcType="DECIMAL" />
+    <result column="CHECKPOINT_TIME" property="checkpointTime" jdbcType="DATE" />
+    <result column="FILESIZE" property="filesize" jdbcType="DECIMAL" />
+    <result column="COMPRESSION_RATIO" property="compressionRatio" jdbcType="DECIMAL" />
+    <result column="FILESIZE_DISPLAY" property="filesizeDisplay" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

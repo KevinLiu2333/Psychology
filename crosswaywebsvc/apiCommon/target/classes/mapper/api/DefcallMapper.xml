@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DefcallMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Defcall" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CALLNO" property="callno" jdbcType="DECIMAL" />
+    <result column="DEFERRED_TRAN_ID" property="deferredTranId" jdbcType="VARCHAR" />
+    <result column="SCHEMANAME" property="schemaname" jdbcType="VARCHAR" />
+    <result column="PACKAGENAME" property="packagename" jdbcType="VARCHAR" />
+    <result column="PROCNAME" property="procname" jdbcType="VARCHAR" />
+    <result column="ARGCOUNT" property="argcount" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

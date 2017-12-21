@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AdmExpfilIndexesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AdmExpfilIndexes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="INDEX_NAME" property="indexName" jdbcType="VARCHAR" />
+    <result column="PREDICATE_TABLE" property="predicateTable" jdbcType="VARCHAR" />
+    <result column="ACCESS_FUNC_PACKAGE" property="accessFuncPackage" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_SET" property="attributeSet" jdbcType="VARCHAR" />
+    <result column="EXPRESSION_TABLE" property="expressionTable" jdbcType="VARCHAR" />
+    <result column="EXPRESSION_COLUMN" property="expressionColumn" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

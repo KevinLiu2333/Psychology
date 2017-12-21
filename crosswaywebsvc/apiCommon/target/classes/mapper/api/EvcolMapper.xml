@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.EvcolMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Evcol" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="EV_OBJ#" property="evObj" jdbcType="DECIMAL" />
+    <result column="EV_COL_ID" property="evColId" jdbcType="DECIMAL" />
+    <result column="BASE_TBL_COL_NAME" property="baseTblColName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SuiteQueryConfigMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SuiteQueryConfig" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SAVE_ID" property="saveId" jdbcType="VARCHAR" />
+    <result column="THEME_ID" property="themeId" jdbcType="VARCHAR" />
+    <result column="USER_ID" property="userId" jdbcType="VARCHAR" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="FORM_ID" property="formId" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="CON_COLS" property="conCols" jdbcType="VARCHAR" />
+    <result column="RS_COLS" property="rsCols" jdbcType="VARCHAR" />
+    <result column="SORT_COLS" property="sortCols" jdbcType="VARCHAR" />
+    <result column="SAVE_DATE" property="saveDate" jdbcType="DATE" />
+    <result column="SAVE_DESC" property="saveDesc" jdbcType="VARCHAR" />
+    <result column="RENDERER" property="renderer" jdbcType="VARCHAR" />
+    <result column="WHERE_COLS" property="whereCols" jdbcType="VARCHAR" />
+    <result column="WHERE_JOINS" property="whereJoins" jdbcType="VARCHAR" />
+    <result column="WHERE_VALUES" property="whereValues" jdbcType="VARCHAR" />
+    <result column="WHERE_APPEND" property="whereAppend" jdbcType="VARCHAR" />
+    <result column="VIEW_TYPE" property="viewType" jdbcType="VARCHAR" />
+    <result column="RS_PREVIEW" property="rsPreview" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserEditioningViewColsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserEditioningViewCols" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VIEW_NAME" property="viewName" jdbcType="VARCHAR" />
+    <result column="VIEW_COLUMN_ID" property="viewColumnId" jdbcType="DECIMAL" />
+    <result column="VIEW_COLUMN_NAME" property="viewColumnName" jdbcType="VARCHAR" />
+    <result column="TABLE_COLUMN_ID" property="tableColumnId" jdbcType="DECIMAL" />
+    <result column="TABLE_COLUMN_NAME" property="tableColumnName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

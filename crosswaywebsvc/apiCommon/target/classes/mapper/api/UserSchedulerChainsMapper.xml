@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserSchedulerChainsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserSchedulerChains" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CHAIN_NAME" property="chainName" jdbcType="VARCHAR" />
+    <result column="RULE_SET_OWNER" property="ruleSetOwner" jdbcType="VARCHAR" />
+    <result column="RULE_SET_NAME" property="ruleSetName" jdbcType="VARCHAR" />
+    <result column="NUMBER_OF_RULES" property="numberOfRules" jdbcType="DECIMAL" />
+    <result column="NUMBER_OF_STEPS" property="numberOfSteps" jdbcType="DECIMAL" />
+    <result column="ENABLED" property="enabled" jdbcType="VARCHAR" />
+    <result column="EVALUATION_INTERVAL" property="evaluationInterval" jdbcType="OTHER" />
+    <result column="USER_RULE_SET" property="userRuleSet" jdbcType="VARCHAR" />
+    <result column="COMMENTS" property="comments" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

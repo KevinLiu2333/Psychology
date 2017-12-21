@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtStorageTmpNfsDataMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtStorageTmpNfsData" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SERVER_NAME" property="serverName" jdbcType="VARCHAR" />
+    <result column="SERVER_MAC_ADDRESS" property="serverMacAddress" jdbcType="VARCHAR" />
+    <result column="SERVER_IP_ADDRESS" property="serverIpAddress" jdbcType="VARCHAR" />
+    <result column="FILESYSTEM" property="filesystem" jdbcType="VARCHAR" />
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="EXPORTED_FS" property="exportedFs" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE" property="keyValue" jdbcType="VARBINARY" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <result column="GLOBAL_UNIQUE_ID" property="globalUniqueId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.EmRtIncompleteLoadsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.EmRtIncompleteLoads" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PAGE_URL" property="pageUrl" jdbcType="VARCHAR" />
+    <result column="NUM_INCOMPLETE_LOADS" property="numIncompleteLoads" jdbcType="DECIMAL" />
+    <result column="AVG_SERVER_TIME" property="avgServerTime" jdbcType="DECIMAL" />
+    <result column="ROLLUP_TIMESTAMP" property="rollupTimestamp" jdbcType="DATE" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

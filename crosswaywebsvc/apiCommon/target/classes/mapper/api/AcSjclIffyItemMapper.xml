@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AcSjclIffyItemMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AcSjclIffyItem">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" jdbcType="OTHER" property="id" />
+    <result column="TASK_NUMBER" jdbcType="OTHER" property="taskNumber" />
+    <result column="TASK_NAME" jdbcType="OTHER" property="taskName" />
+    <result column="RESOURCE_NAME" jdbcType="OTHER" property="resourceName" />
+    <result column="RESOURCE_TABLE" jdbcType="OTHER" property="resourceTable" />
+    <result column="ITEM_NAME" jdbcType="OTHER" property="itemName" />
+    <result column="ITEM_CODE" jdbcType="OTHER" property="itemCode" />
+    <result column="TYPE" jdbcType="OTHER" property="type" />
+    <result column="ERROR_COUNT" jdbcType="DECIMAL" property="errorCount" />
+    <result column="START_TIME" jdbcType="DATE" property="startTime" />
+    <result column="END_TIME" jdbcType="DATE" property="endTime" />
+    <result column="RESOURCE_TYPE" jdbcType="OTHER" property="resourceType" />
+    <result column="DEPT_ID" jdbcType="OTHER" property="deptId" />
+    <result column="DEPT_NAME" jdbcType="OTHER" property="deptName" />
+  </resultMap>
+</mapper>

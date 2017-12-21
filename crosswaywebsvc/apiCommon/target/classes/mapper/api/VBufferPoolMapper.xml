@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VBufferPoolMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VBufferPool" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="BLOCK_SIZE" property="blockSize" jdbcType="DECIMAL" />
+    <result column="RESIZE_STATE" property="resizeState" jdbcType="VARCHAR" />
+    <result column="CURRENT_SIZE" property="currentSize" jdbcType="DECIMAL" />
+    <result column="BUFFERS" property="buffers" jdbcType="DECIMAL" />
+    <result column="TARGET_SIZE" property="targetSize" jdbcType="DECIMAL" />
+    <result column="TARGET_BUFFERS" property="targetBuffers" jdbcType="DECIMAL" />
+    <result column="PREV_SIZE" property="prevSize" jdbcType="DECIMAL" />
+    <result column="PREV_BUFFERS" property="prevBuffers" jdbcType="DECIMAL" />
+    <result column="LO_BNUM" property="loBnum" jdbcType="DECIMAL" />
+    <result column="HI_BNUM" property="hiBnum" jdbcType="DECIMAL" />
+    <result column="LO_SETID" property="loSetid" jdbcType="DECIMAL" />
+    <result column="HI_SETID" property="hiSetid" jdbcType="DECIMAL" />
+    <result column="SET_COUNT" property="setCount" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

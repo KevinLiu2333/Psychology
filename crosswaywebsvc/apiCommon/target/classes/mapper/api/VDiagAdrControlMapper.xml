@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VDiagAdrControlMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VDiagAdrControl" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDX" property="indx" jdbcType="DECIMAL" />
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="ADR_PATH_IDX" property="adrPathIdx" jdbcType="VARCHAR" />
+    <result column="ADR_HOME" property="adrHome" jdbcType="VARCHAR" />
+    <result column="ADRID" property="adrid" jdbcType="DECIMAL" />
+    <result column="SHORTP_POLICY" property="shortpPolicy" jdbcType="DECIMAL" />
+    <result column="LONGP_POLICY" property="longpPolicy" jdbcType="DECIMAL" />
+    <result column="LAST_MOD_TIME" property="lastModTime" jdbcType="OTHER" />
+    <result column="LAST_AUTOPRG_TIME" property="lastAutoprgTime" jdbcType="OTHER" />
+    <result column="LAST_MANUPRG_TIME" property="lastManuprgTime" jdbcType="OTHER" />
+    <result column="ADRDIR_VERSION" property="adrdirVersion" jdbcType="DECIMAL" />
+    <result column="ADRSCHM_VERSION" property="adrschmVersion" jdbcType="DECIMAL" />
+    <result column="ADRSCHMV_SUMMARY" property="adrschmvSummary" jdbcType="DECIMAL" />
+    <result column="ADRALERT_VERSION" property="adralertVersion" jdbcType="DECIMAL" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="OTHER" />
+    <result column="ADDR" property="addr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

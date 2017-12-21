@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaHistBaselineDetailsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaHistBaselineDetails" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="BASELINE_ID" property="baselineId" jdbcType="DECIMAL" />
+    <result column="BASELINE_NAME" property="baselineName" jdbcType="VARCHAR" />
+    <result column="BASELINE_TYPE" property="baselineType" jdbcType="VARCHAR" />
+    <result column="START_SNAP_ID" property="startSnapId" jdbcType="DECIMAL" />
+    <result column="START_SNAP_TIME" property="startSnapTime" jdbcType="OTHER" />
+    <result column="END_SNAP_ID" property="endSnapId" jdbcType="DECIMAL" />
+    <result column="END_SNAP_TIME" property="endSnapTime" jdbcType="OTHER" />
+    <result column="SHUTDOWN" property="shutdown" jdbcType="VARCHAR" />
+    <result column="ERROR_COUNT" property="errorCount" jdbcType="DECIMAL" />
+    <result column="PCT_TOTAL_TIME" property="pctTotalTime" jdbcType="DECIMAL" />
+    <result column="LAST_TIME_COMPUTED" property="lastTimeComputed" jdbcType="DATE" />
+    <result column="MOVING_WINDOW_SIZE" property="movingWindowSize" jdbcType="DECIMAL" />
+    <result column="CREATION_TIME" property="creationTime" jdbcType="DATE" />
+    <result column="EXPIRATION" property="expiration" jdbcType="DECIMAL" />
+    <result column="TEMPLATE_NAME" property="templateName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

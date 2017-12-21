@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtOperationsMasterMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtOperationsMaster" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OP_CODE" property="opCode" jdbcType="DECIMAL" />
+    <result column="OPERATION_DESCRIPTION" property="operationDescription" jdbcType="VARCHAR" />
+    <result column="OPERATION_AUDIT" property="operationAudit" jdbcType="DECIMAL" />
+    <result column="AUDIT_COLUMN_NAME1" property="auditColumnName1" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_NAME2" property="auditColumnName2" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_NAME3" property="auditColumnName3" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_NAME4" property="auditColumnName4" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_NAME5" property="auditColumnName5" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_NAME6" property="auditColumnName6" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_NAME7" property="auditColumnName7" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_NAME8" property="auditColumnName8" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_NAME9" property="auditColumnName9" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_NAME10" property="auditColumnName10" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_NAME11" property="auditColumnName11" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_NAME12" property="auditColumnName12" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_NAME13" property="auditColumnName13" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_NAME14" property="auditColumnName14" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_NAME15" property="auditColumnName15" jdbcType="VARCHAR" />
+    <result column="AUDIT_CLOB_NAME1" property="auditClobName1" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

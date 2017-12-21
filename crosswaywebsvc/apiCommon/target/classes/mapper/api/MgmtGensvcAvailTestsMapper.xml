@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtGensvcAvailTestsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtGensvcAvailTests" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="TEST_GUID" property="testGuid" jdbcType="VARBINARY" />
+    <result column="TEST_NAME" property="testName" jdbcType="VARCHAR" />
+    <result column="TEST_TYPE" property="testType" jdbcType="VARCHAR" />
+    <result column="AVAIL_TEST" property="availTest" jdbcType="DECIMAL" />
+    <result column="MONIT_STATUS" property="monitStatus" jdbcType="DECIMAL" />
+    <result column="METRIC_GUID" property="metricGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

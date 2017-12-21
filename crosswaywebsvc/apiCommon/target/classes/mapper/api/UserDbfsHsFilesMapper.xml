@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserDbfsHsFilesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserDbfsHsFiles" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PATH" property="path" jdbcType="VARCHAR" />
+    <result column="SEQUENCENUMBER" property="sequencenumber" jdbcType="DECIMAL" />
+    <result column="STARTOFFSET" property="startoffset" jdbcType="DECIMAL" />
+    <result column="ENDOFFSET" property="endoffset" jdbcType="DECIMAL" />
+    <result column="TARBALLID" property="tarballid" jdbcType="DECIMAL" />
+    <result column="BACKUPFILENAME" property="backupfilename" jdbcType="VARCHAR" />
+    <result column="TARSTARTOFFSET" property="tarstartoffset" jdbcType="DECIMAL" />
+    <result column="TARENDOFFSET" property="tarendoffset" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

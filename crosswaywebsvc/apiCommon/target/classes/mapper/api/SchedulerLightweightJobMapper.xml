@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SchedulerLightweightJobMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SchedulerLightweightJob" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="PROGRAM_OID" property="programOid" jdbcType="DECIMAL" />
+    <result column="START_DATE" property="startDate" jdbcType="OTHER" />
+    <result column="END_DATE" property="endDate" jdbcType="OTHER" />
+    <result column="SCHEDULE_EXPR" property="scheduleExpr" jdbcType="VARCHAR" />
+    <result column="QUEUE_OWNER" property="queueOwner" jdbcType="VARCHAR" />
+    <result column="QUEUE_NAME" property="queueName" jdbcType="VARCHAR" />
+    <result column="QUEUE_AGENT" property="queueAgent" jdbcType="VARCHAR" />
+    <result column="EVENT_RULE" property="eventRule" jdbcType="VARCHAR" />
+    <result column="SCHEDULE_ID" property="scheduleId" jdbcType="DECIMAL" />
+    <result column="LAST_ENABLED_TIME" property="lastEnabledTime" jdbcType="OTHER" />
+    <result column="CLASS_OID" property="classOid" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="CREATOR" property="creator" jdbcType="VARCHAR" />
+    <result column="CLIENT_ID" property="clientId" jdbcType="VARCHAR" />
+    <result column="GUID" property="guid" jdbcType="VARCHAR" />
+    <result column="CHAR_ENV" property="charEnv" jdbcType="VARCHAR" />
+    <result column="FW_NAME" property="fwName" jdbcType="VARCHAR" />
+    <result column="FW_OID" property="fwOid" jdbcType="DECIMAL" />
+    <result column="JOB_STATUS" property="jobStatus" jdbcType="DECIMAL" />
+    <result column="NEXT_RUN_DATE" property="nextRunDate" jdbcType="OTHER" />
+    <result column="LAST_START_DATE" property="lastStartDate" jdbcType="OTHER" />
+    <result column="LAST_END_DATE" property="lastEndDate" jdbcType="OTHER" />
+    <result column="RETRY_COUNT" property="retryCount" jdbcType="DECIMAL" />
+    <result column="RUN_COUNT" property="runCount" jdbcType="DECIMAL" />
+    <result column="FAILURE_COUNT" property="failureCount" jdbcType="DECIMAL" />
+    <result column="RUNNING_INSTANCE" property="runningInstance" jdbcType="DECIMAL" />
+    <result column="RUNNING_SLAVE" property="runningSlave" jdbcType="DECIMAL" />
+    <result column="INSTANCE_ID" property="instanceId" jdbcType="DECIMAL" />
+    <result column="DEST_OID" property="destOid" jdbcType="DECIMAL" />
+    <result column="DESTINATION" property="destination" jdbcType="VARCHAR" />
+    <result column="CREDENTIAL_NAME" property="credentialName" jdbcType="VARCHAR" />
+    <result column="CREDENTIAL_OWNER" property="credentialOwner" jdbcType="VARCHAR" />
+    <result column="CREDENTIAL_OID" property="credentialOid" jdbcType="DECIMAL" />
+    <result column="JOB_DEST_ID" property="jobDestId" jdbcType="DECIMAL" />
+    <result column="RUN_INVOKER" property="runInvoker" jdbcType="DECIMAL" />
+    <result column="MXDUR_MSGID" property="mxdurMsgid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

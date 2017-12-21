@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtSqlReuseMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtSqlReuse" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="COLLECTION_TIMESTAMP" property="collectionTimestamp" jdbcType="DATE" />
+    <result column="METRIC_NAME" property="metricName" jdbcType="VARCHAR" />
+    <result column="LOAD_TIMESTAMP" property="loadTimestamp" jdbcType="DATE" />
+    <result column="SQL_TEXT" property="sqlText" jdbcType="VARCHAR" />
+    <result column="APPLICATION" property="application" jdbcType="VARCHAR" />
+    <result column="MODULE" property="module" jdbcType="VARCHAR" />
+    <result column="NORMALIZED_SQL" property="normalizedSql" jdbcType="VARCHAR" />
+    <result column="SHARABLE_MEM" property="sharableMem" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

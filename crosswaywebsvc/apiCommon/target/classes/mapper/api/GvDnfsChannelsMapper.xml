@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvDnfsChannelsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvDnfsChannels" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="PNUM" property="pnum" jdbcType="DECIMAL" />
+    <result column="SVRNAME" property="svrname" jdbcType="VARCHAR" />
+    <result column="PATH" property="path" jdbcType="VARCHAR" />
+    <result column="LOCAL" property="local" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="CH_ID" property="chId" jdbcType="DECIMAL" />
+    <result column="SVR_ID" property="svrId" jdbcType="DECIMAL" />
+    <result column="SENDS" property="sends" jdbcType="DECIMAL" />
+    <result column="RECVS" property="recvs" jdbcType="DECIMAL" />
+    <result column="PINGS" property="pings" jdbcType="DECIMAL" />
+    <result column="RECO" property="reco" jdbcType="DECIMAL" />
+    <result column="RESENDS" property="resends" jdbcType="DECIMAL" />
+    <result column="SENT" property="sent" jdbcType="DECIMAL" />
+    <result column="RESENT" property="resent" jdbcType="DECIMAL" />
+    <result column="RECV" property="recv" jdbcType="DECIMAL" />
+    <result column="SENDQ" property="sendq" jdbcType="DECIMAL" />
+    <result column="PENDQ" property="pendq" jdbcType="DECIMAL" />
+    <result column="RESTARTQ" property="restartq" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

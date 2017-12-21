@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AqPendingMessagesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AqPendingMessages" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SEQUENCE" property="sequence" jdbcType="DECIMAL" />
+    <result column="COPY" property="copy" jdbcType="DECIMAL" />
+    <result column="TXNID" property="txnid" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="MSGID" property="msgid" jdbcType="VARBINARY" />
+    <result column="PMSGID" property="pmsgid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

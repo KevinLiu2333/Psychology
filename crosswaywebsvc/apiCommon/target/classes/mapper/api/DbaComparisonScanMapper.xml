@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaComparisonScanMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaComparisonScan">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COMPARISON_ID" jdbcType="DECIMAL" property="comparisonId" />
+    <result column="OWNER" jdbcType="VARCHAR" property="owner" />
+    <result column="COMPARISON_NAME" jdbcType="VARCHAR" property="comparisonName" />
+    <result column="SCAN_ID" jdbcType="DECIMAL" property="scanId" />
+    <result column="PARENT_SCAN_ID" jdbcType="DECIMAL" property="parentScanId" />
+    <result column="STATUS" jdbcType="DECIMAL" property="status" />
+    <result column="CURRENT_DIF_COUNT" jdbcType="DECIMAL" property="currentDifCount" />
+    <result column="INITIAL_DIF_COUNT" jdbcType="DECIMAL" property="initialDifCount" />
+    <result column="ROOT_SCAN_ID" jdbcType="DECIMAL" property="rootScanId" />
+    <result column="COUNT_ROWS" jdbcType="DECIMAL" property="countRows" />
+    <result column="SCAN_NULLS" jdbcType="VARCHAR" property="scanNulls" />
+    <result column="LAST_UPDATE_TIME" jdbcType="TIMESTAMP" property="lastUpdateTime" />
+  </resultMap>
+</mapper>

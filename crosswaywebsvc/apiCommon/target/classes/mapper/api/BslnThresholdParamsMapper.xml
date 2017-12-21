@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.BslnThresholdParamsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.BslnThresholdParams" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="BSLN_GUID" property="bslnGuid" jdbcType="VARBINARY" />
+    <id column="METRIC_ID" property="metricId" jdbcType="DECIMAL" />
+    <result column="THRESHOLD_METHOD" property="thresholdMethod" jdbcType="VARCHAR" />
+    <result column="NUM_OCCURRENCES" property="numOccurrences" jdbcType="DECIMAL" />
+    <result column="WARNING_PARAM" property="warningParam" jdbcType="DECIMAL" />
+    <result column="CRITICAL_PARAM" property="criticalParam" jdbcType="DECIMAL" />
+    <result column="FAIL_ACTION" property="failAction" jdbcType="VARCHAR" />
+    <result column="ADAPTIVE" property="adaptive" jdbcType="VARCHAR" />
+    <result column="LAST_SET_DATE" property="lastSetDate" jdbcType="DATE" />
+    <result column="IN_EFFECT" property="inEffect" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

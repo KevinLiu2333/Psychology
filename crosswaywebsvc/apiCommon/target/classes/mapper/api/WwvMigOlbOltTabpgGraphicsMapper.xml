@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigOlbOltTabpgGraphicsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigOlbOltTabpgGraphics" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="TABPAGE_ID" property="tabpageId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="LAYOUTSTYLE" property="layoutstyle" jdbcType="VARCHAR" />
+    <result column="LAYOUTDATABLOCKNAME" property="layoutdatablockname" jdbcType="VARCHAR" />
+    <result column="FRAMETITLE" property="frametitle" jdbcType="VARCHAR" />
+    <result column="BEVEL" property="bevel" jdbcType="VARCHAR" />
+    <result column="WIDTH" property="width" jdbcType="VARCHAR" />
+    <result column="HEIGHT" property="height" jdbcType="VARCHAR" />
+    <result column="GRAPHICSTYPE" property="graphicstype" jdbcType="VARCHAR" />
+    <result column="GRAPHICSTEXT" property="graphicstext" jdbcType="VARCHAR" />
+    <result column="GRAPHICSFONTNAME" property="graphicsfontname" jdbcType="VARCHAR" />
+    <result column="GRAPHICSFONTSIZE" property="graphicsfontsize" jdbcType="VARCHAR" />
+    <result column="GRAPHICSFONTSTYLE" property="graphicsfontstyle" jdbcType="VARCHAR" />
+    <result column="GRAPHICSFONTWEIGHT" property="graphicsfontweight" jdbcType="VARCHAR" />
+    <result column="GRAPHICSFONTCOLOR" property="graphicsfontcolor" jdbcType="VARCHAR" />
+    <result column="GRAPHICSFONTSPACING" property="graphicsfontspacing" jdbcType="VARCHAR" />
+    <result column="GRAPHICSFONTCOLORCODE" property="graphicsfontcolorcode" jdbcType="VARCHAR" />
+    <result column="EDGEPATTERN" property="edgepattern" jdbcType="VARCHAR" />
+    <result column="EDGEFOREGROUNDCOLOR" property="edgeforegroundcolor" jdbcType="VARCHAR" />
+    <result column="BACKCOLOR" property="backcolor" jdbcType="VARCHAR" />
+    <result column="HORIZONTALMARGIN" property="horizontalmargin" jdbcType="VARCHAR" />
+    <result column="VERTICALMARGIN" property="verticalmargin" jdbcType="VARCHAR" />
+    <result column="INTERNALLINEWIDTH" property="internallinewidth" jdbcType="VARCHAR" />
+    <result column="HORIZONTALOBJECTOFFSET" property="horizontalobjectoffset" jdbcType="VARCHAR" />
+    <result column="CORNERRADIUSY" property="cornerradiusy" jdbcType="VARCHAR" />
+    <result column="CORNERRADIUSX" property="cornerradiusx" jdbcType="VARCHAR" />
+    <result column="XPOSITION" property="xposition" jdbcType="VARCHAR" />
+    <result column="YPOSITION" property="yposition" jdbcType="VARCHAR" />
+    <result column="JOINSTYLE" property="joinstyle" jdbcType="VARCHAR" />
+    <result column="STARTPROMPTOFFSET" property="startpromptoffset" jdbcType="VARCHAR" />
+    <result column="SHOWSCROLLBAR" property="showscrollbar" jdbcType="VARCHAR" />
+    <result column="SCROLLBARWIDTH" property="scrollbarwidth" jdbcType="VARCHAR" />
+    <result column="DISTANCEBETWEENRECORDS" property="distancebetweenrecords" jdbcType="VARCHAR" />
+    <result column="FRAMETITLESPACING" property="frametitlespacing" jdbcType="VARCHAR" />
+    <result column="FRAMETITLEOFFSET" property="frametitleoffset" jdbcType="VARCHAR" />
+    <result column="EDGEBACKCOLOR" property="edgebackcolor" jdbcType="VARCHAR" />
+    <result column="FILLPATTERN" property="fillpattern" jdbcType="VARCHAR" />
+    <result column="DIRTYINFO" property="dirtyinfo" jdbcType="VARCHAR" />
+    <result column="RECORDSDISPLAYCOUNT" property="recordsdisplaycount" jdbcType="VARCHAR" />
+    <result column="INTERNALROTATIONANGLE" property="internalrotationangle" jdbcType="VARCHAR" />
+    <result column="CAPSTYLE" property="capstyle" jdbcType="VARCHAR" />
+    <result column="DASHSTYLE" property="dashstyle" jdbcType="VARCHAR" />
+    <result column="ARROWSTYLE" property="arrowstyle" jdbcType="VARCHAR" />
+    <result column="FOREGROUNDCOLOR" property="foregroundcolor" jdbcType="VARCHAR" />
+    <result column="VERTICALJUSTIFICATION" property="verticaljustification" jdbcType="VARCHAR" />
+    <result column="HORIZONTALJUSTIFICATION" property="horizontaljustification" jdbcType="VARCHAR" />
+    <result column="BOUNDINGBOXSCALABLE" property="boundingboxscalable" jdbcType="VARCHAR" />
+    <result column="FONTSCALEABLE" property="fontscaleable" jdbcType="VARCHAR" />
+    <result column="FIXEDBOUNDINGBOX" property="fixedboundingbox" jdbcType="VARCHAR" />
+    <result column="LINESPACING" property="linespacing" jdbcType="VARCHAR" />
+    <result column="CUSTOMSPACING" property="customspacing" jdbcType="VARCHAR" />
+    <result column="LANGUAGEDIRECTION" property="languagedirection" jdbcType="VARCHAR" />
+    <result column="VERTICALORIGIN" property="verticalorigin" jdbcType="VARCHAR" />
+    <result column="HORIZONTALORIGIN" property="horizontalorigin" jdbcType="VARCHAR" />
+    <result column="WRAPTEXT" property="wraptext" jdbcType="VARCHAR" />
+    <result column="SELECT_FOR_APP" property="selectForApp" jdbcType="VARCHAR" />
+    <result column="APPLICABLE" property="applicable" jdbcType="VARCHAR" />
+    <result column="COMPLETE" property="complete" jdbcType="VARCHAR" />
+    <result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+    <result column="ASSIGNEE" property="assignee" jdbcType="VARCHAR" />
+    <result column="NOTES" property="notes" jdbcType="VARCHAR" />
+    <result column="TAGS" property="tags" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

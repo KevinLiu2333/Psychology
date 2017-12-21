@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowLockPageLogMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowLockPageLog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="LOCK_ID" property="lockId" jdbcType="DECIMAL" />
+    <result column="LOCK_FLOW" property="lockFlow" jdbcType="DECIMAL" />
+    <result column="LOCK_PAGE" property="lockPage" jdbcType="DECIMAL" />
+    <result column="ACTION" property="action" jdbcType="VARCHAR" />
+    <result column="ACTION_DATE" property="actionDate" jdbcType="DATE" />
+    <result column="DEVELOPER" property="developer" jdbcType="VARCHAR" />
+    <result column="LOCK_COMMENT" property="lockComment" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

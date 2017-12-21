@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowShortcutsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowShortcuts" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="SHORTCUT_NAME" property="shortcutName" jdbcType="VARCHAR" />
+    <result column="SHORTCUT_CONSIDERATION_SEQ" property="shortcutConsiderationSeq" jdbcType="DECIMAL" />
+    <result column="SHORTCUT_TYPE" property="shortcutType" jdbcType="VARCHAR" />
+    <result column="SHORTCUT_CONDITION_TYPE1" property="shortcutConditionType1" jdbcType="VARCHAR" />
+    <result column="SHORTCUT_CONDITION1" property="shortcutCondition1" jdbcType="VARCHAR" />
+    <result column="SHORTCUT_CONDITION_TYPE2" property="shortcutConditionType2" jdbcType="VARCHAR" />
+    <result column="SHORTCUT_CONDITION2" property="shortcutCondition2" jdbcType="VARCHAR" />
+    <result column="BUILD_OPTION" property="buildOption" jdbcType="DECIMAL" />
+    <result column="ERROR_TEXT" property="errorText" jdbcType="VARCHAR" />
+    <result column="REFERENCE_ID" property="referenceId" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="COMMENTS" property="comments" jdbcType="VARCHAR" />
+    <result column="SHORTCUT" property="shortcut" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

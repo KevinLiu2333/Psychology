@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowDataMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowData" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FLOW_INSTANCE" property="flowInstance" jdbcType="DECIMAL" />
+    <result column="ITEM_ID" property="itemId" jdbcType="DECIMAL" />
+    <result column="ITEM_ELEMENT_ID" property="itemElementId" jdbcType="DECIMAL" />
+    <result column="ITEM_FILTER" property="itemFilter" jdbcType="VARCHAR" />
+    <result column="SESSION_STATE_STATUS" property="sessionStateStatus" jdbcType="VARCHAR" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="ITEM_NAME" property="itemName" jdbcType="VARCHAR" />
+    <result column="NAME_LENGTH" property="nameLength" jdbcType="DECIMAL" />
+    <result column="IS_ENCRYPTED" property="isEncrypted" jdbcType="VARCHAR" />
+    <result column="ITEM_VALUE" property="itemValue" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

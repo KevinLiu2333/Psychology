@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvOlapiMemoryOpHistoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvOlapiMemoryOpHistory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="HIST_ID" property="histId" jdbcType="DECIMAL" />
+    <result column="SEQNO" property="seqno" jdbcType="DECIMAL" />
+    <result column="LEAKMARK" property="leakmark" jdbcType="CHAR" />
+    <result column="XSOQOPHI" property="xsoqophi" jdbcType="DECIMAL" />
+    <result column="ALT_SEQNO" property="altSeqno" jdbcType="DECIMAL" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="MEMOP" property="memop" jdbcType="DECIMAL" />
+    <result column="MEMSIZE" property="memsize" jdbcType="DECIMAL" />
+    <result column="FILENAME" property="filename" jdbcType="VARCHAR" />
+    <result column="LINE" property="line" jdbcType="DECIMAL" />
+    <result column="HEAP" property="heap" jdbcType="VARBINARY" />
+    <result column="MEMADDR" property="memaddr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MracOlap2AwCubeDimUsesTMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MracOlap2AwCubeDimUsesT" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="AW_OWNER" property="awOwner" jdbcType="VARCHAR" />
+    <result column="AW_NAME" property="awName" jdbcType="VARCHAR" />
+    <result column="AW_LOGICAL_NAME" property="awLogicalName" jdbcType="VARCHAR" />
+    <result column="DIMENSION_AW_OWNER" property="dimensionAwOwner" jdbcType="VARCHAR" />
+    <result column="DIMENSION_AW_NAME" property="dimensionAwName" jdbcType="VARCHAR" />
+    <result column="DIMENSION_SOURCE_OWNER" property="dimensionSourceOwner" jdbcType="VARCHAR" />
+    <result column="DIMENSION_SOURCE_NAME" property="dimensionSourceName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

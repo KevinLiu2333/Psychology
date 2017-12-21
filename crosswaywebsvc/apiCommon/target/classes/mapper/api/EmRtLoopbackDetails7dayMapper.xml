@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.EmRtLoopbackDetails7dayMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.EmRtLoopbackDetails7day" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="METRIC_NAME" property="metricName" jdbcType="VARCHAR" />
+    <result column="METRIC_COLUMN" property="metricColumn" jdbcType="VARCHAR" />
+    <result column="COLUMN_LABEL" property="columnLabel" jdbcType="VARCHAR" />
+    <result column="ROLLUP_TIMESTAMP" property="rollupTimestamp" jdbcType="DATE" />
+    <result column="VALUE_AVERAGE" property="valueAverage" jdbcType="DECIMAL" />
+    <result column="VALUE_MINIMUM" property="valueMinimum" jdbcType="DECIMAL" />
+    <result column="VALUE_MAXIMUM" property="valueMaximum" jdbcType="DECIMAL" />
+    <result column="VALUE_SDEV" property="valueSdev" jdbcType="DECIMAL" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <result column="METRIC_GUID" property="metricGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

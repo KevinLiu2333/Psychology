@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CtxUserIndexPartitionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CtxUserIndexPartitions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="IXP_ID" property="ixpId" jdbcType="DECIMAL" />
+    <result column="IXP_INDEX_NAME" property="ixpIndexName" jdbcType="VARCHAR" />
+    <result column="IXP_INDEX_PARTITION_NAME" property="ixpIndexPartitionName" jdbcType="VARCHAR" />
+    <result column="IXP_TABLE_OWNER" property="ixpTableOwner" jdbcType="VARCHAR" />
+    <result column="IXP_TABLE_NAME" property="ixpTableName" jdbcType="VARCHAR" />
+    <result column="IXP_TABLE_PARTITION_NAME" property="ixpTablePartitionName" jdbcType="VARCHAR" />
+    <result column="IXP_DOCID_COUNT" property="ixpDocidCount" jdbcType="DECIMAL" />
+    <result column="IXP_STATUS" property="ixpStatus" jdbcType="VARCHAR" />
+    <result column="IXP_SYNC_TYPE" property="ixpSyncType" jdbcType="VARCHAR" />
+    <result column="IXP_SYNC_MEMORY" property="ixpSyncMemory" jdbcType="VARCHAR" />
+    <result column="IXP_SYNC_PARA_DEGREE" property="ixpSyncParaDegree" jdbcType="DECIMAL" />
+    <result column="IXP_SYNC_INTERVAL" property="ixpSyncInterval" jdbcType="VARCHAR" />
+    <result column="IXP_SYNC_JOBNAME" property="ixpSyncJobname" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

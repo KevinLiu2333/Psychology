@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCsmMtMetricDetailsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCsmMtMetricDetails" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="MEMBER_TARGET_NAME" property="memberTargetName" jdbcType="VARCHAR" />
+    <result column="MEMBER_TARGET_TYPE" property="memberTargetType" jdbcType="VARCHAR" />
+    <result column="COMPOSITE_TARGET_NAME" property="compositeTargetName" jdbcType="VARCHAR" />
+    <result column="COMPOSITE_TARGET_TYPE" property="compositeTargetType" jdbcType="VARCHAR" />
+    <result column="COLLECTION_TIMESTAMP" property="collectionTimestamp" jdbcType="DATE" />
+    <result column="METRIC_NAME" property="metricName" jdbcType="VARCHAR" />
+    <result column="METRIC_VALUE" property="metricValue" jdbcType="DECIMAL" />
+    <result column="URL" property="url" jdbcType="VARCHAR" />
+    <result column="VISITOR_IP" property="visitorIp" jdbcType="VARCHAR" />
+    <result column="VISITOR_NODE" property="visitorNode" jdbcType="VARCHAR" />
+    <result column="VISITOR_DOMAIN" property="visitorDomain" jdbcType="VARCHAR" />
+    <result column="VISITOR_SUBNET" property="visitorSubnet" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

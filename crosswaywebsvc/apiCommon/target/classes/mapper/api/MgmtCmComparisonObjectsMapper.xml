@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCmComparisonObjectsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCmComparisonObjects" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="DECIMAL" />
+    <result column="OBJECT_SCHEMA" property="objectSchema" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="FIRST_VERSION" property="firstVersion" jdbcType="DECIMAL" />
+    <result column="LAST_VERSION" property="lastVersion" jdbcType="DECIMAL" />
+    <result column="LAST_LEFT_DDL_TIME" property="lastLeftDdlTime" jdbcType="DATE" />
+    <result column="LEFT_HASH_VALUE" property="leftHashValue" jdbcType="CHAR" />
+    <result column="LAST_RIGHT_DDL_TIME" property="lastRightDdlTime" jdbcType="DATE" />
+    <result column="RIGHT_HASH_VALUE" property="rightHashValue" jdbcType="CHAR" />
+    <result column="GRANTS_DIFF_HASH" property="grantsDiffHash" jdbcType="CHAR" />
+    <result column="STATE" property="state" jdbcType="DECIMAL" />
+    <result column="IGNORED" property="ignored" jdbcType="DECIMAL" />
+    <result column="COMMENTS_DIFF_HASH" property="commentsDiffHash" jdbcType="CHAR" />
+    <result column="COMPARISON_GUID" property="comparisonGuid" jdbcType="VARBINARY" />
+    <result column="OBJECT_LONGNAME" property="objectLongname" jdbcType="CLOB" />
+    <result column="ANNOTATION_GUID" property="annotationGuid" jdbcType="VARBINARY" />
+    <result column="DIFFERENCES" property="differences" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

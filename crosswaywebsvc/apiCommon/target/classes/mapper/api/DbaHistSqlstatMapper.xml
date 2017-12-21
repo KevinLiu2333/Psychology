@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaHistSqlstatMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaHistSqlstat" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="PLAN_HASH_VALUE" property="planHashValue" jdbcType="DECIMAL" />
+    <result column="OPTIMIZER_COST" property="optimizerCost" jdbcType="DECIMAL" />
+    <result column="OPTIMIZER_MODE" property="optimizerMode" jdbcType="VARCHAR" />
+    <result column="OPTIMIZER_ENV_HASH_VALUE" property="optimizerEnvHashValue" jdbcType="DECIMAL" />
+    <result column="SHARABLE_MEM" property="sharableMem" jdbcType="DECIMAL" />
+    <result column="LOADED_VERSIONS" property="loadedVersions" jdbcType="DECIMAL" />
+    <result column="VERSION_COUNT" property="versionCount" jdbcType="DECIMAL" />
+    <result column="MODULE" property="module" jdbcType="VARCHAR" />
+    <result column="ACTION" property="action" jdbcType="VARCHAR" />
+    <result column="SQL_PROFILE" property="sqlProfile" jdbcType="VARCHAR" />
+    <result column="FORCE_MATCHING_SIGNATURE" property="forceMatchingSignature" jdbcType="DECIMAL" />
+    <result column="PARSING_SCHEMA_ID" property="parsingSchemaId" jdbcType="DECIMAL" />
+    <result column="PARSING_SCHEMA_NAME" property="parsingSchemaName" jdbcType="VARCHAR" />
+    <result column="PARSING_USER_ID" property="parsingUserId" jdbcType="DECIMAL" />
+    <result column="FETCHES_TOTAL" property="fetchesTotal" jdbcType="DECIMAL" />
+    <result column="FETCHES_DELTA" property="fetchesDelta" jdbcType="DECIMAL" />
+    <result column="END_OF_FETCH_COUNT_TOTAL" property="endOfFetchCountTotal" jdbcType="DECIMAL" />
+    <result column="END_OF_FETCH_COUNT_DELTA" property="endOfFetchCountDelta" jdbcType="DECIMAL" />
+    <result column="SORTS_TOTAL" property="sortsTotal" jdbcType="DECIMAL" />
+    <result column="SORTS_DELTA" property="sortsDelta" jdbcType="DECIMAL" />
+    <result column="EXECUTIONS_TOTAL" property="executionsTotal" jdbcType="DECIMAL" />
+    <result column="EXECUTIONS_DELTA" property="executionsDelta" jdbcType="DECIMAL" />
+    <result column="PX_SERVERS_EXECS_TOTAL" property="pxServersExecsTotal" jdbcType="DECIMAL" />
+    <result column="PX_SERVERS_EXECS_DELTA" property="pxServersExecsDelta" jdbcType="DECIMAL" />
+    <result column="LOADS_TOTAL" property="loadsTotal" jdbcType="DECIMAL" />
+    <result column="LOADS_DELTA" property="loadsDelta" jdbcType="DECIMAL" />
+    <result column="INVALIDATIONS_TOTAL" property="invalidationsTotal" jdbcType="DECIMAL" />
+    <result column="INVALIDATIONS_DELTA" property="invalidationsDelta" jdbcType="DECIMAL" />
+    <result column="PARSE_CALLS_TOTAL" property="parseCallsTotal" jdbcType="DECIMAL" />
+    <result column="PARSE_CALLS_DELTA" property="parseCallsDelta" jdbcType="DECIMAL" />
+    <result column="DISK_READS_TOTAL" property="diskReadsTotal" jdbcType="DECIMAL" />
+    <result column="DISK_READS_DELTA" property="diskReadsDelta" jdbcType="DECIMAL" />
+    <result column="BUFFER_GETS_TOTAL" property="bufferGetsTotal" jdbcType="DECIMAL" />
+    <result column="BUFFER_GETS_DELTA" property="bufferGetsDelta" jdbcType="DECIMAL" />
+    <result column="ROWS_PROCESSED_TOTAL" property="rowsProcessedTotal" jdbcType="DECIMAL" />
+    <result column="ROWS_PROCESSED_DELTA" property="rowsProcessedDelta" jdbcType="DECIMAL" />
+    <result column="CPU_TIME_TOTAL" property="cpuTimeTotal" jdbcType="DECIMAL" />
+    <result column="CPU_TIME_DELTA" property="cpuTimeDelta" jdbcType="DECIMAL" />
+    <result column="ELAPSED_TIME_TOTAL" property="elapsedTimeTotal" jdbcType="DECIMAL" />
+    <result column="ELAPSED_TIME_DELTA" property="elapsedTimeDelta" jdbcType="DECIMAL" />
+    <result column="IOWAIT_TOTAL" property="iowaitTotal" jdbcType="DECIMAL" />
+    <result column="IOWAIT_DELTA" property="iowaitDelta" jdbcType="DECIMAL" />
+    <result column="CLWAIT_TOTAL" property="clwaitTotal" jdbcType="DECIMAL" />
+    <result column="CLWAIT_DELTA" property="clwaitDelta" jdbcType="DECIMAL" />
+    <result column="APWAIT_TOTAL" property="apwaitTotal" jdbcType="DECIMAL" />
+    <result column="APWAIT_DELTA" property="apwaitDelta" jdbcType="DECIMAL" />
+    <result column="CCWAIT_TOTAL" property="ccwaitTotal" jdbcType="DECIMAL" />
+    <result column="CCWAIT_DELTA" property="ccwaitDelta" jdbcType="DECIMAL" />
+    <result column="DIRECT_WRITES_TOTAL" property="directWritesTotal" jdbcType="DECIMAL" />
+    <result column="DIRECT_WRITES_DELTA" property="directWritesDelta" jdbcType="DECIMAL" />
+    <result column="PLSEXEC_TIME_TOTAL" property="plsexecTimeTotal" jdbcType="DECIMAL" />
+    <result column="PLSEXEC_TIME_DELTA" property="plsexecTimeDelta" jdbcType="DECIMAL" />
+    <result column="JAVEXEC_TIME_TOTAL" property="javexecTimeTotal" jdbcType="DECIMAL" />
+    <result column="JAVEXEC_TIME_DELTA" property="javexecTimeDelta" jdbcType="DECIMAL" />
+    <result column="IO_OFFLOAD_ELIG_BYTES_TOTAL" property="ioOffloadEligBytesTotal" jdbcType="DECIMAL" />
+    <result column="IO_OFFLOAD_ELIG_BYTES_DELTA" property="ioOffloadEligBytesDelta" jdbcType="DECIMAL" />
+    <result column="IO_INTERCONNECT_BYTES_TOTAL" property="ioInterconnectBytesTotal" jdbcType="DECIMAL" />
+    <result column="IO_INTERCONNECT_BYTES_DELTA" property="ioInterconnectBytesDelta" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_READ_REQUESTS_TOTAL" property="physicalReadRequestsTotal" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_READ_REQUESTS_DELTA" property="physicalReadRequestsDelta" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_READ_BYTES_TOTAL" property="physicalReadBytesTotal" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_READ_BYTES_DELTA" property="physicalReadBytesDelta" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_WRITE_REQUESTS_TOTAL" property="physicalWriteRequestsTotal" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_WRITE_REQUESTS_DELTA" property="physicalWriteRequestsDelta" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_WRITE_BYTES_TOTAL" property="physicalWriteBytesTotal" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_WRITE_BYTES_DELTA" property="physicalWriteBytesDelta" jdbcType="DECIMAL" />
+    <result column="OPTIMIZED_PHYSICAL_READS_TOTAL" property="optimizedPhysicalReadsTotal" jdbcType="DECIMAL" />
+    <result column="OPTIMIZED_PHYSICAL_READS_DELTA" property="optimizedPhysicalReadsDelta" jdbcType="DECIMAL" />
+    <result column="CELL_UNCOMPRESSED_BYTES_TOTAL" property="cellUncompressedBytesTotal" jdbcType="DECIMAL" />
+    <result column="CELL_UNCOMPRESSED_BYTES_DELTA" property="cellUncompressedBytesDelta" jdbcType="DECIMAL" />
+    <result column="IO_OFFLOAD_RETURN_BYTES_TOTAL" property="ioOffloadReturnBytesTotal" jdbcType="DECIMAL" />
+    <result column="IO_OFFLOAD_RETURN_BYTES_DELTA" property="ioOffloadReturnBytesDelta" jdbcType="DECIMAL" />
+    <result column="FLAG" property="flag" jdbcType="DECIMAL" />
+    <result column="BIND_DATA" property="bindData" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

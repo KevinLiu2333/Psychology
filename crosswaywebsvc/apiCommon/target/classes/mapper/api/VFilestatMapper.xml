@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VFilestatMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VFilestat" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FILE#" property="file" jdbcType="DECIMAL" />
+    <result column="PHYRDS" property="phyrds" jdbcType="DECIMAL" />
+    <result column="PHYWRTS" property="phywrts" jdbcType="DECIMAL" />
+    <result column="PHYBLKRD" property="phyblkrd" jdbcType="DECIMAL" />
+    <result column="OPTIMIZED_PHYBLKRD" property="optimizedPhyblkrd" jdbcType="DECIMAL" />
+    <result column="PHYBLKWRT" property="phyblkwrt" jdbcType="DECIMAL" />
+    <result column="SINGLEBLKRDS" property="singleblkrds" jdbcType="DECIMAL" />
+    <result column="READTIM" property="readtim" jdbcType="DECIMAL" />
+    <result column="WRITETIM" property="writetim" jdbcType="DECIMAL" />
+    <result column="SINGLEBLKRDTIM" property="singleblkrdtim" jdbcType="DECIMAL" />
+    <result column="AVGIOTIM" property="avgiotim" jdbcType="DECIMAL" />
+    <result column="LSTIOTIM" property="lstiotim" jdbcType="DECIMAL" />
+    <result column="MINIOTIM" property="miniotim" jdbcType="DECIMAL" />
+    <result column="MAXIORTM" property="maxiortm" jdbcType="DECIMAL" />
+    <result column="MAXIOWTM" property="maxiowtm" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

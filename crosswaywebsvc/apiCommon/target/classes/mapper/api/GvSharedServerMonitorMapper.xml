@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvSharedServerMonitorMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvSharedServerMonitor" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="MAXIMUM_CONNECTIONS" property="maximumConnections" jdbcType="DECIMAL" />
+    <result column="MAXIMUM_SESSIONS" property="maximumSessions" jdbcType="DECIMAL" />
+    <result column="SERVERS_STARTED" property="serversStarted" jdbcType="DECIMAL" />
+    <result column="SERVERS_TERMINATED" property="serversTerminated" jdbcType="DECIMAL" />
+    <result column="SERVERS_HIGHWATER" property="serversHighwater" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhSystemEventBlMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhSystemEventBl" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="EVENT_ID" property="eventId" jdbcType="DECIMAL" />
+    <result column="TOTAL_WAITS" property="totalWaits" jdbcType="DECIMAL" />
+    <result column="TOTAL_TIMEOUTS" property="totalTimeouts" jdbcType="DECIMAL" />
+    <result column="TIME_WAITED_MICRO" property="timeWaitedMicro" jdbcType="DECIMAL" />
+    <result column="TOTAL_WAITS_FG" property="totalWaitsFg" jdbcType="DECIMAL" />
+    <result column="TOTAL_TIMEOUTS_FG" property="totalTimeoutsFg" jdbcType="DECIMAL" />
+    <result column="TIME_WAITED_MICRO_FG" property="timeWaitedMicroFg" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

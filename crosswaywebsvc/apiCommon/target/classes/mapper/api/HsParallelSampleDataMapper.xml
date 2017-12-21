@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.HsParallelSampleDataMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.HsParallelSampleData">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DBLINK" jdbcType="VARCHAR" property="dblink" />
+    <result column="REMOTE_TABLE_NAME" jdbcType="VARCHAR" property="remoteTableName" />
+    <result column="REMOTE_SCHEMA_NAME" jdbcType="VARCHAR" property="remoteSchemaName" />
+    <result column="LOW_VALUE" jdbcType="VARCHAR" property="lowValue" />
+    <result column="HIGH_VALUE" jdbcType="VARCHAR" property="highValue" />
+    <result column="POSITION" jdbcType="DECIMAL" property="position" />
+  </resultMap>
+</mapper>

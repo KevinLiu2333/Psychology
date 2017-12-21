@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RepcatExtensionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RepcatExtension" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="EXTENSION_ID" property="extensionId" jdbcType="VARBINARY" />
+    <result column="EXTENSION_CODE" property="extensionCode" jdbcType="DECIMAL" />
+    <result column="MASTERDEF" property="masterdef" jdbcType="VARCHAR" />
+    <result column="EXPORT_REQUIRED" property="exportRequired" jdbcType="VARCHAR" />
+    <result column="REPCATLOG_ID" property="repcatlogId" jdbcType="DECIMAL" />
+    <result column="EXTENSION_STATUS" property="extensionStatus" jdbcType="DECIMAL" />
+    <result column="FLASHBACK_SCN" property="flashbackScn" jdbcType="DECIMAL" />
+    <result column="PUSH_TO_MDEF" property="pushToMdef" jdbcType="VARCHAR" />
+    <result column="PUSH_TO_NEW" property="pushToNew" jdbcType="VARCHAR" />
+    <result column="PERCENTAGE_FOR_CATCHUP_MDEF" property="percentageForCatchupMdef" jdbcType="DECIMAL" />
+    <result column="CYCLE_SECONDS_MDEF" property="cycleSecondsMdef" jdbcType="DECIMAL" />
+    <result column="PERCENTAGE_FOR_CATCHUP_NEW" property="percentageForCatchupNew" jdbcType="DECIMAL" />
+    <result column="CYCLE_SECONDS_NEW" property="cycleSecondsNew" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.LogstdbyEdsTablesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.LogstdbyEdsTables" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <id column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="SHADOW_TABLE_NAME" property="shadowTableName" jdbcType="VARCHAR" />
+    <result column="BASE_TRIGGER_NAME" property="baseTriggerName" jdbcType="VARCHAR" />
+    <result column="SHADOW_TRIGGER_NAME" property="shadowTriggerName" jdbcType="VARCHAR" />
+    <result column="DBLINK" property="dblink" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="OBJV" property="objv" jdbcType="DECIMAL" />
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="SOBJ#" property="sobj" jdbcType="DECIMAL" />
+    <result column="CTIME" property="ctime" jdbcType="TIMESTAMP" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="VARCHAR" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

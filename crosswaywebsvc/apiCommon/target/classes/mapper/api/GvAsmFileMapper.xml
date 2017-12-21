@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvAsmFileMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvAsmFile" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="GROUP_NUMBER" property="groupNumber" jdbcType="DECIMAL" />
+    <result column="FILE_NUMBER" property="fileNumber" jdbcType="DECIMAL" />
+    <result column="COMPOUND_INDEX" property="compoundIndex" jdbcType="DECIMAL" />
+    <result column="INCARNATION" property="incarnation" jdbcType="DECIMAL" />
+    <result column="BLOCK_SIZE" property="blockSize" jdbcType="DECIMAL" />
+    <result column="BLOCKS" property="blocks" jdbcType="DECIMAL" />
+    <result column="BYTES" property="bytes" jdbcType="DECIMAL" />
+    <result column="SPACE" property="space" jdbcType="DECIMAL" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="REDUNDANCY" property="redundancy" jdbcType="VARCHAR" />
+    <result column="STRIPED" property="striped" jdbcType="VARCHAR" />
+    <result column="CREATION_DATE" property="creationDate" jdbcType="DATE" />
+    <result column="MODIFICATION_DATE" property="modificationDate" jdbcType="DATE" />
+    <result column="REDUNDANCY_LOWERED" property="redundancyLowered" jdbcType="VARCHAR" />
+    <result column="PERMISSIONS" property="permissions" jdbcType="VARCHAR" />
+    <result column="USER_NUMBER" property="userNumber" jdbcType="DECIMAL" />
+    <result column="USER_INCARNATION" property="userIncarnation" jdbcType="DECIMAL" />
+    <result column="USERGROUP_NUMBER" property="usergroupNumber" jdbcType="DECIMAL" />
+    <result column="USERGROUP_INCARNATION" property="usergroupIncarnation" jdbcType="DECIMAL" />
+    <result column="PRIMARY_REGION" property="primaryRegion" jdbcType="VARCHAR" />
+    <result column="MIRROR_REGION" property="mirrorRegion" jdbcType="VARCHAR" />
+    <result column="HOT_READS" property="hotReads" jdbcType="DECIMAL" />
+    <result column="HOT_WRITES" property="hotWrites" jdbcType="DECIMAL" />
+    <result column="HOT_BYTES_READ" property="hotBytesRead" jdbcType="DECIMAL" />
+    <result column="HOT_BYTES_WRITTEN" property="hotBytesWritten" jdbcType="DECIMAL" />
+    <result column="COLD_READS" property="coldReads" jdbcType="DECIMAL" />
+    <result column="COLD_WRITES" property="coldWrites" jdbcType="DECIMAL" />
+    <result column="COLD_BYTES_READ" property="coldBytesRead" jdbcType="DECIMAL" />
+    <result column="COLD_BYTES_WRITTEN" property="coldBytesWritten" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

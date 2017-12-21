@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvStreamsPoolStatisticsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvStreamsPoolStatistics" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="TOTAL_MEMORY_ALLOCATED" property="totalMemoryAllocated" jdbcType="DECIMAL" />
+    <result column="CURRENT_SIZE" property="currentSize" jdbcType="DECIMAL" />
+    <result column="SGA_TARGET_VALUE" property="sgaTargetValue" jdbcType="DECIMAL" />
+    <result column="SHRINK_PHASE" property="shrinkPhase" jdbcType="DECIMAL" />
+    <result column="ADVICE_DISABLED" property="adviceDisabled" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

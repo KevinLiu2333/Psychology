@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuTabOnlyStatsViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuTabOnlyStatsView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="TRIGFLAG" property="trigflag" jdbcType="DECIMAL" />
+    <result column="TABNAME" property="tabname" jdbcType="VARCHAR" />
+    <result column="PARTNAME" property="partname" jdbcType="VARCHAR" />
+    <result column="SUBPARTNAME" property="subpartname" jdbcType="VARCHAR" />
+    <result column="BOBJ_NUM" property="bobjNum" jdbcType="DECIMAL" />
+    <result column="SYSGEN_COLS" property="sysgenCols" jdbcType="DECIMAL" />
+    <result column="BLKCNT" property="blkcnt" jdbcType="DECIMAL" />
+    <result column="ROWCNT" property="rowcnt" jdbcType="DECIMAL" />
+    <result column="AVGRLN" property="avgrln" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="SAMPLE_SIZE" property="sampleSize" jdbcType="DECIMAL" />
+    <result column="ANALYZETIME" property="analyzetime" jdbcType="VARCHAR" />
+    <result column="CACHE_INFO" property="cacheInfo" jdbcType="OTHER" />
+    <result column="COL_STATS" property="colStats" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

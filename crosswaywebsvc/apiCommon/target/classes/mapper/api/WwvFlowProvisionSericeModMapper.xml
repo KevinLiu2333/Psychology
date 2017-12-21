@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowProvisionSericeModMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowProvisionSericeMod" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="SERVICE_NAME" property="serviceName" jdbcType="VARCHAR" />
+    <result column="SERVICE_ATTRIBUTE_1" property="serviceAttribute1" jdbcType="VARCHAR" />
+    <result column="SERVICE_ATTRIBUTE_2" property="serviceAttribute2" jdbcType="VARCHAR" />
+    <result column="SERVICE_ATTRIBUTE_3" property="serviceAttribute3" jdbcType="VARCHAR" />
+    <result column="SERVICE_ATTRIBUTE_4" property="serviceAttribute4" jdbcType="VARCHAR" />
+    <result column="SERVICE_ATTRIBUTE_5" property="serviceAttribute5" jdbcType="VARCHAR" />
+    <result column="SERVICE_ATTRIBUTE_6" property="serviceAttribute6" jdbcType="VARCHAR" />
+    <result column="SERVICE_ATTRIBUTE_7" property="serviceAttribute7" jdbcType="VARCHAR" />
+    <result column="SERVICE_ATTRIBUTE_8" property="serviceAttribute8" jdbcType="VARCHAR" />
+    <result column="REQUESTED_ON" property="requestedOn" jdbcType="DATE" />
+    <result column="REQUESTED_BY" property="requestedBy" jdbcType="VARCHAR" />
+    <result column="LAST_STATUS_CHANGE_ON" property="lastStatusChangeOn" jdbcType="DATE" />
+    <result column="LAST_STATUS_CHANGE_BY" property="lastStatusChangeBy" jdbcType="VARCHAR" />
+    <result column="REQUEST_STATUS" property="requestStatus" jdbcType="VARCHAR" />
+    <result column="REQUEST_WORK_LOG" property="requestWorkLog" jdbcType="VARCHAR" />
+    <result column="REQUEST_COMMENTS" property="requestComments" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

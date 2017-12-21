@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuTempSubpartdataViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuTempSubpartdataView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="SPTS" property="spts" jdbcType="DECIMAL" />
+    <result column="DSPTS" property="dspts" jdbcType="DECIMAL" />
+    <result column="PDEFTS" property="pdefts" jdbcType="DECIMAL" />
+    <result column="TDEFTS" property="tdefts" jdbcType="DECIMAL" />
+    <result column="UDEFTS" property="udefts" jdbcType="DECIMAL" />
+    <result column="SPBND" property="spbnd" jdbcType="BLOB" />
+    <result column="DSPBND" property="dspbnd" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

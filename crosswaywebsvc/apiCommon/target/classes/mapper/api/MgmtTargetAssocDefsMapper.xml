@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtTargetAssocDefsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtTargetAssocDefs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ASSOC_DEF_NAME" property="assocDefName" jdbcType="VARCHAR" />
+    <id column="SOURCE_TARGET_TYPE" property="sourceTargetType" jdbcType="VARCHAR" />
+    <id column="SCOPE_TARGET_TYPE" property="scopeTargetType" jdbcType="VARCHAR" />
+    <result column="NAME_NLSID" property="nameNlsid" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION_NLSID" property="descriptionNlsid" jdbcType="VARCHAR" />
+    <result column="ASSOC_TARGET_TYPE" property="assocTargetType" jdbcType="VARCHAR" />
+    <result column="CARDINALITY" property="cardinality" jdbcType="DECIMAL" />
+    <result column="PROP_VIEW_PRIV" property="propViewPriv" jdbcType="DECIMAL" />
+    <result column="ASSOCIATION_TYPE" property="associationType" jdbcType="VARCHAR" />
+    <result column="ASSOC_GUID" property="assocGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

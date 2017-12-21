@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriAdvUsageMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriAdvUsage" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ADVISOR_ID" property="advisorId" jdbcType="DECIMAL" />
+    <result column="LAST_EXEC_TIME" property="lastExecTime" jdbcType="DATE" />
+    <result column="NUM_EXECS" property="numExecs" jdbcType="DECIMAL" />
+    <result column="NUM_DB_REPORTS" property="numDbReports" jdbcType="DECIMAL" />
+    <result column="FIRST_REPORT_TIME" property="firstReportTime" jdbcType="DATE" />
+    <result column="LAST_REPORT_TIME" property="lastReportTime" jdbcType="DATE" />
+  </resultMap>
+</mapper>

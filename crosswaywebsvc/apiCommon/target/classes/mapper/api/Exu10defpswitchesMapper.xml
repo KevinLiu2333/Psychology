@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu10defpswitchesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu10defpswitches" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COMPFLGS" property="compflgs" jdbcType="VARCHAR" />
+    <result column="NLSLENSEM" property="nlslensem" jdbcType="VARCHAR" />
+    <result column="OPTLEVEL" property="optlevel" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

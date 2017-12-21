@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CtxObjectAttributesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CtxObjectAttributes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OAT_CLASS" property="oatClass" jdbcType="VARCHAR" />
+    <result column="OAT_OBJECT" property="oatObject" jdbcType="VARCHAR" />
+    <result column="OAT_ATTRIBUTE" property="oatAttribute" jdbcType="VARCHAR" />
+    <result column="OAT_DESCRIPTION" property="oatDescription" jdbcType="VARCHAR" />
+    <result column="OAT_REQUIRED" property="oatRequired" jdbcType="CHAR" />
+    <result column="OAT_STATIC" property="oatStatic" jdbcType="CHAR" />
+    <result column="OAT_DATATYPE" property="oatDatatype" jdbcType="VARCHAR" />
+    <result column="OAT_DEFAULT" property="oatDefault" jdbcType="VARCHAR" />
+    <result column="OAT_MIN" property="oatMin" jdbcType="DECIMAL" />
+    <result column="OAT_MAX" property="oatMax" jdbcType="VARCHAR" />
+    <result column="OAT_MAX_LENGTH" property="oatMaxLength" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

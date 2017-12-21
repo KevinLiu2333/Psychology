@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowWsOperationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowWsOperations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="WS_ID" property="wsId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="INPUT_MESSAGE_NAME" property="inputMessageName" jdbcType="VARCHAR" />
+    <result column="INPUT_MESSAGE_NS" property="inputMessageNs" jdbcType="VARCHAR" />
+    <result column="INPUT_MESSAGE_STYLE" property="inputMessageStyle" jdbcType="VARCHAR" />
+    <result column="OUTPUT_MESSAGE_NAME" property="outputMessageName" jdbcType="VARCHAR" />
+    <result column="OUTPUT_MESSAGE_NS" property="outputMessageNs" jdbcType="VARCHAR" />
+    <result column="OUTPUT_MESSAGE_STYLE" property="outputMessageStyle" jdbcType="VARCHAR" />
+    <result column="HEADER_MESSAGE_NAME" property="headerMessageName" jdbcType="VARCHAR" />
+    <result column="HEADER_MESSAGE_STYLE" property="headerMessageStyle" jdbcType="VARCHAR" />
+    <result column="SOAP_ACTION" property="soapAction" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvSqlBindDataMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvSqlBindData" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="CURSOR_NUM" property="cursorNum" jdbcType="DECIMAL" />
+    <result column="POSITION" property="position" jdbcType="DECIMAL" />
+    <result column="DATATYPE" property="datatype" jdbcType="DECIMAL" />
+    <result column="SHARED_MAX_LEN" property="sharedMaxLen" jdbcType="DECIMAL" />
+    <result column="PRIVATE_MAX_LEN" property="privateMaxLen" jdbcType="DECIMAL" />
+    <result column="ARRAY_SIZE" property="arraySize" jdbcType="DECIMAL" />
+    <result column="PRECISION" property="precision" jdbcType="DECIMAL" />
+    <result column="SCALE" property="scale" jdbcType="DECIMAL" />
+    <result column="SHARED_FLAG" property="sharedFlag" jdbcType="DECIMAL" />
+    <result column="SHARED_FLAG2" property="sharedFlag2" jdbcType="DECIMAL" />
+    <result column="BUF_LENGTH" property="bufLength" jdbcType="DECIMAL" />
+    <result column="VAL_LENGTH" property="valLength" jdbcType="DECIMAL" />
+    <result column="BUF_FLAG" property="bufFlag" jdbcType="DECIMAL" />
+    <result column="INDICATOR" property="indicator" jdbcType="DECIMAL" />
+    <result column="VALUE" property="value" jdbcType="VARCHAR" />
+    <result column="BUF_ADDRESS" property="bufAddress" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

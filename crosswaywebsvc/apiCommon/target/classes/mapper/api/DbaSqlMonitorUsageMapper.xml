@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaSqlMonitorUsageMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaSqlMonitorUsage" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NUM_DB_REPORTS" property="numDbReports" jdbcType="DECIMAL" />
+    <result column="NUM_EM_REPORTS" property="numEmReports" jdbcType="DECIMAL" />
+    <result column="FIRST_DB_REPORT_TIME" property="firstDbReportTime" jdbcType="DATE" />
+    <result column="LAST_DB_REPORT_TIME" property="lastDbReportTime" jdbcType="DATE" />
+    <result column="FIRST_EM_REPORT_TIME" property="firstEmReportTime" jdbcType="DATE" />
+    <result column="LAST_EM_REPORT_TIME" property="lastEmReportTime" jdbcType="DATE" />
+  </resultMap>
+</mapper>

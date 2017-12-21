@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaMethodResultsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaMethodResults" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="TYPE_NAME" property="typeName" jdbcType="VARCHAR" />
+    <result column="METHOD_NAME" property="methodName" jdbcType="VARCHAR" />
+    <result column="METHOD_NO" property="methodNo" jdbcType="DECIMAL" />
+    <result column="RESULT_TYPE_MOD" property="resultTypeMod" jdbcType="VARCHAR" />
+    <result column="RESULT_TYPE_OWNER" property="resultTypeOwner" jdbcType="VARCHAR" />
+    <result column="RESULT_TYPE_NAME" property="resultTypeName" jdbcType="VARCHAR" />
+    <result column="CHARACTER_SET_NAME" property="characterSetName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

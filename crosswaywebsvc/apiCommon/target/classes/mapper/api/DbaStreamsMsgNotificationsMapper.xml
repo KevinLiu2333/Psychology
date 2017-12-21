@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaStreamsMsgNotificationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaStreamsMsgNotifications" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="STREAMS_NAME" property="streamsName" jdbcType="VARCHAR" />
+    <result column="QUEUE_NAME" property="queueName" jdbcType="VARCHAR" />
+    <result column="QUEUE_OWNER" property="queueOwner" jdbcType="VARCHAR" />
+    <result column="RULE_SET_NAME" property="ruleSetName" jdbcType="VARCHAR" />
+    <result column="RULE_SET_OWNER" property="ruleSetOwner" jdbcType="VARCHAR" />
+    <result column="NEGATIVE_RULE_SET_NAME" property="negativeRuleSetName" jdbcType="VARCHAR" />
+    <result column="NEGATIVE_RULE_SET_OWNER" property="negativeRuleSetOwner" jdbcType="VARCHAR" />
+    <result column="NOTIFICATION_TYPE" property="notificationType" jdbcType="VARCHAR" />
+    <result column="NOTIFICATION_ACTION" property="notificationAction" jdbcType="VARCHAR" />
+    <result column="CONTEXT_SIZE" property="contextSize" jdbcType="DECIMAL" />
+    <result column="ANY_CONTEXT" property="anyContext" jdbcType="OTHER" />
+    <result column="CONTEXT_TYPE" property="contextType" jdbcType="DECIMAL" />
+    <result column="USER_CONTEXT" property="userContext" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

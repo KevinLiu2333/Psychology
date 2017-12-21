@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SqlTkRefChkMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SqlTkRefChk" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="CHK_ID" property="chkId" jdbcType="DECIMAL" />
+    <result column="FK_COL_LIST" property="fkColList" jdbcType="VARCHAR" />
+    <result column="PK_TABLE_NAME" property="pkTableName" jdbcType="VARCHAR" />
+    <result column="PK_COL_LIST" property="pkColList" jdbcType="VARCHAR" />
+    <result column="FK_FILTER" property="fkFilter" jdbcType="VARCHAR" />
+    <result column="CHECK_DESCRIPTION" property="checkDescription" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

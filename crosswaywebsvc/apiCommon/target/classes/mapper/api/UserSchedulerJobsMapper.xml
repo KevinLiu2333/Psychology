@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserSchedulerJobsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserSchedulerJobs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="JOB_NAME" property="jobName" jdbcType="VARCHAR" />
+    <result column="JOB_SUBNAME" property="jobSubname" jdbcType="VARCHAR" />
+    <result column="JOB_STYLE" property="jobStyle" jdbcType="VARCHAR" />
+    <result column="JOB_CREATOR" property="jobCreator" jdbcType="VARCHAR" />
+    <result column="CLIENT_ID" property="clientId" jdbcType="VARCHAR" />
+    <result column="GLOBAL_UID" property="globalUid" jdbcType="VARCHAR" />
+    <result column="PROGRAM_OWNER" property="programOwner" jdbcType="VARCHAR" />
+    <result column="PROGRAM_NAME" property="programName" jdbcType="VARCHAR" />
+    <result column="JOB_TYPE" property="jobType" jdbcType="VARCHAR" />
+    <result column="JOB_ACTION" property="jobAction" jdbcType="VARCHAR" />
+    <result column="NUMBER_OF_ARGUMENTS" property="numberOfArguments" jdbcType="DECIMAL" />
+    <result column="SCHEDULE_OWNER" property="scheduleOwner" jdbcType="VARCHAR" />
+    <result column="SCHEDULE_NAME" property="scheduleName" jdbcType="VARCHAR" />
+    <result column="SCHEDULE_TYPE" property="scheduleType" jdbcType="VARCHAR" />
+    <result column="START_DATE" property="startDate" jdbcType="OTHER" />
+    <result column="REPEAT_INTERVAL" property="repeatInterval" jdbcType="VARCHAR" />
+    <result column="EVENT_QUEUE_OWNER" property="eventQueueOwner" jdbcType="VARCHAR" />
+    <result column="EVENT_QUEUE_NAME" property="eventQueueName" jdbcType="VARCHAR" />
+    <result column="EVENT_QUEUE_AGENT" property="eventQueueAgent" jdbcType="VARCHAR" />
+    <result column="EVENT_CONDITION" property="eventCondition" jdbcType="VARCHAR" />
+    <result column="EVENT_RULE" property="eventRule" jdbcType="VARCHAR" />
+    <result column="FILE_WATCHER_OWNER" property="fileWatcherOwner" jdbcType="VARCHAR" />
+    <result column="FILE_WATCHER_NAME" property="fileWatcherName" jdbcType="VARCHAR" />
+    <result column="END_DATE" property="endDate" jdbcType="OTHER" />
+    <result column="JOB_CLASS" property="jobClass" jdbcType="VARCHAR" />
+    <result column="ENABLED" property="enabled" jdbcType="VARCHAR" />
+    <result column="AUTO_DROP" property="autoDrop" jdbcType="VARCHAR" />
+    <result column="RESTARTABLE" property="restartable" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="JOB_PRIORITY" property="jobPriority" jdbcType="DECIMAL" />
+    <result column="RUN_COUNT" property="runCount" jdbcType="DECIMAL" />
+    <result column="MAX_RUNS" property="maxRuns" jdbcType="DECIMAL" />
+    <result column="FAILURE_COUNT" property="failureCount" jdbcType="DECIMAL" />
+    <result column="MAX_FAILURES" property="maxFailures" jdbcType="DECIMAL" />
+    <result column="RETRY_COUNT" property="retryCount" jdbcType="DECIMAL" />
+    <result column="LAST_START_DATE" property="lastStartDate" jdbcType="OTHER" />
+    <result column="LAST_RUN_DURATION" property="lastRunDuration" jdbcType="OTHER" />
+    <result column="NEXT_RUN_DATE" property="nextRunDate" jdbcType="OTHER" />
+    <result column="SCHEDULE_LIMIT" property="scheduleLimit" jdbcType="OTHER" />
+    <result column="MAX_RUN_DURATION" property="maxRunDuration" jdbcType="OTHER" />
+    <result column="LOGGING_LEVEL" property="loggingLevel" jdbcType="VARCHAR" />
+    <result column="STOP_ON_WINDOW_CLOSE" property="stopOnWindowClose" jdbcType="VARCHAR" />
+    <result column="INSTANCE_STICKINESS" property="instanceStickiness" jdbcType="VARCHAR" />
+    <result column="RAISE_EVENTS" property="raiseEvents" jdbcType="VARCHAR" />
+    <result column="SYSTEM" property="system" jdbcType="VARCHAR" />
+    <result column="JOB_WEIGHT" property="jobWeight" jdbcType="DECIMAL" />
+    <result column="NLS_ENV" property="nlsEnv" jdbcType="VARCHAR" />
+    <result column="SOURCE" property="source" jdbcType="VARCHAR" />
+    <result column="NUMBER_OF_DESTINATIONS" property="numberOfDestinations" jdbcType="DECIMAL" />
+    <result column="DESTINATION_OWNER" property="destinationOwner" jdbcType="VARCHAR" />
+    <result column="DESTINATION" property="destination" jdbcType="VARCHAR" />
+    <result column="CREDENTIAL_OWNER" property="credentialOwner" jdbcType="VARCHAR" />
+    <result column="CREDENTIAL_NAME" property="credentialName" jdbcType="VARCHAR" />
+    <result column="INSTANCE_ID" property="instanceId" jdbcType="DECIMAL" />
+    <result column="DEFERRED_DROP" property="deferredDrop" jdbcType="VARCHAR" />
+    <result column="ALLOW_RUNS_IN_RESTRICTED_MODE" property="allowRunsInRestrictedMode" jdbcType="VARCHAR" />
+    <result column="COMMENTS" property="comments" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

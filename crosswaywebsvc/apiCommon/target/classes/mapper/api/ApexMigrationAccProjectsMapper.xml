@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexMigrationAccProjectsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexMigrationAccProjects" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PROJECT_ID" property="projectId" jdbcType="DECIMAL" />
+    <result column="PROJECT_NAME" property="projectName" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="MIGRATION_TYPE" property="migrationType" jdbcType="VARCHAR" />
+    <result column="PROJECT_OWNER" property="projectOwner" jdbcType="VARCHAR" />
+    <result column="ACCDB_PATHNAME" property="accdbPathname" jdbcType="VARCHAR" />
+    <result column="TABLES" property="tables" jdbcType="DECIMAL" />
+    <result column="QUERIES" property="queries" jdbcType="DECIMAL" />
+    <result column="FORMS" property="forms" jdbcType="DECIMAL" />
+    <result column="REPORTS" property="reports" jdbcType="DECIMAL" />
+    <result column="PAGES" property="pages" jdbcType="DECIMAL" />
+    <result column="MODULES" property="modules" jdbcType="DECIMAL" />
+    <result column="RELATIONS" property="relations" jdbcType="DECIMAL" />
+    <result column="JETVERSION" property="jetversion" jdbcType="FLOAT" />
+    <result column="ACCESSVERSION" property="accessversion" jdbcType="VARCHAR" />
+    <result column="DBNAME" property="dbname" jdbcType="VARCHAR" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="DBSIZE" property="dbsize" jdbcType="VARCHAR" />
+    <result column="ISAPPDB" property="isappdb" jdbcType="DECIMAL" />
+    <result column="ISATTACHEDDB" property="isattacheddb" jdbcType="DECIMAL" />
+    <result column="STARTUPFORM" property="startupform" jdbcType="VARCHAR" />
+    <result column="LINKDBID" property="linkdbid" jdbcType="DECIMAL" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_MODIFIED_ON" property="lastModifiedOn" jdbcType="DATE" />
+    <result column="LAST_MODIFIED_BY" property="lastModifiedBy" jdbcType="VARCHAR" />
+    <result column="SCHEMA" property="schema" jdbcType="VARCHAR" />
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="WORKSPACE_ID" property="workspaceId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

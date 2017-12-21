@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtE2e1dayMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtE2e1day" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="URI" property="uri" jdbcType="VARCHAR" />
+    <result column="HIT_COUNT" property="hitCount" jdbcType="DECIMAL" />
+    <result column="TOTAL_TIME" property="totalTime" jdbcType="DECIMAL" />
+    <result column="SERVLET_COUNT" property="servletCount" jdbcType="DECIMAL" />
+    <result column="SERVLET_TIME" property="servletTime" jdbcType="DECIMAL" />
+    <result column="JSP_COUNT" property="jspCount" jdbcType="DECIMAL" />
+    <result column="JSP_TIME" property="jspTime" jdbcType="DECIMAL" />
+    <result column="EJB_COUNT" property="ejbCount" jdbcType="DECIMAL" />
+    <result column="EJB_TIME" property="ejbTime" jdbcType="DECIMAL" />
+    <result column="JDBC_TIME" property="jdbcTime" jdbcType="DECIMAL" />
+    <result column="ROLLUP_TIMESTAMP" property="rollupTimestamp" jdbcType="DATE" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

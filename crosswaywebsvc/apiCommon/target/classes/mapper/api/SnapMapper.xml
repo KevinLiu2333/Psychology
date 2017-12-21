@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SnapMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Snap" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SOWNER" property="sowner" jdbcType="VARCHAR" />
+    <result column="VNAME" property="vname" jdbcType="VARCHAR" />
+    <result column="TNAME" property="tname" jdbcType="VARCHAR" />
+    <result column="MVIEW" property="mview" jdbcType="VARCHAR" />
+    <result column="MOWNER" property="mowner" jdbcType="VARCHAR" />
+    <result column="MASTER" property="master" jdbcType="VARCHAR" />
+    <result column="MLINK" property="mlink" jdbcType="VARCHAR" />
+    <result column="CAN_USE_LOG" property="canUseLog" jdbcType="VARCHAR" />
+    <result column="SNAPSHOT" property="snapshot" jdbcType="DATE" />
+    <result column="SNAPID" property="snapid" jdbcType="DECIMAL" />
+    <result column="SSCN" property="sscn" jdbcType="DECIMAL" />
+    <result column="SNAPTIME" property="snaptime" jdbcType="DATE" />
+    <result column="TSCN" property="tscn" jdbcType="DECIMAL" />
+    <result column="ERROR#" property="error" jdbcType="DECIMAL" />
+    <result column="AUTO_FAST" property="autoFast" jdbcType="VARCHAR" />
+    <result column="AUTO_FUN" property="autoFun" jdbcType="VARCHAR" />
+    <result column="AUTO_DATE" property="autoDate" jdbcType="DATE" />
+    <result column="REFGROUP" property="refgroup" jdbcType="DECIMAL" />
+    <result column="USTRG" property="ustrg" jdbcType="VARCHAR" />
+    <result column="USLOG" property="uslog" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="MASTER_VERSION" property="masterVersion" jdbcType="DECIMAL" />
+    <result column="TABLES" property="tables" jdbcType="DECIMAL" />
+    <result column="FIELD1" property="field1" jdbcType="DECIMAL" />
+    <result column="FIELD2" property="field2" jdbcType="VARCHAR" />
+    <result column="FLAG" property="flag" jdbcType="DECIMAL" />
+    <result column="FLAG2" property="flag2" jdbcType="DECIMAL" />
+    <result column="MTIME" property="mtime" jdbcType="DATE" />
+    <result column="MAS_ROLL_SEG" property="masRollSeg" jdbcType="VARCHAR" />
+    <result column="RSCN" property="rscn" jdbcType="DECIMAL" />
+    <result column="REFHNT" property="refhnt" jdbcType="DECIMAL" />
+    <result column="QUERY_LEN" property="queryLen" jdbcType="DECIMAL" />
+    <result column="INSTSITE" property="instsite" jdbcType="DECIMAL" />
+    <result column="FLAVOR_ID" property="flavorId" jdbcType="DECIMAL" />
+    <result column="OBJFLAG" property="objflag" jdbcType="DECIMAL" />
+    <result column="SNA_TYPE_OWNER" property="snaTypeOwner" jdbcType="VARCHAR" />
+    <result column="SNA_TYPE_NAME" property="snaTypeName" jdbcType="VARCHAR" />
+    <result column="MAS_TYPE_OWNER" property="masTypeOwner" jdbcType="VARCHAR" />
+    <result column="MAS_TYPE_NAME" property="masTypeName" jdbcType="VARCHAR" />
+    <result column="PARENT_SOWNER" property="parentSowner" jdbcType="VARCHAR" />
+    <result column="PARENT_VNAME" property="parentVname" jdbcType="VARCHAR" />
+    <result column="SYN_COUNT" property="synCount" jdbcType="DECIMAL" />
+    <result column="FLAG3" property="flag3" jdbcType="DECIMAL" />
+    <result column="QUERY_TXT" property="queryTxt" jdbcType="LONGVARCHAR" />
+    <result column="LOBMASKVEC" property="lobmaskvec" jdbcType="VARBINARY" />
+    <result column="SNA_TYPE_OID" property="snaTypeOid" jdbcType="VARBINARY" />
+    <result column="SNA_TYPE_HASHCODE" property="snaTypeHashcode" jdbcType="VARBINARY" />
+    <result column="MAS_TYPE_OID" property="masTypeOid" jdbcType="VARBINARY" />
+    <result column="MAS_TYPE_HASHCODE" property="masTypeHashcode" jdbcType="VARBINARY" />
+    <result column="REL_QUERY" property="relQuery" jdbcType="CLOB" />
+    <result column="ALIAS_TXT" property="aliasTxt" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

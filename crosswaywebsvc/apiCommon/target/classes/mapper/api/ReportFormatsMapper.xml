@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ReportFormatsMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ReportFormats">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COMPONENT_ID" jdbcType="DECIMAL" property="componentId" />
+    <result column="COMPONENT_NAME" jdbcType="VARCHAR" property="componentName" />
+    <result column="REPORT_ID" jdbcType="DECIMAL" property="reportId" />
+    <result column="REPORT_NAME" jdbcType="VARCHAR" property="reportName" />
+    <result column="FORMAT_NAME" jdbcType="VARCHAR" property="formatName" />
+    <result column="DESCRIPTION" jdbcType="VARCHAR" property="description" />
+    <result column="TYPE" jdbcType="VARCHAR" property="type" />
+    <result column="XSLT_FILENAME" jdbcType="VARCHAR" property="xsltFilename" />
+    <result column="XSLT_DATA" jdbcType="OTHER" property="xsltData" />
+    <result column="TEXT_LINESIZE" jdbcType="DECIMAL" property="textLinesize" />
+  </resultMap>
+</mapper>

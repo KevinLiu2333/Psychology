@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.StreamsCaptureServerMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.StreamsCaptureServer" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="QUEUE_SCHEMA" property="queueSchema" jdbcType="VARCHAR" />
+    <result column="QUEUE_NAME" property="queueName" jdbcType="VARCHAR" />
+    <result column="DST_QUEUE_SCHEMA" property="dstQueueSchema" jdbcType="VARCHAR" />
+    <result column="DST_QUEUE_NAME" property="dstQueueName" jdbcType="VARCHAR" />
+    <result column="STARTUP_TIME" property="startupTime" jdbcType="DATE" />
+    <result column="DBLINK" property="dblink" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="TOTAL_MSGS" property="totalMsgs" jdbcType="DECIMAL" />
+    <result column="TOTAL_BYTES" property="totalBytes" jdbcType="DECIMAL" />
+    <result column="LAST_LCR_CREATION_TIME" property="lastLcrCreationTime" jdbcType="DATE" />
+    <result column="LAST_LCR_PROPAGATION_TIME" property="lastLcrPropagationTime" jdbcType="DATE" />
+    <result column="DST_DATABASE_NAME" property="dstDatabaseName" jdbcType="VARCHAR" />
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="SERIAL#" property="serial" jdbcType="DECIMAL" />
+    <result column="SPID" property="spid" jdbcType="VARCHAR" />
+    <result column="PROPAGATION_NAME" property="propagationName" jdbcType="VARCHAR" />
+    <result column="CAPTURE_NAME" property="captureName" jdbcType="VARCHAR" />
+    <result column="APPLY_NAME" property="applyName" jdbcType="VARCHAR" />
+    <result column="APPLY_OBJ#" property="applyObj" jdbcType="DECIMAL" />
+    <result column="FIRST_APPLIED_SCN" property="firstAppliedScn" jdbcType="DECIMAL" />
+    <result column="INACTIVE_TIME" property="inactiveTime" jdbcType="DATE" />
+    <result column="SUB_NUM" property="subNum" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="VARCHAR" />
+    <result column="SPARE4" property="spare4" jdbcType="VARCHAR" />
+    <result column="SPARE5" property="spare5" jdbcType="DATE" />
+    <result column="SPARE6" property="spare6" jdbcType="DATE" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CatalogMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Catalog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TNAME" property="tname" jdbcType="VARCHAR" />
+    <result column="CREATOR" property="creator" jdbcType="VARCHAR" />
+    <result column="TABLETYPE" property="tabletype" jdbcType="VARCHAR" />
+    <result column="REMARKS" property="remarks" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

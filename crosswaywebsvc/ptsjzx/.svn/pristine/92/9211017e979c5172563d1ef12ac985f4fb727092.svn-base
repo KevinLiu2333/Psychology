@@ -1,0 +1,149 @@
+/*重置*/
+* {
+	font-size: 16px;
+	font-family:"Microsoft YaHei", "微软雅黑", "宋体", Arial, Helvetica, sans-serif;
+	color: #333;
+}
+body, dt, dd, dl, li, ul, h1, h2, h3, h4, h5, input, p {
+	margin: 0;
+	padding: 0;
+}
+li, ul, dt, dd, dl, h1, h2, h3, h4, h5, a {
+	line-height: none;
+	text-decoration: none;
+	list-style: none;
+}
+h1, h2, h3, h4, h5 {
+	font-weight: normal;
+	line-height: normal;
+}
+img {
+	border: none;
+}
+
+/*log区样式*/
+#header{
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+}
+/*菜单栏样式*/
+#menu{
+	position:absolute;
+	left:0;
+	top:110px;
+	bottom:0;
+}
+/*位置区样式*/
+#position{
+	position:absolute;
+	left:200px;
+	top:110px;
+	right:0;
+}
+/*主窗口*/
+#content{
+	position:absolute;
+	left:200px;
+	right:0;
+	top:147px;
+	bottom:0;
+}
+
+/*log区样式*/
+.header{
+	height:100%;
+	background:#0066b1 url(../images/header_bg.jpg) no-repeat left top;
+}
+.w1000{
+	width:100%;
+}
+.header .w1000{
+	height:130px;
+}
+.logo{
+	float:left;
+	display:block;
+	margin:40px 7%;
+}
+.header_fc{
+	float:right;
+	margin:50px 7% 0 0;
+}
+.header_fc li{
+	float:left;
+	margin-left:10px;
+}
+.header_fc li a,.header_fc li a:link,.header_fc li a:visited{
+	display:block;
+	font-size:14px;
+	color:#fff;
+	line-height:24px;
+}
+.header_fc li a img{
+	vertical-align:middle;
+	margin-right:5px;
+}
+/*菜单栏样式*/
+.menu{
+	width:200px;
+	background:#ffffff;
+	overflow:auto;
+}
+.menu dl{
+	margin-top:1px;
+}
+.menu dl dt{
+	background:no-repeat 164px center;
+	background-color:#c5e8f7;
+	background-image:url(../images/arrow_06.png);
+	background-size:10px;
+	font-size:16px;
+	color:#2682a9;
+	line-height:36px;
+	padding-left:30px;
+	cursor:pointer;
+}
+.menu dl .menu_tCon{
+	background-image:url(../images/arrow_03.png);
+}
+.menu dl dd{
+	padding:5px 0;
+	display:none;
+}
+.menu dl dd a,.menu dl dd a:link,.menu dl dd a:visited{
+	display:block;
+	font-size:14px;
+	color:#333;
+	line-height:32px;
+	border-left:7px solid #f0f9fd;
+	margin:2px 0;
+}
+.menu dl dd .menu_cCon,.menu dl dd .menu_cCon:link,.menu dl dd .menu_cCon:visited{
+	background:#e47751;
+	color:#fff;
+	border-left:7px solid #dc563c;
+}
+.menu dl dd a img{
+	vertical-align:middle;
+	margin-left:13px;
+	margin-right:6px;
+	margin-top:-2px;
+}
+
+/*位置区样式*/
+.position{
+	background:#f0f0f0 url(../images/home_03.png) no-repeat 23px center;
+	font-size:14px;
+	color:#333333;
+	line-height:36px;
+	border-bottom:1px solid #dddddd;
+	padding-left:46px;
+}
+/*主窗口样式*/
+.content iframe{
+	display:block;
+	width:100%;
+	height:100%;
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaStreamsFindingsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaStreamsFindings" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="MESSAGE_ID" property="messageId" jdbcType="DECIMAL" />
+    <result column="MESSAGE_ARG1" property="messageArg1" jdbcType="VARCHAR" />
+    <result column="MESSAGE_ARG2" property="messageArg2" jdbcType="VARCHAR" />
+    <result column="MESSAGE_ARG3" property="messageArg3" jdbcType="VARCHAR" />
+    <result column="MESSAGE_ARG4" property="messageArg4" jdbcType="VARCHAR" />
+    <result column="MESSAGE_ARG5" property="messageArg5" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="DECIMAL" />
+    <result column="MORE_INFO_ID" property="moreInfoId" jdbcType="DECIMAL" />
+    <result column="INFO_ARG1" property="infoArg1" jdbcType="VARCHAR" />
+    <result column="INFO_ARG2" property="infoArg2" jdbcType="VARCHAR" />
+    <result column="INFO_ARG3" property="infoArg3" jdbcType="VARCHAR" />
+    <result column="INFO_ARG4" property="infoArg4" jdbcType="VARCHAR" />
+    <result column="INFO_ARG5" property="infoArg5" jdbcType="VARCHAR" />
+    <result column="ADVISOR_TYPE" property="advisorType" jdbcType="VARCHAR" />
+    <result column="RUN_TIME" property="runTime" jdbcType="DATE" />
+  </resultMap>
+</mapper>

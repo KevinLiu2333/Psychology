@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCstmzDefaultChartMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCstmzDefaultChart" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="COMP_TARGET_TYPE" property="compTargetType" jdbcType="VARCHAR" />
+    <id column="CHART_TYPE" property="chartType" jdbcType="DECIMAL" />
+    <id column="MEMBER_TARGET_TYPE" property="memberTargetType" jdbcType="VARCHAR" />
+    <id column="MEMBER_METRIC_NAME" property="memberMetricName" jdbcType="VARCHAR" />
+    <id column="MEMBER_METRIC_COLUMN" property="memberMetricColumn" jdbcType="VARCHAR" />
+    <result column="TARGETS_COUNT" property="targetsCount" jdbcType="DECIMAL" />
+    <result column="MIN_COLUMN" property="minColumn" jdbcType="DECIMAL" />
+    <result column="MAX_COLUMN" property="maxColumn" jdbcType="DECIMAL" />
+    <result column="AVG_COLUMN" property="avgColumn" jdbcType="DECIMAL" />
+    <result column="SUM_COLUMN" property="sumColumn" jdbcType="DECIMAL" />
+    <result column="STDEV_COLUMN" property="stdevColumn" jdbcType="DECIMAL" />
+    <result column="DISPLAY_ORDER" property="displayOrder" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

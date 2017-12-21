@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvSortUsageMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvSortUsage" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="USER" property="user" jdbcType="VARCHAR" />
+    <result column="SESSION_NUM" property="sessionNum" jdbcType="DECIMAL" />
+    <result column="SQLHASH" property="sqlhash" jdbcType="DECIMAL" />
+    <result column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="TABLESPACE" property="tablespace" jdbcType="VARCHAR" />
+    <result column="CONTENTS" property="contents" jdbcType="VARCHAR" />
+    <result column="SEGTYPE" property="segtype" jdbcType="VARCHAR" />
+    <result column="SEGFILE#" property="segfile" jdbcType="DECIMAL" />
+    <result column="SEGBLK#" property="segblk" jdbcType="DECIMAL" />
+    <result column="EXTENTS" property="extents" jdbcType="DECIMAL" />
+    <result column="BLOCKS" property="blocks" jdbcType="DECIMAL" />
+    <result column="SEGRFNO#" property="segrfno" jdbcType="DECIMAL" />
+    <result column="SESSION_ADDR" property="sessionAddr" jdbcType="VARBINARY" />
+    <result column="SQLADDR" property="sqladdr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

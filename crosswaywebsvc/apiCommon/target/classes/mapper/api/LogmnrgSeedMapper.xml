@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.LogmnrgSeedMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.LogmnrgSeed" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SEED_VERSION" property="seedVersion" jdbcType="DECIMAL" />
+    <result column="GATHER_VERSION" property="gatherVersion" jdbcType="DECIMAL" />
+    <result column="SCHEMANAME" property="schemaname" jdbcType="VARCHAR" />
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="OBJV#" property="objv" jdbcType="DECIMAL" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="COL_NAME" property="colName" jdbcType="VARCHAR" />
+    <result column="COL#" property="col" jdbcType="DECIMAL" />
+    <result column="INTCOL#" property="intcol" jdbcType="DECIMAL" />
+    <result column="SEGCOL#" property="segcol" jdbcType="DECIMAL" />
+    <result column="TYPE#" property="type" jdbcType="DECIMAL" />
+    <result column="LENGTH" property="length" jdbcType="DECIMAL" />
+    <result column="PRECISION#" property="precision" jdbcType="DECIMAL" />
+    <result column="SCALE" property="scale" jdbcType="DECIMAL" />
+    <result column="NULL$" property="null" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

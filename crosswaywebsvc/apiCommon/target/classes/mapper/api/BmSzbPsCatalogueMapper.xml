@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.BmSzbPsCatalogueMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.BmSzbPsCatalogue" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CATALOGUE_ID" property="catalogueId" jdbcType="VARCHAR" />
+    <result column="CATALOGUE_CODE" property="catalogueCode" jdbcType="VARCHAR" />
+    <result column="CATALOGUE_NAME" property="catalogueName" jdbcType="VARCHAR" />
+    <result column="P_CATALOGUE_CODE" property="pCatalogueCode" jdbcType="VARCHAR" />
+    <result column="CATALOGUE_VERSION" property="catalogueVersion" jdbcType="VARCHAR" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="VALIDITY" property="validity" jdbcType="VARCHAR" />
+    <result column="CATALOGUE_TYPE" property="catalogueType" jdbcType="VARCHAR" />
+    <result column="CATALOGUE_NO" property="catalogueNo" jdbcType="DECIMAL" />
+    <result column="RECORD_CONTENT" property="recordContent" jdbcType="VARCHAR" />
+    <result column="GUIDE_DEPT" property="guideDept" jdbcType="VARCHAR" />
+    <result column="RECORD_DEPT" property="recordDept" jdbcType="VARCHAR" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+    <result column="IS_LEAF" property="isLeaf" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

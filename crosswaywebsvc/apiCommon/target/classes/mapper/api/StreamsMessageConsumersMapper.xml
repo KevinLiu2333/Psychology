@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.StreamsMessageConsumersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.StreamsMessageConsumers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="STREAMS_NAME" property="streamsName" jdbcType="VARCHAR" />
+    <result column="QUEUE_OWNER" property="queueOwner" jdbcType="VARCHAR" />
+    <result column="QUEUE_NAME" property="queueName" jdbcType="VARCHAR" />
+    <result column="RSET_OWNER" property="rsetOwner" jdbcType="VARCHAR" />
+    <result column="RSET_NAME" property="rsetName" jdbcType="VARCHAR" />
+    <result column="NEG_RSET_OWNER" property="negRsetOwner" jdbcType="VARCHAR" />
+    <result column="NEG_RSET_NAME" property="negRsetName" jdbcType="VARCHAR" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+    <result column="SPARE4" property="spare4" jdbcType="VARCHAR" />
+    <result column="SPARE5" property="spare5" jdbcType="VARCHAR" />
+    <result column="QUEUE_OID" property="queueOid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

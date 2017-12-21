@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.EcmHistOsRegisteredSwMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.EcmHistOsRegisteredSw" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="VENDOR_NAME" property="vendorName" jdbcType="VARCHAR" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="INSTALLATION_DATE" property="installationDate" jdbcType="DATE" />
+    <result column="INSTALLED_LOCATION" property="installedLocation" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="VENDOR_SOFTWARE_SPECIFIC_INFO" property="vendorSoftwareSpecificInfo" jdbcType="VARCHAR" />
+    <result column="ECM_SNAPSHOT_ID" property="ecmSnapshotId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

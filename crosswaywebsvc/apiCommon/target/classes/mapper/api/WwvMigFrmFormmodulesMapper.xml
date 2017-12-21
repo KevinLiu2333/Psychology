@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigFrmFormmodulesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigFrmFormmodules" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="MODULE_ID" property="moduleId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="TITLE" property="title" jdbcType="VARCHAR" />
+    <result column="CONSOLEWINDOW" property="consolewindow" jdbcType="VARCHAR" />
+    <result column="MENUMODULE" property="menumodule" jdbcType="VARCHAR" />
+    <result column="RUNTIMECOMP" property="runtimecomp" jdbcType="VARCHAR" />
+    <result column="DIRTYINFO" property="dirtyinfo" jdbcType="VARCHAR" />
+    <result column="VERTICALTOOLBARCANVAS" property="verticaltoolbarcanvas" jdbcType="VARCHAR" />
+    <result column="HORIZONTALTOOLBARCANVAS" property="horizontaltoolbarcanvas" jdbcType="VARCHAR" />
+    <result column="INITIALIZEMENU" property="initializemenu" jdbcType="VARCHAR" />
+    <result column="MENUROLE" property="menurole" jdbcType="VARCHAR" />
+    <result column="FIRSTNAVIGATIONBLOCKNAME" property="firstnavigationblockname" jdbcType="VARCHAR" />
+    <result column="SAVEPOINTMODE" property="savepointmode" jdbcType="VARCHAR" />
+    <result column="VALIDATIONUNIT" property="validationunit" jdbcType="VARCHAR" />
+    <result column="RECORDVISUALATTRIBUTEGROUPNAME" property="recordvisualattributegroupname" jdbcType="VARCHAR" />
+    <result column="MOUSENAVIGATIONLIMIT" property="mousenavigationlimit" jdbcType="VARCHAR" />
+    <result column="USE3DCONTROLS" property="use3dcontrols" jdbcType="VARCHAR" />
+    <result column="CURSORMODE" property="cursormode" jdbcType="VARCHAR" />
+    <result column="INTERACTIONMODE" property="interactionmode" jdbcType="VARCHAR" />
+    <result column="ISOLATIONMODE" property="isolationmode" jdbcType="VARCHAR" />
+    <result column="LANGUAGEDIRECTION" property="languagedirection" jdbcType="VARCHAR" />
+    <result column="MAXIMUMQUERYTIME" property="maximumquerytime" jdbcType="VARCHAR" />
+    <result column="MAXIMUMRECORDSFETCHED" property="maximumrecordsfetched" jdbcType="VARCHAR" />
+    <result column="NEWDEFERREQENF" property="newdeferreqenf" jdbcType="VARCHAR" />
+    <result column="PARENTFILENAME" property="parentfilename" jdbcType="VARCHAR" />
+    <result column="PARENTFILEPATH" property="parentfilepath" jdbcType="VARCHAR" />
+    <result column="PARENTMODULETYPE" property="parentmoduletype" jdbcType="VARCHAR" />
+    <result column="PARENTTYPE" property="parenttype" jdbcType="VARCHAR" />
+    <result column="PARENTNAME" property="parentname" jdbcType="VARCHAR" />
+    <result column="PARENTMODULE" property="parentmodule" jdbcType="VARCHAR" />
+    <result column="PERSISTENTCLIENTINFOLENGTH" property="persistentclientinfolength" jdbcType="VARCHAR" />
+    <result column="HELPBOOKTITLE" property="helpbooktitle" jdbcType="VARCHAR" />
+    <result column="SELECT_FOR_APP" property="selectForApp" jdbcType="VARCHAR" />
+    <result column="APPLICABLE" property="applicable" jdbcType="VARCHAR" />
+    <result column="COMPLETE" property="complete" jdbcType="VARCHAR" />
+    <result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+    <result column="ASSIGNEE" property="assignee" jdbcType="VARCHAR" />
+    <result column="NOTES" property="notes" jdbcType="VARCHAR" />
+    <result column="TAGS" property="tags" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="FORMMODULE_COMMENT" property="formmoduleComment" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllXmlSchemasMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllXmlSchemas" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="SCHEMA_URL" property="schemaUrl" jdbcType="VARCHAR" />
+    <result column="LOCAL" property="local" jdbcType="VARCHAR" />
+    <result column="SCHEMA" property="schema" jdbcType="OTHER" />
+    <result column="INT_OBJNAME" property="intObjname" jdbcType="VARCHAR" />
+    <result column="QUAL_SCHEMA_URL" property="qualSchemaUrl" jdbcType="VARCHAR" />
+    <result column="HIER_TYPE" property="hierType" jdbcType="VARCHAR" />
+    <result column="BINARY" property="binary" jdbcType="VARCHAR" />
+    <result column="HIDDEN" property="hidden" jdbcType="VARCHAR" />
+    <result column="SCHEMA_ID" property="schemaId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

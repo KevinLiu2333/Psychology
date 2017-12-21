@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VCopyCorruptionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VCopyCorruption" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RECID" property="recid" jdbcType="DECIMAL" />
+    <result column="STAMP" property="stamp" jdbcType="DECIMAL" />
+    <result column="COPY_RECID" property="copyRecid" jdbcType="DECIMAL" />
+    <result column="COPY_STAMP" property="copyStamp" jdbcType="DECIMAL" />
+    <result column="FILE#" property="file" jdbcType="DECIMAL" />
+    <result column="BLOCK#" property="block" jdbcType="DECIMAL" />
+    <result column="BLOCKS" property="blocks" jdbcType="DECIMAL" />
+    <result column="CORRUPTION_CHANGE#" property="corruptionChange" jdbcType="DECIMAL" />
+    <result column="MARKED_CORRUPT" property="markedCorrupt" jdbcType="VARCHAR" />
+    <result column="CORRUPTION_TYPE" property="corruptionType" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

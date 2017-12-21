@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CtxObjectAttributeLovMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CtxObjectAttributeLov" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OAL_CLASS" property="oalClass" jdbcType="VARCHAR" />
+    <result column="OAL_OBJECT" property="oalObject" jdbcType="VARCHAR" />
+    <result column="OAL_ATTRIBUTE" property="oalAttribute" jdbcType="VARCHAR" />
+    <result column="OAL_LABEL" property="oalLabel" jdbcType="VARCHAR" />
+    <result column="OAL_VALUE" property="oalValue" jdbcType="VARCHAR" />
+    <result column="OAL_DESCRIPTION" property="oalDescription" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

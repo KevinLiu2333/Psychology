@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaLogmnrSessionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaLogmnrSession" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="SOURCE_DATABASE" property="sourceDatabase" jdbcType="VARCHAR" />
+    <result column="SOURCE_DBID" property="sourceDbid" jdbcType="DECIMAL" />
+    <result column="SOURCE_RESETLOGS_SCN" property="sourceResetlogsScn" jdbcType="DECIMAL" />
+    <result column="SOURCE_RESETLOGS_TIME" property="sourceResetlogsTime" jdbcType="DECIMAL" />
+    <result column="FIRST_SCN" property="firstScn" jdbcType="DECIMAL" />
+    <result column="END_SCN" property="endScn" jdbcType="DECIMAL" />
+    <result column="BRANCH_SCN" property="branchScn" jdbcType="DECIMAL" />
+    <result column="WAIT_FOR_LOG" property="waitForLog" jdbcType="VARCHAR" />
+    <result column="HOT_MINE" property="hotMine" jdbcType="VARCHAR" />
+    <result column="SAFE_PURGE_SCN" property="safePurgeScn" jdbcType="DECIMAL" />
+    <result column="CHECKPOINT_SCN" property="checkpointScn" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

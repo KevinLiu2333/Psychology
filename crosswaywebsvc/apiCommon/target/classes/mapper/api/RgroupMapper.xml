@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RgroupMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Rgroup" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="REFGROUP" property="refgroup" jdbcType="DECIMAL" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="FLAG" property="flag" jdbcType="DECIMAL" />
+    <result column="ROLLBACK_SEG" property="rollbackSeg" jdbcType="VARCHAR" />
+    <result column="FIELD1" property="field1" jdbcType="DECIMAL" />
+    <result column="JOB" property="job" jdbcType="DECIMAL" />
+    <result column="PURGE_OPT#" property="purgeOpt" jdbcType="DECIMAL" />
+    <result column="PARALLELISM#" property="parallelism" jdbcType="DECIMAL" />
+    <result column="HEAP_SIZE#" property="heapSize" jdbcType="DECIMAL" />
+    <result column="INSTSITE" property="instsite" jdbcType="DECIMAL" />
+    <result column="REFRESH_SEQUENCE" property="refreshSequence" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

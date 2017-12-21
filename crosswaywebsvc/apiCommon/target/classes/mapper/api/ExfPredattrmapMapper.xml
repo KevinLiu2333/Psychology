@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ExfPredattrmapMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ExfPredattrmap" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PTIDXOBJ#" property="ptidxobj" jdbcType="DECIMAL" />
+    <result column="PTATTRSEXP" property="ptattrsexp" jdbcType="VARCHAR" />
+    <result column="PTATTRID" property="ptattrid" jdbcType="DECIMAL" />
+    <result column="PTATTRALIAS" property="ptattralias" jdbcType="VARCHAR" />
+    <result column="PTATTROPER" property="ptattroper" jdbcType="OTHER" />
+    <result column="PTATTRTYPE" property="ptattrtype" jdbcType="VARCHAR" />
+    <result column="PTATTRPROP" property="ptattrprop" jdbcType="DECIMAL" />
+    <result column="XMLTATTR" property="xmltattr" jdbcType="VARCHAR" />
+    <result column="XMLNSELP" property="xmlnselp" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

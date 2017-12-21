@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaTemplateRefgroupsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaTemplateRefgroups" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="REFRESH_GROUP_ID" property="refreshGroupId" jdbcType="DECIMAL" />
+    <result column="REFRESH_GROUP_NAME" property="refreshGroupName" jdbcType="VARCHAR" />
+    <result column="REFRESH_TEMPLATE_ID" property="refreshTemplateId" jdbcType="DECIMAL" />
+    <result column="REFRESH_TEMPLATE_NAME" property="refreshTemplateName" jdbcType="VARCHAR" />
+    <result column="ROLLBACK_SEG" property="rollbackSeg" jdbcType="VARCHAR" />
+    <result column="START_DATE" property="startDate" jdbcType="VARCHAR" />
+    <result column="INTERVAL" property="interval" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

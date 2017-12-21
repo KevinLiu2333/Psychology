@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowMenuTemplatesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowMenuTemplates" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="BEFORE_FIRST" property="beforeFirst" jdbcType="VARCHAR" />
+    <result column="CURRENT_PAGE_OPTION" property="currentPageOption" jdbcType="VARCHAR" />
+    <result column="NON_CURRENT_PAGE_OPTION" property="nonCurrentPageOption" jdbcType="VARCHAR" />
+    <result column="MENU_LINK_ATTRIBUTES" property="menuLinkAttributes" jdbcType="VARCHAR" />
+    <result column="BETWEEN_LEVELS" property="betweenLevels" jdbcType="VARCHAR" />
+    <result column="AFTER_LAST" property="afterLast" jdbcType="VARCHAR" />
+    <result column="MAX_LEVELS" property="maxLevels" jdbcType="DECIMAL" />
+    <result column="START_WITH_NODE" property="startWithNode" jdbcType="VARCHAR" />
+    <result column="REFERENCE_ID" property="referenceId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="THEME_ID" property="themeId" jdbcType="DECIMAL" />
+    <result column="THEME_CLASS_ID" property="themeClassId" jdbcType="DECIMAL" />
+    <result column="TRANSLATE_THIS_TEMPLATE" property="translateThisTemplate" jdbcType="VARCHAR" />
+    <result column="TEMPLATE_COMMENTS" property="templateComments" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

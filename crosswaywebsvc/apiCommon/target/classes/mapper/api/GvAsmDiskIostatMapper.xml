@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvAsmDiskIostatMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvAsmDiskIostat" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="INSTNAME" property="instname" jdbcType="VARCHAR" />
+    <result column="DBNAME" property="dbname" jdbcType="VARCHAR" />
+    <result column="GROUP_NUMBER" property="groupNumber" jdbcType="DECIMAL" />
+    <result column="DISK_NUMBER" property="diskNumber" jdbcType="DECIMAL" />
+    <result column="FAILGROUP" property="failgroup" jdbcType="VARCHAR" />
+    <result column="READS" property="reads" jdbcType="DECIMAL" />
+    <result column="WRITES" property="writes" jdbcType="DECIMAL" />
+    <result column="READ_ERRS" property="readErrs" jdbcType="DECIMAL" />
+    <result column="WRITE_ERRS" property="writeErrs" jdbcType="DECIMAL" />
+    <result column="READ_TIME" property="readTime" jdbcType="DECIMAL" />
+    <result column="WRITE_TIME" property="writeTime" jdbcType="DECIMAL" />
+    <result column="BYTES_READ" property="bytesRead" jdbcType="DECIMAL" />
+    <result column="BYTES_WRITTEN" property="bytesWritten" jdbcType="DECIMAL" />
+    <result column="HOT_READS" property="hotReads" jdbcType="DECIMAL" />
+    <result column="HOT_WRITES" property="hotWrites" jdbcType="DECIMAL" />
+    <result column="HOT_BYTES_READ" property="hotBytesRead" jdbcType="DECIMAL" />
+    <result column="HOT_BYTES_WRITTEN" property="hotBytesWritten" jdbcType="DECIMAL" />
+    <result column="COLD_READS" property="coldReads" jdbcType="DECIMAL" />
+    <result column="COLD_WRITES" property="coldWrites" jdbcType="DECIMAL" />
+    <result column="COLD_BYTES_READ" property="coldBytesRead" jdbcType="DECIMAL" />
+    <result column="COLD_BYTES_WRITTEN" property="coldBytesWritten" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

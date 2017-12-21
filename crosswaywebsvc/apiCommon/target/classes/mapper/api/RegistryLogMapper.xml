@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RegistryLogMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RegistryLog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CID" property="cid" jdbcType="VARCHAR" />
+    <result column="NAMESPACE" property="namespace" jdbcType="VARCHAR" />
+    <result column="OPERATION" property="operation" jdbcType="DECIMAL" />
+    <result column="OPTIME" property="optime" jdbcType="TIMESTAMP" />
+    <result column="ERRMSG" property="errmsg" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

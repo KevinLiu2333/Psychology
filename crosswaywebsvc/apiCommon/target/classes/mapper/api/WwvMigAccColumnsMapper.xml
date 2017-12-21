@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigAccColumnsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigAccColumns" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="PROJECT_ID" property="projectId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="COLID" property="colid" jdbcType="DECIMAL" />
+    <result column="TBLID" property="tblid" jdbcType="DECIMAL" />
+    <result column="COLNAME" property="colname" jdbcType="VARCHAR" />
+    <result column="COLTYPE" property="coltype" jdbcType="DECIMAL" />
+    <result column="COLTYPEDESC" property="coltypedesc" jdbcType="VARCHAR" />
+    <result column="COLAUTOINCR" property="colautoincr" jdbcType="DECIMAL" />
+    <result column="NEXTCOUNTERVALUE" property="nextcountervalue" jdbcType="DECIMAL" />
+    <result column="MAXLENGTHSOURCE" property="maxlengthsource" jdbcType="DECIMAL" />
+    <result column="AVGLENGTHSOURCE" property="avglengthsource" jdbcType="DECIMAL" />
+    <result column="COLTEXTSIZE" property="coltextsize" jdbcType="DECIMAL" />
+    <result column="ALLOWZEROLENGTH" property="allowzerolength" jdbcType="DECIMAL" />
+    <result column="DEFAULTVALUE" property="defaultvalue" jdbcType="VARCHAR" />
+    <result column="COLREQUIRED" property="colrequired" jdbcType="DECIMAL" />
+    <result column="COLCOLLATINGORDER" property="colcollatingorder" jdbcType="DECIMAL" />
+    <result column="COLORDPOSITION" property="colordposition" jdbcType="DECIMAL" />
+    <result column="VALIDATIONRULE" property="validationrule" jdbcType="VARCHAR" />
+    <result column="VALIDATIONTEXT" property="validationtext" jdbcType="VARCHAR" />
+    <result column="COLUMNDESCRIPTION" property="columndescription" jdbcType="VARCHAR" />
+    <result column="COLUMNHIDDEN" property="columnhidden" jdbcType="DECIMAL" />
+    <result column="COLUMNORDER" property="columnorder" jdbcType="DECIMAL" />
+    <result column="COLUMNWIDTH" property="columnwidth" jdbcType="DECIMAL" />
+    <result column="DECIMALPLACES" property="decimalplaces" jdbcType="DECIMAL" />
+    <result column="FOREIGNNAME" property="foreignname" jdbcType="VARCHAR" />
+    <result column="VALIDATEONSET" property="validateonset" jdbcType="DECIMAL" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

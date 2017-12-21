@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>用户行为分析</title>
+<link href="../css/main_bumen.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/jqtransform.css" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqtransform.js" ></script>
+<script>
+	$(document).ready(function() {
+		var DJdt = $(".header_time dt")
+		DJdt.click(function(){
+			$(this).addClass('time_title_click').show()
+					.siblings().removeClass('time_title_click')		
+			
+			});
+			
+     $(function(){
+			$('.time_form form').jqTransform();
+		});
+    });
+	
+	
+	
+	
+</script>
+</head>
+
+<body>
+	<div class="mian_box">
+    	<dl class="header_time">
+            	<dt class="time_title_click">今天</dt>
+                <dt>昨天</dt>
+                <dt>最近7天</dt>
+                <dt>最近30天</dt>
+                <dd class="time_form">
+                   <form action="zzsc.php" method="POST">
+                        <select name="select">
+                          <option value="">时间</option>
+                          <option value="opt1">00:00</option>
+                          <option value="opt2">01:00</option>
+                          <option value="opt3">02:00</option>
+                          <option value="opt4">03:00</option>
+                          <option value="opt5">04:00</option>
+                          <option value="opt6">05:00</option>
+                          <option value="opt7">06:00</option>
+                          <option value="opt8">07:00</option>
+                          <option value="opt9">08:00</option>
+                          <option value="opt10">09:00</option>
+                          <option value="opt11">10:00</option>
+                          <option value="opt12">11:00</option>
+                          <option value="opt13">12:00</option>
+                        </select>
+                    </form>
+                    <span>至</span>
+                    <form action="zzsc.php" method="POST">
+                        <select name="select">
+                          <option value="">时间</option>
+                          <option value="opt1">00:00</option>
+                          <option value="opt2">01:00</option>
+                          <option value="opt3">02:00</option>
+                          <option value="opt4">03:00</option>
+                          <option value="opt5">04:00</option>
+                          <option value="opt6">05:00</option>
+                          <option value="opt7">06:00</option>
+                          <option value="opt8">07:00</option>
+                          <option value="opt9">08:00</option>
+                          <option value="opt10">09:00</option>
+                          <option value="opt11">10:00</option>
+                          <option value="opt12">11:00</option>
+                          <option value="opt13">12:00</option>
+                        </select>
+                    </form>
+                </dd>
+        </dl>
+        <ul class="user_ui main_01">
+        	<li>
+            	<b class="ui_bg01">
+                	<h5>年龄跨度</h5>
+                    <a href="#"><span>28-64岁</span></a>
+                	<h5>访问网页年龄跨度情况</h5>
+                </b>
+            </li>
+        	<li>
+            	<b class="ui_bg02">
+                	<h5>最活跃的年龄段</h5>
+                    <a href="#"><span>30-40岁</span></a>
+                	<h5>访问最活跃的年龄段</h5>
+                </b>
+            </li>
+        	<li>
+            	<b class="ui_bg03">
+                    <a class="pc_pic" href="#"><img src="../images/percent_07.png"></a>
+                	<h5>30-40岁访问量占比</h5>
+                </b>
+            </li>
+        	<li>
+            	<b class="ui_bg04">
+                	<h5>早上7-9点最活跃的年龄段</h5>
+                    <a href="#"><span>30岁以下</span></a>
+                	<h5>早上7-9点最活跃的年龄情况</h5>
+                </b>
+            </li>
+        </ul>
+        <div class="main_01">
+        	<div class="user_tit">
+            	<h1>年龄统计访问情况</h1>
+        	</div>
+       	    <div class="chartbox_02"><img src="../images/chart_11.jpg"></div>
+        </div>
+        <div class="main_01 p20">
+        	<table class="age_tab" width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="15%">年龄</td>
+                <td width="15%">总人数</td>
+                <td width="15%">访问量</td>
+                <td>访问量占比</td>
+                <td width="15%">平均访问量</td>
+              </tr>
+              <tr>
+                <td>20-29</td>
+                <td>310</td>
+                <td>185</td>
+                <td><img src="../images/pr_bar_03.jpg"><span>22%</span></td>
+                <td>452</td>
+              </tr>
+              <tr>
+                <td>30-39</td>
+                <td>722</td>
+                <td>540</td>
+                <td><img src="../images/pr_bar_07.jpg"><span>42%</span></td>
+                <td>632</td>
+              </tr>
+              <tr>
+                <td>40-49</td>
+                <td>460</td>
+                <td>305</td>
+                <td><img src="../images/pr_bar_10.jpg"><span>20%</span></td>
+                <td>411</td>
+              </tr>
+              <tr>
+                <td>50-59</td>
+                <td>240</td>
+                <td>135</td>
+                <td><img src="../images/pr_bar_13.jpg"><span>16%</span></td>
+                <td>246</td>
+              </tr>
+              <tr>
+                <td>60-70</td>
+                <td>220</td>
+                <td>65</td>
+                <td><img src="../images/pr_bar_16.jpg"><span>11%</span></td>
+                <td>72</td>
+              </tr>
+            </table>
+            <ul class="age_exp">
+            	<li class="exp_01">*说明</li>
+            	<li class="exp_02"><span>&nbsp;</span>新增</li>
+            	<li class="exp_03"><span>&nbsp;</span>修改</li>
+            	<li class="exp_04"><span>&nbsp;</span>删除</li>
+            	<li class="exp_05"><span>&nbsp;</span>导出</li>
+            	<li class="exp_06"><span>&nbsp;</span>其他</li>
+            </ul>
+        </div>
+    </div>
+
+<script>
+	$(".pv_info").hide();
+	$(".dialog_box").hide();
+	$(".pv_btn").toggle(function(){
+		$(this).siblings(".pv_info").fadeIn();
+		$(this).children(".pv_f").addClass("pv_open");
+	},function(){
+		$(this).siblings(".pv_info").fadeOut(100);
+		$(this).children(".pv_f").removeClass("pv_open");
+	})
+	$(".pv_main tr").hover(function(){
+		$(this).children().children(".dialog_box").show();
+	},function(){
+		$(this).children().children(".dialog_box").hide();
+	})
+</script>
+</body>
+</html>

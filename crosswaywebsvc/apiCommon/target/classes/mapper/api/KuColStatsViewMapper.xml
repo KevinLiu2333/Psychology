@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuColStatsViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuColStatsView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="INTCOL_NUM" property="intcolNum" jdbcType="DECIMAL" />
+    <result column="DISTCNT" property="distcnt" jdbcType="DECIMAL" />
+    <result column="DENSITY" property="density" jdbcType="DECIMAL" />
+    <result column="NULL_CNT" property="nullCnt" jdbcType="DECIMAL" />
+    <result column="AVGCLN" property="avgcln" jdbcType="DECIMAL" />
+    <result column="CFLAGS" property="cflags" jdbcType="DECIMAL" />
+    <result column="EAV" property="eav" jdbcType="DECIMAL" />
+    <result column="SAMPLE_SIZE" property="sampleSize" jdbcType="DECIMAL" />
+    <result column="MINIMUM" property="minimum" jdbcType="DECIMAL" />
+    <result column="MAXIMUM" property="maximum" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="HIST_GRAM_LIST" property="histGramList" jdbcType="OTHER" />
+    <result column="LOWVAL" property="lowval" jdbcType="VARBINARY" />
+    <result column="HIVAL" property="hival" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

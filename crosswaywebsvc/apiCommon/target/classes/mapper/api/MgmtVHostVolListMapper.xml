@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtVHostVolListMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtVHostVolList" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="RESOURCE_NAME" property="resourceName" jdbcType="VARCHAR" />
+    <result column="RESOURCE_TYPE" property="resourceType" jdbcType="VARCHAR" />
+    <result column="DISK_GROUP" property="diskGroup" jdbcType="VARCHAR" />
+    <result column="OS_PATH" property="osPath" jdbcType="VARCHAR" />
+    <result column="VENDOR" property="vendor" jdbcType="VARCHAR" />
+    <result column="PRODUCT" property="product" jdbcType="VARCHAR" />
+    <result column="STORAGE_SIZE" property="storageSize" jdbcType="DECIMAL" />
+    <result column="ALLOCATED" property="allocated" jdbcType="DECIMAL" />
+    <result column="UNALLOCATED" property="unallocated" jdbcType="DECIMAL" />
+    <result column="CONFIGURATION" property="configuration" jdbcType="VARCHAR" />
+    <result column="SHARED_COUNT" property="sharedCount" jdbcType="DECIMAL" />
+    <result column="ECM_SNAPSHOT_ID" property="ecmSnapshotId" jdbcType="VARBINARY" />
+    <result column="GLOBAL_UNIQUE_ID" property="globalUniqueId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

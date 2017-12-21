@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCsScheduledEvalMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCsScheduledEval" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="JOB_ID" property="jobId" jdbcType="VARBINARY" />
+    <result column="EVAL_NAME" property="evalName" jdbcType="VARCHAR" />
+    <result column="EVAL_OWNER" property="evalOwner" jdbcType="VARCHAR" />
+    <result column="EVAL_DESCRIPTION" property="evalDescription" jdbcType="VARCHAR" />
+    <result column="CS_GUID" property="csGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

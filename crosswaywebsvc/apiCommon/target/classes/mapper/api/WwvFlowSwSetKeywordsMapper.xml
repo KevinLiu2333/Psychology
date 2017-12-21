@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowSwSetKeywordsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowSwSetKeywords" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="KEYWORD" property="keyword" jdbcType="VARCHAR" />
+    <result column="STMT_CLASS" property="stmtClass" jdbcType="DECIMAL" />
+    <result column="STMT_ID" property="stmtId" jdbcType="DECIMAL" />
+    <result column="ISRUNNABLE" property="isrunnable" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

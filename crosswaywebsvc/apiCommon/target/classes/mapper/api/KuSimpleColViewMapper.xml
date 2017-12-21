@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuSimpleColViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuSimpleColView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="COL_NUM" property="colNum" jdbcType="DECIMAL" />
+    <result column="INTCOL_NUM" property="intcolNum" jdbcType="DECIMAL" />
+    <result column="SEGCOL_NUM" property="segcolNum" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="ATTRNAME" property="attrname" jdbcType="VARCHAR" />
+    <result column="TYPE_NUM" property="typeNum" jdbcType="DECIMAL" />
+    <result column="DEFLENGTH" property="deflength" jdbcType="DECIMAL" />
+    <result column="DEFAULT_VAL" property="defaultVal" jdbcType="VARCHAR" />
+    <result column="COL_EXPR" property="colExpr" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

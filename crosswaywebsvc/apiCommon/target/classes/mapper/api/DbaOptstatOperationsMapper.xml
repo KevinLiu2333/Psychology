@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaOptstatOperationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaOptstatOperations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OPERATION" property="operation" jdbcType="VARCHAR" />
+    <result column="TARGET" property="target" jdbcType="VARCHAR" />
+    <result column="START_TIME" property="startTime" jdbcType="OTHER" />
+    <result column="END_TIME" property="endTime" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

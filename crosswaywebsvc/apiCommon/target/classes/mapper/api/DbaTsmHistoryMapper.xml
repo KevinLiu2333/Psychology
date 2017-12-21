@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaTsmHistoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaTsmHistory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SEQUENCE#" property="sequence" jdbcType="DECIMAL" />
+    <result column="SOURCE_SID" property="sourceSid" jdbcType="DECIMAL" />
+    <result column="SOURCE_SERIAL#" property="sourceSerial" jdbcType="DECIMAL" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="SCHEMA_NAME" property="schemaName" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="COST" property="cost" jdbcType="DECIMAL" />
+    <result column="SOURCE" property="source" jdbcType="VARCHAR" />
+    <result column="SOURCE_INSTANCE_ID" property="sourceInstanceId" jdbcType="VARCHAR" />
+    <result column="SOURCE_START_TIME" property="sourceStartTime" jdbcType="OTHER" />
+    <result column="CONNECT_STRING" property="connectString" jdbcType="VARCHAR" />
+    <result column="FAILURE_REASON" property="failureReason" jdbcType="VARCHAR" />
+    <result column="DESTINATION_SID" property="destinationSid" jdbcType="DECIMAL" />
+    <result column="DESTINATION_SERIAL#" property="destinationSerial" jdbcType="DECIMAL" />
+    <result column="DESTINATION_STATE" property="destinationState" jdbcType="VARCHAR" />
+    <result column="DESTINATION" property="destination" jdbcType="VARCHAR" />
+    <result column="DESTINATION_INSTANCE_ID" property="destinationInstanceId" jdbcType="VARCHAR" />
+    <result column="DESTINATION_START_TIME" property="destinationStartTime" jdbcType="OTHER" />
+    <result column="ROUNDTRIPS" property="roundtrips" jdbcType="DECIMAL" />
+    <result column="START_TIME" property="startTime" jdbcType="OTHER" />
+    <result column="END_TIME" property="endTime" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

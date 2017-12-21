@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MviewAdvIndexMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MviewAdvIndex" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RUNID#" property="runid" jdbcType="DECIMAL" />
+    <result column="RANK#" property="rank" jdbcType="DECIMAL" />
+    <result column="MVINDEX#" property="mvindex" jdbcType="DECIMAL" />
+    <result column="INDEX_TYPE" property="indexType" jdbcType="DECIMAL" />
+    <result column="INDEX_NAME" property="indexName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="INDEX_CONTENT" property="indexContent" jdbcType="VARCHAR" />
+    <result column="SUMMARY_OWNER" property="summaryOwner" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

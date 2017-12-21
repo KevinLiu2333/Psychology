@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaQueueSchedulesMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaQueueSchedules">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SCHEMA" jdbcType="VARCHAR" property="schema" />
+    <result column="QNAME" jdbcType="VARCHAR" property="qname" />
+    <result column="DESTINATION" jdbcType="VARCHAR" property="destination" />
+    <result column="START_DATE" jdbcType="OTHER" property="startDate" />
+    <result column="START_TIME" jdbcType="VARCHAR" property="startTime" />
+    <result column="PROPAGATION_WINDOW" jdbcType="DECIMAL" property="propagationWindow" />
+    <result column="NEXT_TIME" jdbcType="VARCHAR" property="nextTime" />
+    <result column="LATENCY" jdbcType="DECIMAL" property="latency" />
+    <result column="SCHEDULE_DISABLED" jdbcType="VARCHAR" property="scheduleDisabled" />
+    <result column="PROCESS_NAME" jdbcType="VARCHAR" property="processName" />
+    <result column="SESSION_ID" jdbcType="VARCHAR" property="sessionId" />
+    <result column="INSTANCE" jdbcType="DECIMAL" property="instance" />
+    <result column="LAST_RUN_DATE" jdbcType="OTHER" property="lastRunDate" />
+    <result column="LAST_RUN_TIME" jdbcType="VARCHAR" property="lastRunTime" />
+    <result column="CURRENT_START_DATE" jdbcType="OTHER" property="currentStartDate" />
+    <result column="CURRENT_START_TIME" jdbcType="VARCHAR" property="currentStartTime" />
+    <result column="NEXT_RUN_DATE" jdbcType="OTHER" property="nextRunDate" />
+    <result column="NEXT_RUN_TIME" jdbcType="VARCHAR" property="nextRunTime" />
+    <result column="TOTAL_TIME" jdbcType="DECIMAL" property="totalTime" />
+    <result column="TOTAL_NUMBER" jdbcType="DECIMAL" property="totalNumber" />
+    <result column="TOTAL_BYTES" jdbcType="DECIMAL" property="totalBytes" />
+    <result column="MAX_NUMBER" jdbcType="DECIMAL" property="maxNumber" />
+    <result column="MAX_BYTES" jdbcType="DECIMAL" property="maxBytes" />
+    <result column="AVG_NUMBER" jdbcType="DECIMAL" property="avgNumber" />
+    <result column="AVG_SIZE" jdbcType="DECIMAL" property="avgSize" />
+    <result column="AVG_TIME" jdbcType="DECIMAL" property="avgTime" />
+    <result column="FAILURES" jdbcType="DECIMAL" property="failures" />
+    <result column="LAST_ERROR_DATE" jdbcType="DATE" property="lastErrorDate" />
+    <result column="LAST_ERROR_TIME" jdbcType="VARCHAR" property="lastErrorTime" />
+    <result column="LAST_ERROR_MSG" jdbcType="VARCHAR" property="lastErrorMsg" />
+    <result column="MESSAGE_DELIVERY_MODE" jdbcType="VARCHAR" property="messageDeliveryMode" />
+    <result column="ELAPSED_DEQUEUE_TIME" jdbcType="DECIMAL" property="elapsedDequeueTime" />
+    <result column="ELAPSED_PICKLE_TIME" jdbcType="DECIMAL" property="elapsedPickleTime" />
+    <result column="JOB_NAME" jdbcType="VARCHAR" property="jobName" />
+  </resultMap>
+</mapper>

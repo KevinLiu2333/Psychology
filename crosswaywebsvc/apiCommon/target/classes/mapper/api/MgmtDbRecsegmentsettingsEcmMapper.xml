@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtDbRecsegmentsettingsEcmMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtDbRecsegmentsettingsEcm" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ECM_SNAPSHOT_ID" property="ecmSnapshotId" jdbcType="VARBINARY" />
+    <id column="OBJ_TYPE" property="objType" jdbcType="DECIMAL" />
+    <id column="OBJ_OWNER" property="objOwner" jdbcType="VARCHAR" />
+    <id column="OBJ_NAME" property="objName" jdbcType="VARCHAR" />
+    <id column="OBJ_PARTITION" property="objPartition" jdbcType="VARCHAR" />
+    <id column="OBJ_LOB_COL" property="objLobCol" jdbcType="VARCHAR" />
+    <id column="SEGMENT_TYPE" property="segmentType" jdbcType="DECIMAL" />
+    <id column="PROBLEM_CODE" property="problemCode" jdbcType="DECIMAL" />
+    <result column="TABLESPACE" property="tablespace" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

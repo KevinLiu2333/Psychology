@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DiskAndFixedObjectsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DiskAndFixedObjects" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="OWNER#" property="owner" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="TYPE#" property="type" jdbcType="DECIMAL" />
+    <result column="REMOTEOWNER" property="remoteowner" jdbcType="VARCHAR" />
+    <result column="LINKNAME" property="linkname" jdbcType="VARCHAR" />
+    <result column="EDITIONNAME" property="editionname" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

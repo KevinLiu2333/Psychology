@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaSecondaryObjectsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaSecondaryObjects" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDEX_OWNER" property="indexOwner" jdbcType="VARCHAR" />
+    <result column="INDEX_NAME" property="indexName" jdbcType="VARCHAR" />
+    <result column="SECONDARY_OBJECT_OWNER" property="secondaryObjectOwner" jdbcType="VARCHAR" />
+    <result column="SECONDARY_OBJECT_NAME" property="secondaryObjectName" jdbcType="VARCHAR" />
+    <result column="SECONDARY_OBJDATA_TYPE" property="secondaryObjdataType" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

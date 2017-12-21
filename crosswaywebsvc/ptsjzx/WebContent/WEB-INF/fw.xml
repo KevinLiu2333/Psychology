@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dl>
+	<!-- 数据填报 -->
+ 	<dt id='menu1' class='menu_tCon'>数据填报</dt>
+	<dd id='dd1'>
+		<!-- 数据填报 -->
+		<a id='loc1' class='menu_cCon' href='/ptsjzx/sjtb/toSjtb' target='main_frame'
+			onClick="changeposition2('数据填报','注意事项：每月应上报上一月业务数据，逾期请与当月合并上报')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_03w.png' pic-id='menu_icon_03' />
+			数据填报
+		</a>
+		<a id='loc2' class='menu_cCon' href='/ptsjzx/sjtb/toSeeData' target='main_frame'
+			onClick="changeposition('已填报数据')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_03w.png' pic-id='menu_icon_03' />
+			已填报数据
+		</a>
+		<a id='loc55' wyyh='wyyh' href="/ptsjzx/sjtb/toTbCount" target="main_frame" onClick="changeposition('数据填报统计')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>数据填报统计
+		</a>
+		<a id='loc77' wyyh='wyyh' href="/ptsjzx/sjtb/config/toCount" target="main_frame" onClick="changeposition('数据填报综合统计')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>填报综合统计
+		</a>
+ 	</dd>
+ 	<!-- 双公示数据填报 -->
+ 	<dt id='menu100' class='menu_tCon'>双公示数据填报</dt>
+ 	<dd id='dd100'>
+ 		<a id='loc1001' class='menu_cCon' href='/ptsjzx/sjtb/sgs/toIndex?type=1' target='main_frame'
+			onClick="changeposition2('数据填报','注意事项：每周应上报当周双公示数据（技术支持：52564588*2568）')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_03w.png' pic-id='menu_icon_03' />
+			许可数据填报
+		</a>
+		<a id='loc1002' class='menu_cCon' href='/ptsjzx/sjtb/sgs/toIndex?type=2' target='main_frame'
+			onClick="changeposition2('数据填报','注意事项：每周应上报当周双公示数据（技术支持：52564588*2568）')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_03w.png' pic-id='menu_icon_03' />
+			处罚数据填报
+		</a>
+		<a id='loc55' wyyh='wyyh' href="/ptsjzx/sjtb/sgs/toCount" target="main_frame" onClick="changeposition('数据填报统计')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>数据填报统计
+		</a>
+		<a id='loc63' wyyh='wyyh' href='/ptsjzx/sjtb/sgs/toExport' target='main_frame' onClick="changeposition('双公示数据导出')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_19.png' pic-id='menu_icon_19' />
+			填报数据导出
+		</a>
+ 	</dd>
+	<dt id='menu2' class='menu_tCon'>自然人专题</dt>
+	<dd id='dd2'>
+		<a id='loc3' href='/ptsjzx/zx/toZtPeople' target='main_frame'
+			onClick="changeposition('图表分析')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_19.png' pic-id='menu_icon_19' />
+			图表分析
+		</a>
+		<a id='loc4' href='/ptsjzx/query/toPersonList' target='main_frame'
+			onClick="changeposition('数据查询')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_19.png' pic-id='menu_icon_19' />
+			数据查询
+		</a>
+		<a id='loc5' fwcy='fwcy' href='/ptsjzx/query/toHouselist' target='main_frame'
+			onClick="changeposition('房屋查询')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_19.png' pic-id='menu_icon_19' />
+			房屋查询
+		</a>
+		<a id='loc100' rksjbd='rksjbd' href='/ptsjzx/query/toPersoncontrast' target='main_frame'
+			onClick="changeposition('数据比对')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_19.png' pic-id='menu_icon_19' />
+			数据比对
+		</a>
+		<!-- <a id='loc5' href='/ptsjzx/query/statChart/toShowList?type=1' target='main_frame'
+			onClick="changeposition('数据报表 ')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_19.png' pic-id='menu_icon_19' />
+			数据报表
+		</a> -->
+	</dd>
+	<dt id='menu3' class='menu_tCon'>法人专题</dt>
+	<dd id='dd3'>
+		<a id='loc6' href='/ptsjzx/wbj/toCropInfo' target='main_frame'
+			onClick="changeposition('图表分析')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_19.png' pic-id='menu_icon_19' />
+			图表分析
+		</a>
+		<!--<a id='loc7' href='/ptsjzx/query/statChart/toShowList?type=2'
+			target='main_frame' onClick="changeposition('数据报表 ')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_19.png' pic-id='menu_icon_19' />
+			数据报表
+		</a>-->
+		<a id='loc8' href='/ptsjzx/query/toCorpInfoList' target='main_frame'
+			onClick="changeposition('数据查询')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_19.png' pic-id='menu_icon_19' />
+			数据查询
+		</a>
+		<a id='loc110' frsjbd='frsjbd' href='/ptsjzx/query/toCorpcontrast' target='main_frame'
+			onClick="changeposition('数据比对')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_19.png' pic-id='menu_icon_19' />
+			数据比对
+		</a>
+	</dd>
+ 	<dt id='menu4' class='menu_tCon'>产业园区</dt>
+	<dd id='dd4'>
+		<a id='loc9' href='/ptsjzx/wbj/toPeople' target='main_frame'
+			onClick="changeposition('图表分析')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_19.png' pic-id='menu_icon_19' />
+			图表分析
+		</a>
+		<a id='loc10' href='/ptsjzx/query/toIndustrial_Park_Querylist' target='main_frame'
+			onClick="changeposition('数据查询')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_19.png' pic-id='menu_icon_19' />
+			数据查询
+		</a>
+		<!--<a id='loc ' href='/ptsjzx/wbj/toPeople' target='main_frame'
+			onClick="changeposition('数据报表')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_19.png' pic-id='menu_icon_19' />
+			数据报表
+		</a>-->
+ 	</dd>
+ 	<dt id='menu101' class='menu_tCon'>信用信息</dt>
+	<dd id='dd101'>
+		<a id='loc101' href='/ptsjzx/wbj/toCredit' target='main_frame'
+			onClick="changeposition('图表分析')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_19.png' pic-id='menu_icon_19' />
+			图表分析
+		</a>
+		<a id='loc102' href='/ptsjzx/receive/toHtData' target='main_frame'
+			onClick="changeposition('海豚信用')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_19.png' pic-id='menu_icon_19' />
+			海豚信用
+		</a>
+		<a id='loc103' href='/ptsjzx/receive/toCount' target='main_frame'
+			onClick="changeposition('数据统计')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_19.png' pic-id='menu_icon_19' />
+			数据统计
+		</a>
+ 	</dd>
+ 	<dt id='menu5' class='menu_tCon'>自定义查询统计</dt>
+	<dd id='dd5'>
+		<a id='loc12' href='/ptsjzx/frame?url=/ptsjzx/query/statChart/toTheme'
+			target='main_frame' onClick="changeposition('配置图表')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_19.png' pic-id='menu_icon_19' />
+			配置图表
+		</a>
+		<a id='loc13' href='/ptsjzx/frame?url=/ptsjzx/query/statForm/toTheme'
+			target='main_frame' onClick="changeposition('配置报表')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_19.png' pic-id='menu_icon_19' />
+			配置报表
+		</a>
+ 	</dd>
+ 	<dt id='menu6' class='menu_tCon'>数据访问申请</dt>
+	<dd id='dd6'>
+		<a id='loc14' href='/ptsjzx/api/toApplyList' target='main_frame'
+			onClick="changeposition('接口列表')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_18.png' pic-id='menu_icon_18' />
+			接口列表
+		</a>
+		<a id='loc15' href='/ptsjzx/api/toCallCount' target='main_frame'
+			onClick="changeposition('调用统计')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_18.png' pic-id='menu_icon_18' />
+			调用统计
+		</a>
+		<!--
+		<a id='loc16' href='/ptsjzx/api/toApplyView' target='main_frame'
+			onClick="changeposition('api资源申请')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_18.png' pic-id='menu_icon_18' />
+			api资源申请
+		</a>
+		<a id='loc17' href='/ptsjzx/api/showApplied' target='main_frame'
+			onClick="changeposition('api申请列表')">
+			<img src='/ptsjzx/skins/style/images/menu_icon_18.png' pic-id='menu_icon_18' />
+			api申请列表
+		</a>
+		-->
+ 	</dd>
+ 	<dt id='menu7' class="menu_tCon">资源目录管理</dt>
+	<dd id='dd7'>
+		<a id='loc18' href="/ptsjzx/admin/resDirMan/toResDir" target="main_frame"
+			onClick="changeposition('资源目录')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>资源目录
+		</a>
+		<a id='loc19' href="/ptsjzx/admin/resDirMan/toDatRes" target="main_frame"
+			onClick="changeposition('数据资源')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>数据资源
+		</a>
+		<a id='loc20' href="/ptsjzx/admin/resDirMan/toDirBro" target="main_frame"
+			onClick="changeposition('目录浏览')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>目录浏览
+		</a>
+		<a id='loc21' href="/ptsjzx/admin/resDirMan/toCatQue" target="main_frame"
+			onClick="changeposition('目录查询')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>目录查询
+		</a>
+		<a id='loc22' href="/ptsjzx/admin/resDirMan/toStaCol" target="main_frame"
+			onClick="changeposition('统计总会')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>统计汇总
+		</a>
+ 	</dd>
+ 	<dt id='menu8' class="menu_tCon">数据资源交互</dt>
+	<dd id='dd8'>
+		<a id='loc23' href="/ptsjzx/admin/datResExc/toExcMan" target="main_frame"
+			onClick="changeposition('交换管理')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>交换管理
+		</a>
+		<a id='loc24' href="/ptsjzx/admin/datResExc/toExcSup" target="main_frame"
+			onClick="changeposition('交换监督')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>交换监督
+		</a>
+ 	</dd>
+ 	<dt id='menu9' class="menu_tCon">数据专题应用</dt>
+	<dd id='dd9'>
+		<a id='loc25' href="/ptsjzx/admin/datSubApp/toComDatQue" target="main_frame"
+			onClick="changeposition('数据综合查询')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>数据综合查询
+		</a>
+		<a id='loc26' href="/ptsjzx/admin/datSubApp/toDatAccSer" target="main_frame"
+			onClick="changeposition('数据访问服务')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>数据访问服务
+		</a>
+		<a id='loc27' href="/ptsjzx/admin/datSubApp/toBasDatRep" target="main_frame"
+			onClick="changeposition('基础数据报表')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>基础数据报表
+		</a>
+		<a id='loc28' href="/ptsjzx/admin/datSubApp/toComStaSho" target="main_frame"
+			onClick="changeposition('综合统计展现')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>综合统计展现
+		</a>
+ 	</dd>
+ 	<dt id='menu10' class="menu_tCon">统一监控</dt>
+	<dd id='dd10'>
+		<!-- <a id='loc29' href="/ptsjzx/admin/uniMon/toAlarmList" target="main_frame"
+			onClick="changeposition('报警列表')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>报警列表
+		</a>
+		<a id='loc30' href="/ptsjzx/admin/uniMon/toThrSet" target="main_frame"
+			onClick="changeposition('阀值设置')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>阀值设置
+		</a> -->
+		<a id='loc29' href="/ptsjzx/yjyb/bjList" target="main_frame"
+			onClick="changeposition('报警列表')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>报警列表
+		</a>
+		<a id='loc30' href="/ptsjzx/yjyb/FzszList" target="main_frame"
+			onClick="changeposition('阀值设置')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>阀值设置
+		</a>
+		<!-- <a id='loc31' href="/ptsjzx/admin/uniMon/toSecAud" target="main_frame"
+			onClick="changeposition('安全审计')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>安全审计
+		</a>
+		<a id='loc32' href="/ptsjzx/admin/uniMon/toEnvMonSys" target="main_frame"
+			onClick="changeposition('系统环境监控')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>系统环境监控
+		</a>
+		<a id='loc33' href="/ptsjzx/admin/uniMon/toExcMan" target="main_frame"
+			onClick="changeposition('交换管理')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>交换管理
+		</a>
+		<a id='loc34' href="/ptsjzx/admin/uniMon/toOpeMan" target="main_frame"
+			onClick="changeposition('运行管理')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>运行管理
+		</a> -->
+		<!-- <a id='loc35' href="/ptsjzx/log/toIndex" target="main_frame" onClick="changeposition('日志管理')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>日志管理
+		</a> -->
+		<a id='loc36' href="/ptsjzx/logcount/toCount" target="main_frame"
+			onClick="changeposition('常用统计')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>综合统计
+		</a>
+		<a id='loc38' href="/ptsjzx/admin/toBacRecMan" target="main_frame"
+			onClick="changeposition('备份恢复管理')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>备份恢复管理
+		</a>
+		<a id='loc39' href="/ptsjzx/logcount/toDataContentCount" target="main_frame"
+			onClick="changeposition('空值数据统计')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>空值数据统计
+		</a>
+ 	</dd>
+ 	<dt id='menu13' class="menu_tCon">数据访问管理</dt>
+	<dd id='dd13'>
+		<a id='loc47' href="/ptsjzx/api/toAuditList" target="main_frame" onClick="changeposition('接口申请审核')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>接口申请审核
+		</a>
+		<a id='loc48' href="/ptsjzx/api/toApiList" target="main_frame" onClick="changeposition('接口管理')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>接口管理
+		</a>
+		<a id='loc49' href="/ptsjzx/receive/toSeeData" target="main_frame" onClick="changeposition('对接数据')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>对接数据
+		</a>
+ 	</dd>
+ 	<dt id='menu14' class="menu_tCon">自定义查询统计</dt>
+	<dd id='dd14'>
+		<a id='loc50' href="frame?url=/ptsjzx/query/detailQuery/toGuide" target="main_frame"
+			onClick="changeposition('查询统计向导')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>查询统计向导
+		</a>
+		<a id='loc51' href="frame?url=/ptsjzx/query/detailQuery/toTheme" target="main_frame"
+			onClick="changeposition('配置查询')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>配置查询
+		</a>
+		<a id='loc52' href="frame?url=/ptsjzx/query/statChart/toTheme" target="main_frame"
+			onClick="changeposition('配置图表')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>配置图表
+		</a>
+		<a id='loc54' href="frame?url=/ptsjzx/query/statForm/toTheme" target="main_frame"
+			onClick="changeposition('配置报表')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>配置报表
+		</a>
+ 	</dd>
+ 	<dt id='menu16' class="menu_tCon">用户管理</dt>
+	<dd id='dd16'>
+		<a id='loc56' href="/ptsjzx/yhgl/toIndex" target="main_frame" onClick="changeposition('修改用户')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>修改用户
+		</a>
+		<a id='loc57' href="/ptsjzx/yhgl/toQxsm" target="main_frame" onClick="changeposition('权限说明')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>权限说明
+		</a>
+ 	</dd>
+ 	<dt id='menu17' class="menu_tCon">资源目录管理</dt>
+	<dd id='dd17'>
+		<a id='loc58' href="/ptsjzx/zymlgl/toZxbmList" target="main_frame" onClick="changeposition('在线编目')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>资源编目
+		</a>
+		<a id='loc59' href="/ptsjzx/zymlgl/checkList" target="main_frame" onClick="changeposition('目录审核')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>目录审核
+		</a>
+ 	</dd>
+ 	<dt id='menu18' class="menu_tCon">资源数据管理</dt>
+ 	<dd id='dd18'>
+ 		<a id='loc60' href="/ptsjzx/zymlgl/toContentIndex?applyFlag=1" target="main_frame" onClick="changeposition('资源目录检索')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>资源目录检索
+		</a>
+		<a id='loc61' href="/ptsjzx/zymlgx/toResourceApplyList" target="main_frame" onClick="changeposition('资源数据申请')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>资源数据申请
+		</a>
+		<a id='loc62' href="/ptsjzx/zymlgx/checkResourceApply" target="main_frame" onClick="changeposition('资源数据审核')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>资源数据审核
+		</a>
+		<a id='loc64' href="/ptsjzx/zymlgx/toCount" target="main_frame" onClick="changeposition('资源数据统计')">
+			<img src="/ptsjzx/skins/style/images/menu_icon_19.png" pic-id="menu_icon_19"/>资源数据统计
+		</a>
+ 	</dd>
+</dl>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowLanguageMapMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowLanguageMap" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="PRIMARY_LANGUAGE_FLOW_ID" property="primaryLanguageFlowId" jdbcType="DECIMAL" />
+    <result column="TRANSLATION_FLOW_ID" property="translationFlowId" jdbcType="DECIMAL" />
+    <result column="TRANSLATION_FLOW_LANGUAGE_CODE" property="translationFlowLanguageCode" jdbcType="VARCHAR" />
+    <result column="TRANS_FLOW_LANG_CODE_ROOT" property="transFlowLangCodeRoot" jdbcType="VARCHAR" />
+    <result column="TRANSLATION_IMAGE_DIRECTORY" property="translationImageDirectory" jdbcType="VARCHAR" />
+    <result column="TRANSLATION_COMMENTS" property="translationComments" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="MAP_COMMENTS" property="mapComments" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

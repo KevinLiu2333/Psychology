@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowAltConfigDetailMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowAltConfigDetail" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="CONFIG" property="config" jdbcType="DECIMAL" />
+    <result column="TABLE_DOT_COLUMN" property="tableDotColumn" jdbcType="VARCHAR" />
+    <result column="ID_COLUMN_VALUE" property="idColumnValue" jdbcType="DECIMAL" />
+    <result column="NEW_VALUE" property="newValue" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="CONFIG_COMMENT" property="configComment" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CoreCorpMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CoreCorp" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CORP_INFO_ID" property="corpInfoId" jdbcType="VARCHAR" />
+    <result column="UNI_SC_ID" property="uniScId" jdbcType="VARCHAR" />
+    <result column="ORGAN_CODE" property="organCode" jdbcType="VARCHAR" />
+    <result column="CORP_NAME" property="corpName" jdbcType="VARCHAR" />
+    <result column="CORP_TYPE" property="corpType" jdbcType="VARCHAR" />
+    <result column="INDUSTRY_CODE" property="industryCode" jdbcType="VARCHAR" />
+    <result column="ADDRESS" property="address" jdbcType="VARCHAR" />
+    <result column="BUSINESS_ADDRESS" property="businessAddress" jdbcType="VARCHAR" />
+    <result column="ZIP" property="zip" jdbcType="VARCHAR" />
+    <result column="TELEPHONE" property="telephone" jdbcType="VARCHAR" />
+    <result column="ESTABLISH_DATE" property="establishDate" jdbcType="DATE" />
+    <result column="CURRENCY" property="currency" jdbcType="VARCHAR" />
+    <result column="REG_CAPITAL" property="regCapital" jdbcType="DECIMAL" />
+    <result column="BUSINESS_SCOPE" property="businessScope" jdbcType="VARCHAR" />
+    <result column="PERSON_NAME" property="personName" jdbcType="VARCHAR" />
+    <result column="PERSON_CERT_TYPE" property="personCertType" jdbcType="VARCHAR" />
+    <result column="PERSON_CERT_CODE" property="personCertCode" jdbcType="VARCHAR" />
+    <result column="REG_NO" property="regNo" jdbcType="VARCHAR" />
+    <result column="TAX_CODE" property="taxCode" jdbcType="VARCHAR" />
+    <result column="CORP_STATUS" property="corpStatus" jdbcType="VARCHAR" />
+    <result column="JDDM" property="jddm" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

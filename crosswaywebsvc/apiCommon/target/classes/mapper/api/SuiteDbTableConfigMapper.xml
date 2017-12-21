@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SuiteDbTableConfigMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SuiteDbTableConfig">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="THEME_ID" jdbcType="DECIMAL" property="themeId" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="VIEW_NAME" jdbcType="VARCHAR" property="viewName" />
+    <result column="VALIDITY" jdbcType="CHAR" property="validity" />
+    <result column="CATALOG" jdbcType="VARCHAR" property="catalog" />
+    <result column="DATA_SOURCE_ID" jdbcType="VARCHAR" property="dataSourceId" />
+    <result column="DB_NAME" jdbcType="VARCHAR" property="dbName" />
+    <result column="DEPT_ID" jdbcType="VARCHAR" property="deptId" />
+    <result column="DEPT_NAME" jdbcType="VARCHAR" property="deptName" />
+    <result column="TABLE_THEME" jdbcType="VARCHAR" property="tableTheme" />
+    <result column="IS_CHECK" jdbcType="DECIMAL" property="isCheck" />
+    <result column="TOTAL_COUNT" jdbcType="DECIMAL" property="totalCount" />
+    <result column="ERROR_COUNT" jdbcType="DECIMAL" property="errorCount" />
+  </resultMap>
+</mapper>

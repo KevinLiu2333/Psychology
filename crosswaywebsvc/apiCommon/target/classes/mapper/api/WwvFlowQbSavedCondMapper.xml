@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowQbSavedCondMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowQbSavedCond" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <id column="COL" property="col" jdbcType="VARCHAR" />
+    <result column="ALIAS" property="alias" jdbcType="VARCHAR" />
+    <result column="FV" property="fv" jdbcType="VARCHAR" />
+    <result column="FP" property="fp" jdbcType="VARCHAR" />
+    <result column="OUT" property="out" jdbcType="VARCHAR" />
+    <result column="ST" property="st" jdbcType="VARCHAR" />
+    <result column="SO" property="so" jdbcType="VARCHAR" />
+    <result column="GRP" property="grp" jdbcType="VARCHAR" />
+    <result column="CON" property="con" jdbcType="VARCHAR" />
+    <result column="ORD" property="ord" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

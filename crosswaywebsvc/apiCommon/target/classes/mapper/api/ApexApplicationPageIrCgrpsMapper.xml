@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationPageIrCgrpsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationPageIrCgrps" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="INTERACTIVE_REPORT_ID" property="interactiveReportId" jdbcType="DECIMAL" />
+    <result column="COLUMN_GROUP_NAME" property="columnGroupName" jdbcType="VARCHAR" />
+    <result column="COLUMN_GROUP_DESCRIPTION" property="columnGroupDescription" jdbcType="VARCHAR" />
+    <result column="DISPLAY_SEQUENCE" property="displaySequence" jdbcType="DECIMAL" />
+    <result column="COLUMNS" property="columns" jdbcType="DECIMAL" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="UPDATED_ON" property="updatedOn" jdbcType="DATE" />
+    <result column="UPDATED_BY" property="updatedBy" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

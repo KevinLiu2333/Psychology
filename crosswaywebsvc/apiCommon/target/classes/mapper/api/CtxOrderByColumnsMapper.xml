@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CtxOrderByColumnsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CtxOrderByColumns" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBC_INDEX_OWNER" property="obcIndexOwner" jdbcType="VARCHAR" />
+    <result column="OBC_INDEX_NAME" property="obcIndexName" jdbcType="VARCHAR" />
+    <result column="OBC_TABLE_OWNER" property="obcTableOwner" jdbcType="VARCHAR" />
+    <result column="OBC_TABLE_NAME" property="obcTableName" jdbcType="VARCHAR" />
+    <result column="OBC_COLUMN_NAME" property="obcColumnName" jdbcType="VARCHAR" />
+    <result column="OBC_COLUMN_POSITION" property="obcColumnPosition" jdbcType="DECIMAL" />
+    <result column="OBC_COLUMN_TYPE" property="obcColumnType" jdbcType="VARCHAR" />
+    <result column="OBC_SECTION_NAME" property="obcSectionName" jdbcType="VARCHAR" />
+    <result column="OBC_SECTION_TYPE" property="obcSectionType" jdbcType="VARCHAR" />
+    <result column="OBC_SECTION_ID" property="obcSectionId" jdbcType="DECIMAL" />
+    <result column="OBC_SORT_ORDER" property="obcSortOrder" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

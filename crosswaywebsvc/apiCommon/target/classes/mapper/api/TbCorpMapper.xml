@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TbCorpMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.TbCorp" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="SHTYXYDM" property="shtyxydm" jdbcType="VARCHAR" />
+    <result column="ZZJGDM" property="zzjgdm" jdbcType="VARCHAR" />
+    <result column="YYZZZCH" property="yyzzzch" jdbcType="VARCHAR" />
+    <result column="NSRSBH" property="nsrsbh" jdbcType="VARCHAR" />
+    <result column="CORP_NAME" property="corpName" jdbcType="VARCHAR" />
+    <result column="TB_DATA_ID" property="tbDataId" jdbcType="VARCHAR" />
+    <result column="DEPTID" property="deptid" jdbcType="VARCHAR" />
+    <result column="SHEETID" property="sheetid" jdbcType="VARCHAR" />
+    <result column="DATAMONTH" property="datamonth" jdbcType="VARCHAR" />
+    <result column="TABLENAME" property="tablename" jdbcType="VARCHAR" />
+    <result column="SHEET_NAME" property="sheetName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

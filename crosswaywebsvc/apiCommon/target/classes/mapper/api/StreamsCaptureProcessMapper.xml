@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.StreamsCaptureProcessMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.StreamsCaptureProcess" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="QUEUE_OWNER" property="queueOwner" jdbcType="VARCHAR" />
+    <result column="QUEUE_NAME" property="queueName" jdbcType="VARCHAR" />
+    <result column="CAPTURE#" property="capture" jdbcType="DECIMAL" />
+    <result column="CAPTURE_NAME" property="captureName" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="RULESET_OWNER" property="rulesetOwner" jdbcType="VARCHAR" />
+    <result column="RULESET_NAME" property="rulesetName" jdbcType="VARCHAR" />
+    <result column="LOGMNR_SID" property="logmnrSid" jdbcType="DECIMAL" />
+    <result column="PREDUMPSCN" property="predumpscn" jdbcType="DECIMAL" />
+    <result column="DUMPSEQBEG" property="dumpseqbeg" jdbcType="DECIMAL" />
+    <result column="DUMPSEQEND" property="dumpseqend" jdbcType="DECIMAL" />
+    <result column="POSTDUMPSCN" property="postdumpscn" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="START_SCN" property="startScn" jdbcType="DECIMAL" />
+    <result column="CAPTURE_USERID" property="captureUserid" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+    <result column="USE_DBLINK" property="useDblink" jdbcType="DECIMAL" />
+    <result column="FIRST_SCN" property="firstScn" jdbcType="DECIMAL" />
+    <result column="SOURCE_DBNAME" property="sourceDbname" jdbcType="VARCHAR" />
+    <result column="NEGATIVE_RULESET_OWNER" property="negativeRulesetOwner" jdbcType="VARCHAR" />
+    <result column="NEGATIVE_RULESET_NAME" property="negativeRulesetName" jdbcType="VARCHAR" />
+    <result column="START_DATE" property="startDate" jdbcType="DATE" />
+    <result column="END_DATE" property="endDate" jdbcType="DATE" />
+    <result column="ERROR_NUMBER" property="errorNumber" jdbcType="DECIMAL" />
+    <result column="ERROR_MESSAGE" property="errorMessage" jdbcType="VARCHAR" />
+    <result column="STATUS_CHANGE_TIME" property="statusChangeTime" jdbcType="DATE" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="SPARE4" property="spare4" jdbcType="DECIMAL" />
+    <result column="SPARE5" property="spare5" jdbcType="DECIMAL" />
+    <result column="SPARE6" property="spare6" jdbcType="DECIMAL" />
+    <result column="SPARE7" property="spare7" jdbcType="VARCHAR" />
+    <result column="QUEUE_OID" property="queueOid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

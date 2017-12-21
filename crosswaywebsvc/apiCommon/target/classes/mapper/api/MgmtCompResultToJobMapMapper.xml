@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCompResultToJobMapMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCompResultToJobMap" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RHS_HOST_NAME" property="rhsHostName" jdbcType="VARCHAR" />
+    <result column="EXECUTION_ID" property="executionId" jdbcType="VARBINARY" />
+    <result column="DELTA_COMP_GUID" property="deltaCompGuid" jdbcType="VARBINARY" />
+    <result column="RHS_SNAPSHOT_GUID" property="rhsSnapshotGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

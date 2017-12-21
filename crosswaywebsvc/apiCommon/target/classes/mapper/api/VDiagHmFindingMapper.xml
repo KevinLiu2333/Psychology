@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VDiagHmFindingMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VDiagHmFinding" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDX" property="indx" jdbcType="DECIMAL" />
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="ADR_PATH_IDX" property="adrPathIdx" jdbcType="VARCHAR" />
+    <result column="ADR_HOME" property="adrHome" jdbcType="VARCHAR" />
+    <result column="FDG_ID" property="fdgId" jdbcType="DECIMAL" />
+    <result column="RUN_ID" property="runId" jdbcType="DECIMAL" />
+    <result column="PFDG_ID" property="pfdgId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="NAME_ID" property="nameId" jdbcType="DECIMAL" />
+    <result column="CLSNAME" property="clsname" jdbcType="VARCHAR" />
+    <result column="CLSNAME_ID" property="clsnameId" jdbcType="DECIMAL" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="OTHER" />
+    <result column="MODIFIED_TIME" property="modifiedTime" jdbcType="OTHER" />
+    <result column="TYPE" property="type" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="CHILD_COUNT" property="childCount" jdbcType="DECIMAL" />
+    <result column="MSG_GRPID" property="msgGrpid" jdbcType="DECIMAL" />
+    <result column="NUM_MSG" property="numMsg" jdbcType="DECIMAL" />
+    <result column="DAMAGE_MSGGRP_ID" property="damageMsggrpId" jdbcType="DECIMAL" />
+    <result column="NUM_DAMAGE_MSG" property="numDamageMsg" jdbcType="DECIMAL" />
+    <result column="HASH_CODE" property="hashCode" jdbcType="DECIMAL" />
+    <result column="VERSION" property="version" jdbcType="DECIMAL" />
+    <result column="CLOSE_REASON" property="closeReason" jdbcType="DECIMAL" />
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="SPARE_UB8" property="spareUb8" jdbcType="DECIMAL" />
+    <result column="ADDR" property="addr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

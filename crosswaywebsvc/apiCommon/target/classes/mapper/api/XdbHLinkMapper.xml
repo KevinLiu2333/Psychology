@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.XdbHLinkMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.XdbHLink" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="PARENT_OID" property="parentOid" jdbcType="VARBINARY" />
+    <id column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="CHILD_OID" property="childOid" jdbcType="VARBINARY" />
+    <result column="FLAGS" property="flags" jdbcType="VARBINARY" />
+    <result column="LINK_SN" property="linkSn" jdbcType="VARBINARY" />
+    <result column="CHILD_ACLOID" property="childAcloid" jdbcType="VARBINARY" />
+    <result column="CHILD_OWNERID" property="childOwnerid" jdbcType="VARBINARY" />
+    <result column="PARENT_RIDS" property="parentRids" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

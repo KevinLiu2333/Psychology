@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvReservedWordsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvReservedWords" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="KEYWORD" property="keyword" jdbcType="VARCHAR" />
+    <result column="LENGTH" property="length" jdbcType="DECIMAL" />
+    <result column="RESERVED" property="reserved" jdbcType="VARCHAR" />
+    <result column="RES_TYPE" property="resType" jdbcType="VARCHAR" />
+    <result column="RES_ATTR" property="resAttr" jdbcType="VARCHAR" />
+    <result column="RES_SEMI" property="resSemi" jdbcType="VARCHAR" />
+    <result column="DUPLICATE" property="duplicate" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

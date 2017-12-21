@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrmBaselineTemplateMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrmBaselineTemplate" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="TEMPLATE_ID" property="templateId" jdbcType="DECIMAL" />
+    <result column="TEMPLATE_NAME" property="templateName" jdbcType="VARCHAR" />
+    <result column="TEMPLATE_TYPE" property="templateType" jdbcType="VARCHAR" />
+    <result column="BASELINE_NAME_PREFIX" property="baselineNamePrefix" jdbcType="VARCHAR" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="DAY_OF_WEEK" property="dayOfWeek" jdbcType="VARCHAR" />
+    <result column="HOUR_IN_DAY" property="hourInDay" jdbcType="DECIMAL" />
+    <result column="DURATION" property="duration" jdbcType="DECIMAL" />
+    <result column="EXPIRATION" property="expiration" jdbcType="DECIMAL" />
+    <result column="REPEAT_INTERVAL" property="repeatInterval" jdbcType="VARCHAR" />
+    <result column="LAST_GENERATED" property="lastGenerated" jdbcType="DATE" />
+  </resultMap>
+</mapper>

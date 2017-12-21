@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserSqljTypeMethodsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserSqljTypeMethods" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TYPE_NAME" property="typeName" jdbcType="VARCHAR" />
+    <result column="METHOD_NAME" property="methodName" jdbcType="VARCHAR" />
+    <result column="EXTERNAL_VAR_NAME" property="externalVarName" jdbcType="VARCHAR" />
+    <result column="METHOD_NO" property="methodNo" jdbcType="DECIMAL" />
+    <result column="METHOD_TYPE" property="methodType" jdbcType="VARCHAR" />
+    <result column="PARAMETERS" property="parameters" jdbcType="DECIMAL" />
+    <result column="RESULTS" property="results" jdbcType="DECIMAL" />
+    <result column="FINAL" property="final" jdbcType="VARCHAR" />
+    <result column="INSTANTIABLE" property="instantiable" jdbcType="VARCHAR" />
+    <result column="OVERRIDING" property="overriding" jdbcType="VARCHAR" />
+    <result column="INHERITED" property="inherited" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

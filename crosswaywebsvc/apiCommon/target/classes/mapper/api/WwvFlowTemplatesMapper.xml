@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowTemplatesMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowTemplates">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" jdbcType="DECIMAL" property="id" />
+    <result column="FLOW_ID" jdbcType="DECIMAL" property="flowId" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="LOOK" jdbcType="DECIMAL" property="look" />
+    <result column="SUCCESS_MESSAGE" jdbcType="VARCHAR" property="successMessage" />
+    <result column="CURRENT_TAB" jdbcType="VARCHAR" property="currentTab" />
+    <result column="CURRENT_TAB_FONT_ATTR" jdbcType="VARCHAR" property="currentTabFontAttr" />
+    <result column="NON_CURRENT_TAB" jdbcType="VARCHAR" property="nonCurrentTab" />
+    <result column="NON_CURRENT_TAB_FONT_ATTR" jdbcType="VARCHAR" property="nonCurrentTabFontAttr" />
+    <result column="CURRENT_IMAGE_TAB" jdbcType="VARCHAR" property="currentImageTab" />
+    <result column="NON_CURRENT_IMAGE_TAB" jdbcType="VARCHAR" property="nonCurrentImageTab" />
+    <result column="TOP_CURRENT_TAB" jdbcType="VARCHAR" property="topCurrentTab" />
+    <result column="TOP_CURRENT_TAB_FONT_ATTR" jdbcType="VARCHAR" property="topCurrentTabFontAttr" />
+    <result column="TOP_NON_CURRENT_TAB" jdbcType="VARCHAR" property="topNonCurrentTab" />
+    <result column="TOP_NON_CURRENT_TAB_FONT_ATTR" jdbcType="VARCHAR" property="topNonCurrentTabFontAttr" />
+    <result column="NAVIGATION_BAR" jdbcType="VARCHAR" property="navigationBar" />
+    <result column="NAVBAR_ENTRY" jdbcType="VARCHAR" property="navbarEntry" />
+    <result column="BODY_TITLE" jdbcType="VARCHAR" property="bodyTitle" />
+    <result column="MESSAGE" jdbcType="VARCHAR" property="message" />
+    <result column="ATTRIBUTE1" jdbcType="VARCHAR" property="attribute1" />
+    <result column="ATTRIBUTE2" jdbcType="VARCHAR" property="attribute2" />
+    <result column="ATTRIBUTE3" jdbcType="VARCHAR" property="attribute3" />
+    <result column="ATTRIBUTE4" jdbcType="VARCHAR" property="attribute4" />
+    <result column="ATTRIBUTE5" jdbcType="VARCHAR" property="attribute5" />
+    <result column="ATTRIBUTE6" jdbcType="VARCHAR" property="attribute6" />
+    <result column="DEFAULT_BUTTON_POSITION" jdbcType="VARCHAR" property="defaultButtonPosition" />
+    <result column="TABLE_BGCOLOR" jdbcType="VARCHAR" property="tableBgcolor" />
+    <result column="HEADING_BGCOLOR" jdbcType="VARCHAR" property="headingBgcolor" />
+    <result column="TABLE_CATTRIBUTES" jdbcType="VARCHAR" property="tableCattributes" />
+    <result column="FONT_SIZE" jdbcType="VARCHAR" property="fontSize" />
+    <result column="FONT_FACE" jdbcType="VARCHAR" property="fontFace" />
+    <result column="REGION_TABLE_CATTRIBUTES" jdbcType="VARCHAR" property="regionTableCattributes" />
+    <result column="APP_TAB_BEFORE_TABS" jdbcType="VARCHAR" property="appTabBeforeTabs" />
+    <result column="APP_TAB_CURRENT_TAB" jdbcType="VARCHAR" property="appTabCurrentTab" />
+    <result column="APP_TAB_NON_CURRENT_TAB" jdbcType="VARCHAR" property="appTabNonCurrentTab" />
+    <result column="APP_TAB_AFTER_TABS" jdbcType="VARCHAR" property="appTabAfterTabs" />
+    <result column="ERROR_PAGE_TEMPLATE" jdbcType="VARCHAR" property="errorPageTemplate" />
+    <result column="REFERENCE_ID" jdbcType="DECIMAL" property="referenceId" />
+    <result column="BREADCRUMB_DEF_REG_POS" jdbcType="VARCHAR" property="breadcrumbDefRegPos" />
+    <result column="SIDEBAR_DEF_REG_POS" jdbcType="VARCHAR" property="sidebarDefRegPos" />
+    <result column="REQUIRED_PATCH" jdbcType="DECIMAL" property="requiredPatch" />
+    <result column="SECURITY_GROUP_ID" jdbcType="DECIMAL" property="securityGroupId" />
+    <result column="THEME_ID" jdbcType="DECIMAL" property="themeId" />
+    <result column="THEME_CLASS_ID" jdbcType="DECIMAL" property="themeClassId" />
+    <result column="LAST_UPDATED_BY" jdbcType="VARCHAR" property="lastUpdatedBy" />
+    <result column="LAST_UPDATED_ON" jdbcType="DATE" property="lastUpdatedOn" />
+    <result column="TRANSLATE_THIS_TEMPLATE" jdbcType="VARCHAR" property="translateThisTemplate" />
+    <result column="TEMPLATE_COMMENT" jdbcType="VARCHAR" property="templateComment" />
+    <result column="HEADER_TEMPLATE" jdbcType="CLOB" property="headerTemplate" />
+    <result column="FOOTER_TEMPLATE" jdbcType="CLOB" property="footerTemplate" />
+    <result column="BOX" jdbcType="CLOB" property="box" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaHistRowcacheSummaryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaHistRowcacheSummary" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="PARAMETER" property="parameter" jdbcType="VARCHAR" />
+    <result column="TOTAL_USAGE" property="totalUsage" jdbcType="DECIMAL" />
+    <result column="USAGE" property="usage" jdbcType="DECIMAL" />
+    <result column="GETS" property="gets" jdbcType="DECIMAL" />
+    <result column="GETMISSES" property="getmisses" jdbcType="DECIMAL" />
+    <result column="SCANS" property="scans" jdbcType="DECIMAL" />
+    <result column="SCANMISSES" property="scanmisses" jdbcType="DECIMAL" />
+    <result column="SCANCOMPLETES" property="scancompletes" jdbcType="DECIMAL" />
+    <result column="MODIFICATIONS" property="modifications" jdbcType="DECIMAL" />
+    <result column="FLUSHES" property="flushes" jdbcType="DECIMAL" />
+    <result column="DLM_REQUESTS" property="dlmRequests" jdbcType="DECIMAL" />
+    <result column="DLM_CONFLICTS" property="dlmConflicts" jdbcType="DECIMAL" />
+    <result column="DLM_RELEASES" property="dlmReleases" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

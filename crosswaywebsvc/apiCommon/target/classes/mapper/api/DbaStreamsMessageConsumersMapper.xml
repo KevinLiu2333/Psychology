@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaStreamsMessageConsumersMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaStreamsMessageConsumers">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="STREAMS_NAME" jdbcType="VARCHAR" property="streamsName" />
+    <result column="QUEUE_NAME" jdbcType="VARCHAR" property="queueName" />
+    <result column="QUEUE_OWNER" jdbcType="VARCHAR" property="queueOwner" />
+    <result column="RULE_SET_NAME" jdbcType="VARCHAR" property="ruleSetName" />
+    <result column="RULE_SET_OWNER" jdbcType="VARCHAR" property="ruleSetOwner" />
+    <result column="NEGATIVE_RULE_SET_NAME" jdbcType="VARCHAR" property="negativeRuleSetName" />
+    <result column="NEGATIVE_RULE_SET_OWNER" jdbcType="VARCHAR" property="negativeRuleSetOwner" />
+    <result column="NOTIFICATION_TYPE" jdbcType="VARCHAR" property="notificationType" />
+    <result column="NOTIFICATION_ACTION" jdbcType="VARCHAR" property="notificationAction" />
+    <result column="NOTIFICATION_CONTEXT" jdbcType="OTHER" property="notificationContext" />
+  </resultMap>
+</mapper>

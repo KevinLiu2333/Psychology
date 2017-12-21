@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ChnfClausesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ChnfClauses" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="CLAUSEID" property="clauseid" jdbcType="DECIMAL" />
+    <result column="OBJECTNUM" property="objectnum" jdbcType="DECIMAL" />
+    <result column="CLAUSEOP" property="clauseop" jdbcType="DECIMAL" />
+    <result column="PREDICATEOP" property="predicateop" jdbcType="DECIMAL" />
+    <result column="RHSTYPE" property="rhstype" jdbcType="DECIMAL" />
+    <result column="CLAUSEFLAGS" property="clauseflags" jdbcType="DECIMAL" />
+    <result column="GLOBAL_REFCOUNT" property="globalRefcount" jdbcType="DECIMAL" />
+    <result column="CHILDLIST" property="childlist" jdbcType="CLOB" />
+    <result column="LHS" property="lhs" jdbcType="CLOB" />
+    <result column="RHSVAL" property="rhsval" jdbcType="CLOB" />
+    <result column="HASHVAL" property="hashval" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

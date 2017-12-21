@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCmBaselineVersionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCmBaselineVersions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="BASELINE_VERSION" property="baselineVersion" jdbcType="DECIMAL" />
+    <result column="CAPTURE_TIME" property="captureTime" jdbcType="DATE" />
+    <result column="TIMEZONE_REGION" property="timezoneRegion" jdbcType="VARCHAR" />
+    <result column="DB_VERSION" property="dbVersion" jdbcType="VARCHAR" />
+    <result column="VERSION_STATUS" property="versionStatus" jdbcType="VARCHAR" />
+    <result column="DDL_STATUS" property="ddlStatus" jdbcType="DECIMAL" />
+    <result column="DDL_TIME" property="ddlTime" jdbcType="DATE" />
+    <result column="BASELINE_GUID" property="baselineGuid" jdbcType="VARBINARY" />
+    <result column="JOB_EXECUTION_ID" property="jobExecutionId" jdbcType="VARBINARY" />
+    <result column="DDL" property="ddl" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

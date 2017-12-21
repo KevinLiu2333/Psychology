@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Export2ucatalogEntityUsesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Export2ucatalogEntityUses" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CATALOG_ID" property="catalogId" jdbcType="DECIMAL" />
+    <result column="ENTITY_OWNER" property="entityOwner" jdbcType="VARCHAR" />
+    <result column="ENTITY_NAME" property="entityName" jdbcType="VARCHAR" />
+    <result column="CHILD_ENTITY_NAME" property="childEntityName" jdbcType="VARCHAR" />
+    <result column="ENTRY_NAME" property="entryName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

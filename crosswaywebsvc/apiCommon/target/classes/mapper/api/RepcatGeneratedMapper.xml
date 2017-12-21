@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RepcatGeneratedMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RepcatGenerated">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SNAME" jdbcType="VARCHAR" property="sname" />
+    <id column="ONAME" jdbcType="VARCHAR" property="oname" />
+    <id column="TYPE" jdbcType="DECIMAL" property="type" />
+    <id column="BASE_SNAME" jdbcType="VARCHAR" property="baseSname" />
+    <id column="BASE_ONAME" jdbcType="VARCHAR" property="baseOname" />
+    <id column="BASE_TYPE" jdbcType="DECIMAL" property="baseType" />
+    <result column="REASON" jdbcType="DECIMAL" property="reason" />
+    <result column="PACKAGE_PREFIX" jdbcType="VARCHAR" property="packagePrefix" />
+    <result column="PROCEDURE_PREFIX" jdbcType="VARCHAR" property="procedurePrefix" />
+    <result column="DISTRIBUTED" jdbcType="VARCHAR" property="distributed" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu8tnebMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu8tneb" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TSNO" property="tsno" jdbcType="DECIMAL" />
+    <result column="FILENO" property="fileno" jdbcType="DECIMAL" />
+    <result column="BLOCKNO" property="blockno" jdbcType="DECIMAL" />
+    <result column="LENGTH" property="length" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

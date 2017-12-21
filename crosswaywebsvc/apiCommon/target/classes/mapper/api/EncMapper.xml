@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.EncMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Enc" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="OWNER#" property="owner" jdbcType="DECIMAL" />
+    <result column="MKEYID" property="mkeyid" jdbcType="VARCHAR" />
+    <result column="ENCALG" property="encalg" jdbcType="DECIMAL" />
+    <result column="INTALG" property="intalg" jdbcType="DECIMAL" />
+    <result column="KLCLEN" property="klclen" jdbcType="DECIMAL" />
+    <result column="FLAG" property="flag" jdbcType="DECIMAL" />
+    <result column="COLKLC" property="colklc" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

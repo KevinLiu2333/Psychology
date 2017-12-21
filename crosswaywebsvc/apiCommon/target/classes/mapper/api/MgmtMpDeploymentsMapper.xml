@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtMpDeploymentsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtMpDeployments" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="MP_GUID" property="mpGuid" jdbcType="VARBINARY" />
+    <id column="AGENT" property="agent" jdbcType="VARCHAR" />
+    <result column="DEPLOY_DATE" property="deployDate" jdbcType="DATE" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

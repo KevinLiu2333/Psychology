@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VProcessMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VProcess" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PID" property="pid" jdbcType="DECIMAL" />
+    <result column="SPID" property="spid" jdbcType="VARCHAR" />
+    <result column="PNAME" property="pname" jdbcType="VARCHAR" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="SERIAL#" property="serial" jdbcType="DECIMAL" />
+    <result column="TERMINAL" property="terminal" jdbcType="VARCHAR" />
+    <result column="PROGRAM" property="program" jdbcType="VARCHAR" />
+    <result column="TRACEID" property="traceid" jdbcType="VARCHAR" />
+    <result column="TRACEFILE" property="tracefile" jdbcType="VARCHAR" />
+    <result column="BACKGROUND" property="background" jdbcType="VARCHAR" />
+    <result column="LATCHWAIT" property="latchwait" jdbcType="VARCHAR" />
+    <result column="LATCHSPIN" property="latchspin" jdbcType="VARCHAR" />
+    <result column="PGA_USED_MEM" property="pgaUsedMem" jdbcType="DECIMAL" />
+    <result column="PGA_ALLOC_MEM" property="pgaAllocMem" jdbcType="DECIMAL" />
+    <result column="PGA_FREEABLE_MEM" property="pgaFreeableMem" jdbcType="DECIMAL" />
+    <result column="PGA_MAX_MEM" property="pgaMaxMem" jdbcType="DECIMAL" />
+    <result column="ADDR" property="addr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

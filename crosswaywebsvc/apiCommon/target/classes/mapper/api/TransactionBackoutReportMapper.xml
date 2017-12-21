@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TransactionBackoutReportMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.TransactionBackoutReport" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="COMPENSATING_XID" property="compensatingXid" jdbcType="VARBINARY" />
+    <result column="COMPENSATING_TXN_NAME" property="compensatingTxnName" jdbcType="VARCHAR" />
+    <result column="COMMIT_TIME" property="commitTime" jdbcType="DATE" />
+    <result column="USER#" property="user" jdbcType="DECIMAL" />
+    <result column="XID_REPORT" property="xidReport" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu81typMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu81typ" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TNAME" property="tname" jdbcType="VARCHAR" />
+    <result column="TOWNER" property="towner" jdbcType="VARCHAR" />
+    <result column="OWNERID" property="ownerid" jdbcType="DECIMAL" />
+    <result column="MTIME" property="mtime" jdbcType="VARCHAR" />
+    <result column="OBJNO" property="objno" jdbcType="DECIMAL" />
+    <result column="AUDIT$" property="audit" jdbcType="VARCHAR" />
+    <result column="SECONDARYOBJ" property="secondaryobj" jdbcType="DECIMAL" />
+    <result column="SQLVER" property="sqlver" jdbcType="VARCHAR" />
+    <result column="TYPOBJSTATUS" property="typobjstatus" jdbcType="DECIMAL" />
+    <result column="TVERSION" property="tversion" jdbcType="DECIMAL" />
+    <result column="TOID" property="toid" jdbcType="VARBINARY" />
+    <result column="THASHCODE" property="thashcode" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

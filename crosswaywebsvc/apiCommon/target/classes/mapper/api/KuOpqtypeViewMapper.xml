@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuOpqtypeViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuOpqtypeView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="INTCOL_NUM" property="intcolNum" jdbcType="DECIMAL" />
+    <result column="TYPE" property="type" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="LOBCOL" property="lobcol" jdbcType="DECIMAL" />
+    <result column="OBJCOL" property="objcol" jdbcType="DECIMAL" />
+    <result column="EXTRACOL" property="extracol" jdbcType="DECIMAL" />
+    <result column="ELEMNUM" property="elemnum" jdbcType="DECIMAL" />
+    <result column="SCHEMA_ELMT" property="schemaElmt" jdbcType="OTHER" />
+    <result column="SCHEMAOID" property="schemaoid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

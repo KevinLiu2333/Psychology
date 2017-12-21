@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtProvTgtStatusMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtProvTgtStatus" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="PROV_TGT_GUID" property="provTgtGuid" jdbcType="VARBINARY" />
+    <result column="PROV_TARGET_TYPE" property="provTargetType" jdbcType="VARCHAR" />
+    <result column="COMPONENT_URN" property="componentUrn" jdbcType="VARCHAR" />
+    <result column="NETWORK_URN" property="networkUrn" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="CURRENT_ASN_GUID" property="currentAsnGuid" jdbcType="VARBINARY" />
+    <result column="LAST_SUC_ASN_GUID" property="lastSucAsnGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

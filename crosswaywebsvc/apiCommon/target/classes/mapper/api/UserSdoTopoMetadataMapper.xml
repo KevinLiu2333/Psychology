@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserSdoTopoMetadataMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserSdoTopoMetadata" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="TOPOLOGY" property="topology" jdbcType="VARCHAR" />
+    <result column="TOPOLOGY_ID" property="topologyId" jdbcType="DECIMAL" />
+    <result column="TOLERANCE" property="tolerance" jdbcType="DECIMAL" />
+    <result column="SRID" property="srid" jdbcType="DECIMAL" />
+    <result column="TABLE_SCHEMA" property="tableSchema" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="TG_LAYER_ID" property="tgLayerId" jdbcType="DECIMAL" />
+    <result column="TG_LAYER_TYPE" property="tgLayerType" jdbcType="VARCHAR" />
+    <result column="TG_LAYER_LEVEL" property="tgLayerLevel" jdbcType="DECIMAL" />
+    <result column="CHILD_LAYER_ID" property="childLayerId" jdbcType="DECIMAL" />
+    <result column="NODE_SEQUENCE" property="nodeSequence" jdbcType="VARCHAR" />
+    <result column="EDGE_SEQUENCE" property="edgeSequence" jdbcType="VARCHAR" />
+    <result column="FACE_SEQUENCE" property="faceSequence" jdbcType="VARCHAR" />
+    <result column="TG_SEQUENCE" property="tgSequence" jdbcType="VARCHAR" />
+    <result column="DIGITS_RIGHT_OF_DECIMAL" property="digitsRightOfDecimal" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

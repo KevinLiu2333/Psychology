@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaLmtUsedExtentsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaLmtUsedExtents" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SEGMENT_FILEID" property="segmentFileid" jdbcType="DECIMAL" />
+    <result column="SEGMENT_BLOCK" property="segmentBlock" jdbcType="DECIMAL" />
+    <result column="TABLESPACE_ID" property="tablespaceId" jdbcType="DECIMAL" />
+    <result column="EXTENT_ID" property="extentId" jdbcType="DECIMAL" />
+    <result column="FILEID" property="fileid" jdbcType="DECIMAL" />
+    <result column="BLOCK" property="block" jdbcType="DECIMAL" />
+    <result column="LENGTH" property="length" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

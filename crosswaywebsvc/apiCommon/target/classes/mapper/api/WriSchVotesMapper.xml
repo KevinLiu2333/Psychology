@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriSchVotesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriSchVotes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SCHEDULE_ID" property="scheduleId" jdbcType="DECIMAL" />
+    <id column="VECTOR_INDEX" property="vectorIndex" jdbcType="DECIMAL" />
+    <result column="VECTOR" property="vector" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

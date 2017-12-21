@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OrddcmCtPredWrkMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OrddcmCtPredWrk" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="PID" property="pid" jdbcType="DECIMAL" />
+    <result column="FPID" property="fpid" jdbcType="DECIMAL" />
+    <result column="POS" property="pos" jdbcType="DECIMAL" />
+    <result column="REF_PID" property="refPid" jdbcType="DECIMAL" />
+    <result column="OP" property="op" jdbcType="DECIMAL" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

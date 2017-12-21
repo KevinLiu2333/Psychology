@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuTabTsubpartViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuTabTsubpartView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="BASE_OBJNUM" property="baseObjnum" jdbcType="DECIMAL" />
+    <result column="SPART_POS" property="spartPos" jdbcType="DECIMAL" />
+    <result column="SPART_NAME" property="spartName" jdbcType="VARCHAR" />
+    <result column="TS_NAME" property="tsName" jdbcType="VARCHAR" />
+    <result column="TS_NUM" property="tsNum" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="HIBOUNDLEN" property="hiboundlen" jdbcType="DECIMAL" />
+    <result column="HIBOUNDVAL" property="hiboundval" jdbcType="VARCHAR" />
+    <result column="TLOBS" property="tlobs" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

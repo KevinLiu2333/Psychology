@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SuiteUserInfoMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SuiteUserInfo">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="USER_ID" jdbcType="VARCHAR" property="userId" />
+    <result column="LOGON_NAME" jdbcType="VARCHAR" property="logonName" />
+    <result column="PASSWORD" jdbcType="VARCHAR" property="password" />
+    <result column="DISPLAY_NAME" jdbcType="VARCHAR" property="displayName" />
+    <result column="REGION_CODE" jdbcType="VARCHAR" property="regionCode" />
+    <result column="UNIT_ID" jdbcType="VARCHAR" property="unitId" />
+    <result column="USER_TYPE" jdbcType="VARCHAR" property="userType" />
+    <result column="POSITION" jdbcType="VARCHAR" property="position" />
+    <result column="DEPT" jdbcType="VARCHAR" property="dept" />
+    <result column="CURRENT_LOGON_DATE" jdbcType="DATE" property="currentLogonDate" />
+    <result column="LAST_LOGON_DATE" jdbcType="DATE" property="lastLogonDate" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    <result column="IS_ONLINE" jdbcType="VARCHAR" property="isOnline" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu8oidMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu8oid" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TOBJID" property="tobjid" jdbcType="DECIMAL" />
+    <result column="INTCOL" property="intcol" jdbcType="DECIMAL" />
+    <result column="INAME" property="iname" jdbcType="VARCHAR" />
+    <result column="IDEFER" property="idefer" jdbcType="DECIMAL" />
+    <result column="OWNERID" property="ownerid" jdbcType="DECIMAL" />
+    <result column="PCTFREE$" property="pctfree" jdbcType="DECIMAL" />
+    <result column="INITRANS" property="initrans" jdbcType="DECIMAL" />
+    <result column="MAXTRANS" property="maxtrans" jdbcType="DECIMAL" />
+    <result column="ITSNO" property="itsno" jdbcType="DECIMAL" />
+    <result column="IFILE" property="ifile" jdbcType="DECIMAL" />
+    <result column="IBLOCK" property="iblock" jdbcType="DECIMAL" />
+    <result column="ITSNAME" property="itsname" jdbcType="VARCHAR" />
+    <result column="IDOBJID" property="idobjid" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

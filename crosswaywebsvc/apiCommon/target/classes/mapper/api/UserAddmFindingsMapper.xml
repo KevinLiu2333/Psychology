@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserAddmFindingsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserAddmFindings" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <result column="TASK_NAME" property="taskName" jdbcType="VARCHAR" />
+    <result column="EXECUTION_NAME" property="executionName" jdbcType="VARCHAR" />
+    <result column="FINDING_ID" property="findingId" jdbcType="DECIMAL" />
+    <result column="FINDING_NAME" property="findingName" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="TYPE_ID" property="typeId" jdbcType="DECIMAL" />
+    <result column="PARENT" property="parent" jdbcType="DECIMAL" />
+    <result column="OBJECT_ID" property="objectId" jdbcType="DECIMAL" />
+    <result column="IMPACT_TYPE" property="impactType" jdbcType="VARCHAR" />
+    <result column="IMPACT" property="impact" jdbcType="DECIMAL" />
+    <result column="MESSAGE" property="message" jdbcType="VARCHAR" />
+    <result column="MORE_INFO" property="moreInfo" jdbcType="VARCHAR" />
+    <result column="FILTERED" property="filtered" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="DATABASE_TIME" property="databaseTime" jdbcType="DECIMAL" />
+    <result column="ACTIVE_SESSIONS" property="activeSessions" jdbcType="DECIMAL" />
+    <result column="PERC_ACTIVE_SESS" property="percActiveSess" jdbcType="DECIMAL" />
+    <result column="IS_AGGREGATE" property="isAggregate" jdbcType="CHAR" />
+    <result column="METER_LEVEL" property="meterLevel" jdbcType="VARCHAR" />
+    <result column="QUERY_IS_APPROX" property="queryIsApprox" jdbcType="CHAR" />
+  </resultMap>
+</mapper>

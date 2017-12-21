@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowPurgedSessionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowPurgedSessions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PURGE_DATE" property="purgeDate" jdbcType="DATE" />
+    <result column="PURGED_SESSIONS" property="purgedSessions" jdbcType="DECIMAL" />
+    <result column="MIN_SESSION_ID" property="minSessionId" jdbcType="DECIMAL" />
+    <result column="MAX_SESSION_ID" property="maxSessionId" jdbcType="DECIMAL" />
+    <result column="MIN_SESSION_DATE" property="minSessionDate" jdbcType="DATE" />
+    <result column="MAX_SESSION_DATE" property="maxSessionDate" jdbcType="DATE" />
+    <result column="ELAP_SECONDS" property="elapSeconds" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

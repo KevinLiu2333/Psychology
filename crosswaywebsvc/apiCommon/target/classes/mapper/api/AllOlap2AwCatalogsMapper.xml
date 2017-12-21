@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllOlap2AwCatalogsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllOlap2AwCatalogs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="AW_OWNER" property="awOwner" jdbcType="VARCHAR" />
+    <result column="AW_NAME" property="awName" jdbcType="VARCHAR" />
+    <result column="CATALOG_ID" property="catalogId" jdbcType="DECIMAL" />
+    <result column="CATALOG_NAME" property="catalogName" jdbcType="VARCHAR" />
+    <result column="PARENT_CATALOG_NAME" property="parentCatalogName" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

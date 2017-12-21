@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaAdvisorSqlaTabvolMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaAdvisorSqlaTabvol" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="TASK_NAME" property="taskName" jdbcType="VARCHAR" />
+    <result column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <result column="TABLE_OWNER" property="tableOwner" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="UPDATE_FREQ" property="updateFreq" jdbcType="DECIMAL" />
+    <result column="INSERT_FREQ" property="insertFreq" jdbcType="DECIMAL" />
+    <result column="DELETE_FREQ" property="deleteFreq" jdbcType="DECIMAL" />
+    <result column="DIRECT_LOAD_FREQ" property="directLoadFreq" jdbcType="DECIMAL" />
+    <result column="UPDATED_ROWS" property="updatedRows" jdbcType="DECIMAL" />
+    <result column="INSERTED_ROWS" property="insertedRows" jdbcType="DECIMAL" />
+    <result column="DELETED_ROWS" property="deletedRows" jdbcType="DECIMAL" />
+    <result column="DIRECT_LOAD_ROWS" property="directLoadRows" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

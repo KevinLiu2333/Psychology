@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VAwLongopsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VAwLongops" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="CURSOR_NAME" property="cursorName" jdbcType="VARCHAR" />
+    <result column="COMMAND" property="command" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="ROWS_PROCESSED" property="rowsProcessed" jdbcType="DECIMAL" />
+    <result column="SEQ_NUMBER" property="seqNumber" jdbcType="DECIMAL" />
+    <result column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="TARGET" property="target" jdbcType="VARCHAR" />
+    <result column="TARGET_DESC" property="targetDesc" jdbcType="VARCHAR" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="LAST_UPDATE_TIME" property="lastUpdateTime" jdbcType="DATE" />
+    <result column="ELAPSED_SECONDS" property="elapsedSeconds" jdbcType="DECIMAL" />
+    <result column="SOFAR" property="sofar" jdbcType="DECIMAL" />
+    <result column="TOTALWORK" property="totalwork" jdbcType="DECIMAL" />
+    <result column="UNITS" property="units" jdbcType="VARCHAR" />
+    <result column="MESSAGE" property="message" jdbcType="VARCHAR" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

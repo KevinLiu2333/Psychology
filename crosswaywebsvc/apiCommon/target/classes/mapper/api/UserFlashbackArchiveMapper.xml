@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserFlashbackArchiveMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserFlashbackArchive" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER_NAME" property="ownerName" jdbcType="VARCHAR" />
+    <result column="FLASHBACK_ARCHIVE_NAME" property="flashbackArchiveName" jdbcType="VARCHAR" />
+    <result column="FLASHBACK_ARCHIVE#" property="flashbackArchive" jdbcType="DECIMAL" />
+    <result column="RETENTION_IN_DAYS" property="retentionInDays" jdbcType="DECIMAL" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="OTHER" />
+    <result column="LAST_PURGE_TIME" property="lastPurgeTime" jdbcType="OTHER" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

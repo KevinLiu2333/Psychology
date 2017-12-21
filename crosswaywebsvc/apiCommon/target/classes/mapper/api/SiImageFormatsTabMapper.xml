@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SiImageFormatsTabMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SiImageFormatsTab" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SI_FORMAT" property="siFormat" jdbcType="VARCHAR" />
+    <result column="READ_FLG" property="readFlg" jdbcType="VARCHAR" />
+    <result column="WRITE_FLG" property="writeFlg" jdbcType="VARCHAR" />
+    <result column="SI_FORMAT_DSC" property="siFormatDsc" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

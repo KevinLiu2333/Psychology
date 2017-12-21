@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtEmxCellCConfigViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtEmxCellCConfigView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="REALMNAME" property="realmname" jdbcType="VARCHAR" />
+    <result column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="MAKEMODEL" property="makemodel" jdbcType="VARCHAR" />
+    <result column="LOCATION" property="location" jdbcType="VARCHAR" />
+    <result column="BMCTYPE" property="bmctype" jdbcType="VARCHAR" />
+    <result column="IPBLOCK" property="ipblock" jdbcType="VARCHAR" />
+    <result column="FANCOUNT" property="fancount" jdbcType="DECIMAL" />
+    <result column="POWERCOUNT" property="powercount" jdbcType="DECIMAL" />
+    <result column="METRICHISTORYDAYS" property="metrichistorydays" jdbcType="DECIMAL" />
+    <result column="SNMPSUBSCRIBER" property="snmpsubscriber" jdbcType="VARCHAR" />
+    <result column="SMTPSERVER" property="smtpserver" jdbcType="VARCHAR" />
+    <result column="SMTPPORT" property="smtpport" jdbcType="VARCHAR" />
+    <result column="IPADDRESS1" property="ipaddress1" jdbcType="VARCHAR" />
+    <result column="IPADDRESS2" property="ipaddress2" jdbcType="VARCHAR" />
+    <result column="IPADDRESS3" property="ipaddress3" jdbcType="VARCHAR" />
+    <result column="IPADDRESS4" property="ipaddress4" jdbcType="VARCHAR" />
+    <result column="KERNELVERSION" property="kernelversion" jdbcType="VARCHAR" />
+    <result column="OSSVERSION" property="ossversion" jdbcType="VARCHAR" />
+    <result column="INTERCONNECTCOUNT" property="interconnectcount" jdbcType="DECIMAL" />
+    <result column="CPUCOUNT" property="cpucount" jdbcType="DECIMAL" />
+    <result column="START_TIMESTAMP" property="startTimestamp" jdbcType="DATE" />
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="ECM_SNAPSHOT_ID" property="ecmSnapshotId" jdbcType="VARBINARY" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

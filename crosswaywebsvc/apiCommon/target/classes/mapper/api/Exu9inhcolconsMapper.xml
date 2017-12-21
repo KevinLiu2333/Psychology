@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu9inhcolconsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu9inhcolcons" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TOBJID" property="tobjid" jdbcType="DECIMAL" />
+    <result column="INTCOLID" property="intcolid" jdbcType="DECIMAL" />
+    <result column="CNAME" property="cname" jdbcType="VARCHAR" />
+    <result column="TYPEFLAGS" property="typeflags" jdbcType="DECIMAL" />
+    <result column="SUBTYPEFLAGS" property="subtypeflags" jdbcType="DECIMAL" />
+    <result column="TYPEOWNERID" property="typeownerid" jdbcType="DECIMAL" />
+    <result column="TYPEOWNER" property="typeowner" jdbcType="VARCHAR" />
+    <result column="TYPENAME" property="typename" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

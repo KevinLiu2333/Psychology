@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvIofuncmetricHistoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvIofuncmetricHistory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="BEGIN_TIME" property="beginTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="INTSIZE_CSEC" property="intsizeCsec" jdbcType="DECIMAL" />
+    <result column="FUNCTION_ID" property="functionId" jdbcType="DECIMAL" />
+    <result column="FUNCTION_NAME" property="functionName" jdbcType="VARCHAR" />
+    <result column="SMALL_READ_MBPS" property="smallReadMbps" jdbcType="DECIMAL" />
+    <result column="SMALL_WRITE_MBPS" property="smallWriteMbps" jdbcType="DECIMAL" />
+    <result column="LARGE_READ_MBPS" property="largeReadMbps" jdbcType="DECIMAL" />
+    <result column="LARGE_WRITE_MBPS" property="largeWriteMbps" jdbcType="DECIMAL" />
+    <result column="SMALL_READ_IOPS" property="smallReadIops" jdbcType="DECIMAL" />
+    <result column="SMALL_WRITE_IOPS" property="smallWriteIops" jdbcType="DECIMAL" />
+    <result column="LARGE_READ_IOPS" property="largeReadIops" jdbcType="DECIMAL" />
+    <result column="LARGE_WRITE_IOPS" property="largeWriteIops" jdbcType="DECIMAL" />
+    <result column="AVG_WAIT_TIME" property="avgWaitTime" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

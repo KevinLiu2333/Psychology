@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.HsAllDdMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.HsAllDd" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DD_TABLE_NAME" property="ddTableName" jdbcType="VARCHAR" />
+    <result column="TRANSLATION_TYPE" property="translationType" jdbcType="CHAR" />
+    <result column="TRANSLATION_TEXT" property="translationText" jdbcType="VARCHAR" />
+    <result column="FDS_CLASS_NAME" property="fdsClassName" jdbcType="VARCHAR" />
+    <result column="FDS_INST_NAME" property="fdsInstName" jdbcType="VARCHAR" />
+    <result column="DD_TABLE_DESC" property="ddTableDesc" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

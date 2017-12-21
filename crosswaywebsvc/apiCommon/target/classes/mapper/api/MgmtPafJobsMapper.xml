@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtPafJobsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtPafJobs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="STATE_GUID" property="stateGuid" jdbcType="VARCHAR" />
+    <result column="INSTANCE_GUID" property="instanceGuid" jdbcType="VARCHAR" />
+    <result column="STEP_GUID" property="stepGuid" jdbcType="VARCHAR" />
+    <result column="PARENT_STATE_GUID" property="parentStateGuid" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="REASON_CODE" property="reasonCode" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED" property="lastUpdated" jdbcType="DATE" />
+    <result column="JOB_ID" property="jobId" jdbcType="VARCHAR" />
+    <result column="EXEC_ID" property="execId" jdbcType="VARCHAR" />
+    <result column="JOB_STATUS" property="jobStatus" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

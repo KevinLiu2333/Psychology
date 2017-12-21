@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriAdvSqlaSumMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriAdvSqlaSum" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <result column="NUM_SELECT" property="numSelect" jdbcType="DECIMAL" />
+    <result column="NUM_INSERT" property="numInsert" jdbcType="DECIMAL" />
+    <result column="NUM_DELETE" property="numDelete" jdbcType="DECIMAL" />
+    <result column="NUM_UPDATE" property="numUpdate" jdbcType="DECIMAL" />
+    <result column="NUM_MERGE" property="numMerge" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

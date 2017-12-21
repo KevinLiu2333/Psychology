@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllCubesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllCubes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="CUBE_NAME" property="cubeName" jdbcType="VARCHAR" />
+    <result column="AW_NAME" property="awName" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="OTHER" />
+    <result column="SPARSE_TYPE" property="sparseType" jdbcType="VARCHAR" />
+    <result column="PRECOMPUTE_PERCENT" property="precomputePercent" jdbcType="DECIMAL" />
+    <result column="PRECOMPUTE_PERCENT_TOP" property="precomputePercentTop" jdbcType="DECIMAL" />
+    <result column="PARTITION_DIMENSION_NAME" property="partitionDimensionName" jdbcType="VARCHAR" />
+    <result column="PARTITION_HIERARCHY_NAME" property="partitionHierarchyName" jdbcType="VARCHAR" />
+    <result column="PARTITION_LEVEL_NAME" property="partitionLevelName" jdbcType="VARCHAR" />
+    <result column="CONSISTENT_SOLVE_SPEC" property="consistentSolveSpec" jdbcType="CLOB" />
+    <result column="PRECOMPUTE_CONDITION" property="precomputeCondition" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

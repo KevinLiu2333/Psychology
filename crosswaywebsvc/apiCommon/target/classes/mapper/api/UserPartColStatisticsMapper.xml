@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserPartColStatisticsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserPartColStatistics" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="PARTITION_NAME" property="partitionName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="NUM_DISTINCT" property="numDistinct" jdbcType="DECIMAL" />
+    <result column="DENSITY" property="density" jdbcType="DECIMAL" />
+    <result column="NUM_NULLS" property="numNulls" jdbcType="DECIMAL" />
+    <result column="NUM_BUCKETS" property="numBuckets" jdbcType="DECIMAL" />
+    <result column="SAMPLE_SIZE" property="sampleSize" jdbcType="DECIMAL" />
+    <result column="LAST_ANALYZED" property="lastAnalyzed" jdbcType="DATE" />
+    <result column="GLOBAL_STATS" property="globalStats" jdbcType="VARCHAR" />
+    <result column="USER_STATS" property="userStats" jdbcType="VARCHAR" />
+    <result column="AVG_COL_LEN" property="avgColLen" jdbcType="DECIMAL" />
+    <result column="HISTOGRAM" property="histogram" jdbcType="VARCHAR" />
+    <result column="LOW_VALUE" property="lowValue" jdbcType="VARBINARY" />
+    <result column="HIGH_VALUE" property="highValue" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

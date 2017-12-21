@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.LogmnrgLogmnrBuildlogMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.LogmnrgLogmnrBuildlog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="BUILD_DATE" property="buildDate" jdbcType="VARCHAR" />
+    <result column="DB_TXN_SCNBAS" property="dbTxnScnbas" jdbcType="DECIMAL" />
+    <result column="DB_TXN_SCNWRP" property="dbTxnScnwrp" jdbcType="DECIMAL" />
+    <result column="CURRENT_BUILD_STATE" property="currentBuildState" jdbcType="DECIMAL" />
+    <result column="COMPLETION_STATUS" property="completionStatus" jdbcType="DECIMAL" />
+    <result column="MARKED_LOG_FILE_LOW_SCN" property="markedLogFileLowScn" jdbcType="DECIMAL" />
+    <result column="INITIAL_XID" property="initialXid" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtAvailabilityRbkMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtAvailabilityRbk" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="RBK_GUID" property="rbkGuid" jdbcType="VARBINARY" />
+    <id column="CURRENT_STATUS" property="currentStatus" jdbcType="DECIMAL" />
+    <id column="START_COLLECTION_TIMESTAMP" property="startCollectionTimestamp" jdbcType="DATE" />
+    <result column="END_COLLECTION_TIMESTAMP" property="endCollectionTimestamp" jdbcType="DATE" />
+    <result column="REASON_ID" property="reasonId" jdbcType="DECIMAL" />
+    <result column="CREATE_TIMESTAMP" property="createTimestamp" jdbcType="DATE" />
+    <result column="SEVERITY_GUID" property="severityGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

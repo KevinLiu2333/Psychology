@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtBugPatchCertificateMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtBugPatchCertificate" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="PATCH_ID" property="patchId" jdbcType="DECIMAL" />
+    <id column="RELEASE_ID" property="releaseId" jdbcType="DECIMAL" />
+    <id column="PLATFORM_ID" property="platformId" jdbcType="DECIMAL" />
+    <result column="PRODUCT" property="product" jdbcType="DECIMAL" />
+    <result column="PATCH_TYPE" property="patchType" jdbcType="VARCHAR" />
+    <result column="CERTIFY_DATE" property="certifyDate" jdbcType="DATE" />
+  </resultMap>
+</mapper>

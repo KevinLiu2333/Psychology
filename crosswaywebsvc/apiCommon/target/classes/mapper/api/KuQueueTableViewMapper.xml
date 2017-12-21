@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuQueueTableViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuQueueTableView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="SCHEMA_OBJ" property="schemaObj" jdbcType="OTHER" />
+    <result column="STORAGE_CLAUSE" property="storageClause" jdbcType="OTHER" />
+    <result column="UDATA_TYPE" property="udataType" jdbcType="DECIMAL" />
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <result column="SORT_COLS" property="sortCols" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="TABLE_COMMENT" property="tableComment" jdbcType="VARCHAR" />
+    <result column="PRIMARY_INSTANCE" property="primaryInstance" jdbcType="DECIMAL" />
+    <result column="SECONDARY_INSTANCE" property="secondaryInstance" jdbcType="DECIMAL" />
+    <result column="OWNER_INSTANCE" property="ownerInstance" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

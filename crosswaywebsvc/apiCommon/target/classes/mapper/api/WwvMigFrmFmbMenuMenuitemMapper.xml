@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigFrmFmbMenuMenuitemMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigFrmFmbMenuMenuitem" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="MENU_ID" property="menuId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="LABEL" property="label" jdbcType="VARCHAR" />
+    <result column="VISIBLEINMENU" property="visibleinmenu" jdbcType="VARCHAR" />
+    <result column="SUBMENUNAME" property="submenuname" jdbcType="VARCHAR" />
+    <result column="ICONINMENU" property="iconinmenu" jdbcType="VARCHAR" />
+    <result column="ICONFILENAME" property="iconfilename" jdbcType="VARCHAR" />
+    <result column="FONTSIZE" property="fontsize" jdbcType="VARCHAR" />
+    <result column="DIRTYINFO" property="dirtyinfo" jdbcType="VARCHAR" />
+    <result column="FONTNAME" property="fontname" jdbcType="VARCHAR" />
+    <result column="PARENTMODULE" property="parentmodule" jdbcType="VARCHAR" />
+    <result column="MAGICITEM" property="magicitem" jdbcType="VARCHAR" />
+    <result column="PARENTMODULETYPE" property="parentmoduletype" jdbcType="VARCHAR" />
+    <result column="MENUITEMTYPE" property="menuitemtype" jdbcType="VARCHAR" />
+    <result column="FONTSPACING" property="fontspacing" jdbcType="VARCHAR" />
+    <result column="PARENTTYPE" property="parenttype" jdbcType="VARCHAR" />
+    <result column="KEYBOARDACCELERATOR" property="keyboardaccelerator" jdbcType="VARCHAR" />
+    <result column="ROLECOUNT" property="rolecount" jdbcType="VARCHAR" />
+    <result column="HINT" property="hint" jdbcType="VARCHAR" />
+    <result column="PARENTSOURCELEVEL1OBJECTNAME" property="parentsourcelevel1objectname" jdbcType="VARCHAR" />
+    <result column="PARENTNAME" property="parentname" jdbcType="VARCHAR" />
+    <result column="FONTWEIGHT" property="fontweight" jdbcType="VARCHAR" />
+    <result column="MENUITEMRADIOGROUP" property="menuitemradiogroup" jdbcType="VARCHAR" />
+    <result column="FONTSTYLE" property="fontstyle" jdbcType="VARCHAR" />
+    <result column="COMMANDTYPE" property="commandtype" jdbcType="VARCHAR" />
+    <result column="PARENTSOURCELEVEL1OBJECTTYPE" property="parentsourcelevel1objecttype" jdbcType="VARCHAR" />
+    <result column="SUBCLASSSUBOBJECT" property="subclasssubobject" jdbcType="VARCHAR" />
+    <result column="VISIBLEINVERTICALMENUTOOLBAR" property="visibleinverticalmenutoolbar" jdbcType="VARCHAR" />
+    <result column="VISIBLEINHORIZONTALMENUTOOLBAR" property="visibleinhorizontalmenutoolbar" jdbcType="VARCHAR" />
+    <result column="COMMANDTEXT" property="commandtext" jdbcType="VARCHAR" />
+    <result column="DISPLAYNOPRIV" property="displaynopriv" jdbcType="VARCHAR" />
+    <result column="ENABLED" property="enabled" jdbcType="VARCHAR" />
+    <result column="PARENTFILENAME" property="parentfilename" jdbcType="VARCHAR" />
+    <result column="PARENTFILEPATH" property="parentfilepath" jdbcType="VARCHAR" />
+    <result column="PERSISTENTCLIENTINFOLENGTH" property="persistentclientinfolength" jdbcType="VARCHAR" />
+    <result column="SMARTCLASS" property="smartclass" jdbcType="VARCHAR" />
+    <result column="VISIBLE" property="visible" jdbcType="VARCHAR" />
+    <result column="VISUALATTRIBUTENAME" property="visualattributename" jdbcType="VARCHAR" />
+    <result column="SELECT_FOR_APP" property="selectForApp" jdbcType="VARCHAR" />
+    <result column="APPLICABLE" property="applicable" jdbcType="VARCHAR" />
+    <result column="COMPLETE" property="complete" jdbcType="VARCHAR" />
+    <result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+    <result column="ASSIGNEE" property="assignee" jdbcType="VARCHAR" />
+    <result column="NOTES" property="notes" jdbcType="VARCHAR" />
+    <result column="TAGS" property="tags" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="MENUITEM_COMMENT" property="menuitemComment" jdbcType="CLOB" />
+    <result column="MENUITEMCODE" property="menuitemcode" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TabquotasMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Tabquotas" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TNAME" property="tname" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="OBJNO" property="objno" jdbcType="DECIMAL" />
+    <result column="NEXTEXT" property="nextext" jdbcType="DECIMAL" />
+    <result column="MAXEXT" property="maxext" jdbcType="DECIMAL" />
+    <result column="PINC" property="pinc" jdbcType="DECIMAL" />
+    <result column="PFREE" property="pfree" jdbcType="DECIMAL" />
+    <result column="PUSED" property="pused" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

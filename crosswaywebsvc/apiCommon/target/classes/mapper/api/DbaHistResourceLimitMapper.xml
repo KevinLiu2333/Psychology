@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaHistResourceLimitMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaHistResourceLimit" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="RESOURCE_NAME" property="resourceName" jdbcType="VARCHAR" />
+    <result column="CURRENT_UTILIZATION" property="currentUtilization" jdbcType="DECIMAL" />
+    <result column="MAX_UTILIZATION" property="maxUtilization" jdbcType="DECIMAL" />
+    <result column="INITIAL_ALLOCATION" property="initialAllocation" jdbcType="VARCHAR" />
+    <result column="LIMIT_VALUE" property="limitValue" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

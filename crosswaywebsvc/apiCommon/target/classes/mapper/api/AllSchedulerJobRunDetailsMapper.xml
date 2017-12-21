@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllSchedulerJobRunDetailsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllSchedulerJobRunDetails" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOG_ID" property="logId" jdbcType="DECIMAL" />
+    <result column="LOG_DATE" property="logDate" jdbcType="OTHER" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="JOB_NAME" property="jobName" jdbcType="VARCHAR" />
+    <result column="JOB_SUBNAME" property="jobSubname" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="ERROR#" property="error" jdbcType="DECIMAL" />
+    <result column="REQ_START_DATE" property="reqStartDate" jdbcType="OTHER" />
+    <result column="ACTUAL_START_DATE" property="actualStartDate" jdbcType="OTHER" />
+    <result column="RUN_DURATION" property="runDuration" jdbcType="OTHER" />
+    <result column="INSTANCE_ID" property="instanceId" jdbcType="DECIMAL" />
+    <result column="SESSION_ID" property="sessionId" jdbcType="VARCHAR" />
+    <result column="SLAVE_PID" property="slavePid" jdbcType="VARCHAR" />
+    <result column="CPU_USED" property="cpuUsed" jdbcType="OTHER" />
+    <result column="CREDENTIAL_OWNER" property="credentialOwner" jdbcType="VARCHAR" />
+    <result column="CREDENTIAL_NAME" property="credentialName" jdbcType="VARCHAR" />
+    <result column="DESTINATION_OWNER" property="destinationOwner" jdbcType="VARCHAR" />
+    <result column="DESTINATION" property="destination" jdbcType="VARCHAR" />
+    <result column="ADDITIONAL_INFO" property="additionalInfo" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

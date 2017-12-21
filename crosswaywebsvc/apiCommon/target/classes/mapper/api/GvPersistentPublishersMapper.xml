@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvPersistentPublishersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvPersistentPublishers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="QUEUE_ID" property="queueId" jdbcType="DECIMAL" />
+    <result column="QUEUE_SCHEMA" property="queueSchema" jdbcType="VARCHAR" />
+    <result column="QUEUE_NAME" property="queueName" jdbcType="VARCHAR" />
+    <result column="PUBLISHER_NAME" property="publisherName" jdbcType="VARCHAR" />
+    <result column="PUBLISHER_ADDRESS" property="publisherAddress" jdbcType="VARCHAR" />
+    <result column="PROTOCOL" property="protocol" jdbcType="DECIMAL" />
+    <result column="ENQUEUED_MSGS" property="enqueuedMsgs" jdbcType="DECIMAL" />
+    <result column="ELAPSED_ENQUEUE_TIME" property="elapsedEnqueueTime" jdbcType="DECIMAL" />
+    <result column="ENQUEUE_CPU_TIME" property="enqueueCpuTime" jdbcType="DECIMAL" />
+    <result column="LAST_ENQUEUE_TIME" property="lastEnqueueTime" jdbcType="TIMESTAMP" />
+    <result column="ENQUEUE_TRANSACTIONS" property="enqueueTransactions" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

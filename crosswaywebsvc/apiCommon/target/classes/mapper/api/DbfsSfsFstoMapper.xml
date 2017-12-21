@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbfsSfsFstoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbfsSfsFsto" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="VOLID" property="volid" jdbcType="DECIMAL" />
+    <id column="STD_GUID" property="stdGuid" jdbcType="DECIMAL" />
+    <id column="CSNAP#" property="csnap" jdbcType="DECIMAL" />
+    <result column="LSNAP#" property="lsnap" jdbcType="DECIMAL" />
+    <result column="PATHNAME" property="pathname" jdbcType="VARCHAR" />
+    <result column="ITEM" property="item" jdbcType="VARCHAR" />
+    <result column="PATHTYPE" property="pathtype" jdbcType="DECIMAL" />
+    <result column="POSIX_NLINK" property="posixNlink" jdbcType="DECIMAL" />
+    <result column="POSIX_MODE" property="posixMode" jdbcType="DECIMAL" />
+    <result column="POSIX_UID" property="posixUid" jdbcType="DECIMAL" />
+    <result column="POSIX_GID" property="posixGid" jdbcType="DECIMAL" />
+    <result column="STD_ACCESS_TIME" property="stdAccessTime" jdbcType="TIMESTAMP" />
+    <result column="STD_ACL" property="stdAcl" jdbcType="VARCHAR" />
+    <result column="STD_CHANGE_TIME" property="stdChangeTime" jdbcType="TIMESTAMP" />
+    <result column="STD_CONTENT_TYPE" property="stdContentType" jdbcType="VARCHAR" />
+    <result column="STD_CREATION_TIME" property="stdCreationTime" jdbcType="TIMESTAMP" />
+    <result column="STD_DELETED" property="stdDeleted" jdbcType="DECIMAL" />
+    <result column="STD_MODIFICATION_TIME" property="stdModificationTime" jdbcType="TIMESTAMP" />
+    <result column="STD_OWNER" property="stdOwner" jdbcType="VARCHAR" />
+    <result column="STD_PARENT_GUID" property="stdParentGuid" jdbcType="DECIMAL" />
+    <result column="STD_REFERENT" property="stdReferent" jdbcType="VARCHAR" />
+    <result column="OPT_HASH_TYPE" property="optHashType" jdbcType="VARCHAR" />
+    <result column="OPT_HASH_VALUE" property="optHashValue" jdbcType="VARCHAR" />
+    <result column="OPT_LOCK_COUNT" property="optLockCount" jdbcType="DECIMAL" />
+    <result column="OPT_LOCK_DATA" property="optLockData" jdbcType="VARCHAR" />
+    <result column="OPT_LOCK_STATUS" property="optLockStatus" jdbcType="DECIMAL" />
+    <result column="USR_PROPERTIES" property="usrProperties" jdbcType="OTHER" />
+    <result column="FILEDATA" property="filedata" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

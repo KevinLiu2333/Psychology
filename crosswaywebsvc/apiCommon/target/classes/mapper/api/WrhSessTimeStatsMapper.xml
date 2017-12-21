@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhSessTimeStatsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhSessTimeStats" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="SESSION_TYPE" property="sessionType" jdbcType="VARCHAR" />
+    <result column="MIN_LOGON_TIME" property="minLogonTime" jdbcType="DATE" />
+    <result column="SUM_CPU_TIME" property="sumCpuTime" jdbcType="DECIMAL" />
+    <result column="SUM_SYS_IO_WAIT" property="sumSysIoWait" jdbcType="DECIMAL" />
+    <result column="SUM_USER_IO_WAIT" property="sumUserIoWait" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

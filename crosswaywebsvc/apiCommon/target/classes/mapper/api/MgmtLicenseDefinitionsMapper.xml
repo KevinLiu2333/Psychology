@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtLicenseDefinitionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtLicenseDefinitions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="PACK_LABEL" property="packLabel" jdbcType="VARCHAR" />
+    <id column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="PACK_DISPLAY_LABEL" property="packDisplayLabel" jdbcType="VARCHAR" />
+    <result column="PACK_LABEL_NLSID" property="packLabelNlsid" jdbcType="VARCHAR" />
+    <result column="PACK_DESCRIPTION" property="packDescription" jdbcType="VARCHAR" />
+    <result column="PACK_DESCRIPTION_NLSID" property="packDescriptionNlsid" jdbcType="VARCHAR" />
+    <result column="PACK_ABBR" property="packAbbr" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

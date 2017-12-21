@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtTargetPolicySettingsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtTargetPolicySettings" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="POLICY_NAME" property="policyName" jdbcType="VARCHAR" />
+    <result column="CATEGORY" property="category" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE" property="keyValue" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE2" property="keyValue2" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE3" property="keyValue3" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE4" property="keyValue4" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE5" property="keyValue5" jdbcType="VARCHAR" />
+    <result column="KEY_OPERATOR" property="keyOperator" jdbcType="DECIMAL" />
+    <result column="PARAMETER_NAME" property="parameterName" jdbcType="VARCHAR" />
+    <result column="PREVENT_OVERRIDE" property="preventOverride" jdbcType="DECIMAL" />
+    <result column="POLICY_THRESHOLD" property="policyThreshold" jdbcType="VARCHAR" />
+    <result column="ACTION_TYPE" property="actionType" jdbcType="VARCHAR" />
+    <result column="ACTION_JOB_TYPE" property="actionJobType" jdbcType="VARCHAR" />
+    <result column="ACTION_JOB_NAME" property="actionJobName" jdbcType="VARCHAR" />
+    <result column="ACTION_JOB_OWNER" property="actionJobOwner" jdbcType="VARCHAR" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <result column="POLICY_GUID" property="policyGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

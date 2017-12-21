@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtMpHomepageReportsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtMpHomepageReports" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <id column="REPORT_TITLE" property="reportTitle" jdbcType="VARCHAR" />
+    <id column="REPORT_OWNER" property="reportOwner" jdbcType="VARCHAR" />
+    <result column="REPORT_ORDER" property="reportOrder" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

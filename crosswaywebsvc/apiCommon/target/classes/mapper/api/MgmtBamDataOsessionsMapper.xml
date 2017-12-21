@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtBamDataOsessionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtBamDataOsessions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SESSION_GUID" property="sessionGuid" jdbcType="VARBINARY" />
+    <result column="SESSION_NAME" property="sessionName" jdbcType="VARCHAR" />
+    <result column="USERS" property="users" jdbcType="VARCHAR" />
+    <result column="MESSAGE_FORMAT" property="messageFormat" jdbcType="DECIMAL" />
+    <result column="HUB_GUID" property="hubGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

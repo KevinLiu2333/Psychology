@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RuleSetNlMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RuleSetNl" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RS_OBJ#" property="rsObj" jdbcType="DECIMAL" />
+    <result column="EC_OBJ#" property="ecObj" jdbcType="DECIMAL" />
+    <result column="BOX_ID" property="boxId" jdbcType="DECIMAL" />
+    <result column="NE_ID" property="neId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="ATTR_ID" property="attrId" jdbcType="DECIMAL" />
+    <result column="VERSION" property="version" jdbcType="DECIMAL" />
+    <result column="TOID" property="toid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

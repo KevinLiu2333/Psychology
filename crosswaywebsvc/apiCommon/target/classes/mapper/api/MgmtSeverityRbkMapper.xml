@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtSeverityRbkMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtSeverityRbk" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="RBK_GUID" property="rbkGuid" jdbcType="VARBINARY" />
+    <id column="METRIC_GUID" property="metricGuid" jdbcType="VARBINARY" />
+    <id column="KEY_VALUE" property="keyValue" jdbcType="VARCHAR" />
+    <id column="COLLECTION_TIMESTAMP" property="collectionTimestamp" jdbcType="DATE" />
+    <id column="SEVERITY_CODE" property="severityCode" jdbcType="DECIMAL" />
+    <result column="SEVERITY_TYPE" property="severityType" jdbcType="DECIMAL" />
+    <result column="SEVERITY_DURATION" property="severityDuration" jdbcType="DECIMAL" />
+    <result column="ANNOTATED_FLAG" property="annotatedFlag" jdbcType="DECIMAL" />
+    <result column="NOTIFICATION_STATUS" property="notificationStatus" jdbcType="DECIMAL" />
+    <result column="MESSAGE" property="message" jdbcType="VARCHAR" />
+    <result column="MESSAGE_NLSID" property="messageNlsid" jdbcType="VARCHAR" />
+    <result column="MESSAGE_PARAMS" property="messageParams" jdbcType="VARCHAR" />
+    <result column="ACTION_MESSAGE" property="actionMessage" jdbcType="VARCHAR" />
+    <result column="ACTION_MESSAGE_NLSID" property="actionMessageNlsid" jdbcType="VARCHAR" />
+    <result column="ACTION_MESSAGE_PARAMS" property="actionMessageParams" jdbcType="VARCHAR" />
+    <result column="ADVISORY_ID" property="advisoryId" jdbcType="VARCHAR" />
+    <result column="LOAD_TIMESTAMP" property="loadTimestamp" jdbcType="DATE" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="SEVERITY_GUID" property="severityGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

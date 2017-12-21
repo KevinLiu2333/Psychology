@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OrddcmStdAttrsTmpMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OrddcmStdAttrsTmp" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SA_ID" property="saId" jdbcType="DECIMAL" />
+    <result column="TAG" property="tag" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="VR" property="vr" jdbcType="VARCHAR" />
+    <result column="VM" property="vm" jdbcType="VARCHAR" />
+    <result column="ISRETIRED" property="isretired" jdbcType="DECIMAL" />
+    <result column="ISWILDCARD" property="iswildcard" jdbcType="DECIMAL" />
+    <result column="DEFINER_NAME" property="definerName" jdbcType="VARCHAR" />
+    <result column="DEFINER_UID" property="definerUid" jdbcType="VARCHAR" />
+    <result column="DOC_ID" property="docId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VDiagHmMessageMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VDiagHmMessage" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDX" property="indx" jdbcType="DECIMAL" />
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="ADR_PATH_IDX" property="adrPathIdx" jdbcType="VARCHAR" />
+    <result column="ADR_HOME" property="adrHome" jdbcType="VARCHAR" />
+    <result column="OBJID" property="objid" jdbcType="DECIMAL" />
+    <result column="MSGID" property="msgid" jdbcType="DECIMAL" />
+    <result column="SEQNO" property="seqno" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="MSGNO" property="msgno" jdbcType="DECIMAL" />
+    <result column="ARG1" property="arg1" jdbcType="VARCHAR" />
+    <result column="ARG2" property="arg2" jdbcType="VARCHAR" />
+    <result column="ARG3" property="arg3" jdbcType="VARCHAR" />
+    <result column="ARG4" property="arg4" jdbcType="VARCHAR" />
+    <result column="ARG5" property="arg5" jdbcType="VARCHAR" />
+    <result column="ADDR" property="addr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

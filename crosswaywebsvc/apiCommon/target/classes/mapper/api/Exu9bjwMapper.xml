@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu9bjwMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu9bjw" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="IOBJID" property="iobjid" jdbcType="DECIMAL" />
+    <result column="COL1NAME" property="col1name" jdbcType="VARCHAR" />
+    <result column="T1OBJID" property="t1objid" jdbcType="DECIMAL" />
+    <result column="COL2NAME" property="col2name" jdbcType="VARCHAR" />
+    <result column="T2OBJID" property="t2objid" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

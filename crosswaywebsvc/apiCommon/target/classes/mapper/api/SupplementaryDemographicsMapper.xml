@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SupplementaryDemographicsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SupplementaryDemographics" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="CUST_ID" property="custId" jdbcType="DECIMAL" />
+    <result column="EDUCATION" property="education" jdbcType="VARCHAR" />
+    <result column="OCCUPATION" property="occupation" jdbcType="VARCHAR" />
+    <result column="HOUSEHOLD_SIZE" property="householdSize" jdbcType="VARCHAR" />
+    <result column="YRS_RESIDENCE" property="yrsResidence" jdbcType="DECIMAL" />
+    <result column="AFFINITY_CARD" property="affinityCard" jdbcType="DECIMAL" />
+    <result column="BULK_PACK_DISKETTES" property="bulkPackDiskettes" jdbcType="DECIMAL" />
+    <result column="FLAT_PANEL_MONITOR" property="flatPanelMonitor" jdbcType="DECIMAL" />
+    <result column="HOME_THEATER_PACKAGE" property="homeTheaterPackage" jdbcType="DECIMAL" />
+    <result column="BOOKKEEPING_APPLICATION" property="bookkeepingApplication" jdbcType="DECIMAL" />
+    <result column="PRINTER_SUPPLIES" property="printerSupplies" jdbcType="DECIMAL" />
+    <result column="Y_BOX_GAMES" property="yBoxGames" jdbcType="DECIMAL" />
+    <result column="OS_DOC_SET_KANJI" property="osDocSetKanji" jdbcType="DECIMAL" />
+    <result column="COMMENTS" property="comments" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

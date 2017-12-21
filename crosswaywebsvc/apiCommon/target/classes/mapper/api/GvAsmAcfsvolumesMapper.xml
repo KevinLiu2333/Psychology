@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvAsmAcfsvolumesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvAsmAcfsvolumes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="FS_NAME" property="fsName" jdbcType="VARCHAR" />
+    <result column="VOL_DEVICE" property="volDevice" jdbcType="VARCHAR" />
+    <result column="VOL_LABEL" property="volLabel" jdbcType="VARCHAR" />
+    <result column="PRIMARY_VOL" property="primaryVol" jdbcType="VARCHAR" />
+    <result column="TOTAL_MB" property="totalMb" jdbcType="DECIMAL" />
+    <result column="FREE_MB" property="freeMb" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

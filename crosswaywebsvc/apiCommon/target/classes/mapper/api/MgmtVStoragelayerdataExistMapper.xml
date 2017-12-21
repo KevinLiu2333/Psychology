@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtVStoragelayerdataExistMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtVStoragelayerdataExist" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOCAL_DISKS_EXISTS" property="localDisksExists" jdbcType="CHAR" />
+    <result column="VOLUME_EXISTS" property="volumeExists" jdbcType="CHAR" />
+    <result column="ASM_EXISTS" property="asmExists" jdbcType="CHAR" />
+    <result column="WRITEABLE_NFS_EXISTS" property="writeableNfsExists" jdbcType="CHAR" />
+    <result column="DB_EXISTS" property="dbExists" jdbcType="CHAR" />
+    <result column="LOCAL_FS_EXISTS" property="localFsExists" jdbcType="CHAR" />
+  </resultMap>
+</mapper>

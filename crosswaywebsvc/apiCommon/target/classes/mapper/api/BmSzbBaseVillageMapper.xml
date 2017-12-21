@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.BmSzbBaseVillageMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.BmSzbBaseVillage" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VILLAGE_ID" property="villageId" jdbcType="VARCHAR" />
+    <result column="ORG_CODE" property="orgCode" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="AREA" property="area" jdbcType="DECIMAL" />
+    <result column="TEAMS_COUNT" property="teamsCount" jdbcType="DECIMAL" />
+    <result column="ADDRESS" property="address" jdbcType="VARCHAR" />
+    <result column="TEL" property="tel" jdbcType="VARCHAR" />
+    <result column="EAST" property="east" jdbcType="VARCHAR" />
+    <result column="WEST" property="west" jdbcType="VARCHAR" />
+    <result column="SOUTH" property="south" jdbcType="VARCHAR" />
+    <result column="NORTH" property="north" jdbcType="VARCHAR" />
+    <result column="REGION" property="region" jdbcType="VARCHAR" />
+    <result column="WORK_AREA" property="workArea" jdbcType="DECIMAL" />
+    <result column="ACTIVITY_AREA" property="activityArea" jdbcType="DECIMAL" />
+    <result column="SYRK_COUNT" property="syrkCount" jdbcType="DECIMAL" />
+    <result column="BSHJRK_COUNT" property="bshjrkCount" jdbcType="DECIMAL" />
+    <result column="RHFL_COUNT" property="rhflCount" jdbcType="DECIMAL" />
+    <result column="LHRY_COUNT" property="lhryCount" jdbcType="DECIMAL" />
+    <result column="HJHS_COUNT" property="hjhsCount" jdbcType="DECIMAL" />
+    <result column="FHJHS_COUNT" property="fhjhsCount" jdbcType="DECIMAL" />
+    <result column="GATRY_COUNT" property="gatryCount" jdbcType="DECIMAL" />
+    <result column="FOREIGN_COUNT" property="foreignCount" jdbcType="DECIMAL" />
+    <result column="JWH_TYPE" property="jwhType" jdbcType="VARCHAR" />
+    <result column="XQ_TYPE" property="xqType" jdbcType="VARCHAR" />
+    <result column="SQGZZ_COUNT" property="sqgzzCount" jdbcType="DECIMAL" />
+    <result column="SQGZZRY_COUNT" property="sqgzzryCount" jdbcType="DECIMAL" />
+    <result column="ZHEN_CODE" property="zhenCode" jdbcType="VARCHAR" />
+    <result column="QU_CODE" property="quCode" jdbcType="VARCHAR" />
+    <result column="LAST_EDIT_TIME" property="lastEditTime" jdbcType="VARCHAR" />
+    <result column="CATALOG" property="catalog" jdbcType="VARCHAR" />
+    <result column="RZHBZ_COUNT" property="rzhbzCount" jdbcType="DECIMAL" />
+    <result column="HZRBZ_COUNT" property="hzrbzCount" jdbcType="DECIMAL" />
+    <result column="VALIDITY" property="validity" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

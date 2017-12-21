@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.JavaPolicyMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.JavaPolicy" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="KIND#" property="kind" jdbcType="DECIMAL" />
+    <result column="GRANTEE#" property="grantee" jdbcType="DECIMAL" />
+    <result column="TYPE_SCHEMA#" property="typeSchema" jdbcType="DECIMAL" />
+    <result column="TYPE_NAME" property="typeName" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="ACTION" property="action" jdbcType="VARCHAR" />
+    <result column="STATUS#" property="status" jdbcType="DECIMAL" />
+    <result column="KEY" property="key" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

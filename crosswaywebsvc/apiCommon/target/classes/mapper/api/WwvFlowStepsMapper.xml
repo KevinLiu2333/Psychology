@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowStepsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowSteps" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="TAB_SET" property="tabSet" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="ALIAS" property="alias" jdbcType="VARCHAR" />
+    <result column="PAGE_COMPONENT_MAP" property="pageComponentMap" jdbcType="VARCHAR" />
+    <result column="STEP_TITLE" property="stepTitle" jdbcType="VARCHAR" />
+    <result column="STEP_SUB_TITLE" property="stepSubTitle" jdbcType="VARCHAR" />
+    <result column="STEP_SUB_TITLE_TYPE" property="stepSubTitleType" jdbcType="VARCHAR" />
+    <result column="FIRST_ITEM" property="firstItem" jdbcType="VARCHAR" />
+    <result column="INCLUDE_APEX_CSS_JS_YN" property="includeApexCssJsYn" jdbcType="VARCHAR" />
+    <result column="WELCOME_TEXT" property="welcomeText" jdbcType="VARCHAR" />
+    <result column="BOX_WELCOME_TEXT" property="boxWelcomeText" jdbcType="VARCHAR" />
+    <result column="BOX_FOOTER_TEXT" property="boxFooterText" jdbcType="VARCHAR" />
+    <result column="FOOTER_TEXT" property="footerText" jdbcType="VARCHAR" />
+    <result column="STEP_TEMPLATE" property="stepTemplate" jdbcType="DECIMAL" />
+    <result column="BOX_IMAGE" property="boxImage" jdbcType="VARCHAR" />
+    <result column="REQUIRED_ROLE" property="requiredRole" jdbcType="VARCHAR" />
+    <result column="REQUIRED_PATCH" property="requiredPatch" jdbcType="DECIMAL" />
+    <result column="HTML_PAGE_ONLOAD" property="htmlPageOnload" jdbcType="VARCHAR" />
+    <result column="ALLOW_DUPLICATE_SUBMISSIONS" property="allowDuplicateSubmissions" jdbcType="VARCHAR" />
+    <result column="ON_DUP_SUBMISSION_GOTO_URL" property="onDupSubmissionGotoUrl" jdbcType="VARCHAR" />
+    <result column="PAGE_IS_PUBLIC_Y_N" property="pageIsPublicYN" jdbcType="VARCHAR" />
+    <result column="PROTECTION_LEVEL" property="protectionLevel" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="ERROR_NOTIFICATION_TEXT" property="errorNotificationText" jdbcType="VARCHAR" />
+    <result column="AUTOCOMPLETE_ON_OFF" property="autocompleteOnOff" jdbcType="VARCHAR" />
+    <result column="ID2" property="id2" jdbcType="DECIMAL" />
+    <result column="CACHE_PAGE_YN" property="cachePageYn" jdbcType="VARCHAR" />
+    <result column="CACHE_TIMEOUT_SECONDS" property="cacheTimeoutSeconds" jdbcType="DECIMAL" />
+    <result column="CACHE_BY_USER_YN" property="cacheByUserYn" jdbcType="VARCHAR" />
+    <result column="CACHE_WHEN_CONDITION_TYPE" property="cacheWhenConditionType" jdbcType="VARCHAR" />
+    <result column="CACHE_WHEN_CONDITION_E1" property="cacheWhenConditionE1" jdbcType="VARCHAR" />
+    <result column="CACHE_WHEN_CONDITION_E2" property="cacheWhenConditionE2" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="GROUP_ID" property="groupId" jdbcType="DECIMAL" />
+    <result column="MEDIA_TYPE" property="mediaType" jdbcType="VARCHAR" />
+    <result column="PAGE_COMMENT" property="pageComment" jdbcType="VARCHAR" />
+    <result column="HELP_TEXT" property="helpText" jdbcType="CLOB" />
+    <result column="HTML_PAGE_HEADER" property="htmlPageHeader" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvEventmetricMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvEventmetric" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="BEGIN_TIME" property="beginTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="INTSIZE_CSEC" property="intsizeCsec" jdbcType="DECIMAL" />
+    <result column="EVENT#" property="event" jdbcType="DECIMAL" />
+    <result column="EVENT_ID" property="eventId" jdbcType="DECIMAL" />
+    <result column="NUM_SESS_WAITING" property="numSessWaiting" jdbcType="DECIMAL" />
+    <result column="TIME_WAITED" property="timeWaited" jdbcType="DECIMAL" />
+    <result column="WAIT_COUNT" property="waitCount" jdbcType="DECIMAL" />
+    <result column="TIME_WAITED_FG" property="timeWaitedFg" jdbcType="DECIMAL" />
+    <result column="WAIT_COUNT_FG" property="waitCountFg" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

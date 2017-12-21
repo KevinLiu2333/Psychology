@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.EmEcmCompositeTargInstallMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.EmEcmCompositeTargInstall" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COMPOSITE_TARGET_NAME" property="compositeTargetName" jdbcType="VARCHAR" />
+    <result column="COMPOSITE_TARGET_TYPE" property="compositeTargetType" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="EXTERNAL_NAME" property="externalName" jdbcType="VARCHAR" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="NUM_INSTALLS" property="numInstalls" jdbcType="DECIMAL" />
+    <result column="NUM_INSTANCES" property="numInstances" jdbcType="DECIMAL" />
+    <result column="PATCHED" property="patched" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtJobCommandMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtJobCommand" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="COMMAND_NAME" property="commandName" jdbcType="VARCHAR" />
+    <result column="COMMAND_CLASS" property="commandClass" jdbcType="VARCHAR" />
+    <result column="COMMAND_TYPE" property="commandType" jdbcType="DECIMAL" />
+    <result column="IS_TRUSTABLE" property="isTrustable" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

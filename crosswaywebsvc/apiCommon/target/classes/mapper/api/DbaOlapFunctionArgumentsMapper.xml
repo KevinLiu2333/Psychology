@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaOlapFunctionArgumentsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaOlapFunctionArguments" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FUNCTION_USAGE_ID" property="functionUsageId" jdbcType="DECIMAL" />
+    <result column="PARAMETER_NAME" property="parameterName" jdbcType="VARCHAR" />
+    <result column="ENTITY_OWNER" property="entityOwner" jdbcType="VARCHAR" />
+    <result column="ENTITY_NAME" property="entityName" jdbcType="VARCHAR" />
+    <result column="CHILD_ENTITY_NAME" property="childEntityName" jdbcType="VARCHAR" />
+    <result column="ENTITY_TYPE" property="entityType" jdbcType="CHAR" />
+  </resultMap>
+</mapper>

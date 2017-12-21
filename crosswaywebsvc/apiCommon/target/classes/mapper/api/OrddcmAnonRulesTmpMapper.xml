@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OrddcmAnonRulesTmpMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OrddcmAnonRulesTmp" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DOC_ID" property="docId" jdbcType="DECIMAL" />
+    <result column="RULE_TYPE_ID" property="ruleTypeId" jdbcType="DECIMAL" />
+    <result column="ANON_ACTION_TYPE_ID" property="anonActionTypeId" jdbcType="DECIMAL" />
+    <result column="ANON_VALUE" property="anonValue" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

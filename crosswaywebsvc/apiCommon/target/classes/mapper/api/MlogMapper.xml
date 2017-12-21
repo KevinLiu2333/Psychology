@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MlogMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Mlog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="MOWNER" property="mowner" jdbcType="VARCHAR" />
+    <result column="MASTER" property="master" jdbcType="VARCHAR" />
+    <result column="OLDEST" property="oldest" jdbcType="DATE" />
+    <result column="OLDEST_PK" property="oldestPk" jdbcType="DATE" />
+    <result column="OLDEST_SEQ" property="oldestSeq" jdbcType="DATE" />
+    <result column="OSCN" property="oscn" jdbcType="DECIMAL" />
+    <result column="YOUNGEST" property="youngest" jdbcType="DATE" />
+    <result column="YSCN" property="yscn" jdbcType="DECIMAL" />
+    <result column="LOG" property="log" jdbcType="VARCHAR" />
+    <result column="TRIG" property="trig" jdbcType="VARCHAR" />
+    <result column="FLAG" property="flag" jdbcType="DECIMAL" />
+    <result column="MTIME" property="mtime" jdbcType="DATE" />
+    <result column="TEMP_LOG" property="tempLog" jdbcType="VARCHAR" />
+    <result column="OLDEST_OID" property="oldestOid" jdbcType="DATE" />
+    <result column="OLDEST_NEW" property="oldestNew" jdbcType="DATE" />
+    <result column="PURGE_START" property="purgeStart" jdbcType="DATE" />
+    <result column="PURGE_NEXT" property="purgeNext" jdbcType="VARCHAR" />
+    <result column="PURGE_JOB" property="purgeJob" jdbcType="VARCHAR" />
+    <result column="LAST_PURGE_DATE" property="lastPurgeDate" jdbcType="DATE" />
+    <result column="LAST_PURGE_STATUS" property="lastPurgeStatus" jdbcType="DECIMAL" />
+    <result column="ROWS_PURGED" property="rowsPurged" jdbcType="DECIMAL" />
+    <result column="OSCN_PK" property="oscnPk" jdbcType="DECIMAL" />
+    <result column="OSCN_SEQ" property="oscnSeq" jdbcType="DECIMAL" />
+    <result column="OSCN_OID" property="oscnOid" jdbcType="DECIMAL" />
+    <result column="OSCN_NEW" property="oscnNew" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

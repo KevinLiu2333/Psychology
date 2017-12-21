@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu8uscuMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu8uscu" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="IOBJID" property="iobjid" jdbcType="DECIMAL" />
+    <result column="IDOBJID" property="idobjid" jdbcType="DECIMAL" />
+    <result column="INAME" property="iname" jdbcType="VARCHAR" />
+    <result column="ITSNO" property="itsno" jdbcType="DECIMAL" />
+    <result column="IFILENO" property="ifileno" jdbcType="DECIMAL" />
+    <result column="IBLOCKNO" property="iblockno" jdbcType="DECIMAL" />
+    <result column="IBOBJID" property="ibobjid" jdbcType="DECIMAL" />
+    <result column="IPCTFREE" property="ipctfree" jdbcType="DECIMAL" />
+    <result column="IINITR" property="iinitr" jdbcType="DECIMAL" />
+    <result column="IMAXTR" property="imaxtr" jdbcType="DECIMAL" />
+    <result column="IPCTTHRES" property="ipctthres" jdbcType="DECIMAL" />
+    <result column="TSPNAME" property="tspname" jdbcType="VARCHAR" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="PRECCNT" property="preccnt" jdbcType="DECIMAL" />
+    <result column="DEFLOG" property="deflog" jdbcType="DECIMAL" />
+    <result column="IPBOBJID" property="ipbobjid" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

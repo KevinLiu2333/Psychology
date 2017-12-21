@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtJobExecCredInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtJobExecCredInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="JOB_ID" property="jobId" jdbcType="VARBINARY" />
+    <id column="EXECUTION_ID" property="executionId" jdbcType="VARBINARY" />
+    <id column="TASK_NAME" property="taskName" jdbcType="VARCHAR" />
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="CONTAINER_LOCATION" property="containerLocation" jdbcType="VARCHAR" />
+    <id column="CREDENTIAL_SET_NAME" property="credentialSetName" jdbcType="VARCHAR" />
+    <result column="CREDENTIALS_SET" property="credentialsSet" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

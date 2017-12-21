@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationAuthMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationAuth" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="IS_SUBSCRIBED" property="isSubscribed" jdbcType="VARCHAR" />
+    <result column="AUTHENTICATION_SCHEME_NAME" property="authenticationSchemeName" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="INVALID_SESSION_PAGE" property="invalidSessionPage" jdbcType="DECIMAL" />
+    <result column="INVALID_SESSION_URL" property="invalidSessionUrl" jdbcType="VARCHAR" />
+    <result column="COOKIE_NAME" property="cookieName" jdbcType="VARCHAR" />
+    <result column="COOKIE_PATH" property="cookiePath" jdbcType="VARCHAR" />
+    <result column="COOKIE_DOMAIN" property="cookieDomain" jdbcType="VARCHAR" />
+    <result column="COOKIE_SECURE" property="cookieSecure" jdbcType="VARCHAR" />
+    <result column="LDAP_HOST" property="ldapHost" jdbcType="VARCHAR" />
+    <result column="LDAP_PORT" property="ldapPort" jdbcType="VARCHAR" />
+    <result column="LDAP_DN_STRING" property="ldapDnString" jdbcType="VARCHAR" />
+    <result column="LDAP_USERNAME_EDIT_FUNCTION" property="ldapUsernameEditFunction" jdbcType="VARCHAR" />
+    <result column="LOGOUT_URL" property="logoutUrl" jdbcType="VARCHAR" />
+    <result column="HELP_TEXT" property="helpText" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="AUTHENTICATION_SCHEME_ID" property="authenticationSchemeId" jdbcType="DECIMAL" />
+    <result column="REFERENCED_SCHEMA_ID" property="referencedSchemaId" jdbcType="DECIMAL" />
+    <result column="COMPONENT_SIGNATURE" property="componentSignature" jdbcType="VARCHAR" />
+    <result column="PAGE_SENTRY_FUNCTION" property="pageSentryFunction" jdbcType="CLOB" />
+    <result column="SESSION_VERIFY_FUNCTION" property="sessionVerifyFunction" jdbcType="CLOB" />
+    <result column="PRE_AUTHENTICATION_PROCESS" property="preAuthenticationProcess" jdbcType="CLOB" />
+    <result column="AUTHENTICATION_FUNCTION" property="authenticationFunction" jdbcType="CLOB" />
+    <result column="POST_AUTHENTICATION_PROCESS" property="postAuthenticationProcess" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

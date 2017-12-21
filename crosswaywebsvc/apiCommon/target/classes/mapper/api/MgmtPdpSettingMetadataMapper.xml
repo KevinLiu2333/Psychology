@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtPdpSettingMetadataMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtPdpSettingMetadata" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="PDP_GUID" property="pdpGuid" jdbcType="VARBINARY" />
+    <id column="PDP_SETTING_NAME" property="pdpSettingName" jdbcType="VARCHAR" />
+    <result column="IS_REQUIRED" property="isRequired" jdbcType="DECIMAL" />
+    <result column="DISPLAY_NAME_NLSID" property="displayNameNlsid" jdbcType="VARCHAR" />
+    <result column="DISPLAY_NAME" property="displayName" jdbcType="VARCHAR" />
+    <result column="HINT_NLSID" property="hintNlsid" jdbcType="VARCHAR" />
+    <result column="HINT" property="hint" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

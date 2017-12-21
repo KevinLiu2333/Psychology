@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CswRecordviewmapMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CswRecordviewmap" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RECORDTYPENS" property="recordtypens" jdbcType="VARCHAR" />
+    <result column="VIEWSRCNAME" property="viewsrcname" jdbcType="VARCHAR" />
+    <result column="TARGETTYPENAME" property="targettypename" jdbcType="VARCHAR" />
+    <result column="MAPINFO" property="mapinfo" jdbcType="OTHER" />
+    <result column="MAPTYPE" property="maptype" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

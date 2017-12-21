@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CoreCorpPunishMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CoreCorpPunish" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="PUNISH_ID" property="punishId" jdbcType="VARCHAR" />
+    <result column="CORE_CORP_ID" property="coreCorpId" jdbcType="VARCHAR" />
+    <result column="UNI_SC_ID" property="uniScId" jdbcType="VARCHAR" />
+    <result column="ORGAN_CODE" property="organCode" jdbcType="VARCHAR" />
+    <result column="CORP_NAME" property="corpName" jdbcType="VARCHAR" />
+    <result column="PUNISH_CODE" property="punishCode" jdbcType="VARCHAR" />
+    <result column="PUNISH_UNIT" property="punishUnit" jdbcType="VARCHAR" />
+    <result column="PUNISH_DEPT" property="punishDept" jdbcType="VARCHAR" />
+    <result column="PUNISH_BASIS" property="punishBasis" jdbcType="VARCHAR" />
+    <result column="PUNISH_MEASURES" property="punishMeasures" jdbcType="VARCHAR" />
+    <result column="PUNISH_CONTENT" property="punishContent" jdbcType="VARCHAR" />
+    <result column="PUNISH_LIMIT" property="punishLimit" jdbcType="VARCHAR" />
+    <result column="PUNISH_DATE" property="punishDate" jdbcType="DATE" />
+    <result column="AREA_CODE" property="areaCode" jdbcType="VARCHAR" />
+    <result column="ILLEGAL_ADDRESS" property="illegalAddress" jdbcType="VARCHAR" />
+    <result column="ILLEGAL_DATE" property="illegalDate" jdbcType="DATE" />
+    <result column="ILLEGAL_CONTEXT" property="illegalContext" jdbcType="VARCHAR" />
+    <result column="ILLEGAL_EVIDENCE" property="illegalEvidence" jdbcType="VARCHAR" />
+    <result column="ILLEGAL_RULE" property="illegalRule" jdbcType="VARCHAR" />
+    <result column="VALIDITY" property="validity" jdbcType="CHAR" />
+  </resultMap>
+</mapper>

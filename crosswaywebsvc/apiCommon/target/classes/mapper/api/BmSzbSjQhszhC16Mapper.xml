@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.BmSzbSjQhszhC16Mapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.BmSzbSjQhszhC16" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="QHSZH_C16_ID" property="qhszhC16Id" jdbcType="VARCHAR" />
+    <result column="AM_MON" property="amMon" jdbcType="VARCHAR" />
+    <result column="AM_TUE" property="amTue" jdbcType="VARCHAR" />
+    <result column="AM_WED" property="amWed" jdbcType="VARCHAR" />
+    <result column="AM_THU" property="amThu" jdbcType="VARCHAR" />
+    <result column="AM_FRI" property="amFri" jdbcType="VARCHAR" />
+    <result column="AM_SAT" property="amSat" jdbcType="VARCHAR" />
+    <result column="AM_SUN" property="amSun" jdbcType="VARCHAR" />
+    <result column="PM_MON" property="pmMon" jdbcType="VARCHAR" />
+    <result column="PM_TUE" property="pmTue" jdbcType="VARCHAR" />
+    <result column="PM_WED" property="pmWed" jdbcType="VARCHAR" />
+    <result column="PM_THU" property="pmThu" jdbcType="VARCHAR" />
+    <result column="PM_FRI" property="pmFri" jdbcType="VARCHAR" />
+    <result column="PM_SAT" property="pmSat" jdbcType="VARCHAR" />
+    <result column="PM_SUN" property="pmSun" jdbcType="VARCHAR" />
+    <result column="MEMO_MON" property="memoMon" jdbcType="VARCHAR" />
+    <result column="MEMO_TUE" property="memoTue" jdbcType="VARCHAR" />
+    <result column="MEMO_WED" property="memoWed" jdbcType="VARCHAR" />
+    <result column="MEMO_THU" property="memoThu" jdbcType="VARCHAR" />
+    <result column="MEMO_FRI" property="memoFri" jdbcType="VARCHAR" />
+    <result column="MEMO_SAT" property="memoSat" jdbcType="VARCHAR" />
+    <result column="MEMO_SUN" property="memoSun" jdbcType="VARCHAR" />
+    <result column="FWZ_NAME" property="fwzName" jdbcType="VARCHAR" />
+    <result column="BELONG_TOWN" property="belongTown" jdbcType="VARCHAR" />
+    <result column="BELONG_COMMUNITY" property="belongCommunity" jdbcType="VARCHAR" />
+    <result column="TASK_NO" property="taskNo" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

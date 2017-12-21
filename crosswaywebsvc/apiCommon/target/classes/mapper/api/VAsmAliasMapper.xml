@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VAsmAliasMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VAsmAlias" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="GROUP_NUMBER" property="groupNumber" jdbcType="DECIMAL" />
+    <result column="FILE_NUMBER" property="fileNumber" jdbcType="DECIMAL" />
+    <result column="FILE_INCARNATION" property="fileIncarnation" jdbcType="DECIMAL" />
+    <result column="ALIAS_INDEX" property="aliasIndex" jdbcType="DECIMAL" />
+    <result column="ALIAS_INCARNATION" property="aliasIncarnation" jdbcType="DECIMAL" />
+    <result column="PARENT_INDEX" property="parentIndex" jdbcType="DECIMAL" />
+    <result column="REFERENCE_INDEX" property="referenceIndex" jdbcType="DECIMAL" />
+    <result column="ALIAS_DIRECTORY" property="aliasDirectory" jdbcType="VARCHAR" />
+    <result column="SYSTEM_CREATED" property="systemCreated" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OlapiIfaceOpHistoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OlapiIfaceOpHistory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <id column="HIST_ID" property="histId" jdbcType="DECIMAL" />
+    <id column="SEQNO" property="seqno" jdbcType="DECIMAL" />
+    <result column="XSOQOJHI_SEQNO" property="xsoqojhiSeqno" jdbcType="DECIMAL" />
+    <result column="METHOD_NAME" property="methodName" jdbcType="VARCHAR" />
+    <result column="RPCSTYLE" property="rpcstyle" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="SQL2CPP" property="sql2cpp" jdbcType="DECIMAL" />
+    <result column="CPPEXEC" property="cppexec" jdbcType="DECIMAL" />
+    <result column="CPP2SQL" property="cpp2sql" jdbcType="DECIMAL" />
+    <result column="GH_KGHGHS" property="ghKghghs" jdbcType="DECIMAL" />
+    <result column="GH_KGHASP" property="ghKghasp" jdbcType="DECIMAL" />
+    <result column="GH_KGHNSP" property="ghKghnsp" jdbcType="DECIMAL" />
+    <result column="SH_KGHGHS" property="shKghghs" jdbcType="DECIMAL" />
+    <result column="SH_KGHASP" property="shKghasp" jdbcType="DECIMAL" />
+    <result column="SH_KGHNSP" property="shKghnsp" jdbcType="DECIMAL" />
+    <result column="JAVA2SQL" property="java2sql" jdbcType="DECIMAL" />
+    <result column="SQLEXEC" property="sqlexec" jdbcType="DECIMAL" />
+    <result column="SQL2JAVA" property="sql2java" jdbcType="DECIMAL" />
+    <result column="GLBHEAP" property="glbheap" jdbcType="VARBINARY" />
+    <result column="SESSHEAP" property="sessheap" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

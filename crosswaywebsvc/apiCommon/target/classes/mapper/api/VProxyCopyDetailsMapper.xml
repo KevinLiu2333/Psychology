@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VProxyCopyDetailsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VProxyCopyDetails" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SESSION_KEY" property="sessionKey" jdbcType="DECIMAL" />
+    <result column="SESSION_RECID" property="sessionRecid" jdbcType="DECIMAL" />
+    <result column="SESSION_STAMP" property="sessionStamp" jdbcType="DECIMAL" />
+    <result column="COPY_KEY" property="copyKey" jdbcType="DECIMAL" />
+    <result column="FILE#" property="file" jdbcType="DECIMAL" />
+    <result column="HANDLE" property="handle" jdbcType="VARCHAR" />
+    <result column="MEDIA" property="media" jdbcType="VARCHAR" />
+    <result column="MEDIA_POOL" property="mediaPool" jdbcType="DECIMAL" />
+    <result column="TAG" property="tag" jdbcType="VARCHAR" />
+    <result column="CREATION_CHANGE#" property="creationChange" jdbcType="DECIMAL" />
+    <result column="CREATION_TIME" property="creationTime" jdbcType="DATE" />
+    <result column="CHECKPOINT_CHANGE#" property="checkpointChange" jdbcType="DECIMAL" />
+    <result column="CHECKPOINT_TIME" property="checkpointTime" jdbcType="DATE" />
+    <result column="OUTPUT_BYTES" property="outputBytes" jdbcType="DECIMAL" />
+    <result column="COMPLETION_TIME" property="completionTime" jdbcType="DATE" />
+    <result column="CONTROLFILE_TYPE" property="controlfileType" jdbcType="VARCHAR" />
+    <result column="KEEP" property="keep" jdbcType="VARCHAR" />
+    <result column="KEEP_UNTIL" property="keepUntil" jdbcType="DATE" />
+    <result column="KEEP_OPTIONS" property="keepOptions" jdbcType="VARCHAR" />
+    <result column="OUTPUT_BYTES_DISPLAY" property="outputBytesDisplay" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

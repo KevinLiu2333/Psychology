@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Cwm2AwcubecreateaccessMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Cwm2Awcubecreateaccess" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RUNID#" property="runid" jdbcType="DECIMAL" />
+    <result column="CUBE_OWNER" property="cubeOwner" jdbcType="VARCHAR" />
+    <result column="CUBE_NAME" property="cubeName" jdbcType="VARCHAR" />
+    <result column="PROCESSACTION" property="processaction" jdbcType="VARCHAR" />
+    <result column="QUERY_TEXT" property="queryText" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

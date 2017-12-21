@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaTriggersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaTriggers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="TRIGGER_NAME" property="triggerName" jdbcType="VARCHAR" />
+    <result column="TRIGGER_TYPE" property="triggerType" jdbcType="VARCHAR" />
+    <result column="TRIGGERING_EVENT" property="triggeringEvent" jdbcType="VARCHAR" />
+    <result column="TABLE_OWNER" property="tableOwner" jdbcType="VARCHAR" />
+    <result column="BASE_OBJECT_TYPE" property="baseObjectType" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="REFERENCING_NAMES" property="referencingNames" jdbcType="VARCHAR" />
+    <result column="WHEN_CLAUSE" property="whenClause" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="ACTION_TYPE" property="actionType" jdbcType="VARCHAR" />
+    <result column="CROSSEDITION" property="crossedition" jdbcType="VARCHAR" />
+    <result column="BEFORE_STATEMENT" property="beforeStatement" jdbcType="VARCHAR" />
+    <result column="BEFORE_ROW" property="beforeRow" jdbcType="VARCHAR" />
+    <result column="AFTER_ROW" property="afterRow" jdbcType="VARCHAR" />
+    <result column="AFTER_STATEMENT" property="afterStatement" jdbcType="VARCHAR" />
+    <result column="INSTEAD_OF_ROW" property="insteadOfRow" jdbcType="VARCHAR" />
+    <result column="FIRE_ONCE" property="fireOnce" jdbcType="VARCHAR" />
+    <result column="APPLY_SERVER_ONLY" property="applyServerOnly" jdbcType="VARCHAR" />
+    <result column="TRIGGER_BODY" property="triggerBody" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

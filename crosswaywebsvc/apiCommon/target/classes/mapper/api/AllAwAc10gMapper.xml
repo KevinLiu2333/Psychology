@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllAwAc10gMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllAwAc10g" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="AW_NUMBER" property="awNumber" jdbcType="DECIMAL" />
+    <result column="AW_NAME" property="awName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

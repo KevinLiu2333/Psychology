@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrObjectAttributeMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrObjectAttribute" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OAT_ID" property="oatId" jdbcType="DECIMAL" />
+    <result column="OAT_CLA_ID" property="oatClaId" jdbcType="DECIMAL" />
+    <result column="OAT_OBJ_ID" property="oatObjId" jdbcType="DECIMAL" />
+    <result column="OAT_ATT_ID" property="oatAttId" jdbcType="DECIMAL" />
+    <result column="OAT_NAME" property="oatName" jdbcType="VARCHAR" />
+    <result column="OAT_DESC" property="oatDesc" jdbcType="VARCHAR" />
+    <result column="OAT_REQUIRED" property="oatRequired" jdbcType="CHAR" />
+    <result column="OAT_SYSTEM" property="oatSystem" jdbcType="CHAR" />
+    <result column="OAT_STATIC" property="oatStatic" jdbcType="CHAR" />
+    <result column="OAT_DATATYPE" property="oatDatatype" jdbcType="CHAR" />
+    <result column="OAT_DEFAULT" property="oatDefault" jdbcType="VARCHAR" />
+    <result column="OAT_VAL_MIN" property="oatValMin" jdbcType="DECIMAL" />
+    <result column="OAT_VAL_MAX" property="oatValMax" jdbcType="DECIMAL" />
+    <result column="OAT_LOV" property="oatLov" jdbcType="CHAR" />
+  </resultMap>
+</mapper>

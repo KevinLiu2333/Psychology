@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.EmEcmInstallsGroupsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.EmEcmInstallsGroups" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COMPOSITE_TARGET_NAME" property="compositeTargetName" jdbcType="VARCHAR" />
+    <result column="COMPOSITE_TARGET_TYPE" property="compositeTargetType" jdbcType="VARCHAR" />
+    <result column="SOFTWARE_TARGET_NAME" property="softwareTargetName" jdbcType="VARCHAR" />
+    <result column="SOFTWARE_TARGET_TYPE" property="softwareTargetType" jdbcType="VARCHAR" />
+    <result column="DISPLAY_HOST_NAME" property="displayHostName" jdbcType="VARCHAR" />
+    <result column="HOST_NAME" property="hostName" jdbcType="VARCHAR" />
+    <result column="CONTAINER_NAME" property="containerName" jdbcType="VARCHAR" />
+    <result column="CONTAINER_LOCATION" property="containerLocation" jdbcType="VARCHAR" />
+    <result column="EXTERNAL_NAME" property="externalName" jdbcType="VARCHAR" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="COMPONENT_NAME" property="componentName" jdbcType="VARCHAR" />
+    <result column="PROPERTY_NAME" property="propertyName" jdbcType="VARCHAR" />
+    <result column="PROPERTY_VALUE" property="propertyValue" jdbcType="VARCHAR" />
+    <result column="SOFTWARE_TARGET_GUID" property="softwareTargetGuid" jdbcType="VARBINARY" />
+    <result column="CONTAINER_GUID" property="containerGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

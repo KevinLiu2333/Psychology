@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtSoftwarePatchesInHomesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtSoftwarePatchesInHomes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HOST_NAME" property="hostName" jdbcType="VARCHAR" />
+    <result column="HOME_NAME" property="homeName" jdbcType="VARCHAR" />
+    <result column="HOME_LOCATION" property="homeLocation" jdbcType="VARCHAR" />
+    <result column="PATCH_ID" property="patchId" jdbcType="VARCHAR" />
+    <result column="BUGS_FIXED" property="bugsFixed" jdbcType="VARCHAR" />
+    <result column="SNAPSHOT_GUID" property="snapshotGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VCurrentBlockServerMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VCurrentBlockServer" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PIN1" property="pin1" jdbcType="DECIMAL" />
+    <result column="PIN10" property="pin10" jdbcType="DECIMAL" />
+    <result column="PIN100" property="pin100" jdbcType="DECIMAL" />
+    <result column="PIN1000" property="pin1000" jdbcType="DECIMAL" />
+    <result column="PIN10000" property="pin10000" jdbcType="DECIMAL" />
+    <result column="FLUSH1" property="flush1" jdbcType="DECIMAL" />
+    <result column="FLUSH10" property="flush10" jdbcType="DECIMAL" />
+    <result column="FLUSH100" property="flush100" jdbcType="DECIMAL" />
+    <result column="FLUSH1000" property="flush1000" jdbcType="DECIMAL" />
+    <result column="FLUSH10000" property="flush10000" jdbcType="DECIMAL" />
+    <result column="WRITE1" property="write1" jdbcType="DECIMAL" />
+    <result column="WRITE10" property="write10" jdbcType="DECIMAL" />
+    <result column="WRITE100" property="write100" jdbcType="DECIMAL" />
+    <result column="WRITE1000" property="write1000" jdbcType="DECIMAL" />
+    <result column="WRITE10000" property="write10000" jdbcType="DECIMAL" />
+    <result column="CLEANDC" property="cleandc" jdbcType="DECIMAL" />
+    <result column="RCVDC" property="rcvdc" jdbcType="DECIMAL" />
+    <result column="QUEUEDC" property="queuedc" jdbcType="DECIMAL" />
+    <result column="EVICTDC" property="evictdc" jdbcType="DECIMAL" />
+    <result column="WRITEDC" property="writedc" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtHostpatchHostComplMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtHostpatchHostCompl" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HOST_NAME" property="hostName" jdbcType="VARCHAR" />
+    <result column="PKG_NAME" property="pkgName" jdbcType="VARCHAR" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="IS_OUT_OF_DATE" property="isOutOfDate" jdbcType="DECIMAL" />
+    <result column="IS_ROGUE" property="isRogue" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

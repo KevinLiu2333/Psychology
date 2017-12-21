@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigFrmBlkItemRadioMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigFrmBlkItemRadio" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="ITEM_ID" property="itemId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="LABEL" property="label" jdbcType="VARCHAR" />
+    <result column="ACCESSKEY" property="accesskey" jdbcType="VARCHAR" />
+    <result column="RADIOBUTTONVALUE" property="radiobuttonvalue" jdbcType="VARCHAR" />
+    <result column="BACKCOLOR" property="backcolor" jdbcType="VARCHAR" />
+    <result column="WIDTH" property="width" jdbcType="VARCHAR" />
+    <result column="HEIGHT" property="height" jdbcType="VARCHAR" />
+    <result column="XPOSITION" property="xposition" jdbcType="VARCHAR" />
+    <result column="YPOSITION" property="yposition" jdbcType="VARCHAR" />
+    <result column="DIRTYINFO" property="dirtyinfo" jdbcType="VARCHAR" />
+    <result column="FONTNAME" property="fontname" jdbcType="VARCHAR" />
+    <result column="FONTWEIGHT" property="fontweight" jdbcType="VARCHAR" />
+    <result column="FONTSPACING" property="fontspacing" jdbcType="VARCHAR" />
+    <result column="DISTANCEBETWEENRECORDS" property="distancebetweenrecords" jdbcType="VARCHAR" />
+    <result column="ENABLED" property="enabled" jdbcType="VARCHAR" />
+    <result column="FILLPATTERN" property="fillpattern" jdbcType="VARCHAR" />
+    <result column="FONTSIZE" property="fontsize" jdbcType="VARCHAR" />
+    <result column="FONTSTYLE" property="fontstyle" jdbcType="VARCHAR" />
+    <result column="FOREGROUNDCOLOR" property="foregroundcolor" jdbcType="VARCHAR" />
+    <result column="PARENTFILENAME" property="parentfilename" jdbcType="VARCHAR" />
+    <result column="PARENTFILEPATH" property="parentfilepath" jdbcType="VARCHAR" />
+    <result column="PARENTMODULE" property="parentmodule" jdbcType="VARCHAR" />
+    <result column="PARENTMODULETYPE" property="parentmoduletype" jdbcType="VARCHAR" />
+    <result column="PARENTNAME" property="parentname" jdbcType="VARCHAR" />
+    <result column="PARENTSOURCELEVEL1OBJECTNAME" property="parentsourcelevel1objectname" jdbcType="VARCHAR" />
+    <result column="PARENTSOURCELEVEL1OBJECTTYPE" property="parentsourcelevel1objecttype" jdbcType="VARCHAR" />
+    <result column="PARENTSOURCELEVEL2OBJECTNAME" property="parentsourcelevel2objectname" jdbcType="VARCHAR" />
+    <result column="PARENTSOURCELEVEL2OBJECTTYPE" property="parentsourcelevel2objecttype" jdbcType="VARCHAR" />
+    <result column="PARENTTYPE" property="parenttype" jdbcType="VARCHAR" />
+    <result column="PERSISTENTCLIENTINFOLENGTH" property="persistentclientinfolength" jdbcType="VARCHAR" />
+    <result column="RADIOBUTTON_PROMPT" property="radiobuttonPrompt" jdbcType="VARCHAR" />
+    <result column="PROMPTALIGN" property="promptalign" jdbcType="VARCHAR" />
+    <result column="PROMPTALIGNOFFSET" property="promptalignoffset" jdbcType="VARCHAR" />
+    <result column="PROMPTATTACHMENTEDGE" property="promptattachmentedge" jdbcType="VARCHAR" />
+    <result column="PROMPTATTACHMENTOFFSET" property="promptattachmentoffset" jdbcType="VARCHAR" />
+    <result column="PROMPTBACKCOLOR" property="promptbackcolor" jdbcType="VARCHAR" />
+    <result column="PROMPTDISPLAYSTYLE" property="promptdisplaystyle" jdbcType="VARCHAR" />
+    <result column="PROMPTFILLPATTERN" property="promptfillpattern" jdbcType="VARCHAR" />
+    <result column="PROMPTFONTNAME" property="promptfontname" jdbcType="VARCHAR" />
+    <result column="PROMPTFONTSIZE" property="promptfontsize" jdbcType="VARCHAR" />
+    <result column="PROMPTFONTSPACING" property="promptfontspacing" jdbcType="VARCHAR" />
+    <result column="PROMPTFONTSTYLE" property="promptfontstyle" jdbcType="VARCHAR" />
+    <result column="PROMPTFONTWEIGHT" property="promptfontweight" jdbcType="VARCHAR" />
+    <result column="PROMPTFOREGROUNDCOLOR" property="promptforegroundcolor" jdbcType="VARCHAR" />
+    <result column="PROMPTJUSTIFICATION" property="promptjustification" jdbcType="VARCHAR" />
+    <result column="PROMPTREADINGORDER" property="promptreadingorder" jdbcType="VARCHAR" />
+    <result column="PROMPTVISUALATTRIBUTENAME" property="promptvisualattributename" jdbcType="VARCHAR" />
+    <result column="SMARTCLASS" property="smartclass" jdbcType="VARCHAR" />
+    <result column="SUBCLASSSUBOBJECT" property="subclasssubobject" jdbcType="VARCHAR" />
+    <result column="VISIBLE" property="visible" jdbcType="VARCHAR" />
+    <result column="VISUALATTRIBUTENAME" property="visualattributename" jdbcType="VARCHAR" />
+    <result column="SELECT_FOR_APP" property="selectForApp" jdbcType="VARCHAR" />
+    <result column="APPLICABLE" property="applicable" jdbcType="VARCHAR" />
+    <result column="COMPLETE" property="complete" jdbcType="VARCHAR" />
+    <result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+    <result column="ASSIGNEE" property="assignee" jdbcType="VARCHAR" />
+    <result column="NOTES" property="notes" jdbcType="VARCHAR" />
+    <result column="TAGS" property="tags" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="RADIOBUTTON_COMMENT" property="radiobuttonComment" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

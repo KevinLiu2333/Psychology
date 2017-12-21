@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllApplyProgressMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllApplyProgress" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="APPLY_NAME" property="applyName" jdbcType="VARCHAR" />
+    <result column="SOURCE_DATABASE" property="sourceDatabase" jdbcType="VARCHAR" />
+    <result column="APPLIED_MESSAGE_NUMBER" property="appliedMessageNumber" jdbcType="DECIMAL" />
+    <result column="OLDEST_MESSAGE_NUMBER" property="oldestMessageNumber" jdbcType="DECIMAL" />
+    <result column="APPLY_TIME" property="applyTime" jdbcType="DATE" />
+    <result column="APPLIED_MESSAGE_CREATE_TIME" property="appliedMessageCreateTime" jdbcType="DATE" />
+    <result column="OLDEST_TRANSACTION_ID" property="oldestTransactionId" jdbcType="VARCHAR" />
+    <result column="SPILL_MESSAGE_NUMBER" property="spillMessageNumber" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

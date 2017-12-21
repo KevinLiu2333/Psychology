@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtPafTextualDataMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtPafTextualData" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DATA_GUID" property="dataGuid" jdbcType="VARCHAR" />
+    <result column="DATA_SIZE" property="dataSize" jdbcType="DECIMAL" />
+    <result column="ENCODING" property="encoding" jdbcType="VARCHAR" />
+    <result column="DATA0" property="data0" jdbcType="VARCHAR" />
+    <result column="DATA1" property="data1" jdbcType="VARCHAR" />
+    <result column="DATA2" property="data2" jdbcType="VARCHAR" />
+    <result column="DATA3" property="data3" jdbcType="VARCHAR" />
+    <result column="DATA4" property="data4" jdbcType="VARCHAR" />
+    <result column="DATA5" property="data5" jdbcType="VARCHAR" />
+    <result column="DATA6" property="data6" jdbcType="VARCHAR" />
+    <result column="DATA7" property="data7" jdbcType="VARCHAR" />
+    <result column="DATA8" property="data8" jdbcType="VARCHAR" />
+    <result column="DATA9" property="data9" jdbcType="VARCHAR" />
+    <result column="DATA10" property="data10" jdbcType="VARCHAR" />
+    <result column="DATA11" property="data11" jdbcType="VARCHAR" />
+    <result column="DATA12" property="data12" jdbcType="VARCHAR" />
+    <result column="DATA13" property="data13" jdbcType="VARCHAR" />
+    <result column="DATA14" property="data14" jdbcType="VARCHAR" />
+    <result column="DATA15" property="data15" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

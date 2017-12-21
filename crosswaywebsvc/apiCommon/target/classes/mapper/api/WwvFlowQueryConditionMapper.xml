@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowQueryConditionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowQueryCondition" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="QUERY_ID" property="queryId" jdbcType="DECIMAL" />
+    <result column="CONDITION" property="condition" jdbcType="VARCHAR" />
+    <result column="COND_COLUMN" property="condColumn" jdbcType="VARCHAR" />
+    <result column="COND_ID1" property="condId1" jdbcType="DECIMAL" />
+    <result column="COND_ID2" property="condId2" jdbcType="DECIMAL" />
+    <result column="COND_ROOT" property="condRoot" jdbcType="VARCHAR" />
+    <result column="OPERATOR" property="operator" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+  </resultMap>
+</mapper>

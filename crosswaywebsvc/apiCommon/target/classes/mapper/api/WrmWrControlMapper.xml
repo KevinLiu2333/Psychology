@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrmWrControlMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrmWrControl" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="SNAP_INTERVAL" property="snapInterval" jdbcType="OTHER" />
+    <result column="SNAPINT_NUM" property="snapintNum" jdbcType="DECIMAL" />
+    <result column="RETENTION" property="retention" jdbcType="OTHER" />
+    <result column="RETENTION_NUM" property="retentionNum" jdbcType="DECIMAL" />
+    <result column="MOST_RECENT_SNAP_ID" property="mostRecentSnapId" jdbcType="DECIMAL" />
+    <result column="MOST_RECENT_SNAP_TIME" property="mostRecentSnapTime" jdbcType="OTHER" />
+    <result column="MRCT_SNAP_TIME_NUM" property="mrctSnapTimeNum" jdbcType="DECIMAL" />
+    <result column="STATUS_FLAG" property="statusFlag" jdbcType="DECIMAL" />
+    <result column="MOST_RECENT_PURGE_TIME" property="mostRecentPurgeTime" jdbcType="OTHER" />
+    <result column="MRCT_PURGE_TIME_NUM" property="mrctPurgeTimeNum" jdbcType="DECIMAL" />
+    <result column="MOST_RECENT_SPLIT_ID" property="mostRecentSplitId" jdbcType="DECIMAL" />
+    <result column="MOST_RECENT_SPLIT_TIME" property="mostRecentSplitTime" jdbcType="DECIMAL" />
+    <result column="SWRF_VERSION" property="swrfVersion" jdbcType="DECIMAL" />
+    <result column="REGISTRATION_STATUS" property="registrationStatus" jdbcType="DECIMAL" />
+    <result column="MRCT_BASELINE_ID" property="mrctBaselineId" jdbcType="DECIMAL" />
+    <result column="TOPNSQL" property="topnsql" jdbcType="DECIMAL" />
+    <result column="MRCT_BLTMPL_ID" property="mrctBltmplId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

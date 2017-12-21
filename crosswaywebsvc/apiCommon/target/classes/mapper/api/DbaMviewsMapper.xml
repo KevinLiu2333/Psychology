@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaMviewsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaMviews" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="MVIEW_NAME" property="mviewName" jdbcType="VARCHAR" />
+    <result column="CONTAINER_NAME" property="containerName" jdbcType="VARCHAR" />
+    <result column="QUERY_LEN" property="queryLen" jdbcType="DECIMAL" />
+    <result column="UPDATABLE" property="updatable" jdbcType="VARCHAR" />
+    <result column="UPDATE_LOG" property="updateLog" jdbcType="VARCHAR" />
+    <result column="MASTER_ROLLBACK_SEG" property="masterRollbackSeg" jdbcType="VARCHAR" />
+    <result column="MASTER_LINK" property="masterLink" jdbcType="VARCHAR" />
+    <result column="REWRITE_ENABLED" property="rewriteEnabled" jdbcType="VARCHAR" />
+    <result column="REWRITE_CAPABILITY" property="rewriteCapability" jdbcType="VARCHAR" />
+    <result column="REFRESH_MODE" property="refreshMode" jdbcType="VARCHAR" />
+    <result column="REFRESH_METHOD" property="refreshMethod" jdbcType="VARCHAR" />
+    <result column="BUILD_MODE" property="buildMode" jdbcType="VARCHAR" />
+    <result column="FAST_REFRESHABLE" property="fastRefreshable" jdbcType="VARCHAR" />
+    <result column="LAST_REFRESH_TYPE" property="lastRefreshType" jdbcType="VARCHAR" />
+    <result column="LAST_REFRESH_DATE" property="lastRefreshDate" jdbcType="DATE" />
+    <result column="STALENESS" property="staleness" jdbcType="VARCHAR" />
+    <result column="AFTER_FAST_REFRESH" property="afterFastRefresh" jdbcType="VARCHAR" />
+    <result column="UNKNOWN_PREBUILT" property="unknownPrebuilt" jdbcType="VARCHAR" />
+    <result column="UNKNOWN_PLSQL_FUNC" property="unknownPlsqlFunc" jdbcType="VARCHAR" />
+    <result column="UNKNOWN_EXTERNAL_TABLE" property="unknownExternalTable" jdbcType="VARCHAR" />
+    <result column="UNKNOWN_CONSIDER_FRESH" property="unknownConsiderFresh" jdbcType="VARCHAR" />
+    <result column="UNKNOWN_IMPORT" property="unknownImport" jdbcType="VARCHAR" />
+    <result column="UNKNOWN_TRUSTED_FD" property="unknownTrustedFd" jdbcType="VARCHAR" />
+    <result column="COMPILE_STATE" property="compileState" jdbcType="VARCHAR" />
+    <result column="USE_NO_INDEX" property="useNoIndex" jdbcType="VARCHAR" />
+    <result column="STALE_SINCE" property="staleSince" jdbcType="DATE" />
+    <result column="NUM_PCT_TABLES" property="numPctTables" jdbcType="DECIMAL" />
+    <result column="NUM_FRESH_PCT_REGIONS" property="numFreshPctRegions" jdbcType="DECIMAL" />
+    <result column="NUM_STALE_PCT_REGIONS" property="numStalePctRegions" jdbcType="DECIMAL" />
+    <result column="QUERY" property="query" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

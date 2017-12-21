@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhSqltextMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhSqltext" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="COMMAND_TYPE" property="commandType" jdbcType="DECIMAL" />
+    <result column="REF_COUNT" property="refCount" jdbcType="DECIMAL" />
+    <result column="SQL_TEXT" property="sqlText" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

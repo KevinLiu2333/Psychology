@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AdmExpfilPrivilegesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AdmExpfilPrivileges" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="EXPSET_OWNER" property="expsetOwner" jdbcType="VARCHAR" />
+    <result column="EXPSET_TABLE" property="expsetTable" jdbcType="VARCHAR" />
+    <result column="EXPSET_COLUMN" property="expsetColumn" jdbcType="VARCHAR" />
+    <result column="GRANTEE" property="grantee" jdbcType="VARCHAR" />
+    <result column="INSERT_PRIV" property="insertPriv" jdbcType="VARCHAR" />
+    <result column="UPDATE_PRIV" property="updatePriv" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

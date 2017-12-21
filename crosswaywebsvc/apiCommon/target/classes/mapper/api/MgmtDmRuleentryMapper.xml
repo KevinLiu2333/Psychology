@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtDmRuleentryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtDmRuleentry" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="RULE_GUID" property="ruleGuid" jdbcType="VARBINARY" />
+    <id column="ENTRY_ORDER" property="entryOrder" jdbcType="DECIMAL" />
+    <result column="RULE_TYPE" property="ruleType" jdbcType="VARCHAR" />
+    <result column="RULE_OPTION" property="ruleOption" jdbcType="VARCHAR" />
+    <result column="RULE_LOW" property="ruleLow" jdbcType="DECIMAL" />
+    <result column="RULE_HIGH" property="ruleHigh" jdbcType="DECIMAL" />
+    <result column="START_DATE" property="startDate" jdbcType="DATE" />
+    <result column="END_DATE" property="endDate" jdbcType="DATE" />
+    <result column="FIXED_STRING" property="fixedString" jdbcType="VARCHAR" />
+    <result column="FIXED_NUMBER" property="fixedNumber" jdbcType="DECIMAL" />
+    <result column="TABLE_SCHEMA" property="tableSchema" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="UDF_NAME" property="udfName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

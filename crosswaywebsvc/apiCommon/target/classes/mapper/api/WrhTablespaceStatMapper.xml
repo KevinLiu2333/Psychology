@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhTablespaceStatMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhTablespaceStat" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="TS#" property="ts" jdbcType="DECIMAL" />
+    <result column="TSNAME" property="tsname" jdbcType="VARCHAR" />
+    <result column="CONTENTS" property="contents" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="SEGMENT_SPACE_MANAGEMENT" property="segmentSpaceManagement" jdbcType="VARCHAR" />
+    <result column="EXTENT_MANAGEMENT" property="extentManagement" jdbcType="VARCHAR" />
+    <result column="IS_BACKUP" property="isBackup" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaLogstdbySkipMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaLogstdbySkip" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ERROR" property="error" jdbcType="VARCHAR" />
+    <result column="STATEMENT_OPT" property="statementOpt" jdbcType="VARCHAR" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="USE_LIKE" property="useLike" jdbcType="VARCHAR" />
+    <result column="ESC" property="esc" jdbcType="VARCHAR" />
+    <result column="PROC" property="proc" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationSuppObjectsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationSuppObjects" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="BUILD_OPTIONS" property="buildOptions" jdbcType="DECIMAL" />
+    <result column="INCLUDE_IN_APPLICATION_EXPORT" property="includeInApplicationExport" jdbcType="VARCHAR" />
+    <result column="WELCOME_MESSAGE" property="welcomeMessage" jdbcType="VARCHAR" />
+    <result column="LICENSE_MESSAGE" property="licenseMessage" jdbcType="VARCHAR" />
+    <result column="VALIDATION_MESSAGE" property="validationMessage" jdbcType="VARCHAR" />
+    <result column="INSTALLATION_MESSAGE" property="installationMessage" jdbcType="VARCHAR" />
+    <result column="INSTALLATION_SUCCESS_MESSAGE" property="installationSuccessMessage" jdbcType="VARCHAR" />
+    <result column="INSTALLATION_FAILURE_MESSAGE" property="installationFailureMessage" jdbcType="VARCHAR" />
+    <result column="INSTALLATION_SCRIPTS" property="installationScripts" jdbcType="DECIMAL" />
+    <result column="UPGRADE_WHEN_QUERY" property="upgradeWhenQuery" jdbcType="VARCHAR" />
+    <result column="UPGRADE_MESSAGE" property="upgradeMessage" jdbcType="VARCHAR" />
+    <result column="UPGRADE_CONFIRM_MESSAGE" property="upgradeConfirmMessage" jdbcType="VARCHAR" />
+    <result column="UPGRADE_SUCCESS_MESSAGE" property="upgradeSuccessMessage" jdbcType="VARCHAR" />
+    <result column="UPGRADE_FAILURE_MESSAGE" property="upgradeFailureMessage" jdbcType="VARCHAR" />
+    <result column="UPGRADE_SCRIPTS" property="upgradeScripts" jdbcType="DECIMAL" />
+    <result column="DEINSTALL_MESSAGE" property="deinstallMessage" jdbcType="VARCHAR" />
+    <result column="DEINSTALL_SUCCESS_MESSAGE" property="deinstallSuccessMessage" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CONFIGURATION_MESSAGE" property="configurationMessage" jdbcType="VARCHAR" />
+    <result column="BUILD_OPTIONS_MESSAGE" property="buildOptionsMessage" jdbcType="VARCHAR" />
+    <result column="REQUIRED_FREE_KB" property="requiredFreeKb" jdbcType="DECIMAL" />
+    <result column="REQUIRED_SYSTEM_PRIVILEGES" property="requiredSystemPrivileges" jdbcType="VARCHAR" />
+    <result column="REQUIRED_NAMES_AVAILABLE" property="requiredNamesAvailable" jdbcType="VARCHAR" />
+    <result column="SUPPORTING_OBJECT_ID" property="supportingObjectId" jdbcType="DECIMAL" />
+    <result column="DEINSTALLATION_SCRIPT" property="deinstallationScript" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

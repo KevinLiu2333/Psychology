@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvRecoverFileMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvRecoverFile" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="FILE#" property="file" jdbcType="DECIMAL" />
+    <result column="ONLINE" property="online" jdbcType="VARCHAR" />
+    <result column="ONLINE_STATUS" property="onlineStatus" jdbcType="VARCHAR" />
+    <result column="ERROR" property="error" jdbcType="VARCHAR" />
+    <result column="CHANGE#" property="change" jdbcType="DECIMAL" />
+    <result column="TIME" property="time" jdbcType="DATE" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RegistryDependenciesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RegistryDependencies" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="NAMESPACE" property="namespace" jdbcType="VARCHAR" />
+    <id column="CID" property="cid" jdbcType="VARCHAR" />
+    <id column="REQ_NAMESPACE" property="reqNamespace" jdbcType="VARCHAR" />
+    <id column="REQ_CID" property="reqCid" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

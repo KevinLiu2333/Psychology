@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtTestDefaultThresholdsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtTestDefaultThresholds" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TEST_TYPE" property="testType" jdbcType="VARCHAR" />
+    <result column="METRIC_NAME" property="metricName" jdbcType="VARCHAR" />
+    <result column="METRIC_COLUMN" property="metricColumn" jdbcType="VARCHAR" />
+    <result column="METRIC_KEY1_VALUE" property="metricKey1Value" jdbcType="VARCHAR" />
+    <result column="METRIC_KEY2_VALUE" property="metricKey2Value" jdbcType="VARCHAR" />
+    <result column="METRIC_KEY3_VALUE" property="metricKey3Value" jdbcType="VARCHAR" />
+    <result column="METRIC_KEY4_VALUE" property="metricKey4Value" jdbcType="VARCHAR" />
+    <result column="METRIC_KEY5_VALUE" property="metricKey5Value" jdbcType="VARCHAR" />
+    <result column="CRITICAL" property="critical" jdbcType="DECIMAL" />
+    <result column="WARNING" property="warning" jdbcType="DECIMAL" />
+    <result column="OPERATOR" property="operator" jdbcType="VARCHAR" />
+    <result column="NUM_OCCURRENCES" property="numOccurrences" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

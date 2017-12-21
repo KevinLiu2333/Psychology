@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ChnfQueryDeltasMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ChnfQueryDeltas" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COL_OPERATION" property="colOperation" jdbcType="DECIMAL" />
+    <result column="QUERYID" property="queryid" jdbcType="DECIMAL" />
+    <result column="TRIGOBJ" property="trigobj" jdbcType="DECIMAL" />
+    <result column="CHGROWID" property="chgrowid" jdbcType="VARCHAR" />
+    <result column="CHGROWOP" property="chgrowop" jdbcType="DECIMAL" />
+    <result column="ROWID1" property="rowid1" jdbcType="VARCHAR" />
+    <result column="ROWID2" property="rowid2" jdbcType="VARCHAR" />
+    <result column="ROWID3" property="rowid3" jdbcType="VARCHAR" />
+    <result column="ROWID4" property="rowid4" jdbcType="VARCHAR" />
+    <result column="ROWID5" property="rowid5" jdbcType="VARCHAR" />
+    <result column="COL0_0" property="col00" jdbcType="DECIMAL" />
+    <result column="COL0_1" property="col01" jdbcType="DECIMAL" />
+    <result column="COL0_2" property="col02" jdbcType="DECIMAL" />
+    <result column="COL0_3" property="col03" jdbcType="DECIMAL" />
+    <result column="COL0_4" property="col04" jdbcType="DECIMAL" />
+    <result column="COL0_5" property="col05" jdbcType="DECIMAL" />
+    <result column="COL0_6" property="col06" jdbcType="DECIMAL" />
+    <result column="COL0_7" property="col07" jdbcType="DECIMAL" />
+    <result column="COL0_8" property="col08" jdbcType="DECIMAL" />
+    <result column="COL0_9" property="col09" jdbcType="DECIMAL" />
+    <result column="COL0_10" property="col010" jdbcType="DECIMAL" />
+    <result column="COL1_0" property="col10" jdbcType="VARCHAR" />
+    <result column="COL1_1" property="col11" jdbcType="VARCHAR" />
+    <result column="COL1_2" property="col12" jdbcType="VARCHAR" />
+    <result column="COL1_3" property="col13" jdbcType="VARCHAR" />
+    <result column="COL1_4" property="col14" jdbcType="VARCHAR" />
+    <result column="COL1_5" property="col15" jdbcType="VARCHAR" />
+    <result column="COL1_6" property="col16" jdbcType="VARCHAR" />
+    <result column="COL1_7" property="col17" jdbcType="VARCHAR" />
+    <result column="COL1_8" property="col18" jdbcType="VARCHAR" />
+    <result column="COL1_9" property="col19" jdbcType="VARCHAR" />
+    <result column="COL1_10" property="col110" jdbcType="VARCHAR" />
+    <result column="COL3_0" property="col30" jdbcType="DATE" />
+    <result column="COL3_1" property="col31" jdbcType="DATE" />
+    <result column="COL3_2" property="col32" jdbcType="DATE" />
+    <result column="COL3_3" property="col33" jdbcType="DATE" />
+    <result column="COL3_4" property="col34" jdbcType="DATE" />
+    <result column="COL3_5" property="col35" jdbcType="DATE" />
+    <result column="COL3_6" property="col36" jdbcType="DATE" />
+    <result column="COL3_7" property="col37" jdbcType="DATE" />
+    <result column="COL3_8" property="col38" jdbcType="DATE" />
+    <result column="COL3_9" property="col39" jdbcType="DATE" />
+    <result column="COL3_10" property="col310" jdbcType="DATE" />
+    <result column="SRCFROPOS" property="srcfropos" jdbcType="DECIMAL" />
+    <result column="XID" property="xid" jdbcType="VARBINARY" />
+    <result column="COL2_0" property="col20" jdbcType="VARBINARY" />
+    <result column="COL2_1" property="col21" jdbcType="VARBINARY" />
+    <result column="COL2_2" property="col22" jdbcType="VARBINARY" />
+    <result column="COL2_3" property="col23" jdbcType="VARBINARY" />
+    <result column="COL2_4" property="col24" jdbcType="VARBINARY" />
+    <result column="COL2_5" property="col25" jdbcType="VARBINARY" />
+    <result column="COL2_6" property="col26" jdbcType="VARBINARY" />
+    <result column="COL2_7" property="col27" jdbcType="VARBINARY" />
+    <result column="COL2_8" property="col28" jdbcType="VARBINARY" />
+    <result column="COL2_9" property="col29" jdbcType="VARBINARY" />
+    <result column="COL2_10" property="col210" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

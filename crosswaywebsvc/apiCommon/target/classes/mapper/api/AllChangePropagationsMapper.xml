@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllChangePropagationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllChangePropagations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PROPAGATION_SOURCE_NAME" property="propagationSourceName" jdbcType="VARCHAR" />
+    <result column="PROPAGATION_NAME" property="propagationName" jdbcType="VARCHAR" />
+    <result column="STAGING_DATABASE" property="stagingDatabase" jdbcType="VARCHAR" />
+    <result column="DESTINATION_QUEUE_PUBLISHER" property="destinationQueuePublisher" jdbcType="VARCHAR" />
+    <result column="DESTINATION_QUEUE" property="destinationQueue" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

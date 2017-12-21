@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.BmSzbBaseFamilyMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.BmSzbBaseFamily" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FAMILY_ID" property="familyId" jdbcType="VARCHAR" />
+    <result column="FAMILY_ADDR" property="familyAddr" jdbcType="VARCHAR" />
+    <result column="FAMILY_ZIP" property="familyZip" jdbcType="VARCHAR" />
+    <result column="FAMILY_OWN_TUPE" property="familyOwnTupe" jdbcType="VARCHAR" />
+    <result column="FAMILY_HOUSE_TYPE" property="familyHouseType" jdbcType="VARCHAR" />
+    <result column="FAMILY_AREA" property="familyArea" jdbcType="DECIMAL" />
+    <result column="IS_CIVILIZED" property="isCivilized" jdbcType="VARCHAR" />
+    <result column="CIVILIZED_START_DATE" property="civilizedStartDate" jdbcType="DATE" />
+    <result column="CIVILIZED_LEVEL" property="civilizedLevel" jdbcType="VARCHAR" />
+    <result column="IS_DIFFICULTY" property="isDifficulty" jdbcType="CHAR" />
+    <result column="IF_DSR" property="ifDsr" jdbcType="CHAR" />
+    <result column="QU_CODE" property="quCode" jdbcType="VARCHAR" />
+    <result column="ZHEN_CODE" property="zhenCode" jdbcType="VARCHAR" />
+    <result column="CUNJU_CODE" property="cunjuCode" jdbcType="VARCHAR" />
+    <result column="CREATE_DATE" property="createDate" jdbcType="DATE" />
+    <result column="MODIFY_DATE" property="modifyDate" jdbcType="DATE" />
+    <result column="VALIDITY" property="validity" jdbcType="VARCHAR" />
+    <result column="FAMILY_NAME" property="familyName" jdbcType="VARCHAR" />
+    <result column="FAMILY_LEADER" property="familyLeader" jdbcType="VARCHAR" />
+    <result column="PERSON_ID" property="personId" jdbcType="VARCHAR" />
+    <result column="PERSON_COUNT" property="personCount" jdbcType="DECIMAL" />
+    <result column="HJXZQH_CODE" property="hjxzqhCode" jdbcType="VARCHAR" />
+    <result column="SDXZQH_CODE" property="sdxzqhCode" jdbcType="VARCHAR" />
+    <result column="TEL_HOME" property="telHome" jdbcType="VARCHAR" />
+    <result column="TEL_MOBILE" property="telMobile" jdbcType="VARCHAR" />
+    <result column="CIVILIZED_FAMILY_LEVEL" property="civilizedFamilyLevel" jdbcType="VARCHAR" />
+    <result column="IDCARD_TYPE" property="idcardType" jdbcType="VARCHAR" />
+    <result column="ID_CARD" property="idCard" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

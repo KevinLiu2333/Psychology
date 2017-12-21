@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCmSynchScriptsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCmSynchScripts" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SYNCH_VERSION" property="synchVersion" jdbcType="DECIMAL" />
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="DECIMAL" />
+    <result column="OBJECT_SCHEMA" property="objectSchema" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="SCRIPT_LINE_NO" property="scriptLineNo" jdbcType="DECIMAL" />
+    <result column="SCRIPT_STEP_NO" property="scriptStepNo" jdbcType="DECIMAL" />
+    <result column="SCRIPT_LINE_TYPE" property="scriptLineType" jdbcType="VARCHAR" />
+    <result column="SCRIPT_SECTION" property="scriptSection" jdbcType="VARCHAR" />
+    <result column="LINE_EDITED" property="lineEdited" jdbcType="VARCHAR" />
+    <result column="SYNCH_GUID" property="synchGuid" jdbcType="VARBINARY" />
+    <result column="SCRIPT_LINE" property="scriptLine" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

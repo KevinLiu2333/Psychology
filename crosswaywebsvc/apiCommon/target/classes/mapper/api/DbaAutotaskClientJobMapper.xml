@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaAutotaskClientJobMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaAutotaskClientJob" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CLIENT_NAME" property="clientName" jdbcType="VARCHAR" />
+    <result column="JOB_NAME" property="jobName" jdbcType="VARCHAR" />
+    <result column="JOB_SCHEDULER_STATUS" property="jobSchedulerStatus" jdbcType="VARCHAR" />
+    <result column="TASK_NAME" property="taskName" jdbcType="VARCHAR" />
+    <result column="TASK_TARGET_TYPE" property="taskTargetType" jdbcType="VARCHAR" />
+    <result column="TASK_TARGET_NAME" property="taskTargetName" jdbcType="VARCHAR" />
+    <result column="TASK_PRIORITY" property="taskPriority" jdbcType="VARCHAR" />
+    <result column="TASK_OPERATION" property="taskOperation" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

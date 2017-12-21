@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SumMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Sum" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="CONTAINEROBJ#" property="containerobj" jdbcType="DECIMAL" />
+    <result column="CONTAINERTYPE" property="containertype" jdbcType="DECIMAL" />
+    <result column="CONTAINERNAM" property="containernam" jdbcType="VARCHAR" />
+    <result column="FULLREFRESHTIM" property="fullrefreshtim" jdbcType="DECIMAL" />
+    <result column="INCREFRESHTIM" property="increfreshtim" jdbcType="DECIMAL" />
+    <result column="LASTREFRESHSCN" property="lastrefreshscn" jdbcType="DECIMAL" />
+    <result column="LASTREFRESHDATE" property="lastrefreshdate" jdbcType="DATE" />
+    <result column="REFRESHMODE" property="refreshmode" jdbcType="DECIMAL" />
+    <result column="PFLAGS" property="pflags" jdbcType="DECIMAL" />
+    <result column="XPFLAGS" property="xpflags" jdbcType="DECIMAL" />
+    <result column="MFLAGS" property="mflags" jdbcType="DECIMAL" />
+    <result column="NUMDETAILTAB" property="numdetailtab" jdbcType="DECIMAL" />
+    <result column="NUMAGGREGATES" property="numaggregates" jdbcType="DECIMAL" />
+    <result column="NUMKEYCOLUMNS" property="numkeycolumns" jdbcType="DECIMAL" />
+    <result column="NUMJOINS" property="numjoins" jdbcType="DECIMAL" />
+    <result column="NUMINLINES" property="numinlines" jdbcType="DECIMAL" />
+    <result column="NUMWHRNODES" property="numwhrnodes" jdbcType="DECIMAL" />
+    <result column="NUMHAVNODES" property="numhavnodes" jdbcType="DECIMAL" />
+    <result column="NUMQBNODES" property="numqbnodes" jdbcType="DECIMAL" />
+    <result column="QBCMARKER" property="qbcmarker" jdbcType="DECIMAL" />
+    <result column="SUMTEXTLEN" property="sumtextlen" jdbcType="DECIMAL" />
+    <result column="FROMOFFSET" property="fromoffset" jdbcType="DECIMAL" />
+    <result column="FROMLEN" property="fromlen" jdbcType="DECIMAL" />
+    <result column="METAVERSION" property="metaversion" jdbcType="DECIMAL" />
+    <result column="OBJCOUNT" property="objcount" jdbcType="DECIMAL" />
+    <result column="MARKERDTY" property="markerdty" jdbcType="DECIMAL" />
+    <result column="RW_NAME" property="rwName" jdbcType="VARCHAR" />
+    <result column="RW_MODE" property="rwMode" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="VARCHAR" />
+    <result column="SPARE4" property="spare4" jdbcType="DATE" />
+    <result column="SUMTEXT" property="sumtext" jdbcType="LONGVARCHAR" />
+    <result column="SRC_STMT" property="srcStmt" jdbcType="CLOB" />
+    <result column="DEST_STMT" property="destStmt" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigAccRptsControlsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigAccRptsControls" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="PROJECT_ID" property="projectId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="REPORTID" property="reportid" jdbcType="DECIMAL" />
+    <result column="CONTROLID" property="controlid" jdbcType="DECIMAL" />
+    <result column="CONTROLNAME" property="controlname" jdbcType="VARCHAR" />
+    <result column="CONTROLTYPE" property="controltype" jdbcType="DECIMAL" />
+    <result column="EVENTPROCPREFIX" property="eventprocprefix" jdbcType="VARCHAR" />
+    <result column="INSELECTION" property="inselection" jdbcType="DECIMAL" />
+    <result column="LEFT" property="left" jdbcType="DECIMAL" />
+    <result column="PARENT" property="parent" jdbcType="VARCHAR" />
+    <result column="SECTION" property="section" jdbcType="DECIMAL" />
+    <result column="TAG" property="tag" jdbcType="VARCHAR" />
+    <result column="TOP" property="top" jdbcType="DECIMAL" />
+    <result column="VISIBLE" property="visible" jdbcType="DECIMAL" />
+    <result column="BACKCOLOR" property="backcolor" jdbcType="DECIMAL" />
+    <result column="BACKSTYLE" property="backstyle" jdbcType="DECIMAL" />
+    <result column="BOUNDCOLUMN" property="boundcolumn" jdbcType="DECIMAL" />
+    <result column="CTRLCAPTION" property="ctrlcaption" jdbcType="VARCHAR" />
+    <result column="COLUMNCOUNT" property="columncount" jdbcType="DECIMAL" />
+    <result column="COLUMNHEADS" property="columnheads" jdbcType="VARCHAR" />
+    <result column="COLUMNWIDTHS" property="columnwidths" jdbcType="VARCHAR" />
+    <result column="CONTROLSOURCE" property="controlsource" jdbcType="VARCHAR" />
+    <result column="CONTROLTIPTEXT" property="controltiptext" jdbcType="VARCHAR" />
+    <result column="DEFAULTVALUE" property="defaultvalue" jdbcType="VARCHAR" />
+    <result column="DISPLAYWHEN" property="displaywhen" jdbcType="DECIMAL" />
+    <result column="ENABLED" property="enabled" jdbcType="DECIMAL" />
+    <result column="FONTBOLD" property="fontbold" jdbcType="DECIMAL" />
+    <result column="FONTITALIC" property="fontitalic" jdbcType="DECIMAL" />
+    <result column="FONTNAME" property="fontname" jdbcType="VARCHAR" />
+    <result column="FONTSIZE" property="fontsize" jdbcType="DECIMAL" />
+    <result column="FONTUNDERLINE" property="fontunderline" jdbcType="DECIMAL" />
+    <result column="FONTWHEIGHT" property="fontwheight" jdbcType="DECIMAL" />
+    <result column="FORECOLOR" property="forecolor" jdbcType="DECIMAL" />
+    <result column="FORMAT" property="format" jdbcType="VARCHAR" />
+    <result column="HEIGHT" property="height" jdbcType="DECIMAL" />
+    <result column="HELPCONTEXTID" property="helpcontextid" jdbcType="DECIMAL" />
+    <result column="LIMITTOLIST" property="limittolist" jdbcType="DECIMAL" />
+    <result column="LINKCHILDFIELDS" property="linkchildfields" jdbcType="VARCHAR" />
+    <result column="LINKMASTERFIELDS" property="linkmasterfields" jdbcType="VARCHAR" />
+    <result column="LISTROWS" property="listrows" jdbcType="DECIMAL" />
+    <result column="MULTIROW" property="multirow" jdbcType="DECIMAL" />
+    <result column="ONCHANGE" property="onchange" jdbcType="VARCHAR" />
+    <result column="ONCLICK" property="onclick" jdbcType="VARCHAR" />
+    <result column="ONDBLCLICK" property="ondblclick" jdbcType="VARCHAR" />
+    <result column="ONKEYDOWN" property="onkeydown" jdbcType="VARCHAR" />
+    <result column="ONKEYPRESS" property="onkeypress" jdbcType="VARCHAR" />
+    <result column="ONKEYUP" property="onkeyup" jdbcType="VARCHAR" />
+    <result column="ONMOUSEDOWN" property="onmousedown" jdbcType="VARCHAR" />
+    <result column="ONMOUSEMOVE" property="onmousemove" jdbcType="VARCHAR" />
+    <result column="ONMOUSEUP" property="onmouseup" jdbcType="VARCHAR" />
+    <result column="OPTIONVALUE" property="optionvalue" jdbcType="DECIMAL" />
+    <result column="PAGEINDEX" property="pageindex" jdbcType="DECIMAL" />
+    <result column="PICTURE" property="picture" jdbcType="VARCHAR" />
+    <result column="PICTUREALIGNMENT" property="picturealignment" jdbcType="DECIMAL" />
+    <result column="PICTURERESIZEMODE" property="pictureresizemode" jdbcType="DECIMAL" />
+    <result column="PICTURETILING" property="picturetiling" jdbcType="DECIMAL" />
+    <result column="PICTURETYPE" property="picturetype" jdbcType="DECIMAL" />
+    <result column="ROWSOURCE" property="rowsource" jdbcType="VARCHAR" />
+    <result column="ROWSOURCETYPE" property="rowsourcetype" jdbcType="VARCHAR" />
+    <result column="SHORTCUTMENUBAR" property="shortcutmenubar" jdbcType="VARCHAR" />
+    <result column="SOURCEOBJECT" property="sourceobject" jdbcType="VARCHAR" />
+    <result column="STATUSBARTEXT" property="statusbartext" jdbcType="VARCHAR" />
+    <result column="STYLE" property="style" jdbcType="DECIMAL" />
+    <result column="TABFIXEDHEIGHT" property="tabfixedheight" jdbcType="DECIMAL" />
+    <result column="TABFIXEDWIDTH" property="tabfixedwidth" jdbcType="DECIMAL" />
+    <result column="TABINDEX" property="tabindex" jdbcType="DECIMAL" />
+    <result column="TABSTOP" property="tabstop" jdbcType="DECIMAL" />
+    <result column="TEXTALIGN" property="textalign" jdbcType="DECIMAL" />
+    <result column="TEXTFONTCHARSET" property="textfontcharset" jdbcType="DECIMAL" />
+    <result column="WIDTH" property="width" jdbcType="DECIMAL" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

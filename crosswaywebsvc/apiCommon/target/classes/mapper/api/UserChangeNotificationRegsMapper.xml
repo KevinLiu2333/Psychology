@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserChangeNotificationRegsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserChangeNotificationRegs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="REGID" property="regid" jdbcType="DECIMAL" />
+    <result column="REGFLAGS" property="regflags" jdbcType="DECIMAL" />
+    <result column="CALLBACK" property="callback" jdbcType="VARCHAR" />
+    <result column="OPERATIONS_FILTER" property="operationsFilter" jdbcType="DECIMAL" />
+    <result column="CHANGELAG" property="changelag" jdbcType="DECIMAL" />
+    <result column="TIMEOUT" property="timeout" jdbcType="DECIMAL" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

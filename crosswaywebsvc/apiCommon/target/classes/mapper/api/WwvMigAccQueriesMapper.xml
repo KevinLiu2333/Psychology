@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigAccQueriesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigAccQueries" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="PROJECT_ID" property="projectId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="QRYID" property="qryid" jdbcType="DECIMAL" />
+    <result column="QRYTYPE" property="qrytype" jdbcType="VARCHAR" />
+    <result column="QRYNAME" property="qryname" jdbcType="VARCHAR" />
+    <result column="DATECREATED" property="datecreated" jdbcType="DATE" />
+    <result column="QUERY_LASTUPDATED" property="queryLastupdated" jdbcType="DATE" />
+    <result column="MAXRECORDS" property="maxrecords" jdbcType="DECIMAL" />
+    <result column="ODBCTIMEOUT" property="odbctimeout" jdbcType="DECIMAL" />
+    <result column="RETURNSRECORDS" property="returnsrecords" jdbcType="VARCHAR" />
+    <result column="UPDATABLE" property="updatable" jdbcType="VARCHAR" />
+    <result column="DATE_CREATED" property="dateCreated" jdbcType="DATE" />
+    <result column="DATE_MODIFIED" property="dateModified" jdbcType="DATE" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="QRYSQL" property="qrysql" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtPafProceduresMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtPafProcedures">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PROCEDURE_GUID" jdbcType="VARCHAR" property="procedureGuid" />
+    <result column="BASE_GUID" jdbcType="VARCHAR" property="baseGuid" />
+    <result column="SOURCE_GUID" jdbcType="VARCHAR" property="sourceGuid" />
+    <result column="VERSION" jdbcType="VARCHAR" property="version" />
+    <result column="APPLICATION_NAME" jdbcType="VARCHAR" property="applicationName" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="DESCRIPTION" jdbcType="VARCHAR" property="description" />
+    <result column="LAST_UPDATED" jdbcType="DATE" property="lastUpdated" />
+    <result column="CREATED_BY" jdbcType="VARCHAR" property="createdBy" />
+    <result column="DATA_GUID" jdbcType="VARCHAR" property="dataGuid" />
+    <result column="IS_ORACLE" jdbcType="CHAR" property="isOracle" />
+    <result column="DELETED" jdbcType="CHAR" property="deleted" />
+    <result column="HELPSET" jdbcType="VARCHAR" property="helpset" />
+    <result column="CONTENT0" jdbcType="VARCHAR" property="content0" />
+    <result column="CONTENT1" jdbcType="VARCHAR" property="content1" />
+    <result column="CONTENT2" jdbcType="VARCHAR" property="content2" />
+    <result column="CONTENT3" jdbcType="VARCHAR" property="content3" />
+    <result column="CONTENT4" jdbcType="VARCHAR" property="content4" />
+    <result column="CONTENT5" jdbcType="VARCHAR" property="content5" />
+    <result column="CONTENT6" jdbcType="VARCHAR" property="content6" />
+    <result column="CONTENT7" jdbcType="VARCHAR" property="content7" />
+  </resultMap>
+</mapper>

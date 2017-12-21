@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.PendingSessionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.PendingSessions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOCAL_TRAN_ID" property="localTranId" jdbcType="VARCHAR" />
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="INTERFACE" property="interface" jdbcType="VARCHAR" />
+    <result column="TYPE#" property="type" jdbcType="DECIMAL" />
+    <result column="PARENT_DBID" property="parentDbid" jdbcType="VARCHAR" />
+    <result column="PARENT_DB" property="parentDb" jdbcType="VARCHAR" />
+    <result column="DB_USERID" property="dbUserid" jdbcType="DECIMAL" />
+    <result column="BRANCH_ID" property="branchId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

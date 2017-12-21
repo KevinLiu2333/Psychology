@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Dba2pcNeighborsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Dba2pcNeighbors" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOCAL_TRAN_ID" property="localTranId" jdbcType="VARCHAR" />
+    <result column="IN_OUT" property="inOut" jdbcType="VARCHAR" />
+    <result column="DATABASE" property="database" jdbcType="VARCHAR" />
+    <result column="DBUSER_OWNER" property="dbuserOwner" jdbcType="VARCHAR" />
+    <result column="INTERFACE" property="interface" jdbcType="VARCHAR" />
+    <result column="DBID" property="dbid" jdbcType="VARCHAR" />
+    <result column="SESS#" property="sess" jdbcType="DECIMAL" />
+    <result column="BRANCH" property="branch" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AwPropMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AwProp" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="AWSEQ#" property="awseq" jdbcType="DECIMAL" />
+    <result column="OID" property="oid" jdbcType="DECIMAL" />
+    <result column="OBJNAME" property="objname" jdbcType="VARCHAR" />
+    <result column="GEN#" property="gen" jdbcType="DECIMAL" />
+    <result column="PROPNAME" property="propname" jdbcType="VARCHAR" />
+    <result column="PROPTYPE" property="proptype" jdbcType="DECIMAL" />
+    <result column="PROPVAL" property="propval" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

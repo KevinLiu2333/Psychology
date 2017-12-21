@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RepcatRepschemaMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RepcatRepschema">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAME" jdbcType="VARCHAR" property="sname" />
+    <result column="DBLINK" jdbcType="VARCHAR" property="dblink" />
+    <result column="MASTERDEF" jdbcType="VARCHAR" property="masterdef" />
+    <result column="SNAPMASTER" jdbcType="VARCHAR" property="snapmaster" />
+    <result column="MASTER_COMMENT" jdbcType="VARCHAR" property="masterComment" />
+    <result column="GNAME" jdbcType="VARCHAR" property="gname" />
+    <result column="MASTER" jdbcType="VARCHAR" property="master" />
+    <result column="GOWNER" jdbcType="VARCHAR" property="gowner" />
+  </resultMap>
+</mapper>

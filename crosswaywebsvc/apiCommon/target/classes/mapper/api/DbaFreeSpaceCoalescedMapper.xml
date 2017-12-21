@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaFreeSpaceCoalescedMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaFreeSpaceCoalesced" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TABLESPACE_NAME" property="tablespaceName" jdbcType="VARCHAR" />
+    <result column="TOTAL_EXTENTS" property="totalExtents" jdbcType="DECIMAL" />
+    <result column="EXTENTS_COALESCED" property="extentsCoalesced" jdbcType="DECIMAL" />
+    <result column="PERCENT_EXTENTS_COALESCED" property="percentExtentsCoalesced" jdbcType="DECIMAL" />
+    <result column="TOTAL_BYTES" property="totalBytes" jdbcType="DECIMAL" />
+    <result column="BYTES_COALESCED" property="bytesCoalesced" jdbcType="DECIMAL" />
+    <result column="TOTAL_BLOCKS" property="totalBlocks" jdbcType="DECIMAL" />
+    <result column="BLOCKS_COALESCED" property="blocksCoalesced" jdbcType="DECIMAL" />
+    <result column="PERCENT_BLOCKS_COALESCED" property="percentBlocksCoalesced" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

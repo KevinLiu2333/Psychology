@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtHaDgTargetSummaryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtHaDgTargetSummary" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <result column="COLLECTION_TIMESTAMP" property="collectionTimestamp" jdbcType="DATE" />
+    <result column="SOURCE_TYPE" property="sourceType" jdbcType="VARCHAR" />
+    <result column="ROW_TYPE" property="rowType" jdbcType="VARCHAR" />
+    <result column="USING_BROKER" property="usingBroker" jdbcType="VARCHAR" />
+    <result column="ACTIVE_STBY" property="activeStby" jdbcType="VARCHAR" />
+    <result column="DB_UNIQUE_NAME" property="dbUniqueName" jdbcType="VARCHAR" />
+    <result column="DB_ID" property="dbId" jdbcType="DECIMAL" />
+    <result column="PRMY_DB_UNIQUE_NAME" property="prmyDbUniqueName" jdbcType="VARCHAR" />
+    <result column="PRMY_DB_ID" property="prmyDbId" jdbcType="DECIMAL" />
+    <result column="ROLE" property="role" jdbcType="VARCHAR" />
+    <result column="STBY_LIST" property="stbyList" jdbcType="VARCHAR" />
+    <result column="PROTECTION_MODE" property="protectionMode" jdbcType="VARCHAR" />
+    <result column="FSFO_STATUS" property="fsfoStatus" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="TRANSPORT_LAG" property="transportLag" jdbcType="DECIMAL" />
+    <result column="APPLY_LAG" property="applyLag" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

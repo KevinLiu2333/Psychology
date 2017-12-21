@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DefsubpartMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Defsubpart" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="BO#" property="bo" jdbcType="DECIMAL" />
+    <result column="SPART_POSITION" property="spartPosition" jdbcType="DECIMAL" />
+    <result column="SPART_NAME" property="spartName" jdbcType="VARCHAR" />
+    <result column="TS#" property="ts" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="HIBOUNDLEN" property="hiboundlen" jdbcType="DECIMAL" />
+    <result column="HIBOUNDVAL" property="hiboundval" jdbcType="LONGVARCHAR" />
+    <result column="BHIBOUNDVAL" property="bhiboundval" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

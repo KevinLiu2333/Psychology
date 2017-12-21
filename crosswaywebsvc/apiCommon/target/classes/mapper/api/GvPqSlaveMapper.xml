@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvPqSlaveMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvPqSlave" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="SLAVE_NAME" property="slaveName" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="SESSIONS" property="sessions" jdbcType="DECIMAL" />
+    <result column="IDLE_TIME_CUR" property="idleTimeCur" jdbcType="DECIMAL" />
+    <result column="BUSY_TIME_CUR" property="busyTimeCur" jdbcType="DECIMAL" />
+    <result column="CPU_SECS_CUR" property="cpuSecsCur" jdbcType="DECIMAL" />
+    <result column="MSGS_SENT_CUR" property="msgsSentCur" jdbcType="DECIMAL" />
+    <result column="MSGS_RCVD_CUR" property="msgsRcvdCur" jdbcType="DECIMAL" />
+    <result column="IDLE_TIME_TOTAL" property="idleTimeTotal" jdbcType="DECIMAL" />
+    <result column="BUSY_TIME_TOTAL" property="busyTimeTotal" jdbcType="DECIMAL" />
+    <result column="CPU_SECS_TOTAL" property="cpuSecsTotal" jdbcType="DECIMAL" />
+    <result column="MSGS_SENT_TOTAL" property="msgsSentTotal" jdbcType="DECIMAL" />
+    <result column="MSGS_RCVD_TOTAL" property="msgsRcvdTotal" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

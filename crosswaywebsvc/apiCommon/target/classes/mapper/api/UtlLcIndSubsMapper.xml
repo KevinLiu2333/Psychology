@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UtlLcIndSubsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UtlLcIndSubs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CTYPE" property="ctype" jdbcType="CHAR" />
+    <result column="INDEX_NAME" property="indexName" jdbcType="VARCHAR" />
+    <result column="COMPONENT_NAME" property="componentName" jdbcType="VARCHAR" />
+    <result column="TABLE_ID" property="tableId" jdbcType="DECIMAL" />
+    <result column="TAB_OWNER_ID" property="tabOwnerId" jdbcType="DECIMAL" />
+    <result column="IDX_ID" property="idxId" jdbcType="DECIMAL" />
+    <result column="IND_OWNER_ID" property="indOwnerId" jdbcType="DECIMAL" />
+    <result column="IND_OWNER_NAME" property="indOwnerName" jdbcType="VARCHAR" />
+    <result column="COMP_ID" property="compId" jdbcType="DECIMAL" />
+    <result column="TCOMP_ID" property="tcompId" jdbcType="DECIMAL" />
+    <result column="CCOMP_ID" property="ccompId" jdbcType="DECIMAL" />
+    <result column="TCCOMP_ID" property="tccompId" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="LOCALITY" property="locality" jdbcType="CHAR" />
+    <result column="DEGREE" property="degree" jdbcType="DECIMAL" />
+    <result column="ROWCNT" property="rowcnt" jdbcType="DECIMAL" />
+    <result column="JOIN_INDEX" property="joinIndex" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

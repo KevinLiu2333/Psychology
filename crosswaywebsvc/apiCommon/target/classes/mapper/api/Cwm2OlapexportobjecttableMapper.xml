@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Cwm2OlapexportobjecttableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Cwm2Olapexportobjecttable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ENTITY_TYPE" property="entityType" jdbcType="VARCHAR" />
+    <result column="ENTITY_OWNER" property="entityOwner" jdbcType="VARCHAR" />
+    <result column="ENTITY_NAME" property="entityName" jdbcType="VARCHAR" />
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <result column="OBJECT_OWNER" property="objectOwner" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="PARENT_ENTITY_TYPE" property="parentEntityType" jdbcType="VARCHAR" />
+    <result column="PARENT_ENTITY_OWNER" property="parentEntityOwner" jdbcType="VARCHAR" />
+    <result column="PARENT_ENTITY_NAME" property="parentEntityName" jdbcType="VARCHAR" />
+    <result column="PARENT_OBJECT_TYPE" property="parentObjectType" jdbcType="VARCHAR" />
+    <result column="PARENT_OBJECT_OWNER" property="parentObjectOwner" jdbcType="VARCHAR" />
+    <result column="PARENT_OBJECT_NAME" property="parentObjectName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

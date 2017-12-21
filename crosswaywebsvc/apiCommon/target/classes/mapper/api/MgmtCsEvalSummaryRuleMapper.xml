@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCsEvalSummaryRuleMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCsEvalSummaryRule" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="RULE_NAME" property="ruleName" jdbcType="OTHER" />
+    <result column="RULE_NAME_NLSID" property="ruleNameNlsid" jdbcType="VARCHAR" />
+    <result column="CS_NAME" property="csName" jdbcType="OTHER" />
+    <result column="CS_NAME_NLSID" property="csNameNlsid" jdbcType="VARCHAR" />
+    <result column="CS_AUTHOR" property="csAuthor" jdbcType="VARCHAR" />
+    <result column="CS_VERSION" property="csVersion" jdbcType="DECIMAL" />
+    <result column="TOTAL_VIOLATIONS" property="totalViolations" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="IMPORTANCE_LEVEL" property="importanceLevel" jdbcType="VARCHAR" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <result column="RULE_GUID" property="ruleGuid" jdbcType="VARBINARY" />
+    <result column="CS_GUID" property="csGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

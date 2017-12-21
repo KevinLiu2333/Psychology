@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AdmExpfilXpathTagsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AdmExpfilXpathTags" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_SET_NAME" property="attributeSetName" jdbcType="VARCHAR" />
+    <result column="XMLTYPE_ATTRIBUTE" property="xmltypeAttribute" jdbcType="VARCHAR" />
+    <result column="XPATH_TAG" property="xpathTag" jdbcType="VARCHAR" />
+    <result column="DATA_TYPE" property="dataType" jdbcType="VARCHAR" />
+    <result column="TAG_TYPE" property="tagType" jdbcType="VARCHAR" />
+    <result column="FILTER_TYPE" property="filterType" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

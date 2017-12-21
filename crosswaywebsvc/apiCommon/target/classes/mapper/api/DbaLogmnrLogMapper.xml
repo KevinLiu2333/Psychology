@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaLogmnrLogMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaLogmnrLog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOGMNR_SESSION_ID" property="logmnrSessionId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="RESETLOGS_SCN" property="resetlogsScn" jdbcType="DECIMAL" />
+    <result column="RESETLOGS_TIME" property="resetlogsTime" jdbcType="DECIMAL" />
+    <result column="MODIFIED_TIME" property="modifiedTime" jdbcType="DATE" />
+    <result column="THREAD#" property="thread" jdbcType="DECIMAL" />
+    <result column="SEQUENCE#" property="sequence" jdbcType="DECIMAL" />
+    <result column="FIRST_SCN" property="firstScn" jdbcType="DECIMAL" />
+    <result column="NEXT_SCN" property="nextScn" jdbcType="DECIMAL" />
+    <result column="FIRST_TIME" property="firstTime" jdbcType="DATE" />
+    <result column="NEXT_TIME" property="nextTime" jdbcType="DATE" />
+    <result column="DICTIONARY_BEGIN" property="dictionaryBegin" jdbcType="VARCHAR" />
+    <result column="DICTIONARY_END" property="dictionaryEnd" jdbcType="VARCHAR" />
+    <result column="KEEP" property="keep" jdbcType="VARCHAR" />
+    <result column="SUSPECT" property="suspect" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

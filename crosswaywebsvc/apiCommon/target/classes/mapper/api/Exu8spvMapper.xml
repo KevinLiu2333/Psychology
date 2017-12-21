@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu8spvMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu8spv" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="GRANTEE" property="grantee" jdbcType="VARCHAR" />
+    <result column="GRANTEEID" property="granteeid" jdbcType="DECIMAL" />
+    <result column="PRIV" property="priv" jdbcType="VARCHAR" />
+    <result column="WGO" property="wgo" jdbcType="DECIMAL" />
+    <result column="SEQUENCE" property="sequence" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

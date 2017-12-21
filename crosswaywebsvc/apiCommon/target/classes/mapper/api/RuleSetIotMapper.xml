@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RuleSetIotMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RuleSetIot" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="RS_OBJ#" property="rsObj" jdbcType="DECIMAL" />
+    <id column="EC_OBJ#" property="ecObj" jdbcType="DECIMAL" />
+    <id column="BOX_ID" property="boxId" jdbcType="DECIMAL" />
+    <id column="VALUE" property="value" jdbcType="VARBINARY" />
+    <id column="RULE_ID" property="ruleId" jdbcType="DECIMAL" />
+    <id column="RULE_OR_PIECE" property="ruleOrPiece" jdbcType="DECIMAL" />
+    <id column="ROP_ID" property="ropId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

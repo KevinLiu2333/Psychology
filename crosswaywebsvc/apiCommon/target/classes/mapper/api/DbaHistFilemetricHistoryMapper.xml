@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaHistFilemetricHistoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaHistFilemetricHistory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="FILEID" property="fileid" jdbcType="DECIMAL" />
+    <result column="CREATIONTIME" property="creationtime" jdbcType="DECIMAL" />
+    <result column="BEGIN_TIME" property="beginTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="INTSIZE" property="intsize" jdbcType="DECIMAL" />
+    <result column="GROUP_ID" property="groupId" jdbcType="DECIMAL" />
+    <result column="AVGREADTIME" property="avgreadtime" jdbcType="DECIMAL" />
+    <result column="AVGWRITETIME" property="avgwritetime" jdbcType="DECIMAL" />
+    <result column="PHYSICALREAD" property="physicalread" jdbcType="DECIMAL" />
+    <result column="PHYSICALWRITE" property="physicalwrite" jdbcType="DECIMAL" />
+    <result column="PHYBLKREAD" property="phyblkread" jdbcType="DECIMAL" />
+    <result column="PHYBLKWRITE" property="phyblkwrite" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

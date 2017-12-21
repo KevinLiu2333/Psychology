@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserSubscriptionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserSubscriptions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HANDLE" property="handle" jdbcType="DECIMAL" />
+    <result column="SET_NAME" property="setName" jdbcType="VARCHAR" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="CREATED" property="created" jdbcType="DATE" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="EARLIEST_SCN" property="earliestScn" jdbcType="DECIMAL" />
+    <result column="LATEST_SCN" property="latestScn" jdbcType="DECIMAL" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="LAST_PURGED" property="lastPurged" jdbcType="DATE" />
+    <result column="LAST_EXTENDED" property="lastExtended" jdbcType="DATE" />
+    <result column="SUBSCRIPTION_NAME" property="subscriptionName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuMViewViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuMViewView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="SOWNER" property="sowner" jdbcType="VARCHAR" />
+    <result column="VNAME" property="vname" jdbcType="VARCHAR" />
+    <result column="TNAME" property="tname" jdbcType="VARCHAR" />
+    <result column="MOWNER" property="mowner" jdbcType="VARCHAR" />
+    <result column="MASTER" property="master" jdbcType="VARCHAR" />
+    <result column="MLINK" property="mlink" jdbcType="VARCHAR" />
+    <result column="SNAPSHOT" property="snapshot" jdbcType="VARCHAR" />
+    <result column="SNAPID" property="snapid" jdbcType="DECIMAL" />
+    <result column="AUTO_FAST" property="autoFast" jdbcType="VARCHAR" />
+    <result column="AUTO_FUN" property="autoFun" jdbcType="VARCHAR" />
+    <result column="AUTO_DATE" property="autoDate" jdbcType="DATE" />
+    <result column="USLOG" property="uslog" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="MASTER_VERSION" property="masterVersion" jdbcType="DECIMAL" />
+    <result column="TABLES" property="tables" jdbcType="DECIMAL" />
+    <result column="FLAG" property="flag" jdbcType="DECIMAL" />
+    <result column="FLAG2" property="flag2" jdbcType="DECIMAL" />
+    <result column="FLAG3" property="flag3" jdbcType="DECIMAL" />
+    <result column="MAS_ROLL_SEG" property="masRollSeg" jdbcType="VARCHAR" />
+    <result column="RSCN" property="rscn" jdbcType="DECIMAL" />
+    <result column="INSTSITE" property="instsite" jdbcType="DECIMAL" />
+    <result column="FLAVOR_ID" property="flavorId" jdbcType="DECIMAL" />
+    <result column="OBJFLAG" property="objflag" jdbcType="DECIMAL" />
+    <result column="SNA_TYPE_OWNER" property="snaTypeOwner" jdbcType="VARCHAR" />
+    <result column="SNA_TYPE_NAME" property="snaTypeName" jdbcType="VARCHAR" />
+    <result column="MAS_TYPE_OWNER" property="masTypeOwner" jdbcType="VARCHAR" />
+    <result column="MAS_TYPE_NAME" property="masTypeName" jdbcType="VARCHAR" />
+    <result column="PARENT_SOWNER" property="parentSowner" jdbcType="VARCHAR" />
+    <result column="PARENT_VNAME" property="parentVname" jdbcType="VARCHAR" />
+    <result column="QUERY_LEN" property="queryLen" jdbcType="DECIMAL" />
+    <result column="PARSED_QUERY_TXT" property="parsedQueryTxt" jdbcType="OTHER" />
+    <result column="QUERY_VCNT" property="queryVcnt" jdbcType="OTHER" />
+    <result column="LOC_ROLL_SEG" property="locRollSeg" jdbcType="VARCHAR" />
+    <result column="GLOBAL_DB_NAME" property="globalDbName" jdbcType="VARCHAR" />
+    <result column="SYN_COUNT" property="synCount" jdbcType="DECIMAL" />
+    <result column="SRT_LIST" property="srtList" jdbcType="OTHER" />
+    <result column="LOBMASKVEC" property="lobmaskvec" jdbcType="VARBINARY" />
+    <result column="QUERY_TXT" property="queryTxt" jdbcType="CLOB" />
+    <result column="REL_QUERY" property="relQuery" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

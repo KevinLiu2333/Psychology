@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AwMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Aw" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="AWNAME" property="awname" jdbcType="VARCHAR" />
+    <result column="OWNER#" property="owner" jdbcType="DECIMAL" />
+    <result column="AWSEQ#" property="awseq" jdbcType="DECIMAL" />
+    <result column="VERSION" property="version" jdbcType="DECIMAL" />
+    <result column="OIDS" property="oids" jdbcType="DECIMAL" />
+    <result column="OBJS" property="objs" jdbcType="DECIMAL" />
+    <result column="RSYGEN" property="rsygen" jdbcType="DECIMAL" />
+    <result column="DICT" property="dict" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

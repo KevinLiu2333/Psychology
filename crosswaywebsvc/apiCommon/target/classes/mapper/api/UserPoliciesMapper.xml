@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserPoliciesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserPolicies" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="POLICY_GROUP" property="policyGroup" jdbcType="VARCHAR" />
+    <result column="POLICY_NAME" property="policyName" jdbcType="VARCHAR" />
+    <result column="PF_OWNER" property="pfOwner" jdbcType="VARCHAR" />
+    <result column="PACKAGE" property="package" jdbcType="VARCHAR" />
+    <result column="FUNCTION" property="function" jdbcType="VARCHAR" />
+    <result column="SEL" property="sel" jdbcType="VARCHAR" />
+    <result column="INS" property="ins" jdbcType="VARCHAR" />
+    <result column="UPD" property="upd" jdbcType="VARCHAR" />
+    <result column="DEL" property="del" jdbcType="VARCHAR" />
+    <result column="IDX" property="idx" jdbcType="VARCHAR" />
+    <result column="CHK_OPTION" property="chkOption" jdbcType="VARCHAR" />
+    <result column="ENABLE" property="enable" jdbcType="VARCHAR" />
+    <result column="STATIC_POLICY" property="staticPolicy" jdbcType="VARCHAR" />
+    <result column="POLICY_TYPE" property="policyType" jdbcType="VARCHAR" />
+    <result column="LONG_PREDICATE" property="longPredicate" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

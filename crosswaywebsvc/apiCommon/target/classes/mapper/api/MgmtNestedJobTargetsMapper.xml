@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtNestedJobTargetsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtNestedJobTargets" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="STEP_NAME" property="stepName" jdbcType="VARCHAR" />
+    <result column="STEP_TYPE" property="stepType" jdbcType="DECIMAL" />
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="JOB_TYPE_ID" property="jobTypeId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

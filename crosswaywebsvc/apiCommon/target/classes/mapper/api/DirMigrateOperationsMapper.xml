@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DirMigrateOperationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DirMigrateOperations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="JOB_NAME" property="jobName" jdbcType="VARCHAR" />
+    <result column="ALERT_SEQ_ID" property="alertSeqId" jdbcType="DECIMAL" />
+    <result column="INCARNATION_INFO" property="incarnationInfo" jdbcType="VARCHAR" />
+    <result column="SERVICE_NAME" property="serviceName" jdbcType="VARCHAR" />
+    <result column="SOURCE_INSTANCE" property="sourceInstance" jdbcType="VARCHAR" />
+    <result column="DEST_INSTANCE" property="destInstance" jdbcType="VARCHAR" />
+    <result column="SESSION_COUNT" property="sessionCount" jdbcType="DECIMAL" />
+    <result column="DIRECTOR_FACTOR" property="directorFactor" jdbcType="DECIMAL" />
+    <result column="SUBMIT_TIME" property="submitTime" jdbcType="DATE" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="ACTUAL_COUNT" property="actualCount" jdbcType="DECIMAL" />
+    <result column="ERROR_MESSAGE" property="errorMessage" jdbcType="VARCHAR" />
+    <result column="SPAREN1" property="sparen1" jdbcType="DECIMAL" />
+    <result column="SPAREN2" property="sparen2" jdbcType="DECIMAL" />
+    <result column="SPAREN3" property="sparen3" jdbcType="DECIMAL" />
+    <result column="SPAREN4" property="sparen4" jdbcType="DECIMAL" />
+    <result column="SPAREN5" property="sparen5" jdbcType="DECIMAL" />
+    <result column="SPAREVC1" property="sparevc1" jdbcType="VARCHAR" />
+    <result column="SPAREVC2" property="sparevc2" jdbcType="VARCHAR" />
+    <result column="SPAREVC3" property="sparevc3" jdbcType="VARCHAR" />
+    <result column="SPAREVC4" property="sparevc4" jdbcType="VARCHAR" />
+    <result column="SPAREVC5" property="sparevc5" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VOfflineRangeMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VOfflineRange" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RECID" property="recid" jdbcType="DECIMAL" />
+    <result column="STAMP" property="stamp" jdbcType="DECIMAL" />
+    <result column="FILE#" property="file" jdbcType="DECIMAL" />
+    <result column="OFFLINE_CHANGE#" property="offlineChange" jdbcType="DECIMAL" />
+    <result column="ONLINE_CHANGE#" property="onlineChange" jdbcType="DECIMAL" />
+    <result column="ONLINE_TIME" property="onlineTime" jdbcType="DATE" />
+    <result column="RESETLOGS_CHANGE#" property="resetlogsChange" jdbcType="DECIMAL" />
+    <result column="RESETLOGS_TIME" property="resetlogsTime" jdbcType="DATE" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VRsrcmgrmetricHistoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VRsrcmgrmetricHistory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="BEGIN_TIME" property="beginTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="INTSIZE_CSEC" property="intsizeCsec" jdbcType="DECIMAL" />
+    <result column="SEQUENCE#" property="sequence" jdbcType="DECIMAL" />
+    <result column="CONSUMER_GROUP_ID" property="consumerGroupId" jdbcType="DECIMAL" />
+    <result column="CONSUMER_GROUP_NAME" property="consumerGroupName" jdbcType="VARCHAR" />
+    <result column="CPU_CONSUMED_TIME" property="cpuConsumedTime" jdbcType="DECIMAL" />
+    <result column="CPU_WAIT_TIME" property="cpuWaitTime" jdbcType="DECIMAL" />
+    <result column="CPU_DECISIONS" property="cpuDecisions" jdbcType="DECIMAL" />
+    <result column="CPU_DECISIONS_EXCLUSIVE" property="cpuDecisionsExclusive" jdbcType="DECIMAL" />
+    <result column="CPU_DECISIONS_WON" property="cpuDecisionsWon" jdbcType="DECIMAL" />
+    <result column="IO_REQUESTS" property="ioRequests" jdbcType="DECIMAL" />
+    <result column="IO_MEGABYTES" property="ioMegabytes" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

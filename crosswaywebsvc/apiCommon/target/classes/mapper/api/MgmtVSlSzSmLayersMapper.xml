@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtVSlSzSmLayersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtVSlSzSmLayers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TOTAL_DISKS_SIZEB" property="totalDisksSizeb" jdbcType="DECIMAL" />
+    <result column="TOTAL_VOLUMES_SIZEB" property="totalVolumesSizeb" jdbcType="DECIMAL" />
+    <result column="TOTAL_WRITEABLE_NFS_SIZEB" property="totalWriteableNfsSizeb" jdbcType="DECIMAL" />
+    <result column="TOTAL_FS_SIZEB" property="totalFsSizeb" jdbcType="DECIMAL" />
+    <result column="DISKS_TOTAL_FREEB" property="disksTotalFreeb" jdbcType="DECIMAL" />
+    <result column="VOLUMES_TOTAL_FREEB" property="volumesTotalFreeb" jdbcType="DECIMAL" />
+    <result column="NFSWRITEABLE_TOTAL_FREEB" property="nfswriteableTotalFreeb" jdbcType="DECIMAL" />
+    <result column="FS_TOTAL_FREEB" property="fsTotalFreeb" jdbcType="DECIMAL" />
+    <result column="VOLUMES_TOTAL_ALLOCATED" property="volumesTotalAllocated" jdbcType="DECIMAL" />
+    <result column="DISKS_TOTAL_ALLOCATED" property="disksTotalAllocated" jdbcType="DECIMAL" />
+    <result column="VOLUMES_TOTAL_UNALLOCATED" property="volumesTotalUnallocated" jdbcType="DECIMAL" />
+    <result column="DISKS_TOTAL_UNALLOCATED" property="disksTotalUnallocated" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

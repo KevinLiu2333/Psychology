@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowWorksheetConditionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowWorksheetConditions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="PAGE_ID" property="pageId" jdbcType="DECIMAL" />
+    <result column="WORKSHEET_ID" property="worksheetId" jdbcType="DECIMAL" />
+    <result column="REPORT_ID" property="reportId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="CONDITION_TYPE" property="conditionType" jdbcType="VARCHAR" />
+    <result column="ALLOW_DELETE" property="allowDelete" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="OPERATOR" property="operator" jdbcType="VARCHAR" />
+    <result column="EXPR_TYPE" property="exprType" jdbcType="VARCHAR" />
+    <result column="EXPR" property="expr" jdbcType="VARCHAR" />
+    <result column="EXPR2" property="expr2" jdbcType="VARCHAR" />
+    <result column="CONDITION_SQL" property="conditionSql" jdbcType="VARCHAR" />
+    <result column="CONDITION_DISPLAY" property="conditionDisplay" jdbcType="VARCHAR" />
+    <result column="ENABLED" property="enabled" jdbcType="VARCHAR" />
+    <result column="HIGHLIGHT_SEQUENCE" property="highlightSequence" jdbcType="DECIMAL" />
+    <result column="ROW_BG_COLOR" property="rowBgColor" jdbcType="VARCHAR" />
+    <result column="ROW_FONT_COLOR" property="rowFontColor" jdbcType="VARCHAR" />
+    <result column="ROW_FORMAT" property="rowFormat" jdbcType="VARCHAR" />
+    <result column="COLUMN_BG_COLOR" property="columnBgColor" jdbcType="VARCHAR" />
+    <result column="COLUMN_FONT_COLOR" property="columnFontColor" jdbcType="VARCHAR" />
+    <result column="COLUMN_FORMAT" property="columnFormat" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="UPDATED_ON" property="updatedOn" jdbcType="DATE" />
+    <result column="UPDATED_BY" property="updatedBy" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

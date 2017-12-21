@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AuxStatsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AuxStats" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAME" property="sname" jdbcType="VARCHAR" />
+    <result column="PNAME" property="pname" jdbcType="VARCHAR" />
+    <result column="PVAL1" property="pval1" jdbcType="DECIMAL" />
+    <result column="PVAL2" property="pval2" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

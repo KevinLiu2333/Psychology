@@ -1,0 +1,93 @@
+﻿.headerInner{width:1180px; margin:0 auto;}
+.logo{left:-14px;}
+.nav{right:0;}
+.main{width:1200px; margin:0 auto; margin-top:20px;}
+.mainLine{padding-bottom:20px; background:url(../images/monitoring/boxShadow.png) repeat-x bottom;}
+.titleLine{height:70px; overflow:visible; border-bottom:#dce0e2 1px solid; background:#fff;}
+.mainTitle{padding:0 30px; height:70px; line-height:75px; font-size:24px; color:#4b4b4b; border-bottom:#24bbfa 1px solid; float:left;}
+.contentLine{background:#fff; padding:15px; height:490px;}
+#roundAll{width:406px; height:406px; float:left; background:url(../images/monitoring/roundBack2.png) no-repeat left top; margin:10px 0 0 50px;}
+.sortAll{width:510px; float:right; margin:40px 50px 0 0;}
+.monthAll{height:32px; background:url(../images/monitoring/monthBack.png) no-repeat left top; color:#9a9a9a; position:relative;}
+.year{width:60px; height:18px; overflow:visible; position:relative; float:left; margin:7px 0 0 10px; line-height:18px;}
+.year span{display:inline-block; width:42px; height:18px; color:#fff; text-align:center; margin-right:5px; border-radius:3px; background:#9a9a9a; cursor:pointer;}
+.year ul{display:inline-block; width:202px; height:110px; border-radius:3px; position:absolute; left:0; top:21px; background:#9a9a9a; color:#fff; padding:5px 5px 0 5px; overflow-y:auto; display:none;}
+.year ul li{display:inline-block; width:40px; margin:0 0 5px 5px; text-align:center; height:18px; border:#9a9a9a 1px solid; border-radius:3px; cursor:pointer;}
+.year ul li:hover{border:#838383 1px solid; background:#a4a4a4;}
+.year ul li.selected{border:#e8e8e8 1px solid; background:#e8e8e8; color:#10a6e4;}
+.monthLine{width:385px; height:26px; background:url(../images/monitoring/monthLine.png) repeat-x center; float:right; position:relative; top:3px; right:35px;}
+.labelM{width:20px; height:32px; line-height:32px; position:absolute; right:2px; top:0;}
+.monthLine ul{position:relative; left:-7px;}
+.monthLine ul li{display:inline-block; width:12px; height:12px; border-radius:10px; background:#9a9a9a; overflow:hidden; position:absolute; top:7px; cursor:pointer; text-align:center;}
+.monthLine ul li:hover{background:#9f9f9f; width:24px; height:24px; border-radius:13px; line-height:24px; top:0px; color:#fff; margin-left:-5px; top:1px;}
+.monthLine ul li.selected{background:#24bbfa; width:22px; height:22px; border-radius:13px; line-height:22px; top:0px; color:#fff; margin-left:-4px; top:2px;}
+.queue{margin:10px 0;}
+.queue ul li{height:14px; padding:12px 8px;}
+.queue ul li span, .queue ul li h1, .queue ul li h6{display:block; float:left; font-family:Verdana, Geneva, sans-serif; line-height:14px; color:#504f4f;}
+.queue ul li span{width:62px;}
+.queue ul li h6{width:100px; text-align:right;}
+.queue ul li h1{width:320px;}
+.queue ul li h1 div{height:14px; line-height:14px; overflow:hidden; text-indent:-200px; background:#cfcfcf; float:left;}
+.queue ul li:hover div{background:#24bbfa;}
+.queue ul li:hover span, .queue ul li:hover h6{color:#24bbfa;}
+.point ul li span{width:120px;}
+.point ul li h1{width:260px;}
+#nodeShow{width:600px; height:490px; float:left; position:relative;}
+#nodeShow li{cursor:pointer; position:absolute; color:#fff;}
+	@-webkit-keyframes 'bounce' {
+	from {}
+	50% {
+		-moz-transform: translateY(-8px);
+		-webkit-transform: translateY(-8px);
+		-o-transform: translateY(-8px);
+		-ms-transform: translateY(-8px);
+		transform: translateY(-8px);
+	}
+	to {
+		-moz-transform: translateY(0);
+		-webkit-transform: translateY(0);
+		-o-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+.bigCirle{width:190px; height:130px; border-radius:95px; background:#ff6f5c; position:absolute; color:#fff; text-align:center; padding-top:60px; font-size:18px; line-height:24px;
+	-moz-animation: 'bounce' 8s infinite;
+	-webkit-animation: 'bounce' 8s infinite;
+	-o-animation: 'bounce' 8s infinite;
+	-ms-animation: 'bounce' 8s infinite;
+	animation: 'bounce' 8s infinite;
+}
+.bigCirle h6{font-size:18px; font-family:微软雅黑;}
+.midCirle{width:110px; height:82px; border-radius:60px; background:#38deba; position:absolute; color:#fff; text-align:center; padding:38px 5px 0 5px; font-size:14px; line-height:20px;
+	-moz-animation: 'bounce' 5s infinite;
+	-webkit-animation: 'bounce' 5s infinite;
+	-o-animation: 'bounce' 5s infinite;
+	-ms-animation: 'bounce' 5s infinite;
+	animation: 'bounce' 5s infinite;
+}
+.midCirle h6{font-size:14px; font-family:微软雅黑;}
+.smallCirle{width:56px; height:53px; border-radius:34px; background:#6fc5fe; position:absolute; color:#fff; text-align:center; padding:15px 6px 0 6px; font-size:12px; line-height:13px;
+	-moz-animation: 'bounce' 3s infinite;
+	-webkit-animation: 'bounce' 3s infinite;
+	-o-animation: 'bounce' 3s infinite;
+	-ms-animation: 'bounce' 3s infinite;
+	animation: 'bounce' 3s infinite;
+}
+.smallCirle h6{font-size:12px; font-family:微软雅黑;}
+#nodeShow li:hover{z-index:999;}
+.bigCirle:hover{border:#ff6f5c 10px solid; background:#fff; width:190px; height:125px; padding-top:65px; border-radius:105px; margin:-15px 0 0 -15px;}
+.bigCirle:hover span, .bigCirle:hover h6{color:#ff6f5c;}
+.midCirle:hover{border:#38deba 10px solid; background:#fff; width:130px; height:95px; padding-top:45px; border-radius:100px; margin:-15px 0 0 -15px;}
+.midCirle:hover span, .midCirle:hover h6{color:#38deba;}
+.smallCirle:hover{border:#6fc5fe 8px solid; background:#fff; width:100px; height:65px; padding-top:45px; border-radius:100px; margin:-15px 0 0 -15px;}
+.smallCirle:hover span, .smallCirle:hover h6{color:#6fc5fe;}
+.leftCol, .rightCol{width:590px; height:670px; float:left; background:#fff url(../images/monitoring/boxShadow.png) repeat-x bottom; padding-bottom:20px;}
+.rightCol{float:right;}
+#domain{height:210px;}
+.recentTitle{text-align:center; margin-top:30px; font-size:16px; font-weight:bold; color:#4b4b4b;}
+#recent10{margin:5px;}
+.areaAll{margin-top:0;}
+.area ul li{padding:7px 8px;}
+#center{width:86px; height:86px;position:relative; border-radius:48px; padding:0; margin:0; float:left; overflow:visible;}
+#center span{display:block; width:86px; height:86px; background:url(../images/monitoring/center2.png) no-repeat left top; position:absolute; left:160px; top:-245px; text-align:center; line-height:86px; font-size:14px; color:#737373; font-family:"微软雅黑";}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Cwm2AwTempCustMeasMapMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Cwm2AwTempCustMeasMap" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="AW_ACCESS_VIEW_NAME" property="awAccessViewName" jdbcType="VARCHAR" />
+    <result column="CUST_ADT_COLUMN" property="custAdtColumn" jdbcType="VARCHAR" />
+    <result column="WORKSPACE_NAME" property="workspaceName" jdbcType="VARCHAR" />
+    <result column="AW_MEASURE_NAME" property="awMeasureName" jdbcType="VARCHAR" />
+    <result column="SESSIONID" property="sessionid" jdbcType="VARCHAR" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

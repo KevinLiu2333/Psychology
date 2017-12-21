@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.EmployeesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Employees" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="EMPLOYEE_ID" property="employeeId" jdbcType="DECIMAL" />
+    <result column="FIRST_NAME" property="firstName" jdbcType="VARCHAR" />
+    <result column="LAST_NAME" property="lastName" jdbcType="VARCHAR" />
+    <result column="EMAIL" property="email" jdbcType="VARCHAR" />
+    <result column="PHONE_NUMBER" property="phoneNumber" jdbcType="VARCHAR" />
+    <result column="HIRE_DATE" property="hireDate" jdbcType="DATE" />
+    <result column="JOB_ID" property="jobId" jdbcType="VARCHAR" />
+    <result column="SALARY" property="salary" jdbcType="DECIMAL" />
+    <result column="COMMISSION_PCT" property="commissionPct" jdbcType="DECIMAL" />
+    <result column="MANAGER_ID" property="managerId" jdbcType="DECIMAL" />
+    <result column="DEPARTMENT_ID" property="departmentId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

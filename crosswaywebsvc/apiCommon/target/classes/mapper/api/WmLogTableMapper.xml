@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WmLogTableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WmLogTable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="GROUP#" property="group" jdbcType="DECIMAL" />
+    <id column="ORDER#" property="order" jdbcType="DECIMAL" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="SQL_STR" property="sqlStr" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

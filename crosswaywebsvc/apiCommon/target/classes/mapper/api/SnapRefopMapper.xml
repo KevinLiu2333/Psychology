@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SnapRefopMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SnapRefop" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SOWNER" property="sowner" jdbcType="VARCHAR" />
+    <result column="VNAME" property="vname" jdbcType="VARCHAR" />
+    <result column="TABNUM" property="tabnum" jdbcType="DECIMAL" />
+    <result column="SETNUM" property="setnum" jdbcType="DECIMAL" />
+    <result column="OPERATION#" property="operation" jdbcType="DECIMAL" />
+    <result column="COLS" property="cols" jdbcType="DECIMAL" />
+    <result column="INSTSITE" property="instsite" jdbcType="DECIMAL" />
+    <result column="FCMASKVEC" property="fcmaskvec" jdbcType="VARBINARY" />
+    <result column="EJMASKVEC" property="ejmaskvec" jdbcType="VARBINARY" />
+    <result column="SQL_TXT" property="sqlTxt" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

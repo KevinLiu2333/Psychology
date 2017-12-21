@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RepcatUserAuthorizationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RepcatUserAuthorizations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="USER_AUTHORIZATION_ID" property="userAuthorizationId" jdbcType="DECIMAL" />
+    <result column="USER_ID" property="userId" jdbcType="DECIMAL" />
+    <result column="REFRESH_TEMPLATE_ID" property="refreshTemplateId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

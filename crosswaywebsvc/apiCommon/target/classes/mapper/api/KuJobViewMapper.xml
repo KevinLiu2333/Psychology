@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuJobViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuJobView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="POWNER_ID" property="pownerId" jdbcType="DECIMAL" />
+    <result column="POWNER" property="powner" jdbcType="VARCHAR" />
+    <result column="LOWNER" property="lowner" jdbcType="VARCHAR" />
+    <result column="COWNER" property="cowner" jdbcType="VARCHAR" />
+    <result column="JOB_ID" property="jobId" jdbcType="DECIMAL" />
+    <result column="LAST_DATE" property="lastDate" jdbcType="VARCHAR" />
+    <result column="THIS_DATE" property="thisDate" jdbcType="VARCHAR" />
+    <result column="NEXT_DATE" property="nextDate" jdbcType="VARCHAR" />
+    <result column="FLAG" property="flag" jdbcType="DECIMAL" />
+    <result column="FAILURES" property="failures" jdbcType="DECIMAL" />
+    <result column="INTERVAL_NUM" property="intervalNum" jdbcType="VARCHAR" />
+    <result column="FIELD1" property="field1" jdbcType="DECIMAL" />
+    <result column="CHARENV" property="charenv" jdbcType="VARCHAR" />
+    <result column="WHAT" property="what" jdbcType="CLOB" />
+    <result column="NLSENV" property="nlsenv" jdbcType="CLOB" />
+    <result column="ENV" property="env" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

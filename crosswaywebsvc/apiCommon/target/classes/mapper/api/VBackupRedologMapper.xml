@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VBackupRedologMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VBackupRedolog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RECID" property="recid" jdbcType="DECIMAL" />
+    <result column="STAMP" property="stamp" jdbcType="DECIMAL" />
+    <result column="SET_STAMP" property="setStamp" jdbcType="DECIMAL" />
+    <result column="SET_COUNT" property="setCount" jdbcType="DECIMAL" />
+    <result column="THREAD#" property="thread" jdbcType="DECIMAL" />
+    <result column="SEQUENCE#" property="sequence" jdbcType="DECIMAL" />
+    <result column="RESETLOGS_CHANGE#" property="resetlogsChange" jdbcType="DECIMAL" />
+    <result column="RESETLOGS_TIME" property="resetlogsTime" jdbcType="DATE" />
+    <result column="FIRST_CHANGE#" property="firstChange" jdbcType="DECIMAL" />
+    <result column="FIRST_TIME" property="firstTime" jdbcType="DATE" />
+    <result column="NEXT_CHANGE#" property="nextChange" jdbcType="DECIMAL" />
+    <result column="NEXT_TIME" property="nextTime" jdbcType="DATE" />
+    <result column="BLOCKS" property="blocks" jdbcType="DECIMAL" />
+    <result column="BLOCK_SIZE" property="blockSize" jdbcType="DECIMAL" />
+    <result column="TERMINAL" property="terminal" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvCpoolCcInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvCpoolCcInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="POOL_NAME" property="poolName" jdbcType="VARCHAR" />
+    <result column="CCLASS_NAME" property="cclassName" jdbcType="VARCHAR" />
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

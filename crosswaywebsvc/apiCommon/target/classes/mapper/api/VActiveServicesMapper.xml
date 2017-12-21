@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VActiveServicesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VActiveServices" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SERVICE_ID" property="serviceId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="NAME_HASH" property="nameHash" jdbcType="DECIMAL" />
+    <result column="NETWORK_NAME" property="networkName" jdbcType="VARCHAR" />
+    <result column="CREATION_DATE" property="creationDate" jdbcType="DATE" />
+    <result column="CREATION_DATE_HASH" property="creationDateHash" jdbcType="DECIMAL" />
+    <result column="GOAL" property="goal" jdbcType="VARCHAR" />
+    <result column="DTP" property="dtp" jdbcType="VARCHAR" />
+    <result column="BLOCKED" property="blocked" jdbcType="VARCHAR" />
+    <result column="AQ_HA_NOTIFICATION" property="aqHaNotification" jdbcType="VARCHAR" />
+    <result column="CLB_GOAL" property="clbGoal" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

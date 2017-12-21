@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtOuiAruMapMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtOuiAruMap" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ARU_ID" property="aruId" jdbcType="DECIMAL" />
+    <result column="OUI_ID" property="ouiId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

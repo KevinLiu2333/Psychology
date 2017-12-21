@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VMemoryCurrentResizeOpsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VMemoryCurrentResizeOps" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COMPONENT" property="component" jdbcType="VARCHAR" />
+    <result column="OPER_TYPE" property="operType" jdbcType="VARCHAR" />
+    <result column="OPER_MODE" property="operMode" jdbcType="VARCHAR" />
+    <result column="PARAMETER" property="parameter" jdbcType="VARCHAR" />
+    <result column="INITIAL_SIZE" property="initialSize" jdbcType="DECIMAL" />
+    <result column="TARGET_SIZE" property="targetSize" jdbcType="DECIMAL" />
+    <result column="CURRENT_SIZE" property="currentSize" jdbcType="DECIMAL" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="LAST_UPDATE_TIME" property="lastUpdateTime" jdbcType="DATE" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllRegisteredSnapshotsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllRegisteredSnapshots" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="SNAPSHOT_SITE" property="snapshotSite" jdbcType="VARCHAR" />
+    <result column="CAN_USE_LOG" property="canUseLog" jdbcType="VARCHAR" />
+    <result column="UPDATABLE" property="updatable" jdbcType="VARCHAR" />
+    <result column="REFRESH_METHOD" property="refreshMethod" jdbcType="VARCHAR" />
+    <result column="SNAPSHOT_ID" property="snapshotId" jdbcType="DECIMAL" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="QUERY_TXT" property="queryTxt" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

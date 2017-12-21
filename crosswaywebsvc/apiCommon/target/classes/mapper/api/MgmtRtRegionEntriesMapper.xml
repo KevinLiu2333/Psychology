@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtRtRegionEntriesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtRtRegionEntries" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="MIN_IP" property="minIp" jdbcType="DECIMAL" />
+    <result column="MAX_IP" property="maxIp" jdbcType="DECIMAL" />
+    <result column="DOMAIN" property="domain" jdbcType="VARCHAR" />
+    <result column="REF_COUNT" property="refCount" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

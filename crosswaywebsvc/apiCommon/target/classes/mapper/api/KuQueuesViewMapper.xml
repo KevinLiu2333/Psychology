@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuQueuesViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuQueuesView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="QID" property="qid" jdbcType="DECIMAL" />
+    <result column="SCHEMA_OBJ" property="schemaObj" jdbcType="OTHER" />
+    <result column="BASE_OBJ" property="baseObj" jdbcType="OTHER" />
+    <result column="TFLAGS" property="tflags" jdbcType="DECIMAL" />
+    <result column="USAGE" property="usage" jdbcType="DECIMAL" />
+    <result column="MAX_RETRIES" property="maxRetries" jdbcType="DECIMAL" />
+    <result column="RETRY_DELAY" property="retryDelay" jdbcType="DECIMAL" />
+    <result column="ENQUEUE_ENABLED" property="enqueueEnabled" jdbcType="DECIMAL" />
+    <result column="PROPERTIES" property="properties" jdbcType="DECIMAL" />
+    <result column="RETENTION" property="retention" jdbcType="DECIMAL" />
+    <result column="QUEUE_COMMENT" property="queueComment" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvIncmeterConfigMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvIncmeterConfig" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="TRANSIENT_INCIDENT_LIFETIME" property="transientIncidentLifetime" jdbcType="DECIMAL" />
+    <result column="CRITICAL_FACTOR" property="criticalFactor" jdbcType="DECIMAL" />
+    <result column="WARNING_FACTOR" property="warningFactor" jdbcType="DECIMAL" />
+    <result column="WEIGHT_FACTOR" property="weightFactor" jdbcType="DECIMAL" />
+    <result column="MODIFICATION_TIME" property="modificationTime" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

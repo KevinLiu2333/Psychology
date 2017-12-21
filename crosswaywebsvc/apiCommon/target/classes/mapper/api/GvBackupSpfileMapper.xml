@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvBackupSpfileMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvBackupSpfile" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="RECID" property="recid" jdbcType="DECIMAL" />
+    <result column="STAMP" property="stamp" jdbcType="DECIMAL" />
+    <result column="SET_STAMP" property="setStamp" jdbcType="DECIMAL" />
+    <result column="SET_COUNT" property="setCount" jdbcType="DECIMAL" />
+    <result column="MODIFICATION_TIME" property="modificationTime" jdbcType="DATE" />
+    <result column="BYTES" property="bytes" jdbcType="DECIMAL" />
+    <result column="COMPLETION_TIME" property="completionTime" jdbcType="DATE" />
+    <result column="DB_UNIQUE_NAME" property="dbUniqueName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

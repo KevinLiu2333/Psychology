@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ObjauthMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Objauth" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="GRANTOR#" property="grantor" jdbcType="DECIMAL" />
+    <result column="GRANTEE#" property="grantee" jdbcType="DECIMAL" />
+    <result column="PRIVILEGE#" property="privilege" jdbcType="DECIMAL" />
+    <result column="SEQUENCE#" property="sequence" jdbcType="DECIMAL" />
+    <result column="PARENT" property="parent" jdbcType="OTHER" />
+    <result column="OPTION$" property="option" jdbcType="DECIMAL" />
+    <result column="COL#" property="col" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

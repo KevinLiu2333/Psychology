@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
@@ -23,11 +24,16 @@ import org.nutz.mvc.view.JspView;
 import org.nutz.mvc.view.ViewWrapper;
 
 import com.wonders.sjfw.entity.FwAccess;
+import com.wonders.sjfw.entity.FwApply;
 import com.wonders.sjfw.entity.FwConfig;
 import com.wonders.sjfw.entity.FwInfo;
 import com.wonders.sjfw.entity.LogFw;
+import com.wonders.wddc.config.SessionFilter;
 import com.wonders.wddc.suite.data.service.DataCoreService;
+import com.wonders.wddc.suite.logger.entity.LogOpBo;
+import com.wonders.wddc.suite.logger.service.LogCoreService;
 import com.wonders.wddc.suite.user.entity.UserUnitBo;
+import com.wonders.wddc.tiles.jk.entity.User;
 import com.wonders.wddc.tiles.sn.SnCreator;
 
 /**
@@ -35,6 +41,7 @@ import com.wonders.wddc.tiles.sn.SnCreator;
  */
 
 @At("/fw")
+//为什么不可以直接用注解注入呢
 @IocBean(fields = "dao")
 public class FwAct extends BaseAct{
 
@@ -42,6 +49,9 @@ public class FwAct extends BaseAct{
     
     @Inject
     private DataCoreService dataService;
+    
+    @Inject
+    private LogCoreService logCoreService;
     
 
     /**
@@ -173,11 +183,13 @@ public class FwAct extends BaseAct{
         //设置服务主键
         fwAccess.setFwInfoId(fwInfoId);
         if(Strings.isBlank(fwAccess.getFwAccessId())){
+    		fwAccess.setMethodKey("wd"+System.currentTimeMillis());
         	this.dao.insert(fwAccess);
         }else{
         	this.dao.update(fwAccess);
         }
-        
+        //设置申请成功次数
+        this.addFwApplyCount(fwInfoId);
         result.put("fwAccess",fwAccess);
         return result;
 
@@ -201,6 +213,13 @@ public class FwAct extends BaseAct{
 	         cri.where().and("fwCode", "=", fwCode);
 	         FwInfo fwInfo = dao.fetch(FwInfo.class,cri);
 	         UserUnitBo userUnit = dao.fetch(UserUnitBo.class, unitId);
+	        
+	         FwAccess oldFwAccess = dao.fetch(FwAccess.class,Cnd.where("fwInfoId", "=", fwInfo.getFwInfoId()).and("unitKey", "=", userUnit.getUnitKey()));
+	         //判断是否重复授权
+	         if(oldFwAccess != null){
+    	         result.put("result","0");
+    	         return result;
+	         }
 	         
 	         fwAccess.setFwInfoId(fwInfo.getFwInfoId());
 	         fwAccess.setUnitKey(userUnit.getUnitKey());
@@ -211,6 +230,8 @@ public class FwAct extends BaseAct{
 	         }else{
 	         	this.dao.update(fwAccess);
 	         }
+	         //设置申请成功次数
+	         this.addFwApplyCount(fwInfo.getFwInfoId());
     	  }catch(Exception e){
     	         result.put("result","0");
     		  e.printStackTrace();
@@ -219,6 +240,17 @@ public class FwAct extends BaseAct{
 
      }
     
+
+  	/**
+  	 * 设置申请成功次数.
+  	 * @param fwInfoId 服务主键
+  	 */
+  	public void addFwApplyCount(String fwInfoId){
+        //设置服务申请数量
+        FwInfo fwInfo = dao.fetch(FwInfo.class,fwInfoId);
+        fwInfo.setApplyCount(fwInfo.getApplyCount()+1);
+        dao.update(fwInfo);
+  	}
     
     /**
      * 发布服务列表 .
@@ -386,7 +418,7 @@ public class FwAct extends BaseAct{
     }
     
     /**
-     * 所有服务列表信息 .
+     * 获取服务授权信息 .
      */
     @At
     @Ok("json")
@@ -403,5 +435,130 @@ public class FwAct extends BaseAct{
         return result;
 
     }
+    
+
+    
+    /**
+     * 判断服务是否已经授权 .
+     */
+    @At
+    @Ok("json")
+    public Map<String, Object> fwIsAccess(String fwInfoId,String unitKey) {
+        FwAccess fwAccess = dao.fetch(FwAccess.class,Cnd.where("fwInfoId", "=", fwInfoId).and("unitKey", "=", unitKey));
+        //回传数据
+        Map<String,Object>  result= new HashMap<String,Object>();
+        //数据列表值
+        result.put("result",fwAccess);
+        return result;
+
+    }
+    
+    
+    /**
+     * 服务预警列表 .
+     */
+    @At
+    @Ok("jsp:sjfw.alarm.list")
+    public Map<String,Object> toAlarmList() {
+        Criteria cri = Cnd.cri();
+        //dao.query()为条件查询
+        List<FwInfo> fwInfoList = dao.query(FwInfo.class,cri);
+        //回传数据
+        Map<String,Object>  result= new HashMap<String,Object>();
+        //数据列表值
+        result.put("fwInfoList",fwInfoList);
+        return result;
+
+    }
+    
+    /**
+     * 进入服务预警设置 页面.
+     * @return 
+     */
+    @At
+    @Ok("jsp:sjfw.alarm.alarm_set")
+    public Map<String,Object> toAlarm(String fwInfoId) {
+    	Criteria cri = Cnd.cri();
+        cri.where().and("fwInfoId", "=", fwInfoId);
+    	FwInfo fwList = dao.fetch(FwInfo.class, cri);
+    	Map<String, Object> result = new HashMap<String, Object>();
+    	result.put("fwList",fwList);
+		return result;
+    }
+    
+
+    /**
+     * 保存预警等级信息
+     */
+    @At
+    @Ok("redirect:/fw/toAlarmList")
+    public void saveLevel(String fwInfoId,String alertLevel,HttpServletRequest request){
+    	FwInfo oldfwInfo = dao.fetch(FwInfo.class,fwInfoId);
+    	//记录日志
+    	String opDesc = "由"+oldfwInfo.getAlertLevel()+"变为"+alertLevel;
+    	logCoreService.insertOpLogAndDetail("yj", "yj102", "预警设置", opDesc, fwInfoId, request);
+    	//更新预警信息
+    	oldfwInfo.setAlertLevel(alertLevel);
+    	dao.update(oldfwInfo);
+    }
+    
+    /**
+     * 服务授权（由授权状态改为发布状态）
+     */
+    @At
+    @Ok("redirect:/fw/toAppLyAudit")
+    public void saveApplyAudit(String fwApplyId,String auditMemo,String auditStatus){
+    	if(fwApplyId != null){
+	    	 Criteria cri = Cnd.cri();
+	    	 cri.where().and("fwApplyId","=",fwApplyId);
+	    	 FwApply fwApply = dao.fetch(FwApply.class,cri);
+	    	 fwApply.setAuditStatus("2");
+	    	 fwApply.setAuditMemo(auditMemo);
+	    	 fwApply.setAuditStatus(auditStatus);
+	    	 fwApply.setAuditTime(new Date());
+	    	 dao.update(fwApply);
+    	 }
+    }
+    
+    /**
+     * 进入服务审批页面 .
+     */
+    @At
+    @Ok("jsp:sjfw.access.audit")
+    public Map<String, Object> toAppLyAudit(String fwApplyId,HttpServletRequest request) {
+    	User user = (User) request.getSession().getAttribute(SessionFilter.SESSION_USER);
+    	Map<String, Object> result = new HashMap<String,Object>();
+    	Criteria cri = Cnd.cri();
+    	cri.where().and("fwApplyId","=",fwApplyId);
+    	FwApply fwApply = dao.fetch(FwApply.class,cri);
+    	Criteria criConfig = Cnd.cri();
+    	criConfig.where().and("fwApplyId","=",fwApply.getFwApplyId());
+    	List<FwConfig> fwConfiList = dao.query(FwConfig.class, criConfig);
+    	
+    	result.put("userName", user.getUnitName());
+    	result.put("logonName", user.getLogonName());
+    	result.put("itemList", fwConfiList);
+    	result.put("fwApply", fwApply);
+    	return result;
+    }
+    
+    /**
+     * 服务授权列表 .
+     */
+    @At
+    @Ok("jsp:sjfw.access.apply_list")
+    public Map<String,Object> toAppLyAuditList() {
+        Criteria cri = Cnd.cri();
+        //dao.query()为条件查询
+        cri.getOrderBy().desc("applyTime");
+        List<FwApply> fwApplyList = dao.query(FwApply.class,cri);
+        //回传数据
+        Map<String,Object>  result= new HashMap<String,Object>();
+        //数据列表值
+        result.put("fwApplyList",fwApplyList);
+        return result;
+
+    }
+    
 
 }

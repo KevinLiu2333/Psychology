@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllExternalTablesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllExternalTables" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="TYPE_OWNER" property="typeOwner" jdbcType="CHAR" />
+    <result column="TYPE_NAME" property="typeName" jdbcType="VARCHAR" />
+    <result column="DEFAULT_DIRECTORY_OWNER" property="defaultDirectoryOwner" jdbcType="CHAR" />
+    <result column="DEFAULT_DIRECTORY_NAME" property="defaultDirectoryName" jdbcType="VARCHAR" />
+    <result column="REJECT_LIMIT" property="rejectLimit" jdbcType="VARCHAR" />
+    <result column="ACCESS_TYPE" property="accessType" jdbcType="VARCHAR" />
+    <result column="PROPERTY" property="property" jdbcType="VARCHAR" />
+    <result column="ACCESS_PARAMETERS" property="accessParameters" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AqMgmtNotifyInputQtableFMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AqMgmtNotifyInputQtableF" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="Q_NAME" property="qName" jdbcType="VARCHAR" />
+    <result column="ROW_ID" property="rowId" jdbcType="OTHER" />
+    <result column="CORRID" property="corrid" jdbcType="VARCHAR" />
+    <result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+    <result column="STATE" property="state" jdbcType="DECIMAL" />
+    <result column="DELAY" property="delay" jdbcType="TIMESTAMP" />
+    <result column="EXPIRATION" property="expiration" jdbcType="DECIMAL" />
+    <result column="ENQ_TIME" property="enqTime" jdbcType="TIMESTAMP" />
+    <result column="ENQ_UID" property="enqUid" jdbcType="VARCHAR" />
+    <result column="ENQ_TID" property="enqTid" jdbcType="VARCHAR" />
+    <result column="DEQ_TIME" property="deqTime" jdbcType="TIMESTAMP" />
+    <result column="DEQ_UID" property="deqUid" jdbcType="VARCHAR" />
+    <result column="DEQ_TID" property="deqTid" jdbcType="VARCHAR" />
+    <result column="RETRY_COUNT" property="retryCount" jdbcType="DECIMAL" />
+    <result column="EXCEPTION_QSCHEMA" property="exceptionQschema" jdbcType="VARCHAR" />
+    <result column="EXCEPTION_QUEUE" property="exceptionQueue" jdbcType="VARCHAR" />
+    <result column="CSCN" property="cscn" jdbcType="DECIMAL" />
+    <result column="DSCN" property="dscn" jdbcType="DECIMAL" />
+    <result column="CHAIN_NO" property="chainNo" jdbcType="DECIMAL" />
+    <result column="LOCAL_ORDER_NO" property="localOrderNo" jdbcType="DECIMAL" />
+    <result column="TIME_MANAGER_INFO" property="timeManagerInfo" jdbcType="TIMESTAMP" />
+    <result column="STEP_NO" property="stepNo" jdbcType="DECIMAL" />
+    <result column="SENDER_NAME" property="senderName" jdbcType="VARCHAR" />
+    <result column="SENDER_ADDRESS" property="senderAddress" jdbcType="VARCHAR" />
+    <result column="SENDER_PROTOCOL" property="senderProtocol" jdbcType="DECIMAL" />
+    <result column="DELIVERY_MODE" property="deliveryMode" jdbcType="CHAR" />
+    <result column="SEQUENCE_NUM" property="sequenceNum" jdbcType="DECIMAL" />
+    <result column="MSG_NUM" property="msgNum" jdbcType="DECIMAL" />
+    <result column="QUEUE_ID" property="queueId" jdbcType="DECIMAL" />
+    <result column="USER_PROP" property="userProp" jdbcType="OTHER" />
+    <result column="MSGID" property="msgid" jdbcType="VARBINARY" />
+    <result column="USER_DATA" property="userData" jdbcType="BLOB" />
+    <result column="DEQUEUE_MSGID" property="dequeueMsgid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

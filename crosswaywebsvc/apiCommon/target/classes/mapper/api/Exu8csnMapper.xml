@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu8csnMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu8csn" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TOBJID" property="tobjid" jdbcType="DECIMAL" />
+    <result column="TOWNER" property="towner" jdbcType="VARCHAR" />
+    <result column="TOWNERID" property="townerid" jdbcType="DECIMAL" />
+    <result column="TNAME" property="tname" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="LENGTH" property="length" jdbcType="DECIMAL" />
+    <result column="PRECISION" property="precision" jdbcType="DECIMAL" />
+    <result column="SCALE" property="scale" jdbcType="DECIMAL" />
+    <result column="TYPE" property="type" jdbcType="DECIMAL" />
+    <result column="ISNULL" property="isnull" jdbcType="DECIMAL" />
+    <result column="CONNAME" property="conname" jdbcType="VARCHAR" />
+    <result column="COLID" property="colid" jdbcType="DECIMAL" />
+    <result column="INTCOLID" property="intcolid" jdbcType="DECIMAL" />
+    <result column="SEGCOLID" property="segcolid" jdbcType="DECIMAL" />
+    <result column="COMMENT$" property="comment" jdbcType="VARCHAR" />
+    <result column="DFLTLEN" property="dfltlen" jdbcType="DECIMAL" />
+    <result column="ENABLED" property="enabled" jdbcType="DECIMAL" />
+    <result column="DEFER" property="defer" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="COLPROP" property="colprop" jdbcType="DECIMAL" />
+    <result column="ADTNAME" property="adtname" jdbcType="VARCHAR" />
+    <result column="ADTOWNER" property="adtowner" jdbcType="VARCHAR" />
+    <result column="COLCLASS" property="colclass" jdbcType="DECIMAL" />
+    <result column="CHARSETID" property="charsetid" jdbcType="DECIMAL" />
+    <result column="CHARSETFORM" property="charsetform" jdbcType="DECIMAL" />
+    <result column="FSPRECISION" property="fsprecision" jdbcType="DECIMAL" />
+    <result column="LFPRECISION" property="lfprecision" jdbcType="DECIMAL" />
+    <result column="CHARLEN" property="charlen" jdbcType="DECIMAL" />
+    <result column="TFLAGS" property="tflags" jdbcType="DECIMAL" />
+    <result column="DEFAULT$" property="default" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

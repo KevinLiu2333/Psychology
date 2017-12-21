@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvSqlBindCaptureMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvSqlBindCapture" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="HASH_VALUE" property="hashValue" jdbcType="DECIMAL" />
+    <result column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="CHILD_NUMBER" property="childNumber" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="POSITION" property="position" jdbcType="DECIMAL" />
+    <result column="DUP_POSITION" property="dupPosition" jdbcType="DECIMAL" />
+    <result column="DATATYPE" property="datatype" jdbcType="DECIMAL" />
+    <result column="DATATYPE_STRING" property="datatypeString" jdbcType="VARCHAR" />
+    <result column="CHARACTER_SID" property="characterSid" jdbcType="DECIMAL" />
+    <result column="PRECISION" property="precision" jdbcType="DECIMAL" />
+    <result column="SCALE" property="scale" jdbcType="DECIMAL" />
+    <result column="MAX_LENGTH" property="maxLength" jdbcType="DECIMAL" />
+    <result column="WAS_CAPTURED" property="wasCaptured" jdbcType="VARCHAR" />
+    <result column="LAST_CAPTURED" property="lastCaptured" jdbcType="DATE" />
+    <result column="VALUE_STRING" property="valueString" jdbcType="VARCHAR" />
+    <result column="VALUE_ANYDATA" property="valueAnydata" jdbcType="OTHER" />
+    <result column="ADDRESS" property="address" jdbcType="VARBINARY" />
+    <result column="CHILD_ADDRESS" property="childAddress" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

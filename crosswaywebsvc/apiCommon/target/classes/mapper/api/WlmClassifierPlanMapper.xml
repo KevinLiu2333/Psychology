@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WlmClassifierPlanMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WlmClassifierPlan" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OPER" property="oper" jdbcType="DECIMAL" />
+    <result column="NCLSRS" property="nclsrs" jdbcType="DECIMAL" />
+    <result column="CLPCSTR" property="clpcstr" jdbcType="VARCHAR" />
+    <result column="ACTIVE" property="active" jdbcType="CHAR" />
+    <result column="SEQNO" property="seqno" jdbcType="DECIMAL" />
+    <result column="TIMESTAMP" property="timestamp" jdbcType="DATE" />
+    <result column="CHKSUM" property="chksum" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

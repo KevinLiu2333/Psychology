@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtRacServicesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtRacServices" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ECM_SNAPSHOT_ID" property="ecmSnapshotId" jdbcType="VARBINARY" />
+    <id column="ECM_DATA_VERSION" property="ecmDataVersion" jdbcType="DECIMAL" />
+    <id column="DATABASE_UNIQUE_NAME" property="databaseUniqueName" jdbcType="VARCHAR" />
+    <id column="SERVICE_NAME" property="serviceName" jdbcType="VARCHAR" />
+    <result column="SERVICE_TYPE" property="serviceType" jdbcType="VARCHAR" />
+    <result column="ENABLED" property="enabled" jdbcType="VARCHAR" />
+    <result column="TAFPOLICY" property="tafpolicy" jdbcType="VARCHAR" />
+    <result column="PREFERRED_INSTANCES" property="preferredInstances" jdbcType="VARCHAR" />
+    <result column="AVAILABLE_INSTANCES" property="availableInstances" jdbcType="VARCHAR" />
+    <result column="RUNNING_INSTANCES" property="runningInstances" jdbcType="VARCHAR" />
+    <result column="CLUSTER_NAME" property="clusterName" jdbcType="VARCHAR" />
+    <result column="SERVER_GROUP" property="serverGroup" jdbcType="VARCHAR" />
+    <result column="RESOURCE_NAME" property="resourceName" jdbcType="VARCHAR" />
+    <result column="SERVICE_CENTRIC_TYPE" property="serviceCentricType" jdbcType="VARCHAR" />
+    <result column="SERVICE_CARDINALITY" property="serviceCardinality" jdbcType="DECIMAL" />
+    <result column="IVID" property="ivid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

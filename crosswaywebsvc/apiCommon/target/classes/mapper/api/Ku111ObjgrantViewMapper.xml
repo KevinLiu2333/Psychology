@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Ku111ObjgrantViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Ku111ObjgrantView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="BASE_OBJ" property="baseObj" jdbcType="OTHER" />
+    <result column="LONG_NAME" property="longName" jdbcType="VARCHAR" />
+    <result column="GRANTOR" property="grantor" jdbcType="VARCHAR" />
+    <result column="GRANTEE" property="grantee" jdbcType="VARCHAR" />
+    <result column="PRIVNAME" property="privname" jdbcType="VARCHAR" />
+    <result column="SEQUENCE" property="sequence" jdbcType="DECIMAL" />
+    <result column="WGO" property="wgo" jdbcType="DECIMAL" />
+    <result column="COLNAME" property="colname" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

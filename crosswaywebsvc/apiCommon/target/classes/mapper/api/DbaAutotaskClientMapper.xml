@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaAutotaskClientMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaAutotaskClient" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CLIENT_NAME" property="clientName" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="CONSUMER_GROUP" property="consumerGroup" jdbcType="VARCHAR" />
+    <result column="CLIENT_TAG" property="clientTag" jdbcType="VARCHAR" />
+    <result column="PRIORITY_OVERRIDE" property="priorityOverride" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTES" property="attributes" jdbcType="VARCHAR" />
+    <result column="WINDOW_GROUP" property="windowGroup" jdbcType="VARCHAR" />
+    <result column="SERVICE_NAME" property="serviceName" jdbcType="VARCHAR" />
+    <result column="RESOURCE_PERCENTAGE" property="resourcePercentage" jdbcType="DECIMAL" />
+    <result column="USE_RESOURCE_ESTIMATES" property="useResourceEstimates" jdbcType="VARCHAR" />
+    <result column="MEAN_JOB_DURATION" property="meanJobDuration" jdbcType="OTHER" />
+    <result column="MEAN_JOB_CPU" property="meanJobCpu" jdbcType="OTHER" />
+    <result column="MEAN_JOB_ATTEMPTS" property="meanJobAttempts" jdbcType="DECIMAL" />
+    <result column="MEAN_INCOMING_TASKS_7_DAYS" property="meanIncomingTasks7Days" jdbcType="DECIMAL" />
+    <result column="MEAN_INCOMING_TASKS_30_DAYS" property="meanIncomingTasks30Days" jdbcType="DECIMAL" />
+    <result column="TOTAL_CPU_LAST_7_DAYS" property="totalCpuLast7Days" jdbcType="OTHER" />
+    <result column="TOTAL_CPU_LAST_30_DAYS" property="totalCpuLast30Days" jdbcType="OTHER" />
+    <result column="MAX_DURATION_LAST_7_DAYS" property="maxDurationLast7Days" jdbcType="OTHER" />
+    <result column="MAX_DURATION_LAST_30_DAYS" property="maxDurationLast30Days" jdbcType="OTHER" />
+    <result column="WINDOW_DURATION_LAST_7_DAYS" property="windowDurationLast7Days" jdbcType="OTHER" />
+    <result column="WINDOW_DURATION_LAST_30_DAYS" property="windowDurationLast30Days" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

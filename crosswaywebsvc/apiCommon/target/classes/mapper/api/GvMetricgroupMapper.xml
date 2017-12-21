@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvMetricgroupMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvMetricgroup" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="GROUP_ID" property="groupId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="INTERVAL_SIZE" property="intervalSize" jdbcType="DECIMAL" />
+    <result column="MAX_INTERVAL" property="maxInterval" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

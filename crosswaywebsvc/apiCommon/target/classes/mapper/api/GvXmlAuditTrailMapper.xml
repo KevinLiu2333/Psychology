@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvXmlAuditTrailMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvXmlAuditTrail" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="AUDIT_TYPE" property="auditType" jdbcType="DECIMAL" />
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="PROXY_SESSIONID" property="proxySessionid" jdbcType="DECIMAL" />
+    <result column="STATEMENTID" property="statementid" jdbcType="DECIMAL" />
+    <result column="ENTRYID" property="entryid" jdbcType="DECIMAL" />
+    <result column="EXTENDED_TIMESTAMP" property="extendedTimestamp" jdbcType="OTHER" />
+    <result column="GLOBAL_UID" property="globalUid" jdbcType="VARCHAR" />
+    <result column="DB_USER" property="dbUser" jdbcType="VARCHAR" />
+    <result column="CLIENTIDENTIFIER" property="clientidentifier" jdbcType="VARCHAR" />
+    <result column="EXT_NAME" property="extName" jdbcType="VARCHAR" />
+    <result column="OS_USER" property="osUser" jdbcType="VARCHAR" />
+    <result column="OS_HOST" property="osHost" jdbcType="VARCHAR" />
+    <result column="OS_PROCESS" property="osProcess" jdbcType="VARCHAR" />
+    <result column="TERMINAL" property="terminal" jdbcType="VARCHAR" />
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="OBJECT_SCHEMA" property="objectSchema" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="POLICY_NAME" property="policyName" jdbcType="VARCHAR" />
+    <result column="NEW_OWNER" property="newOwner" jdbcType="VARCHAR" />
+    <result column="NEW_NAME" property="newName" jdbcType="VARCHAR" />
+    <result column="ACTION" property="action" jdbcType="DECIMAL" />
+    <result column="STATEMENT_TYPE" property="statementType" jdbcType="DECIMAL" />
+    <result column="RETURNCODE" property="returncode" jdbcType="DECIMAL" />
+    <result column="SCN" property="scn" jdbcType="DECIMAL" />
+    <result column="COMMENT_TEXT" property="commentText" jdbcType="VARCHAR" />
+    <result column="AUTH_PRIVILEGES" property="authPrivileges" jdbcType="VARCHAR" />
+    <result column="GRANTEE" property="grantee" jdbcType="VARCHAR" />
+    <result column="PRIV_USED" property="privUsed" jdbcType="DECIMAL" />
+    <result column="SES_ACTIONS" property="sesActions" jdbcType="VARCHAR" />
+    <result column="OS_PRIVILEGE" property="osPrivilege" jdbcType="VARCHAR" />
+    <result column="ECONTEXT_ID" property="econtextId" jdbcType="VARCHAR" />
+    <result column="SQL_BIND" property="sqlBind" jdbcType="VARCHAR" />
+    <result column="SQL_TEXT" property="sqlText" jdbcType="VARCHAR" />
+    <result column="OBJ_EDITION_NAME" property="objEditionName" jdbcType="VARCHAR" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="TRANSACTIONID" property="transactionid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

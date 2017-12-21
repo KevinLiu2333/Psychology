@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RegistryProgressMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RegistryProgress" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="CID" property="cid" jdbcType="VARCHAR" />
+    <id column="NAMESPACE" property="namespace" jdbcType="VARCHAR" />
+    <id column="ACTION" property="action" jdbcType="VARCHAR" />
+    <result column="VALUE" property="value" jdbcType="VARCHAR" />
+    <result column="STEP" property="step" jdbcType="DECIMAL" />
+    <result column="ACTION_TIME" property="actionTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

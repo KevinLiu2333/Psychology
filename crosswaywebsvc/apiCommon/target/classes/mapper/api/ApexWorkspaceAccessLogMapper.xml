@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexWorkspaceAccessLogMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexWorkspaceAccessLog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="AUTHENTICATION_METHOD" property="authenticationMethod" jdbcType="VARCHAR" />
+    <result column="APPLICATION_SCHEMA_OWNER" property="applicationSchemaOwner" jdbcType="VARCHAR" />
+    <result column="ACCESS_DATE" property="accessDate" jdbcType="DATE" />
+    <result column="SECONDS_AGO" property="secondsAgo" jdbcType="DECIMAL" />
+    <result column="IP_ADDRESS" property="ipAddress" jdbcType="VARCHAR" />
+    <result column="AUTHENTICATION_RESULT" property="authenticationResult" jdbcType="VARCHAR" />
+    <result column="CUSTOM_STATUS_TEXT" property="customStatusText" jdbcType="VARCHAR" />
+    <result column="WORKSPACE_ID" property="workspaceId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexWorkspaceSqlScriptsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexWorkspaceSqlScripts" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE_ID" property="workspaceId" jdbcType="DECIMAL" />
+    <result column="WORKSPACE_NAME" property="workspaceName" jdbcType="VARCHAR" />
+    <result column="SQL_SCRIPT_NAME" property="sqlScriptName" jdbcType="VARCHAR" />
+    <result column="EMAIL" property="email" jdbcType="VARCHAR" />
+    <result column="MIME_TYPE" property="mimeType" jdbcType="VARCHAR" />
+    <result column="FILE_SIZE" property="fileSize" jdbcType="DECIMAL" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="SQL_SCRIPT" property="sqlScript" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

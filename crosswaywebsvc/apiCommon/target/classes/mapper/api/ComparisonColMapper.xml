@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ComparisonColMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ComparisonCol" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COMPARISON_ID" property="comparisonId" jdbcType="DECIMAL" />
+    <result column="COL_POSITION" property="colPosition" jdbcType="DECIMAL" />
+    <result column="COL_NAME" property="colName" jdbcType="VARCHAR" />
+    <result column="DATA_TYPE" property="dataType" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+    <result column="SPARE4" property="spare4" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

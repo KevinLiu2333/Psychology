@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ErrorMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Error" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="SEQUENCE#" property="sequence" jdbcType="DECIMAL" />
+    <result column="LINE" property="line" jdbcType="DECIMAL" />
+    <result column="POSITION#" property="position" jdbcType="DECIMAL" />
+    <result column="TEXTLENGTH" property="textlength" jdbcType="DECIMAL" />
+    <result column="TEXT" property="text" jdbcType="VARCHAR" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="ERROR#" property="error" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

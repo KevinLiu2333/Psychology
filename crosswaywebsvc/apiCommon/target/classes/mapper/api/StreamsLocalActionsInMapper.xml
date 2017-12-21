@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.StreamsLocalActionsInMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.StreamsLocalActionsIn" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="MESSAGE_ID" property="messageId" jdbcType="DECIMAL" />
+    <result column="MESSAGE_ARG1" property="messageArg1" jdbcType="VARCHAR" />
+    <result column="MESSAGE_ARG2" property="messageArg2" jdbcType="VARCHAR" />
+    <result column="MESSAGE_ARG3" property="messageArg3" jdbcType="VARCHAR" />
+    <result column="MESSAGE_ARG4" property="messageArg4" jdbcType="VARCHAR" />
+    <result column="MESSAGE_ARG5" property="messageArg5" jdbcType="VARCHAR" />
+    <result column="COMMAND" property="command" jdbcType="VARCHAR" />
+    <result column="COMMAND_ID" property="commandId" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="ATTR1" property="attr1" jdbcType="VARCHAR" />
+    <result column="ATTR2" property="attr2" jdbcType="VARCHAR" />
+    <result column="ATTR3" property="attr3" jdbcType="VARCHAR" />
+    <result column="ATTR4" property="attr4" jdbcType="VARCHAR" />
+    <result column="NUM_ATTR1" property="numAttr1" jdbcType="DECIMAL" />
+    <result column="NUM_ATTR2" property="numAttr2" jdbcType="DECIMAL" />
+    <result column="NUM_ATTR3" property="numAttr3" jdbcType="DECIMAL" />
+    <result column="NUM_ATTR4" property="numAttr4" jdbcType="DECIMAL" />
+    <result column="NUM_ATTR5" property="numAttr5" jdbcType="DECIMAL" />
+    <result column="ADVISOR_TYPE" property="advisorType" jdbcType="VARCHAR" />
+    <result column="RUN_TIME" property="runTime" jdbcType="DATE" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="VARCHAR" />
+    <result column="SPARE4" property="spare4" jdbcType="DATE" />
+    <result column="ATTR5" property="attr5" jdbcType="CLOB" />
+    <result column="ATTR6" property="attr6" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

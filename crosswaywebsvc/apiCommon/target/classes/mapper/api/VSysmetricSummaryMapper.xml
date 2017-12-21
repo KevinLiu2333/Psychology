@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VSysmetricSummaryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VSysmetricSummary" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="BEGIN_TIME" property="beginTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="INTSIZE_CSEC" property="intsizeCsec" jdbcType="DECIMAL" />
+    <result column="GROUP_ID" property="groupId" jdbcType="DECIMAL" />
+    <result column="METRIC_ID" property="metricId" jdbcType="DECIMAL" />
+    <result column="METRIC_NAME" property="metricName" jdbcType="VARCHAR" />
+    <result column="NUM_INTERVAL" property="numInterval" jdbcType="DECIMAL" />
+    <result column="MAXVAL" property="maxval" jdbcType="DECIMAL" />
+    <result column="MINVAL" property="minval" jdbcType="DECIMAL" />
+    <result column="AVERAGE" property="average" jdbcType="DECIMAL" />
+    <result column="STANDARD_DEVIATION" property="standardDeviation" jdbcType="DECIMAL" />
+    <result column="METRIC_UNIT" property="metricUnit" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

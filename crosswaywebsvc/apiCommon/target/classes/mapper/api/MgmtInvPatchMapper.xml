@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtInvPatchMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtInvPatch" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="VARCHAR" />
+    <id column="CONTAINER_GUID" property="containerGuid" jdbcType="VARBINARY" />
+    <result column="TIMESTAMP" property="timestamp" jdbcType="DATE" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="IS_ROLLBACKABLE" property="isRollbackable" jdbcType="VARCHAR" />
+    <result column="PATCH_GUID" property="patchGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

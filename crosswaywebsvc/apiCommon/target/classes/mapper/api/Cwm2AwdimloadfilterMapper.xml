@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Cwm2AwdimloadfilterMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Cwm2Awdimloadfilter" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="IRID" property="irid" jdbcType="DECIMAL" />
+    <result column="DIMLOAD_IRID" property="dimloadIrid" jdbcType="DECIMAL" />
+    <result column="LOOKUP_TABLE_OWNER" property="lookupTableOwner" jdbcType="VARCHAR" />
+    <result column="LOOKUP_TABLE_NAME" property="lookupTableName" jdbcType="VARCHAR" />
+    <result column="FILTERCONDITION" property="filtercondition" jdbcType="VARCHAR" />
+    <result column="CREATEDDATE" property="createddate" jdbcType="DATE" />
+    <result column="UPDATEDDATE" property="updateddate" jdbcType="DATE" />
+    <result column="LASTCHANGEUSER" property="lastchangeuser" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

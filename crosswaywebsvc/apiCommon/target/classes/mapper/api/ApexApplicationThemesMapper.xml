@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationThemesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationThemes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="THEME_NUMBER" property="themeNumber" jdbcType="DECIMAL" />
+    <result column="THEME_NAME" property="themeName" jdbcType="VARCHAR" />
+    <result column="DEFAULT_PAGE_TEMPLATE" property="defaultPageTemplate" jdbcType="VARCHAR" />
+    <result column="DEFAULT_BUTTON_TEMPLATE" property="defaultButtonTemplate" jdbcType="VARCHAR" />
+    <result column="DEFAULT_REGION_TEMPLATE" property="defaultRegionTemplate" jdbcType="VARCHAR" />
+    <result column="DEFAULT_CHART_RG_TEMPLATE" property="defaultChartRgTemplate" jdbcType="VARCHAR" />
+    <result column="DEFAULT_FORM_RG_TEMPLATE" property="defaultFormRgTemplate" jdbcType="VARCHAR" />
+    <result column="DEFAULT_REPORT_REGION_TEMPLATE" property="defaultReportRegionTemplate" jdbcType="VARCHAR" />
+    <result column="DEFAULT_TABULAR_FORM_TEMPLATE" property="defaultTabularFormTemplate" jdbcType="VARCHAR" />
+    <result column="DEFAULT_WIZARD_TEMPLATE" property="defaultWizardTemplate" jdbcType="VARCHAR" />
+    <result column="DEFAULT_BREADCRUMB_RG_TEMPLATE" property="defaultBreadcrumbRgTemplate" jdbcType="VARCHAR" />
+    <result column="DEFAULT_LIST_REGION_TEMPLATE" property="defaultListRegionTemplate" jdbcType="VARCHAR" />
+    <result column="DEFAULT_REPORT_ROW_TEMPLATE" property="defaultReportRowTemplate" jdbcType="VARCHAR" />
+    <result column="DEFAULT_ITEM_LABEL_TEMPLATE" property="defaultItemLabelTemplate" jdbcType="VARCHAR" />
+    <result column="DEFAULT_BREADCRUMB_TEMPLATE" property="defaultBreadcrumbTemplate" jdbcType="VARCHAR" />
+    <result column="DEFAULT_CALENDAR_TEMPLATE" property="defaultCalendarTemplate" jdbcType="VARCHAR" />
+    <result column="DEFAULT_LIST_TEMPLATE" property="defaultListTemplate" jdbcType="VARCHAR" />
+    <result column="DEFAULT_OPTION_LABEL" property="defaultOptionLabel" jdbcType="VARCHAR" />
+    <result column="DEFAULT_REQUIRED_LABEL" property="defaultRequiredLabel" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="CALENDAR_ICON_IMAGE_NAME" property="calendarIconImageName" jdbcType="VARCHAR" />
+    <result column="CALENDAR_ICON_ATTRIBUTES" property="calendarIconAttributes" jdbcType="VARCHAR" />
+    <result column="THEME_ID" property="themeId" jdbcType="DECIMAL" />
+    <result column="THEME_DESCRIPTION" property="themeDescription" jdbcType="VARCHAR" />
+    <result column="COMPONENT_SIGNATURE" property="componentSignature" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

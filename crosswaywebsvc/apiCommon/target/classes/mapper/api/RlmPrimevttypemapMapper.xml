@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RlmPrimevttypemapMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RlmPrimevttypemap" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="RSET_OWNER" property="rsetOwner" jdbcType="VARCHAR" />
+    <id column="RSET_NAME" property="rsetName" jdbcType="VARCHAR" />
+    <id column="PRIM_EVNTST" property="primEvntst" jdbcType="VARCHAR" />
+    <result column="PRIM_ESLIAS" property="primEslias" jdbcType="VARCHAR" />
+    <result column="PRIM_EVTTFLGS" property="primEvttflgs" jdbcType="DECIMAL" />
+    <result column="PRIM_DURMIN" property="primDurmin" jdbcType="DECIMAL" />
+    <result column="PRIM_EVDURCLS" property="primEvdurcls" jdbcType="VARCHAR" />
+    <result column="TALSTABONR" property="talstabonr" jdbcType="VARCHAR" />
+    <result column="TALSTABNM" property="talstabnm" jdbcType="VARCHAR" />
+    <result column="HAVNGATTRS" property="havngattrs" jdbcType="VARCHAR" />
+    <result column="COLLCTTAB" property="collcttab" jdbcType="VARCHAR" />
+    <result column="GRPBYATTRS" property="grpbyattrs" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

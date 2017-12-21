@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoDatumVerticalMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoDatumVertical" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DATUM_ID" property="datumId" jdbcType="DECIMAL" />
+    <result column="DATUM_NAME" property="datumName" jdbcType="VARCHAR" />
+    <result column="ELLIPSOID_ID" property="ellipsoidId" jdbcType="DECIMAL" />
+    <result column="PRIME_MERIDIAN_ID" property="primeMeridianId" jdbcType="DECIMAL" />
+    <result column="INFORMATION_SOURCE" property="informationSource" jdbcType="VARCHAR" />
+    <result column="SHIFT_X" property="shiftX" jdbcType="VARCHAR" />
+    <result column="SHIFT_Y" property="shiftY" jdbcType="DECIMAL" />
+    <result column="SHIFT_Z" property="shiftZ" jdbcType="DECIMAL" />
+    <result column="ROTATE_X" property="rotateX" jdbcType="DECIMAL" />
+    <result column="ROTATE_Y" property="rotateY" jdbcType="DECIMAL" />
+    <result column="ROTATE_Z" property="rotateZ" jdbcType="DECIMAL" />
+    <result column="SCALE_ADJUST" property="scaleAdjust" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

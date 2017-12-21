@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ExfExprsetMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ExfExprset" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="EXSOWNER" property="exsowner" jdbcType="VARCHAR" />
+    <id column="EXSTABNM" property="exstabnm" jdbcType="VARCHAR" />
+    <id column="EXSCOLNM" property="exscolnm" jdbcType="VARCHAR" />
+    <result column="EXSATSNM" property="exsatsnm" jdbcType="VARCHAR" />
+    <result column="EXSTABOBJ" property="exstabobj" jdbcType="DECIMAL" />
+    <result column="EXSPRVTRIG" property="exsprvtrig" jdbcType="VARCHAR" />
+    <result column="EXSETLANL" property="exsetlanl" jdbcType="DATE" />
+    <result column="EXSETNEXP" property="exsetnexp" jdbcType="DECIMAL" />
+    <result column="EXSETSPRP" property="exsetsprp" jdbcType="DECIMAL" />
+    <result column="AVGPRPEXP" property="avgprpexp" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

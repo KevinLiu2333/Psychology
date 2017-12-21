@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtProvAssignmentMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtProvAssignment" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ASSIGNMENT_GUID" property="assignmentGuid" jdbcType="VARBINARY" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="ASSIGNMENT_TYPE" property="assignmentType" jdbcType="VARCHAR" />
+    <result column="ASSIGNMENT_SUBTYPE" property="assignmentSubtype" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="COMPONENT_URN" property="componentUrn" jdbcType="VARCHAR" />
+    <result column="NETWORK_URN" property="networkUrn" jdbcType="VARCHAR" />
+    <result column="BOOT_SERVER_URN" property="bootServerUrn" jdbcType="VARCHAR" />
+    <result column="STAGE_URN" property="stageUrn" jdbcType="VARCHAR" />
+    <result column="START_TIME" property="startTime" jdbcType="OTHER" />
+    <result column="STAGE_USERNAME" property="stageUsername" jdbcType="VARCHAR" />
+    <result column="STAGE_PASSWORD" property="stagePassword" jdbcType="VARCHAR" />
+    <result column="LAST_MODIFIED_TIME" property="lastModifiedTime" jdbcType="OTHER" />
+    <result column="TARGET_RESET_TIME" property="targetResetTime" jdbcType="DECIMAL" />
+    <result column="PROPERTIES" property="properties" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

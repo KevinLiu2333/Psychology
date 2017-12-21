@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtUpdateOperationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtUpdateOperations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OPERATION_GUID" property="operationGuid" jdbcType="VARBINARY" />
+    <result column="JOB_OWNER" property="jobOwner" jdbcType="VARCHAR" />
+    <result column="SUBMISSION_TIMESTAMP" property="submissionTimestamp" jdbcType="DATE" />
+    <result column="LAST_UPDATED_TIMESTAMP" property="lastUpdatedTimestamp" jdbcType="DATE" />
+    <result column="JOB_ID" property="jobId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

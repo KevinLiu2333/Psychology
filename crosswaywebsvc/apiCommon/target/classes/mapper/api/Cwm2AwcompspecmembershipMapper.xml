@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Cwm2AwcompspecmembershipMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Cwm2Awcompspecmembership" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="IRID" property="irid" jdbcType="DECIMAL" />
+    <result column="COMPSPEC_IRID" property="compspecIrid" jdbcType="DECIMAL" />
+    <result column="MEMBERTYPE" property="membertype" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="SEGWIDTH" property="segwidth" jdbcType="DECIMAL" />
+    <result column="COMPSPEC_POSITION" property="compspecPosition" jdbcType="DECIMAL" />
+    <result column="DIM_IRID" property="dimIrid" jdbcType="DECIMAL" />
+    <result column="COMPOSITE_IRID" property="compositeIrid" jdbcType="DECIMAL" />
+    <result column="COMPOSITE_POSITION" property="compositePosition" jdbcType="DECIMAL" />
+    <result column="CREATEDDATE" property="createddate" jdbcType="DATE" />
+    <result column="UPDATEDDATE" property="updateddate" jdbcType="DATE" />
+    <result column="LASTCHANGEUSER" property="lastchangeuser" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VApplyItemMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VApplyItem">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ZY_APPLY_DETAIL_ID" jdbcType="VARCHAR" property="zyApplyDetailId" />
+    <result column="ZY_APPLY_ID" jdbcType="VARCHAR" property="zyApplyId" />
+    <result column="TYPE" jdbcType="VARCHAR" property="type" />
+    <result column="CHECK_CODE" jdbcType="VARCHAR" property="checkCode" />
+    <result column="ZY_ITEM_ID" jdbcType="VARCHAR" property="zyItemId" />
+    <result column="ZY_INFO_ID" jdbcType="VARCHAR" property="zyInfoId" />
+    <result column="CN_NAME" jdbcType="VARCHAR" property="cnName" />
+    <result column="EN_NAME" jdbcType="VARCHAR" property="enName" />
+    <result column="ITEM_TYPE" jdbcType="VARCHAR" property="itemType" />
+    <result column="OPEN_TYPE" jdbcType="VARCHAR" property="openType" />
+    <result column="ITEM_DESC" jdbcType="VARCHAR" property="itemDesc" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvMemoryResizeOpsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvMemoryResizeOps" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="COMPONENT" property="component" jdbcType="VARCHAR" />
+    <result column="OPER_TYPE" property="operType" jdbcType="VARCHAR" />
+    <result column="OPER_MODE" property="operMode" jdbcType="VARCHAR" />
+    <result column="PARAMETER" property="parameter" jdbcType="VARCHAR" />
+    <result column="INITIAL_SIZE" property="initialSize" jdbcType="DECIMAL" />
+    <result column="TARGET_SIZE" property="targetSize" jdbcType="DECIMAL" />
+    <result column="FINAL_SIZE" property="finalSize" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+  </resultMap>
+</mapper>

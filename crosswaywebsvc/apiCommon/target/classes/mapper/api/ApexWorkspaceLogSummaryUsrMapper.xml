@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexWorkspaceLogSummaryUsrMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexWorkspaceLogSummaryUsr" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APEX_USER" property="apexUser" jdbcType="VARCHAR" />
+    <result column="APPLICATIONS" property="applications" jdbcType="DECIMAL" />
+    <result column="PAGE_VIEWS" property="pageViews" jdbcType="DECIMAL" />
+    <result column="DISTINCT_PAGES" property="distinctPages" jdbcType="DECIMAL" />
+    <result column="TOTAL_ELAPSED_TIME" property="totalElapsedTime" jdbcType="DECIMAL" />
+    <result column="AVERAGE_ELAPSED_TIME" property="averageElapsedTime" jdbcType="DECIMAL" />
+    <result column="MINIMUM_ELAPSED_TIME" property="minimumElapsedTime" jdbcType="DECIMAL" />
+    <result column="MAXIMUM_ELAPSED_TIME" property="maximumElapsedTime" jdbcType="DECIMAL" />
+    <result column="TOTAL_ROWS_QUERIED" property="totalRowsQueried" jdbcType="DECIMAL" />
+    <result column="DISTINCT_IP_ADDRESSES" property="distinctIpAddresses" jdbcType="DECIMAL" />
+    <result column="DISTINCT_AGENTS" property="distinctAgents" jdbcType="DECIMAL" />
+    <result column="DISTINCT_APEX_SESSIONS" property="distinctApexSessions" jdbcType="DECIMAL" />
+    <result column="PAGE_VIEWS_WITH_ERRORS" property="pageViewsWithErrors" jdbcType="DECIMAL" />
+    <result column="DYNAMIC_PAGE_VIEWS" property="dynamicPageViews" jdbcType="DECIMAL" />
+    <result column="CACHED_PAGE_VIEWS" property="cachedPageViews" jdbcType="DECIMAL" />
+    <result column="FIRST_VIEW" property="firstView" jdbcType="DATE" />
+    <result column="LAST_VIEW" property="lastView" jdbcType="DATE" />
+    <result column="PERIOD_IN_DAYS" property="periodInDays" jdbcType="DECIMAL" />
+    <result column="LAST_1_MINUTE" property="last1Minute" jdbcType="DECIMAL" />
+    <result column="LAST_5_MINUTES" property="last5Minutes" jdbcType="DECIMAL" />
+    <result column="LAST_10_MINUTES" property="last10Minutes" jdbcType="DECIMAL" />
+    <result column="LAST_15_MINUTES" property="last15Minutes" jdbcType="DECIMAL" />
+    <result column="LAST_30_MINUTES" property="last30Minutes" jdbcType="DECIMAL" />
+    <result column="LAST_1_HOUR" property="last1Hour" jdbcType="DECIMAL" />
+    <result column="LAST_2_HOURS" property="last2Hours" jdbcType="DECIMAL" />
+    <result column="LAST_6_HOURS" property="last6Hours" jdbcType="DECIMAL" />
+    <result column="LAST_12_HOURS" property="last12Hours" jdbcType="DECIMAL" />
+    <result column="LAST_24_HOURS" property="last24Hours" jdbcType="DECIMAL" />
+    <result column="LAST_48_HOURS" property="last48Hours" jdbcType="DECIMAL" />
+    <result column="LAST_7_DAYS" property="last7Days" jdbcType="DECIMAL" />
+    <result column="LAST_14_DAYS" property="last14Days" jdbcType="DECIMAL" />
+    <result column="TODAY_HH01" property="todayHh01" jdbcType="DECIMAL" />
+    <result column="TODAY_HH02" property="todayHh02" jdbcType="DECIMAL" />
+    <result column="TODAY_HH03" property="todayHh03" jdbcType="DECIMAL" />
+    <result column="TODAY_HH04" property="todayHh04" jdbcType="DECIMAL" />
+    <result column="TODAY_HH05" property="todayHh05" jdbcType="DECIMAL" />
+    <result column="TODAY_HH06" property="todayHh06" jdbcType="DECIMAL" />
+    <result column="TODAY_HH07" property="todayHh07" jdbcType="DECIMAL" />
+    <result column="TODAY_HH08" property="todayHh08" jdbcType="DECIMAL" />
+    <result column="TODAY_HH09" property="todayHh09" jdbcType="DECIMAL" />
+    <result column="TODAY_HH10" property="todayHh10" jdbcType="DECIMAL" />
+    <result column="TODAY_HH11" property="todayHh11" jdbcType="DECIMAL" />
+    <result column="TODAY_HH12" property="todayHh12" jdbcType="DECIMAL" />
+    <result column="TODAY_HH13" property="todayHh13" jdbcType="DECIMAL" />
+    <result column="TODAY_HH14" property="todayHh14" jdbcType="DECIMAL" />
+    <result column="TODAY_HH15" property="todayHh15" jdbcType="DECIMAL" />
+    <result column="TODAY_HH16" property="todayHh16" jdbcType="DECIMAL" />
+    <result column="TODAY_HH17" property="todayHh17" jdbcType="DECIMAL" />
+    <result column="TODAY_HH18" property="todayHh18" jdbcType="DECIMAL" />
+    <result column="TODAY_HH19" property="todayHh19" jdbcType="DECIMAL" />
+    <result column="TODAY_HH20" property="todayHh20" jdbcType="DECIMAL" />
+    <result column="TODAY_HH21" property="todayHh21" jdbcType="DECIMAL" />
+    <result column="TODAY_HH22" property="todayHh22" jdbcType="DECIMAL" />
+    <result column="TODAY_HH23" property="todayHh23" jdbcType="DECIMAL" />
+    <result column="TODAY_HH24" property="todayHh24" jdbcType="DECIMAL" />
+    <result column="TODAY" property="today" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

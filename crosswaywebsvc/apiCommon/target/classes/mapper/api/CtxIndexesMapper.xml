@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CtxIndexesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CtxIndexes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="IDX_ID" property="idxId" jdbcType="DECIMAL" />
+    <result column="IDX_OWNER" property="idxOwner" jdbcType="VARCHAR" />
+    <result column="IDX_NAME" property="idxName" jdbcType="VARCHAR" />
+    <result column="IDX_TABLE_OWNER" property="idxTableOwner" jdbcType="VARCHAR" />
+    <result column="IDX_TABLE" property="idxTable" jdbcType="VARCHAR" />
+    <result column="IDX_KEY_NAME" property="idxKeyName" jdbcType="VARCHAR" />
+    <result column="IDX_TEXT_NAME" property="idxTextName" jdbcType="VARCHAR" />
+    <result column="IDX_DOCID_COUNT" property="idxDocidCount" jdbcType="DECIMAL" />
+    <result column="IDX_STATUS" property="idxStatus" jdbcType="VARCHAR" />
+    <result column="IDX_LANGUAGE_COLUMN" property="idxLanguageColumn" jdbcType="VARCHAR" />
+    <result column="IDX_FORMAT_COLUMN" property="idxFormatColumn" jdbcType="VARCHAR" />
+    <result column="IDX_CHARSET_COLUMN" property="idxCharsetColumn" jdbcType="VARCHAR" />
+    <result column="IDX_TYPE" property="idxType" jdbcType="VARCHAR" />
+    <result column="IDX_SYNC_TYPE" property="idxSyncType" jdbcType="VARCHAR" />
+    <result column="IDX_SYNC_MEMORY" property="idxSyncMemory" jdbcType="VARCHAR" />
+    <result column="IDX_SYNC_PARA_DEGREE" property="idxSyncParaDegree" jdbcType="DECIMAL" />
+    <result column="IDX_SYNC_INTERVAL" property="idxSyncInterval" jdbcType="VARCHAR" />
+    <result column="IDX_SYNC_JOBNAME" property="idxSyncJobname" jdbcType="VARCHAR" />
+    <result column="IDX_QUERY_STATS_ENABLED" property="idxQueryStatsEnabled" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

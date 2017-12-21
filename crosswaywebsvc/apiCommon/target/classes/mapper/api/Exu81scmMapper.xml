@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu81scmMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu81scm" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SOWNER" property="sowner" jdbcType="VARCHAR" />
+    <result column="SOWNERID" property="sownerid" jdbcType="DECIMAL" />
+    <result column="VNAME" property="vname" jdbcType="VARCHAR" />
+    <result column="TABNUM" property="tabnum" jdbcType="DECIMAL" />
+    <result column="SNACOL" property="snacol" jdbcType="VARCHAR" />
+    <result column="MASCOL" property="mascol" jdbcType="VARCHAR" />
+    <result column="MASPOS" property="maspos" jdbcType="DECIMAL" />
+    <result column="ROLE" property="role" jdbcType="DECIMAL" />
+    <result column="INSTSITE" property="instsite" jdbcType="DECIMAL" />
+    <result column="SNAPOS" property="snapos" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

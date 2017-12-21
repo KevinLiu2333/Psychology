@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaAdvisorSqlaRecSumMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaAdvisorSqlaRecSum" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <result column="TASK_NAME" property="taskName" jdbcType="VARCHAR" />
+    <result column="REC_ID" property="recId" jdbcType="DECIMAL" />
+    <result column="TOTAL_STMTS" property="totalStmts" jdbcType="DECIMAL" />
+    <result column="TOTAL_PRECOST" property="totalPrecost" jdbcType="DECIMAL" />
+    <result column="TOTAL_POSTCOST" property="totalPostcost" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

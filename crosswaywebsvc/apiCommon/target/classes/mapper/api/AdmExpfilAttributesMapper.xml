@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AdmExpfilAttributesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AdmExpfilAttributes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_SET_NAME" property="attributeSetName" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE" property="attribute" jdbcType="VARCHAR" />
+    <result column="DATA_TYPE" property="dataType" jdbcType="VARCHAR" />
+    <result column="ELEMENTARY" property="elementary" jdbcType="VARCHAR" />
+    <result column="COMPLEX" property="complex" jdbcType="VARCHAR" />
+    <result column="STORED" property="stored" jdbcType="VARCHAR" />
+    <result column="INDEXED" property="indexed" jdbcType="VARCHAR" />
+    <result column="TABLE_ALIAS" property="tableAlias" jdbcType="VARCHAR" />
+    <result column="OPERATOR_LIST" property="operatorList" jdbcType="VARCHAR" />
+    <result column="XMLTYPE_ATTR" property="xmltypeAttr" jdbcType="VARCHAR" />
+    <result column="ASSOCIATED_TABLE" property="associatedTable" jdbcType="VARCHAR" />
+    <result column="DEFAULT_VALUE" property="defaultValue" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

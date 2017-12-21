@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtBlackoutWindowsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtBlackoutWindows" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="BLACKOUT_GUID" property="blackoutGuid" jdbcType="VARBINARY" />
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="START_TIME" property="startTime" jdbcType="DATE" />
+    <id column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="UTC_START_TIME" property="utcStartTime" jdbcType="DATE" />
+    <result column="UTC_END_TIME" property="utcEndTime" jdbcType="DATE" />
+    <result column="OCCURRENCE_NUMBER" property="occurrenceNumber" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

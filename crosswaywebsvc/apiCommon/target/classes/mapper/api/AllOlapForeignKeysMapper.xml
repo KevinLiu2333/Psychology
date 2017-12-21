@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllOlapForeignKeysMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllOlapForeignKeys" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="FOREIGN_KEY_NAME" property="foreignKeyName" jdbcType="VARCHAR" />
+    <result column="IS_RELY" property="isRely" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

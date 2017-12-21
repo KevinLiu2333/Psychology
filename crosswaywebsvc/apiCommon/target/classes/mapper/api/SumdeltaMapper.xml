@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SumdeltaMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Sumdelta" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TABLEOBJ#" property="tableobj" jdbcType="DECIMAL" />
+    <result column="PARTITIONOBJ#" property="partitionobj" jdbcType="DECIMAL" />
+    <result column="DMLOPERATION" property="dmloperation" jdbcType="VARCHAR" />
+    <result column="SCN" property="scn" jdbcType="DECIMAL" />
+    <result column="TIMESTAMP" property="timestamp" jdbcType="DATE" />
+    <result column="LOWROWID" property="lowrowid" jdbcType="OTHER" />
+    <result column="HIGHROWID" property="highrowid" jdbcType="OTHER" />
+    <result column="SEQUENCE" property="sequence" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="VARCHAR" />
+    <result column="SPARE4" property="spare4" jdbcType="DATE" />
+    <result column="XID" property="xid" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

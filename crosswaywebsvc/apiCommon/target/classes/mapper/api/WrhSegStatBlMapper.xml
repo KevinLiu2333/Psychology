@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhSegStatBlMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhSegStatBl" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="TS#" property="ts" jdbcType="DECIMAL" />
+    <id column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <id column="DATAOBJ#" property="dataobj" jdbcType="DECIMAL" />
+    <result column="LOGICAL_READS_TOTAL" property="logicalReadsTotal" jdbcType="DECIMAL" />
+    <result column="LOGICAL_READS_DELTA" property="logicalReadsDelta" jdbcType="DECIMAL" />
+    <result column="BUFFER_BUSY_WAITS_TOTAL" property="bufferBusyWaitsTotal" jdbcType="DECIMAL" />
+    <result column="BUFFER_BUSY_WAITS_DELTA" property="bufferBusyWaitsDelta" jdbcType="DECIMAL" />
+    <result column="DB_BLOCK_CHANGES_TOTAL" property="dbBlockChangesTotal" jdbcType="DECIMAL" />
+    <result column="DB_BLOCK_CHANGES_DELTA" property="dbBlockChangesDelta" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_READS_TOTAL" property="physicalReadsTotal" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_READS_DELTA" property="physicalReadsDelta" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_WRITES_TOTAL" property="physicalWritesTotal" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_WRITES_DELTA" property="physicalWritesDelta" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_READS_DIRECT_TOTAL" property="physicalReadsDirectTotal" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_READS_DIRECT_DELTA" property="physicalReadsDirectDelta" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_WRITES_DIRECT_TOTAL" property="physicalWritesDirectTotal" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_WRITES_DIRECT_DELTA" property="physicalWritesDirectDelta" jdbcType="DECIMAL" />
+    <result column="ITL_WAITS_TOTAL" property="itlWaitsTotal" jdbcType="DECIMAL" />
+    <result column="ITL_WAITS_DELTA" property="itlWaitsDelta" jdbcType="DECIMAL" />
+    <result column="ROW_LOCK_WAITS_TOTAL" property="rowLockWaitsTotal" jdbcType="DECIMAL" />
+    <result column="ROW_LOCK_WAITS_DELTA" property="rowLockWaitsDelta" jdbcType="DECIMAL" />
+    <result column="GC_BUFFER_BUSY_TOTAL" property="gcBufferBusyTotal" jdbcType="DECIMAL" />
+    <result column="GC_BUFFER_BUSY_DELTA" property="gcBufferBusyDelta" jdbcType="DECIMAL" />
+    <result column="GC_CR_BLOCKS_RECEIVED_TOTAL" property="gcCrBlocksReceivedTotal" jdbcType="DECIMAL" />
+    <result column="GC_CR_BLOCKS_RECEIVED_DELTA" property="gcCrBlocksReceivedDelta" jdbcType="DECIMAL" />
+    <result column="GC_CU_BLOCKS_RECEIVED_TOTAL" property="gcCuBlocksReceivedTotal" jdbcType="DECIMAL" />
+    <result column="GC_CU_BLOCKS_RECEIVED_DELTA" property="gcCuBlocksReceivedDelta" jdbcType="DECIMAL" />
+    <result column="SPACE_USED_TOTAL" property="spaceUsedTotal" jdbcType="DECIMAL" />
+    <result column="SPACE_USED_DELTA" property="spaceUsedDelta" jdbcType="DECIMAL" />
+    <result column="SPACE_ALLOCATED_TOTAL" property="spaceAllocatedTotal" jdbcType="DECIMAL" />
+    <result column="SPACE_ALLOCATED_DELTA" property="spaceAllocatedDelta" jdbcType="DECIMAL" />
+    <result column="TABLE_SCANS_TOTAL" property="tableScansTotal" jdbcType="DECIMAL" />
+    <result column="TABLE_SCANS_DELTA" property="tableScansDelta" jdbcType="DECIMAL" />
+    <result column="CHAIN_ROW_EXCESS_TOTAL" property="chainRowExcessTotal" jdbcType="DECIMAL" />
+    <result column="CHAIN_ROW_EXCESS_DELTA" property="chainRowExcessDelta" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_READ_REQUESTS_TOTAL" property="physicalReadRequestsTotal" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_READ_REQUESTS_DELTA" property="physicalReadRequestsDelta" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_WRITE_REQUESTS_TOTAL" property="physicalWriteRequestsTotal" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_WRITE_REQUESTS_DELTA" property="physicalWriteRequestsDelta" jdbcType="DECIMAL" />
+    <result column="OPTIMIZED_PHYSICAL_READS_TOTAL" property="optimizedPhysicalReadsTotal" jdbcType="DECIMAL" />
+    <result column="OPTIMIZED_PHYSICAL_READS_DELTA" property="optimizedPhysicalReadsDelta" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

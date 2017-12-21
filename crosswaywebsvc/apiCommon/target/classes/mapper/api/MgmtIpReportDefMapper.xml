@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtIpReportDefMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtIpReportDef" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="REPORT_GUID" property="reportGuid" jdbcType="VARBINARY" />
+    <result column="SCHEDULE_ENABLED" property="scheduleEnabled" jdbcType="DECIMAL" />
+    <result column="STORE_ENABLED" property="storeEnabled" jdbcType="DECIMAL" />
+    <result column="TITLE_NLSID" property="titleNlsid" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION_NLSID" property="descriptionNlsid" jdbcType="VARCHAR" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="CATEGORY_NLSID" property="categoryNlsid" jdbcType="VARCHAR" />
+    <result column="SUB_CATEGORY_NLSID" property="subCategoryNlsid" jdbcType="VARCHAR" />
+    <result column="LAST_PUBLISHED_UTC" property="lastPublishedUtc" jdbcType="DATE" />
+    <result column="LAST_EDIT_TIME_UTC" property="lastEditTimeUtc" jdbcType="DATE" />
+    <result column="LAST_EDIT_BY" property="lastEditBy" jdbcType="VARCHAR" />
+    <result column="IS_JIT_TARGET" property="isJitTarget" jdbcType="DECIMAL" />
+    <result column="IS_JIT_MULTI_TARGET" property="isJitMultiTarget" jdbcType="DECIMAL" />
+    <result column="ADD_TOC" property="addToc" jdbcType="DECIMAL" />
+    <result column="PUBLISH_TO_PUBLIC" property="publishToPublic" jdbcType="DECIMAL" />
+    <result column="SYSTEM_REPORT" property="systemReport" jdbcType="DECIMAL" />
+    <result column="CUSTOM_REPORT_BEAN_CLASS" property="customReportBeanClass" jdbcType="VARCHAR" />
+    <result column="INTERNAL_ONLY" property="internalOnly" jdbcType="DECIMAL" />
+    <result column="PACK_NAME" property="packName" jdbcType="VARCHAR" />
+    <result column="STYLE" property="style" jdbcType="VARCHAR" />
+    <result column="SHOW_NAVIGATION" property="showNavigation" jdbcType="DECIMAL" />
+    <result column="PRODUCT_NAME" property="productName" jdbcType="VARCHAR" />
+    <result column="COMPONENT_NAME" property="componentName" jdbcType="VARCHAR" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="GENERATE_CONTEXT" property="generateContext" jdbcType="DECIMAL" />
+    <result column="HELP_TOPIC_ID" property="helpTopicId" jdbcType="VARCHAR" />
+    <result column="SCHEDULE_GUID" property="scheduleGuid" jdbcType="VARBINARY" />
+    <result column="PURGE_POLICY_GUID" property="purgePolicyGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

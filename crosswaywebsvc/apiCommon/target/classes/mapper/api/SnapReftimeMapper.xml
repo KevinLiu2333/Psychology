@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SnapReftimeMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SnapReftime" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SOWNER" property="sowner" jdbcType="VARCHAR" />
+    <result column="VNAME" property="vname" jdbcType="VARCHAR" />
+    <result column="TABLENUM" property="tablenum" jdbcType="DECIMAL" />
+    <result column="SNAPTIME" property="snaptime" jdbcType="DATE" />
+    <result column="MOWNER" property="mowner" jdbcType="VARCHAR" />
+    <result column="MASTER" property="master" jdbcType="VARCHAR" />
+    <result column="MASFLAG" property="masflag" jdbcType="DECIMAL" />
+    <result column="MASOBJ#" property="masobj" jdbcType="DECIMAL" />
+    <result column="LOADERTIME" property="loadertime" jdbcType="DATE" />
+    <result column="REFSCN" property="refscn" jdbcType="DECIMAL" />
+    <result column="INSTSITE" property="instsite" jdbcType="DECIMAL" />
+    <result column="LASTSUCCESS" property="lastsuccess" jdbcType="DATE" />
+    <result column="SUB_HANDLE" property="subHandle" jdbcType="DECIMAL" />
+    <result column="CHANGE_VIEW" property="changeView" jdbcType="VARCHAR" />
+    <result column="FCMASKVEC" property="fcmaskvec" jdbcType="VARBINARY" />
+    <result column="EJMASKVEC" property="ejmaskvec" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

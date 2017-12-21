@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ExfExpsetprivsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ExfExpsetprivs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ESOWNER" property="esowner" jdbcType="VARCHAR" />
+    <id column="ESEXPTAB" property="esexptab" jdbcType="VARCHAR" />
+    <id column="ESEXPCOL" property="esexpcol" jdbcType="VARCHAR" />
+    <id column="ESGRANTEE" property="esgrantee" jdbcType="VARCHAR" />
+    <result column="ESCRTPRIV" property="escrtpriv" jdbcType="VARCHAR" />
+    <result column="ESUPDPRIV" property="esupdpriv" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

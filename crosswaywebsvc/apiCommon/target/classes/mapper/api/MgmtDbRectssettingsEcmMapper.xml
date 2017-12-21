@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtDbRectssettingsEcmMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtDbRectssettingsEcm" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ECM_SNAPSHOT_ID" property="ecmSnapshotId" jdbcType="VARBINARY" />
+    <id column="TABLESPACE" property="tablespace" jdbcType="VARCHAR" />
+    <id column="PROBLEM_CODE" property="problemCode" jdbcType="DECIMAL" />
+    <result column="VALUE1" property="value1" jdbcType="DECIMAL" />
+    <result column="VALUE2" property="value2" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

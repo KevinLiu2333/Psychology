@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AqReplayInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AqReplayInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="EVENTID" property="eventid" jdbcType="DECIMAL" />
+    <result column="AGENT" property="agent" jdbcType="OTHER" />
+    <result column="CORRELATIONID" property="correlationid" jdbcType="VARCHAR" />
+    <result column="ACK" property="ack" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

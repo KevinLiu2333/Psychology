@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RedefObjectMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RedefObject" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="REDEF_ID" property="redefId" jdbcType="DECIMAL" />
+    <result column="OBJ_TYPE" property="objType" jdbcType="DECIMAL" />
+    <result column="OBJ_OWNER" property="objOwner" jdbcType="VARCHAR" />
+    <result column="OBJ_NAME" property="objName" jdbcType="VARCHAR" />
+    <result column="INT_OBJ_OWNER" property="intObjOwner" jdbcType="VARCHAR" />
+    <result column="INT_OBJ_NAME" property="intObjName" jdbcType="VARCHAR" />
+    <result column="BT_OWNER" property="btOwner" jdbcType="VARCHAR" />
+    <result column="BT_NAME" property="btName" jdbcType="VARCHAR" />
+    <result column="GENFLAG" property="genflag" jdbcType="DECIMAL" />
+    <result column="TYPFLAG" property="typflag" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

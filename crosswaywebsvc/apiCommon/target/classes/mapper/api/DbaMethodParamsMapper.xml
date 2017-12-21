@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaMethodParamsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaMethodParams" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="TYPE_NAME" property="typeName" jdbcType="VARCHAR" />
+    <result column="METHOD_NAME" property="methodName" jdbcType="VARCHAR" />
+    <result column="METHOD_NO" property="methodNo" jdbcType="DECIMAL" />
+    <result column="PARAM_NAME" property="paramName" jdbcType="VARCHAR" />
+    <result column="PARAM_NO" property="paramNo" jdbcType="DECIMAL" />
+    <result column="PARAM_MODE" property="paramMode" jdbcType="VARCHAR" />
+    <result column="PARAM_TYPE_MOD" property="paramTypeMod" jdbcType="VARCHAR" />
+    <result column="PARAM_TYPE_OWNER" property="paramTypeOwner" jdbcType="VARCHAR" />
+    <result column="PARAM_TYPE_NAME" property="paramTypeName" jdbcType="VARCHAR" />
+    <result column="CHARACTER_SET_NAME" property="characterSetName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

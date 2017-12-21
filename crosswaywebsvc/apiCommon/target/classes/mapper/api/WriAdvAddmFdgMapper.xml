@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriAdvAddmFdgMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriAdvAddmFdg" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <id column="FINDING_ID" property="findingId" jdbcType="DECIMAL" />
+    <result column="RULE_ID" property="ruleId" jdbcType="DECIMAL" />
+    <result column="ADDM_FDG_ID" property="addmFdgId" jdbcType="DECIMAL" />
+    <result column="ADDM_SEQ" property="addmSeq" jdbcType="DECIMAL" />
+    <result column="DATABASE_TIME" property="databaseTime" jdbcType="DECIMAL" />
+    <result column="ACTIVE_SESSIONS" property="activeSessions" jdbcType="DECIMAL" />
+    <result column="PERC_ACTIVE_SESS" property="percActiveSess" jdbcType="DECIMAL" />
+    <result column="IS_AGGREGATE" property="isAggregate" jdbcType="CHAR" />
+    <result column="METER_LEVEL" property="meterLevel" jdbcType="VARCHAR" />
+    <result column="QUERY_TYPE" property="queryType" jdbcType="DECIMAL" />
+    <result column="QUERY_IS_APPROX" property="queryIsApprox" jdbcType="CHAR" />
+    <result column="QUERY_ARGS" property="queryArgs" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtHaInfoEcmMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtHaInfoEcm" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ECM_SNAPSHOT_ID" property="ecmSnapshotId" jdbcType="VARBINARY" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="LOG_MODE" property="logMode" jdbcType="VARCHAR" />
+    <result column="FORCE_LOGGING" property="forceLogging" jdbcType="VARCHAR" />
+    <result column="DATABASE_ROLE" property="databaseRole" jdbcType="VARCHAR" />
+    <result column="FLASHBACK_ON" property="flashbackOn" jdbcType="VARCHAR" />
+    <result column="SUPPLEMENTAL_LOGGING" property="supplementalLogging" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

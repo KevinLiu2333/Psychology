@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuViewViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuViewView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="SCHEMA_OBJ" property="schemaObj" jdbcType="OTHER" />
+    <result column="AUDIT_VAL" property="auditVal" jdbcType="VARCHAR" />
+    <result column="COLS" property="cols" jdbcType="DECIMAL" />
+    <result column="INTCOLS" property="intcols" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="TEXTLENGTH" property="textlength" jdbcType="DECIMAL" />
+    <result column="PARSED_TEXT" property="parsedText" jdbcType="OTHER" />
+    <result column="WITH_OPTION" property="withOption" jdbcType="OTHER" />
+    <result column="TEXTVCNT" property="textvcnt" jdbcType="OTHER" />
+    <result column="COL_LIST" property="colList" jdbcType="OTHER" />
+    <result column="COL_LIST2" property="colList2" jdbcType="OTHER" />
+    <result column="OWNER_NAME" property="ownerName" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="TYPETEXTLENGTH" property="typetextlength" jdbcType="DECIMAL" />
+    <result column="TYPETEXT" property="typetext" jdbcType="VARCHAR" />
+    <result column="OIDTEXTLENGTH" property="oidtextlength" jdbcType="DECIMAL" />
+    <result column="OIDTEXT" property="oidtext" jdbcType="VARCHAR" />
+    <result column="TRANSTEXTLENGTH" property="transtextlength" jdbcType="DECIMAL" />
+    <result column="TRANSTEXT" property="transtext" jdbcType="VARCHAR" />
+    <result column="UNDERTEXTLENGTH" property="undertextlength" jdbcType="DECIMAL" />
+    <result column="UNDERTEXT" property="undertext" jdbcType="VARCHAR" />
+    <result column="CON1_LIST" property="con1List" jdbcType="OTHER" />
+    <result column="CON2_LIST" property="con2List" jdbcType="OTHER" />
+    <result column="TEXT" property="text" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

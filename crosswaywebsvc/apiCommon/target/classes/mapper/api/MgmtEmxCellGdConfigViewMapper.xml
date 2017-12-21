@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtEmxCellGdConfigViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtEmxCellGdConfigView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="CELLNAME" property="cellname" jdbcType="VARCHAR" />
+    <result column="REALMNAME" property="realmname" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="GDSIZE" property="gdsize" jdbcType="DECIMAL" />
+    <result column="CREATIONTIME" property="creationtime" jdbcType="VARCHAR" />
+    <result column="CELLDISK" property="celldisk" jdbcType="VARCHAR" />
+    <result column="OFFSET" property="offset" jdbcType="DECIMAL" />
+    <result column="ERRORCOUNT" property="errorcount" jdbcType="DECIMAL" />
+    <result column="AVAILABLETO" property="availableto" jdbcType="VARCHAR" />
+    <result column="START_TIMESTAMP" property="startTimestamp" jdbcType="DATE" />
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="ECM_SNAPSHOT_ID" property="ecmSnapshotId" jdbcType="VARBINARY" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

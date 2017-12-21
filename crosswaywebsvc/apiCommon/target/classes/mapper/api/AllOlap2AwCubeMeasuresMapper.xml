@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllOlap2AwCubeMeasuresMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllOlap2AwCubeMeasures" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="AW_OWNER" property="awOwner" jdbcType="VARCHAR" />
+    <result column="AW_NAME" property="awName" jdbcType="VARCHAR" />
+    <result column="AW_CUBE_NAME" property="awCubeName" jdbcType="VARCHAR" />
+    <result column="AW_MEASURE_NAME" property="awMeasureName" jdbcType="VARCHAR" />
+    <result column="AW_PHYSICAL_OBJECT" property="awPhysicalObject" jdbcType="VARCHAR" />
+    <result column="MEASURE_SOURCE_NAME" property="measureSourceName" jdbcType="VARCHAR" />
+    <result column="DISPLAY_NAME" property="displayName" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="IS_AGGREGATEABLE" property="isAggregateable" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

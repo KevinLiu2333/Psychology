@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VPgaTargetAdviceHistogramMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VPgaTargetAdviceHistogram" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PGA_TARGET_FOR_ESTIMATE" property="pgaTargetForEstimate" jdbcType="DECIMAL" />
+    <result column="PGA_TARGET_FACTOR" property="pgaTargetFactor" jdbcType="DECIMAL" />
+    <result column="ADVICE_STATUS" property="adviceStatus" jdbcType="VARCHAR" />
+    <result column="LOW_OPTIMAL_SIZE" property="lowOptimalSize" jdbcType="DECIMAL" />
+    <result column="HIGH_OPTIMAL_SIZE" property="highOptimalSize" jdbcType="DECIMAL" />
+    <result column="ESTD_OPTIMAL_EXECUTIONS" property="estdOptimalExecutions" jdbcType="DECIMAL" />
+    <result column="ESTD_ONEPASS_EXECUTIONS" property="estdOnepassExecutions" jdbcType="DECIMAL" />
+    <result column="ESTD_MULTIPASSES_EXECUTIONS" property="estdMultipassesExecutions" jdbcType="DECIMAL" />
+    <result column="ESTD_TOTAL_EXECUTIONS" property="estdTotalExecutions" jdbcType="DECIMAL" />
+    <result column="IGNORED_WORKAREAS_COUNT" property="ignoredWorkareasCount" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

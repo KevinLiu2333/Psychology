@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VDlmConvertRemoteMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VDlmConvertRemote" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="CONVERT_TYPE" property="convertType" jdbcType="VARCHAR" />
+    <result column="AVERAGE_CONVERT_TIME" property="averageConvertTime" jdbcType="DECIMAL" />
+    <result column="CONVERT_COUNT" property="convertCount" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

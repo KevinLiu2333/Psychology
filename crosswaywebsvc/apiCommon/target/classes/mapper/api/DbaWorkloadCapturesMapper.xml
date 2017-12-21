@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaWorkloadCapturesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaWorkloadCaptures" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="DBNAME" property="dbname" jdbcType="VARCHAR" />
+    <result column="DBVERSION" property="dbversion" jdbcType="VARCHAR" />
+    <result column="PARALLEL" property="parallel" jdbcType="VARCHAR" />
+    <result column="DIRECTORY" property="directory" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="DURATION_SECS" property="durationSecs" jdbcType="DECIMAL" />
+    <result column="START_SCN" property="startScn" jdbcType="DECIMAL" />
+    <result column="END_SCN" property="endScn" jdbcType="DECIMAL" />
+    <result column="DEFAULT_ACTION" property="defaultAction" jdbcType="VARCHAR" />
+    <result column="FILTERS_USED" property="filtersUsed" jdbcType="DECIMAL" />
+    <result column="CAPTURE_SIZE" property="captureSize" jdbcType="DECIMAL" />
+    <result column="DBTIME" property="dbtime" jdbcType="DECIMAL" />
+    <result column="DBTIME_TOTAL" property="dbtimeTotal" jdbcType="DECIMAL" />
+    <result column="USER_CALLS" property="userCalls" jdbcType="DECIMAL" />
+    <result column="USER_CALLS_TOTAL" property="userCallsTotal" jdbcType="DECIMAL" />
+    <result column="USER_CALLS_UNREPLAYABLE" property="userCallsUnreplayable" jdbcType="DECIMAL" />
+    <result column="TRANSACTIONS" property="transactions" jdbcType="DECIMAL" />
+    <result column="TRANSACTIONS_TOTAL" property="transactionsTotal" jdbcType="DECIMAL" />
+    <result column="CONNECTS" property="connects" jdbcType="DECIMAL" />
+    <result column="CONNECTS_TOTAL" property="connectsTotal" jdbcType="DECIMAL" />
+    <result column="ERRORS" property="errors" jdbcType="DECIMAL" />
+    <result column="AWR_DBID" property="awrDbid" jdbcType="DECIMAL" />
+    <result column="AWR_BEGIN_SNAP" property="awrBeginSnap" jdbcType="DECIMAL" />
+    <result column="AWR_END_SNAP" property="awrEndSnap" jdbcType="DECIMAL" />
+    <result column="AWR_EXPORTED" property="awrExported" jdbcType="VARCHAR" />
+    <result column="ERROR_CODE" property="errorCode" jdbcType="DECIMAL" />
+    <result column="ERROR_MESSAGE" property="errorMessage" jdbcType="VARCHAR" />
+    <result column="DIR_PATH" property="dirPath" jdbcType="VARCHAR" />
+    <result column="DIR_PATH_SHARED" property="dirPathShared" jdbcType="VARCHAR" />
+    <result column="LAST_PROCESSED_VERSION" property="lastProcessedVersion" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

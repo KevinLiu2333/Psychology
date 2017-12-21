@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DatapumpPathsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DatapumpPaths" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HET_TYPE" property="hetType" jdbcType="VARCHAR" />
+    <result column="OBJECT_PATH" property="objectPath" jdbcType="VARCHAR" />
+    <result column="SEQ_NUM" property="seqNum" jdbcType="DECIMAL" />
+    <result column="FULL_PATH" property="fullPath" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

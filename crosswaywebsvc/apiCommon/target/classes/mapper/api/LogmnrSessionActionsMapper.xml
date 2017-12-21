@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.LogmnrSessionActionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.LogmnrSessionActions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="LOGMNRSESSION#" property="logmnrsession" jdbcType="DECIMAL" />
+    <id column="ACTIONNAME" property="actionname" jdbcType="VARCHAR" />
+    <result column="FLAGSRUNTIME" property="flagsruntime" jdbcType="DECIMAL" />
+    <result column="DROPSCN" property="dropscn" jdbcType="DECIMAL" />
+    <result column="MODIFYTIME" property="modifytime" jdbcType="TIMESTAMP" />
+    <result column="DISPATCHTIME" property="dispatchtime" jdbcType="TIMESTAMP" />
+    <result column="DROPTIME" property="droptime" jdbcType="TIMESTAMP" />
+    <result column="LCRCOUNT" property="lcrcount" jdbcType="DECIMAL" />
+    <result column="PROCESSROLE#" property="processrole" jdbcType="DECIMAL" />
+    <result column="ACTIONTYPE#" property="actiontype" jdbcType="DECIMAL" />
+    <result column="FLAGSDEFINETIME" property="flagsdefinetime" jdbcType="DECIMAL" />
+    <result column="CREATETIME" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="XIDUSN" property="xidusn" jdbcType="DECIMAL" />
+    <result column="XIDSLT" property="xidslt" jdbcType="DECIMAL" />
+    <result column="XIDSQN" property="xidsqn" jdbcType="DECIMAL" />
+    <result column="THREAD#" property="thread" jdbcType="DECIMAL" />
+    <result column="STARTSCN" property="startscn" jdbcType="DECIMAL" />
+    <result column="STARTSUBSCN" property="startsubscn" jdbcType="DECIMAL" />
+    <result column="ENDSCN" property="endscn" jdbcType="DECIMAL" />
+    <result column="ENDSUBSCN" property="endsubscn" jdbcType="DECIMAL" />
+    <result column="RBASQN" property="rbasqn" jdbcType="DECIMAL" />
+    <result column="RBABLK" property="rbablk" jdbcType="DECIMAL" />
+    <result column="RBABYTE" property="rbabyte" jdbcType="DECIMAL" />
+    <result column="SESSION#" property="session" jdbcType="DECIMAL" />
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="ATTR1" property="attr1" jdbcType="DECIMAL" />
+    <result column="ATTR2" property="attr2" jdbcType="DECIMAL" />
+    <result column="ATTR3" property="attr3" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="TIMESTAMP" />
+    <result column="SPARE4" property="spare4" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

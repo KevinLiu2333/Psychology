@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhBufferedSubscribersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhBufferedSubscribers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="QUEUE_SCHEMA" property="queueSchema" jdbcType="VARCHAR" />
+    <id column="QUEUE_NAME" property="queueName" jdbcType="VARCHAR" />
+    <id column="SUBSCRIBER_ID" property="subscriberId" jdbcType="DECIMAL" />
+    <result column="SUBSCRIBER_NAME" property="subscriberName" jdbcType="VARCHAR" />
+    <result column="SUBSCRIBER_ADDRESS" property="subscriberAddress" jdbcType="VARCHAR" />
+    <result column="SUBSCRIBER_TYPE" property="subscriberType" jdbcType="VARCHAR" />
+    <result column="STARTUP_TIME" property="startupTime" jdbcType="DATE" />
+    <result column="NUM_MSGS" property="numMsgs" jdbcType="DECIMAL" />
+    <result column="CNUM_MSGS" property="cnumMsgs" jdbcType="DECIMAL" />
+    <result column="TOTAL_SPILLED_MSG" property="totalSpilledMsg" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

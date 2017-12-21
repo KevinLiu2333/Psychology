@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaApplyInstantiatedObjectsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaApplyInstantiatedObjects" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SOURCE_DATABASE" property="sourceDatabase" jdbcType="VARCHAR" />
+    <result column="SOURCE_OBJECT_OWNER" property="sourceObjectOwner" jdbcType="VARCHAR" />
+    <result column="SOURCE_OBJECT_NAME" property="sourceObjectName" jdbcType="VARCHAR" />
+    <result column="SOURCE_OBJECT_TYPE" property="sourceObjectType" jdbcType="VARCHAR" />
+    <result column="INSTANTIATION_SCN" property="instantiationScn" jdbcType="DECIMAL" />
+    <result column="IGNORE_SCN" property="ignoreScn" jdbcType="DECIMAL" />
+    <result column="APPLY_DATABASE_LINK" property="applyDatabaseLink" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

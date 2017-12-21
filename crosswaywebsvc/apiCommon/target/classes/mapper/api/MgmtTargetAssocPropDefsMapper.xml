@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtTargetAssocPropDefsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtTargetAssocPropDefs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ASSOC_GUID" property="assocGuid" jdbcType="VARBINARY" />
+    <id column="PROPERTY_NAME" property="propertyName" jdbcType="VARCHAR" />
+    <result column="PROPERTY_NLSID" property="propertyNlsid" jdbcType="VARCHAR" />
+    <result column="PROPERTY_DEFAULT" property="propertyDefault" jdbcType="VARCHAR" />
+    <result column="IS_REQUIRED" property="isRequired" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

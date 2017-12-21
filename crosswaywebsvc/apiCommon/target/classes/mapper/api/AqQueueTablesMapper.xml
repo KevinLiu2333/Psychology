@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AqQueueTablesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AqQueueTables" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OBJNO" property="objno" jdbcType="DECIMAL" />
+    <result column="SCHEMA" property="schema" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="UDATA_TYPE" property="udataType" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="SORT_COLS" property="sortCols" jdbcType="DECIMAL" />
+    <result column="TIMEZONE" property="timezone" jdbcType="VARCHAR" />
+    <result column="TABLE_COMMENT" property="tableComment" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

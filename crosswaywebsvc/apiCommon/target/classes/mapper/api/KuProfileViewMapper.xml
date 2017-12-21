@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuProfileViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuProfileView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="PROFILE_ID" property="profileId" jdbcType="DECIMAL" />
+    <result column="PROFILE_NAME" property="profileName" jdbcType="VARCHAR" />
+    <result column="PASS_FUNC_NAME" property="passFuncName" jdbcType="VARCHAR" />
+    <result column="PROFILE_LIST" property="profileList" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

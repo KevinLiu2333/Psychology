@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowUpgTabObsoleteMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowUpgTabObsolete" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="OBSOLETE_DATE" property="obsoleteDate" jdbcType="DATE" />
+    <result column="CHANGE_MADE" property="changeMade" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

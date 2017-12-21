@@ -1,0 +1,82 @@
+@charset "utf-8";
+/*全局*/
+body {
+	margin:0;
+	padding:0;
+	font-size:12px;
+	color:#333;
+	font-family:"宋体",Arial, Helvetica, sans-serif;
+	}
+a:link,a:visited {
+	font-size:12px;
+	color:#333;
+	text-decoration:none;
+	}
+a:hover {
+	color:#FF0000;
+	text-decoration:underline;
+	}
+	
+/*登录页*/
+#full-screen-slider { width:100%; height:295px; float:left; position:relative;}
+#slides { display:block; width:100%; height:295px; list-style:none; padding:0; margin:0; position:relative}
+#slides li { display:block; width:100%; height:100%; list-style:none; padding:0; margin:0; position:absolute}
+#slides li a { display:block; width:100%; height:100%; text-indent:-9999px}
+#pagination { display:block; list-style:none; position:absolute; left:60%; top:260px; z-index:9900;  padding:5px 15px 5px 0; margin:0}
+#pagination li { display:block; list-style:none; width:10px; height:10px; float:left; margin-left:15px; border-radius:5px; background:#FFF }
+#pagination li a { display:block; width:100%; height:100%; padding:0; margin:0;  text-indent:-9999px;}
+#pagination li.current { background:#0092CE}
+
+#login_logo {
+	width:440px;
+	height:140px;
+	margin:0 auto;
+	position:relative;
+	top:-230px;
+	z-index:999;
+	}
+#login_box {
+	background:url(login_box.png) no-repeat;
+	width:440px;
+	height:330px;
+	margin:0 auto;
+	top:-210px;
+	position:relative;
+	z-index:888;
+	}
+#login_input_bg {
+	background:url(login_input.png) no-repeat;
+	width:280px;
+	height:81px;
+	}
+.login_input {
+	background:none;
+	border:none;
+	height:26px;
+	line-height:26px;
+	font-size:14px;
+	width:180px;
+	}
+.login_checkbox {
+	margin-left:10px;
+	vertical-align:middle;
+	}
+.login_button,.login_button_hover {
+	width:280px;
+	height:44px;
+	border:none;
+	cursor:pointer;
+	}
+.login_button {
+	background:url(login_button.png) no-repeat;
+	}
+.login_button_hover {
+	background:url(login_button_hover.png) no-repeat;
+	}
+.login_link a:link,.login_link a:visited {
+	text-decoration:underline;
+	color:#999999;
+	}
+.login_link a:hover {
+	color:#333333;
+	}

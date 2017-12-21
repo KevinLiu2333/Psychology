@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VLogmnrSessionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VLogmnrSession" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="SESSION_NAME" property="sessionName" jdbcType="VARCHAR" />
+    <result column="SESSION_STATE" property="sessionState" jdbcType="VARCHAR" />
+    <result column="DB_NAME" property="dbName" jdbcType="VARCHAR" />
+    <result column="DB_ID" property="dbId" jdbcType="DECIMAL" />
+    <result column="RESET_SCN" property="resetScn" jdbcType="DECIMAL" />
+    <result column="RESET_TIMESTAMP" property="resetTimestamp" jdbcType="DECIMAL" />
+    <result column="NUM_PROCESS" property="numProcess" jdbcType="DECIMAL" />
+    <result column="CHUNK_SIZE" property="chunkSize" jdbcType="DECIMAL" />
+    <result column="START_SCN" property="startScn" jdbcType="DECIMAL" />
+    <result column="END_SCN" property="endScn" jdbcType="DECIMAL" />
+    <result column="SPILL_SCN" property="spillScn" jdbcType="DECIMAL" />
+    <result column="PROCESSED_SCN" property="processedScn" jdbcType="DECIMAL" />
+    <result column="PREPARED_SCN" property="preparedScn" jdbcType="DECIMAL" />
+    <result column="READ_SCN" property="readScn" jdbcType="DECIMAL" />
+    <result column="LOW_MARK_SCN" property="lowMarkScn" jdbcType="DECIMAL" />
+    <result column="CONSUMED_SCN" property="consumedScn" jdbcType="DECIMAL" />
+    <result column="MAX_MEMORY_SIZE" property="maxMemorySize" jdbcType="DECIMAL" />
+    <result column="USED_MEMORY_SIZE" property="usedMemorySize" jdbcType="DECIMAL" />
+    <result column="BUILDER_WORK_SIZE" property="builderWorkSize" jdbcType="DECIMAL" />
+    <result column="PREPARED_WORK_SIZE" property="preparedWorkSize" jdbcType="DECIMAL" />
+    <result column="AVAILABLE_WORK_SIZE" property="availableWorkSize" jdbcType="DECIMAL" />
+    <result column="AVAILABLE_TXN" property="availableTxn" jdbcType="DECIMAL" />
+    <result column="AVAILABLE_COMMITTED_TXN" property="availableCommittedTxn" jdbcType="DECIMAL" />
+    <result column="DELIVERED_TXN" property="deliveredTxn" jdbcType="DECIMAL" />
+    <result column="DELIVERED_COMMITTED_TXN" property="deliveredCommittedTxn" jdbcType="DECIMAL" />
+    <result column="PINNED_TXN" property="pinnedTxn" jdbcType="DECIMAL" />
+    <result column="PINNED_COMMITTED_TXN" property="pinnedCommittedTxn" jdbcType="DECIMAL" />
+    <result column="CHECKPOINT_INTERVAL" property="checkpointInterval" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

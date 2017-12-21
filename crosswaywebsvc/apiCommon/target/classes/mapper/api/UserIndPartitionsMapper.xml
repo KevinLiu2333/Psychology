@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserIndPartitionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserIndPartitions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDEX_NAME" property="indexName" jdbcType="VARCHAR" />
+    <result column="COMPOSITE" property="composite" jdbcType="VARCHAR" />
+    <result column="PARTITION_NAME" property="partitionName" jdbcType="VARCHAR" />
+    <result column="SUBPARTITION_COUNT" property="subpartitionCount" jdbcType="DECIMAL" />
+    <result column="HIGH_VALUE_LENGTH" property="highValueLength" jdbcType="DECIMAL" />
+    <result column="PARTITION_POSITION" property="partitionPosition" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="TABLESPACE_NAME" property="tablespaceName" jdbcType="VARCHAR" />
+    <result column="PCT_FREE" property="pctFree" jdbcType="DECIMAL" />
+    <result column="INI_TRANS" property="iniTrans" jdbcType="DECIMAL" />
+    <result column="MAX_TRANS" property="maxTrans" jdbcType="DECIMAL" />
+    <result column="INITIAL_EXTENT" property="initialExtent" jdbcType="DECIMAL" />
+    <result column="NEXT_EXTENT" property="nextExtent" jdbcType="DECIMAL" />
+    <result column="MIN_EXTENT" property="minExtent" jdbcType="DECIMAL" />
+    <result column="MAX_EXTENT" property="maxExtent" jdbcType="DECIMAL" />
+    <result column="MAX_SIZE" property="maxSize" jdbcType="DECIMAL" />
+    <result column="PCT_INCREASE" property="pctIncrease" jdbcType="DECIMAL" />
+    <result column="FREELISTS" property="freelists" jdbcType="DECIMAL" />
+    <result column="FREELIST_GROUPS" property="freelistGroups" jdbcType="DECIMAL" />
+    <result column="LOGGING" property="logging" jdbcType="VARCHAR" />
+    <result column="COMPRESSION" property="compression" jdbcType="VARCHAR" />
+    <result column="BLEVEL" property="blevel" jdbcType="DECIMAL" />
+    <result column="LEAF_BLOCKS" property="leafBlocks" jdbcType="DECIMAL" />
+    <result column="DISTINCT_KEYS" property="distinctKeys" jdbcType="DECIMAL" />
+    <result column="AVG_LEAF_BLOCKS_PER_KEY" property="avgLeafBlocksPerKey" jdbcType="DECIMAL" />
+    <result column="AVG_DATA_BLOCKS_PER_KEY" property="avgDataBlocksPerKey" jdbcType="DECIMAL" />
+    <result column="CLUSTERING_FACTOR" property="clusteringFactor" jdbcType="DECIMAL" />
+    <result column="NUM_ROWS" property="numRows" jdbcType="DECIMAL" />
+    <result column="SAMPLE_SIZE" property="sampleSize" jdbcType="DECIMAL" />
+    <result column="LAST_ANALYZED" property="lastAnalyzed" jdbcType="DATE" />
+    <result column="BUFFER_POOL" property="bufferPool" jdbcType="VARCHAR" />
+    <result column="FLASH_CACHE" property="flashCache" jdbcType="VARCHAR" />
+    <result column="CELL_FLASH_CACHE" property="cellFlashCache" jdbcType="VARCHAR" />
+    <result column="USER_STATS" property="userStats" jdbcType="VARCHAR" />
+    <result column="PCT_DIRECT_ACCESS" property="pctDirectAccess" jdbcType="DECIMAL" />
+    <result column="GLOBAL_STATS" property="globalStats" jdbcType="VARCHAR" />
+    <result column="DOMIDX_OPSTATUS" property="domidxOpstatus" jdbcType="VARCHAR" />
+    <result column="PARAMETERS" property="parameters" jdbcType="VARCHAR" />
+    <result column="INTERVAL" property="interval" jdbcType="VARCHAR" />
+    <result column="SEGMENT_CREATED" property="segmentCreated" jdbcType="VARCHAR" />
+    <result column="HIGH_VALUE" property="highValue" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

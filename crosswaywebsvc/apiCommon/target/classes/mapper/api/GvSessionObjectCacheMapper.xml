@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvSessionObjectCacheMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvSessionObjectCache" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="PINS" property="pins" jdbcType="DECIMAL" />
+    <result column="HITS" property="hits" jdbcType="DECIMAL" />
+    <result column="TRUE_HITS" property="trueHits" jdbcType="DECIMAL" />
+    <result column="HIT_RATIO" property="hitRatio" jdbcType="DECIMAL" />
+    <result column="TRUE_HIT_RATIO" property="trueHitRatio" jdbcType="DECIMAL" />
+    <result column="OBJECT_REFRESHES" property="objectRefreshes" jdbcType="DECIMAL" />
+    <result column="CACHE_REFRESHES" property="cacheRefreshes" jdbcType="DECIMAL" />
+    <result column="OBJECT_FLUSHES" property="objectFlushes" jdbcType="DECIMAL" />
+    <result column="CACHE_FLUSHES" property="cacheFlushes" jdbcType="DECIMAL" />
+    <result column="CACHE_SHRINKS" property="cacheShrinks" jdbcType="DECIMAL" />
+    <result column="CACHED_OBJECTS" property="cachedObjects" jdbcType="DECIMAL" />
+    <result column="PINNED_OBJECTS" property="pinnedObjects" jdbcType="DECIMAL" />
+    <result column="CACHE_SIZE" property="cacheSize" jdbcType="DECIMAL" />
+    <result column="OPTIMAL_SIZE" property="optimalSize" jdbcType="DECIMAL" />
+    <result column="MAXIMUM_SIZE" property="maximumSize" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

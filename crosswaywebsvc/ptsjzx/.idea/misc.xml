@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES5" />
+  </component>
+  <component name="ProjectResources">
+    <resource url="http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" location="$USER_HOME$/.IntelliJIdea2017.1/system/extResources/cf63db72_mybatis-generator-config_1_0.dtd" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/WebContent/WEB-INF/classes" />
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="http://10.1.8.82:1088/svn/projects2/MZJ/ptsjzx/4.Source/Branches" />
+                  <option value="http://10.1.8.82:1088/svn/projects2/MZJ/ptsjzx/4.Source/SJSJZXGIS_Index" />
+                  <option value="http://10.1.8.82:1088/svn/projects2/MZJ/ptsjzx/4.Source/Tag" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="http://10.1.8.82:1088/svn/projects2/MZJ/ptsjzx/4.Source/Trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="mySupportsUserInfoFilter" value="true" />
+  </component>
+</project>

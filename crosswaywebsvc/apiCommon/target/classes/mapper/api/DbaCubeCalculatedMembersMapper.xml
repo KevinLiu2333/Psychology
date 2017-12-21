@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaCubeCalculatedMembersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaCubeCalculatedMembers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="DIMENSION_NAME" property="dimensionName" jdbcType="VARCHAR" />
+    <result column="MEMBER_NAME" property="memberName" jdbcType="VARCHAR" />
+    <result column="IS_CUSTOM_AGGREGATE" property="isCustomAggregate" jdbcType="VARCHAR" />
+    <result column="STORAGE_TYPE" property="storageType" jdbcType="VARCHAR" />
+    <result column="EXPRESSION" property="expression" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtProvIpRangeMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtProvIpRange" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="IP_RANGE_GUID" property="ipRangeGuid" jdbcType="VARBINARY" />
+    <result column="LAST_MODIFIED_TIME" property="lastModifiedTime" jdbcType="OTHER" />
+    <result column="IP_RANGE_FIRST" property="ipRangeFirst" jdbcType="VARCHAR" />
+    <result column="IP_RANGE_LAST" property="ipRangeLast" jdbcType="VARCHAR" />
+    <result column="IP_RANGE_COUNT" property="ipRangeCount" jdbcType="DECIMAL" />
+    <result column="IP_RANGE_NAME_PATTERN" property="ipRangeNamePattern" jdbcType="VARCHAR" />
+    <result column="IP_RANGE_START_VALUE" property="ipRangeStartValue" jdbcType="DECIMAL" />
+    <result column="IP_RANGE_STATE" property="ipRangeState" jdbcType="VARCHAR" />
+    <result column="NET_CONFIG_GUID" property="netConfigGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

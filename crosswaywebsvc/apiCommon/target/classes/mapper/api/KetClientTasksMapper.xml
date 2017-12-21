@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KetClientTasksMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KetClientTasks" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="CLIENT_ID" property="clientId" jdbcType="DECIMAL" />
+    <id column="OPERATION_ID" property="operationId" jdbcType="DECIMAL" />
+    <id column="TARGET_TYPE" property="targetType" jdbcType="DECIMAL" />
+    <id column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTES" property="attributes" jdbcType="DECIMAL" />
+    <result column="ATTRIBUTES_OVERRIDE" property="attributesOverride" jdbcType="DECIMAL" />
+    <result column="TASK_PRIORITY" property="taskPriority" jdbcType="DECIMAL" />
+    <result column="PRIORITY_OVERRIDE" property="priorityOverride" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="ARG_4" property="arg4" jdbcType="VARCHAR" />
+    <result column="ARG_5" property="arg5" jdbcType="VARCHAR" />
+    <result column="ARG_6" property="arg6" jdbcType="VARCHAR" />
+    <result column="WINDOW_NAME" property="windowName" jdbcType="VARCHAR" />
+    <result column="CURR_JOB_NAME" property="currJobName" jdbcType="VARCHAR" />
+    <result column="CURR_WIN_START" property="currWinStart" jdbcType="OTHER" />
+    <result column="EST_TYPE" property="estType" jdbcType="DECIMAL" />
+    <result column="EST_WEIGHT" property="estWeight" jdbcType="DECIMAL" />
+    <result column="EST_DURATION" property="estDuration" jdbcType="DECIMAL" />
+    <result column="EST_CPU_TIME" property="estCpuTime" jdbcType="DECIMAL" />
+    <result column="EST_TEMP" property="estTemp" jdbcType="DECIMAL" />
+    <result column="EST_DOP" property="estDop" jdbcType="DECIMAL" />
+    <result column="EST_IO_RATE" property="estIoRate" jdbcType="DECIMAL" />
+    <result column="EST_UNDO_RATE" property="estUndoRate" jdbcType="DECIMAL" />
+    <result column="RETRY_COUNT" property="retryCount" jdbcType="DECIMAL" />
+    <result column="GOOD_COUNT" property="goodCount" jdbcType="DECIMAL" />
+    <result column="LG_JOB_LOG_ID" property="lgJobLogId" jdbcType="DECIMAL" />
+    <result column="LG_DATE" property="lgDate" jdbcType="OTHER" />
+    <result column="LG_PRIORITY" property="lgPriority" jdbcType="DECIMAL" />
+    <result column="LG_DURATION" property="lgDuration" jdbcType="DECIMAL" />
+    <result column="LG_CPU_TIME" property="lgCpuTime" jdbcType="DECIMAL" />
+    <result column="LG_TEMP" property="lgTemp" jdbcType="DECIMAL" />
+    <result column="LG_DOP" property="lgDop" jdbcType="DECIMAL" />
+    <result column="LG_IO_RATE" property="lgIoRate" jdbcType="DECIMAL" />
+    <result column="LG_UNDO_RATE" property="lgUndoRate" jdbcType="DECIMAL" />
+    <result column="LG_CPU_WAIT" property="lgCpuWait" jdbcType="DECIMAL" />
+    <result column="LG_IO_WAIT" property="lgIoWait" jdbcType="DECIMAL" />
+    <result column="LG_UNDO_WAIT" property="lgUndoWait" jdbcType="DECIMAL" />
+    <result column="LG_TEMP_WAIT" property="lgTempWait" jdbcType="DECIMAL" />
+    <result column="LG_CONCURRENCY" property="lgConcurrency" jdbcType="DECIMAL" />
+    <result column="LG_CONTENTION" property="lgContention" jdbcType="DECIMAL" />
+    <result column="LT_JOB_LOG_ID" property="ltJobLogId" jdbcType="DECIMAL" />
+    <result column="LT_DATE" property="ltDate" jdbcType="OTHER" />
+    <result column="LT_PRIORITY" property="ltPriority" jdbcType="DECIMAL" />
+    <result column="LT_TERM_CODE" property="ltTermCode" jdbcType="DECIMAL" />
+    <result column="LT_ERROR" property="ltError" jdbcType="DECIMAL" />
+    <result column="LT_DURATION" property="ltDuration" jdbcType="DECIMAL" />
+    <result column="LT_CPU_TIME" property="ltCpuTime" jdbcType="DECIMAL" />
+    <result column="LT_TEMP" property="ltTemp" jdbcType="DECIMAL" />
+    <result column="LT_DOP" property="ltDop" jdbcType="DECIMAL" />
+    <result column="LT_IO_RATE" property="ltIoRate" jdbcType="DECIMAL" />
+    <result column="LT_UNDO_RATE" property="ltUndoRate" jdbcType="DECIMAL" />
+    <result column="LT_CPU_WAIT" property="ltCpuWait" jdbcType="DECIMAL" />
+    <result column="LT_IO_WAIT" property="ltIoWait" jdbcType="DECIMAL" />
+    <result column="LT_UNDO_WAIT" property="ltUndoWait" jdbcType="DECIMAL" />
+    <result column="LT_TEMP_WAIT" property="ltTempWait" jdbcType="DECIMAL" />
+    <result column="LT_CONCURRENCY" property="ltConcurrency" jdbcType="DECIMAL" />
+    <result column="LT_CONTENTION" property="ltContention" jdbcType="DECIMAL" />
+    <result column="MG_DURATION" property="mgDuration" jdbcType="DECIMAL" />
+    <result column="MG_CPU_TIME" property="mgCpuTime" jdbcType="DECIMAL" />
+    <result column="MG_TEMP" property="mgTemp" jdbcType="DECIMAL" />
+    <result column="MG_DOP" property="mgDop" jdbcType="DECIMAL" />
+    <result column="MG_IO_RATE" property="mgIoRate" jdbcType="DECIMAL" />
+    <result column="MG_UNDO_RATE" property="mgUndoRate" jdbcType="DECIMAL" />
+    <result column="MG_CPU_WAIT" property="mgCpuWait" jdbcType="DECIMAL" />
+    <result column="MG_IO_WAIT" property="mgIoWait" jdbcType="DECIMAL" />
+    <result column="MG_UNDO_WAIT" property="mgUndoWait" jdbcType="DECIMAL" />
+    <result column="MG_TEMP_WAIT" property="mgTempWait" jdbcType="DECIMAL" />
+    <result column="MG_CONCURRENCY" property="mgConcurrency" jdbcType="DECIMAL" />
+    <result column="MG_CONTENTION" property="mgContention" jdbcType="DECIMAL" />
+    <result column="INFO_FIELD_1" property="infoField1" jdbcType="VARCHAR" />
+    <result column="INFO_FIELD_3" property="infoField3" jdbcType="DECIMAL" />
+    <result column="INFO_FIELD_4" property="infoField4" jdbcType="DECIMAL" />
+    <result column="INFO_FIELD_2" property="infoField2" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

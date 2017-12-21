@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RegSnapMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RegSnap" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SOWNER" property="sowner" jdbcType="VARCHAR" />
+    <result column="SNAPNAME" property="snapname" jdbcType="VARCHAR" />
+    <result column="SNAPSITE" property="snapsite" jdbcType="VARCHAR" />
+    <result column="SNAPSHOT_ID" property="snapshotId" jdbcType="DECIMAL" />
+    <result column="FLAG" property="flag" jdbcType="DECIMAL" />
+    <result column="REP_TYPE" property="repType" jdbcType="DECIMAL" />
+    <result column="COMMENT$" property="comment" jdbcType="VARCHAR" />
+    <result column="QUERY_TXT" property="queryTxt" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

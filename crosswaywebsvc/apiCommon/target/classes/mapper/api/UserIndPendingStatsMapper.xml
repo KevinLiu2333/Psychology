@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserIndPendingStatsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserIndPendingStats" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDEX_NAME" property="indexName" jdbcType="VARCHAR" />
+    <result column="TABLE_OWNER" property="tableOwner" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="PARTITION_NAME" property="partitionName" jdbcType="VARCHAR" />
+    <result column="SUBPARTITION_NAME" property="subpartitionName" jdbcType="VARCHAR" />
+    <result column="BLEVEL" property="blevel" jdbcType="DECIMAL" />
+    <result column="LEAF_BLOCKS" property="leafBlocks" jdbcType="DECIMAL" />
+    <result column="DISTINCT_KEYS" property="distinctKeys" jdbcType="DECIMAL" />
+    <result column="AVG_LEAF_BLOCKS_PER_KEY" property="avgLeafBlocksPerKey" jdbcType="DECIMAL" />
+    <result column="AVG_DATA_BLOCKS_PER_KEY" property="avgDataBlocksPerKey" jdbcType="DECIMAL" />
+    <result column="CLUSTERING_FACTOR" property="clusteringFactor" jdbcType="DECIMAL" />
+    <result column="NUM_ROWS" property="numRows" jdbcType="DECIMAL" />
+    <result column="SAMPLE_SIZE" property="sampleSize" jdbcType="DECIMAL" />
+    <result column="LAST_ANALYZED" property="lastAnalyzed" jdbcType="DATE" />
+  </resultMap>
+</mapper>

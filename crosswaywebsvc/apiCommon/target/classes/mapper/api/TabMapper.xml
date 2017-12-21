@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TabMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Tab">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" jdbcType="DECIMAL" property="obj" />
+    <result column="DATAOBJ#" jdbcType="DECIMAL" property="dataobj" />
+    <result column="TS#" jdbcType="DECIMAL" property="ts" />
+    <result column="FILE#" jdbcType="DECIMAL" property="file" />
+    <result column="BLOCK#" jdbcType="DECIMAL" property="block" />
+    <result column="BOBJ#" jdbcType="DECIMAL" property="bobj" />
+    <result column="TAB#" jdbcType="DECIMAL" property="tab" />
+    <result column="COLS" jdbcType="DECIMAL" property="cols" />
+    <result column="CLUCOLS" jdbcType="DECIMAL" property="clucols" />
+    <result column="PCTFREE$" jdbcType="DECIMAL" property="pctfree" />
+    <result column="PCTUSED$" jdbcType="DECIMAL" property="pctused" />
+    <result column="INITRANS" jdbcType="DECIMAL" property="initrans" />
+    <result column="MAXTRANS" jdbcType="DECIMAL" property="maxtrans" />
+    <result column="FLAGS" jdbcType="DECIMAL" property="flags" />
+    <result column="AUDIT$" jdbcType="VARCHAR" property="audit" />
+    <result column="ROWCNT" jdbcType="DECIMAL" property="rowcnt" />
+    <result column="BLKCNT" jdbcType="DECIMAL" property="blkcnt" />
+    <result column="EMPCNT" jdbcType="DECIMAL" property="empcnt" />
+    <result column="AVGSPC" jdbcType="DECIMAL" property="avgspc" />
+    <result column="CHNCNT" jdbcType="DECIMAL" property="chncnt" />
+    <result column="AVGRLN" jdbcType="DECIMAL" property="avgrln" />
+    <result column="AVGSPC_FLB" jdbcType="DECIMAL" property="avgspcFlb" />
+    <result column="FLBCNT" jdbcType="DECIMAL" property="flbcnt" />
+    <result column="ANALYZETIME" jdbcType="DATE" property="analyzetime" />
+    <result column="SAMPLESIZE" jdbcType="DECIMAL" property="samplesize" />
+    <result column="DEGREE" jdbcType="DECIMAL" property="degree" />
+    <result column="INSTANCES" jdbcType="DECIMAL" property="instances" />
+    <result column="INTCOLS" jdbcType="DECIMAL" property="intcols" />
+    <result column="KERNELCOLS" jdbcType="DECIMAL" property="kernelcols" />
+    <result column="PROPERTY" jdbcType="DECIMAL" property="property" />
+    <result column="TRIGFLAG" jdbcType="DECIMAL" property="trigflag" />
+    <result column="SPARE1" jdbcType="DECIMAL" property="spare1" />
+    <result column="SPARE2" jdbcType="DECIMAL" property="spare2" />
+    <result column="SPARE3" jdbcType="DECIMAL" property="spare3" />
+    <result column="SPARE4" jdbcType="VARCHAR" property="spare4" />
+    <result column="SPARE5" jdbcType="VARCHAR" property="spare5" />
+    <result column="SPARE6" jdbcType="DATE" property="spare6" />
+  </resultMap>
+</mapper>

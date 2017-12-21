@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ChnfGroupFilterIotMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ChnfGroupFilterIot" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OBJECTNUM" property="objectnum" jdbcType="DECIMAL" />
+    <id column="COLID" property="colid" jdbcType="DECIMAL" />
+    <id column="OPERATOR" property="operator" jdbcType="DECIMAL" />
+    <id column="RHSVAL" property="rhsval" jdbcType="VARBINARY" />
+    <result column="EXPRFILTER" property="exprfilter" jdbcType="CHAR" />
+    <result column="FILTERID" property="filterid" jdbcType="DECIMAL" />
+    <result column="EXPRLHS" property="exprlhs" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

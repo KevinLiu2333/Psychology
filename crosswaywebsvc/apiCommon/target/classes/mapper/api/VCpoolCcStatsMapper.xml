@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VCpoolCcStatsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VCpoolCcStats" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CCLASS_NAME" property="cclassName" jdbcType="VARCHAR" />
+    <result column="NUM_REQUESTS" property="numRequests" jdbcType="DECIMAL" />
+    <result column="NUM_HITS" property="numHits" jdbcType="DECIMAL" />
+    <result column="NUM_MISSES" property="numMisses" jdbcType="DECIMAL" />
+    <result column="NUM_WAITS" property="numWaits" jdbcType="DECIMAL" />
+    <result column="WAIT_TIME" property="waitTime" jdbcType="DECIMAL" />
+    <result column="CLIENT_REQ_TIMEOUTS" property="clientReqTimeouts" jdbcType="DECIMAL" />
+    <result column="NUM_AUTHENTICATIONS" property="numAuthentications" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

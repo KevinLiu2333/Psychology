@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtBcnBcntxnPropsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtBcnBcntxnProps" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="TXN_GUID" property="txnGuid" jdbcType="VARBINARY" />
+    <id column="BCN_GUID" property="bcnGuid" jdbcType="VARBINARY" />
+    <id column="NAME" property="name" jdbcType="VARCHAR" />
+    <id column="STRING_PART" property="stringPart" jdbcType="DECIMAL" />
+    <result column="STRING_VALUE" property="stringValue" jdbcType="VARCHAR" />
+    <result column="NUM_VALUE" property="numValue" jdbcType="DECIMAL" />
+    <result column="DATE_VALUE" property="dateValue" jdbcType="DATE" />
+    <result column="CHAR_VALUE" property="charValue" jdbcType="CHAR" />
+    <result column="PROP_TYPE" property="propType" jdbcType="DECIMAL" />
+    <result column="ENCRYPTED" property="encrypted" jdbcType="CHAR" />
+    <result column="TEMPLATE" property="template" jdbcType="CHAR" />
+  </resultMap>
+</mapper>

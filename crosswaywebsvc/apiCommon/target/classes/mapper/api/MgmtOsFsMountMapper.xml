@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtOsFsMountMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtOsFsMount" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HOST_NAME" property="hostName" jdbcType="VARCHAR" />
+    <result column="RESOURCE_NAME" property="resourceName" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="MOUNT_LOCATION" property="mountLocation" jdbcType="VARCHAR" />
+    <result column="MOUNT_OPTIONS" property="mountOptions" jdbcType="VARCHAR" />
+    <result column="SNAPSHOT_GUID" property="snapshotGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

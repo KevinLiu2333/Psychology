@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriAdvMessageGroupsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriAdvMessageGroups" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <id column="SEQ" property="seq" jdbcType="DECIMAL" />
+    <result column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <result column="EXEC_NAME" property="execName" jdbcType="VARCHAR" />
+    <result column="MESSAGE#" property="message" jdbcType="DECIMAL" />
+    <result column="FAC" property="fac" jdbcType="VARCHAR" />
+    <result column="HDR" property="hdr" jdbcType="DECIMAL" />
+    <result column="LM" property="lm" jdbcType="DECIMAL" />
+    <result column="NL" property="nl" jdbcType="DECIMAL" />
+    <result column="P1" property="p1" jdbcType="VARCHAR" />
+    <result column="P2" property="p2" jdbcType="VARCHAR" />
+    <result column="P3" property="p3" jdbcType="VARCHAR" />
+    <result column="P4" property="p4" jdbcType="VARCHAR" />
+    <result column="P5" property="p5" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

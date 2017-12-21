@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VStreamsApplyReaderMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VStreamsApplyReader" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="SERIAL#" property="serial" jdbcType="DECIMAL" />
+    <result column="APPLY#" property="apply" jdbcType="DECIMAL" />
+    <result column="APPLY_NAME" property="applyName" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="TOTAL_MESSAGES_DEQUEUED" property="totalMessagesDequeued" jdbcType="DECIMAL" />
+    <result column="TOTAL_MESSAGES_SPILLED" property="totalMessagesSpilled" jdbcType="DECIMAL" />
+    <result column="DEQUEUE_TIME" property="dequeueTime" jdbcType="DATE" />
+    <result column="DEQUEUED_MESSAGE_NUMBER" property="dequeuedMessageNumber" jdbcType="DECIMAL" />
+    <result column="DEQUEUED_MESSAGE_CREATE_TIME" property="dequeuedMessageCreateTime" jdbcType="DATE" />
+    <result column="SGA_USED" property="sgaUsed" jdbcType="DECIMAL" />
+    <result column="ELAPSED_DEQUEUE_TIME" property="elapsedDequeueTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_SCHEDULE_TIME" property="elapsedScheduleTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_SPILL_TIME" property="elapsedSpillTime" jdbcType="DECIMAL" />
+    <result column="LAST_BROWSE_NUM" property="lastBrowseNum" jdbcType="DECIMAL" />
+    <result column="OLDEST_SCN_NUM" property="oldestScnNum" jdbcType="DECIMAL" />
+    <result column="LAST_BROWSE_SEQ" property="lastBrowseSeq" jdbcType="DECIMAL" />
+    <result column="LAST_DEQ_SEQ" property="lastDeqSeq" jdbcType="DECIMAL" />
+    <result column="OLDEST_XIDUSN" property="oldestXidusn" jdbcType="DECIMAL" />
+    <result column="OLDEST_XIDSLT" property="oldestXidslt" jdbcType="DECIMAL" />
+    <result column="OLDEST_XIDSQN" property="oldestXidsqn" jdbcType="DECIMAL" />
+    <result column="SPILL_LWM_SCN" property="spillLwmScn" jdbcType="DECIMAL" />
+    <result column="PROXY_SID" property="proxySid" jdbcType="DECIMAL" />
+    <result column="PROXY_SERIAL" property="proxySerial" jdbcType="DECIMAL" />
+    <result column="PROXY_SPID" property="proxySpid" jdbcType="VARCHAR" />
+    <result column="CAPTURE_BYTES_RECEIVED" property="captureBytesReceived" jdbcType="DECIMAL" />
+    <result column="OLDEST_TRANSACTION_ID" property="oldestTransactionId" jdbcType="VARCHAR" />
+    <result column="DEQUEUED_POSITION" property="dequeuedPosition" jdbcType="VARBINARY" />
+    <result column="LAST_BROWSE_POSITION" property="lastBrowsePosition" jdbcType="VARBINARY" />
+    <result column="OLDEST_POSITION" property="oldestPosition" jdbcType="VARBINARY" />
+    <result column="SPILL_LWM_POSITION" property="spillLwmPosition" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

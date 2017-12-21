@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RecVarMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RecVar" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="EC_OBJ#" property="ecObj" jdbcType="DECIMAL" />
+    <result column="VAR_NAME" property="varName" jdbcType="VARCHAR" />
+    <result column="VAR_TYPE" property="varType" jdbcType="VARCHAR" />
+    <result column="VAR_VAL_FUNC" property="varValFunc" jdbcType="VARCHAR" />
+    <result column="VAR_MTHD_FUNC" property="varMthdFunc" jdbcType="VARCHAR" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="VAR_ID" property="varId" jdbcType="DECIMAL" />
+    <result column="VAR_DTY" property="varDty" jdbcType="DECIMAL" />
+    <result column="PRECISION#" property="precision" jdbcType="DECIMAL" />
+    <result column="SCALE" property="scale" jdbcType="DECIMAL" />
+    <result column="MAXLEN" property="maxlen" jdbcType="DECIMAL" />
+    <result column="CHARSETID" property="charsetid" jdbcType="DECIMAL" />
+    <result column="CHARSETFORM" property="charsetform" jdbcType="DECIMAL" />
+    <result column="VERSION" property="version" jdbcType="DECIMAL" />
+    <result column="NUM_ATTRS" property="numAttrs" jdbcType="DECIMAL" />
+    <result column="TOID" property="toid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

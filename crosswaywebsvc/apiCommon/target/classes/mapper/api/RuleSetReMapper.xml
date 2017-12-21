@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RuleSetReMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RuleSetRe" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RS_OBJ#" property="rsObj" jdbcType="DECIMAL" />
+    <result column="EC_OBJ#" property="ecObj" jdbcType="DECIMAL" />
+    <result column="RULE_ID" property="ruleId" jdbcType="DECIMAL" />
+    <result column="R_OBJ#" property="rObj" jdbcType="DECIMAL" />
+    <result column="R_ORCOUNT" property="rOrcount" jdbcType="DECIMAL" />
+    <result column="R_LOWBOX" property="rLowbox" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="ENT_USED" property="entUsed" jdbcType="DECIMAL" />
+    <result column="TABS_USED" property="tabsUsed" jdbcType="VARBINARY" />
+    <result column="VARS_USED" property="varsUsed" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

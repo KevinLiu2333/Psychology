@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowStepComputationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowStepComputations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="FLOW_STEP_ID" property="flowStepId" jdbcType="DECIMAL" />
+    <result column="COMPUTATION_SEQUENCE" property="computationSequence" jdbcType="DECIMAL" />
+    <result column="COMPUTATION_ITEM" property="computationItem" jdbcType="VARCHAR" />
+    <result column="COMPUTATION_POINT" property="computationPoint" jdbcType="VARCHAR" />
+    <result column="COMPUTATION_ITEM_TYPE" property="computationItemType" jdbcType="VARCHAR" />
+    <result column="COMPUTATION_TYPE" property="computationType" jdbcType="VARCHAR" />
+    <result column="COMPUTATION_PROCESSED" property="computationProcessed" jdbcType="VARCHAR" />
+    <result column="COMPUTATION" property="computation" jdbcType="VARCHAR" />
+    <result column="COMPUTE_WHEN" property="computeWhen" jdbcType="VARCHAR" />
+    <result column="COMPUTE_WHEN_TYPE" property="computeWhenType" jdbcType="VARCHAR" />
+    <result column="COMPUTE_WHEN_TEXT" property="computeWhenText" jdbcType="VARCHAR" />
+    <result column="COMPUTATION_ERROR_MESSAGE" property="computationErrorMessage" jdbcType="VARCHAR" />
+    <result column="REQUIRED_PATCH" property="requiredPatch" jdbcType="DECIMAL" />
+    <result column="SECURITY_SCHEME" property="securityScheme" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="COMPUTATION_COMMENT" property="computationComment" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

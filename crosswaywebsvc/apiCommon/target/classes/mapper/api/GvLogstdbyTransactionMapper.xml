@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvLogstdbyTransactionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvLogstdbyTransaction" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="PRIMARY_XIDUSN" property="primaryXidusn" jdbcType="DECIMAL" />
+    <result column="PRIMARY_XIDSLT" property="primaryXidslt" jdbcType="DECIMAL" />
+    <result column="PRIMARY_XIDSQN" property="primaryXidsqn" jdbcType="DECIMAL" />
+    <result column="PRIMARY_START_SCN" property="primaryStartScn" jdbcType="DECIMAL" />
+    <result column="PRIMARY_START_TIME" property="primaryStartTime" jdbcType="DATE" />
+    <result column="PRIMARY_PARENT_XIDUSN" property="primaryParentXidusn" jdbcType="DECIMAL" />
+    <result column="PRIMARY_PARENT_XIDSLT" property="primaryParentXidslt" jdbcType="DECIMAL" />
+    <result column="PRIMARY_PARENT_XIDSQN" property="primaryParentXidsqn" jdbcType="DECIMAL" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="MINING_STATUS" property="miningStatus" jdbcType="VARCHAR" />
+    <result column="APPLY_STATUS" property="applyStatus" jdbcType="VARCHAR" />
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="SERIAL#" property="serial" jdbcType="DECIMAL" />
+    <result column="PRIMARY_XID" property="primaryXid" jdbcType="VARBINARY" />
+    <result column="PRIMARY_PARENT_XID" property="primaryParentXid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

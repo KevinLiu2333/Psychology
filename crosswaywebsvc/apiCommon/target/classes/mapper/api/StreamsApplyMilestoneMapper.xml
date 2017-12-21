@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.StreamsApplyMilestoneMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.StreamsApplyMilestone" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="APPLY#" property="apply" jdbcType="DECIMAL" />
+    <result column="SOURCE_DB_NAME" property="sourceDbName" jdbcType="VARCHAR" />
+    <result column="OLDEST_SCN" property="oldestScn" jdbcType="DECIMAL" />
+    <result column="COMMIT_SCN" property="commitScn" jdbcType="DECIMAL" />
+    <result column="SYNCH_SCN" property="synchScn" jdbcType="DECIMAL" />
+    <result column="EPOCH" property="epoch" jdbcType="DECIMAL" />
+    <result column="PROCESSED_SCN" property="processedScn" jdbcType="DECIMAL" />
+    <result column="APPLY_TIME" property="applyTime" jdbcType="DATE" />
+    <result column="APPLIED_MESSAGE_CREATE_TIME" property="appliedMessageCreateTime" jdbcType="DATE" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="START_SCN" property="startScn" jdbcType="DECIMAL" />
+    <result column="OLDEST_TRANSACTION_ID" property="oldestTransactionId" jdbcType="VARCHAR" />
+    <result column="SPILL_LWM_SCN" property="spillLwmScn" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="VARCHAR" />
+    <result column="XOUT_PROCESSED_CREATE_TIME" property="xoutProcessedCreateTime" jdbcType="DATE" />
+    <result column="XOUT_PROCESSED_TID" property="xoutProcessedTid" jdbcType="VARCHAR" />
+    <result column="XOUT_PROCESSED_TIME" property="xoutProcessedTime" jdbcType="DATE" />
+    <result column="OLDEST_CREATE_TIME" property="oldestCreateTime" jdbcType="DATE" />
+    <result column="SPILL_LWM_CREATE_TIME" property="spillLwmCreateTime" jdbcType="DATE" />
+    <result column="SPARE6" property="spare6" jdbcType="DATE" />
+    <result column="SPARE7" property="spare7" jdbcType="DATE" />
+    <result column="LWM_EXTERNAL_POS" property="lwmExternalPos" jdbcType="VARBINARY" />
+    <result column="OLDEST_POSITION" property="oldestPosition" jdbcType="VARBINARY" />
+    <result column="SPILL_LWM_POSITION" property="spillLwmPosition" jdbcType="VARBINARY" />
+    <result column="PROCESSED_POSITION" property="processedPosition" jdbcType="VARBINARY" />
+    <result column="START_POSITION" property="startPosition" jdbcType="VARBINARY" />
+    <result column="XOUT_PROCESSED_POSITION" property="xoutProcessedPosition" jdbcType="VARBINARY" />
+    <result column="APPLIED_HIGH_POSITION" property="appliedHighPosition" jdbcType="VARBINARY" />
+    <result column="SPARE4" property="spare4" jdbcType="VARBINARY" />
+    <result column="SPARE5" property="spare5" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

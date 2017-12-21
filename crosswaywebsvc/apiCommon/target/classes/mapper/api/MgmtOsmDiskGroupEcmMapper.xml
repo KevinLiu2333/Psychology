@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtOsmDiskGroupEcmMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtOsmDiskGroupEcm" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ECM_SNAPSHOT_ID" property="ecmSnapshotId" jdbcType="VARBINARY" />
+    <id column="DISK_GROUP" property="diskGroup" jdbcType="VARCHAR" />
+    <id column="PROBLEM_CODE" property="problemCode" jdbcType="DECIMAL" />
+    <result column="VALUE1_N" property="value1N" jdbcType="DECIMAL" />
+    <result column="VALUE2_N" property="value2N" jdbcType="DECIMAL" />
+    <result column="VALUE3_S" property="value3S" jdbcType="VARCHAR" />
+    <result column="VALUE4_S" property="value4S" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

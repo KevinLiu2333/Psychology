@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UniPluggableSetCheckMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UniPluggableSetCheck" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ1_OWNER" property="obj1Owner" jdbcType="VARCHAR" />
+    <result column="OBJ1_NAME" property="obj1Name" jdbcType="VARCHAR" />
+    <result column="OBJ1_SUBNAME" property="obj1Subname" jdbcType="VARCHAR" />
+    <result column="OBJ1_TYPE" property="obj1Type" jdbcType="VARCHAR" />
+    <result column="TS1_NAME" property="ts1Name" jdbcType="VARCHAR" />
+    <result column="OBJ2_NAME" property="obj2Name" jdbcType="VARCHAR" />
+    <result column="OBJ2_SUBNAME" property="obj2Subname" jdbcType="VARCHAR" />
+    <result column="OBJ2_TYPE" property="obj2Type" jdbcType="VARCHAR" />
+    <result column="OBJ2_OWNER" property="obj2Owner" jdbcType="VARCHAR" />
+    <result column="TS2_NAME" property="ts2Name" jdbcType="VARCHAR" />
+    <result column="CONSTRAINT_NAME" property="constraintName" jdbcType="VARCHAR" />
+    <result column="REASON" property="reason" jdbcType="VARCHAR" />
+    <result column="MESG_ID" property="mesgId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

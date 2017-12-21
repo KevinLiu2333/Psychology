@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ExfDefidxparamMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ExfDefidxparam" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ATSOWNER" property="atsowner" jdbcType="VARCHAR" />
+    <result column="ATSNAME" property="atsname" jdbcType="VARCHAR" />
+    <result column="ATTRSEXP" property="attrsexp" jdbcType="VARCHAR" />
+    <result column="ATTRTYPE" property="attrtype" jdbcType="VARCHAR" />
+    <result column="ATTROPER" property="attroper" jdbcType="OTHER" />
+    <result column="ATTRPROP" property="attrprop" jdbcType="DECIMAL" />
+    <result column="XMLTATTR" property="xmltattr" jdbcType="VARCHAR" />
+    <result column="XMLNSELP" property="xmlnselp" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

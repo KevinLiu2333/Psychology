@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WmWorkspacePrivTableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WmWorkspacePrivTable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="GRANTEE" property="grantee" jdbcType="VARCHAR" />
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="GRANTOR" property="grantor" jdbcType="VARCHAR" />
+    <result column="PRIV" property="priv" jdbcType="VARCHAR" />
+    <result column="ADMIN" property="admin" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

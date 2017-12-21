@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllEditionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllEditions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="EDITION_NAME" property="editionName" jdbcType="VARCHAR" />
+    <result column="PARENT_EDITION_NAME" property="parentEditionName" jdbcType="VARCHAR" />
+    <result column="USABLE" property="usable" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

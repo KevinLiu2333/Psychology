@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtProvNetConfigMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtProvNetConfig" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="NET_CONFIG_GUID" property="netConfigGuid" jdbcType="VARBINARY" />
+    <result column="LAST_MODIFIED_TIME" property="lastModifiedTime" jdbcType="OTHER" />
+    <result column="NET_CONFIG_NAME" property="netConfigName" jdbcType="VARCHAR" />
+    <result column="NET_DOMAIN_NAME" property="netDomainName" jdbcType="VARCHAR" />
+    <result column="NET_SUBNET_MASK" property="netSubnetMask" jdbcType="VARCHAR" />
+    <result column="NET_GATEWAY_ADDRS" property="netGatewayAddrs" jdbcType="VARCHAR" />
+    <result column="NET_DNS_ADDRS" property="netDnsAddrs" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

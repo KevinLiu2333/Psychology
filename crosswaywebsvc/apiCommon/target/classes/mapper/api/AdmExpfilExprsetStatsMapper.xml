@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AdmExpfilExprsetStatsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AdmExpfilExprsetStats" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="EXPR_TABLE" property="exprTable" jdbcType="VARCHAR" />
+    <result column="EXPR_COLUMN" property="exprColumn" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_EXP" property="attributeExp" jdbcType="VARCHAR" />
+    <result column="PCT_OCCURRENCE" property="pctOccurrence" jdbcType="DECIMAL" />
+    <result column="PCT_EQ_OPER" property="pctEqOper" jdbcType="DECIMAL" />
+    <result column="PCT_LT_OPER" property="pctLtOper" jdbcType="DECIMAL" />
+    <result column="PCT_GT_OPER" property="pctGtOper" jdbcType="DECIMAL" />
+    <result column="PCT_LTEQ_OPER" property="pctLteqOper" jdbcType="DECIMAL" />
+    <result column="PCT_GTEQ_OPER" property="pctGteqOper" jdbcType="DECIMAL" />
+    <result column="PCT_NEQ_OPER" property="pctNeqOper" jdbcType="DECIMAL" />
+    <result column="PCT_NUL_OPER" property="pctNulOper" jdbcType="DECIMAL" />
+    <result column="PCT_NNUL_OPER" property="pctNnulOper" jdbcType="DECIMAL" />
+    <result column="PCT_BETW_OPER" property="pctBetwOper" jdbcType="DECIMAL" />
+    <result column="PCT_NVL_OPER" property="pctNvlOper" jdbcType="DECIMAL" />
+    <result column="PCT_LIKE_OPER" property="pctLikeOper" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.XdbaclPathTabMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.XdbaclPathTab" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RID" property="rid" jdbcType="OTHER" />
+    <result column="VALUE" property="value" jdbcType="VARCHAR" />
+    <result column="PATHID" property="pathid" jdbcType="VARBINARY" />
+    <result column="ORDER_KEY" property="orderKey" jdbcType="VARBINARY" />
+    <result column="LOCATOR" property="locator" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

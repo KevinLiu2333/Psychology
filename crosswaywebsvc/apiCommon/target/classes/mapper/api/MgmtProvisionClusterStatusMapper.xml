@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtProvisionClusterStatusMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtProvisionClusterStatus" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="PURPOSE" property="purpose" jdbcType="VARCHAR" />
+    <result column="COMPONENT_URN" property="componentUrn" jdbcType="VARCHAR" />
+    <result column="NETWORK_URN" property="networkUrn" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="SUITE_INST_NAME" property="suiteInstName" jdbcType="VARCHAR" />
+    <result column="NODE_COUNT" property="nodeCount" jdbcType="DECIMAL" />
+    <result column="CLUSTER_GUID" property="clusterGuid" jdbcType="VARBINARY" />
+    <result column="CURRENT_ASN_GUID" property="currentAsnGuid" jdbcType="VARBINARY" />
+    <result column="SUITE_INST_GUID" property="suiteInstGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.EmdwTraceDataMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.EmdwTraceData">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CONTEXT_TYPE_ID" jdbcType="DECIMAL" property="contextTypeId" />
+    <result column="CONTEXT_TYPE" jdbcType="VARCHAR" property="contextType" />
+    <result column="LOG_LEVEL" jdbcType="DECIMAL" property="logLevel" />
+    <result column="LOG_LEVEL_DESC" jdbcType="VARCHAR" property="logLevelDesc" />
+    <result column="LOG_TIMESTAMP" jdbcType="TIMESTAMP" property="logTimestamp" />
+    <result column="LOG_MESSAGE" jdbcType="VARCHAR" property="logMessage" />
+    <result column="MODULE" jdbcType="VARCHAR" property="module" />
+    <result column="OMS_HOST" jdbcType="VARCHAR" property="omsHost" />
+    <result column="CONTEXT_IDENTIFIER" jdbcType="VARCHAR" property="contextIdentifier" />
+  </resultMap>
+</mapper>

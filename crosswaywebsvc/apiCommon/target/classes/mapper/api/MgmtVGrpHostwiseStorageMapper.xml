@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtVGrpHostwiseStorageMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtVGrpHostwiseStorage" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="DB_FREE" property="dbFree" jdbcType="DECIMAL" />
+    <result column="DB_USED" property="dbUsed" jdbcType="DECIMAL" />
+    <result column="TOTAL_ALLOCATED" property="totalAllocated" jdbcType="DECIMAL" />
+    <result column="TOTAL_UNALLOCATED" property="totalUnallocated" jdbcType="DECIMAL" />
+    <result column="TOTAL_USED" property="totalUsed" jdbcType="DECIMAL" />
+    <result column="TOTAL_FREE" property="totalFree" jdbcType="DECIMAL" />
+    <result column="TOTAL_OVERHEAD" property="totalOverhead" jdbcType="DECIMAL" />
+    <result column="LOCAL_DISKS_ALLOCATED" property="localDisksAllocated" jdbcType="DECIMAL" />
+    <result column="LOCAL_DISKS_UNALLOCATED" property="localDisksUnallocated" jdbcType="DECIMAL" />
+    <result column="LOCAL_FS_FREE" property="localFsFree" jdbcType="DECIMAL" />
+    <result column="LOCAL_FS_USED" property="localFsUsed" jdbcType="DECIMAL" />
+    <result column="WRITEABLE_NFS_FREE" property="writeableNfsFree" jdbcType="DECIMAL" />
+    <result column="WRITEABLE_NFS_USED" property="writeableNfsUsed" jdbcType="DECIMAL" />
+    <result column="VOL_ALLOCATED" property="volAllocated" jdbcType="DECIMAL" />
+    <result column="VOL_UNALLOCATED" property="volUnallocated" jdbcType="DECIMAL" />
+    <result column="VOL_OVERHEAD" property="volOverhead" jdbcType="DECIMAL" />
+    <result column="ASM_ALLOCATED" property="asmAllocated" jdbcType="DECIMAL" />
+    <result column="ASM_UNALLOCATED" property="asmUnallocated" jdbcType="DECIMAL" />
+    <result column="ASM_OVERHEAD" property="asmOverhead" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

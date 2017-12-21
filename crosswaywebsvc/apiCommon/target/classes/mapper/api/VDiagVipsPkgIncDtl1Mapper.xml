@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VDiagVipsPkgIncDtl1Mapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VDiagVipsPkgIncDtl1" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDX" property="indx" jdbcType="DECIMAL" />
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="ADR_PATH_IDX" property="adrPathIdx" jdbcType="VARCHAR" />
+    <result column="ADR_HOME" property="adrHome" jdbcType="VARCHAR" />
+    <result column="PACKAGE_ID" property="packageId" jdbcType="DECIMAL" />
+    <result column="PROBLEM_ID" property="problemId" jdbcType="DECIMAL" />
+    <result column="INCIDENT_ID" property="incidentId" jdbcType="DECIMAL" />
+    <result column="TYPE" property="type" jdbcType="DECIMAL" />
+    <result column="EXCLUDE" property="exclude" jdbcType="DECIMAL" />
+    <result column="INCREMENTAL_SIZE" property="incrementalSize" jdbcType="DECIMAL" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="OTHER" />
+    <result column="ERROR_FACILITY" property="errorFacility" jdbcType="VARCHAR" />
+    <result column="ERROR_NUMBER" property="errorNumber" jdbcType="DECIMAL" />
+    <result column="ERROR_ARG1" property="errorArg1" jdbcType="VARCHAR" />
+    <result column="ERROR_ARG2" property="errorArg2" jdbcType="VARCHAR" />
+    <result column="ERROR_ARG3" property="errorArg3" jdbcType="VARCHAR" />
+    <result column="ERROR_ARG4" property="errorArg4" jdbcType="VARCHAR" />
+    <result column="ERROR_ARG5" property="errorArg5" jdbcType="VARCHAR" />
+    <result column="ERROR_ARG6" property="errorArg6" jdbcType="VARCHAR" />
+    <result column="ERROR_ARG7" property="errorArg7" jdbcType="VARCHAR" />
+    <result column="ERROR_ARG8" property="errorArg8" jdbcType="VARCHAR" />
+    <result column="ERROR_ARG9" property="errorArg9" jdbcType="VARCHAR" />
+    <result column="ERROR_ARG10" property="errorArg10" jdbcType="VARCHAR" />
+    <result column="ERROR_ARG11" property="errorArg11" jdbcType="VARCHAR" />
+    <result column="ERROR_ARG12" property="errorArg12" jdbcType="VARCHAR" />
+    <result column="ADDR" property="addr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

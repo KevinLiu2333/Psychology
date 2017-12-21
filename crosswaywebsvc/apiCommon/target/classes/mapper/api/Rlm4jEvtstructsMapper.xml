@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Rlm4jEvtstructsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Rlm4jEvtstructs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBOWNER" property="dbowner" jdbcType="VARCHAR" />
+    <id column="DBESNAME" property="dbesname" jdbcType="VARCHAR" />
+    <result column="JAVAPCK" property="javapck" jdbcType="VARCHAR" />
+    <result column="JAVACLS" property="javacls" jdbcType="VARCHAR" />
+    <result column="ESTFLAGS" property="estflags" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

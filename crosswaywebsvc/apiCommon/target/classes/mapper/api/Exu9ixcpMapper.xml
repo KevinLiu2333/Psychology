@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu9ixcpMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu9ixcp" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJID" property="objid" jdbcType="DECIMAL" />
+    <result column="DOBJID" property="dobjid" jdbcType="DECIMAL" />
+    <result column="BOBJID" property="bobjid" jdbcType="DECIMAL" />
+    <result column="OWNERID" property="ownerid" jdbcType="DECIMAL" />
+    <result column="COMPNAME" property="compname" jdbcType="VARCHAR" />
+    <result column="PARTNO" property="partno" jdbcType="DECIMAL" />
+    <result column="HIBOUNDLEN" property="hiboundlen" jdbcType="DECIMAL" />
+    <result column="PROWCNT" property="prowcnt" jdbcType="DECIMAL" />
+    <result column="PBLKCNT" property="pblkcnt" jdbcType="DECIMAL" />
+    <result column="PAVGRLEN" property="pavgrlen" jdbcType="DECIMAL" />
+    <result column="TSNAME" property="tsname" jdbcType="VARCHAR" />
+    <result column="PCTFREE$" property="pctfree" jdbcType="DECIMAL" />
+    <result column="PCTUSED$" property="pctused" jdbcType="DECIMAL" />
+    <result column="INITRANS" property="initrans" jdbcType="DECIMAL" />
+    <result column="MAXTRANS" property="maxtrans" jdbcType="DECIMAL" />
+    <result column="INIEXTS" property="iniexts" jdbcType="DECIMAL" />
+    <result column="EXTSIZE" property="extsize" jdbcType="DECIMAL" />
+    <result column="MINEXTS" property="minexts" jdbcType="DECIMAL" />
+    <result column="MAXEXTS" property="maxexts" jdbcType="DECIMAL" />
+    <result column="EXTPCT" property="extpct" jdbcType="DECIMAL" />
+    <result column="FLISTS" property="flists" jdbcType="DECIMAL" />
+    <result column="FREEGRP" property="freegrp" jdbcType="DECIMAL" />
+    <result column="PCACHE" property="pcache" jdbcType="VARCHAR" />
+    <result column="DEFLOG" property="deflog" jdbcType="DECIMAL" />
+    <result column="TSDEFLOG" property="tsdeflog" jdbcType="DECIMAL" />
+    <result column="BLEVEL" property="blevel" jdbcType="DECIMAL" />
+    <result column="LEAFCNT" property="leafcnt" jdbcType="DECIMAL" />
+    <result column="DISTKEY" property="distkey" jdbcType="DECIMAL" />
+    <result column="LBLKKEY" property="lblkkey" jdbcType="DECIMAL" />
+    <result column="DBLKKEY" property="dblkkey" jdbcType="DECIMAL" />
+    <result column="CLUFAC" property="clufac" jdbcType="DECIMAL" />
+    <result column="BLOCKSIZE" property="blocksize" jdbcType="DECIMAL" />
+    <result column="HSCOMPRESS" property="hscompress" jdbcType="DECIMAL" />
+    <result column="MAXSIZE" property="maxsize" jdbcType="DECIMAL" />
+    <result column="HIBOUNDVAL" property="hiboundval" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCsConfigStandardsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCsConfigStandards" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CS_NAME" property="csName" jdbcType="OTHER" />
+    <result column="CS_NAME_NLSID" property="csNameNlsid" jdbcType="VARCHAR" />
+    <result column="CS_AUTHOR" property="csAuthor" jdbcType="VARCHAR" />
+    <result column="CS_VERSION" property="csVersion" jdbcType="DECIMAL" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="OTHER" />
+    <result column="DESCRIPTION_NLSID" property="descriptionNlsid" jdbcType="VARCHAR" />
+    <result column="KEYWORDS" property="keywords" jdbcType="VARCHAR" />
+    <result column="CS_GUID" property="csGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

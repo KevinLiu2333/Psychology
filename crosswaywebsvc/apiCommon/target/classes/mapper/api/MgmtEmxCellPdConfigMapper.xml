@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtEmxCellPdConfigMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtEmxCellPdConfig" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ECM_SNAPSHOT_ID" property="ecmSnapshotId" jdbcType="VARBINARY" />
+    <id column="NAME" property="name" jdbcType="VARCHAR" />
+    <id column="CELLNAME" property="cellname" jdbcType="VARCHAR" />
+    <id column="REALMNAME" property="realmname" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="MAKEMODEL" property="makemodel" jdbcType="VARCHAR" />
+    <result column="LUNS" property="luns" jdbcType="VARCHAR" />
+    <result column="ERRORCOUNT" property="errorcount" jdbcType="VARCHAR" />
+    <result column="CTRLFIRMWARE" property="ctrlfirmware" jdbcType="VARCHAR" />
+    <result column="CTRLHWVERSION" property="ctrlhwversion" jdbcType="VARCHAR" />
+    <result column="PHYSINTERFACE" property="physinterface" jdbcType="VARCHAR" />
+    <result column="PHYSFIRMWARE" property="physfirmware" jdbcType="VARCHAR" />
+    <result column="PHYSSIZE" property="physsize" jdbcType="VARCHAR" />
+    <result column="PHYSSERIAL" property="physserial" jdbcType="VARCHAR" />
+    <result column="PHYSUSETYPE" property="physusetype" jdbcType="VARCHAR" />
+    <result column="PHYSPORT" property="physport" jdbcType="VARCHAR" />
+    <result column="PHYSINSERTTIME" property="physinserttime" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VTablespaceMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VTablespace" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TS#" property="ts" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="INCLUDED_IN_DATABASE_BACKUP" property="includedInDatabaseBackup" jdbcType="VARCHAR" />
+    <result column="BIGFILE" property="bigfile" jdbcType="VARCHAR" />
+    <result column="FLASHBACK_ON" property="flashbackOn" jdbcType="VARCHAR" />
+    <result column="ENCRYPT_IN_BACKUP" property="encryptInBackup" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

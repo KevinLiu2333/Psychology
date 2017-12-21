@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowDataLoadUnloadMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowDataLoadUnload" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="PLATFORM" property="platform" jdbcType="VARCHAR" />
+    <result column="FILE_COLUMNS" property="fileColumns" jdbcType="VARCHAR" />
+    <result column="DATA_TYPE" property="dataType" jdbcType="VARCHAR" />
+    <result column="DATA_SCHEMA" property="dataSchema" jdbcType="VARCHAR" />
+    <result column="DATA_TABLE" property="dataTable" jdbcType="VARCHAR" />
+    <result column="SUCCESS_ROWS" property="successRows" jdbcType="DECIMAL" />
+    <result column="FAILED_ROWS" property="failedRows" jdbcType="DECIMAL" />
+    <result column="DATA_ID" property="dataId" jdbcType="DECIMAL" />
+    <result column="JOB_ID" property="jobId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="CREATED_BY_ID" property="createdById" jdbcType="DECIMAL" />
+    <result column="ENCLOSED_BY" property="enclosedBy" jdbcType="VARCHAR" />
+    <result column="SEPARATOR" property="separator" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

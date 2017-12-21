@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VStreamsApplyCoordinatorMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VStreamsApplyCoordinator" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="SERIAL#" property="serial" jdbcType="DECIMAL" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="APPLY#" property="apply" jdbcType="DECIMAL" />
+    <result column="APPLY_NAME" property="applyName" jdbcType="VARCHAR" />
+    <result column="TOTAL_APPLIED" property="totalApplied" jdbcType="DECIMAL" />
+    <result column="TOTAL_WAIT_DEPS" property="totalWaitDeps" jdbcType="DECIMAL" />
+    <result column="TOTAL_WAIT_COMMITS" property="totalWaitCommits" jdbcType="DECIMAL" />
+    <result column="TOTAL_ADMIN" property="totalAdmin" jdbcType="DECIMAL" />
+    <result column="TOTAL_ASSIGNED" property="totalAssigned" jdbcType="DECIMAL" />
+    <result column="TOTAL_RECEIVED" property="totalReceived" jdbcType="DECIMAL" />
+    <result column="TOTAL_IGNORED" property="totalIgnored" jdbcType="DECIMAL" />
+    <result column="TOTAL_ROLLBACKS" property="totalRollbacks" jdbcType="DECIMAL" />
+    <result column="TOTAL_ERRORS" property="totalErrors" jdbcType="DECIMAL" />
+    <result column="UNASSIGNED_COMPLETE_TXNS" property="unassignedCompleteTxns" jdbcType="DECIMAL" />
+    <result column="AUTO_TXN_BUFFER_SIZE" property="autoTxnBufferSize" jdbcType="DECIMAL" />
+    <result column="LWM_TIME" property="lwmTime" jdbcType="DATE" />
+    <result column="LWM_MESSAGE_NUMBER" property="lwmMessageNumber" jdbcType="DECIMAL" />
+    <result column="LWM_MESSAGE_CREATE_TIME" property="lwmMessageCreateTime" jdbcType="DATE" />
+    <result column="HWM_TIME" property="hwmTime" jdbcType="DATE" />
+    <result column="HWM_MESSAGE_NUMBER" property="hwmMessageNumber" jdbcType="DECIMAL" />
+    <result column="HWM_MESSAGE_CREATE_TIME" property="hwmMessageCreateTime" jdbcType="DATE" />
+    <result column="STARTUP_TIME" property="startupTime" jdbcType="DATE" />
+    <result column="ELAPSED_SCHEDULE_TIME" property="elapsedScheduleTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_IDLE_TIME" property="elapsedIdleTime" jdbcType="DECIMAL" />
+    <result column="PROCESSED_MESSAGE_NUMBER" property="processedMessageNumber" jdbcType="DECIMAL" />
+    <result column="LWM_POSITION" property="lwmPosition" jdbcType="VARBINARY" />
+    <result column="HWM_POSITION" property="hwmPosition" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

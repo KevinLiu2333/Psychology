@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtTestDefaultPromotionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtTestDefaultPromotion" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TEST_TYPE" property="testType" jdbcType="VARCHAR" />
+    <result column="SRC_METRIC_NAME" property="srcMetricName" jdbcType="VARCHAR" />
+    <result column="SRC_METRIC_COLUMN" property="srcMetricColumn" jdbcType="VARCHAR" />
+    <result column="SRC_METRIC_KEY1_VALUE" property="srcMetricKey1Value" jdbcType="VARCHAR" />
+    <result column="SRC_METRIC_KEY2_VALUE" property="srcMetricKey2Value" jdbcType="VARCHAR" />
+    <result column="SRC_METRIC_KEY3_VALUE" property="srcMetricKey3Value" jdbcType="VARCHAR" />
+    <result column="SRC_METRIC_KEY4_VALUE" property="srcMetricKey4Value" jdbcType="VARCHAR" />
+    <result column="SRC_METRIC_KEY5_VALUE" property="srcMetricKey5Value" jdbcType="VARCHAR" />
+    <result column="EVAL_FUNC" property="evalFunc" jdbcType="VARCHAR" />
+    <result column="CRITICAL" property="critical" jdbcType="DECIMAL" />
+    <result column="WARNING" property="warning" jdbcType="DECIMAL" />
+    <result column="OPERATOR" property="operator" jdbcType="VARCHAR" />
+    <result column="NUM_OCCURRENCES" property="numOccurrences" jdbcType="DECIMAL" />
+    <result column="DEST_METRIC_NAME" property="destMetricName" jdbcType="VARCHAR" />
+    <result column="DEST_METRIC_COLUMN" property="destMetricColumn" jdbcType="VARCHAR" />
+    <result column="DEST_METRIC_KEY1_VALUE" property="destMetricKey1Value" jdbcType="VARCHAR" />
+    <result column="DEST_METRIC_KEY2_VALUE" property="destMetricKey2Value" jdbcType="VARCHAR" />
+    <result column="DEST_METRIC_KEY3_VALUE" property="destMetricKey3Value" jdbcType="VARCHAR" />
+    <result column="DEST_METRIC_KEY4_VALUE" property="destMetricKey4Value" jdbcType="VARCHAR" />
+    <result column="DEST_METRIC_KEY5_VALUE" property="destMetricKey5Value" jdbcType="VARCHAR" />
+    <result column="DEFAULT_CHART" property="defaultChart" jdbcType="CHAR" />
+  </resultMap>
+</mapper>

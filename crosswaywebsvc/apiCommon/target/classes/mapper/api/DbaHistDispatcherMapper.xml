@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaHistDispatcherMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaHistDispatcher" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="SERIAL#" property="serial" jdbcType="DECIMAL" />
+    <result column="IDLE" property="idle" jdbcType="DECIMAL" />
+    <result column="BUSY" property="busy" jdbcType="DECIMAL" />
+    <result column="WAIT" property="wait" jdbcType="DECIMAL" />
+    <result column="TOTALQ" property="totalq" jdbcType="DECIMAL" />
+    <result column="SAMPLED_TOTAL_CONN" property="sampledTotalConn" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

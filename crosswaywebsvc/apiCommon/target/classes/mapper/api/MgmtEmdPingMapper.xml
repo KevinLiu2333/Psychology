@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtEmdPingMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtEmdPing" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="LAST_HEARTBEAT_TS" property="lastHeartbeatTs" jdbcType="DATE" />
+    <result column="LAST_HEARTBEAT_UTC" property="lastHeartbeatUtc" jdbcType="DATE" />
+    <result column="CLEAN_HEARTBEAT_UTC" property="cleanHeartbeatUtc" jdbcType="DATE" />
+    <result column="STATUS_SYNC_UTC" property="statusSyncUtc" jdbcType="DATE" />
+    <result column="EMD_UPTIME_UTC" property="emdUptimeUtc" jdbcType="DATE" />
+    <result column="UNRCH_START_TS" property="unrchStartTs" jdbcType="DATE" />
+    <result column="MAX_INACTIVE_TIME" property="maxInactiveTime" jdbcType="DECIMAL" />
+    <result column="DOWN_REASON_CODE" property="downReasonCode" jdbcType="DECIMAL" />
+    <result column="DOWN_REASON_MSG" property="downReasonMsg" jdbcType="VARCHAR" />
+    <result column="HEARTBEAT_RECORDER_URL" property="heartbeatRecorderUrl" jdbcType="VARCHAR" />
+    <result column="PING_JOB_NAME" property="pingJobName" jdbcType="VARCHAR" />
+    <result column="JOB_SUBMIT_TIME" property="jobSubmitTime" jdbcType="DATE" />
+  </resultMap>
+</mapper>

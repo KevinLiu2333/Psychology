@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCsRqsInclusionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCsRqsInclusion" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="RQS_GUID" property="rqsGuid" jdbcType="VARBINARY" />
+    <result column="PARENT_RQS_GUID" property="parentRqsGuid" jdbcType="VARBINARY" />
+    <result column="CS_INCLUSION_GUID" property="csInclusionGuid" jdbcType="VARBINARY" />
+    <result column="ROOT_CS_GUID" property="rootCsGuid" jdbcType="VARBINARY" />
+    <result column="PARENT_CS_GUID" property="parentCsGuid" jdbcType="VARBINARY" />
+    <result column="INCLUDED_CS_GUID" property="includedCsGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

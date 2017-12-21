@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DatapumpObjectConnectMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DatapumpObjectConnect" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <result column="CONNECT_TYPE" property="connectType" jdbcType="VARCHAR" />
+    <result column="NEED_EXECUTE" property="needExecute" jdbcType="DECIMAL" />
+    <result column="PARALLEL_LOAD" property="parallelLoad" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

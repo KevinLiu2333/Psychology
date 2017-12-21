@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VStreamsPoolAdviceMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VStreamsPoolAdvice" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="STREAMS_POOL_SIZE_FOR_ESTIMATE" property="streamsPoolSizeForEstimate" jdbcType="DECIMAL" />
+    <result column="STREAMS_POOL_SIZE_FACTOR" property="streamsPoolSizeFactor" jdbcType="DECIMAL" />
+    <result column="ESTD_SPILL_COUNT" property="estdSpillCount" jdbcType="DECIMAL" />
+    <result column="ESTD_SPILL_TIME" property="estdSpillTime" jdbcType="DECIMAL" />
+    <result column="ESTD_UNSPILL_COUNT" property="estdUnspillCount" jdbcType="DECIMAL" />
+    <result column="ESTD_UNSPILL_TIME" property="estdUnspillTime" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

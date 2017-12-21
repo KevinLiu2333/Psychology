@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtBcnAvailDefMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtBcnAvailDef" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <result column="COLL_NAME" property="collName" jdbcType="VARCHAR" />
+    <result column="KEY_PART1" property="keyPart1" jdbcType="VARCHAR" />
+    <result column="KEY_PART2" property="keyPart2" jdbcType="VARCHAR" />
+    <result column="KEY_PART3" property="keyPart3" jdbcType="VARCHAR" />
+    <result column="METRIC_GUID" property="metricGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

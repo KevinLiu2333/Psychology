@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCallbacksMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCallbacks" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="CALLBACK_NAME" property="callbackName" jdbcType="VARCHAR" />
+    <id column="CALLBACK_TYPE" property="callbackType" jdbcType="DECIMAL" />
+    <id column="SELECTOR_1" property="selector1" jdbcType="VARCHAR" />
+    <id column="SELECTOR_2" property="selector2" jdbcType="VARCHAR" />
+    <result column="SELECTOR_3" property="selector3" jdbcType="VARCHAR" />
+    <result column="EVAL_ORDER" property="evalOrder" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

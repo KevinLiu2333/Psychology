@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhWaitclassmetricHistoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhWaitclassmetricHistory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="WAIT_CLASS_ID" property="waitClassId" jdbcType="DECIMAL" />
+    <result column="BEGIN_TIME" property="beginTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="INTSIZE" property="intsize" jdbcType="DECIMAL" />
+    <result column="GROUP_ID" property="groupId" jdbcType="DECIMAL" />
+    <result column="AVERAGE_WAITER_COUNT" property="averageWaiterCount" jdbcType="DECIMAL" />
+    <result column="DBTIME_IN_WAIT" property="dbtimeInWait" jdbcType="DECIMAL" />
+    <result column="TIME_WAITED" property="timeWaited" jdbcType="DECIMAL" />
+    <result column="WAIT_COUNT" property="waitCount" jdbcType="DECIMAL" />
+    <result column="TIME_WAITED_FG" property="timeWaitedFg" jdbcType="DECIMAL" />
+    <result column="WAIT_COUNT_FG" property="waitCountFg" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

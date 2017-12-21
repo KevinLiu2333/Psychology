@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriAdvAddmInstMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriAdvAddmInst" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="INSTANCE_NAME" property="instanceName" jdbcType="VARCHAR" />
+    <result column="HOST_NAME" property="hostName" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="DATABASE_TIME" property="databaseTime" jdbcType="DECIMAL" />
+    <result column="ACTIVE_SESSIONS" property="activeSessions" jdbcType="DECIMAL" />
+    <result column="PERC_ACTIVE_SESS" property="percActiveSess" jdbcType="DECIMAL" />
+    <result column="PERC_FLUSH_TIME" property="percFlushTime" jdbcType="DECIMAL" />
+    <result column="METER_LEVEL" property="meterLevel" jdbcType="VARCHAR" />
+    <result column="LOCAL_TASK_ID" property="localTaskId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

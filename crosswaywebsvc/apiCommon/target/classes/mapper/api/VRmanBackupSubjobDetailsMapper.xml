@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VRmanBackupSubjobDetailsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VRmanBackupSubjobDetails" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SESSION_KEY" property="sessionKey" jdbcType="DECIMAL" />
+    <result column="SESSION_RECID" property="sessionRecid" jdbcType="DECIMAL" />
+    <result column="SESSION_STAMP" property="sessionStamp" jdbcType="DECIMAL" />
+    <result column="OPERATION" property="operation" jdbcType="VARCHAR" />
+    <result column="COMMAND_ID" property="commandId" jdbcType="VARCHAR" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="INPUT_BYTES" property="inputBytes" jdbcType="DECIMAL" />
+    <result column="OUTPUT_BYTES" property="outputBytes" jdbcType="DECIMAL" />
+    <result column="STATUS_WEIGHT" property="statusWeight" jdbcType="DECIMAL" />
+    <result column="OBJECT_TYPE_WEIGHT" property="objectTypeWeight" jdbcType="DECIMAL" />
+    <result column="OPTIMIZED_WEIGHT" property="optimizedWeight" jdbcType="DECIMAL" />
+    <result column="OUTPUT_DEVICE_TYPE" property="outputDeviceType" jdbcType="VARCHAR" />
+    <result column="BACKED_BY_OSB" property="backedByOsb" jdbcType="VARCHAR" />
+    <result column="AUTOBACKUP_DONE" property="autobackupDone" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="INPUT_TYPE" property="inputType" jdbcType="VARCHAR" />
+    <result column="OPTIMIZED" property="optimized" jdbcType="VARCHAR" />
+    <result column="AUTOBACKUP_COUNT" property="autobackupCount" jdbcType="DECIMAL" />
+    <result column="COMPRESSION_RATIO" property="compressionRatio" jdbcType="DECIMAL" />
+    <result column="INPUT_BYTES_DISPLAY" property="inputBytesDisplay" jdbcType="VARCHAR" />
+    <result column="OUTPUT_BYTES_DISPLAY" property="outputBytesDisplay" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

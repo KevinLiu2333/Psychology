@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrvUserExtractTkdictMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrvUserExtractTkdict" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ETD_POLID" property="etdPolid" jdbcType="DECIMAL" />
+    <result column="ETD_TXT" property="etdTxt" jdbcType="VARCHAR" />
+    <result column="ETD_SOE" property="etdSoe" jdbcType="DECIMAL" />
+    <result column="ETD_EOE" property="etdEoe" jdbcType="DECIMAL" />
+    <result column="ETD_BIGRAM" property="etdBigram" jdbcType="DECIMAL" />
+    <result column="ETD_STATUS" property="etdStatus" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

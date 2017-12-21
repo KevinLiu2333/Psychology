@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VMutexSleepMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VMutexSleep" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="MUTEX_TYPE" property="mutexType" jdbcType="VARCHAR" />
+    <result column="LOCATION" property="location" jdbcType="VARCHAR" />
+    <result column="SLEEPS" property="sleeps" jdbcType="DECIMAL" />
+    <result column="WAIT_TIME" property="waitTime" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

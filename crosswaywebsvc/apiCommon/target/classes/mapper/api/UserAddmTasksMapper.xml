@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserAddmTasksMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserAddmTasks" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <result column="TASK_NAME" property="taskName" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="ADVISOR_NAME" property="advisorName" jdbcType="VARCHAR" />
+    <result column="CREATED" property="created" jdbcType="DATE" />
+    <result column="LAST_MODIFIED" property="lastModified" jdbcType="DATE" />
+    <result column="PARENT_TASK_ID" property="parentTaskId" jdbcType="DECIMAL" />
+    <result column="PARENT_REC_ID" property="parentRecId" jdbcType="DECIMAL" />
+    <result column="LAST_EXECUTION" property="lastExecution" jdbcType="VARCHAR" />
+    <result column="EXECUTION_TYPE" property="executionType" jdbcType="VARCHAR" />
+    <result column="EXECUTION_START" property="executionStart" jdbcType="DATE" />
+    <result column="EXECUTION_END" property="executionEnd" jdbcType="DATE" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="STATUS_MESSAGE" property="statusMessage" jdbcType="VARCHAR" />
+    <result column="PCT_COMPLETION_TIME" property="pctCompletionTime" jdbcType="DECIMAL" />
+    <result column="PROGRESS_METRIC" property="progressMetric" jdbcType="DECIMAL" />
+    <result column="METRIC_UNITS" property="metricUnits" jdbcType="VARCHAR" />
+    <result column="ACTIVITY_COUNTER" property="activityCounter" jdbcType="DECIMAL" />
+    <result column="RECOMMENDATION_COUNT" property="recommendationCount" jdbcType="DECIMAL" />
+    <result column="ERROR_MESSAGE" property="errorMessage" jdbcType="VARCHAR" />
+    <result column="SOURCE" property="source" jdbcType="VARCHAR" />
+    <result column="HOW_CREATED" property="howCreated" jdbcType="VARCHAR" />
+    <result column="READ_ONLY" property="readOnly" jdbcType="VARCHAR" />
+    <result column="SYSTEM_TASK" property="systemTask" jdbcType="VARCHAR" />
+    <result column="ADVISOR_ID" property="advisorId" jdbcType="DECIMAL" />
+    <result column="STATUS#" property="status" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="DBNAME" property="dbname" jdbcType="VARCHAR" />
+    <result column="DBVERSION" property="dbversion" jdbcType="VARCHAR" />
+    <result column="ANALYSIS_VERSION" property="analysisVersion" jdbcType="VARCHAR" />
+    <result column="BEGIN_SNAP_ID" property="beginSnapId" jdbcType="DECIMAL" />
+    <result column="BEGIN_TIME" property="beginTime" jdbcType="OTHER" />
+    <result column="END_SNAP_ID" property="endSnapId" jdbcType="DECIMAL" />
+    <result column="END_TIME" property="endTime" jdbcType="OTHER" />
+    <result column="REQUESTED_ANALYSIS" property="requestedAnalysis" jdbcType="VARCHAR" />
+    <result column="ACTUAL_ANALYSIS" property="actualAnalysis" jdbcType="VARCHAR" />
+    <result column="DATABASE_TIME" property="databaseTime" jdbcType="DECIMAL" />
+    <result column="ACTIVE_SESSIONS" property="activeSessions" jdbcType="DECIMAL" />
+    <result column="METER_LEVEL" property="meterLevel" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuIotPartobjViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuIotPartobjView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="TABPARTOBJ" property="tabpartobj" jdbcType="OTHER" />
+    <result column="PARTCOLS" property="partcols" jdbcType="OTHER" />
+    <result column="SUBPARTCOLS" property="subpartcols" jdbcType="OTHER" />
+    <result column="INDPARTOBJ" property="indpartobj" jdbcType="OTHER" />
+    <result column="OVPARTOBJ" property="ovpartobj" jdbcType="OTHER" />
+    <result column="PART_LIST" property="partList" jdbcType="OTHER" />
+    <result column="IOV_LIST" property="iovList" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

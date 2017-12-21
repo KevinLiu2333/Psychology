@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllSequencesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllSequences" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SEQUENCE_OWNER" property="sequenceOwner" jdbcType="VARCHAR" />
+    <result column="SEQUENCE_NAME" property="sequenceName" jdbcType="VARCHAR" />
+    <result column="MIN_VALUE" property="minValue" jdbcType="DECIMAL" />
+    <result column="MAX_VALUE" property="maxValue" jdbcType="DECIMAL" />
+    <result column="INCREMENT_BY" property="incrementBy" jdbcType="DECIMAL" />
+    <result column="CYCLE_FLAG" property="cycleFlag" jdbcType="VARCHAR" />
+    <result column="ORDER_FLAG" property="orderFlag" jdbcType="VARCHAR" />
+    <result column="CACHE_SIZE" property="cacheSize" jdbcType="DECIMAL" />
+    <result column="LAST_NUMBER" property="lastNumber" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

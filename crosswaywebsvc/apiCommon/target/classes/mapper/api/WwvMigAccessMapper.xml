@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigAccessMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigAccess" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="PROJECT_ID" property="projectId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="DBNAME" property="dbname" jdbcType="VARCHAR" />
+    <result column="DBSIZE" property="dbsize" jdbcType="VARCHAR" />
+    <result column="DBPATHNAME" property="dbpathname" jdbcType="VARCHAR" />
+    <result column="DBUSER" property="dbuser" jdbcType="VARCHAR" />
+    <result column="DBPASSWORD" property="dbpassword" jdbcType="VARCHAR" />
+    <result column="DATABASE_SCHEMA" property="databaseSchema" jdbcType="VARCHAR" />
+    <result column="ISAPPDB" property="isappdb" jdbcType="DECIMAL" />
+    <result column="ISATTACHEDDB" property="isattacheddb" jdbcType="DECIMAL" />
+    <result column="CONVERTDB" property="convertdb" jdbcType="DECIMAL" />
+    <result column="JETVERSION" property="jetversion" jdbcType="FLOAT" />
+    <result column="ACCESSVERSION" property="accessversion" jdbcType="VARCHAR" />
+    <result column="BUILD" property="build" jdbcType="DECIMAL" />
+    <result column="COLLATINGORDER" property="collatingorder" jdbcType="DECIMAL" />
+    <result column="QUERYTIMEOUT" property="querytimeout" jdbcType="DECIMAL" />
+    <result column="STARTUPFORM" property="startupform" jdbcType="VARCHAR" />
+    <result column="STARTUPSHOWSTATUSBAR" property="startupshowstatusbar" jdbcType="DECIMAL" />
+    <result column="LINKDBID" property="linkdbid" jdbcType="DECIMAL" />
+    <result column="DATE_CREATED" property="dateCreated" jdbcType="DATE" />
+    <result column="DATE_MODIFIED" property="dateModified" jdbcType="DATE" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

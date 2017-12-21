@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SchedulerRemoteJobStateMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SchedulerRemoteJobState" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="JOBOID" property="joboid" jdbcType="DECIMAL" />
+    <id column="DESTINATION" property="destination" jdbcType="VARCHAR" />
+    <result column="NEXT_START_DATE" property="nextStartDate" jdbcType="OTHER" />
+    <result column="RUN_COUNT" property="runCount" jdbcType="DECIMAL" />
+    <result column="FAILURE_COUNT" property="failureCount" jdbcType="DECIMAL" />
+    <result column="RETRY_COUNT" property="retryCount" jdbcType="DECIMAL" />
+    <result column="LAST_START_DATE" property="lastStartDate" jdbcType="OTHER" />
+    <result column="LAST_END_DATE" property="lastEndDate" jdbcType="OTHER" />
+    <result column="JOB_STATUS" property="jobStatus" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtNotifyEmailGatewayMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtNotifyEmailGateway" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="MAIL_HOST" property="mailHost" jdbcType="VARCHAR" />
+    <result column="EMAIL_ADDRESS" property="emailAddress" jdbcType="VARCHAR" />
+    <result column="EMAIL_NAME" property="emailName" jdbcType="VARCHAR" />
+    <result column="SMTP_USER" property="smtpUser" jdbcType="VARCHAR" />
+    <result column="SMTP_PWD" property="smtpPwd" jdbcType="VARCHAR" />
+    <result column="SMTP_PORT" property="smtpPort" jdbcType="DECIMAL" />
+    <result column="PRECEDENCE" property="precedence" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

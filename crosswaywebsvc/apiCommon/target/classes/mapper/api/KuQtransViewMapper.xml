@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuQtransViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuQtransView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="TRANSFORMATION_ID" property="transformationId" jdbcType="DECIMAL" />
+    <result column="SCHEMA_NAME" property="schemaName" jdbcType="VARCHAR" />
+    <result column="TRANSFORM_NAME" property="transformName" jdbcType="VARCHAR" />
+    <result column="FROM_OBJ" property="fromObj" jdbcType="OTHER" />
+    <result column="TO_OBJ" property="toObj" jdbcType="OTHER" />
+    <result column="ATTRIBUTE_NUM" property="attributeNum" jdbcType="DECIMAL" />
+    <result column="SQL_EXPRESSION" property="sqlExpression" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

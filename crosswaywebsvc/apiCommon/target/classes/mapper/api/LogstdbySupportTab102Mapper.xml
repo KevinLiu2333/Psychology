@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.LogstdbySupportTab102Mapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.LogstdbySupportTab102" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="TYPE#" property="type" jdbcType="DECIMAL" />
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="CURRENT_SBY" property="currentSby" jdbcType="DECIMAL" />
+    <result column="GENSBY" property="gensby" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

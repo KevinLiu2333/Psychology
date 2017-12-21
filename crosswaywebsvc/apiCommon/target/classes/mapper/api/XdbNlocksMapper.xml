@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.XdbNlocksMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.XdbNlocks" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CHILD_NAME" property="childName" jdbcType="VARCHAR" />
+    <result column="PARENT_OID" property="parentOid" jdbcType="VARBINARY" />
+    <result column="RAWTOKEN" property="rawtoken" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ResourcePlanDirectiveMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ResourcePlanDirective" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="PLAN" property="plan" jdbcType="VARCHAR" />
+    <result column="GROUP_OR_SUBPLAN" property="groupOrSubplan" jdbcType="VARCHAR" />
+    <result column="IS_SUBPLAN" property="isSubplan" jdbcType="DECIMAL" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="MANDATORY" property="mandatory" jdbcType="DECIMAL" />
+    <result column="MGMT_P1" property="mgmtP1" jdbcType="DECIMAL" />
+    <result column="MGMT_P2" property="mgmtP2" jdbcType="DECIMAL" />
+    <result column="MGMT_P3" property="mgmtP3" jdbcType="DECIMAL" />
+    <result column="MGMT_P4" property="mgmtP4" jdbcType="DECIMAL" />
+    <result column="MGMT_P5" property="mgmtP5" jdbcType="DECIMAL" />
+    <result column="MGMT_P6" property="mgmtP6" jdbcType="DECIMAL" />
+    <result column="MGMT_P7" property="mgmtP7" jdbcType="DECIMAL" />
+    <result column="MGMT_P8" property="mgmtP8" jdbcType="DECIMAL" />
+    <result column="MAX_ACTIVE_SESS_TARGET_P1" property="maxActiveSessTargetP1" jdbcType="DECIMAL" />
+    <result column="PARALLEL_DEGREE_LIMIT_P1" property="parallelDegreeLimitP1" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="ACTIVE_SESS_POOL_P1" property="activeSessPoolP1" jdbcType="DECIMAL" />
+    <result column="QUEUEING_P1" property="queueingP1" jdbcType="DECIMAL" />
+    <result column="SWITCH_GROUP" property="switchGroup" jdbcType="VARCHAR" />
+    <result column="SWITCH_TIME" property="switchTime" jdbcType="DECIMAL" />
+    <result column="SWITCH_ESTIMATE" property="switchEstimate" jdbcType="DECIMAL" />
+    <result column="MAX_EST_EXEC_TIME" property="maxEstExecTime" jdbcType="DECIMAL" />
+    <result column="UNDO_POOL" property="undoPool" jdbcType="DECIMAL" />
+    <result column="MAX_IDLE_TIME" property="maxIdleTime" jdbcType="DECIMAL" />
+    <result column="MAX_IDLE_BLOCKER_TIME" property="maxIdleBlockerTime" jdbcType="DECIMAL" />
+    <result column="SWITCH_FOR_CALL" property="switchForCall" jdbcType="DECIMAL" />
+    <result column="SWITCH_IO_MEGABYTES" property="switchIoMegabytes" jdbcType="DECIMAL" />
+    <result column="SWITCH_IO_REQS" property="switchIoReqs" jdbcType="DECIMAL" />
+    <result column="MAX_UTILIZATION_LIMIT" property="maxUtilizationLimit" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

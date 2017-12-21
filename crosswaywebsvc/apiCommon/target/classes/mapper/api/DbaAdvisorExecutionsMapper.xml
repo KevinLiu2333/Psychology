@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaAdvisorExecutionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaAdvisorExecutions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <result column="TASK_NAME" property="taskName" jdbcType="VARCHAR" />
+    <result column="EXECUTION_NAME" property="executionName" jdbcType="VARCHAR" />
+    <result column="EXECUTION_ID" property="executionId" jdbcType="DECIMAL" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="EXECUTION_TYPE" property="executionType" jdbcType="VARCHAR" />
+    <result column="EXECUTION_TYPE#" property="executionType" jdbcType="DECIMAL" />
+    <result column="EXECUTION_START" property="executionStart" jdbcType="DATE" />
+    <result column="EXECUTION_LAST_MODIFIED" property="executionLastModified" jdbcType="DATE" />
+    <result column="EXECUTION_END" property="executionEnd" jdbcType="DATE" />
+    <result column="ADVISOR_NAME" property="advisorName" jdbcType="VARCHAR" />
+    <result column="ADVISOR_ID" property="advisorId" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="STATUS#" property="status" jdbcType="DECIMAL" />
+    <result column="STATUS_MESSAGE" property="statusMessage" jdbcType="VARCHAR" />
+    <result column="ERROR_MESSAGE" property="errorMessage" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriDbuCpuUsageSampleMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriDbuCpuUsageSample" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="LAST_SAMPLE_DATE" property="lastSampleDate" jdbcType="DATE" />
+    <result column="LAST_SAMPLE_DATE_NUM" property="lastSampleDateNum" jdbcType="DECIMAL" />
+    <result column="LAST_SAMPLE_PERIOD" property="lastSamplePeriod" jdbcType="DECIMAL" />
+    <result column="TOTAL_SAMPLES" property="totalSamples" jdbcType="DECIMAL" />
+    <result column="SAMPLE_INTERVAL" property="sampleInterval" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

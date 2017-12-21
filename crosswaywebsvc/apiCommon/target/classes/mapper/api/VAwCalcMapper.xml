@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VAwCalcMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VAwCalc" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="AGGREGATE_CACHE_HITS" property="aggregateCacheHits" jdbcType="DECIMAL" />
+    <result column="AGGREGATE_CACHE_MISSES" property="aggregateCacheMisses" jdbcType="DECIMAL" />
+    <result column="SESSION_CACHE_HITS" property="sessionCacheHits" jdbcType="DECIMAL" />
+    <result column="SESSION_CACHE_MISSES" property="sessionCacheMisses" jdbcType="DECIMAL" />
+    <result column="POOL_HITS" property="poolHits" jdbcType="DECIMAL" />
+    <result column="POOL_MISSES" property="poolMisses" jdbcType="DECIMAL" />
+    <result column="POOL_NEW_PAGES" property="poolNewPages" jdbcType="DECIMAL" />
+    <result column="POOL_RECLAIMED_PAGES" property="poolReclaimedPages" jdbcType="DECIMAL" />
+    <result column="CACHE_WRITES" property="cacheWrites" jdbcType="DECIMAL" />
+    <result column="POOL_SIZE" property="poolSize" jdbcType="DECIMAL" />
+    <result column="CURR_DML_COMMAND" property="currDmlCommand" jdbcType="VARCHAR" />
+    <result column="PREV_DML_COMMAND" property="prevDmlCommand" jdbcType="VARCHAR" />
+    <result column="AGGR_FUNC_LOGICAL_NA" property="aggrFuncLogicalNa" jdbcType="DECIMAL" />
+    <result column="AGGR_FUNC_PRECOMPUTE" property="aggrFuncPrecompute" jdbcType="DECIMAL" />
+    <result column="AGGR_FUNC_CALCS" property="aggrFuncCalcs" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

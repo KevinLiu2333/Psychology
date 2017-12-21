@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtIpStoredReportMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtIpStoredReport" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="REPORT_GUID" property="reportGuid" jdbcType="VARBINARY" />
+    <id column="ELEMENT_GUID" property="elementGuid" jdbcType="VARBINARY" />
+    <id column="VERSION_GUID" property="versionGuid" jdbcType="VARBINARY" />
+    <result column="GENERATED_DATE_UTC" property="generatedDateUtc" jdbcType="DATE" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="GENERATED_OMS_TZ" property="generatedOmsTz" jdbcType="VARCHAR" />
+    <result column="ELEMENT_OBJECT" property="elementObject" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

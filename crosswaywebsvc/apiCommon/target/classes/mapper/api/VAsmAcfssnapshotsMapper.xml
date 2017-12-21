@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VAsmAcfssnapshotsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VAsmAcfssnapshots" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FS_NAME" property="fsName" jdbcType="VARCHAR" />
+    <result column="VOL_DEVICE" property="volDevice" jdbcType="VARCHAR" />
+    <result column="SNAP_NAME" property="snapName" jdbcType="VARCHAR" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="DATE" />
+  </resultMap>
+</mapper>

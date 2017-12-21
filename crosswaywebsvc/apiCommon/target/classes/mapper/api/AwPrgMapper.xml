@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AwPrgMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AwPrg" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="AWSEQ#" property="awseq" jdbcType="DECIMAL" />
+    <result column="OID" property="oid" jdbcType="DECIMAL" />
+    <result column="GEN#" property="gen" jdbcType="DECIMAL" />
+    <result column="STM#" property="stm" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="STMTEXT" property="stmtext" jdbcType="BLOB" />
+    <result column="COMPCODE" property="compcode" jdbcType="BLOB" />
+    <result column="SPARE" property="spare" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

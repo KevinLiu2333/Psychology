@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexDictionaryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexDictionary" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="APEX_VIEW_NAME" property="apexViewName" jdbcType="VARCHAR" />
+    <result column="COLUMN_ID" property="columnId" jdbcType="DECIMAL" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="COMMENTS" property="comments" jdbcType="VARCHAR" />
+    <result column="COMMENT_TYPE" property="commentType" jdbcType="VARCHAR" />
+    <result column="PARENT_VIEW" property="parentView" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

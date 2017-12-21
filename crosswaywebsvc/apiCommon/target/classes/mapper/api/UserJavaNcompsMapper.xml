@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserJavaNcompsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserJavaNcomps" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="SOURCE" property="source" jdbcType="VARCHAR" />
+    <result column="INITIALIZER" property="initializer" jdbcType="VARCHAR" />
+    <result column="LIBRARYFILE" property="libraryfile" jdbcType="VARCHAR" />
+    <result column="LIBRARY" property="library" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

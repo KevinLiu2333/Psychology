@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtTemplatesMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtTemplates">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TARGET_TYPE" jdbcType="VARCHAR" property="targetType" />
+    <result column="TEMPLATE_NAME" jdbcType="VARCHAR" property="templateName" />
+    <result column="DESCRIPTION" jdbcType="VARCHAR" property="description" />
+    <result column="OWNER" jdbcType="VARCHAR" property="owner" />
+    <result column="IS_PUBLIC" jdbcType="DECIMAL" property="isPublic" />
+    <result column="CREATED_DATE" jdbcType="DATE" property="createdDate" />
+    <result column="LAST_UPDATED_DATE" jdbcType="DATE" property="lastUpdatedDate" />
+    <result column="LAST_UPDATED_BY" jdbcType="VARCHAR" property="lastUpdatedBy" />
+    <result column="TEMPLATE_GUID" jdbcType="VARBINARY" property="templateGuid" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvSqlPlanMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvSqlPlan" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="HASH_VALUE" property="hashValue" jdbcType="DECIMAL" />
+    <result column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="PLAN_HASH_VALUE" property="planHashValue" jdbcType="DECIMAL" />
+    <result column="CHILD_NUMBER" property="childNumber" jdbcType="DECIMAL" />
+    <result column="TIMESTAMP" property="timestamp" jdbcType="DATE" />
+    <result column="OPERATION" property="operation" jdbcType="VARCHAR" />
+    <result column="OPTIONS" property="options" jdbcType="VARCHAR" />
+    <result column="OBJECT_NODE" property="objectNode" jdbcType="VARCHAR" />
+    <result column="OBJECT#" property="object" jdbcType="DECIMAL" />
+    <result column="OBJECT_OWNER" property="objectOwner" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="OBJECT_ALIAS" property="objectAlias" jdbcType="VARCHAR" />
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <result column="OPTIMIZER" property="optimizer" jdbcType="VARCHAR" />
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="PARENT_ID" property="parentId" jdbcType="DECIMAL" />
+    <result column="DEPTH" property="depth" jdbcType="DECIMAL" />
+    <result column="POSITION" property="position" jdbcType="DECIMAL" />
+    <result column="SEARCH_COLUMNS" property="searchColumns" jdbcType="DECIMAL" />
+    <result column="COST" property="cost" jdbcType="DECIMAL" />
+    <result column="CARDINALITY" property="cardinality" jdbcType="DECIMAL" />
+    <result column="BYTES" property="bytes" jdbcType="DECIMAL" />
+    <result column="OTHER_TAG" property="otherTag" jdbcType="VARCHAR" />
+    <result column="PARTITION_START" property="partitionStart" jdbcType="VARCHAR" />
+    <result column="PARTITION_STOP" property="partitionStop" jdbcType="VARCHAR" />
+    <result column="PARTITION_ID" property="partitionId" jdbcType="DECIMAL" />
+    <result column="OTHER" property="other" jdbcType="VARCHAR" />
+    <result column="DISTRIBUTION" property="distribution" jdbcType="VARCHAR" />
+    <result column="CPU_COST" property="cpuCost" jdbcType="DECIMAL" />
+    <result column="IO_COST" property="ioCost" jdbcType="DECIMAL" />
+    <result column="TEMP_SPACE" property="tempSpace" jdbcType="DECIMAL" />
+    <result column="ACCESS_PREDICATES" property="accessPredicates" jdbcType="VARCHAR" />
+    <result column="FILTER_PREDICATES" property="filterPredicates" jdbcType="VARCHAR" />
+    <result column="PROJECTION" property="projection" jdbcType="VARCHAR" />
+    <result column="TIME" property="time" jdbcType="DECIMAL" />
+    <result column="QBLOCK_NAME" property="qblockName" jdbcType="VARCHAR" />
+    <result column="REMARKS" property="remarks" jdbcType="VARCHAR" />
+    <result column="ADDRESS" property="address" jdbcType="VARBINARY" />
+    <result column="CHILD_ADDRESS" property="childAddress" jdbcType="VARBINARY" />
+    <result column="OTHER_XML" property="otherXml" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

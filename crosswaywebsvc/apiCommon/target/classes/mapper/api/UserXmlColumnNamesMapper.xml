@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserXmlColumnNamesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserXmlColumnNames" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SCHEMA_NAME" property="schemaName" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="OBJECT_COLUMN_NAME" property="objectColumnName" jdbcType="VARCHAR" />
+    <result column="EXTERNAL_COLUMN_NAME" property="externalColumnName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

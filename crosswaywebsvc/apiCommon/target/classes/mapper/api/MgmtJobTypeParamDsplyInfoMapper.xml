@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtJobTypeParamDsplyInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtJobTypeParamDsplyInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="JOB_TYPE_ID" property="jobTypeId" jdbcType="VARBINARY" />
+    <id column="PARAMETER_NAME" property="parameterName" jdbcType="VARCHAR" />
+    <result column="SHOW_IN_CREATE" property="showInCreate" jdbcType="DECIMAL" />
+    <result column="SHOW_IN_RESULTS" property="showInResults" jdbcType="DECIMAL" />
+    <result column="LABEL_NLSID" property="labelNlsid" jdbcType="VARCHAR" />
+    <result column="LABEL_DEFAULT" property="labelDefault" jdbcType="VARCHAR" />
+    <result column="HINT_NLSID" property="hintNlsid" jdbcType="VARCHAR" />
+    <result column="HINT_DEFAULT" property="hintDefault" jdbcType="VARCHAR" />
+    <result column="DISPLAY_MODE" property="displayMode" jdbcType="DECIMAL" />
+    <result column="NUM_LINES" property="numLines" jdbcType="DECIMAL" />
+    <result column="DEFAULT_TEXT" property="defaultText" jdbcType="VARCHAR" />
+    <result column="DEFAULT_NLSID" property="defaultNlsid" jdbcType="VARCHAR" />
+    <result column="PARAM_ORDER" property="paramOrder" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

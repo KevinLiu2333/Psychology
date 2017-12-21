@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtEcmAruMapMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtEcmAruMap" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ARU_ID" property="aruId" jdbcType="DECIMAL" />
+    <id column="CATEGORY" property="category" jdbcType="VARCHAR" />
+    <result column="DISPLAY_STRING" property="displayString" jdbcType="VARCHAR" />
+    <result column="EM_NAME" property="emName" jdbcType="VARCHAR" />
+    <result column="EM_BITLENGTH" property="emBitlength" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

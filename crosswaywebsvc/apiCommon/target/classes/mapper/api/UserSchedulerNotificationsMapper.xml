@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserSchedulerNotificationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserSchedulerNotifications" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="JOB_NAME" property="jobName" jdbcType="VARCHAR" />
+    <result column="JOB_SUBNAME" property="jobSubname" jdbcType="VARCHAR" />
+    <result column="RECIPIENT" property="recipient" jdbcType="VARCHAR" />
+    <result column="SENDER" property="sender" jdbcType="VARCHAR" />
+    <result column="SUBJECT" property="subject" jdbcType="VARCHAR" />
+    <result column="BODY" property="body" jdbcType="VARCHAR" />
+    <result column="FILTER_CONDITION" property="filterCondition" jdbcType="VARCHAR" />
+    <result column="EVENT" property="event" jdbcType="VARCHAR" />
+    <result column="EVENT_FLAG" property="eventFlag" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

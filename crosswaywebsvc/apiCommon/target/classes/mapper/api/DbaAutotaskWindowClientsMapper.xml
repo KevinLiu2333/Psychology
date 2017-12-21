@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaAutotaskWindowClientsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaAutotaskWindowClients" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WINDOW_NAME" property="windowName" jdbcType="VARCHAR" />
+    <result column="WINDOW_NEXT_TIME" property="windowNextTime" jdbcType="OTHER" />
+    <result column="WINDOW_ACTIVE" property="windowActive" jdbcType="VARCHAR" />
+    <result column="AUTOTASK_STATUS" property="autotaskStatus" jdbcType="VARCHAR" />
+    <result column="OPTIMIZER_STATS" property="optimizerStats" jdbcType="VARCHAR" />
+    <result column="SEGMENT_ADVISOR" property="segmentAdvisor" jdbcType="VARCHAR" />
+    <result column="SQL_TUNE_ADVISOR" property="sqlTuneAdvisor" jdbcType="VARCHAR" />
+    <result column="HEALTH_MONITOR" property="healthMonitor" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

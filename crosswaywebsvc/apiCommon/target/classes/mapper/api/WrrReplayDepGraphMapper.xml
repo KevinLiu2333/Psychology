@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrrReplayDepGraphMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrrReplayDepGraph" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FILE_ID" property="fileId" jdbcType="DECIMAL" />
+    <result column="CALL_CTR" property="callCtr" jdbcType="DECIMAL" />
+    <result column="FILE_ID_DEP" property="fileIdDep" jdbcType="DECIMAL" />
+    <result column="CALL_CTR_DEP" property="callCtrDep" jdbcType="DECIMAL" />
+    <result column="SYNC_POINT" property="syncPoint" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

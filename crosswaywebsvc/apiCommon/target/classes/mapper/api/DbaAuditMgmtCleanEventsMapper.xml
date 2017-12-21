@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaAuditMgmtCleanEventsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaAuditMgmtCleanEvents" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="AUDIT_TRAIL" property="auditTrail" jdbcType="VARCHAR" />
+    <result column="RAC_INSTANCE" property="racInstance" jdbcType="DECIMAL" />
+    <result column="CLEANUP_TIME" property="cleanupTime" jdbcType="OTHER" />
+    <result column="DELETE_COUNT" property="deleteCount" jdbcType="DECIMAL" />
+    <result column="WAS_FORCED" property="wasForced" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtPrivGrantsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtPrivGrants" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="GRANTEE" property="grantee" jdbcType="VARCHAR" />
+    <id column="PRIV_NAME" property="privName" jdbcType="VARCHAR" />
+    <id column="GUID" property="guid" jdbcType="VARBINARY" />
+    <result column="GRANTEE_IS_ROLE" property="granteeIsRole" jdbcType="DECIMAL" />
+    <result column="DIRECT_GRANT" property="directGrant" jdbcType="DECIMAL" />
+    <result column="REF_COUNT" property="refCount" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

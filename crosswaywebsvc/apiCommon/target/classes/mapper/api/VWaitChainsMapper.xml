@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VWaitChainsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VWaitChains" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CHAIN_ID" property="chainId" jdbcType="DECIMAL" />
+    <result column="CHAIN_IS_CYCLE" property="chainIsCycle" jdbcType="VARCHAR" />
+    <result column="CHAIN_SIGNATURE" property="chainSignature" jdbcType="VARCHAR" />
+    <result column="CHAIN_SIGNATURE_HASH" property="chainSignatureHash" jdbcType="DECIMAL" />
+    <result column="INSTANCE" property="instance" jdbcType="DECIMAL" />
+    <result column="OSID" property="osid" jdbcType="VARCHAR" />
+    <result column="PID" property="pid" jdbcType="DECIMAL" />
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="SESS_SERIAL#" property="sessSerial" jdbcType="DECIMAL" />
+    <result column="BLOCKER_IS_VALID" property="blockerIsValid" jdbcType="VARCHAR" />
+    <result column="BLOCKER_INSTANCE" property="blockerInstance" jdbcType="DECIMAL" />
+    <result column="BLOCKER_OSID" property="blockerOsid" jdbcType="VARCHAR" />
+    <result column="BLOCKER_PID" property="blockerPid" jdbcType="DECIMAL" />
+    <result column="BLOCKER_SID" property="blockerSid" jdbcType="DECIMAL" />
+    <result column="BLOCKER_SESS_SERIAL#" property="blockerSessSerial" jdbcType="DECIMAL" />
+    <result column="BLOCKER_CHAIN_ID" property="blockerChainId" jdbcType="DECIMAL" />
+    <result column="IN_WAIT" property="inWait" jdbcType="VARCHAR" />
+    <result column="TIME_SINCE_LAST_WAIT_SECS" property="timeSinceLastWaitSecs" jdbcType="DECIMAL" />
+    <result column="WAIT_ID" property="waitId" jdbcType="DECIMAL" />
+    <result column="WAIT_EVENT" property="waitEvent" jdbcType="DECIMAL" />
+    <result column="WAIT_EVENT_TEXT" property="waitEventText" jdbcType="VARCHAR" />
+    <result column="P1" property="p1" jdbcType="DECIMAL" />
+    <result column="P1_TEXT" property="p1Text" jdbcType="VARCHAR" />
+    <result column="P2" property="p2" jdbcType="DECIMAL" />
+    <result column="P2_TEXT" property="p2Text" jdbcType="VARCHAR" />
+    <result column="P3" property="p3" jdbcType="DECIMAL" />
+    <result column="P3_TEXT" property="p3Text" jdbcType="VARCHAR" />
+    <result column="IN_WAIT_SECS" property="inWaitSecs" jdbcType="DECIMAL" />
+    <result column="TIME_REMAINING_SECS" property="timeRemainingSecs" jdbcType="DECIMAL" />
+    <result column="NUM_WAITERS" property="numWaiters" jdbcType="DECIMAL" />
+    <result column="ROW_WAIT_OBJ#" property="rowWaitObj" jdbcType="DECIMAL" />
+    <result column="ROW_WAIT_FILE#" property="rowWaitFile" jdbcType="DECIMAL" />
+    <result column="ROW_WAIT_BLOCK#" property="rowWaitBlock" jdbcType="DECIMAL" />
+    <result column="ROW_WAIT_ROW#" property="rowWaitRow" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoCoordOpsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoCoordOps" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="COORD_OP_ID" property="coordOpId" jdbcType="DECIMAL" />
+    <result column="COORD_OP_NAME" property="coordOpName" jdbcType="VARCHAR" />
+    <result column="COORD_OP_TYPE" property="coordOpType" jdbcType="VARCHAR" />
+    <result column="SOURCE_SRID" property="sourceSrid" jdbcType="DECIMAL" />
+    <result column="TARGET_SRID" property="targetSrid" jdbcType="DECIMAL" />
+    <result column="COORD_TFM_VERSION" property="coordTfmVersion" jdbcType="VARCHAR" />
+    <result column="COORD_OP_VARIANT" property="coordOpVariant" jdbcType="DECIMAL" />
+    <result column="COORD_OP_METHOD_ID" property="coordOpMethodId" jdbcType="DECIMAL" />
+    <result column="UOM_ID_SOURCE_OFFSETS" property="uomIdSourceOffsets" jdbcType="DECIMAL" />
+    <result column="UOM_ID_TARGET_OFFSETS" property="uomIdTargetOffsets" jdbcType="DECIMAL" />
+    <result column="INFORMATION_SOURCE" property="informationSource" jdbcType="VARCHAR" />
+    <result column="DATA_SOURCE" property="dataSource" jdbcType="VARCHAR" />
+    <result column="SHOW_OPERATION" property="showOperation" jdbcType="DECIMAL" />
+    <result column="IS_LEGACY" property="isLegacy" jdbcType="VARCHAR" />
+    <result column="LEGACY_CODE" property="legacyCode" jdbcType="DECIMAL" />
+    <result column="REVERSE_OP" property="reverseOp" jdbcType="DECIMAL" />
+    <result column="IS_IMPLEMENTED_FORWARD" property="isImplementedForward" jdbcType="DECIMAL" />
+    <result column="IS_IMPLEMENTED_REVERSE" property="isImplementedReverse" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CtxExtractPolicyValuesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CtxExtractPolicyValues" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="EPV_POLICY_NAME" property="epvPolicyName" jdbcType="VARCHAR" />
+    <result column="EPV_POLICY_OWNER" property="epvPolicyOwner" jdbcType="VARCHAR" />
+    <result column="EPV_CLASS" property="epvClass" jdbcType="VARCHAR" />
+    <result column="EPV_OBJECT" property="epvObject" jdbcType="VARCHAR" />
+    <result column="EPV_ATTRIBUTE" property="epvAttribute" jdbcType="VARCHAR" />
+    <result column="EPV_VALUE" property="epvValue" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

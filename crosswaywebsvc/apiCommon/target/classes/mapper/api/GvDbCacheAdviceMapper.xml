@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvDbCacheAdviceMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvDbCacheAdvice" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="BLOCK_SIZE" property="blockSize" jdbcType="DECIMAL" />
+    <result column="ADVICE_STATUS" property="adviceStatus" jdbcType="VARCHAR" />
+    <result column="SIZE_FOR_ESTIMATE" property="sizeForEstimate" jdbcType="DECIMAL" />
+    <result column="SIZE_FACTOR" property="sizeFactor" jdbcType="DECIMAL" />
+    <result column="BUFFERS_FOR_ESTIMATE" property="buffersForEstimate" jdbcType="DECIMAL" />
+    <result column="ESTD_PHYSICAL_READ_FACTOR" property="estdPhysicalReadFactor" jdbcType="DECIMAL" />
+    <result column="ESTD_PHYSICAL_READS" property="estdPhysicalReads" jdbcType="DECIMAL" />
+    <result column="ESTD_PHYSICAL_READ_TIME" property="estdPhysicalReadTime" jdbcType="DECIMAL" />
+    <result column="ESTD_PCT_OF_DB_TIME_FOR_READS" property="estdPctOfDbTimeForReads" jdbcType="DECIMAL" />
+    <result column="ESTD_CLUSTER_READS" property="estdClusterReads" jdbcType="DECIMAL" />
+    <result column="ESTD_CLUSTER_READ_TIME" property="estdClusterReadTime" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

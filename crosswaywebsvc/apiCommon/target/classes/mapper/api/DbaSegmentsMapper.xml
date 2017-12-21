@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaSegmentsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaSegments" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="SEGMENT_NAME" property="segmentName" jdbcType="VARCHAR" />
+    <result column="PARTITION_NAME" property="partitionName" jdbcType="VARCHAR" />
+    <result column="SEGMENT_TYPE" property="segmentType" jdbcType="VARCHAR" />
+    <result column="SEGMENT_SUBTYPE" property="segmentSubtype" jdbcType="VARCHAR" />
+    <result column="TABLESPACE_NAME" property="tablespaceName" jdbcType="VARCHAR" />
+    <result column="HEADER_FILE" property="headerFile" jdbcType="DECIMAL" />
+    <result column="HEADER_BLOCK" property="headerBlock" jdbcType="DECIMAL" />
+    <result column="BYTES" property="bytes" jdbcType="DECIMAL" />
+    <result column="BLOCKS" property="blocks" jdbcType="DECIMAL" />
+    <result column="EXTENTS" property="extents" jdbcType="DECIMAL" />
+    <result column="INITIAL_EXTENT" property="initialExtent" jdbcType="DECIMAL" />
+    <result column="NEXT_EXTENT" property="nextExtent" jdbcType="DECIMAL" />
+    <result column="MIN_EXTENTS" property="minExtents" jdbcType="DECIMAL" />
+    <result column="MAX_EXTENTS" property="maxExtents" jdbcType="DECIMAL" />
+    <result column="MAX_SIZE" property="maxSize" jdbcType="DECIMAL" />
+    <result column="RETENTION" property="retention" jdbcType="VARCHAR" />
+    <result column="MINRETENTION" property="minretention" jdbcType="DECIMAL" />
+    <result column="PCT_INCREASE" property="pctIncrease" jdbcType="DECIMAL" />
+    <result column="FREELISTS" property="freelists" jdbcType="DECIMAL" />
+    <result column="FREELIST_GROUPS" property="freelistGroups" jdbcType="DECIMAL" />
+    <result column="RELATIVE_FNO" property="relativeFno" jdbcType="DECIMAL" />
+    <result column="BUFFER_POOL" property="bufferPool" jdbcType="VARCHAR" />
+    <result column="FLASH_CACHE" property="flashCache" jdbcType="VARCHAR" />
+    <result column="CELL_FLASH_CACHE" property="cellFlashCache" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

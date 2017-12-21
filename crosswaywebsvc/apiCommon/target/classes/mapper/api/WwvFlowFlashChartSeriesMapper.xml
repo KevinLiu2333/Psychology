@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowFlashChartSeriesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowFlashChartSeries" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="CHART_ID" property="chartId" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="SERIES_SEQ" property="seriesSeq" jdbcType="DECIMAL" />
+    <result column="SERIES_NAME" property="seriesName" jdbcType="VARCHAR" />
+    <result column="SERIES_QUERY_TYPE" property="seriesQueryType" jdbcType="VARCHAR" />
+    <result column="SERIES_QUERY_PARSE_OPT" property="seriesQueryParseOpt" jdbcType="VARCHAR" />
+    <result column="SERIES_QUERY_NO_DATA_FOUND" property="seriesQueryNoDataFound" jdbcType="VARCHAR" />
+    <result column="SERIES_QUERY_ROW_COUNT_MAX" property="seriesQueryRowCountMax" jdbcType="DECIMAL" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="UPDATED_ON" property="updatedOn" jdbcType="DATE" />
+    <result column="UPDATED_BY" property="updatedBy" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="SERIES_QUERY" property="seriesQuery" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

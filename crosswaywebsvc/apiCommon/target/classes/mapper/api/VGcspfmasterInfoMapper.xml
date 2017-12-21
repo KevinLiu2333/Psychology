@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VGcspfmasterInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VGcspfmasterInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FILE_ID" property="fileId" jdbcType="DECIMAL" />
+    <result column="DATA_OBJECT_ID" property="dataObjectId" jdbcType="DECIMAL" />
+    <result column="GC_MASTERING_POLICY" property="gcMasteringPolicy" jdbcType="VARCHAR" />
+    <result column="CURRENT_MASTER" property="currentMaster" jdbcType="DECIMAL" />
+    <result column="PREVIOUS_MASTER" property="previousMaster" jdbcType="DECIMAL" />
+    <result column="REMASTER_CNT" property="remasterCnt" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WmVersionedTablesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WmVersionedTables" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <id column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="VTID" property="vtid" jdbcType="DECIMAL" />
+    <result column="NOTIFICATION" property="notification" jdbcType="DECIMAL" />
+    <result column="NOTIFYWORKSPACES" property="notifyworkspaces" jdbcType="VARCHAR" />
+    <result column="DISABLING_VER" property="disablingVer" jdbcType="VARCHAR" />
+    <result column="RICWEIGHT" property="ricweight" jdbcType="DECIMAL" />
+    <result column="ISFASTLIVE" property="isfastlive" jdbcType="DECIMAL" />
+    <result column="ISWORKFLOW" property="isworkflow" jdbcType="DECIMAL" />
+    <result column="HIST" property="hist" jdbcType="VARCHAR" />
+    <result column="PKEY_COLS" property="pkeyCols" jdbcType="VARCHAR" />
+    <result column="UNDO_CODE" property="undoCode" jdbcType="OTHER" />
+    <result column="SITESLIST" property="siteslist" jdbcType="VARCHAR" />
+    <result column="REPSITECOUNT" property="repsitecount" jdbcType="DECIMAL" />
+    <result column="BL_WORKSPACE" property="blWorkspace" jdbcType="VARCHAR" />
+    <result column="BL_VERSION" property="blVersion" jdbcType="DECIMAL" />
+    <result column="VALIDTIME" property="validtime" jdbcType="DECIMAL" />
+    <result column="INITVTRANGE" property="initvtrange" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

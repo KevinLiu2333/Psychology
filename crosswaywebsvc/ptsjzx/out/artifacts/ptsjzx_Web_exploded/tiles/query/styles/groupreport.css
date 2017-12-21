@@ -1,0 +1,15 @@
+.reporttable{
+	margin-bottom:18px; border-top:1px solid #c7d9e7; border-right:1px solid #c7d9e7; background-color:#f7fcff;
+}
+.gt{
+	border-left:1px solid #c7d9e7; border-bottom:1px  solid #c7d9e7; height:26px; white-space:nowrap; padding:0px 3px; text-align:center; color:#333333;font-size:14px;
+}
+.ch{
+		border-left:1px solid #c7d9e7; border-bottom:1px  solid #c7d9e7; height:26px; white-space:nowrap; padding:0px 3px; text-align:center; color:#0982e1;font-size:14px;font-weight:bold
+}
+.cd{border-left:1px solid #c7d9e7; border-bottom:1px  solid #c7d9e7; height:26px; white-space:nowrap; padding:0px 3px; text-align:center;font-size:14px;color:#024e88;font-weight:bold;
+}
+
+.nh{
+	text-align:center;border-right:1px solid #fff; border-left:1px solid #c7d9e7; background:url(../images/v1_64.jpg); height:31px; border-bottom:1px solid #c7d9e7; color:#0982e1; line-height:31px; white-space:nowrap; font-weight:normal; font-size:14px; font-weight:bold;
+}

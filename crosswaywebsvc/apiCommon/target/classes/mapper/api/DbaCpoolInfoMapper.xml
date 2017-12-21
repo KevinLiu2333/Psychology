@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaCpoolInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaCpoolInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CONNECTION_POOL" property="connectionPool" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="MINSIZE" property="minsize" jdbcType="DECIMAL" />
+    <result column="MAXSIZE" property="maxsize" jdbcType="DECIMAL" />
+    <result column="INCRSIZE" property="incrsize" jdbcType="DECIMAL" />
+    <result column="SESSION_CACHED_CURSORS" property="sessionCachedCursors" jdbcType="DECIMAL" />
+    <result column="INACTIVITY_TIMEOUT" property="inactivityTimeout" jdbcType="DECIMAL" />
+    <result column="MAX_THINK_TIME" property="maxThinkTime" jdbcType="DECIMAL" />
+    <result column="MAX_USE_SESSION" property="maxUseSession" jdbcType="DECIMAL" />
+    <result column="MAX_LIFETIME_SESSION" property="maxLifetimeSession" jdbcType="DECIMAL" />
+    <result column="NUM_CBROK" property="numCbrok" jdbcType="DECIMAL" />
+    <result column="MAXCONN_CBROK" property="maxconnCbrok" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

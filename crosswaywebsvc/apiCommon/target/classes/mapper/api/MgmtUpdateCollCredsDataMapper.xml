@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtUpdateCollCredsDataMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtUpdateCollCredsData" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COLLECTION_NAME" property="collectionName" jdbcType="VARCHAR" />
+    <result column="CREDENTIAL_SET_NAME" property="credentialSetName" jdbcType="VARCHAR" />
+    <result column="CREDENTIAL_COLUMN" property="credentialColumn" jdbcType="VARCHAR" />
+    <result column="CREDENTIAL_VALUE" property="credentialValue" jdbcType="VARCHAR" />
+    <result column="DATA_SET_GUID" property="dataSetGuid" jdbcType="VARBINARY" />
+    <result column="METRIC_GUID" property="metricGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

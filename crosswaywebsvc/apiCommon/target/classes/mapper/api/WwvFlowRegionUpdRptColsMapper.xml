@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowRegionUpdRptColsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowRegionUpdRptCols" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="PLUG_ID" property="plugId" jdbcType="DECIMAL" />
+    <result column="COLUMN_SEQUENCE" property="columnSequence" jdbcType="DECIMAL" />
+    <result column="QUERY_COLUMN_NAME" property="queryColumnName" jdbcType="VARCHAR" />
+    <result column="DISPLAY_AS" property="displayAs" jdbcType="VARCHAR" />
+    <result column="NAMED_LOV" property="namedLov" jdbcType="DECIMAL" />
+    <result column="INLINE_LOV" property="inlineLov" jdbcType="VARCHAR" />
+    <result column="LOV_SHOW_NULLS" property="lovShowNulls" jdbcType="VARCHAR" />
+    <result column="LOV_NULL_TEXT" property="lovNullText" jdbcType="VARCHAR" />
+    <result column="LOV_NULL_VALUE" property="lovNullValue" jdbcType="VARCHAR" />
+    <result column="COLUMN_WIDTH" property="columnWidth" jdbcType="DECIMAL" />
+    <result column="COLUMN_HEIGHT" property="columnHeight" jdbcType="DECIMAL" />
+    <result column="CATTRIBUTES" property="cattributes" jdbcType="VARCHAR" />
+    <result column="CATTRIBUTES_ELEMENT" property="cattributesElement" jdbcType="VARCHAR" />
+    <result column="COLUMN_COMMENT" property="columnComment" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

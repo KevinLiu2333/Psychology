@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtAuditCustomAttribsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtAuditCustomAttribs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="CA_NAME" property="caName" jdbcType="VARCHAR" />
+    <result column="CA_DISPLAY_NAME" property="caDisplayName" jdbcType="VARCHAR" />
+    <result column="CA_DESCRIPTION" property="caDescription" jdbcType="VARCHAR" />
+    <result column="CA_REQUIRED" property="caRequired" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

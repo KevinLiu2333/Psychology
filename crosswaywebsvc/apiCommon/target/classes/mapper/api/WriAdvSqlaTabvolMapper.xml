@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriAdvSqlaTabvolMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriAdvSqlaTabvol" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <id column="TABLE#" property="table" jdbcType="DECIMAL" />
+    <result column="OWNER_NAME" property="ownerName" jdbcType="VARCHAR" />
+    <result column="TABLE_OWNER#" property="tableOwner" jdbcType="DECIMAL" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="UPD_FREQ" property="updFreq" jdbcType="DECIMAL" />
+    <result column="INS_FREQ" property="insFreq" jdbcType="DECIMAL" />
+    <result column="DEL_FREQ" property="delFreq" jdbcType="DECIMAL" />
+    <result column="DIR_FREQ" property="dirFreq" jdbcType="DECIMAL" />
+    <result column="UPD_ROWS" property="updRows" jdbcType="DECIMAL" />
+    <result column="INS_ROWS" property="insRows" jdbcType="DECIMAL" />
+    <result column="DEL_ROWS" property="delRows" jdbcType="DECIMAL" />
+    <result column="DIR_ROWS" property="dirRows" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

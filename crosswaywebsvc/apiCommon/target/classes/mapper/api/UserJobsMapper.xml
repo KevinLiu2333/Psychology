@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserJobsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserJobs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="JOB" property="job" jdbcType="DECIMAL" />
+    <result column="LOG_USER" property="logUser" jdbcType="VARCHAR" />
+    <result column="PRIV_USER" property="privUser" jdbcType="VARCHAR" />
+    <result column="SCHEMA_USER" property="schemaUser" jdbcType="VARCHAR" />
+    <result column="LAST_DATE" property="lastDate" jdbcType="DATE" />
+    <result column="LAST_SEC" property="lastSec" jdbcType="VARCHAR" />
+    <result column="THIS_DATE" property="thisDate" jdbcType="DATE" />
+    <result column="THIS_SEC" property="thisSec" jdbcType="VARCHAR" />
+    <result column="NEXT_DATE" property="nextDate" jdbcType="DATE" />
+    <result column="NEXT_SEC" property="nextSec" jdbcType="VARCHAR" />
+    <result column="TOTAL_TIME" property="totalTime" jdbcType="DECIMAL" />
+    <result column="BROKEN" property="broken" jdbcType="VARCHAR" />
+    <result column="INTERVAL" property="interval" jdbcType="VARCHAR" />
+    <result column="FAILURES" property="failures" jdbcType="DECIMAL" />
+    <result column="WHAT" property="what" jdbcType="VARCHAR" />
+    <result column="NLS_ENV" property="nlsEnv" jdbcType="VARCHAR" />
+    <result column="INSTANCE" property="instance" jdbcType="DECIMAL" />
+    <result column="MISC_ENV" property="miscEnv" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

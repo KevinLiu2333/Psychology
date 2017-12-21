@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OrddcmDocsUsrMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OrddcmDocsUsr" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DOC_ID" property="docId" jdbcType="DECIMAL" />
+    <result column="DOC_NAME" property="docName" jdbcType="VARCHAR" />
+    <result column="DOC_TYPE_ID" property="docTypeId" jdbcType="DECIMAL" />
+    <result column="ORACLE_INSTALL" property="oracleInstall" jdbcType="DECIMAL" />
+    <result column="CREATE_DATE" property="createDate" jdbcType="DATE" />
+  </resultMap>
+</mapper>

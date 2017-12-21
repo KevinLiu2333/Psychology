@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OptstatUserPrefsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OptstatUserPrefs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="PNAME" property="pname" jdbcType="VARCHAR" />
+    <result column="VALNUM" property="valnum" jdbcType="DECIMAL" />
+    <result column="VALCHAR" property="valchar" jdbcType="VARCHAR" />
+    <result column="CHGTIME" property="chgtime" jdbcType="OTHER" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

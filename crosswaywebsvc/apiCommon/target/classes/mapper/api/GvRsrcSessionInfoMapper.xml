@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvRsrcSessionInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvRsrcSessionInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="CURRENT_CONSUMER_GROUP_ID" property="currentConsumerGroupId" jdbcType="DECIMAL" />
+    <result column="ORIG_CONSUMER_GROUP_ID" property="origConsumerGroupId" jdbcType="DECIMAL" />
+    <result column="MAPPING_ATTRIBUTE" property="mappingAttribute" jdbcType="VARCHAR" />
+    <result column="MAPPED_CONSUMER_GROUP" property="mappedConsumerGroup" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="ACTIVE" property="active" jdbcType="VARCHAR" />
+    <result column="CURRENT_IDLE_TIME" property="currentIdleTime" jdbcType="DECIMAL" />
+    <result column="CURRENT_CPU_WAIT_TIME" property="currentCpuWaitTime" jdbcType="DECIMAL" />
+    <result column="CPU_WAIT_TIME" property="cpuWaitTime" jdbcType="DECIMAL" />
+    <result column="CURRENT_CPU_WAITS" property="currentCpuWaits" jdbcType="DECIMAL" />
+    <result column="CPU_WAITS" property="cpuWaits" jdbcType="DECIMAL" />
+    <result column="CURRENT_CONSUMED_CPU_TIME" property="currentConsumedCpuTime" jdbcType="DECIMAL" />
+    <result column="CONSUMED_CPU_TIME" property="consumedCpuTime" jdbcType="DECIMAL" />
+    <result column="CURRENT_ACTIVE_TIME" property="currentActiveTime" jdbcType="DECIMAL" />
+    <result column="ACTIVE_TIME" property="activeTime" jdbcType="DECIMAL" />
+    <result column="CURRENT_QUEUED_TIME" property="currentQueuedTime" jdbcType="DECIMAL" />
+    <result column="QUEUED_TIME" property="queuedTime" jdbcType="DECIMAL" />
+    <result column="CURRENT_YIELDS" property="currentYields" jdbcType="DECIMAL" />
+    <result column="YIELDS" property="yields" jdbcType="DECIMAL" />
+    <result column="CURRENT_UNDO_CONSUMPTION" property="currentUndoConsumption" jdbcType="DECIMAL" />
+    <result column="MAX_UNDO_CONSUMPTION" property="maxUndoConsumption" jdbcType="DECIMAL" />
+    <result column="SQL_CANCELED" property="sqlCanceled" jdbcType="DECIMAL" />
+    <result column="QUEUE_TIME_OUTS" property="queueTimeOuts" jdbcType="DECIMAL" />
+    <result column="ESTIMATED_EXECUTION_LIMIT_HIT" property="estimatedExecutionLimitHit" jdbcType="DECIMAL" />
+    <result column="CURRENT_IO_SERVICE_TIME" property="currentIoServiceTime" jdbcType="DECIMAL" />
+    <result column="IO_SERVICE_TIME" property="ioServiceTime" jdbcType="DECIMAL" />
+    <result column="CURRENT_IO_SERVICE_WAITS" property="currentIoServiceWaits" jdbcType="DECIMAL" />
+    <result column="IO_SERVICE_WAITS" property="ioServiceWaits" jdbcType="DECIMAL" />
+    <result column="CURRENT_SMALL_READ_MEGABYTES" property="currentSmallReadMegabytes" jdbcType="DECIMAL" />
+    <result column="SMALL_READ_MEGABYTES" property="smallReadMegabytes" jdbcType="DECIMAL" />
+    <result column="CURRENT_LARGE_READ_MEGABYTES" property="currentLargeReadMegabytes" jdbcType="DECIMAL" />
+    <result column="LARGE_READ_MEGABYTES" property="largeReadMegabytes" jdbcType="DECIMAL" />
+    <result column="CURRENT_SMALL_WRITE_MEGABYTES" property="currentSmallWriteMegabytes" jdbcType="DECIMAL" />
+    <result column="SMALL_WRITE_MEGABYTES" property="smallWriteMegabytes" jdbcType="DECIMAL" />
+    <result column="CURRENT_LARGE_WRITE_MEGABYTES" property="currentLargeWriteMegabytes" jdbcType="DECIMAL" />
+    <result column="LARGE_WRITE_MEGABYTES" property="largeWriteMegabytes" jdbcType="DECIMAL" />
+    <result column="CURRENT_SMALL_READ_REQUESTS" property="currentSmallReadRequests" jdbcType="DECIMAL" />
+    <result column="SMALL_READ_REQUESTS" property="smallReadRequests" jdbcType="DECIMAL" />
+    <result column="CURRENT_SMALL_WRITE_REQUESTS" property="currentSmallWriteRequests" jdbcType="DECIMAL" />
+    <result column="SMALL_WRITE_REQUESTS" property="smallWriteRequests" jdbcType="DECIMAL" />
+    <result column="CURRENT_LARGE_READ_REQUESTS" property="currentLargeReadRequests" jdbcType="DECIMAL" />
+    <result column="LARGE_READ_REQUESTS" property="largeReadRequests" jdbcType="DECIMAL" />
+    <result column="CURRENT_LARGE_WRITE_REQUESTS" property="currentLargeWriteRequests" jdbcType="DECIMAL" />
+    <result column="LARGE_WRITE_REQUESTS" property="largeWriteRequests" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

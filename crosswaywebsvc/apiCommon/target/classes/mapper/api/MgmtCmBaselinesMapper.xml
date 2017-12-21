@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCmBaselinesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCmBaselines" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="BASELINE_GUID" property="baselineGuid" jdbcType="VARBINARY" />
+    <result column="BASELINE_OWNER" property="baselineOwner" jdbcType="VARCHAR" />
+    <result column="BASELINE_NAME" property="baselineName" jdbcType="VARCHAR" />
+    <result column="SOURCE_NAME" property="sourceName" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="TEMP_BL" property="tempBl" jdbcType="DECIMAL" />
+    <result column="BASELINE_SS" property="baselineSs" jdbcType="VARBINARY" />
+    <result column="SOURCE_ID" property="sourceId" jdbcType="VARBINARY" />
+    <result column="JOB_ID" property="jobId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VBackupFilesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VBackupFiles" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PKEY" property="pkey" jdbcType="DECIMAL" />
+    <result column="BACKUP_TYPE" property="backupType" jdbcType="VARCHAR" />
+    <result column="FILE_TYPE" property="fileType" jdbcType="VARCHAR" />
+    <result column="KEEP" property="keep" jdbcType="VARCHAR" />
+    <result column="KEEP_UNTIL" property="keepUntil" jdbcType="DATE" />
+    <result column="KEEP_OPTIONS" property="keepOptions" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="FNAME" property="fname" jdbcType="VARCHAR" />
+    <result column="TAG" property="tag" jdbcType="VARCHAR" />
+    <result column="MEDIA" property="media" jdbcType="VARCHAR" />
+    <result column="RECID" property="recid" jdbcType="DECIMAL" />
+    <result column="STAMP" property="stamp" jdbcType="DECIMAL" />
+    <result column="DEVICE_TYPE" property="deviceType" jdbcType="VARCHAR" />
+    <result column="BLOCK_SIZE" property="blockSize" jdbcType="DECIMAL" />
+    <result column="COMPLETION_TIME" property="completionTime" jdbcType="DATE" />
+    <result column="COMPRESSED" property="compressed" jdbcType="VARCHAR" />
+    <result column="OBSOLETE" property="obsolete" jdbcType="VARCHAR" />
+    <result column="BYTES" property="bytes" jdbcType="DECIMAL" />
+    <result column="BS_KEY" property="bsKey" jdbcType="DECIMAL" />
+    <result column="BS_COUNT" property="bsCount" jdbcType="DECIMAL" />
+    <result column="BS_STAMP" property="bsStamp" jdbcType="DECIMAL" />
+    <result column="BS_TYPE" property="bsType" jdbcType="VARCHAR" />
+    <result column="BS_INCR_TYPE" property="bsIncrType" jdbcType="VARCHAR" />
+    <result column="BS_PIECES" property="bsPieces" jdbcType="DECIMAL" />
+    <result column="BS_COPIES" property="bsCopies" jdbcType="DECIMAL" />
+    <result column="BS_COMPLETION_TIME" property="bsCompletionTime" jdbcType="DATE" />
+    <result column="BS_STATUS" property="bsStatus" jdbcType="VARCHAR" />
+    <result column="BS_BYTES" property="bsBytes" jdbcType="DECIMAL" />
+    <result column="BS_COMPRESSED" property="bsCompressed" jdbcType="VARCHAR" />
+    <result column="BS_TAG" property="bsTag" jdbcType="VARCHAR" />
+    <result column="BS_DEVICE_TYPE" property="bsDeviceType" jdbcType="VARCHAR" />
+    <result column="BP_PIECE#" property="bpPiece" jdbcType="DECIMAL" />
+    <result column="BP_COPY#" property="bpCopy" jdbcType="DECIMAL" />
+    <result column="DF_FILE#" property="dfFile" jdbcType="DECIMAL" />
+    <result column="DF_TABLESPACE" property="dfTablespace" jdbcType="VARCHAR" />
+    <result column="DF_RESETLOGS_CHANGE#" property="dfResetlogsChange" jdbcType="DECIMAL" />
+    <result column="DF_CREATION_CHANGE#" property="dfCreationChange" jdbcType="DECIMAL" />
+    <result column="DF_CHECKPOINT_CHANGE#" property="dfCheckpointChange" jdbcType="DECIMAL" />
+    <result column="DF_CKP_MOD_TIME" property="dfCkpModTime" jdbcType="DATE" />
+    <result column="RL_THREAD#" property="rlThread" jdbcType="DECIMAL" />
+    <result column="RL_SEQUENCE#" property="rlSequence" jdbcType="DECIMAL" />
+    <result column="RL_RESETLOGS_CHANGE#" property="rlResetlogsChange" jdbcType="DECIMAL" />
+    <result column="RL_FIRST_CHANGE#" property="rlFirstChange" jdbcType="DECIMAL" />
+    <result column="RL_FIRST_TIME" property="rlFirstTime" jdbcType="DATE" />
+    <result column="RL_NEXT_CHANGE#" property="rlNextChange" jdbcType="DECIMAL" />
+    <result column="RL_NEXT_TIME" property="rlNextTime" jdbcType="DATE" />
+  </resultMap>
+</mapper>

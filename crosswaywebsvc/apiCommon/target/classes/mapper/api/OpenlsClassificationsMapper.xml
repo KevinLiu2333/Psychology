@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OpenlsClassificationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OpenlsClassifications" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="CRITERION" property="criterion" jdbcType="VARCHAR" />
+    <id column="CLASSIFICATION" property="classification" jdbcType="VARCHAR" />
+    <id column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="CHARACTERISTIC_XPATH" property="characteristicXpath" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

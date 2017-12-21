@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaObjAuditOptsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaObjAuditOpts" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <result column="ALT" property="alt" jdbcType="VARCHAR" />
+    <result column="AUD" property="aud" jdbcType="VARCHAR" />
+    <result column="COM" property="com" jdbcType="VARCHAR" />
+    <result column="DEL" property="del" jdbcType="VARCHAR" />
+    <result column="GRA" property="gra" jdbcType="VARCHAR" />
+    <result column="IND" property="ind" jdbcType="VARCHAR" />
+    <result column="INS" property="ins" jdbcType="VARCHAR" />
+    <result column="LOC" property="loc" jdbcType="VARCHAR" />
+    <result column="REN" property="ren" jdbcType="VARCHAR" />
+    <result column="SEL" property="sel" jdbcType="VARCHAR" />
+    <result column="UPD" property="upd" jdbcType="VARCHAR" />
+    <result column="REF" property="ref" jdbcType="CHAR" />
+    <result column="EXE" property="exe" jdbcType="VARCHAR" />
+    <result column="CRE" property="cre" jdbcType="VARCHAR" />
+    <result column="REA" property="rea" jdbcType="VARCHAR" />
+    <result column="WRI" property="wri" jdbcType="VARCHAR" />
+    <result column="FBK" property="fbk" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

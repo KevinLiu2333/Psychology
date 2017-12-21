@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtVSlSrcMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtVSlSrc" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PARENT_STORAGE_LAYER" property="parentStorageLayer" jdbcType="VARCHAR" />
+    <result column="ON_LOCAL_DISKS" property="onLocalDisks" jdbcType="DECIMAL" />
+    <result column="ON_VOLUMES" property="onVolumes" jdbcType="DECIMAL" />
+    <result column="ON_NFS_READ" property="onNfsRead" jdbcType="DECIMAL" />
+    <result column="ON_LOCAL_FS" property="onLocalFs" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

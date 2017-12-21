@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VSystemParameterMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VSystemParameter" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NUM" property="num" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="DECIMAL" />
+    <result column="VALUE" property="value" jdbcType="VARCHAR" />
+    <result column="DISPLAY_VALUE" property="displayValue" jdbcType="VARCHAR" />
+    <result column="ISDEFAULT" property="isdefault" jdbcType="VARCHAR" />
+    <result column="ISSES_MODIFIABLE" property="issesModifiable" jdbcType="VARCHAR" />
+    <result column="ISSYS_MODIFIABLE" property="issysModifiable" jdbcType="VARCHAR" />
+    <result column="ISINSTANCE_MODIFIABLE" property="isinstanceModifiable" jdbcType="VARCHAR" />
+    <result column="ISMODIFIED" property="ismodified" jdbcType="VARCHAR" />
+    <result column="ISADJUSTED" property="isadjusted" jdbcType="VARCHAR" />
+    <result column="ISDEPRECATED" property="isdeprecated" jdbcType="VARCHAR" />
+    <result column="ISBASIC" property="isbasic" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="UPDATE_COMMENT" property="updateComment" jdbcType="VARCHAR" />
+    <result column="HASH" property="hash" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

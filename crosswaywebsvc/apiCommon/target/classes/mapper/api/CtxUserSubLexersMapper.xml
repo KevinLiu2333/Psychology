@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CtxUserSubLexersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CtxUserSubLexers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SLX_NAME" property="slxName" jdbcType="VARCHAR" />
+    <result column="SLX_LANGUAGE" property="slxLanguage" jdbcType="VARCHAR" />
+    <result column="SLX_ALT_VALUE" property="slxAltValue" jdbcType="VARCHAR" />
+    <result column="SLX_SUB_OWNER" property="slxSubOwner" jdbcType="VARCHAR" />
+    <result column="SLX_SUB_NAME" property="slxSubName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

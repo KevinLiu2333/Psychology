@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtPdpSettingsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtPdpSettings" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SETTING_NAME" property="settingName" jdbcType="VARCHAR" />
+    <id column="PDP_TYPE" property="pdpType" jdbcType="VARCHAR" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_MODIFIED" property="lastModified" jdbcType="DATE" />
+    <result column="IS_ENABLED" property="isEnabled" jdbcType="DECIMAL" />
+    <result column="SETTING_GUID" property="settingGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WfsFeaturetypexmlcolinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WfsFeaturetypexmlcolinfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FEATURETYPEID" property="featuretypeid" jdbcType="DECIMAL" />
+    <result column="FTNAMESPACEURL" property="ftnamespaceurl" jdbcType="VARCHAR" />
+    <result column="XSDDESC" property="xsddesc" jdbcType="OTHER" />
+    <result column="XSDWRAPPERDESC" property="xsdwrapperdesc" jdbcType="OTHER" />
+    <result column="COLUMNNAME" property="columnname" jdbcType="VARCHAR" />
+    <result column="OBJPATHINFO" property="objpathinfo" jdbcType="OTHER" />
+    <result column="LASTUPDATETS" property="lastupdatets" jdbcType="TIMESTAMP" />
+    <result column="LASTWRAPPERGENERATETS" property="lastwrappergeneratets" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

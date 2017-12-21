@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.HsParallelMetadataMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.HsParallelMetadata">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DBLINK" jdbcType="VARCHAR" property="dblink" />
+    <result column="REMOTE_TABLE_NAME" jdbcType="VARCHAR" property="remoteTableName" />
+    <result column="REMOTE_SCHEMA_NAME" jdbcType="VARCHAR" property="remoteSchemaName" />
+    <result column="PARALLEL" jdbcType="VARCHAR" property="parallel" />
+    <result column="PARALLEL_DEGREE" jdbcType="DECIMAL" property="parallelDegree" />
+    <result column="RANGE_PARTITIONED" jdbcType="VARCHAR" property="rangePartitioned" />
+    <result column="SAMPLED" jdbcType="VARCHAR" property="sampled" />
+    <result column="HISTOGRAM" jdbcType="VARCHAR" property="histogram" />
+    <result column="IND_AVAILABLE" jdbcType="VARCHAR" property="indAvailable" />
+    <result column="SAMPLE_CAP" jdbcType="VARCHAR" property="sampleCap" />
+    <result column="HIST_COLUMN" jdbcType="VARCHAR" property="histColumn" />
+    <result column="HIST_COLUMN_TYPE" jdbcType="VARCHAR" property="histColumnType" />
+    <result column="SAMPLE_COLUMN" jdbcType="VARCHAR" property="sampleColumn" />
+    <result column="SAMPLE_COLUMN_TYPE" jdbcType="VARCHAR" property="sampleColumnType" />
+    <result column="NUM_PARTITIONS" jdbcType="DECIMAL" property="numPartitions" />
+    <result column="NUM_PARTITION_COLUMNS" jdbcType="DECIMAL" property="numPartitionColumns" />
+    <result column="PARTITION_COL_NAMES" jdbcType="OTHER" property="partitionColNames" />
+    <result column="PARTITION_COL_TYPES" jdbcType="OTHER" property="partitionColTypes" />
+    <result column="NCOL_MIN_VAL" jdbcType="DECIMAL" property="ncolMinVal" />
+    <result column="NCOL_AVG_VAL" jdbcType="DECIMAL" property="ncolAvgVal" />
+    <result column="NCOL_MAX_VAL" jdbcType="DECIMAL" property="ncolMaxVal" />
+    <result column="NUM_BUCKETS" jdbcType="DECIMAL" property="numBuckets" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbfsStatsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbfsStats" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="S_OWNER" property="sOwner" jdbcType="VARCHAR" />
+    <result column="S_NAME" property="sName" jdbcType="VARCHAR" />
+    <result column="S_MOUNT" property="sMount" jdbcType="VARCHAR" />
+    <result column="OPCODE" property="opcode" jdbcType="DECIMAL" />
+    <result column="COUNT" property="count" jdbcType="DECIMAL" />
+    <result column="WTIME" property="wtime" jdbcType="DECIMAL" />
+    <result column="CTIME" property="ctime" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

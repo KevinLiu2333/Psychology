@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrIndexMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrIndex" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="IDX_ID" property="idxId" jdbcType="DECIMAL" />
+    <result column="IDX_OWNER#" property="idxOwner" jdbcType="DECIMAL" />
+    <result column="IDX_NAME" property="idxName" jdbcType="VARCHAR" />
+    <result column="IDX_TABLE_OWNER#" property="idxTableOwner" jdbcType="DECIMAL" />
+    <result column="IDX_TABLE#" property="idxTable" jdbcType="DECIMAL" />
+    <result column="IDX_KEY_NAME" property="idxKeyName" jdbcType="VARCHAR" />
+    <result column="IDX_KEY_TYPE" property="idxKeyType" jdbcType="DECIMAL" />
+    <result column="IDX_TEXT_NAME" property="idxTextName" jdbcType="VARCHAR" />
+    <result column="IDX_TEXT_TYPE" property="idxTextType" jdbcType="DECIMAL" />
+    <result column="IDX_TEXT_LENGTH" property="idxTextLength" jdbcType="DECIMAL" />
+    <result column="IDX_DOCID_COUNT" property="idxDocidCount" jdbcType="DECIMAL" />
+    <result column="IDX_STATUS" property="idxStatus" jdbcType="VARCHAR" />
+    <result column="IDX_VERSION" property="idxVersion" jdbcType="DECIMAL" />
+    <result column="IDX_NEXTID" property="idxNextid" jdbcType="DECIMAL" />
+    <result column="IDX_OPT_TOKEN" property="idxOptToken" jdbcType="VARCHAR" />
+    <result column="IDX_OPT_TYPE" property="idxOptType" jdbcType="DECIMAL" />
+    <result column="IDX_OPT_COUNT" property="idxOptCount" jdbcType="DECIMAL" />
+    <result column="IDX_LANGUAGE_COLUMN" property="idxLanguageColumn" jdbcType="VARCHAR" />
+    <result column="IDX_FORMAT_COLUMN" property="idxFormatColumn" jdbcType="VARCHAR" />
+    <result column="IDX_CHARSET_COLUMN" property="idxCharsetColumn" jdbcType="VARCHAR" />
+    <result column="IDX_TYPE" property="idxType" jdbcType="DECIMAL" />
+    <result column="IDX_OPTION" property="idxOption" jdbcType="VARCHAR" />
+    <result column="IDX_SYNC_TYPE" property="idxSyncType" jdbcType="VARCHAR" />
+    <result column="IDX_SYNC_MEMORY" property="idxSyncMemory" jdbcType="VARCHAR" />
+    <result column="IDX_SYNC_PARA_DEGREE" property="idxSyncParaDegree" jdbcType="DECIMAL" />
+    <result column="IDX_SYNC_INTERVAL" property="idxSyncInterval" jdbcType="VARCHAR" />
+    <result column="IDX_SYNC_JOBNAME" property="idxSyncJobname" jdbcType="VARCHAR" />
+    <result column="IDX_SRC_NAME" property="idxSrcName" jdbcType="VARCHAR" />
+    <result column="IDX_SRC_ID" property="idxSrcId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.XsSessionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.XsSessions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="USERID" property="userid" jdbcType="DECIMAL" />
+    <result column="COOKIE" property="cookie" jdbcType="VARCHAR" />
+    <result column="CREATETIME" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="AUTHTIME" property="authtime" jdbcType="TIMESTAMP" />
+    <result column="ACCESSTIME" property="accesstime" jdbcType="TIMESTAMP" />
+    <result column="INACTIVETIMEOUT" property="inactivetimeout" jdbcType="DECIMAL" />
+    <result column="SESSIZE" property="sessize" jdbcType="DECIMAL" />
+    <result column="NLS_CALENDAR" property="nlsCalendar" jdbcType="VARCHAR" />
+    <result column="NLS_COMP" property="nlsComp" jdbcType="VARCHAR" />
+    <result column="NLS_CREDIT" property="nlsCredit" jdbcType="VARCHAR" />
+    <result column="NLS_CURRENCY" property="nlsCurrency" jdbcType="VARCHAR" />
+    <result column="NLS_DATE_FORMAT" property="nlsDateFormat" jdbcType="VARCHAR" />
+    <result column="NLS_DATE_LANGUAGE" property="nlsDateLanguage" jdbcType="VARCHAR" />
+    <result column="NLS_DEBIT" property="nlsDebit" jdbcType="VARCHAR" />
+    <result column="NLS_ISO_CURRENCY" property="nlsIsoCurrency" jdbcType="VARCHAR" />
+    <result column="NLS_LANG" property="nlsLang" jdbcType="VARCHAR" />
+    <result column="NLS_LANGUAGE" property="nlsLanguage" jdbcType="VARCHAR" />
+    <result column="NLS_LENGTH_SEMANTICS" property="nlsLengthSemantics" jdbcType="VARCHAR" />
+    <result column="NLS_LIST_SEPARATOR" property="nlsListSeparator" jdbcType="VARCHAR" />
+    <result column="NLS_MONETARY_CHRS" property="nlsMonetaryChrs" jdbcType="VARCHAR" />
+    <result column="NLS_NCHAR_CONV_EXCP" property="nlsNcharConvExcp" jdbcType="VARCHAR" />
+    <result column="NLS_NUMERIC_CHRS" property="nlsNumericChrs" jdbcType="VARCHAR" />
+    <result column="NLS_SORT" property="nlsSort" jdbcType="VARCHAR" />
+    <result column="NLS_TERRITORY" property="nlsTerritory" jdbcType="VARCHAR" />
+    <result column="NLS_TIMESTAMP_FMT" property="nlsTimestampFmt" jdbcType="VARCHAR" />
+    <result column="NLS_TIMESTAMP_TZ_FMT" property="nlsTimestampTzFmt" jdbcType="VARCHAR" />
+    <result column="NLS_DUAL_CURRENCY" property="nlsDualCurrency" jdbcType="VARCHAR" />
+    <result column="APPS_FEATURE" property="appsFeature" jdbcType="VARCHAR" />
+    <result column="PROXYID" property="proxyid" jdbcType="DECIMAL" />
+    <result column="USERGUID" property="userguid" jdbcType="VARBINARY" />
+    <result column="ACLOID" property="acloid" jdbcType="VARBINARY" />
+    <result column="SID" property="sid" jdbcType="VARBINARY" />
+    <result column="PROXYGUID" property="proxyguid" jdbcType="VARBINARY" />
+    <result column="CREATORID" property="creatorid" jdbcType="VARBINARY" />
+    <result column="UPDATEID" property="updateid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

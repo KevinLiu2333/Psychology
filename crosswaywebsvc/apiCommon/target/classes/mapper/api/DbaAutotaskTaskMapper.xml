@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaAutotaskTaskMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaAutotaskTask" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CLIENT_NAME" property="clientName" jdbcType="VARCHAR" />
+    <result column="TASK_NAME" property="taskName" jdbcType="VARCHAR" />
+    <result column="TASK_TARGET_TYPE" property="taskTargetType" jdbcType="VARCHAR" />
+    <result column="TASK_TARGET_NAME" property="taskTargetName" jdbcType="VARCHAR" />
+    <result column="OPERATION_NAME" property="operationName" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTES" property="attributes" jdbcType="VARCHAR" />
+    <result column="TASK_PRIORITY" property="taskPriority" jdbcType="DECIMAL" />
+    <result column="PRIORITY_OVERRIDE" property="priorityOverride" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="DEFERRED_WINDOW_NAME" property="deferredWindowName" jdbcType="VARCHAR" />
+    <result column="CURRENT_JOB_NAME" property="currentJobName" jdbcType="VARCHAR" />
+    <result column="JOB_SCHEDULER_STATUS" property="jobSchedulerStatus" jdbcType="VARCHAR" />
+    <result column="ESTIMATE_TYPE" property="estimateType" jdbcType="VARCHAR" />
+    <result column="ESTIMATED_WEIGHT" property="estimatedWeight" jdbcType="DECIMAL" />
+    <result column="ESTIMATED_DURATION" property="estimatedDuration" jdbcType="DECIMAL" />
+    <result column="ESTIMATED_CPU_TIME" property="estimatedCpuTime" jdbcType="DECIMAL" />
+    <result column="ESTIMATED_TEMP" property="estimatedTemp" jdbcType="DECIMAL" />
+    <result column="ESTIMATED_DOP" property="estimatedDop" jdbcType="DECIMAL" />
+    <result column="ESTIMATED_IO_RATE" property="estimatedIoRate" jdbcType="DECIMAL" />
+    <result column="ESTIMATED_UNDO_RATE" property="estimatedUndoRate" jdbcType="DECIMAL" />
+    <result column="RETRY_COUNT" property="retryCount" jdbcType="DECIMAL" />
+    <result column="LAST_GOOD_DATE" property="lastGoodDate" jdbcType="OTHER" />
+    <result column="LAST_GOOD_PRIORITY" property="lastGoodPriority" jdbcType="DECIMAL" />
+    <result column="LAST_GOOD_DURATION" property="lastGoodDuration" jdbcType="DECIMAL" />
+    <result column="LAST_GOOD_CPU_TIME" property="lastGoodCpuTime" jdbcType="DECIMAL" />
+    <result column="LAST_GOOD_TEMP" property="lastGoodTemp" jdbcType="DECIMAL" />
+    <result column="LAST_GOOD_DOP" property="lastGoodDop" jdbcType="DECIMAL" />
+    <result column="LAST_GOOD_IO_RATE" property="lastGoodIoRate" jdbcType="DECIMAL" />
+    <result column="LAST_GOOD_UNDO_RATE" property="lastGoodUndoRate" jdbcType="DECIMAL" />
+    <result column="LAST_GOOD_CPU_WAIT" property="lastGoodCpuWait" jdbcType="DECIMAL" />
+    <result column="LAST_GOOD_IO_WAIT" property="lastGoodIoWait" jdbcType="DECIMAL" />
+    <result column="LAST_GOOD_UNDO_WAIT" property="lastGoodUndoWait" jdbcType="DECIMAL" />
+    <result column="LAST_GOOD_TEMP_WAIT" property="lastGoodTempWait" jdbcType="DECIMAL" />
+    <result column="LAST_GOOD_CONCURRENCY" property="lastGoodConcurrency" jdbcType="DECIMAL" />
+    <result column="LAST_GOOD_CONTENTION" property="lastGoodContention" jdbcType="DECIMAL" />
+    <result column="NEXT_TRY_DATE" property="nextTryDate" jdbcType="OTHER" />
+    <result column="LAST_TRY_DATE" property="lastTryDate" jdbcType="OTHER" />
+    <result column="LAST_TRY_PRIORITY" property="lastTryPriority" jdbcType="DECIMAL" />
+    <result column="LAST_TRY_RESULT" property="lastTryResult" jdbcType="VARCHAR" />
+    <result column="LAST_TRY_DURATION" property="lastTryDuration" jdbcType="DECIMAL" />
+    <result column="LAST_TRY_CPU_TIME" property="lastTryCpuTime" jdbcType="DECIMAL" />
+    <result column="LAST_TRY_TEMP" property="lastTryTemp" jdbcType="DECIMAL" />
+    <result column="LAST_TRY_DOP" property="lastTryDop" jdbcType="DECIMAL" />
+    <result column="LAST_TRY_IO_RATE" property="lastTryIoRate" jdbcType="DECIMAL" />
+    <result column="LAST_TRY_UNDO_RATE" property="lastTryUndoRate" jdbcType="DECIMAL" />
+    <result column="LAST_TRY_CPU_WAIT" property="lastTryCpuWait" jdbcType="DECIMAL" />
+    <result column="LAST_TRY_IO_WAIT" property="lastTryIoWait" jdbcType="DECIMAL" />
+    <result column="LAST_TRY_UNDO_WAIT" property="lastTryUndoWait" jdbcType="DECIMAL" />
+    <result column="LAST_TRY_TEMP_WAIT" property="lastTryTempWait" jdbcType="DECIMAL" />
+    <result column="LAST_TRY_CONCURRENCY" property="lastTryConcurrency" jdbcType="DECIMAL" />
+    <result column="LAST_TRY_CONTENTION" property="lastTryContention" jdbcType="DECIMAL" />
+    <result column="MEAN_GOOD_DURATION" property="meanGoodDuration" jdbcType="DECIMAL" />
+    <result column="MEAN_GOOD_CPU_TIME" property="meanGoodCpuTime" jdbcType="DECIMAL" />
+    <result column="MEAN_GOOD_TEMP" property="meanGoodTemp" jdbcType="DECIMAL" />
+    <result column="MEAN_GOOD_DOP" property="meanGoodDop" jdbcType="DECIMAL" />
+    <result column="MEAN_GOOD_IO" property="meanGoodIo" jdbcType="DECIMAL" />
+    <result column="MEAN_GOOD_UNDO" property="meanGoodUndo" jdbcType="DECIMAL" />
+    <result column="MEAN_GOOD_CPU_WAIT" property="meanGoodCpuWait" jdbcType="DECIMAL" />
+    <result column="MEAN_GOOD_IO_WAIT" property="meanGoodIoWait" jdbcType="DECIMAL" />
+    <result column="MEAN_GOOD_UNDO_WAIT" property="meanGoodUndoWait" jdbcType="DECIMAL" />
+    <result column="MEAN_GOOD_TEMP_WAIT" property="meanGoodTempWait" jdbcType="DECIMAL" />
+    <result column="MEAN_GOOD_CONCURRENCY" property="meanGoodConcurrency" jdbcType="DECIMAL" />
+    <result column="MEAN_GOOD_CONTENTION" property="meanGoodContention" jdbcType="DECIMAL" />
+    <result column="INFO_FIELD_1" property="infoField1" jdbcType="VARCHAR" />
+    <result column="INFO_FIELD_3" property="infoField3" jdbcType="DECIMAL" />
+    <result column="INFO_FIELD_4" property="infoField4" jdbcType="DECIMAL" />
+    <result column="INFO_FIELD_2" property="infoField2" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

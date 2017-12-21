@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.BmSzbBaseOrgMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.BmSzbBaseOrg" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ORG_ID" property="orgId" jdbcType="VARCHAR" />
+    <result column="ORG_CODE" property="orgCode" jdbcType="VARCHAR" />
+    <result column="PARENT_CODE" property="parentCode" jdbcType="VARCHAR" />
+    <result column="ORG_NAME" property="orgName" jdbcType="VARCHAR" />
+    <result column="ORDERS" property="orders" jdbcType="DECIMAL" />
+    <result column="LEVELS" property="levels" jdbcType="VARCHAR" />
+    <result column="ORG_TYPE" property="orgType" jdbcType="VARCHAR" />
+    <result column="VALIDITY" property="validity" jdbcType="VARCHAR" />
+    <result column="ZHAN_CODE" property="zhanCode" jdbcType="VARCHAR" />
+    <result column="GA_CODE" property="gaCode" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

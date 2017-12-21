@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaOlap2ufactLevelUsesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaOlap2ufactLevelUses" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="CUBE_NAME" property="cubeName" jdbcType="VARCHAR" />
+    <result column="DIMENSION_OWNER" property="dimensionOwner" jdbcType="VARCHAR" />
+    <result column="DIMENSION_NAME" property="dimensionName" jdbcType="VARCHAR" />
+    <result column="DIMENSION_ALIAS" property="dimensionAlias" jdbcType="VARCHAR" />
+    <result column="HIERARCHY_NAME" property="hierarchyName" jdbcType="VARCHAR" />
+    <result column="DIM_HIER_COMBO_ID" property="dimHierComboId" jdbcType="DECIMAL" />
+    <result column="LEVEL_NAME" property="levelName" jdbcType="VARCHAR" />
+    <result column="FACT_TABLE_OWNER" property="factTableOwner" jdbcType="VARCHAR" />
+    <result column="FACT_TABLE_NAME" property="factTableName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="POSITION" property="position" jdbcType="DECIMAL" />
+    <result column="DIMENSION_KEYMAP_TYPE" property="dimensionKeymapType" jdbcType="VARCHAR" />
+    <result column="FOREIGN_KEY_NAME" property="foreignKeyName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

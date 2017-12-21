@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvTransactionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvTransaction" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="XIDUSN" property="xidusn" jdbcType="DECIMAL" />
+    <result column="XIDSLOT" property="xidslot" jdbcType="DECIMAL" />
+    <result column="XIDSQN" property="xidsqn" jdbcType="DECIMAL" />
+    <result column="UBAFIL" property="ubafil" jdbcType="DECIMAL" />
+    <result column="UBABLK" property="ubablk" jdbcType="DECIMAL" />
+    <result column="UBASQN" property="ubasqn" jdbcType="DECIMAL" />
+    <result column="UBAREC" property="ubarec" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="START_TIME" property="startTime" jdbcType="VARCHAR" />
+    <result column="START_SCNB" property="startScnb" jdbcType="DECIMAL" />
+    <result column="START_SCNW" property="startScnw" jdbcType="DECIMAL" />
+    <result column="START_UEXT" property="startUext" jdbcType="DECIMAL" />
+    <result column="START_UBAFIL" property="startUbafil" jdbcType="DECIMAL" />
+    <result column="START_UBABLK" property="startUbablk" jdbcType="DECIMAL" />
+    <result column="START_UBASQN" property="startUbasqn" jdbcType="DECIMAL" />
+    <result column="START_UBAREC" property="startUbarec" jdbcType="DECIMAL" />
+    <result column="FLAG" property="flag" jdbcType="DECIMAL" />
+    <result column="SPACE" property="space" jdbcType="VARCHAR" />
+    <result column="RECURSIVE" property="recursive" jdbcType="VARCHAR" />
+    <result column="NOUNDO" property="noundo" jdbcType="VARCHAR" />
+    <result column="PTX" property="ptx" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="PRV_XIDUSN" property="prvXidusn" jdbcType="DECIMAL" />
+    <result column="PRV_XIDSLT" property="prvXidslt" jdbcType="DECIMAL" />
+    <result column="PRV_XIDSQN" property="prvXidsqn" jdbcType="DECIMAL" />
+    <result column="PTX_XIDUSN" property="ptxXidusn" jdbcType="DECIMAL" />
+    <result column="PTX_XIDSLT" property="ptxXidslt" jdbcType="DECIMAL" />
+    <result column="PTX_XIDSQN" property="ptxXidsqn" jdbcType="DECIMAL" />
+    <result column="DSCN-B" property="dscnB" jdbcType="DECIMAL" />
+    <result column="DSCN-W" property="dscnW" jdbcType="DECIMAL" />
+    <result column="USED_UBLK" property="usedUblk" jdbcType="DECIMAL" />
+    <result column="USED_UREC" property="usedUrec" jdbcType="DECIMAL" />
+    <result column="LOG_IO" property="logIo" jdbcType="DECIMAL" />
+    <result column="PHY_IO" property="phyIo" jdbcType="DECIMAL" />
+    <result column="CR_GET" property="crGet" jdbcType="DECIMAL" />
+    <result column="CR_CHANGE" property="crChange" jdbcType="DECIMAL" />
+    <result column="START_DATE" property="startDate" jdbcType="DATE" />
+    <result column="DSCN_BASE" property="dscnBase" jdbcType="DECIMAL" />
+    <result column="DSCN_WRAP" property="dscnWrap" jdbcType="DECIMAL" />
+    <result column="START_SCN" property="startScn" jdbcType="DECIMAL" />
+    <result column="DEPENDENT_SCN" property="dependentScn" jdbcType="DECIMAL" />
+    <result column="ADDR" property="addr" jdbcType="VARBINARY" />
+    <result column="SES_ADDR" property="sesAddr" jdbcType="VARBINARY" />
+    <result column="XID" property="xid" jdbcType="VARBINARY" />
+    <result column="PRV_XID" property="prvXid" jdbcType="VARBINARY" />
+    <result column="PTX_XID" property="ptxXid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VThreadMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VThread" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="THREAD#" property="thread" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="ENABLED" property="enabled" jdbcType="VARCHAR" />
+    <result column="GROUPS" property="groups" jdbcType="DECIMAL" />
+    <result column="INSTANCE" property="instance" jdbcType="VARCHAR" />
+    <result column="OPEN_TIME" property="openTime" jdbcType="DATE" />
+    <result column="CURRENT_GROUP#" property="currentGroup" jdbcType="DECIMAL" />
+    <result column="SEQUENCE#" property="sequence" jdbcType="DECIMAL" />
+    <result column="CHECKPOINT_CHANGE#" property="checkpointChange" jdbcType="DECIMAL" />
+    <result column="CHECKPOINT_TIME" property="checkpointTime" jdbcType="DATE" />
+    <result column="ENABLE_CHANGE#" property="enableChange" jdbcType="DECIMAL" />
+    <result column="ENABLE_TIME" property="enableTime" jdbcType="DATE" />
+    <result column="DISABLE_CHANGE#" property="disableChange" jdbcType="DECIMAL" />
+    <result column="DISABLE_TIME" property="disableTime" jdbcType="DATE" />
+    <result column="LAST_REDO_SEQUENCE#" property="lastRedoSequence" jdbcType="DECIMAL" />
+    <result column="LAST_REDO_BLOCK" property="lastRedoBlock" jdbcType="DECIMAL" />
+    <result column="LAST_REDO_CHANGE#" property="lastRedoChange" jdbcType="DECIMAL" />
+    <result column="LAST_REDO_TIME" property="lastRedoTime" jdbcType="DATE" />
+  </resultMap>
+</mapper>

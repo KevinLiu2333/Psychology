@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AwTrackMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AwTrack" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="AWSEQ#" property="awseq" jdbcType="DECIMAL" />
+    <result column="OID" property="oid" jdbcType="DECIMAL" />
+    <result column="KEY0" property="key0" jdbcType="DECIMAL" />
+    <result column="KEY1" property="key1" jdbcType="DECIMAL" />
+    <result column="KEY2" property="key2" jdbcType="DECIMAL" />
+    <result column="KEY3" property="key3" jdbcType="DECIMAL" />
+    <result column="KEY4" property="key4" jdbcType="DECIMAL" />
+    <result column="KEY5" property="key5" jdbcType="DECIMAL" />
+    <result column="KEY6" property="key6" jdbcType="DECIMAL" />
+    <result column="KEY7" property="key7" jdbcType="DECIMAL" />
+    <result column="KEY8" property="key8" jdbcType="DECIMAL" />
+    <result column="KEY9" property="key9" jdbcType="DECIMAL" />
+    <result column="KEY10" property="key10" jdbcType="DECIMAL" />
+    <result column="KEY11" property="key11" jdbcType="DECIMAL" />
+    <result column="KEY12" property="key12" jdbcType="DECIMAL" />
+    <result column="KEY13" property="key13" jdbcType="DECIMAL" />
+    <result column="KEY14" property="key14" jdbcType="DECIMAL" />
+    <result column="KEY15" property="key15" jdbcType="DECIMAL" />
+    <result column="KEY16" property="key16" jdbcType="DECIMAL" />
+    <result column="KEY17" property="key17" jdbcType="DECIMAL" />
+    <result column="KEY18" property="key18" jdbcType="DECIMAL" />
+    <result column="KEY19" property="key19" jdbcType="DECIMAL" />
+    <result column="KEY20" property="key20" jdbcType="DECIMAL" />
+    <result column="KEY21" property="key21" jdbcType="DECIMAL" />
+    <result column="KEY22" property="key22" jdbcType="DECIMAL" />
+    <result column="KEY23" property="key23" jdbcType="DECIMAL" />
+    <result column="KEY24" property="key24" jdbcType="DECIMAL" />
+    <result column="KEY25" property="key25" jdbcType="DECIMAL" />
+    <result column="KEY26" property="key26" jdbcType="DECIMAL" />
+    <result column="KEY27" property="key27" jdbcType="DECIMAL" />
+    <result column="KEY28" property="key28" jdbcType="DECIMAL" />
+    <result column="KEY29" property="key29" jdbcType="DECIMAL" />
+    <result column="ACOUNT" property="acount" jdbcType="DECIMAL" />
+    <result column="ATIME" property="atime" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

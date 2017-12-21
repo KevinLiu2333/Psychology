@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtEcmMdHistTblsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtEcmMdHistTbls" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="METADATA_ID" property="metadataId" jdbcType="VARBINARY" />
+    <id column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="SNAPSHOT_TYPE" property="snapshotType" jdbcType="VARCHAR" />
+    <result column="NUM_HIST_UI_KEYS" property="numHistUiKeys" jdbcType="DECIMAL" />
+    <result column="HIST_UI_KEY1" property="histUiKey1" jdbcType="VARCHAR" />
+    <result column="HIST_UI_KEY2" property="histUiKey2" jdbcType="VARCHAR" />
+    <result column="HIST_UI_KEY3" property="histUiKey3" jdbcType="VARCHAR" />
+    <result column="HIST_UI_KEY4" property="histUiKey4" jdbcType="VARCHAR" />
+    <result column="HIST_UI_KEY5" property="histUiKey5" jdbcType="VARCHAR" />
+    <result column="HIST_UI_KEY6" property="histUiKey6" jdbcType="VARCHAR" />
+    <result column="UI_NAME" property="uiName" jdbcType="VARCHAR" />
+    <result column="UI_ON" property="uiOn" jdbcType="VARCHAR" />
+    <result column="COMPARE_ON" property="compareOn" jdbcType="VARCHAR" />
+    <result column="COMPARE_UI_ON" property="compareUiOn" jdbcType="VARCHAR" />
+    <result column="HISTORY_ON" property="historyOn" jdbcType="VARCHAR" />
+    <result column="HISTORY_UI_ON" property="historyUiOn" jdbcType="VARCHAR" />
+    <result column="PARENT_TABLE_NAME" property="parentTableName" jdbcType="VARCHAR" />
+    <result column="FULL_TABLE_PATH" property="fullTablePath" jdbcType="VARCHAR" />
+    <result column="IS_SINGLE_ROW" property="isSingleRow" jdbcType="VARCHAR" />
+    <result column="TBL_ORDER" property="tblOrder" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

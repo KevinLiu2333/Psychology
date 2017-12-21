@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaAssociationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaAssociations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJECT_OWNER" property="objectOwner" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <result column="STATSTYPE_SCHEMA" property="statstypeSchema" jdbcType="VARCHAR" />
+    <result column="STATSTYPE_NAME" property="statstypeName" jdbcType="VARCHAR" />
+    <result column="DEF_SELECTIVITY" property="defSelectivity" jdbcType="DECIMAL" />
+    <result column="DEF_CPU_COST" property="defCpuCost" jdbcType="DECIMAL" />
+    <result column="DEF_IO_COST" property="defIoCost" jdbcType="DECIMAL" />
+    <result column="DEF_NET_COST" property="defNetCost" jdbcType="DECIMAL" />
+    <result column="INTERFACE_VERSION" property="interfaceVersion" jdbcType="DECIMAL" />
+    <result column="MAINTENANCE_TYPE" property="maintenanceType" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

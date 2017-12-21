@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllApplyMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllApply" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="APPLY_NAME" property="applyName" jdbcType="VARCHAR" />
+    <result column="QUEUE_NAME" property="queueName" jdbcType="VARCHAR" />
+    <result column="QUEUE_OWNER" property="queueOwner" jdbcType="VARCHAR" />
+    <result column="APPLY_CAPTURED" property="applyCaptured" jdbcType="VARCHAR" />
+    <result column="RULE_SET_NAME" property="ruleSetName" jdbcType="VARCHAR" />
+    <result column="RULE_SET_OWNER" property="ruleSetOwner" jdbcType="VARCHAR" />
+    <result column="APPLY_USER" property="applyUser" jdbcType="VARCHAR" />
+    <result column="APPLY_DATABASE_LINK" property="applyDatabaseLink" jdbcType="VARCHAR" />
+    <result column="DDL_HANDLER" property="ddlHandler" jdbcType="VARCHAR" />
+    <result column="PRECOMMIT_HANDLER" property="precommitHandler" jdbcType="VARCHAR" />
+    <result column="MESSAGE_HANDLER" property="messageHandler" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="MAX_APPLIED_MESSAGE_NUMBER" property="maxAppliedMessageNumber" jdbcType="DECIMAL" />
+    <result column="NEGATIVE_RULE_SET_NAME" property="negativeRuleSetName" jdbcType="VARCHAR" />
+    <result column="NEGATIVE_RULE_SET_OWNER" property="negativeRuleSetOwner" jdbcType="VARCHAR" />
+    <result column="STATUS_CHANGE_TIME" property="statusChangeTime" jdbcType="DATE" />
+    <result column="ERROR_NUMBER" property="errorNumber" jdbcType="DECIMAL" />
+    <result column="ERROR_MESSAGE" property="errorMessage" jdbcType="VARCHAR" />
+    <result column="MESSAGE_DELIVERY_MODE" property="messageDeliveryMode" jdbcType="VARCHAR" />
+    <result column="PURPOSE" property="purpose" jdbcType="VARCHAR" />
+    <result column="APPLY_TAG" property="applyTag" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WmVersionTableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WmVersionTable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <id column="ANC_WORKSPACE" property="ancWorkspace" jdbcType="VARCHAR" />
+    <result column="ANC_VERSION" property="ancVersion" jdbcType="DECIMAL" />
+    <result column="ANC_DEPTH" property="ancDepth" jdbcType="DECIMAL" />
+    <result column="REFCOUNT" property="refcount" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

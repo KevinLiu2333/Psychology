@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaHistStreamsApplySumMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaHistStreamsApplySum" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="APPLY_NAME" property="applyName" jdbcType="VARCHAR" />
+    <result column="STARTUP_TIME" property="startupTime" jdbcType="DATE" />
+    <result column="READER_TOTAL_MESSAGES_DEQUEUED" property="readerTotalMessagesDequeued" jdbcType="DECIMAL" />
+    <result column="READER_LAG" property="readerLag" jdbcType="DECIMAL" />
+    <result column="COORD_TOTAL_RECEIVED" property="coordTotalReceived" jdbcType="DECIMAL" />
+    <result column="COORD_TOTAL_APPLIED" property="coordTotalApplied" jdbcType="DECIMAL" />
+    <result column="COORD_TOTAL_ROLLBACKS" property="coordTotalRollbacks" jdbcType="DECIMAL" />
+    <result column="COORD_TOTAL_WAIT_DEPS" property="coordTotalWaitDeps" jdbcType="DECIMAL" />
+    <result column="COORD_TOTAL_WAIT_CMTS" property="coordTotalWaitCmts" jdbcType="DECIMAL" />
+    <result column="COORD_LWM_LAG" property="coordLwmLag" jdbcType="DECIMAL" />
+    <result column="SERVER_TOTAL_MESSAGES_APPLIED" property="serverTotalMessagesApplied" jdbcType="DECIMAL" />
+    <result column="SERVER_ELAPSED_DEQUEUE_TIME" property="serverElapsedDequeueTime" jdbcType="DECIMAL" />
+    <result column="SERVER_ELAPSED_APPLY_TIME" property="serverElapsedApplyTime" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

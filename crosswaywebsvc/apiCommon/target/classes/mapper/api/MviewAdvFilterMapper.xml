@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MviewAdvFilterMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MviewAdvFilter" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="FILTERID#" property="filterid" jdbcType="DECIMAL" />
+    <id column="SUBFILTERNUM#" property="subfilternum" jdbcType="DECIMAL" />
+    <result column="SUBFILTERTYPE" property="subfiltertype" jdbcType="DECIMAL" />
+    <result column="STR_VALUE" property="strValue" jdbcType="VARCHAR" />
+    <result column="NUM_VALUE1" property="numValue1" jdbcType="DECIMAL" />
+    <result column="NUM_VALUE2" property="numValue2" jdbcType="DECIMAL" />
+    <result column="DATE_VALUE1" property="dateValue1" jdbcType="DATE" />
+    <result column="DATE_VALUE2" property="dateValue2" jdbcType="DATE" />
+  </resultMap>
+</mapper>

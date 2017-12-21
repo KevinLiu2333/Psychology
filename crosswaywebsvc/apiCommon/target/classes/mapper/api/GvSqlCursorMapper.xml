@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvSqlCursorMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvSqlCursor" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="CURNO" property="curno" jdbcType="DECIMAL" />
+    <result column="FLAG" property="flag" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="PERS_HEAP_MEM" property="persHeapMem" jdbcType="DECIMAL" />
+    <result column="WORK_HEAP_MEM" property="workHeapMem" jdbcType="DECIMAL" />
+    <result column="BIND_VARS" property="bindVars" jdbcType="DECIMAL" />
+    <result column="DEFINE_VARS" property="defineVars" jdbcType="DECIMAL" />
+    <result column="BIND_MEM_LOC" property="bindMemLoc" jdbcType="VARCHAR" />
+    <result column="INST_FLAG" property="instFlag" jdbcType="VARCHAR" />
+    <result column="INST_FLAG2" property="instFlag2" jdbcType="VARCHAR" />
+    <result column="PARENT_HANDLE" property="parentHandle" jdbcType="VARBINARY" />
+    <result column="PARENT_LOCK" property="parentLock" jdbcType="VARBINARY" />
+    <result column="CHILD_LOCK" property="childLock" jdbcType="VARBINARY" />
+    <result column="CHILD_PIN" property="childPin" jdbcType="VARBINARY" />
+    <result column="CHILD_HANDLE" property="childHandle" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

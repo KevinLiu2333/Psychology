@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DepartmentsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Departments" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DEPARTMENT_ID" property="departmentId" jdbcType="DECIMAL" />
+    <result column="DEPARTMENT_NAME" property="departmentName" jdbcType="VARCHAR" />
+    <result column="MANAGER_ID" property="managerId" jdbcType="DECIMAL" />
+    <result column="LOCATION_ID" property="locationId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuDepviewsViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuDepviewsView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VIEWOBJNO" property="viewobjno" jdbcType="DECIMAL" />
+    <result column="VIEWNAME" property="viewname" jdbcType="VARCHAR" />
+    <result column="VIEWOWNERNO" property="viewownerno" jdbcType="DECIMAL" />
+    <result column="VIEWOWNER" property="viewowner" jdbcType="VARCHAR" />
+    <result column="DOBJNO" property="dobjno" jdbcType="DECIMAL" />
+    <result column="DNAME" property="dname" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

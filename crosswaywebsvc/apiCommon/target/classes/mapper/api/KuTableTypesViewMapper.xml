@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuTableTypesViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuTableTypesView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TABOBJNO" property="tabobjno" jdbcType="DECIMAL" />
+    <result column="TABNAME" property="tabname" jdbcType="VARCHAR" />
+    <result column="TABOWNERNO" property="tabownerno" jdbcType="DECIMAL" />
+    <result column="TABOWNER" property="tabowner" jdbcType="VARCHAR" />
+    <result column="TYPEOBJNO" property="typeobjno" jdbcType="DECIMAL" />
+    <result column="TYPENAME" property="typename" jdbcType="VARCHAR" />
+    <result column="TYPEOWNER" property="typeowner" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

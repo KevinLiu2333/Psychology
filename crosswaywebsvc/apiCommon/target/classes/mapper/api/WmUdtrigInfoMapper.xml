@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WmUdtrigInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WmUdtrigInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TRIG_OWNER_NAME" property="trigOwnerName" jdbcType="VARCHAR" />
+    <id column="TRIG_NAME" property="trigName" jdbcType="VARCHAR" />
+    <result column="TABLE_OWNER_NAME" property="tableOwnerName" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="TRIG_FLAG" property="trigFlag" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="TRIG_PROCEDURE" property="trigProcedure" jdbcType="VARCHAR" />
+    <result column="WHEN_CLAUSE" property="whenClause" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="INTERNAL_TYPE" property="internalType" jdbcType="VARCHAR" />
+    <result column="EVENT_FLAG" property="eventFlag" jdbcType="DECIMAL" />
+    <result column="TRIG_CODE" property="trigCode" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

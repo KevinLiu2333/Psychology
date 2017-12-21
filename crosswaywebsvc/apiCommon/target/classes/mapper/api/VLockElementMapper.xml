@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VLockElementMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VLockElement" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDX" property="indx" jdbcType="DECIMAL" />
+    <result column="CLASS" property="class" jdbcType="DECIMAL" />
+    <result column="LOCK_ELEMENT_NAME" property="lockElementName" jdbcType="DECIMAL" />
+    <result column="MODE_HELD" property="modeHeld" jdbcType="DECIMAL" />
+    <result column="BLOCK_COUNT" property="blockCount" jdbcType="DECIMAL" />
+    <result column="RELEASING" property="releasing" jdbcType="DECIMAL" />
+    <result column="ACQUIRING" property="acquiring" jdbcType="DECIMAL" />
+    <result column="INVALID" property="invalid" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="LOCK_ELEMENT_ADDR" property="lockElementAddr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

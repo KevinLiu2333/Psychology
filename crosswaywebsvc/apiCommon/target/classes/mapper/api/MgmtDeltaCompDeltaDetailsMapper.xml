@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtDeltaCompDeltaDetailsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtDeltaCompDeltaDetails" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="KEY_GUID" property="keyGuid" jdbcType="VARBINARY" />
+    <id column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="LEFT_VALUE" property="leftValue" jdbcType="VARCHAR" />
+    <result column="RIGHT_VALUE" property="rightValue" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="CHAR" />
+  </resultMap>
+</mapper>

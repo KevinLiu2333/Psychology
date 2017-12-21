@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VMapElementMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VMapElement" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ELEM_NAME" property="elemName" jdbcType="VARCHAR" />
+    <result column="ELEM_IDX" property="elemIdx" jdbcType="DECIMAL" />
+    <result column="ELEM_CFGID" property="elemCfgid" jdbcType="VARCHAR" />
+    <result column="ELEM_TYPE" property="elemType" jdbcType="VARCHAR" />
+    <result column="ELEM_SIZE" property="elemSize" jdbcType="DECIMAL" />
+    <result column="ELEM_NSUBELEM" property="elemNsubelem" jdbcType="DECIMAL" />
+    <result column="ELEM_DESCR" property="elemDescr" jdbcType="VARCHAR" />
+    <result column="STRIPE_SIZE" property="stripeSize" jdbcType="DECIMAL" />
+    <result column="LIB_IDX" property="libIdx" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

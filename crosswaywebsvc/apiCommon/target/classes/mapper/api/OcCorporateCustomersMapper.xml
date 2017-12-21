@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OcCorporateCustomersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OcCorporateCustomers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CUSTOMER_ID" property="customerId" jdbcType="DECIMAL" />
+    <result column="CUST_FIRST_NAME" property="custFirstName" jdbcType="VARCHAR" />
+    <result column="CUST_LAST_NAME" property="custLastName" jdbcType="VARCHAR" />
+    <result column="CUST_ADDRESS" property="custAddress" jdbcType="OTHER" />
+    <result column="PHONE_NUMBERS" property="phoneNumbers" jdbcType="OTHER" />
+    <result column="NLS_LANGUAGE" property="nlsLanguage" jdbcType="VARCHAR" />
+    <result column="NLS_TERRITORY" property="nlsTerritory" jdbcType="VARCHAR" />
+    <result column="CREDIT_LIMIT" property="creditLimit" jdbcType="DECIMAL" />
+    <result column="CUST_EMAIL" property="custEmail" jdbcType="VARCHAR" />
+    <result column="CUST_ORDERS" property="custOrders" jdbcType="OTHER" />
+    <result column="ACCOUNT_MGR_ID" property="accountMgrId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

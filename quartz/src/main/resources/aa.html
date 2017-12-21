@@ -1,0 +1,661 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+pageEncoding="utf-8"%>
+<%@ include file="/cj/title_setting.jsp"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>松江区政务数据中心</title>
+<link rel="stylesheet" href="${ctx}/sjdc/open/bootstrap.css">
+<link rel="stylesheet" href="${ctx}/sjdc/open/font-awesome.css">
+<link rel="stylesheet" href="${ctx}/sjdc/open/monokai_sublime.css">
+<link href="${ctx}/sjdc/open/magnific-popup.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css"
+      href="${ctx}/sjdc/open/screen.css">
+<link rel="stylesheet" type="text/css" href="${ctx}/sjdc/open/open.css">
+<link rel="stylesheet" type="text/css"
+      href="${ctx}/sjdc/open/awesome/css/font-awesome.min.css"/>
+<script type="text/javascript" src="${ctx}/sjdc/open/ghost-url.js"></script>
+<script type="text/javascript"
+        src="${ctx}/wddc/tiles/js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="${ctx}/sjdc/open/open.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        imgFlow();
+    });
+</script>
+<style>
+    .first, .second, .third, .fourth {
+        border-bottom: #a0bada 1px dashed;
+    }
+
+    .first_left {
+        float: left;
+    }
+
+    .first_left ul li {
+        width: 360px;
+        height: 200px;
+        float: left;
+        list-style: none;
+        background-color: white;
+        margin: 3px 3px 3px 3px;
+    }
+
+    .first_left ul li img {
+        margin: 50px 20px;
+        float: left;
+    }
+
+    .first_left ul li span {
+        display: block;
+        width: 150px;
+        height: 178px;
+        float: left;
+    }
+
+    .span01 {
+        background-image: url(sjdc/skins/images/index/bg_shu001.png);
+        background-repeat: no-repeat;
+        background-position: 4px 16px;
+    }
+
+    .first_left ul li span h2 {
+        margin-top: 65px;
+        font-family: "微软雅黑";
+        font-size: 25px;
+        color: #dd361f;
+        text-align: center;
+    }
+
+    .first_left ul li span h3 {
+        font-family: "微软雅黑";
+        font-size: 17px;
+        color: #7e81e2;
+        text-align: center;
+    }
+
+    .first_left ul li span p {
+        display: block;
+        width: 100px;
+        height: 2px;
+        background: #898be4;
+        margin: 0 auto;
+    }
+</style>
+<body class="home-template">
+<!-- start navigation -->
+<jsp:include page="${ctx}/open/header.jsp"></jsp:include>
+<!-- end navigation -->
+
+<!-- start site's main content area -->
+<section class="content-wrap">
+
+
+    <div class="container">
+
+
+        <div class="row">
+
+
+            <div class="col-md-8 main-content">
+
+
+                <article id="98" class="post" style="padding: 0px;">
+                    <ul id="item" style="padding: 0px; margin: 0px">
+                        <li style="padding: 0px; margin: 0px"><img
+                                src="sjdc/open/imgs/banner_01.jpg" width="100%" height="100%"/></li>
+                        <li style="padding: 0px; margin: 0px"><img
+                                src="sjdc/open/imgs/banner_02.jpg" width="100%" height="100%"/></li>
+                        <li style="padding: 0px; margin: 0px"><img
+                                src="sjdc/open/imgs/banner_03.jpg" width="100%" height="100%"/></li>
+                    </ul>
+                </article>
+
+
+            </div>
+
+
+            <aside class="col-md-4 col-sm-4 col-xs-4 sidebar"> <!-- start widget -->
+
+
+                <c:if test="${empty sessionScope.session_user}">
+                    <div class="widget">
+
+
+                        <h4 class="title">数据概况</h4>
+                        <div class="content community ">
+
+
+                            <p style="padding-bottom: 10px; padding-top: 10px">
+                                <a>数据汇聚：</a> <span style="float: right; padding-right: 2px;"
+                                                   id="sy_sjzl"> </span>
+                            </p>
+
+                            <p style="padding-bottom: 15px;">
+                                <a>资源目录：</a> <span style="float: right; padding-right: 2px;"
+                                                   id="sy_zyml"> </span>
+                            </p>
+                            <p style="padding-bottom: 18px;">
+                                <a>数据共享：</a> <span style="float: right; padding-right: 2px;"
+                                                   id="sy_sjgx"> </span>
+
+                            </p>
+                        </div>
+
+
+                    </div>
+
+
+                </c:if>
+                <c:if test="${ not empty sessionScope.session_user}">
+                    <div class="widget">
+
+
+                        <h4 class="title">用户信息</h4>
+                        <div class="content community ">
+
+
+                            <p style="padding-bottom: 10px; padding-top: 10px">
+                                <a>用户名称：</a> <span style="padding-right: 2px;" id="yhmc">
+								${sessionScope.session_user.displayName} </span>
+                            </p>
+
+                            <p style="padding-bottom: 15px;">
+                                <a>所属单位：</a> <span style="padding-right: 2px;">
+								${sessionScope.session_user.unitName} </span>
+                            </p>
+                            <p style="padding-bottom: 18px;">
+                                <a>服务key：</a> <span style="padding-right: 2px;" id="fwkey">
+							</span>
+
+                            </p>
+                        </div>
+
+
+                    </div>
+
+
+                </c:if>
+            </aside>
+
+
+            <section class="content-wrap">
+
+
+                <div class="container">
+
+
+                    <div class="row">
+
+
+                        <aside class="col-md-4 col-xs-4 col-sm-4 sidebar">
+                            <div class="widget">
+                                <h4 class="title">热门数据排行</h4>
+                                <div class="content community1" id="sjph"></div>
+                            </div>
+                        </aside>
+
+                        <aside class="col-md-4 col-xs-4 col-sm-4 sidebar">
+                            <div class="widget">
+                                <h4 class="title">热门服务排行</h4>
+                                <div class="content community1" id="fwph"></div>
+                            </div>
+                        </aside>
+
+                        <aside class="col-md-4 col-xs-4 col-sm-4 sidebar">
+                            <div class="widget">
+                                <h4 class="title">部门共享排行</h4>
+                                <div class="content community1" id="bmzy"></div>
+                            </div>
+                        </aside>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+            <main class="col-md-8 main-content">
+                <article id="98"
+                         class="post" style="">
+                    <h4 id="disable-responsive1" class="page-header"
+                        style="margin-top: 0px;">
+                        数据资源 <span id="zyzl"></span> <span
+                            style="float: right; padding-right: 15px; font-size: 14px"><a
+                            href="${ctx}/open/toZyIndex">更多&gt;&gt;</a></span>
+                    </h4>
+                    <div class="subj" style="padding: 0px; margin: 0px;">
+                        <ul id="sy_qdw">
+                            <li><a href="/sjdc/open/toZyIndex?tagId=l1" target="_blank">
+                                <div
+                                        class="sy_themel1"></div>
+                                <span>区科委</span></a></li>
+                            <li><a href="/sjdc/open/toZyIndex?tagId=l2" target="_blank">
+                                <div
+                                        class="sy_themel2"></div>
+                                <span>区规土</span></a></li>
+                            <li><a href="/sjdc/open/toZyIndex?tagId=l3" target="_blank">
+                                <div
+                                        class="sy_themel3"></div>
+                                <span>行政服务中心</span></a></li>
+                            <li><a href="/sjdc/open/toZyIndex?tagId=l4" target="_blank">
+                                <div
+                                        class="sy_themel4"></div>
+                                <span>区卫计委</span></a></li>
+                            <li><a href="/sjdc/open/toZyIndex?tagId=l5" target="_blank">
+                                <div
+                                        class="sy_themel5"></div>
+                                <span>区民政局</span></a></li>
+                            <li><a href="/sjdc/open/toZyIndex?tagId=l6" target="_blank">
+                                <div
+                                        class="sy_themel6"></div>
+                                <span>区统计局</span></a></li>
+                            <li><a href="/sjdc/open/toZyIndex?tagId=l7" target="_blank">
+                                <div
+                                        class="sy_themel7"></div>
+                                <span>区经委</span></a></li>
+                            <li><a href="/sjdc/open/toZyIndex?tagId=l8" target="_blank">
+                                <div
+                                        class="sy_themel8"></div>
+                                <span>区市场监管局</span></a></li>
+                            <li><a href="/sjdc/open/toZyIndex?tagId=l9" target="_blank">
+                                <div
+                                        class="sy_themel9"></div>
+                                <span>区府办</span></a></li>
+                            <li><a href="/sjdc/open/toZyIndex?tagId=l10" target="_blank">
+                                <div
+                                        class="sy_themel10"></div>
+                                <span>公安</span></a></li>
+                            <li><a href="/sjdc/open/toZyIndex?tagId=l11" target="_blank">
+                                <div
+                                        class="sy_themel11"></div>
+                                <span>房管局</span></a></li>
+                            <li><a href="/sjdc/open/toZyIndex?tagId=l12" target="_blank">
+                                <div
+                                        class="sy_themel12"></div>
+                                <span>区社治办</span></a></li>
+
+
+                        </ul>
+                    </div>
+                </article>
+                <article id="98" class="post">
+
+                    <h4 id="disable-responsive1" class="page-header"
+                        style="margin-top: 0px">
+                        数据共享服务 <span id="fwzl"></span> <span
+                            style="float: right; padding-right: 15px; font-size: 14px"><a
+                            href="${ctx}/open/toFwIndex">更多&gt;&gt;</a></span>
+                    </h4>
+
+                    <div id="sy_fw">
+                        <div class="col-sm-12 col-md-6 features">
+                            <div class="feature">
+                                <div class="feature-icon">
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <h5>
+                                    <a href="/sjdc/open/toFwDetail?fwCode=fw00019">资源目录菜单标签列表</a>
+                                </h5>
+                                <p>标签列表</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 features">
+                            <div class="feature">
+                                <div class="feature-icon">
+                                    <i class="fa fa-star-half-o"></i>
+                                </div>
+                                <h5>
+                                    <a href="/sjdc/open/toFwDetail?fwCode=fw00009">获取资源目录单条信息</a>
+                                </h5>
+                                <p>111</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 features">
+                            <div class="feature">
+                                <div class="feature-icon">
+                                    <i class="fa fa-star-half-o"></i>
+                                </div>
+                                <h5>
+                                    <a href="/sjdc/open/toFwDetail?fwCode=fw00010">获取资源目录列表</a>
+                                </h5>
+                                <p>获取列表</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 features">
+                            <div class="feature">
+                                <div class="feature-icon">
+                                    <i class="fa fa-star-o"></i>
+                                </div>
+                                <h5>
+                                    <a href="/sjdc/open/toFwDetail?fwCode=fw00011">人口表测试</a>
+                                </h5>
+                                <p>人口表测试</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </article>
+            </main>
+
+            <aside class="col-md-4 sidebar">
+                <c:if
+                        test="${sessionScope.session_user.userType == '普通用户'}">
+                    <div class="widget">
+                        <h4 class="title">功能入口</h4>
+                        <div class="content community">
+                            <a href="http://localhost/wdac" target="_blank"
+                               class="btn btn-default" style="margin-bottom: 5px">资源目录审核</a> <a
+                                href="http://localhost/wddp" target="_blank"
+                                class="btn btn-default">资源共享情况</a> <a
+                                href="http://localhost/wddp" target="_blank"
+                                class="btn btn-default">服务使用情况</a>
+                        </div>
+                    </div>
+                </c:if>
+                <c:if test="${sessionScope.session_user.userType == '管理员'}">
+                    <div class="widget">
+                        <h4 class="title">功能入口</h4>
+                        <div class="content community">
+                            <a href="${ctx}/home/toHome" target="_blank"
+                               class="btn btn-default" style="margin-bottom: 5px">一中心三平台</a> <a
+                                href="${ctx}/jkpt/index.html" target="_blank"
+                                class="btn btn-default" style="margin-bottom: 5px">平台运行监控</a> <a
+                                href="http://192.168.104.7/gisplatform_2017" target="_blank"
+                                class="btn btn-default" style="margin-bottom: 5px">运行环境监控</a>
+                        </div>
+                    </div>
+                </c:if>
+
+                <div class="widget">
+                    <h4 class="title">地图服务</h4>
+                    <div class="content community">
+                        <a href="http://192.168.104.7/gisplatform_2017"><img
+                                src="sjdc/open/imgs/right_bg_ditu.png" alt="" width="100%"
+                                height="100%"/></a>
+                    </div>
+                </div>
+
+
+                <div class="widget">
+                    <h4 class="title">
+                        政策文件<span
+                            style="float: right; padding-right: 15px; font-size: 14px"><a
+                            href="${ctx}/open/toZcIndex">更多&gt;&gt;</a></span>
+                    </h4>
+                    <div class="content community1" id="zcfw"></div>
+                </div>
+
+                <c:if test="${empty sessionScope.session_user}">
+                    <div class="widget">
+                        <h4 class="title">使用指南</h4>
+                        <div class="content community">
+                            <a href="#"><img src="sjdc/open/imgs/guide.jpg" alt=""
+                                             width="100%" height="255px"/></a>
+                        </div>
+                    </div>
+                </c:if>
+                <c:if test="${not empty sessionScope.session_user}">
+                    <div class="widget">
+                        <h4 class="title">使用指南</h4>
+                        <div class="content community">
+                            <a href="http://192.168.104.6/gisplatform"><img
+                                    src="sjdc/open/imgs/guide2.jpg" alt="" width="100%" height="45px"/></a>
+                        </div>
+                    </div>
+                </c:if>
+            </aside>
+
+        </div>
+    </div>
+</section>
+
+<section class="content-wrap">
+    <div class="container">
+        <div class="row">
+            <aside class="col-md-4 sidebar"> <!-- start widget -->
+                <div class="widget">
+                    <h4 class="title">热门数据排行</h4>
+                    <div class="content community1" id="sjph">
+                        <p>
+                            <span class="badge badge-warning">1</span><a href="#">人口基本信息<span>（2350）</span></a>
+                        </p>
+                        <p>
+                            <span class="badge badge-success">2</span><a href="#">法人基础信息<span>（833）</span></a>
+                        </p>
+                        <p>
+                            <span class="badge badge-important">3</span><a href="#">法人处罚信息<span>（255）</span></a>
+                        </p>
+                        <p>
+                            <span class="badge badge">4</span><a href="#">法人变更信息<span>（120）</span></a>
+                        </p>
+                        <p>
+                            <span class="badge badge">5</span><a href="#">法人信用信息<span>（10）</span></a>
+                        </p>
+                    </div>
+                </div>
+            </aside>
+
+            <aside class="col-md-4 sidebar">
+                <div class="widget">
+                    <h4 class="title">热门服务排行</h4>
+                    <div class="content community1" id="fwph">
+                        <p>
+                            <span class="badge badge-warning">1</span><a href="#">人口基本信息<span>（2350）</span></a>
+                        </p>
+                        <p>
+                            <span class="badge badge-success">2</span><a href="#">法人基础信息<span>（833）</span></a>
+                        </p>
+                        <p>
+                            <span class="badge badge-important">3</span><a href="#">法人处罚信息<span>（255）</span></a>
+                        </p>
+                        <p>
+                            <span class="badge badge">4</span><a href="#">法人变更信息<span>（120）</span></a>
+                        </p>
+                        <p>
+                            <span class="badge badge">5</span><a href="#">法人信用信息<span>（10）</span></a>
+                        </p>
+                    </div>
+                </div>
+            </aside>
+
+            <aside class="col-md-4 sidebar">
+                <div class="widget">
+                    <h4 class="title">部门共享排行</h4>
+                    <div class="content community1" id="bmzy">
+                        <p>
+                            <span class="badge badge-warning">1</span><a href="#">科委<span>（2350）</span></a>
+                        </p>
+                        <p>
+                            <span class="badge badge-success">2</span><a href="#">统计局<span>（833）</span></a>
+                        </p>
+                        <p>
+                            <span class="badge badge-important">3</span><a href="#">民政局<span>（255）</span></a>
+                        </p>
+                        <p>
+                            <span class="badge badge">4</span><a href="#">社治办<span>（120）</span></a>
+                        </p>
+                        <p>
+                            <span class="badge badge">5</span><a href="#">公安局<span>（10）</span></a>
+                        </p>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+</section>
+
+
+<a href="#" id="back-to-top" style="display: none;"><i
+        class="fa fa-angle-up"></i></a>
+
+<script src="${ctx}/sjdc/open/jquery_002.js"></script>
+<script src="${ctx}/sjdc/open/bootstrap.js"></script>
+<script src="${ctx}/sjdc/open/jquery_003.js"></script>
+<script src="${ctx}/sjdc/open/highlight.js"></script>
+<script src="${ctx}/sjdc/open/jquery.js"></script>
+<script src="${ctx}/sjdc/open/main.js"></script>
+
+<script src="sjdc/open/h.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+    function downAppFile(busId, fwInfoId) {
+        location.href = "${ctx}/kernel/file/downAppFile?catalog=09&busId="
+            + busId + "&fwInfoId=" + fwInfoId;
+    };
+
+    function fileDownById(fileId) {
+        location.href = "${ctx}/kernel/file/fileDownById?fileId=" + fileId;
+    };
+    $(document)
+        .ready(
+            function () {
+                //首页所有服务组装到一起
+                $
+                    .post(
+                        "${fwurl}",
+                        {
+                            unitKey: "${unitKey}",
+                            fwCode: "fw00013",
+                            id: "F00077"
+                        },
+                        function (data) {
+                            var data1 = eval('(' + data
+                                + ')');
+                            var list = data1.DATA;
+                            //首页服务信息
+                            var html1 = '';
+                            var array = new Array(
+                                "fa-star",
+                                "fa-star-half-o",
+                                "fa-star-half-o",
+                                "fa-star-o");
+                            $("#fwzl").html(
+                                '(' + list.fwxx.length
+                                + ')');
+                            for (var i = 1; i < 5; i++) {
+                                html1 += '<div class="col-sm-12 col-md-6 features" ><div class="feature"> <div class="feature-icon"><i class="fa ' + array[i - 1] + '"></i></div> <h5 ><a href="${ctx}/open/toFwDetail?fwCode=${fwInfo.fwCode}'
+                                    + list.fwxx[i].fw_code
+                                    + '">'
+                                    + list.fwxx[i].fw_name
+                                    + '</a></h5><p >'
+                                    + list.fwxx[i].fw_abstract
+                                    + '</p></div></div>';
+                            }
+                            $("#sy_fw").html(html1);
+                            //首页数据资源信息
+                            $("#zyzl").html(
+                                '(' + list.sjzy.length
+                                + ')');
+                            var result = list.sjzy.length;
+                            var html2 = '';
+                            var m = list.sjzy.length
+                                .toString();
+                            for (var i = 0; i < m.length; i++) {
+                                html2 += '<img class="number-bg" src="sjdc/open/number/number' + m[i] + '.png"/>';
+                            }
+                            $("#sy_zyml").html(html2);
+                            //首页数据资源区单位
+                            var html3 = '';
+                            for (var i = 1; i <= 12; i++) {
+                                html3 += '<li><a href="${ctx}/open/toZyIndex?tagId=${tag.tagId}'
+                                    + 'l'
+                                    + i
+                                    + '" target="_blank"><div class="sy_themel' + i + '"></div><span>'
+                                    + list.qdw[i - 1].show_name
+                                    + '</span></a></li>';
+
+                            }
+                            $("#sy_qdw").html(html3);
+                            //	首页服务key
+                            var fwKey = list.yhxx[1].unit_key;
+                            fwKey = "*********"
+                                + fwKey.substring(15,
+                                    19);
+                            $("#fwkey").html(fwKey);
+
+                            //首页信息数据排行
+                            var html4 = '';
+                            var array1 = new Array(
+                                "badge badge-warning",
+                                "badge badge-success",
+                                "badge badge-important",
+                                "badge badge",
+                                "badge badge");
+                            for (var i = 1; i <= 5; i++) {
+                                html4 += '<p><span class="' + array1[i - 1] + '" >'
+                                    + i
+                                    + '</span><a href="${ctx}/open/toZyDetail?zyInfoId=${zyInfo.zyInfoId}'
+                                    + list.sjph[i - 1].infoid
+                                    + '">'
+                                    + list.sjph[i - 1].name
+                                    + '<span>（'
+                                    + list.sjph[i - 1].value
+                                    + '）</span></a></p>'
+                            }
+                            $("#sjph").html(html4);
+                            //首页信息服务排行
+                            var html5 = '';
+                            for (var i = 1; i <= 5; i++) {
+                                html5 += '<p><span class="' + array1[i - 1] + '" >'
+                                    + i
+                                    + '</span><a href="${ctx}/open/toFwDetail?fwCode=${fwInfo.fwCode}'
+                                    + list.fwph[i - 1].code
+                                    + '">'
+                                    + list.fwph[i - 1].name
+                                    + '<span>（'
+                                    + list.fwph[i - 1].value
+                                    + '）</span></a></p>'
+                            }
+                            $("#fwph").html(html5);
+                            //首页数据概况的数据
+                            var html6 = '';
+                            var m = list.fwxx.length
+                                .toString();
+                            for (var i = 0; i < m.length; i++) {
+                                html6 += '<img class="number-bg" src="sjdc/open/number/number' + m[i] + '.png"/>';
+                            }
+                            $("#sy_sjgx").html(html6);
+                            var html7 = '';
+                            var m = list.sjzl[0].value
+                                .toString();
+                            for (var i = 0; i < m.length; i++) {
+                                html7 += '<img class="number-bg" src="sjdc/open/number/number' + m[i] + '.png"/>';
+                            }
+                            $("#sy_sjzl").html(html7);
+                            //首页部门资源
+                            var html8 = '';
+                            for (var i = 1; i <= 5; i++) {
+                                html8 += '<p><span class="' + array1[i - 1] + '" >'
+                                    + i
+                                    + '</span><a href="${ctx}/home/toUnitDetail?unitId='
+                                    + list.dwjrs[i - 1].unit_id
+                                    + '">'
+                                    + list.dwjrs[i - 1].name
+                                    + '<span>（'
+                                    + list.dwjrs[i - 1].value
+                                    + '）</span></a></p>'
+                            }
+                            $("#bmzy").html(html8);
+                            //首页政策文件
+                            var html9 = '';
+                            console
+                                .log(list.zcid[1].file_id);
+                            for (var i = 0; i <= 3; i++) {
+                                html9 += '<p><a  href="javaScript:fileDownById(\''
+                                    + list.zcid[i].file_id
+                                    + '\')"  style="font-size: 16px"><i class="fa fa-book"></i>'
+                                    + list.zcfw[i].name
+                                    + '</a></p>'
+                            }
+                            $("#zcfw").html(html9);
+                        });
+            })
+</script>
+</body>
+</html>

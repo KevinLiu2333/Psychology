@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvMapFileMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvMapFile" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="FILE_MAP_IDX" property="fileMapIdx" jdbcType="DECIMAL" />
+    <result column="FILE_CFGID" property="fileCfgid" jdbcType="VARCHAR" />
+    <result column="FILE_STATUS" property="fileStatus" jdbcType="VARCHAR" />
+    <result column="FILE_NAME" property="fileName" jdbcType="VARCHAR" />
+    <result column="FILE_TYPE" property="fileType" jdbcType="VARCHAR" />
+    <result column="FILE_STRUCTURE" property="fileStructure" jdbcType="VARCHAR" />
+    <result column="FILE_SIZE" property="fileSize" jdbcType="DECIMAL" />
+    <result column="FILE_NEXTS" property="fileNexts" jdbcType="DECIMAL" />
+    <result column="LIB_IDX" property="libIdx" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

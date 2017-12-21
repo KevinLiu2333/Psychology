@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllOlap2AwsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllOlap2Aws" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="AW" property="aw" jdbcType="VARCHAR" />
+    <result column="AW_NUMBER" property="awNumber" jdbcType="DECIMAL" />
+    <result column="AW_VERSION" property="awVersion" jdbcType="VARCHAR" />
+    <result column="SF_VERSION" property="sfVersion" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

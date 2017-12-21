@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtUrlCacheMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtUrlCache" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="URL" property="url" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CONTENT_TYPE" property="contentType" jdbcType="VARCHAR" />
+    <result column="CONTENT_LENGTH" property="contentLength" jdbcType="DECIMAL" />
+    <result column="CONTENT" property="content" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

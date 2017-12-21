@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtTargetAssocPropMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtTargetAssocProp" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PROPERTY_NAME" property="propertyName" jdbcType="VARCHAR" />
+    <result column="PROPERTY_VALUE" property="propertyValue" jdbcType="VARCHAR" />
+    <result column="ASSOC_GUID" property="assocGuid" jdbcType="VARBINARY" />
+    <result column="SOURCE_TARGET_GUID" property="sourceTargetGuid" jdbcType="VARBINARY" />
+    <result column="SCOPE_TARGET_GUID" property="scopeTargetGuid" jdbcType="VARBINARY" />
+    <result column="ASSOC_TARGET_GUID" property="assocTargetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

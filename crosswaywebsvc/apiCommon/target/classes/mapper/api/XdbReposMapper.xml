@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.XdbReposMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.XdbRepos" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="ROOTINFO#" property="rootinfo" jdbcType="DECIMAL" />
+    <result column="HINDEX#" property="hindex" jdbcType="DECIMAL" />
+    <result column="HLINK#" property="hlink" jdbcType="DECIMAL" />
+    <result column="RESOURCE#" property="resource" jdbcType="DECIMAL" />
+    <result column="ACL#" property="acl" jdbcType="DECIMAL" />
+    <result column="CONFIG#" property="config" jdbcType="DECIMAL" />
+    <result column="DLINK#" property="dlink" jdbcType="DECIMAL" />
+    <result column="NLOCKS#" property="nlocks" jdbcType="DECIMAL" />
+    <result column="STATS#" property="stats" jdbcType="DECIMAL" />
+    <result column="CHECKOUTS#" property="checkouts" jdbcType="DECIMAL" />
+    <result column="RESCONFIG#" property="resconfig" jdbcType="DECIMAL" />
+    <result column="WKSPC#" property="wkspc" jdbcType="DECIMAL" />
+    <result column="VERSHIST#" property="vershist" jdbcType="DECIMAL" />
+    <result column="PARAMS" property="params" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

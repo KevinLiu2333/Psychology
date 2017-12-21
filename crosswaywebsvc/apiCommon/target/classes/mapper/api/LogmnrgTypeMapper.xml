@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.LogmnrgTypeMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.LogmnrgType" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERSION#" property="version" jdbcType="DECIMAL" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="TYPECODE" property="typecode" jdbcType="DECIMAL" />
+    <result column="PROPERTIES" property="properties" jdbcType="DECIMAL" />
+    <result column="ATTRIBUTES" property="attributes" jdbcType="DECIMAL" />
+    <result column="METHODS" property="methods" jdbcType="DECIMAL" />
+    <result column="HIDDENMETHODS" property="hiddenmethods" jdbcType="DECIMAL" />
+    <result column="SUPERTYPES" property="supertypes" jdbcType="DECIMAL" />
+    <result column="SUBTYPES" property="subtypes" jdbcType="DECIMAL" />
+    <result column="EXTERNTYPE" property="externtype" jdbcType="DECIMAL" />
+    <result column="EXTERNNAME" property="externname" jdbcType="VARCHAR" />
+    <result column="HELPERCLASSNAME" property="helperclassname" jdbcType="VARCHAR" />
+    <result column="LOCAL_ATTRS" property="localAttrs" jdbcType="DECIMAL" />
+    <result column="LOCAL_METHODS" property="localMethods" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+    <result column="TVOID" property="tvoid" jdbcType="VARBINARY" />
+    <result column="TYPEID" property="typeid" jdbcType="VARBINARY" />
+    <result column="ROOTTOID" property="roottoid" jdbcType="VARBINARY" />
+    <result column="SUPERTOID" property="supertoid" jdbcType="VARBINARY" />
+    <result column="HASHCODE" property="hashcode" jdbcType="VARBINARY" />
+    <result column="TOID" property="toid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowWorkspaceReqSizeMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowWorkspaceReqSize" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="REQUEST_TYPE" property="requestType" jdbcType="VARCHAR" />
+    <result column="REQ_SIZE" property="reqSize" jdbcType="VARCHAR" />
+    <result column="DISPLAY" property="display" jdbcType="VARCHAR" />
+    <result column="DEFAULT_SIZE" property="defaultSize" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.HistHeadMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.HistHead" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="COL#" property="col" jdbcType="DECIMAL" />
+    <result column="BUCKET_CNT" property="bucketCnt" jdbcType="DECIMAL" />
+    <result column="ROW_CNT" property="rowCnt" jdbcType="DECIMAL" />
+    <result column="CACHE_CNT" property="cacheCnt" jdbcType="DECIMAL" />
+    <result column="NULL_CNT" property="nullCnt" jdbcType="DECIMAL" />
+    <result column="TIMESTAMP#" property="timestamp" jdbcType="DATE" />
+    <result column="SAMPLE_SIZE" property="sampleSize" jdbcType="DECIMAL" />
+    <result column="MINIMUM" property="minimum" jdbcType="DECIMAL" />
+    <result column="MAXIMUM" property="maximum" jdbcType="DECIMAL" />
+    <result column="DISTCNT" property="distcnt" jdbcType="DECIMAL" />
+    <result column="DENSITY" property="density" jdbcType="DECIMAL" />
+    <result column="INTCOL#" property="intcol" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="AVGCLN" property="avgcln" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+    <result column="SPARE4" property="spare4" jdbcType="DECIMAL" />
+    <result column="LOWVAL" property="lowval" jdbcType="VARBINARY" />
+    <result column="HIVAL" property="hival" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

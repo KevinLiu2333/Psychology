@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VDiagVproblem2Mapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VDiagVproblem2" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDX" property="indx" jdbcType="DECIMAL" />
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="ADR_PATH_IDX" property="adrPathIdx" jdbcType="VARCHAR" />
+    <result column="ADR_HOME" property="adrHome" jdbcType="VARCHAR" />
+    <result column="PROBLEM_ID" property="problemId" jdbcType="DECIMAL" />
+    <result column="PROBLEM_KEY" property="problemKey" jdbcType="VARCHAR" />
+    <result column="FIRST_INCIDENT" property="firstIncident" jdbcType="DECIMAL" />
+    <result column="FIRSTINC_TIME" property="firstincTime" jdbcType="OTHER" />
+    <result column="LAST_INCIDENT" property="lastIncident" jdbcType="DECIMAL" />
+    <result column="LASTINC_TIME" property="lastincTime" jdbcType="OTHER" />
+    <result column="IMPACT1" property="impact1" jdbcType="DECIMAL" />
+    <result column="IMPACT2" property="impact2" jdbcType="DECIMAL" />
+    <result column="IMPACT3" property="impact3" jdbcType="DECIMAL" />
+    <result column="IMPACT4" property="impact4" jdbcType="DECIMAL" />
+    <result column="SERVICE_REQUEST" property="serviceRequest" jdbcType="VARCHAR" />
+    <result column="BUG_NUMBER" property="bugNumber" jdbcType="VARCHAR" />
+    <result column="IMPACT_STR1" property="impactStr1" jdbcType="VARCHAR" />
+    <result column="IMPACT_STR2" property="impactStr2" jdbcType="VARCHAR" />
+    <result column="IMPACT_STR3" property="impactStr3" jdbcType="VARCHAR" />
+    <result column="IMPACT_STR4" property="impactStr4" jdbcType="VARCHAR" />
+    <result column="SOURCE" property="source" jdbcType="DECIMAL" />
+    <result column="LAST_INCIDENT_IMPACT" property="lastIncidentImpact" jdbcType="VARCHAR" />
+    <result column="ADVISOR" property="advisor" jdbcType="VARCHAR" />
+    <result column="FLOOD_CONTROLLED" property="floodControlled" jdbcType="DECIMAL" />
+    <result column="INCIDENT_CNT" property="incidentCnt" jdbcType="DECIMAL" />
+    <result column="DETAIL" property="detail" jdbcType="VARCHAR" />
+    <result column="PACKAGE_CNT" property="packageCnt" jdbcType="DECIMAL" />
+    <result column="ADDR" property="addr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuSgrSgeViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuSgrSgeView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="GRANTOR_NUM" property="grantorNum" jdbcType="DECIMAL" />
+    <result column="GRANTEE_NUM" property="granteeNum" jdbcType="DECIMAL" />
+    <result column="COLNUM" property="colnum" jdbcType="DECIMAL" />
+    <result column="WGO" property="wgo" jdbcType="DECIMAL" />
+    <result column="MIN_SEQUENCE" property="minSequence" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

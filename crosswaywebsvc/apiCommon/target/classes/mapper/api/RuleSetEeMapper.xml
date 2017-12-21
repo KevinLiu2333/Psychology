@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RuleSetEeMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RuleSetEe" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RS_OBJ#" property="rsObj" jdbcType="DECIMAL" />
+    <result column="ECTX#" property="ectx" jdbcType="DECIMAL" />
+    <result column="NUM_RULES" property="numRules" jdbcType="DECIMAL" />
+    <result column="NUM_BOXES" property="numBoxes" jdbcType="DECIMAL" />
+    <result column="EE_FLAGS" property="eeFlags" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

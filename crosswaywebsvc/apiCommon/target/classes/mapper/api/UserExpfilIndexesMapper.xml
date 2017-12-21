@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserExpfilIndexesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserExpfilIndexes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDEX_NAME" property="indexName" jdbcType="VARCHAR" />
+    <result column="PREDICATE_TABLE" property="predicateTable" jdbcType="VARCHAR" />
+    <result column="ACCESS_FUNC_PACKAGE" property="accessFuncPackage" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_SET" property="attributeSet" jdbcType="VARCHAR" />
+    <result column="EXPRESSION_TABLE" property="expressionTable" jdbcType="VARCHAR" />
+    <result column="EXPRESSION_COLUMN" property="expressionColumn" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="FUNC_CPU_COST" property="funcCpuCost" jdbcType="DECIMAL" />
+    <result column="FUNC_IO_COST" property="funcIoCost" jdbcType="DECIMAL" />
+    <result column="INDEX_SELECTIVITY" property="indexSelectivity" jdbcType="DECIMAL" />
+    <result column="INDEX_CPU_COST" property="indexCpuCost" jdbcType="DECIMAL" />
+    <result column="INDEX_IO_COST" property="indexIoCost" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

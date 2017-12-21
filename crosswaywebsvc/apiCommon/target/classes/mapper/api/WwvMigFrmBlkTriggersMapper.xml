@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigFrmBlkTriggersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigFrmBlkTriggers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="BLOCK_ID" property="blockId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="DIRTYINFO" property="dirtyinfo" jdbcType="VARCHAR" />
+    <result column="FIREINQUERY" property="fireinquery" jdbcType="VARCHAR" />
+    <result column="EXECUTEHIERARCHY" property="executehierarchy" jdbcType="VARCHAR" />
+    <result column="DISPLAYINKEYBOARDHELP" property="displayinkeyboardhelp" jdbcType="VARCHAR" />
+    <result column="KEYBOARDHELPTEXT" property="keyboardhelptext" jdbcType="VARCHAR" />
+    <result column="TRIGGERSTYLE" property="triggerstyle" jdbcType="VARCHAR" />
+    <result column="HIDE" property="hide" jdbcType="VARCHAR" />
+    <result column="PARENTFILENAME" property="parentfilename" jdbcType="VARCHAR" />
+    <result column="PARENTFILEPATH" property="parentfilepath" jdbcType="VARCHAR" />
+    <result column="PARENTMODULE" property="parentmodule" jdbcType="VARCHAR" />
+    <result column="PARENTMODULETYPE" property="parentmoduletype" jdbcType="VARCHAR" />
+    <result column="PARENTNAME" property="parentname" jdbcType="VARCHAR" />
+    <result column="PARENTSOURCELEVEL1OBJECTNAME" property="parentsourcelevel1objectname" jdbcType="VARCHAR" />
+    <result column="PARENTSOURCELEVEL1OBJECTTYPE" property="parentsourcelevel1objecttype" jdbcType="VARCHAR" />
+    <result column="PARENTSOURCELEVEL2OBJECTNAME" property="parentsourcelevel2objectname" jdbcType="VARCHAR" />
+    <result column="PARENTSOURCELEVEL2OBJECTTYPE" property="parentsourcelevel2objecttype" jdbcType="VARCHAR" />
+    <result column="PARENTTYPE" property="parenttype" jdbcType="VARCHAR" />
+    <result column="PERSISTENTCLIENTINFOLENGTH" property="persistentclientinfolength" jdbcType="VARCHAR" />
+    <result column="SMARTCLASS" property="smartclass" jdbcType="VARCHAR" />
+    <result column="SUBCLASSOBJECTGROUP" property="subclassobjectgroup" jdbcType="VARCHAR" />
+    <result column="SUBCLASSSUBOBJECT" property="subclasssubobject" jdbcType="VARCHAR" />
+    <result column="TRIGGERINTERNALTYPE" property="triggerinternaltype" jdbcType="VARCHAR" />
+    <result column="SELECT_FOR_APP" property="selectForApp" jdbcType="VARCHAR" />
+    <result column="APPLICABLE" property="applicable" jdbcType="VARCHAR" />
+    <result column="COMPLETE" property="complete" jdbcType="VARCHAR" />
+    <result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+    <result column="ASSIGNEE" property="assignee" jdbcType="VARCHAR" />
+    <result column="NOTES" property="notes" jdbcType="VARCHAR" />
+    <result column="TAGS" property="tags" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="TRIGGERTEXT" property="triggertext" jdbcType="CLOB" />
+    <result column="TRIGGER_COMMENT" property="triggerComment" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

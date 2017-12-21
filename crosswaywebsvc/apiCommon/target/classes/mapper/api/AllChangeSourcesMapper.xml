@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllChangeSourcesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllChangeSources" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SOURCE_NAME" property="sourceName" jdbcType="VARCHAR" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="LOG_DIRECTORY" property="logDirectory" jdbcType="VARCHAR" />
+    <result column="LOGFILE_PATTERN" property="logfilePattern" jdbcType="VARCHAR" />
+    <result column="SOURCE_DESCRIPTION" property="sourceDescription" jdbcType="VARCHAR" />
+    <result column="CREATED" property="created" jdbcType="DATE" />
+    <result column="SOURCE_TYPE" property="sourceType" jdbcType="VARCHAR" />
+    <result column="SOURCE_DATABASE" property="sourceDatabase" jdbcType="VARCHAR" />
+    <result column="FIRST_SCN" property="firstScn" jdbcType="DECIMAL" />
+    <result column="PUBLISHER" property="publisher" jdbcType="VARCHAR" />
+    <result column="CAPTURE_NAME" property="captureName" jdbcType="VARCHAR" />
+    <result column="CAPTURE_QUEUE_NAME" property="captureQueueName" jdbcType="VARCHAR" />
+    <result column="CAPTURE_QUEUE_TABLE_NAME" property="captureQueueTableName" jdbcType="VARCHAR" />
+    <result column="SOURCE_ENABLED" property="sourceEnabled" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaAlertArgumentsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaAlertArguments" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SEQUENCE_ID" property="sequenceId" jdbcType="DECIMAL" />
+    <result column="REASON_MESSAGE_ID" property="reasonMessageId" jdbcType="DECIMAL" />
+    <result column="REASON_ARGUMENT_COUNT" property="reasonArgumentCount" jdbcType="DECIMAL" />
+    <result column="REASON_ARGUMENT_1" property="reasonArgument1" jdbcType="VARCHAR" />
+    <result column="REASON_ARGUMENT_2" property="reasonArgument2" jdbcType="VARCHAR" />
+    <result column="REASON_ARGUMENT_3" property="reasonArgument3" jdbcType="VARCHAR" />
+    <result column="REASON_ARGUMENT_4" property="reasonArgument4" jdbcType="VARCHAR" />
+    <result column="REASON_ARGUMENT_5" property="reasonArgument5" jdbcType="VARCHAR" />
+    <result column="ACTION_MESSAGE_ID" property="actionMessageId" jdbcType="DECIMAL" />
+    <result column="ACTION_ARGUMENT_COUNT" property="actionArgumentCount" jdbcType="DECIMAL" />
+    <result column="ACTION_ARGUMENT_1" property="actionArgument1" jdbcType="VARCHAR" />
+    <result column="ACTION_ARGUMENT_2" property="actionArgument2" jdbcType="VARCHAR" />
+    <result column="ACTION_ARGUMENT_3" property="actionArgument3" jdbcType="VARCHAR" />
+    <result column="ACTION_ARGUMENT_4" property="actionArgument4" jdbcType="VARCHAR" />
+    <result column="ACTION_ARGUMENT_5" property="actionArgument5" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

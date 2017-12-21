@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCsEvalSummaryStandardMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCsEvalSummaryStandard" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="CS_NAME" property="csName" jdbcType="OTHER" />
+    <result column="CS_NAME_NLSID" property="csNameNlsid" jdbcType="VARCHAR" />
+    <result column="CS_AUTHOR" property="csAuthor" jdbcType="VARCHAR" />
+    <result column="CS_VERSION" property="csVersion" jdbcType="DECIMAL" />
+    <result column="LAST_EVALN_TIMESTAMP" property="lastEvalnTimestamp" jdbcType="DATE" />
+    <result column="COMPLIANCE_SCORE" property="complianceScore" jdbcType="DECIMAL" />
+    <result column="TOTAL_VIOLATIONS" property="totalViolations" jdbcType="DECIMAL" />
+    <result column="TOTAL_NON_COMPLIANT_RULES" property="totalNonCompliantRules" jdbcType="DECIMAL" />
+    <result column="TOTAL_COMPLIANT_RULES" property="totalCompliantRules" jdbcType="DECIMAL" />
+    <result column="TOTAL_ERROR_RULES" property="totalErrorRules" jdbcType="DECIMAL" />
+    <result column="TOTAL_UNKNOWN_RULES" property="totalUnknownRules" jdbcType="DECIMAL" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <result column="CS_GUID" property="csGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCmComparisonsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCmComparisons" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="COMPARISON_GUID" property="comparisonGuid" jdbcType="VARBINARY" />
+    <result column="COMPARISON_OWNER" property="comparisonOwner" jdbcType="VARCHAR" />
+    <result column="COMPARISON_NAME" property="comparisonName" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="LEFT_TYPE" property="leftType" jdbcType="VARCHAR" />
+    <result column="LEFT_NAME" property="leftName" jdbcType="VARCHAR" />
+    <result column="LEFT_VERSION" property="leftVersion" jdbcType="DECIMAL" />
+    <result column="RIGHT_TYPE" property="rightType" jdbcType="VARCHAR" />
+    <result column="RIGHT_NAME" property="rightName" jdbcType="VARCHAR" />
+    <result column="RIGHT_VERSION" property="rightVersion" jdbcType="DECIMAL" />
+    <result column="COMPARISON_SS" property="comparisonSs" jdbcType="VARBINARY" />
+    <result column="JOB_ID" property="jobId" jdbcType="VARBINARY" />
+    <result column="LEFT_ID" property="leftId" jdbcType="VARBINARY" />
+    <result column="RIGHT_ID" property="rightId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

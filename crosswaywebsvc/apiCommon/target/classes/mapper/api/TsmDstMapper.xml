@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TsmDstMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.TsmDst" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SRC_DB_NAME" property="srcDbName" jdbcType="VARCHAR" />
+    <result column="DST_DB_NAME" property="dstDbName" jdbcType="VARCHAR" />
+    <result column="DST_INST_NAME" property="dstInstName" jdbcType="VARCHAR" />
+    <result column="DST_INST_ID" property="dstInstId" jdbcType="VARCHAR" />
+    <result column="DST_INST_START_TIME" property="dstInstStartTime" jdbcType="OTHER" />
+    <result column="SEQUENCE#" property="sequence" jdbcType="DECIMAL" />
+    <result column="DST_SID" property="dstSid" jdbcType="DECIMAL" />
+    <result column="DST_SERIAL#" property="dstSerial" jdbcType="DECIMAL" />
+    <result column="DST_START_TIME" property="dstStartTime" jdbcType="OTHER" />
+    <result column="DST_END_TIME" property="dstEndTime" jdbcType="OTHER" />
+    <result column="DST_USERID" property="dstUserid" jdbcType="DECIMAL" />
+    <result column="DST_SCHEMAID" property="dstSchemaid" jdbcType="DECIMAL" />
+    <result column="DST_STATE" property="dstState" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AqSchedulesMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AqSchedules">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OID" jdbcType="VARBINARY" property="oid" />
+    <id column="DESTINATION" jdbcType="VARCHAR" property="destination" />
+    <result column="START_TIME" jdbcType="DATE" property="startTime" />
+    <result column="DURATION" jdbcType="VARCHAR" property="duration" />
+    <result column="NEXT_TIME" jdbcType="VARCHAR" property="nextTime" />
+    <result column="LATENCY" jdbcType="VARCHAR" property="latency" />
+    <result column="LAST_TIME" jdbcType="DATE" property="lastTime" />
+    <result column="JOBNO" jdbcType="DECIMAL" property="jobno" />
+  </resultMap>
+</mapper>

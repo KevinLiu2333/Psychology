@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OrddcmMappedPathsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OrddcmMappedPaths" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="MPID" property="mpid" jdbcType="DECIMAL" />
+    <result column="ATTR_TAG" property="attrTag" jdbcType="VARCHAR" />
+    <result column="DOC_ID" property="docId" jdbcType="DECIMAL" />
+    <result column="REL_PATH" property="relPath" jdbcType="VARCHAR" />
+    <result column="OCCURS" property="occurs" jdbcType="DECIMAL" />
+    <result column="NOT_EMPTY" property="notEmpty" jdbcType="DECIMAL" />
+    <result column="WRITE_TAG" property="writeTag" jdbcType="DECIMAL" />
+    <result column="WRITE_DEFINER" property="writeDefiner" jdbcType="DECIMAL" />
+    <result column="WRITE_NAME" property="writeName" jdbcType="DECIMAL" />
+    <result column="WRITE_RAW_VALUE" property="writeRawValue" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtEcmConfigHistoryKey6Mapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtEcmConfigHistoryKey6" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DELTATIME" property="deltatime" jdbcType="DATE" />
+    <result column="TIMEZONE" property="timezone" jdbcType="VARCHAR" />
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="HOSTNAME" property="hostname" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="SNAPSHOTTYPE" property="snapshottype" jdbcType="VARCHAR" />
+    <result column="COLLECTIONTYPE" property="collectiontype" jdbcType="VARCHAR" />
+    <result column="TABLE_PATH" property="tablePath" jdbcType="VARCHAR" />
+    <result column="CATEGORY" property="category" jdbcType="VARCHAR" />
+    <result column="OPERATION" property="operation" jdbcType="VARCHAR" />
+    <result column="KEY1" property="key1" jdbcType="VARCHAR" />
+    <result column="KEY2" property="key2" jdbcType="VARCHAR" />
+    <result column="KEY3" property="key3" jdbcType="VARCHAR" />
+    <result column="KEY4" property="key4" jdbcType="VARCHAR" />
+    <result column="KEY5" property="key5" jdbcType="VARCHAR" />
+    <result column="KEY6" property="key6" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE" property="attribute" jdbcType="VARCHAR" />
+    <result column="NEWVALUE" property="newvalue" jdbcType="VARCHAR" />
+    <result column="OLDVALUE" property="oldvalue" jdbcType="VARCHAR" />
+    <result column="DELTAGUID" property="deltaguid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

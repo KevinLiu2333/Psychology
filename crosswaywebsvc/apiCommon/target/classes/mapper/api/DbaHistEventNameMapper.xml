@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaHistEventNameMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaHistEventName" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="EVENT_ID" property="eventId" jdbcType="DECIMAL" />
+    <result column="EVENT_NAME" property="eventName" jdbcType="VARCHAR" />
+    <result column="PARAMETER1" property="parameter1" jdbcType="VARCHAR" />
+    <result column="PARAMETER2" property="parameter2" jdbcType="VARCHAR" />
+    <result column="PARAMETER3" property="parameter3" jdbcType="VARCHAR" />
+    <result column="WAIT_CLASS_ID" property="waitClassId" jdbcType="DECIMAL" />
+    <result column="WAIT_CLASS" property="waitClass" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

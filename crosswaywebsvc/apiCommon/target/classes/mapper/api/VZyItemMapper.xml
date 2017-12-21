@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VZyItemMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VZyItem">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FW_CONFIG_ID" jdbcType="OTHER" property="fwConfigId" />
+    <result column="ZY_ITEM_ID" jdbcType="OTHER" property="zyItemId" />
+    <result column="FW_INFO_ID" jdbcType="OTHER" property="fwInfoId" />
+    <result column="CONFIG_TYPE" jdbcType="OTHER" property="configType" />
+    <result column="PARAM_VALID" jdbcType="OTHER" property="paramValid" />
+    <result column="FW_APPLY_ID" jdbcType="OTHER" property="fwApplyId" />
+    <result column="OP_TYPE" jdbcType="OTHER" property="opType" />
+    <result column="OP_VALUE" jdbcType="OTHER" property="opValue" />
+    <result column="COL_CFG_ID" jdbcType="OTHER" property="colCfgId" />
+    <result column="COL_NAME" jdbcType="OTHER" property="colName" />
+    <result column="COL_COMMENT" jdbcType="OTHER" property="colComment" />
+    <result column="COL_TYPE_NAME" jdbcType="OTHER" property="colTypeName" />
+    <result column="COL_TYPE" jdbcType="OTHER" property="colType" />
+    <result column="EDIT_TYPE" jdbcType="OTHER" property="editType" />
+    <result column="DIC_ID" jdbcType="OTHER" property="dicId" />
+    <result column="IS_PK" jdbcType="OTHER" property="isPk" />
+    <result column="ORDER_NUM" jdbcType="OTHER" property="orderNum" />
+    <result column="VALIDITY" jdbcType="OTHER" property="validity" />
+    <result column="THEME_ID" jdbcType="OTHER" property="themeId" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ResourcePlanMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ResourcePlan" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="MANDATORY" property="mandatory" jdbcType="DECIMAL" />
+    <result column="SUB_PLAN" property="subPlan" jdbcType="DECIMAL" />
+    <result column="MGMT_METHOD" property="mgmtMethod" jdbcType="VARCHAR" />
+    <result column="MAST_METHOD" property="mastMethod" jdbcType="VARCHAR" />
+    <result column="PDL_METHOD" property="pdlMethod" jdbcType="VARCHAR" />
+    <result column="NUM_PLAN_DIRECTIVES" property="numPlanDirectives" jdbcType="DECIMAL" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="QUE_METHOD" property="queMethod" jdbcType="VARCHAR" />
+    <result column="MAX_IOPS" property="maxIops" jdbcType="DECIMAL" />
+    <result column="MAX_MBPS" property="maxMbps" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

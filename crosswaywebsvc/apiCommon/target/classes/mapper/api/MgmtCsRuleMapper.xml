@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCsRuleMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCsRule" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="RULE_GUID" property="ruleGuid" jdbcType="VARBINARY" />
+    <result column="RULE_INAME" property="ruleIname" jdbcType="VARCHAR" />
+    <result column="RULE_DNAME" property="ruleDname" jdbcType="VARCHAR" />
+    <result column="IMPORTANCE_LEVEL" property="importanceLevel" jdbcType="DECIMAL" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="REFERENCE_URL" property="referenceUrl" jdbcType="VARCHAR" />
+    <result column="RATIONALE" property="rationale" jdbcType="VARCHAR" />
+    <result column="FIXTEXT" property="fixtext" jdbcType="VARCHAR" />
+    <result column="WARNING" property="warning" jdbcType="VARCHAR" />
+    <result column="TEST_TYPE" property="testType" jdbcType="DECIMAL" />
+    <result column="TEST" property="test" jdbcType="VARCHAR" />
+    <result column="CHANGE_ADVISOR_TYPE" property="changeAdvisorType" jdbcType="VARCHAR" />
+    <result column="CHANGE_ADVISOR_SUBTYPE" property="changeAdvisorSubtype" jdbcType="VARCHAR" />
+    <result column="CHANGE_ADVISOR_REASON" property="changeAdvisorReason" jdbcType="VARCHAR" />
+    <result column="MESSAGE" property="message" jdbcType="VARCHAR" />
+    <result column="CLEAR_MESSAGE" property="clearMessage" jdbcType="VARCHAR" />
+    <result column="SEVERITY" property="severity" jdbcType="DECIMAL" />
+    <result column="SIMPLE_TEST_CONDITION" property="simpleTestCondition" jdbcType="DECIMAL" />
+    <result column="CS_GUID" property="csGuid" jdbcType="VARBINARY" />
+    <result column="POLICY_GUID" property="policyGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

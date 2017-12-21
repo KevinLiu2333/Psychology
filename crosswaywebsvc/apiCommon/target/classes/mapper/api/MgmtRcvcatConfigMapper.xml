@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtRcvcatConfigMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtRcvcatConfig" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RCVCAT_VERSION" property="rcvcatVersion" jdbcType="VARCHAR" />
+    <result column="RCVCAT_CONNECT_STR" property="rcvcatConnectStr" jdbcType="VARCHAR" />
+    <result column="RCVCAT_USERNAME" property="rcvcatUsername" jdbcType="VARCHAR" />
+    <result column="EM_USER" property="emUser" jdbcType="VARCHAR" />
+    <result column="RCVCAT_GUID" property="rcvcatGuid" jdbcType="VARBINARY" />
+    <result column="RCVCAT_PASSWORD" property="rcvcatPassword" jdbcType="VARBINARY" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <result column="VPCBASE_GUID" property="vpcbaseGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

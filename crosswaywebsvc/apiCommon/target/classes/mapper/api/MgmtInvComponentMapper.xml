@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtInvComponentMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtInvComponent" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="NAME" property="name" jdbcType="VARCHAR" />
+    <id column="VERSION" property="version" jdbcType="VARCHAR" />
+    <id column="CONTAINER_GUID" property="containerGuid" jdbcType="VARBINARY" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="EXTERNAL_NAME" property="externalName" jdbcType="VARCHAR" />
+    <result column="LANGUAGES" property="languages" jdbcType="VARCHAR" />
+    <result column="INSTALLED_LOCATION" property="installedLocation" jdbcType="VARCHAR" />
+    <result column="INSTALLER_VERSION" property="installerVersion" jdbcType="VARCHAR" />
+    <result column="MIN_DEINSTALLER_VERSION" property="minDeinstallerVersion" jdbcType="VARCHAR" />
+    <result column="IS_TOP_LEVEL" property="isTopLevel" jdbcType="VARCHAR" />
+    <result column="TIMESTAMP" property="timestamp" jdbcType="DATE" />
+    <result column="COMPONENT_GUID" property="componentGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

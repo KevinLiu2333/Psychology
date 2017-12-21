@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtEcmSnapshotMetadataMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtEcmSnapshotMetadata" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <id column="SNAPSHOT_TYPE" property="snapshotType" jdbcType="VARCHAR" />
+    <id column="KIND" property="kind" jdbcType="VARCHAR" />
+    <result column="UI_NAME" property="uiName" jdbcType="VARCHAR" />
+    <result column="UI_ON" property="uiOn" jdbcType="VARCHAR" />
+    <result column="COMPARE_ON" property="compareOn" jdbcType="VARCHAR" />
+    <result column="COMPARE_UI_ON" property="compareUiOn" jdbcType="VARCHAR" />
+    <result column="HISTORY_ON" property="historyOn" jdbcType="VARCHAR" />
+    <result column="HISTORY_UI_ON" property="historyUiOn" jdbcType="VARCHAR" />
+    <result column="LINK_TABLE_NAME" property="linkTableName" jdbcType="VARCHAR" />
+    <result column="AFTER_LOAD_PROC_NAME" property="afterLoadProcName" jdbcType="VARCHAR" />
+    <result column="AFTER_IMPORT_PROC_NAME" property="afterImportProcName" jdbcType="VARCHAR" />
+    <result column="METADATA_VERSION" property="metadataVersion" jdbcType="VARCHAR" />
+    <result column="VIEW_URL" property="viewUrl" jdbcType="VARCHAR" />
+    <result column="COMPARE_URL" property="compareUrl" jdbcType="VARCHAR" />
+    <result column="HISTORY_URL" property="historyUrl" jdbcType="VARCHAR" />
+    <result column="SAME_TARGET_COMPARE" property="sameTargetCompare" jdbcType="VARCHAR" />
+    <result column="METADATA_ID" property="metadataId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

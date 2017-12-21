@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCpfAdvisoryInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCpfAdvisoryInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ADVISORY_NAME" property="advisoryName" jdbcType="VARCHAR" />
+    <result column="ADVISORY_URL" property="advisoryUrl" jdbcType="VARCHAR" />
+    <result column="ADVISORY_IMPACT" property="advisoryImpact" jdbcType="VARCHAR" />
+    <result column="ADVISORY_ABSTRACT" property="advisoryAbstract" jdbcType="VARCHAR" />
+    <result column="ADVISORY_BUG" property="advisoryBug" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

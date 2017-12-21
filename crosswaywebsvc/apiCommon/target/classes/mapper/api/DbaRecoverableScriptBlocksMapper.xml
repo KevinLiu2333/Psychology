@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaRecoverableScriptBlocksMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaRecoverableScriptBlocks" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="BLOCK_NUM" property="blockNum" jdbcType="DECIMAL" />
+    <result column="FORWARD_BLOCK_DBLINK" property="forwardBlockDblink" jdbcType="VARCHAR" />
+    <result column="UNDO_BLOCK_DBLINK" property="undoBlockDblink" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="BLOCK_COMMENT" property="blockComment" jdbcType="VARCHAR" />
+    <result column="SCRIPT_ID" property="scriptId" jdbcType="VARBINARY" />
+    <result column="FORWARD_BLOCK" property="forwardBlock" jdbcType="CLOB" />
+    <result column="UNDO_BLOCK" property="undoBlock" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

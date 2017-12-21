@@ -1,0 +1,135 @@
+package com.wonders.dddl;
+
+import com.wonders.Constants;
+import com.wonders.log.entity.LoginLog;
+import com.wonders.qxkz.QXConstants;
+import com.wonders.tiles.authority.entity.Org;
+import com.wonders.tiles.authority.entity.User;
+import com.wonders.tiles.authority.service.SystemConstants;
+import com.wonders.tiles.tools.IocSingle;
+import com.wonders.utils.CookieUtils;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Node;
+import org.dom4j.io.OutputFormat;
+import org.dom4j.io.SAXReader;
+import org.dom4j.io.XMLWriter;
+import org.nutz.dao.Dao;
+import org.nutz.ioc.Ioc;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StringWriter;
+import java.net.MalformedURLException;
+import java.util.*;
+
+/**
+ * 单点登录服务层.
+ */
+public class DddlService {
+
+    /**
+     * 用户登录.
+     *
+     * @param req
+     * @param res
+     * @throws Exception
+     */
+    public void login(HttpServletRequest req, HttpServletResponse res) throws Exception {
+        HttpSession session = req.getSession();
+        Ioc ioc = IocSingle.getInstance();
+        String userUid = (String) session.getAttribute("com.beyondbit.netsso.client.userUid");
+        DddlDao ld = ioc.get(DddlDao.class);
+        User user = ld.login(userUid);
+        LoginLog loginLog = new LoginLog();
+        loginLog.setOperateDate(new Date());
+        loginLog.setOperateType("登录");
+        loginLog.setOperateUser(user.getLogonName());
+        loginLog.setId(UUID.randomUUID().toString().replaceAll("-", ""));
+
+        int expiry = 60 * 60 * 24 * 365; // 过期时间30天
+        CookieUtils.addCookie(req, res, SystemConstants.LOGON_NAME, user.getUserId(), expiry, null);
+        CookieUtils.addCookie(req, res, SystemConstants.DISPLAY_NAME, user.getDisplayName(), expiry, null);
+        if (user.getOrgId() != null) {
+            Org org = ld.getOrgById(user.getOrgId());
+            session.setAttribute(SystemConstants.ORG, org);
+        } else {
+            Org org = ld.getOrgByCode(user.getOrgCode());
+            session.setAttribute(SystemConstants.ORG, org);
+        }
+        Dao dao = ioc.get(Dao.class, "dao");
+        dao.insert(loginLog);
+        session.setAttribute(Constants.ROLE_LIST, user.getRoleId());
+        session.setAttribute(SystemConstants.SYSTEM_USER, user);
+        String ss = user.getLogonName();
+        session.setAttribute(SystemConstants.LOGON_NAME, user.getLogonName());
+        session.setAttribute(SystemConstants.LONGIN_STATE, "ON");
+        session.setAttribute(SystemConstants.TC_STATE, "N");
+        goTo(req, res);
+    }
+
+    /**
+     * 已登陆判断.
+     *
+     * @param req
+     * @param res
+     * @throws Exception
+     */
+    public void goTo(HttpServletRequest req, HttpServletResponse res) throws Exception {
+        String basePath = req.getRequestURI();
+        HttpSession session = req.getSession();
+		if(session.getAttribute(SystemConstants.LONGIN_STATE) == null || session.getAttribute(SystemConstants.LONGIN_STATE) != "ON"){
+			throw new Exception("用户处于未登录状态.");
+		}
+        String context = req.getContextPath();
+        if ((context + "/").equals(basePath) || context.equals(basePath) || true) {
+            User user = (User) session.getAttribute(SystemConstants.SYSTEM_USER);
+            if (user.getRoleId().contains(QXConstants.SUPER_A)) {
+                req.getRequestDispatcher("/WEB-INF/index-sa.jsp").forward(req, res);
+            }
+            Map<String, String> result = getIndexFwUl(req);
+            req.setAttribute("result", result);
+            req.getRequestDispatcher("/WEB-INF/index-fw.jsp").forward(req, res);
+        }
+    }
+
+    /**
+     * 权限判定,显示不同的九宫格.
+     *
+     * @param req
+     * @return
+     * @throws DocumentException
+     * @throws MalformedURLException
+     */
+    @SuppressWarnings("unchecked")
+    private Map<String, String> getIndexFwUl(HttpServletRequest req) throws Exception {
+        Map<String, String> result = new HashMap<String, String>();
+        HttpSession session = req.getSession();
+        String roleId = ((User) session.getAttribute(Constants.USER)).getRoleId();
+        SAXReader reader = new SAXReader();
+        String web_inf = session.getServletContext().getRealPath("/WEB-INF/");
+        InputStreamReader isr = new InputStreamReader(new FileInputStream(web_inf + "/jgg.xml"), "utf-8");
+        Document doc = reader.read(isr);
+        List<Node> nodes = null;
+        if ((roleId.contains(QXConstants.TB_USER)) || (roleId.contains(QXConstants.SGS_USER))) {
+            nodes = doc.selectNodes("//li[@id!='ntb']");
+        } else {
+            nodes = doc.selectNodes("//li[@id!='tb']");
+        }
+        StringWriter writer = new StringWriter();
+        OutputFormat format = OutputFormat.createPrettyPrint();
+        format.setEncoding("UTF-8");
+        XMLWriter xmlwriter = new XMLWriter(writer, format);
+        try {
+            xmlwriter.write(nodes);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        result.put("ul", writer.toString());
+        return result;
+    }
+}

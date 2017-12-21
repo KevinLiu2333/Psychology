@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu8slogMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu8slog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="MOWNER" property="mowner" jdbcType="VARCHAR" />
+    <result column="MOWNERID" property="mownerid" jdbcType="DECIMAL" />
+    <result column="MASTER" property="master" jdbcType="VARCHAR" />
+    <result column="SNAPID" property="snapid" jdbcType="DECIMAL" />
+    <result column="SNAPTIME" property="snaptime" jdbcType="DATE" />
+  </resultMap>
+</mapper>

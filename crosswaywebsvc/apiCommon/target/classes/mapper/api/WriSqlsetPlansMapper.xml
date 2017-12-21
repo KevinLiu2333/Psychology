@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriSqlsetPlansMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriSqlsetPlans" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="STMT_ID" property="stmtId" jdbcType="DECIMAL" />
+    <id column="PLAN_HASH_VALUE" property="planHashValue" jdbcType="DECIMAL" />
+    <result column="PARSING_SCHEMA_NAME" property="parsingSchemaName" jdbcType="VARCHAR" />
+    <result column="PLAN_TIMESTAMP" property="planTimestamp" jdbcType="DATE" />
+    <result column="BINDS_CAPTURED" property="bindsCaptured" jdbcType="CHAR" />
+    <result column="BIND_DATA" property="bindData" jdbcType="VARBINARY" />
+    <result column="OPTIMIZER_ENV" property="optimizerEnv" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

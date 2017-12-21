@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaAdvisorSqlwSumMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaAdvisorSqlwSum" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="WORKLOAD_ID" property="workloadId" jdbcType="DECIMAL" />
+    <result column="WORKLOAD_NAME" property="workloadName" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="CREATE_DATE" property="createDate" jdbcType="DATE" />
+    <result column="MODIFY_DATE" property="modifyDate" jdbcType="DATE" />
+    <result column="NUM_SELECT_STMT" property="numSelectStmt" jdbcType="DECIMAL" />
+    <result column="NUM_UPDATE_STMT" property="numUpdateStmt" jdbcType="DECIMAL" />
+    <result column="NUM_DELETE_STMT" property="numDeleteStmt" jdbcType="DECIMAL" />
+    <result column="NUM_INSERT_STMT" property="numInsertStmt" jdbcType="DECIMAL" />
+    <result column="NUM_MERGE_STMT" property="numMergeStmt" jdbcType="DECIMAL" />
+    <result column="SOURCE" property="source" jdbcType="VARCHAR" />
+    <result column="HOW_CREATED" property="howCreated" jdbcType="VARCHAR" />
+    <result column="DATA_SOURCE" property="dataSource" jdbcType="VARCHAR" />
+    <result column="READ_ONLY" property="readOnly" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhInterconnectPingsBlMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhInterconnectPingsBl" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="TARGET_INSTANCE" property="targetInstance" jdbcType="DECIMAL" />
+    <result column="CNT_500B" property="cnt500b" jdbcType="DECIMAL" />
+    <result column="WAIT_500B" property="wait500b" jdbcType="DECIMAL" />
+    <result column="WAITSQ_500B" property="waitsq500b" jdbcType="DECIMAL" />
+    <result column="CNT_8K" property="cnt8k" jdbcType="DECIMAL" />
+    <result column="WAIT_8K" property="wait8k" jdbcType="DECIMAL" />
+    <result column="WAITSQ_8K" property="waitsq8k" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

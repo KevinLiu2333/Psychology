@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtRtPrMapping1dayMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtRtPrMapping1day" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="ROLLUP_TIMESTAMP" property="rollupTimestamp" jdbcType="DATE" />
+    <id column="PAGE_URL" property="pageUrl" jdbcType="VARCHAR" />
+    <id column="REQUEST_URL" property="requestUrl" jdbcType="VARCHAR" />
+    <result column="NUM_CACHE_HITS" property="numCacheHits" jdbcType="DECIMAL" />
+    <result column="CACHE_HITS_AVG_SVR_TIME" property="cacheHitsAvgSvrTime" jdbcType="DECIMAL" />
+    <result column="NUM_NON_CACHE_HITS" property="numNonCacheHits" jdbcType="DECIMAL" />
+    <result column="NON_CACHE_HITS_AVG_SVR_TIME" property="nonCacheHitsAvgSvrTime" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

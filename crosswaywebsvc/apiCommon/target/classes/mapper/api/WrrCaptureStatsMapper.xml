@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrrCaptureStatsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrrCaptureStats" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="STARTUP_TIME" property="startupTime" jdbcType="DATE" />
+    <result column="HOST_NAME" property="hostName" jdbcType="VARCHAR" />
+    <result column="PARALLEL" property="parallel" jdbcType="VARCHAR" />
+    <result column="CAPTURE_SIZE" property="captureSize" jdbcType="DECIMAL" />
+    <result column="DBTIME" property="dbtime" jdbcType="DECIMAL" />
+    <result column="DBTIME_TSTART" property="dbtimeTstart" jdbcType="DECIMAL" />
+    <result column="DBTIME_TEND" property="dbtimeTend" jdbcType="DECIMAL" />
+    <result column="USER_CALLS" property="userCalls" jdbcType="DECIMAL" />
+    <result column="USER_CALLS_TSTART" property="userCallsTstart" jdbcType="DECIMAL" />
+    <result column="USER_CALLS_TEND" property="userCallsTend" jdbcType="DECIMAL" />
+    <result column="USER_CALLS_EMPTY" property="userCallsEmpty" jdbcType="DECIMAL" />
+    <result column="TXNS" property="txns" jdbcType="DECIMAL" />
+    <result column="TXNS_TSTART" property="txnsTstart" jdbcType="DECIMAL" />
+    <result column="TXNS_TEND" property="txnsTend" jdbcType="DECIMAL" />
+    <result column="CONNECTS" property="connects" jdbcType="DECIMAL" />
+    <result column="CONNECTS_TSTART" property="connectsTstart" jdbcType="DECIMAL" />
+    <result column="CONNECTS_TEND" property="connectsTend" jdbcType="DECIMAL" />
+    <result column="ERRORS" property="errors" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

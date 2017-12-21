@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtHostpatchGrpComplHistMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtHostpatchGrpComplHist" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="GROUP_NAME" property="groupName" jdbcType="VARCHAR" />
+    <result column="TOTAL_HOSTS" property="totalHosts" jdbcType="DECIMAL" />
+    <result column="COMPLIANT_HOSTS" property="compliantHosts" jdbcType="DECIMAL" />
+    <result column="LAST_CHECKED_ON" property="lastCheckedOn" jdbcType="DATE" />
+  </resultMap>
+</mapper>

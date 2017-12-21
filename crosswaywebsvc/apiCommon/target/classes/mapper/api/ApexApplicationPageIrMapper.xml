@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationPageIrMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationPageIr" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="PAGE_ID" property="pageId" jdbcType="DECIMAL" />
+    <result column="INTERACTIVE_REPORT_ID" property="interactiveReportId" jdbcType="DECIMAL" />
+    <result column="REGION_ID" property="regionId" jdbcType="DECIMAL" />
+    <result column="NUMBER_OF_COLUMNS" property="numberOfColumns" jdbcType="DECIMAL" />
+    <result column="NUMBER_OF_COLUMN_GROUPS" property="numberOfColumnGroups" jdbcType="DECIMAL" />
+    <result column="NUMBER_OF_SAVED_REPORTS" property="numberOfSavedReports" jdbcType="DECIMAL" />
+    <result column="MAX_ROW_COUNT" property="maxRowCount" jdbcType="VARCHAR" />
+    <result column="MAX_ROW_COUNT_MESSAGE" property="maxRowCountMessage" jdbcType="VARCHAR" />
+    <result column="NO_DATA_FOUND_MESSAGE" property="noDataFoundMessage" jdbcType="VARCHAR" />
+    <result column="MAX_ROWS_PER_PAGE" property="maxRowsPerPage" jdbcType="VARCHAR" />
+    <result column="SEARCH_BUTTON_LABEL" property="searchButtonLabel" jdbcType="VARCHAR" />
+    <result column="PAGE_ITEMS_TO_SUBMIT" property="pageItemsToSubmit" jdbcType="VARCHAR" />
+    <result column="SORT_ASC_IMAGE" property="sortAscImage" jdbcType="VARCHAR" />
+    <result column="SORT_ASC_IMAGE_ATTR" property="sortAscImageAttr" jdbcType="VARCHAR" />
+    <result column="SORT_DESC_IMAGE" property="sortDescImage" jdbcType="VARCHAR" />
+    <result column="SORT_DESC_IMAGE_ATTR" property="sortDescImageAttr" jdbcType="VARCHAR" />
+    <result column="SHOW_NULLS_AS" property="showNullsAs" jdbcType="VARCHAR" />
+    <result column="PAGINATION_SCHEME" property="paginationScheme" jdbcType="VARCHAR" />
+    <result column="PAGINATION_DISPLAY_POSITION" property="paginationDisplayPosition" jdbcType="VARCHAR" />
+    <result column="BUTTON_TEMPLATE" property="buttonTemplate" jdbcType="VARCHAR" />
+    <result column="SHOW_FINDER_DROP_DOWN" property="showFinderDropDown" jdbcType="VARCHAR" />
+    <result column="SHOW_DISPLAY_ROW_COUNT" property="showDisplayRowCount" jdbcType="VARCHAR" />
+    <result column="SHOW_SEARCH_BAR" property="showSearchBar" jdbcType="VARCHAR" />
+    <result column="SHOW_SEARCH_TEXTBOX" property="showSearchTextbox" jdbcType="VARCHAR" />
+    <result column="SHOW_ACTIONS_MENU" property="showActionsMenu" jdbcType="VARCHAR" />
+    <result column="ACTIONS_MENU_ICON" property="actionsMenuIcon" jdbcType="VARCHAR" />
+    <result column="FINDER_ICON" property="finderIcon" jdbcType="VARCHAR" />
+    <result column="SHOW_REPORTS_AS_TABS" property="showReportsAsTabs" jdbcType="VARCHAR" />
+    <result column="SHOW_SELECT_COLUMNS" property="showSelectColumns" jdbcType="VARCHAR" />
+    <result column="SHOW_FILTER" property="showFilter" jdbcType="VARCHAR" />
+    <result column="SHOW_SORT" property="showSort" jdbcType="VARCHAR" />
+    <result column="SHOW_CONTROL_BREAK" property="showControlBreak" jdbcType="VARCHAR" />
+    <result column="SHOW_HIGHLIGHT" property="showHighlight" jdbcType="VARCHAR" />
+    <result column="SHOW_COMPUTE" property="showCompute" jdbcType="VARCHAR" />
+    <result column="SHOW_AGGREGATE" property="showAggregate" jdbcType="VARCHAR" />
+    <result column="SHOW_CHART" property="showChart" jdbcType="VARCHAR" />
+    <result column="SHOW_FLASHBACK" property="showFlashback" jdbcType="VARCHAR" />
+    <result column="SHOW_SAVE" property="showSave" jdbcType="VARCHAR" />
+    <result column="SHOW_RESET" property="showReset" jdbcType="VARCHAR" />
+    <result column="SHOW_DOWNLOAD" property="showDownload" jdbcType="VARCHAR" />
+    <result column="SHOW_HELP" property="showHelp" jdbcType="VARCHAR" />
+    <result column="DOWNLOAD_FORMATS" property="downloadFormats" jdbcType="VARCHAR" />
+    <result column="FILENAME" property="filename" jdbcType="VARCHAR" />
+    <result column="SEPARATOR" property="separator" jdbcType="VARCHAR" />
+    <result column="ENCLOSED_BY" property="enclosedBy" jdbcType="VARCHAR" />
+    <result column="DETAIL_LINK_TYPE" property="detailLinkType" jdbcType="VARCHAR" />
+    <result column="DETAIL_LINK_TARGET" property="detailLinkTarget" jdbcType="VARCHAR" />
+    <result column="DETAIL_LINK_TEXT" property="detailLinkText" jdbcType="VARCHAR" />
+    <result column="DETAIL_LINK_ATTRIBUTES" property="detailLinkAttributes" jdbcType="VARCHAR" />
+    <result column="DETAIL_LINK_CHECKSUM_TYPE" property="detailLinkChecksumType" jdbcType="VARCHAR" />
+    <result column="DETAIL_LINK_CONDITION_TYPE" property="detailLinkConditionType" jdbcType="VARCHAR" />
+    <result column="DETAIL_LINK_COND_EXPRESSION" property="detailLinkCondExpression" jdbcType="VARCHAR" />
+    <result column="DETAIL_LINK_COND_EXPRESSION2" property="detailLinkCondExpression2" jdbcType="VARCHAR" />
+    <result column="DETAIL_LINK_AUTH_SCHEME" property="detailLinkAuthScheme" jdbcType="VARCHAR" />
+    <result column="DETAIL_LINK_AUTH_SCHEME_ID" property="detailLinkAuthSchemeId" jdbcType="VARCHAR" />
+    <result column="ALIAS" property="alias" jdbcType="VARCHAR" />
+    <result column="REPORT_ID_ITEM" property="reportIdItem" jdbcType="VARCHAR" />
+    <result column="MAX_QUERY_COST" property="maxQueryCost" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="UPDATED_ON" property="updatedOn" jdbcType="DATE" />
+    <result column="UPDATED_BY" property="updatedBy" jdbcType="VARCHAR" />
+    <result column="COMPONENT_SIGNATURE" property="componentSignature" jdbcType="VARCHAR" />
+    <result column="SQL_QUERY" property="sqlQuery" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

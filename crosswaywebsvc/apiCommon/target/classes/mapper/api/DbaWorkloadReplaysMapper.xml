@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaWorkloadReplaysMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaWorkloadReplays" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="DBNAME" property="dbname" jdbcType="VARCHAR" />
+    <result column="DBVERSION" property="dbversion" jdbcType="VARCHAR" />
+    <result column="PARALLEL" property="parallel" jdbcType="VARCHAR" />
+    <result column="DIRECTORY" property="directory" jdbcType="VARCHAR" />
+    <result column="CAPTURE_ID" property="captureId" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="PREPARE_TIME" property="prepareTime" jdbcType="DATE" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="DURATION_SECS" property="durationSecs" jdbcType="DECIMAL" />
+    <result column="NUM_CLIENTS" property="numClients" jdbcType="DECIMAL" />
+    <result column="NUM_CLIENTS_DONE" property="numClientsDone" jdbcType="DECIMAL" />
+    <result column="DEFAULT_ACTION" property="defaultAction" jdbcType="VARCHAR" />
+    <result column="SYNCHRONIZATION" property="synchronization" jdbcType="VARCHAR" />
+    <result column="CONNECT_TIME_SCALE" property="connectTimeScale" jdbcType="DECIMAL" />
+    <result column="THINK_TIME_SCALE" property="thinkTimeScale" jdbcType="DECIMAL" />
+    <result column="THINK_TIME_AUTO_CORRECT" property="thinkTimeAutoCorrect" jdbcType="VARCHAR" />
+    <result column="SCALE_UP_MULTIPLIER" property="scaleUpMultiplier" jdbcType="DECIMAL" />
+    <result column="USER_CALLS" property="userCalls" jdbcType="DECIMAL" />
+    <result column="DBTIME" property="dbtime" jdbcType="DECIMAL" />
+    <result column="NETWORK_TIME" property="networkTime" jdbcType="DECIMAL" />
+    <result column="THINK_TIME" property="thinkTime" jdbcType="DECIMAL" />
+    <result column="PAUSE_TIME" property="pauseTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_TIME_DIFF" property="elapsedTimeDiff" jdbcType="DECIMAL" />
+    <result column="AWR_DBID" property="awrDbid" jdbcType="DECIMAL" />
+    <result column="AWR_BEGIN_SNAP" property="awrBeginSnap" jdbcType="DECIMAL" />
+    <result column="AWR_END_SNAP" property="awrEndSnap" jdbcType="DECIMAL" />
+    <result column="AWR_EXPORTED" property="awrExported" jdbcType="VARCHAR" />
+    <result column="ERROR_CODE" property="errorCode" jdbcType="DECIMAL" />
+    <result column="ERROR_MESSAGE" property="errorMessage" jdbcType="VARCHAR" />
+    <result column="DIR_PATH" property="dirPath" jdbcType="VARCHAR" />
+    <result column="REPLAY_DIR_NUMBER" property="replayDirNumber" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

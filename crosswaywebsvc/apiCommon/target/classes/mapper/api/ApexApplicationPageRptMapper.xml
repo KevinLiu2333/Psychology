@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationPageRptMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationPageRpt" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="PAGE_ID" property="pageId" jdbcType="DECIMAL" />
+    <result column="PAGE_NAME" property="pageName" jdbcType="VARCHAR" />
+    <result column="REGION_NAME" property="regionName" jdbcType="VARCHAR" />
+    <result column="SOURCE_TYPE" property="sourceType" jdbcType="VARCHAR" />
+    <result column="BODY_BACKGROUND_COLOR" property="bodyBackgroundColor" jdbcType="VARCHAR" />
+    <result column="BODY_FONT_COLOR" property="bodyFontColor" jdbcType="VARCHAR" />
+    <result column="BODY_FONT_FAMILY" property="bodyFontFamily" jdbcType="VARCHAR" />
+    <result column="BODY_FONT_SIZE" property="bodyFontSize" jdbcType="VARCHAR" />
+    <result column="BODY_FONT_WEIGHT" property="bodyFontWeight" jdbcType="VARCHAR" />
+    <result column="BORDER_COLOR" property="borderColor" jdbcType="VARCHAR" />
+    <result column="BORDER_WIDTH" property="borderWidth" jdbcType="DECIMAL" />
+    <result column="FORMAT" property="format" jdbcType="VARCHAR" />
+    <result column="FORMAT_ITEM" property="formatItem" jdbcType="VARCHAR" />
+    <result column="PAGE_HEADER" property="pageHeader" jdbcType="VARCHAR" />
+    <result column="PAGE_HEADER_ALIGNMENT" property="pageHeaderAlignment" jdbcType="VARCHAR" />
+    <result column="PAGE_HEADER_FONT_COLOR" property="pageHeaderFontColor" jdbcType="VARCHAR" />
+    <result column="PAGE_HEADER_FONT_FAMILY" property="pageHeaderFontFamily" jdbcType="VARCHAR" />
+    <result column="PAGE_HEADER_FONT_SIZE" property="pageHeaderFontSize" jdbcType="VARCHAR" />
+    <result column="PAGE_HEADER_FONT_WEIGHT" property="pageHeaderFontWeight" jdbcType="VARCHAR" />
+    <result column="HEADER_BACKGROUND_COLOR" property="headerBackgroundColor" jdbcType="VARCHAR" />
+    <result column="HEADER_FONT_COLOR" property="headerFontColor" jdbcType="VARCHAR" />
+    <result column="HEADER_FONT_FAMILY" property="headerFontFamily" jdbcType="VARCHAR" />
+    <result column="HEADER_FONT_SIZE" property="headerFontSize" jdbcType="VARCHAR" />
+    <result column="HEADER_FONT_WEIGHT" property="headerFontWeight" jdbcType="VARCHAR" />
+    <result column="HEIGHT" property="height" jdbcType="DECIMAL" />
+    <result column="ORIENTATION" property="orientation" jdbcType="VARCHAR" />
+    <result column="OUTPUT" property="output" jdbcType="VARCHAR" />
+    <result column="PRINT_SERVER_OVERRIDE" property="printServerOverride" jdbcType="VARCHAR" />
+    <result column="OUTPUT_FILE_NAME" property="outputFileName" jdbcType="VARCHAR" />
+    <result column="CONTENT_DISPOSITION" property="contentDisposition" jdbcType="VARCHAR" />
+    <result column="DOCUMENT_HEADER" property="documentHeader" jdbcType="VARCHAR" />
+    <result column="OUTPUT_LINK_TEXT" property="outputLinkText" jdbcType="VARCHAR" />
+    <result column="SHOW_OUTPUT_LINK" property="showOutputLink" jdbcType="VARCHAR" />
+    <result column="FOOTER" property="footer" jdbcType="VARCHAR" />
+    <result column="FOOTER_ALIGNMENT" property="footerAlignment" jdbcType="VARCHAR" />
+    <result column="FOOTER_FONT_COLOR" property="footerFontColor" jdbcType="VARCHAR" />
+    <result column="FOOTER_FONT_FAMILY" property="footerFontFamily" jdbcType="VARCHAR" />
+    <result column="FOOTER_FONT_SIZE" property="footerFontSize" jdbcType="VARCHAR" />
+    <result column="FOOTER_FONT_WEIGHT" property="footerFontWeight" jdbcType="VARCHAR" />
+    <result column="PAPER_SIZE" property="paperSize" jdbcType="VARCHAR" />
+    <result column="TEMPLATE_ID" property="templateId" jdbcType="DECIMAL" />
+    <result column="PAPER_SIZE_UNITS" property="paperSizeUnits" jdbcType="VARCHAR" />
+    <result column="PAPER_SIZE_WIDTH_UNITS" property="paperSizeWidthUnits" jdbcType="VARCHAR" />
+    <result column="PAPER_SIZE_WIDTH" property="paperSizeWidth" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="COMPONENT_COMMENT" property="componentComment" jdbcType="VARCHAR" />
+    <result column="REGION_ID" property="regionId" jdbcType="DECIMAL" />
+    <result column="COMPONENT_SIGNATURE" property="componentSignature" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VDiagVincMeterInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VDiagVincMeterInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDX" property="indx" jdbcType="DECIMAL" />
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="ADR_PATH_IDX" property="adrPathIdx" jdbcType="VARCHAR" />
+    <result column="ADR_HOME" property="adrHome" jdbcType="VARCHAR" />
+    <result column="INCIDENT_ID" property="incidentId" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="OTHER" />
+    <result column="IMPACT1" property="impact1" jdbcType="DECIMAL" />
+    <result column="IMPACT2" property="impact2" jdbcType="DECIMAL" />
+    <result column="IMPACT3" property="impact3" jdbcType="DECIMAL" />
+    <result column="IMPACT4" property="impact4" jdbcType="DECIMAL" />
+    <result column="PROBLEM_ID" property="problemId" jdbcType="DECIMAL" />
+    <result column="SEVERITY" property="severity" jdbcType="DECIMAL" />
+    <result column="IMPACT_STR1" property="impactStr1" jdbcType="VARCHAR" />
+    <result column="IMPACT_STR2" property="impactStr2" jdbcType="VARCHAR" />
+    <result column="IMPACT_STR3" property="impactStr3" jdbcType="VARCHAR" />
+    <result column="IMPACT_STR4" property="impactStr4" jdbcType="VARCHAR" />
+    <result column="ADDR" property="addr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

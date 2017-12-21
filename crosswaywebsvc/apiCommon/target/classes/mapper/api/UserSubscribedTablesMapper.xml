@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserSubscribedTablesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserSubscribedTables" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HANDLE" property="handle" jdbcType="DECIMAL" />
+    <result column="SOURCE_SCHEMA_NAME" property="sourceSchemaName" jdbcType="VARCHAR" />
+    <result column="SOURCE_TABLE_NAME" property="sourceTableName" jdbcType="VARCHAR" />
+    <result column="VIEW_NAME" property="viewName" jdbcType="VARCHAR" />
+    <result column="CHANGE_SET_NAME" property="changeSetName" jdbcType="VARCHAR" />
+    <result column="SUBSCRIPTION_NAME" property="subscriptionName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

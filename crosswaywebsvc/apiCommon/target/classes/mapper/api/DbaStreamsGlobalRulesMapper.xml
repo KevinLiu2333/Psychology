@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaStreamsGlobalRulesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaStreamsGlobalRules" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="STREAMS_NAME" property="streamsName" jdbcType="VARCHAR" />
+    <result column="STREAMS_TYPE" property="streamsType" jdbcType="VARCHAR" />
+    <result column="RULE_TYPE" property="ruleType" jdbcType="VARCHAR" />
+    <result column="INCLUDE_TAGGED_LCR" property="includeTaggedLcr" jdbcType="VARCHAR" />
+    <result column="SOURCE_DATABASE" property="sourceDatabase" jdbcType="VARCHAR" />
+    <result column="RULE_NAME" property="ruleName" jdbcType="VARCHAR" />
+    <result column="RULE_OWNER" property="ruleOwner" jdbcType="VARCHAR" />
+    <result column="RULE_CONDITION" property="ruleCondition" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

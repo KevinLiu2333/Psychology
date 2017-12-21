@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvRuleSetMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvRuleSet" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="CPU_TIME" property="cpuTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_TIME" property="elapsedTime" jdbcType="DECIMAL" />
+    <result column="FIRST_LOAD_TIME" property="firstLoadTime" jdbcType="DATE" />
+    <result column="LAST_LOAD_TIME" property="lastLoadTime" jdbcType="DATE" />
+    <result column="LAST_LOADING_TIME" property="lastLoadingTime" jdbcType="DECIMAL" />
+    <result column="SHARABLE_MEM" property="sharableMem" jdbcType="DECIMAL" />
+    <result column="RELOADS" property="reloads" jdbcType="DECIMAL" />
+    <result column="INVALIDATIONS" property="invalidations" jdbcType="DECIMAL" />
+    <result column="EVALUATIONS" property="evaluations" jdbcType="DECIMAL" />
+    <result column="FIRST_HIT_EVALUATIONS" property="firstHitEvaluations" jdbcType="DECIMAL" />
+    <result column="SIMPLE_RULES_ONLY_EVALUATIONS" property="simpleRulesOnlyEvaluations" jdbcType="DECIMAL" />
+    <result column="SQL_FREE_EVALUATIONS" property="sqlFreeEvaluations" jdbcType="DECIMAL" />
+    <result column="SQL_EXECUTIONS" property="sqlExecutions" jdbcType="DECIMAL" />
+    <result column="CONDITIONS_PROCESSED" property="conditionsProcessed" jdbcType="DECIMAL" />
+    <result column="TRUE_RULES" property="trueRules" jdbcType="DECIMAL" />
+    <result column="MAYBE_RULES" property="maybeRules" jdbcType="DECIMAL" />
+    <result column="VARIABLE_VALUE_FUNCTION_CALLS" property="variableValueFunctionCalls" jdbcType="DECIMAL" />
+    <result column="VARIABLE_METHOD_FUNCTION_CALLS" property="variableMethodFunctionCalls" jdbcType="DECIMAL" />
+    <result column="EVALUATION_FUNCTION_CALLS" property="evaluationFunctionCalls" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

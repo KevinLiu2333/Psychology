@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllMiningModelAttributesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllMiningModelAttributes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="MODEL_NAME" property="modelName" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_NAME" property="attributeName" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_TYPE" property="attributeType" jdbcType="VARCHAR" />
+    <result column="DATA_TYPE" property="dataType" jdbcType="VARCHAR" />
+    <result column="DATA_LENGTH" property="dataLength" jdbcType="DECIMAL" />
+    <result column="DATA_PRECISION" property="dataPrecision" jdbcType="DECIMAL" />
+    <result column="DATA_SCALE" property="dataScale" jdbcType="DECIMAL" />
+    <result column="USAGE_TYPE" property="usageType" jdbcType="VARCHAR" />
+    <result column="TARGET" property="target" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

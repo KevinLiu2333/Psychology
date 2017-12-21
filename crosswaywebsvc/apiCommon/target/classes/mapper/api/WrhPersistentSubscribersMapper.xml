@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhPersistentSubscribersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhPersistentSubscribers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="QUEUE_SCHEMA" property="queueSchema" jdbcType="VARCHAR" />
+    <id column="QUEUE_NAME" property="queueName" jdbcType="VARCHAR" />
+    <id column="SUBSCRIBER_ID" property="subscriberId" jdbcType="DECIMAL" />
+    <result column="SUBSCRIBER_NAME" property="subscriberName" jdbcType="VARCHAR" />
+    <result column="SUBSCRIBER_ADDRESS" property="subscriberAddress" jdbcType="VARCHAR" />
+    <result column="SUBSCRIBER_TYPE" property="subscriberType" jdbcType="VARCHAR" />
+    <result column="FIRST_ACTIVITY_TIME" property="firstActivityTime" jdbcType="TIMESTAMP" />
+    <result column="ENQUEUED_MSGS" property="enqueuedMsgs" jdbcType="DECIMAL" />
+    <result column="DEQUEUED_MSGS" property="dequeuedMsgs" jdbcType="DECIMAL" />
+    <result column="EXPIRED_MSGS" property="expiredMsgs" jdbcType="DECIMAL" />
+    <result column="DEQUEUED_MSG_LATENCY" property="dequeuedMsgLatency" jdbcType="DECIMAL" />
+    <result column="LAST_ENQUEUE_TIME" property="lastEnqueueTime" jdbcType="TIMESTAMP" />
+    <result column="LAST_DEQUEUE_TIME" property="lastDequeueTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

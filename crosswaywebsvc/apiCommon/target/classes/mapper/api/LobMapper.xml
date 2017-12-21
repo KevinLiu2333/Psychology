@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.LobMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Lob" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="COL#" property="col" jdbcType="DECIMAL" />
+    <result column="INTCOL#" property="intcol" jdbcType="DECIMAL" />
+    <result column="LOBJ#" property="lobj" jdbcType="DECIMAL" />
+    <result column="PART#" property="part" jdbcType="DECIMAL" />
+    <result column="IND#" property="ind" jdbcType="DECIMAL" />
+    <result column="TS#" property="ts" jdbcType="DECIMAL" />
+    <result column="FILE#" property="file" jdbcType="DECIMAL" />
+    <result column="BLOCK#" property="block" jdbcType="DECIMAL" />
+    <result column="CHUNK" property="chunk" jdbcType="DECIMAL" />
+    <result column="PCTVERSION$" property="pctversion" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="RETENTION" property="retention" jdbcType="DECIMAL" />
+    <result column="FREEPOOLS" property="freepools" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

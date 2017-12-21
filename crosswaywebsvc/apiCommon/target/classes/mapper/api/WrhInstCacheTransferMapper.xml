@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhInstCacheTransferMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhInstCacheTransfer" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="INSTANCE" property="instance" jdbcType="DECIMAL" />
+    <id column="CLASS" property="class" jdbcType="VARCHAR" />
+    <result column="CR_BLOCK" property="crBlock" jdbcType="DECIMAL" />
+    <result column="CR_BUSY" property="crBusy" jdbcType="DECIMAL" />
+    <result column="CR_CONGESTED" property="crCongested" jdbcType="DECIMAL" />
+    <result column="CURRENT_BLOCK" property="currentBlock" jdbcType="DECIMAL" />
+    <result column="CURRENT_BUSY" property="currentBusy" jdbcType="DECIMAL" />
+    <result column="CURRENT_CONGESTED" property="currentCongested" jdbcType="DECIMAL" />
+    <result column="LOST" property="lost" jdbcType="DECIMAL" />
+    <result column="CR_2HOP" property="cr2hop" jdbcType="DECIMAL" />
+    <result column="CR_3HOP" property="cr3hop" jdbcType="DECIMAL" />
+    <result column="CURRENT_2HOP" property="current2hop" jdbcType="DECIMAL" />
+    <result column="CURRENT_3HOP" property="current3hop" jdbcType="DECIMAL" />
+    <result column="CR_BLOCK_TIME" property="crBlockTime" jdbcType="DECIMAL" />
+    <result column="CR_BUSY_TIME" property="crBusyTime" jdbcType="DECIMAL" />
+    <result column="CR_CONGESTED_TIME" property="crCongestedTime" jdbcType="DECIMAL" />
+    <result column="CURRENT_BLOCK_TIME" property="currentBlockTime" jdbcType="DECIMAL" />
+    <result column="CURRENT_BUSY_TIME" property="currentBusyTime" jdbcType="DECIMAL" />
+    <result column="CURRENT_CONGESTED_TIME" property="currentCongestedTime" jdbcType="DECIMAL" />
+    <result column="LOST_TIME" property="lostTime" jdbcType="DECIMAL" />
+    <result column="CR_2HOP_TIME" property="cr2hopTime" jdbcType="DECIMAL" />
+    <result column="CR_3HOP_TIME" property="cr3hopTime" jdbcType="DECIMAL" />
+    <result column="CURRENT_2HOP_TIME" property="current2hopTime" jdbcType="DECIMAL" />
+    <result column="CURRENT_3HOP_TIME" property="current3hopTime" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

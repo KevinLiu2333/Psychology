@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowCompaniesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowCompanies" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="PROVISIONING_COMPANY_ID" property="provisioningCompanyId" jdbcType="DECIMAL" />
+    <result column="SHORT_NAME" property="shortName" jdbcType="VARCHAR" />
+    <result column="FIRST_SCHEMA_PROVISIONED" property="firstSchemaProvisioned" jdbcType="VARCHAR" />
+    <result column="ALLOW_PLSQL_EDITING" property="allowPlsqlEditing" jdbcType="VARCHAR" />
+    <result column="LAST_LOGIN" property="lastLogin" jdbcType="DATE" />
+    <result column="EXPIRE_FND_USER_ACCOUNTS" property="expireFndUserAccounts" jdbcType="VARCHAR" />
+    <result column="ACCOUNT_LIFETIME_DAYS" property="accountLifetimeDays" jdbcType="DECIMAL" />
+    <result column="FND_USER_MAX_LOGIN_FAILURES" property="fndUserMaxLoginFailures" jdbcType="DECIMAL" />
+    <result column="BUILDER_NOTIFICATION_MESSAGE" property="builderNotificationMessage" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

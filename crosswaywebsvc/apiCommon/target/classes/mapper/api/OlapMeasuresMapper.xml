@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OlapMeasuresMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OlapMeasures" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CUBE_OBJ#" property="cubeObj" jdbcType="DECIMAL" />
+    <result column="MEASURE_NAME" property="measureName" jdbcType="VARCHAR" />
+    <result column="MEASURE_ID" property="measureId" jdbcType="DECIMAL" />
+    <result column="MEASURE_TYPE" property="measureType" jdbcType="DECIMAL" />
+    <result column="TYPE#" property="type" jdbcType="DECIMAL" />
+    <result column="LENGTH" property="length" jdbcType="DECIMAL" />
+    <result column="CHARSETFORM" property="charsetform" jdbcType="DECIMAL" />
+    <result column="PRECISION#" property="precision" jdbcType="DECIMAL" />
+    <result column="SCALE" property="scale" jdbcType="DECIMAL" />
+    <result column="TYPE_PROPERTY" property="typeProperty" jdbcType="DECIMAL" />
+    <result column="IS_STALE" property="isStale" jdbcType="DECIMAL" />
+    <result column="IS_HIDDEN" property="isHidden" jdbcType="DECIMAL" />
+    <result column="MEASURE_ORDER" property="measureOrder" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="VARCHAR" />
+    <result column="SPARE4" property="spare4" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

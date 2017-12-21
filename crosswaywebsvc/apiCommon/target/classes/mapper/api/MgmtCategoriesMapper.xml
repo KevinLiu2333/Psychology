@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCategoriesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCategories" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="CLASS_NAME" property="className" jdbcType="VARCHAR" />
+    <id column="CATEGORY_NAME" property="categoryName" jdbcType="VARCHAR" />
+    <result column="CATEGORY_NAME_NLSID" property="categoryNameNlsid" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

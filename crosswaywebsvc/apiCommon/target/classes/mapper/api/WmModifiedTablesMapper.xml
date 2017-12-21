@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WmModifiedTablesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WmModifiedTables" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <id column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <id column="VERSION" property="version" jdbcType="DECIMAL" />
+    <result column="VTID" property="vtid" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

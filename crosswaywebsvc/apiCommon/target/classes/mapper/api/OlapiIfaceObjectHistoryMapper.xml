@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OlapiIfaceObjectHistoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OlapiIfaceObjectHistory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <id column="HIST_ID" property="histId" jdbcType="DECIMAL" />
+    <id column="SEQNO" property="seqno" jdbcType="DECIMAL" />
+    <result column="XSOQSEHI_SEQNO" property="xsoqsehiSeqno" jdbcType="DECIMAL" />
+    <result column="IFACE_NAME" property="ifaceName" jdbcType="VARCHAR" />
+    <result column="PARENT_SEQNO" property="parentSeqno" jdbcType="DECIMAL" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="XSOQOPHI_SEQNO" property="xsoqophiSeqno" jdbcType="DECIMAL" />
+    <result column="TOTSQL2CPP" property="totsql2cpp" jdbcType="DECIMAL" />
+    <result column="TOTCPPEXEC" property="totcppexec" jdbcType="DECIMAL" />
+    <result column="TOTCPP2SQL" property="totcpp2sql" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

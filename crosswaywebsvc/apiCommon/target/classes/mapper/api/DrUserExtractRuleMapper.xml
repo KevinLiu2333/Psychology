@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrUserExtractRuleMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrUserExtractRule" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ERL_POL_ID" property="erlPolId" jdbcType="DECIMAL" />
+    <id column="ERL_RULE_ID" property="erlRuleId" jdbcType="DECIMAL" />
+    <result column="ERL_LANGUAGE" property="erlLanguage" jdbcType="VARCHAR" />
+    <result column="ERL_RULE" property="erlRule" jdbcType="VARCHAR" />
+    <result column="ERL_MODIFIER" property="erlModifier" jdbcType="VARCHAR" />
+    <result column="ERL_TYPE" property="erlType" jdbcType="VARCHAR" />
+    <result column="ERL_STATUS" property="erlStatus" jdbcType="DECIMAL" />
+    <result column="ERL_COMMENTS" property="erlComments" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

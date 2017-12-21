@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserExpfilPredtabAttributesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserExpfilPredtabAttributes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDEX_NAME" property="indexName" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_ID" property="attributeId" jdbcType="DECIMAL" />
+    <result column="ATTRIBUTE_ALIAS" property="attributeAlias" jdbcType="VARCHAR" />
+    <result column="SUBEXPRESSION" property="subexpression" jdbcType="VARCHAR" />
+    <result column="DATA_TYPE" property="dataType" jdbcType="VARCHAR" />
+    <result column="STORED" property="stored" jdbcType="VARCHAR" />
+    <result column="INDEXED" property="indexed" jdbcType="VARCHAR" />
+    <result column="OPERATOR_LIST" property="operatorList" jdbcType="VARCHAR" />
+    <result column="XMLTYPE_ATTR" property="xmltypeAttr" jdbcType="VARCHAR" />
+    <result column="XPTAG_TYPE" property="xptagType" jdbcType="VARCHAR" />
+    <result column="XPFILTER_TYPE" property="xpfilterType" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

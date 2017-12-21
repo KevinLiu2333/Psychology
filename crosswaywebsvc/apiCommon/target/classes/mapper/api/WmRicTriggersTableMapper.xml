@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WmRicTriggersTableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WmRicTriggersTable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="PT_OWNER" property="ptOwner" jdbcType="VARCHAR" />
+    <id column="PT_NAME" property="ptName" jdbcType="VARCHAR" />
+    <id column="CT_OWNER" property="ctOwner" jdbcType="VARCHAR" />
+    <id column="CT_NAME" property="ctName" jdbcType="VARCHAR" />
+    <result column="UPDATE_TRIGGER_NAME" property="updateTriggerName" jdbcType="VARCHAR" />
+    <result column="DELETE_TRIGGER_NAME" property="deleteTriggerName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

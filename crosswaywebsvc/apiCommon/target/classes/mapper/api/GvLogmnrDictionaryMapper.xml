@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvLogmnrDictionaryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvLogmnrDictionary" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="DB_NAME" property="dbName" jdbcType="VARCHAR" />
+    <result column="DB_ID" property="dbId" jdbcType="DECIMAL" />
+    <result column="DB_CREATED" property="dbCreated" jdbcType="DATE" />
+    <result column="TIMESTAMP" property="timestamp" jdbcType="DATE" />
+    <result column="RESET_SCN" property="resetScn" jdbcType="DECIMAL" />
+    <result column="RESET_SCN_TIME" property="resetScnTime" jdbcType="DATE" />
+    <result column="DB_VERSION_TIME" property="dbVersionTime" jdbcType="DATE" />
+    <result column="DB_CHARACTER_SET" property="dbCharacterSet" jdbcType="VARCHAR" />
+    <result column="DB_VERSION" property="dbVersion" jdbcType="VARCHAR" />
+    <result column="DB_STATUS" property="dbStatus" jdbcType="VARCHAR" />
+    <result column="DICTIONARY_SCN" property="dictionaryScn" jdbcType="DECIMAL" />
+    <result column="DB_TXN_SCN" property="dbTxnScn" jdbcType="DECIMAL" />
+    <result column="FILENAME" property="filename" jdbcType="VARCHAR" />
+    <result column="INFO" property="info" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="ENABLED_THREAD_MAP" property="enabledThreadMap" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

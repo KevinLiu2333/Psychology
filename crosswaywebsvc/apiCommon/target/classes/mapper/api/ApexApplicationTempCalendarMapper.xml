@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationTempCalendarMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationTempCalendar" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="TEMPLATE_NAME" property="templateName" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="THEME_NUMBER" property="themeNumber" jdbcType="DECIMAL" />
+    <result column="THEME_CLASS" property="themeClass" jdbcType="VARCHAR" />
+    <result column="TRANSLATABLE" property="translatable" jdbcType="VARCHAR" />
+    <result column="IS_SUBSCRIBED" property="isSubscribed" jdbcType="VARCHAR" />
+    <result column="SUBSCRIBED_FROM" property="subscribedFrom" jdbcType="VARCHAR" />
+    <result column="MONTH_TITLE_FORMAT" property="monthTitleFormat" jdbcType="VARCHAR" />
+    <result column="DAY_OF_WEEK_FORMAT" property="dayOfWeekFormat" jdbcType="VARCHAR" />
+    <result column="MONTH_OPEN_FORMAT" property="monthOpenFormat" jdbcType="VARCHAR" />
+    <result column="MONTH_CLOSE_FORMAT" property="monthCloseFormat" jdbcType="VARCHAR" />
+    <result column="DAY_TITLE_FORMAT" property="dayTitleFormat" jdbcType="VARCHAR" />
+    <result column="DAY_OPEN_FORMAT" property="dayOpenFormat" jdbcType="VARCHAR" />
+    <result column="DAY_CLOSE_FORMAT" property="dayCloseFormat" jdbcType="VARCHAR" />
+    <result column="TODAY_OPEN_FORMAT" property="todayOpenFormat" jdbcType="VARCHAR" />
+    <result column="WEEKEND_TITLE_FORMAT" property="weekendTitleFormat" jdbcType="VARCHAR" />
+    <result column="WEEKEND_OPEN_FORMAT" property="weekendOpenFormat" jdbcType="VARCHAR" />
+    <result column="WEEKEND_CLOSE_FORMAT" property="weekendCloseFormat" jdbcType="VARCHAR" />
+    <result column="NONDAY_TITLE_FORMAT" property="nondayTitleFormat" jdbcType="VARCHAR" />
+    <result column="NONDAY_OPEN_FORMAT" property="nondayOpenFormat" jdbcType="VARCHAR" />
+    <result column="NONDAY_CLOSE_FORMAT" property="nondayCloseFormat" jdbcType="VARCHAR" />
+    <result column="WEEK_TITLE_FORMAT" property="weekTitleFormat" jdbcType="VARCHAR" />
+    <result column="WEEK_OPEN_FORMAT" property="weekOpenFormat" jdbcType="VARCHAR" />
+    <result column="WEEK_CLOSE_FORMAT" property="weekCloseFormat" jdbcType="VARCHAR" />
+    <result column="DAILY_TITLE_FORMAT" property="dailyTitleFormat" jdbcType="VARCHAR" />
+    <result column="DAILY_OPEN_FORMAT" property="dailyOpenFormat" jdbcType="VARCHAR" />
+    <result column="DAILY_CLOSE_FORMAT" property="dailyCloseFormat" jdbcType="VARCHAR" />
+    <result column="WEEKLY_TITLE_FORMAT" property="weeklyTitleFormat" jdbcType="VARCHAR" />
+    <result column="WEEKLY_DAY_OF_WEEK_FORMAT" property="weeklyDayOfWeekFormat" jdbcType="VARCHAR" />
+    <result column="WEEKLY_MONTH_OPEN_FORMAT" property="weeklyMonthOpenFormat" jdbcType="VARCHAR" />
+    <result column="WEEKLY_MONTH_CLOSE_FORMAT" property="weeklyMonthCloseFormat" jdbcType="VARCHAR" />
+    <result column="WEEKLY_DAY_TITLE_FORMAT" property="weeklyDayTitleFormat" jdbcType="VARCHAR" />
+    <result column="WEEKLY_DAY_OPEN_FORMAT" property="weeklyDayOpenFormat" jdbcType="VARCHAR" />
+    <result column="WEEKLY_DAY_CLOSE_FORMAT" property="weeklyDayCloseFormat" jdbcType="VARCHAR" />
+    <result column="WEEKLY_TODAY_OPEN_FORMAT" property="weeklyTodayOpenFormat" jdbcType="VARCHAR" />
+    <result column="WEEKLY_WEEKEND_TITLE_FORMAT" property="weeklyWeekendTitleFormat" jdbcType="VARCHAR" />
+    <result column="WEEKLY_WEEKEND_OPEN_FORMAT" property="weeklyWeekendOpenFormat" jdbcType="VARCHAR" />
+    <result column="WEEKLY_WEEKEND_CLOSE_FORMAT" property="weeklyWeekendCloseFormat" jdbcType="VARCHAR" />
+    <result column="WEEKLY_TIME_OPEN_FORMAT" property="weeklyTimeOpenFormat" jdbcType="VARCHAR" />
+    <result column="WEEKLY_TIME_CLOSE_FORMAT" property="weeklyTimeCloseFormat" jdbcType="VARCHAR" />
+    <result column="WEEKLY_TIME_TITLE_FORMAT" property="weeklyTimeTitleFormat" jdbcType="VARCHAR" />
+    <result column="WEEKLY_HOUR_OPEN_FORMAT" property="weeklyHourOpenFormat" jdbcType="VARCHAR" />
+    <result column="WEEKLY_HOUR_CLOSE_FORMAT" property="weeklyHourCloseFormat" jdbcType="VARCHAR" />
+    <result column="DAILY_DAY_OF_WEEK_FORMAT" property="dailyDayOfWeekFormat" jdbcType="VARCHAR" />
+    <result column="DAILY_MONTH_TITLE_FORMAT" property="dailyMonthTitleFormat" jdbcType="VARCHAR" />
+    <result column="DAILY_MONTH_OPEN_FORMAT" property="dailyMonthOpenFormat" jdbcType="VARCHAR" />
+    <result column="DAILY_MONTH_CLOSE_FORMAT" property="dailyMonthCloseFormat" jdbcType="VARCHAR" />
+    <result column="DAILY_DAY_TITLE_FORMAT" property="dailyDayTitleFormat" jdbcType="VARCHAR" />
+    <result column="DAILY_DAY_OPEN_FORMAT" property="dailyDayOpenFormat" jdbcType="VARCHAR" />
+    <result column="DAILY_DAY_CLOSE_FORMAT" property="dailyDayCloseFormat" jdbcType="VARCHAR" />
+    <result column="DAILY_TODAY_OPEN_FORMAT" property="dailyTodayOpenFormat" jdbcType="VARCHAR" />
+    <result column="DAILY_TIME_OPEN_FORMAT" property="dailyTimeOpenFormat" jdbcType="VARCHAR" />
+    <result column="DAILY_TIME_CLOSE_FORMAT" property="dailyTimeCloseFormat" jdbcType="VARCHAR" />
+    <result column="DAILY_TIME_TITLE_FORMAT" property="dailyTimeTitleFormat" jdbcType="VARCHAR" />
+    <result column="DAILY_HOUR_OPEN_FORMAT" property="dailyHourOpenFormat" jdbcType="VARCHAR" />
+    <result column="DAILY_HOUR_CLOSE_FORMAT" property="dailyHourCloseFormat" jdbcType="VARCHAR" />
+    <result column="COMPONENT_COMMENT" property="componentComment" jdbcType="VARCHAR" />
+    <result column="CALENDAR_TEMPLATE_ID" property="calendarTemplateId" jdbcType="DECIMAL" />
+    <result column="COMPONENT_SIGNATURE" property="componentSignature" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

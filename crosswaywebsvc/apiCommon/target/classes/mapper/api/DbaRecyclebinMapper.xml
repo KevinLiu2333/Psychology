@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaRecyclebinMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaRecyclebin" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="ORIGINAL_NAME" property="originalName" jdbcType="VARCHAR" />
+    <result column="OPERATION" property="operation" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="TS_NAME" property="tsName" jdbcType="VARCHAR" />
+    <result column="CREATETIME" property="createtime" jdbcType="VARCHAR" />
+    <result column="DROPTIME" property="droptime" jdbcType="VARCHAR" />
+    <result column="DROPSCN" property="dropscn" jdbcType="DECIMAL" />
+    <result column="PARTITION_NAME" property="partitionName" jdbcType="VARCHAR" />
+    <result column="CAN_UNDROP" property="canUndrop" jdbcType="VARCHAR" />
+    <result column="CAN_PURGE" property="canPurge" jdbcType="VARCHAR" />
+    <result column="RELATED" property="related" jdbcType="DECIMAL" />
+    <result column="BASE_OBJECT" property="baseObject" jdbcType="DECIMAL" />
+    <result column="PURGE_OBJECT" property="purgeObject" jdbcType="DECIMAL" />
+    <result column="SPACE" property="space" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

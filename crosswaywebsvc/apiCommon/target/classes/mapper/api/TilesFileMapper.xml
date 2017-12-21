@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TilesFileMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.TilesFile">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FILE_ID" jdbcType="VARCHAR" property="fileId" />
+    <result column="FILE_SUFFIX" jdbcType="VARCHAR" property="fileSuffix" />
+    <result column="FILE_BUS_ID" jdbcType="VARCHAR" property="fileBusId" />
+    <result column="FILE_BUS_TYPE" jdbcType="VARCHAR" property="fileBusType" />
+    <result column="FILE_NAME" jdbcType="VARCHAR" property="fileName" />
+    <result column="FILE_PATH" jdbcType="VARCHAR" property="filePath" />
+    <result column="FILE_CREATE_TIME" jdbcType="DATE" property="fileCreateTime" />
+    <result column="PLATFORM_CODE" jdbcType="VARCHAR" property="platformCode" />
+    <result column="SAVE_TYPE" jdbcType="VARCHAR" property="saveType" />
+  </resultMap>
+</mapper>

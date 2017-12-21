@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtEcmHwMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtEcmHw" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ECM_SNAPSHOT_ID" property="ecmSnapshotId" jdbcType="VARBINARY" />
+    <result column="HOSTNAME" property="hostname" jdbcType="VARCHAR" />
+    <result column="DOMAIN" property="domain" jdbcType="VARCHAR" />
+    <result column="VENDOR_NAME" property="vendorName" jdbcType="VARCHAR" />
+    <result column="SYSTEM_CONFIG" property="systemConfig" jdbcType="VARCHAR" />
+    <result column="MACHINE_ARCHITECTURE" property="machineArchitecture" jdbcType="VARCHAR" />
+    <result column="CLOCK_FREQ_IN_MHZ" property="clockFreqInMhz" jdbcType="DECIMAL" />
+    <result column="MEMORY_SIZE_IN_MB" property="memorySizeInMb" jdbcType="DECIMAL" />
+    <result column="AVAIL_MEMORY_SIZE_IN_MB" property="availMemorySizeInMb" jdbcType="DECIMAL" />
+    <result column="LOCAL_DISK_SPACE_IN_GB" property="localDiskSpaceInGb" jdbcType="DECIMAL" />
+    <result column="AVAIL_LOCAL_DISK_SPACE_IN_GB" property="availLocalDiskSpaceInGb" jdbcType="DECIMAL" />
+    <result column="CPU_COUNT" property="cpuCount" jdbcType="DECIMAL" />
+    <result column="CPU_BOARD_COUNT" property="cpuBoardCount" jdbcType="DECIMAL" />
+    <result column="IOCARD_COUNT" property="iocardCount" jdbcType="DECIMAL" />
+    <result column="FAN_COUNT" property="fanCount" jdbcType="DECIMAL" />
+    <result column="POWER_SUPPLY_COUNT" property="powerSupplyCount" jdbcType="DECIMAL" />
+    <result column="BOOT_DISK_VOLUME_SERIAL_NUM" property="bootDiskVolumeSerialNum" jdbcType="VARCHAR" />
+    <result column="SYSTEM_BIOS" property="systemBios" jdbcType="VARCHAR" />
+    <result column="SYSTEM_SERIAL_NUMBER" property="systemSerialNumber" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvSharedServerMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvSharedServer" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="MESSAGES" property="messages" jdbcType="DECIMAL" />
+    <result column="BYTES" property="bytes" jdbcType="DECIMAL" />
+    <result column="BREAKS" property="breaks" jdbcType="DECIMAL" />
+    <result column="IDLE" property="idle" jdbcType="DECIMAL" />
+    <result column="BUSY" property="busy" jdbcType="DECIMAL" />
+    <result column="IN_NET" property="inNet" jdbcType="DECIMAL" />
+    <result column="OUT_NET" property="outNet" jdbcType="DECIMAL" />
+    <result column="REQUESTS" property="requests" jdbcType="DECIMAL" />
+    <result column="PADDR" property="paddr" jdbcType="VARBINARY" />
+    <result column="CIRCUIT" property="circuit" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

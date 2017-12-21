@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowImportExportMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowImportExport" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="DATA_ID" property="dataId" jdbcType="DECIMAL" />
+    <result column="JOB_ID" property="jobId" jdbcType="DECIMAL" />
+    <result column="PARMS" property="parms" jdbcType="VARCHAR" />
+    <result column="SCHEMA_NAME" property="schemaName" jdbcType="VARCHAR" />
+    <result column="RUN_MODE" property="runMode" jdbcType="VARCHAR" />
+    <result column="TIMEOUT" property="timeout" jdbcType="DECIMAL" />
+    <result column="RETURN_CODE" property="returnCode" jdbcType="DECIMAL" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="CREATED_BY_ID" property="createdById" jdbcType="DECIMAL" />
+    <result column="STARTED" property="started" jdbcType="DATE" />
+    <result column="ENDED" property="ended" jdbcType="DATE" />
+    <result column="RESULT" property="result" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

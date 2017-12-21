@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowThemesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowThemes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="THEME_ID" property="themeId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="THEME_NAME" property="themeName" jdbcType="VARCHAR" />
+    <result column="DEFAULT_PAGE_TEMPLATE" property="defaultPageTemplate" jdbcType="DECIMAL" />
+    <result column="ERROR_TEMPLATE" property="errorTemplate" jdbcType="DECIMAL" />
+    <result column="PRINTER_FRIENDLY_TEMPLATE" property="printerFriendlyTemplate" jdbcType="DECIMAL" />
+    <result column="BREADCRUMB_DISPLAY_POINT" property="breadcrumbDisplayPoint" jdbcType="VARCHAR" />
+    <result column="SIDEBAR_DISPLAY_POINT" property="sidebarDisplayPoint" jdbcType="VARCHAR" />
+    <result column="LOGIN_TEMPLATE" property="loginTemplate" jdbcType="DECIMAL" />
+    <result column="DEFAULT_BUTTON_TEMPLATE" property="defaultButtonTemplate" jdbcType="DECIMAL" />
+    <result column="DEFAULT_REGION_TEMPLATE" property="defaultRegionTemplate" jdbcType="DECIMAL" />
+    <result column="DEFAULT_CHART_TEMPLATE" property="defaultChartTemplate" jdbcType="DECIMAL" />
+    <result column="DEFAULT_FORM_TEMPLATE" property="defaultFormTemplate" jdbcType="DECIMAL" />
+    <result column="DEFAULT_REPORTR_TEMPLATE" property="defaultReportrTemplate" jdbcType="DECIMAL" />
+    <result column="DEFAULT_TABFORM_TEMPLATE" property="defaultTabformTemplate" jdbcType="DECIMAL" />
+    <result column="DEFAULT_WIZARD_TEMPLATE" property="defaultWizardTemplate" jdbcType="DECIMAL" />
+    <result column="DEFAULT_MENUR_TEMPLATE" property="defaultMenurTemplate" jdbcType="DECIMAL" />
+    <result column="DEFAULT_LISTR_TEMPLATE" property="defaultListrTemplate" jdbcType="DECIMAL" />
+    <result column="DEFAULT_REPORT_TEMPLATE" property="defaultReportTemplate" jdbcType="DECIMAL" />
+    <result column="DEFAULT_LABEL_TEMPLATE" property="defaultLabelTemplate" jdbcType="DECIMAL" />
+    <result column="DEFAULT_MENU_TEMPLATE" property="defaultMenuTemplate" jdbcType="DECIMAL" />
+    <result column="DEFAULT_CALENDAR_TEMPLATE" property="defaultCalendarTemplate" jdbcType="DECIMAL" />
+    <result column="DEFAULT_LIST_TEMPLATE" property="defaultListTemplate" jdbcType="DECIMAL" />
+    <result column="DEFAULT_OPTION_LABEL" property="defaultOptionLabel" jdbcType="DECIMAL" />
+    <result column="DEFAULT_REQUIRED_LABEL" property="defaultRequiredLabel" jdbcType="DECIMAL" />
+    <result column="THEME_DESCRIPTION" property="themeDescription" jdbcType="VARCHAR" />
+    <result column="THEME_IMAGE_MIME_TYPE" property="themeImageMimeType" jdbcType="VARCHAR" />
+    <result column="CUSTOM_IMAGE" property="customImage" jdbcType="VARCHAR" />
+    <result column="THEME_SECURITY_GROUP_ID" property="themeSecurityGroupId" jdbcType="DECIMAL" />
+    <result column="CALENDAR_ICON" property="calendarIcon" jdbcType="VARCHAR" />
+    <result column="CALENDAR_ICON_ATTR" property="calendarIconAttr" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="THEME_IMAGE" property="themeImage" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

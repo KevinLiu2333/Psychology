@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCollectionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCollections" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OBJECT_GUID" property="objectGuid" jdbcType="VARBINARY" />
+    <id column="COLL_NAME" property="collName" jdbcType="VARCHAR" />
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="DECIMAL" />
+    <result column="IS_ENABLED" property="isEnabled" jdbcType="DECIMAL" />
+    <result column="SCHEDULE_EX" property="scheduleEx" jdbcType="VARCHAR" />
+    <result column="STORE_METRIC" property="storeMetric" jdbcType="DECIMAL" />
+    <result column="UPLOAD_FREQUENCY" property="uploadFrequency" jdbcType="DECIMAL" />
+    <result column="IS_TRANSIENT" property="isTransient" jdbcType="DECIMAL" />
+    <result column="FREQUENCY_CODE" property="frequencyCode" jdbcType="DECIMAL" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="EXECUTION_HOURS" property="executionHours" jdbcType="DECIMAL" />
+    <result column="EXECUTION_MINUTES" property="executionMinutes" jdbcType="DECIMAL" />
+    <result column="INTERVAL" property="interval" jdbcType="DECIMAL" />
+    <result column="MONTHS" property="months" jdbcType="OTHER" />
+    <result column="DAYS" property="days" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

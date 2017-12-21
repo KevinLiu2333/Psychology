@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VAshInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VAshInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TOTAL_SIZE" property="totalSize" jdbcType="DECIMAL" />
+    <result column="FIXED_SIZE" property="fixedSize" jdbcType="DECIMAL" />
+    <result column="SAMPLING_INTERVAL" property="samplingInterval" jdbcType="DECIMAL" />
+    <result column="OLDEST_SAMPLE_ID" property="oldestSampleId" jdbcType="DECIMAL" />
+    <result column="OLDEST_SAMPLE_TIME" property="oldestSampleTime" jdbcType="OTHER" />
+    <result column="LATEST_SAMPLE_ID" property="latestSampleId" jdbcType="DECIMAL" />
+    <result column="LATEST_SAMPLE_TIME" property="latestSampleTime" jdbcType="OTHER" />
+    <result column="SAMPLE_COUNT" property="sampleCount" jdbcType="DECIMAL" />
+    <result column="SAMPLED_BYTES" property="sampledBytes" jdbcType="DECIMAL" />
+    <result column="SAMPLER_ELAPSED_TIME" property="samplerElapsedTime" jdbcType="DECIMAL" />
+    <result column="DISK_FILTER_RATIO" property="diskFilterRatio" jdbcType="DECIMAL" />
+    <result column="AWR_FLUSH_BYTES" property="awrFlushBytes" jdbcType="DECIMAL" />
+    <result column="AWR_FLUSH_ELAPSED_TIME" property="awrFlushElapsedTime" jdbcType="DECIMAL" />
+    <result column="AWR_FLUSH_COUNT" property="awrFlushCount" jdbcType="DECIMAL" />
+    <result column="AWR_FLUSH_EMERGENCY_COUNT" property="awrFlushEmergencyCount" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

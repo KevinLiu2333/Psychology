@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtNestedJobCredInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtNestedJobCredInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="JOB_TYPE_ID" property="jobTypeId" jdbcType="VARBINARY" />
+    <id column="NESTED_JOB_NAME" property="nestedJobName" jdbcType="VARCHAR" />
+    <id column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <id column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <id column="CONTAINER_LOCATION" property="containerLocation" jdbcType="VARCHAR" />
+    <id column="CREDENTIAL_SET_NAME" property="credentialSetName" jdbcType="VARCHAR" />
+    <result column="PDP_DATA" property="pdpData" jdbcType="VARCHAR" />
+    <result column="CREDENTIAL_GUID" property="credentialGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

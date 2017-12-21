@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhSqlSummaryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhSqlSummary" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="TOTAL_SQL" property="totalSql" jdbcType="DECIMAL" />
+    <result column="TOTAL_SQL_MEM" property="totalSqlMem" jdbcType="DECIMAL" />
+    <result column="SINGLE_USE_SQL" property="singleUseSql" jdbcType="DECIMAL" />
+    <result column="SINGLE_USE_SQL_MEM" property="singleUseSqlMem" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

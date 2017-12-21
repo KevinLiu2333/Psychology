@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtBamIsessionDiagMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtBamIsessionDiag" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SESSION_GUID" property="sessionGuid" jdbcType="VARBINARY" />
+    <id column="DATA_TYPE" property="dataType" jdbcType="DECIMAL" />
+    <result column="LAST_RECEIVED_TIMESTAMP" property="lastReceivedTimestamp" jdbcType="DATE" />
+    <result column="NUMBER_RECEIVED" property="numberReceived" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

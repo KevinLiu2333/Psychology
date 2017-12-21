@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCmBaselineObjgrantsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCmBaselineObjgrants" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FIRST_VERSION" property="firstVersion" jdbcType="DECIMAL" />
+    <result column="LAST_VERSION" property="lastVersion" jdbcType="DECIMAL" />
+    <result column="GRANTEE_NAME" property="granteeName" jdbcType="VARCHAR" />
+    <result column="OBJ_OWNER" property="objOwner" jdbcType="VARCHAR" />
+    <result column="OBJ_NAME" property="objName" jdbcType="VARCHAR" />
+    <result column="COL_NAME" property="colName" jdbcType="VARCHAR" />
+    <result column="GRANTOR_NAME" property="grantorName" jdbcType="VARCHAR" />
+    <result column="PRIVILEGE" property="privilege" jdbcType="VARCHAR" />
+    <result column="FLAG" property="flag" jdbcType="DECIMAL" />
+    <result column="OBJ_TYPE" property="objType" jdbcType="DECIMAL" />
+    <result column="BASELINE_GUID" property="baselineGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

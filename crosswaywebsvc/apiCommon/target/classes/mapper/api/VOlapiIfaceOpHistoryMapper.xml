@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VOlapiIfaceOpHistoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VOlapiIfaceOpHistory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HIST_ID" property="histId" jdbcType="DECIMAL" />
+    <result column="SEQNO" property="seqno" jdbcType="DECIMAL" />
+    <result column="XSOQOJHI_SEQNO" property="xsoqojhiSeqno" jdbcType="DECIMAL" />
+    <result column="METHOD_NAME" property="methodName" jdbcType="VARCHAR" />
+    <result column="RPCSTYLE" property="rpcstyle" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="SQL2CPP_TIME" property="sql2cppTime" jdbcType="DECIMAL" />
+    <result column="CPPEXEC_TIME" property="cppexecTime" jdbcType="DECIMAL" />
+    <result column="CPP2SQL_TIME" property="cpp2sqlTime" jdbcType="DECIMAL" />
+    <result column="GLOBAL_HEAP_SIZE" property="globalHeapSize" jdbcType="DECIMAL" />
+    <result column="GLOBAL_HEAP_ALLOCATED_SIZE" property="globalHeapAllocatedSize" jdbcType="DECIMAL" />
+    <result column="GLOBAL_HEAP_NONPERM_SIZE" property="globalHeapNonpermSize" jdbcType="DECIMAL" />
+    <result column="SESSION_HEAP_ALLOCATED_SIZE" property="sessionHeapAllocatedSize" jdbcType="DECIMAL" />
+    <result column="SESSION_HEAP_NONPERM_SIZE" property="sessionHeapNonpermSize" jdbcType="DECIMAL" />
+    <result column="GLOBAL_HEAP" property="globalHeap" jdbcType="VARBINARY" />
+    <result column="SESSION_HEAP_SIZE" property="sessionHeapSize" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

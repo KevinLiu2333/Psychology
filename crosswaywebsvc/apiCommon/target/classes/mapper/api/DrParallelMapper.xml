@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrParallelMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrParallel" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="P_IDX_ID" property="pIdxId" jdbcType="DECIMAL" />
+    <id column="P_SLAVE_ID" property="pSlaveId" jdbcType="DECIMAL" />
+    <result column="P_JOB" property="pJob" jdbcType="DECIMAL" />
+    <result column="P_PARTITION" property="pPartition" jdbcType="VARCHAR" />
+    <result column="P_STATUS" property="pStatus" jdbcType="VARCHAR" />
+    <result column="P_ERROR" property="pError" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

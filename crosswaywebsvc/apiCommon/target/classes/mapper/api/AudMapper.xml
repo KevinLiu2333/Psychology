@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AudMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Aud" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SESSIONID" property="sessionid" jdbcType="DECIMAL" />
+    <result column="ENTRYID" property="entryid" jdbcType="DECIMAL" />
+    <result column="STATEMENT" property="statement" jdbcType="DECIMAL" />
+    <result column="TIMESTAMP#" property="timestamp" jdbcType="DATE" />
+    <result column="USERID" property="userid" jdbcType="VARCHAR" />
+    <result column="USERHOST" property="userhost" jdbcType="VARCHAR" />
+    <result column="TERMINAL" property="terminal" jdbcType="VARCHAR" />
+    <result column="ACTION#" property="action" jdbcType="DECIMAL" />
+    <result column="RETURNCODE" property="returncode" jdbcType="DECIMAL" />
+    <result column="OBJ$CREATOR" property="objCreator" jdbcType="VARCHAR" />
+    <result column="OBJ$NAME" property="objName" jdbcType="VARCHAR" />
+    <result column="AUTH$PRIVILEGES" property="authPrivileges" jdbcType="VARCHAR" />
+    <result column="AUTH$GRANTEE" property="authGrantee" jdbcType="VARCHAR" />
+    <result column="NEW$OWNER" property="newOwner" jdbcType="VARCHAR" />
+    <result column="NEW$NAME" property="newName" jdbcType="VARCHAR" />
+    <result column="SES$ACTIONS" property="sesActions" jdbcType="VARCHAR" />
+    <result column="SES$TID" property="sesTid" jdbcType="DECIMAL" />
+    <result column="LOGOFF$LREAD" property="logoffLread" jdbcType="DECIMAL" />
+    <result column="LOGOFF$PREAD" property="logoffPread" jdbcType="DECIMAL" />
+    <result column="LOGOFF$LWRITE" property="logoffLwrite" jdbcType="DECIMAL" />
+    <result column="LOGOFF$DEAD" property="logoffDead" jdbcType="DECIMAL" />
+    <result column="LOGOFF$TIME" property="logoffTime" jdbcType="DATE" />
+    <result column="COMMENT$TEXT" property="commentText" jdbcType="VARCHAR" />
+    <result column="CLIENTID" property="clientid" jdbcType="VARCHAR" />
+    <result column="SPARE1" property="spare1" jdbcType="VARCHAR" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="PRIV$USED" property="privUsed" jdbcType="DECIMAL" />
+    <result column="SESSIONCPU" property="sessioncpu" jdbcType="DECIMAL" />
+    <result column="NTIMESTAMP#" property="ntimestamp" jdbcType="TIMESTAMP" />
+    <result column="PROXY$SID" property="proxySid" jdbcType="DECIMAL" />
+    <result column="USER$GUID" property="userGuid" jdbcType="VARCHAR" />
+    <result column="INSTANCE#" property="instance" jdbcType="DECIMAL" />
+    <result column="PROCESS#" property="process" jdbcType="VARCHAR" />
+    <result column="AUDITID" property="auditid" jdbcType="VARCHAR" />
+    <result column="SCN" property="scn" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="OBJ$EDITION" property="objEdition" jdbcType="VARCHAR" />
+    <result column="OBJ$LABEL" property="objLabel" jdbcType="VARBINARY" />
+    <result column="SES$LABEL" property="sesLabel" jdbcType="VARBINARY" />
+    <result column="XID" property="xid" jdbcType="VARBINARY" />
+    <result column="SQLBIND" property="sqlbind" jdbcType="CLOB" />
+    <result column="SQLTEXT" property="sqltext" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

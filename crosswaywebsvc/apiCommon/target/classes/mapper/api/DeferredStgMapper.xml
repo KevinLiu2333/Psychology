@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DeferredStgMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DeferredStg" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="PCTFREE_STG" property="pctfreeStg" jdbcType="DECIMAL" />
+    <result column="PCTUSED_STG" property="pctusedStg" jdbcType="DECIMAL" />
+    <result column="SIZE_STG" property="sizeStg" jdbcType="DECIMAL" />
+    <result column="INITIAL_STG" property="initialStg" jdbcType="DECIMAL" />
+    <result column="NEXT_STG" property="nextStg" jdbcType="DECIMAL" />
+    <result column="MINEXT_STG" property="minextStg" jdbcType="DECIMAL" />
+    <result column="MAXEXT_STG" property="maxextStg" jdbcType="DECIMAL" />
+    <result column="MAXSIZ_STG" property="maxsizStg" jdbcType="DECIMAL" />
+    <result column="LOBRET_STG" property="lobretStg" jdbcType="DECIMAL" />
+    <result column="MINTIM_STG" property="mintimStg" jdbcType="DECIMAL" />
+    <result column="PCTINC_STG" property="pctincStg" jdbcType="DECIMAL" />
+    <result column="INITRA_STG" property="initraStg" jdbcType="DECIMAL" />
+    <result column="MAXTRA_STG" property="maxtraStg" jdbcType="DECIMAL" />
+    <result column="OPTIMAL_STG" property="optimalStg" jdbcType="DECIMAL" />
+    <result column="MAXINS_STG" property="maxinsStg" jdbcType="DECIMAL" />
+    <result column="FRLINS_STG" property="frlinsStg" jdbcType="DECIMAL" />
+    <result column="FLAGS_STG" property="flagsStg" jdbcType="DECIMAL" />
+    <result column="BFP_STG" property="bfpStg" jdbcType="DECIMAL" />
+    <result column="ENC_STG" property="encStg" jdbcType="DECIMAL" />
+    <result column="CMPFLAG_STG" property="cmpflagStg" jdbcType="DECIMAL" />
+    <result column="CMPLVL_STG" property="cmplvlStg" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

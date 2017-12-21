@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllSchedulerSchedulesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllSchedulerSchedules" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="SCHEDULE_NAME" property="scheduleName" jdbcType="VARCHAR" />
+    <result column="SCHEDULE_TYPE" property="scheduleType" jdbcType="VARCHAR" />
+    <result column="START_DATE" property="startDate" jdbcType="OTHER" />
+    <result column="REPEAT_INTERVAL" property="repeatInterval" jdbcType="VARCHAR" />
+    <result column="EVENT_QUEUE_OWNER" property="eventQueueOwner" jdbcType="VARCHAR" />
+    <result column="EVENT_QUEUE_NAME" property="eventQueueName" jdbcType="VARCHAR" />
+    <result column="EVENT_QUEUE_AGENT" property="eventQueueAgent" jdbcType="VARCHAR" />
+    <result column="EVENT_CONDITION" property="eventCondition" jdbcType="VARCHAR" />
+    <result column="FILE_WATCHER_OWNER" property="fileWatcherOwner" jdbcType="VARCHAR" />
+    <result column="FILE_WATCHER_NAME" property="fileWatcherName" jdbcType="VARCHAR" />
+    <result column="END_DATE" property="endDate" jdbcType="OTHER" />
+    <result column="COMMENTS" property="comments" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

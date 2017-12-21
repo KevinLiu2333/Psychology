@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowReportLayoutsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowReportLayouts" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="REPORT_LAYOUT_NAME" property="reportLayoutName" jdbcType="VARCHAR" />
+    <result column="REPORT_LAYOUT_TYPE" property="reportLayoutType" jdbcType="VARCHAR" />
+    <result column="XSLFO_COLUMN_HEADING_TEMPLATE" property="xslfoColumnHeadingTemplate" jdbcType="VARCHAR" />
+    <result column="XSLFO_COLUMN_TEMPLATE" property="xslfoColumnTemplate" jdbcType="VARCHAR" />
+    <result column="XSLFO_COLUMN_TEMPLATE_WIDTH" property="xslfoColumnTemplateWidth" jdbcType="VARCHAR" />
+    <result column="REFERENCE_ID" property="referenceId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="REPORT_LAYOUT_COMMENT" property="reportLayoutComment" jdbcType="VARCHAR" />
+    <result column="PAGE_TEMPLATE" property="pageTemplate" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

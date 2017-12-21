@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtIpEmailReportMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtIpEmailReport" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="EMAIL_ENABLED" property="emailEnabled" jdbcType="DECIMAL" />
+    <result column="EMAIL_SUBJECT" property="emailSubject" jdbcType="VARCHAR" />
+    <result column="EMAIL_SENDER" property="emailSender" jdbcType="VARCHAR" />
+    <result column="EMAIL_RECIPIENTS" property="emailRecipients" jdbcType="VARCHAR" />
+    <result column="REPORT_GUID" property="reportGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

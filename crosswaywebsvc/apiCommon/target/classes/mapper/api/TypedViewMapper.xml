@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TypedViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.TypedView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="TYPEOWNER" property="typeowner" jdbcType="VARCHAR" />
+    <result column="TYPENAME" property="typename" jdbcType="VARCHAR" />
+    <result column="TYPETEXTLENGTH" property="typetextlength" jdbcType="DECIMAL" />
+    <result column="TYPETEXT" property="typetext" jdbcType="VARCHAR" />
+    <result column="OIDTEXTLENGTH" property="oidtextlength" jdbcType="DECIMAL" />
+    <result column="OIDTEXT" property="oidtext" jdbcType="VARCHAR" />
+    <result column="TRANSTEXTLENGTH" property="transtextlength" jdbcType="DECIMAL" />
+    <result column="UNDERTEXTLENGTH" property="undertextlength" jdbcType="DECIMAL" />
+    <result column="UNDERTEXT" property="undertext" jdbcType="VARCHAR" />
+    <result column="TRANSTEXT" property="transtext" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

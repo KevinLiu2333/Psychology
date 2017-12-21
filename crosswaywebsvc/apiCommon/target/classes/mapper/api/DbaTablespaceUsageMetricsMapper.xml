@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaTablespaceUsageMetricsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaTablespaceUsageMetrics" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TABLESPACE_NAME" property="tablespaceName" jdbcType="VARCHAR" />
+    <result column="USED_SPACE" property="usedSpace" jdbcType="DECIMAL" />
+    <result column="TABLESPACE_SIZE" property="tablespaceSize" jdbcType="DECIMAL" />
+    <result column="USED_PERCENT" property="usedPercent" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

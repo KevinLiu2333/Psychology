@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Cwm2AwdimcreateaccessMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Cwm2Awdimcreateaccess" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RUNID#" property="runid" jdbcType="DECIMAL" />
+    <result column="DIM_OWNER" property="dimOwner" jdbcType="VARCHAR" />
+    <result column="DIM_NAME" property="dimName" jdbcType="VARCHAR" />
+    <result column="PROCESSACTION" property="processaction" jdbcType="VARCHAR" />
+    <result column="QUERY_TEXT" property="queryText" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

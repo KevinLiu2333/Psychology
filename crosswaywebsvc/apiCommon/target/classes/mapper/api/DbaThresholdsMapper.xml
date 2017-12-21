@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaThresholdsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaThresholds" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="METRICS_NAME" property="metricsName" jdbcType="VARCHAR" />
+    <result column="WARNING_OPERATOR" property="warningOperator" jdbcType="VARCHAR" />
+    <result column="WARNING_VALUE" property="warningValue" jdbcType="VARCHAR" />
+    <result column="CRITICAL_OPERATOR" property="criticalOperator" jdbcType="VARCHAR" />
+    <result column="CRITICAL_VALUE" property="criticalValue" jdbcType="VARCHAR" />
+    <result column="OBSERVATION_PERIOD" property="observationPeriod" jdbcType="DECIMAL" />
+    <result column="CONSECUTIVE_OCCURRENCES" property="consecutiveOccurrences" jdbcType="DECIMAL" />
+    <result column="INSTANCE_NAME" property="instanceName" jdbcType="VARCHAR" />
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

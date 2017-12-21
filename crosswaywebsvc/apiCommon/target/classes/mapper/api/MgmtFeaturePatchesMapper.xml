@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtFeaturePatchesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtFeaturePatches" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="PATCH_ID" property="patchId" jdbcType="DECIMAL" />
+    <id column="PRODUCT_ID" property="productId" jdbcType="DECIMAL" />
+    <id column="RELEASE_ID" property="releaseId" jdbcType="DECIMAL" />
+    <id column="PLATFORM_ID" property="platformId" jdbcType="DECIMAL" />
+    <id column="LANGUAGE_ID" property="languageId" jdbcType="DECIMAL" />
+    <result column="FAMILY_ID" property="familyId" jdbcType="DECIMAL" />
+    <result column="PATCH_TYPE" property="patchType" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="PATCH_DESC" property="patchDesc" jdbcType="VARCHAR" />
+    <result column="PATCH_FEATURES" property="patchFeatures" jdbcType="VARCHAR" />
+    <result column="URL" property="url" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

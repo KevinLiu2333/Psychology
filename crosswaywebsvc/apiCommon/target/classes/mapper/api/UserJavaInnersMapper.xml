@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserJavaInnersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserJavaInners" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="INNER_INDEX" property="innerIndex" jdbcType="DECIMAL" />
+    <result column="SIMPLE_NAME" property="simpleName" jdbcType="VARCHAR" />
+    <result column="FULL_NAME" property="fullName" jdbcType="VARCHAR" />
+    <result column="ACCESSIBILITY" property="accessibility" jdbcType="VARCHAR" />
+    <result column="IS_STATIC" property="isStatic" jdbcType="VARCHAR" />
+    <result column="IS_FINAL" property="isFinal" jdbcType="VARCHAR" />
+    <result column="IS_ABSTRACT" property="isAbstract" jdbcType="VARCHAR" />
+    <result column="IS_INTERFACE" property="isInterface" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

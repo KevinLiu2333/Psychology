@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VFlashRecoveryAreaUsageMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VFlashRecoveryAreaUsage" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FILE_TYPE" property="fileType" jdbcType="VARCHAR" />
+    <result column="PERCENT_SPACE_USED" property="percentSpaceUsed" jdbcType="DECIMAL" />
+    <result column="PERCENT_SPACE_RECLAIMABLE" property="percentSpaceReclaimable" jdbcType="DECIMAL" />
+    <result column="NUMBER_OF_FILES" property="numberOfFiles" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtPolicyAssocCfgParamsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtPolicyAssocCfgParams" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OBJECT_GUID" property="objectGuid" jdbcType="VARBINARY" />
+    <id column="POLICY_GUID" property="policyGuid" jdbcType="VARBINARY" />
+    <id column="COLL_NAME" property="collName" jdbcType="VARCHAR" />
+    <id column="KEY_VALUE" property="keyValue" jdbcType="VARCHAR" />
+    <id column="KEY_OPERATOR" property="keyOperator" jdbcType="DECIMAL" />
+    <id column="PARAM_NAME" property="paramName" jdbcType="VARCHAR" />
+    <result column="CRIT_THRESHOLD" property="critThreshold" jdbcType="VARCHAR" />
+    <result column="WARN_THRESHOLD" property="warnThreshold" jdbcType="VARCHAR" />
+    <result column="INFO_THRESHOLD" property="infoThreshold" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

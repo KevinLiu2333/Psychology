@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtBslnDatasourcesMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtBslnDatasources">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DATASOURCE_GUID" jdbcType="VARBINARY" property="datasourceGuid" />
+    <result column="SOURCE_TYPE" jdbcType="CHAR" property="sourceType" />
+    <result column="KEY_VALUE" jdbcType="VARCHAR" property="keyValue" />
+    <result column="DBID" jdbcType="DECIMAL" property="dbid" />
+    <result column="INSTANCE_NUM" jdbcType="DECIMAL" property="instanceNum" />
+    <result column="INSTANCE_NAME" jdbcType="VARCHAR" property="instanceName" />
+    <result column="METRIC_ID" jdbcType="DECIMAL" property="metricId" />
+    <result column="TARGET_UID" jdbcType="VARBINARY" property="targetUid" />
+    <result column="METRIC_UID" jdbcType="VARBINARY" property="metricUid" />
+    <result column="TARGET_GUID" jdbcType="VARBINARY" property="targetGuid" />
+    <result column="METRIC_GUID" jdbcType="VARBINARY" property="metricGuid" />
+  </resultMap>
+</mapper>

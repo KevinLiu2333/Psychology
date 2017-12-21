@@ -27,8 +27,10 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>6.0.6</version><!--$NO-MVN-MAN-VER$-->
+            <version>RELEASE</version><!--$NO-MVN-MAN-VER$-->
         </dependency>
+
+
         <!--guava-->
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -57,12 +59,6 @@
             <artifactId>json</artifactId>
             <version>RELEASE</version>
         </dependency>
-        <!--持久层依赖-->
-        <dependency>
-            <groupId>com.kevin</groupId>
-            <artifactId>common</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
         <!--druid连接池-->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -89,7 +85,26 @@
             <groupId>net.sourceforge.nekohtml</groupId>
             <artifactId>nekohtml</artifactId>
         </dependency>
+
+
+        <!--    poi相关组件    -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-scratchpad</artifactId>
+            <version>RELEASE</version>
+        </dependency>
     </dependencies>
+
 
     <build>
         <plugins>

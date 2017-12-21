@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigFrmBlocksMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigFrmBlocks" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FORMMODULE_ID" property="formmoduleId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="QUERYDATASOURCENAME" property="querydatasourcename" jdbcType="VARCHAR" />
+    <result column="QUERYDATASOURCETYPE" property="querydatasourcetype" jdbcType="VARCHAR" />
+    <result column="ENFORCEDPRIMARYKEY" property="enforcedprimarykey" jdbcType="VARCHAR" />
+    <result column="SINGLERECORD" property="singlerecord" jdbcType="VARCHAR" />
+    <result column="DATABASEBLOCK" property="databaseblock" jdbcType="VARCHAR" />
+    <result column="UPDATEALLOWED" property="updateallowed" jdbcType="VARCHAR" />
+    <result column="INSERTALLOWED" property="insertallowed" jdbcType="VARCHAR" />
+    <result column="RECORDSDISPLAYCOUNT" property="recordsdisplaycount" jdbcType="VARCHAR" />
+    <result column="BACKCOLOR" property="backcolor" jdbcType="VARCHAR" />
+    <result column="RECORDVISUALATTRIBUTEGROUPNAME" property="recordvisualattributegroupname" jdbcType="VARCHAR" />
+    <result column="SCROLLBARTABPAGENAME" property="scrollbartabpagename" jdbcType="VARCHAR" />
+    <result column="SCROLLBARXPOSITION" property="scrollbarxposition" jdbcType="VARCHAR" />
+    <result column="SCROLLBARYPOSITION" property="scrollbaryposition" jdbcType="VARCHAR" />
+    <result column="SHOWSCROLLBAR" property="showscrollbar" jdbcType="VARCHAR" />
+    <result column="SCROLLBARLENGTH" property="scrollbarlength" jdbcType="VARCHAR" />
+    <result column="SCROLLBARWIDTH" property="scrollbarwidth" jdbcType="VARCHAR" />
+    <result column="SCROLLBARCANVASNAME" property="scrollbarcanvasname" jdbcType="VARCHAR" />
+    <result column="DIRTYINFO" property="dirtyinfo" jdbcType="VARCHAR" />
+    <result column="VISUALATTRIBUTENAME" property="visualattributename" jdbcType="VARCHAR" />
+    <result column="DMLDATANAME" property="dmldataname" jdbcType="VARCHAR" />
+    <result column="DMLDATATYPE" property="dmldatatype" jdbcType="VARCHAR" />
+    <result column="DELETEALLOWED" property="deleteallowed" jdbcType="VARCHAR" />
+    <result column="QUERYALLOWED" property="queryallowed" jdbcType="VARCHAR" />
+    <result column="RECORDORIENTATION" property="recordorientation" jdbcType="VARCHAR" />
+    <result column="ENFORCEDCOLUMNSECURITY" property="enforcedcolumnsecurity" jdbcType="VARCHAR" />
+    <result column="LOCKMODE" property="lockmode" jdbcType="VARCHAR" />
+    <result column="KEYMODE" property="keymode" jdbcType="VARCHAR" />
+    <result column="NAVIGATIONSTYLE" property="navigationstyle" jdbcType="VARCHAR" />
+    <result column="RECORDSFETCHEDCOUNT" property="recordsfetchedcount" jdbcType="VARCHAR" />
+    <result column="RECORDSBUFFEREDCOUNT" property="recordsbufferedcount" jdbcType="VARCHAR" />
+    <result column="PREVIOUSNAVIGATIONBLOCKNAME" property="previousnavigationblockname" jdbcType="VARCHAR" />
+    <result column="NEXTNAVIGATIONBLOCKNAME" property="nextnavigationblockname" jdbcType="VARCHAR" />
+    <result column="WHERECLAUSE" property="whereclause" jdbcType="VARCHAR" />
+    <result column="ORDERBYCLAUSE" property="orderbyclause" jdbcType="VARCHAR" />
+    <result column="SCROLLBARORIENTATION" property="scrollbarorientation" jdbcType="VARCHAR" />
+    <result column="PARENTTYPE" property="parenttype" jdbcType="VARCHAR" />
+    <result column="PARENTNAME" property="parentname" jdbcType="VARCHAR" />
+    <result column="PARENTMODULE" property="parentmodule" jdbcType="VARCHAR" />
+    <result column="PARENTMODULETYPE" property="parentmoduletype" jdbcType="VARCHAR" />
+    <result column="FOREGROUNDCOLOR" property="foregroundcolor" jdbcType="VARCHAR" />
+    <result column="FILLPATTERN" property="fillpattern" jdbcType="VARCHAR" />
+    <result column="DMLRETURNVALUE" property="dmlreturnvalue" jdbcType="VARCHAR" />
+    <result column="INCLUDEREFITEM" property="includerefitem" jdbcType="VARCHAR" />
+    <result column="PRECOMPSUMMARY" property="precompsummary" jdbcType="VARCHAR" />
+    <result column="QUERYALLRECORDS" property="queryallrecords" jdbcType="VARCHAR" />
+    <result column="REVERSEDIRECTION" property="reversedirection" jdbcType="VARCHAR" />
+    <result column="SUBCLASSOBJECTGROUP" property="subclassobjectgroup" jdbcType="VARCHAR" />
+    <result column="UPDATECHANGEDCOLUMNS" property="updatechangedcolumns" jdbcType="VARCHAR" />
+    <result column="DMLARRAYSIZE" property="dmlarraysize" jdbcType="VARCHAR" />
+    <result column="LANGUAGEDIRECTION" property="languagedirection" jdbcType="VARCHAR" />
+    <result column="MAXIMUMQUERYTIME" property="maximumquerytime" jdbcType="VARCHAR" />
+    <result column="MAXIMUMRECORDSFETCHED" property="maximumrecordsfetched" jdbcType="VARCHAR" />
+    <result column="PERSISTENTCLIENTINFOLENGTH" property="persistentclientinfolength" jdbcType="VARCHAR" />
+    <result column="ALIAS" property="alias" jdbcType="VARCHAR" />
+    <result column="DELETEPROCEDURENAME" property="deleteprocedurename" jdbcType="VARCHAR" />
+    <result column="UPDATEPROCEDURENAME" property="updateprocedurename" jdbcType="VARCHAR" />
+    <result column="INSERTPROCEDURENAME" property="insertprocedurename" jdbcType="VARCHAR" />
+    <result column="LOCKPROCEDURENAME" property="lockprocedurename" jdbcType="VARCHAR" />
+    <result column="OPTIONHINT" property="optionhint" jdbcType="VARCHAR" />
+    <result column="PARENTFILENAME" property="parentfilename" jdbcType="VARCHAR" />
+    <result column="PARENTFILEPATH" property="parentfilepath" jdbcType="VARCHAR" />
+    <result column="SMARTCLASS" property="smartclass" jdbcType="VARCHAR" />
+    <result column="SELECT_FOR_APP" property="selectForApp" jdbcType="VARCHAR" />
+    <result column="APPLICABLE" property="applicable" jdbcType="VARCHAR" />
+    <result column="COMPLETE" property="complete" jdbcType="VARCHAR" />
+    <result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+    <result column="ASSIGNEE" property="assignee" jdbcType="VARCHAR" />
+    <result column="NOTES" property="notes" jdbcType="VARCHAR" />
+    <result column="TAGS" property="tags" jdbcType="VARCHAR" />
+    <result column="USE_QUERY" property="useQuery" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="TIMESTAMP" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="BLOCK_COMMENT" property="blockComment" jdbcType="CLOB" />
+    <result column="ENHANCED_QUERY" property="enhancedQuery" jdbcType="CLOB" />
+    <result column="CUSTOM_QUERY" property="customQuery" jdbcType="CLOB" />
+    <result column="ORIGINAL_QUERY" property="originalQuery" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AqQueuesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AqQueues" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OID" property="oid" jdbcType="VARBINARY" />
+    <result column="EVENTID" property="eventid" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="TABLE_OBJNO" property="tableObjno" jdbcType="DECIMAL" />
+    <result column="USAGE" property="usage" jdbcType="DECIMAL" />
+    <result column="ENABLE_FLAG" property="enableFlag" jdbcType="DECIMAL" />
+    <result column="MAX_RETRIES" property="maxRetries" jdbcType="DECIMAL" />
+    <result column="RETRY_DELAY" property="retryDelay" jdbcType="DECIMAL" />
+    <result column="PROPERTIES" property="properties" jdbcType="DECIMAL" />
+    <result column="RET_TIME" property="retTime" jdbcType="DECIMAL" />
+    <result column="QUEUE_COMMENT" property="queueComment" jdbcType="VARCHAR" />
+    <result column="SUBSCRIBERS" property="subscribers" jdbcType="OTHER" />
+    <result column="MEMORY_THRESHOLD" property="memoryThreshold" jdbcType="DECIMAL" />
+    <result column="SERVICE_NAME" property="serviceName" jdbcType="VARCHAR" />
+    <result column="NETWORK_NAME" property="networkName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

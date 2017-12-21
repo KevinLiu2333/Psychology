@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationPageFlashChMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationPageFlashCh" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="PAGE_ID" property="pageId" jdbcType="DECIMAL" />
+    <result column="PAGE_NAME" property="pageName" jdbcType="VARCHAR" />
+    <result column="REGION_ID" property="regionId" jdbcType="DECIMAL" />
+    <result column="REGION_NAME" property="regionName" jdbcType="VARCHAR" />
+    <result column="CHART_ID" property="chartId" jdbcType="DECIMAL" />
+    <result column="CHART_TYPE" property="chartType" jdbcType="VARCHAR" />
+    <result column="CHART_TITLE" property="chartTitle" jdbcType="VARCHAR" />
+    <result column="CHART_WIDTH" property="chartWidth" jdbcType="DECIMAL" />
+    <result column="CHART_HEIGHT" property="chartHeight" jdbcType="DECIMAL" />
+    <result column="CHART_ANIMATION" property="chartAnimation" jdbcType="VARCHAR" />
+    <result column="DISPLAY_ATTR" property="displayAttr" jdbcType="VARCHAR" />
+    <result column="DIAL_TICK_ATTR" property="dialTickAttr" jdbcType="VARCHAR" />
+    <result column="MARGINS" property="margins" jdbcType="VARCHAR" />
+    <result column="OMIT_LABEL_INTERVAL" property="omitLabelInterval" jdbcType="DECIMAL" />
+    <result column="COLOR_SCHEME" property="colorScheme" jdbcType="VARCHAR" />
+    <result column="CUSTOM_COLORS" property="customColors" jdbcType="VARCHAR" />
+    <result column="BGTYPE" property="bgtype" jdbcType="VARCHAR" />
+    <result column="BGCOLOR1" property="bgcolor1" jdbcType="VARCHAR" />
+    <result column="BGCOLOR2" property="bgcolor2" jdbcType="VARCHAR" />
+    <result column="GRADIENT_ROTATION" property="gradientRotation" jdbcType="DECIMAL" />
+    <result column="X_AXIS_TITLE" property="xAxisTitle" jdbcType="VARCHAR" />
+    <result column="X_AXIS_MIN" property="xAxisMin" jdbcType="DECIMAL" />
+    <result column="X_AXIS_MAX" property="xAxisMax" jdbcType="DECIMAL" />
+    <result column="X_AXIS_GRID_SPACING" property="xAxisGridSpacing" jdbcType="DECIMAL" />
+    <result column="X_AXIS_PREFIX" property="xAxisPrefix" jdbcType="VARCHAR" />
+    <result column="X_AXIS_POSTFIX" property="xAxisPostfix" jdbcType="VARCHAR" />
+    <result column="X_AXIS_GROUP_SEP" property="xAxisGroupSep" jdbcType="VARCHAR" />
+    <result column="X_AXIS_DECIMAL_PLACE" property="xAxisDecimalPlace" jdbcType="DECIMAL" />
+    <result column="Y_AXIS_TITLE" property="yAxisTitle" jdbcType="VARCHAR" />
+    <result column="Y_AXIS_MIN" property="yAxisMin" jdbcType="DECIMAL" />
+    <result column="Y_AXIS_MAX" property="yAxisMax" jdbcType="DECIMAL" />
+    <result column="Y_AXIS_GRID_SPACING" property="yAxisGridSpacing" jdbcType="DECIMAL" />
+    <result column="Y_AXIS_PREFIX" property="yAxisPrefix" jdbcType="VARCHAR" />
+    <result column="Y_AXIS_POSTFIX" property="yAxisPostfix" jdbcType="VARCHAR" />
+    <result column="Y_AXIS_GROUP_SEP" property="yAxisGroupSep" jdbcType="VARCHAR" />
+    <result column="Y_AXIS_DECIMAL_PLACE" property="yAxisDecimalPlace" jdbcType="DECIMAL" />
+    <result column="ASYNC_UPDATE" property="asyncUpdate" jdbcType="VARCHAR" />
+    <result column="ASYNC_TIME" property="asyncTime" jdbcType="DECIMAL" />
+    <result column="NAMES_FONT" property="namesFont" jdbcType="VARCHAR" />
+    <result column="NAMES_ROTATION" property="namesRotation" jdbcType="DECIMAL" />
+    <result column="VALUES_FONT" property="valuesFont" jdbcType="VARCHAR" />
+    <result column="VALUES_ROTATION" property="valuesRotation" jdbcType="DECIMAL" />
+    <result column="HINTS_FONT" property="hintsFont" jdbcType="VARCHAR" />
+    <result column="LEGEND_FONT" property="legendFont" jdbcType="VARCHAR" />
+    <result column="GRID_LABELS_FONT" property="gridLabelsFont" jdbcType="VARCHAR" />
+    <result column="CHART_TITLE_FONT" property="chartTitleFont" jdbcType="VARCHAR" />
+    <result column="X_AXIS_TITLE_FONT" property="xAxisTitleFont" jdbcType="VARCHAR" />
+    <result column="Y_AXIS_TITLE_FONT" property="yAxisTitleFont" jdbcType="VARCHAR" />
+    <result column="USE_CHART_XML" property="useChartXml" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="COMPONENT_SIGNATURE" property="componentSignature" jdbcType="VARCHAR" />
+    <result column="CHART_XML" property="chartXml" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

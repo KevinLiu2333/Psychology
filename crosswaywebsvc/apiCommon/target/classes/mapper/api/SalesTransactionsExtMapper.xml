@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SalesTransactionsExtMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SalesTransactionsExt" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PROD_ID" property="prodId" jdbcType="DECIMAL" />
+    <result column="CUST_ID" property="custId" jdbcType="DECIMAL" />
+    <result column="TIME_ID" property="timeId" jdbcType="DATE" />
+    <result column="CHANNEL_ID" property="channelId" jdbcType="DECIMAL" />
+    <result column="PROMO_ID" property="promoId" jdbcType="DECIMAL" />
+    <result column="QUANTITY_SOLD" property="quantitySold" jdbcType="DECIMAL" />
+    <result column="AMOUNT_SOLD" property="amountSold" jdbcType="DECIMAL" />
+    <result column="UNIT_COST" property="unitCost" jdbcType="DECIMAL" />
+    <result column="UNIT_PRICE" property="unitPrice" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

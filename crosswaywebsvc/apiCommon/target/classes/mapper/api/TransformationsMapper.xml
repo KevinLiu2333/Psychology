@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TransformationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Transformations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TRANSFORMATION_ID" property="transformationId" jdbcType="DECIMAL" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="FROM_SCHEMA" property="fromSchema" jdbcType="VARCHAR" />
+    <result column="FROM_TYPE" property="fromType" jdbcType="VARCHAR" />
+    <result column="FROM_VERSION" property="fromVersion" jdbcType="DECIMAL" />
+    <result column="TO_SCHEMA" property="toSchema" jdbcType="VARCHAR" />
+    <result column="TO_TYPE" property="toType" jdbcType="VARCHAR" />
+    <result column="TO_VERSION" property="toVersion" jdbcType="DECIMAL" />
+    <result column="FROM_TOID" property="fromToid" jdbcType="VARBINARY" />
+    <result column="TO_TOID" property="toToid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

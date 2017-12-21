@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllWorkspacesInternalMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllWorkspacesInternal" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="PARENT_WORKSPACE" property="parentWorkspace" jdbcType="VARCHAR" />
+    <result column="CURRENT_VERSION" property="currentVersion" jdbcType="DECIMAL" />
+    <result column="PARENT_VERSION" property="parentVersion" jdbcType="DECIMAL" />
+    <result column="POST_VERSION" property="postVersion" jdbcType="DECIMAL" />
+    <result column="VERLIST" property="verlist" jdbcType="VARCHAR" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="CREATETIME" property="createtime" jdbcType="DATE" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="WORKSPACE_LOCK_ID" property="workspaceLockId" jdbcType="DECIMAL" />
+    <result column="FREEZE_STATUS" property="freezeStatus" jdbcType="VARCHAR" />
+    <result column="FREEZE_MODE" property="freezeMode" jdbcType="VARCHAR" />
+    <result column="FREEZE_WRITER" property="freezeWriter" jdbcType="VARCHAR" />
+    <result column="OPER_STATUS" property="operStatus" jdbcType="VARCHAR" />
+    <result column="WM_LOCKMODE" property="wmLockmode" jdbcType="VARCHAR" />
+    <result column="ISREFRESHED" property="isrefreshed" jdbcType="DECIMAL" />
+    <result column="FREEZE_OWNER" property="freezeOwner" jdbcType="VARCHAR" />
+    <result column="SESSION_DURATION" property="sessionDuration" jdbcType="DECIMAL" />
+    <result column="MP_ROOT" property="mpRoot" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SlogMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Slog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="MOWNER" property="mowner" jdbcType="VARCHAR" />
+    <result column="MASTER" property="master" jdbcType="VARCHAR" />
+    <result column="SNAPSHOT" property="snapshot" jdbcType="DATE" />
+    <result column="SNAPID" property="snapid" jdbcType="DECIMAL" />
+    <result column="SSCN" property="sscn" jdbcType="DECIMAL" />
+    <result column="SNAPTIME" property="snaptime" jdbcType="DATE" />
+    <result column="TSCN" property="tscn" jdbcType="DECIMAL" />
+    <result column="USER#" property="user" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

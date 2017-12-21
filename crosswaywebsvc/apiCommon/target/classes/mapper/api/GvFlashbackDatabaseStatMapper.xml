@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvFlashbackDatabaseStatMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvFlashbackDatabaseStat" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="BEGIN_TIME" property="beginTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="FLASHBACK_DATA" property="flashbackData" jdbcType="DECIMAL" />
+    <result column="DB_DATA" property="dbData" jdbcType="DECIMAL" />
+    <result column="REDO_DATA" property="redoData" jdbcType="DECIMAL" />
+    <result column="ESTIMATED_FLASHBACK_SIZE" property="estimatedFlashbackSize" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

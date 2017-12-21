@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCsaFailedMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCsaFailed" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TIMESTAMP" property="timestamp" jdbcType="DATE" />
+    <result column="TIMEZONE_DELTA" property="timezoneDelta" jdbcType="DECIMAL" />
+    <result column="SAVED_TIMESTAMP" property="savedTimestamp" jdbcType="DATE" />
+    <result column="EFFECTIVE_IP" property="effectiveIp" jdbcType="VARCHAR" />
+    <result column="APPID" property="appid" jdbcType="VARCHAR" />
+    <result column="REFERRING_URL_HEADER" property="referringUrlHeader" jdbcType="VARCHAR" />
+    <result column="REFERRING_URL_PARAMS" property="referringUrlParams" jdbcType="VARCHAR" />
+    <result column="CSA_URL_HEADER" property="csaUrlHeader" jdbcType="VARCHAR" />
+    <result column="CSA_URL_PARAMS" property="csaUrlParams" jdbcType="VARCHAR" />
+    <result column="DESTINATION_URL_HEADER" property="destinationUrlHeader" jdbcType="VARCHAR" />
+    <result column="DESTINATION_URL_PARAMS" property="destinationUrlParams" jdbcType="VARCHAR" />
+    <result column="BROWSER_TYPE" property="browserType" jdbcType="VARCHAR" />
+    <result column="BROWSER_VERSION" property="browserVersion" jdbcType="VARCHAR" />
+    <result column="BROWSER_JVM_VENDOR" property="browserJvmVendor" jdbcType="VARCHAR" />
+    <result column="BROWSER_JVM_VERSION" property="browserJvmVersion" jdbcType="VARCHAR" />
+    <result column="OS_ARCH" property="osArch" jdbcType="VARCHAR" />
+    <result column="OS_NAME" property="osName" jdbcType="VARCHAR" />
+    <result column="HTTP_REQUEST_USER_AGENT" property="httpRequestUserAgent" jdbcType="VARCHAR" />
+    <result column="ERROR_CODE" property="errorCode" jdbcType="VARCHAR" />
+    <result column="ERROR_TEXT" property="errorText" jdbcType="VARCHAR" />
+    <result column="ID" property="id" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

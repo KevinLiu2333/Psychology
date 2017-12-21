@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.StreamsApplySpillMessagesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.StreamsApplySpillMessages" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TXNKEY" property="txnkey" jdbcType="DECIMAL" />
+    <result column="SEQUENCE" property="sequence" jdbcType="DECIMAL" />
+    <result column="SCN" property="scn" jdbcType="DECIMAL" />
+    <result column="SCNSEQ" property="scnseq" jdbcType="DECIMAL" />
+    <result column="CAPINST" property="capinst" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="FLAGS2" property="flags2" jdbcType="DECIMAL" />
+    <result column="MESSAGE" property="message" jdbcType="OTHER" />
+    <result column="DESTQUEUE" property="destqueue" jdbcType="VARCHAR" />
+    <result column="UBAAFN" property="ubaafn" jdbcType="DECIMAL" />
+    <result column="UBAOBJ" property="ubaobj" jdbcType="DECIMAL" />
+    <result column="UBADBA" property="ubadba" jdbcType="DECIMAL" />
+    <result column="UBASLT" property="ubaslt" jdbcType="DECIMAL" />
+    <result column="UBARCI" property="ubarci" jdbcType="DECIMAL" />
+    <result column="UBAFSC" property="ubafsc" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+    <result column="SPARE4" property="spare4" jdbcType="VARCHAR" />
+    <result column="SPARE5" property="spare5" jdbcType="VARCHAR" />
+    <result column="SPARE6" property="spare6" jdbcType="VARCHAR" />
+    <result column="SPARE7" property="spare7" jdbcType="DATE" />
+    <result column="SPARE8" property="spare8" jdbcType="TIMESTAMP" />
+    <result column="POSITION" property="position" jdbcType="VARBINARY" />
+    <result column="SPARE9" property="spare9" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

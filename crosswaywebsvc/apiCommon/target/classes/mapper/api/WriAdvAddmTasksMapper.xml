@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriAdvAddmTasksMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriAdvAddmTasks" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="DBNAME" property="dbname" jdbcType="VARCHAR" />
+    <result column="DBVERSION" property="dbversion" jdbcType="VARCHAR" />
+    <result column="ANALYSIS_VERSION" property="analysisVersion" jdbcType="VARCHAR" />
+    <result column="BEGIN_SNAP_ID" property="beginSnapId" jdbcType="DECIMAL" />
+    <result column="BEGIN_TIME" property="beginTime" jdbcType="OTHER" />
+    <result column="END_SNAP_ID" property="endSnapId" jdbcType="DECIMAL" />
+    <result column="END_TIME" property="endTime" jdbcType="OTHER" />
+    <result column="REQUESTED_ANALYSIS" property="requestedAnalysis" jdbcType="VARCHAR" />
+    <result column="ACTUAL_ANALYSIS" property="actualAnalysis" jdbcType="VARCHAR" />
+    <result column="DATABASE_TIME" property="databaseTime" jdbcType="DECIMAL" />
+    <result column="ACTIVE_SESSIONS" property="activeSessions" jdbcType="DECIMAL" />
+    <result column="PERC_FLUSH_TIME" property="percFlushTime" jdbcType="DECIMAL" />
+    <result column="PERC_MW_TIME" property="percMwTime" jdbcType="DECIMAL" />
+    <result column="METER_LEVEL" property="meterLevel" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

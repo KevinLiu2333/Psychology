@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VTempCacheTransferMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VTempCacheTransfer" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FILE_NUMBER" property="fileNumber" jdbcType="DECIMAL" />
+    <result column="X_2_NULL" property="x2Null" jdbcType="DECIMAL" />
+    <result column="X_2_NULL_FORCED_WRITE" property="x2NullForcedWrite" jdbcType="DECIMAL" />
+    <result column="X_2_NULL_FORCED_STALE" property="x2NullForcedStale" jdbcType="DECIMAL" />
+    <result column="X_2_S" property="x2S" jdbcType="DECIMAL" />
+    <result column="X_2_S_FORCED_WRITE" property="x2SForcedWrite" jdbcType="DECIMAL" />
+    <result column="S_2_NULL" property="s2Null" jdbcType="DECIMAL" />
+    <result column="S_2_NULL_FORCED_STALE" property="s2NullForcedStale" jdbcType="DECIMAL" />
+    <result column="RBR" property="rbr" jdbcType="DECIMAL" />
+    <result column="RBR_FORCED_WRITE" property="rbrForcedWrite" jdbcType="DECIMAL" />
+    <result column="NULL_2_X" property="null2X" jdbcType="DECIMAL" />
+    <result column="S_2_X" property="s2X" jdbcType="DECIMAL" />
+    <result column="NULL_2_S" property="null2S" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuProcjavaViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuProcjavaView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="PROCEDURE_NUM" property="procedureNum" jdbcType="DECIMAL" />
+    <result column="OWNERNAME" property="ownername" jdbcType="VARCHAR" />
+    <result column="OWNERLENGTH" property="ownerlength" jdbcType="DECIMAL" />
+    <result column="USERSIGNATURE" property="usersignature" jdbcType="VARCHAR" />
+    <result column="USERSIGLEN" property="usersiglen" jdbcType="DECIMAL" />
+    <result column="CLASSNAME" property="classname" jdbcType="VARCHAR" />
+    <result column="CLASSLENGTH" property="classlength" jdbcType="DECIMAL" />
+    <result column="METHODNAME" property="methodname" jdbcType="VARCHAR" />
+    <result column="METHODLENGTH" property="methodlength" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="VARCHAR" />
+    <result column="FLAGSLENGTH" property="flagslength" jdbcType="DECIMAL" />
+    <result column="COOKIESIZE" property="cookiesize" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.HsClassCapsMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.HsClassCaps">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="FDS_CLASS_CAP_ID" jdbcType="DECIMAL" property="fdsClassCapId" />
+    <result column="FDS_CLASS_ID" jdbcType="DECIMAL" property="fdsClassId" />
+    <result column="CAP_NUMBER" jdbcType="DECIMAL" property="capNumber" />
+    <result column="CONTEXT" jdbcType="DECIMAL" property="context" />
+    <result column="TRANSLATION" jdbcType="VARCHAR" property="translation" />
+    <result column="ADDITIONAL_INFO" jdbcType="DECIMAL" property="additionalInfo" />
+  </resultMap>
+</mapper>

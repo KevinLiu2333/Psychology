@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaAwPropMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaAwProp" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="AW_NUMBER" property="awNumber" jdbcType="DECIMAL" />
+    <result column="AW_NAME" property="awName" jdbcType="VARCHAR" />
+    <result column="OBJ_ID" property="objId" jdbcType="DECIMAL" />
+    <result column="OBJ_NAME" property="objName" jdbcType="VARCHAR" />
+    <result column="PROPERTY_NAME" property="propertyName" jdbcType="VARCHAR" />
+    <result column="PROPERTY_TYPE" property="propertyType" jdbcType="VARCHAR" />
+    <result column="PROPERTY_VALUE" property="propertyValue" jdbcType="VARCHAR" />
+    <result column="PROPERTY_VALUE_LENGTH" property="propertyValueLength" jdbcType="DECIMAL" />
+    <result column="FULL_PROPERTY_VALUE" property="fullPropertyValue" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

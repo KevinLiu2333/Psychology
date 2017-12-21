@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtSnapshotMetricMapMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtSnapshotMetricMap" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SNAPSHOT_TARGET_TYPE" property="snapshotTargetType" jdbcType="VARCHAR" />
+    <id column="SNAPSHOT_NAME" property="snapshotName" jdbcType="VARCHAR" />
+    <id column="METRIC_GUID" property="metricGuid" jdbcType="VARBINARY" />
+    <result column="STORE_METRIC" property="storeMetric" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

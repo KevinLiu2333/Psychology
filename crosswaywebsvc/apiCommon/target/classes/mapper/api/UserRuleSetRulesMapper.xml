@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserRuleSetRulesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserRuleSetRules" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RULE_SET_NAME" property="ruleSetName" jdbcType="VARCHAR" />
+    <result column="RULE_OWNER" property="ruleOwner" jdbcType="VARCHAR" />
+    <result column="RULE_NAME" property="ruleName" jdbcType="VARCHAR" />
+    <result column="RULE_SET_RULE_ENABLED" property="ruleSetRuleEnabled" jdbcType="VARCHAR" />
+    <result column="RULE_SET_RULE_EVAL_CTX_OWNER" property="ruleSetRuleEvalCtxOwner" jdbcType="VARCHAR" />
+    <result column="RULE_SET_RULE_EVAL_CTX_NAME" property="ruleSetRuleEvalCtxName" jdbcType="VARCHAR" />
+    <result column="RULE_SET_RULE_COMMENT" property="ruleSetRuleComment" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

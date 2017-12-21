@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCaptureMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCapture" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="CAPTURE_ID" property="captureId" jdbcType="DECIMAL" />
+    <result column="CAPTURE_TIME" property="captureTime" jdbcType="DATE" />
+    <result column="DB_TIME" property="dbTime" jdbcType="DECIMAL" />
+    <result column="CPU_TIME" property="cpuTime" jdbcType="DECIMAL" />
+    <result column="APPLICATION_WAIT_TIME" property="applicationWaitTime" jdbcType="DECIMAL" />
+    <result column="CLUSTER_WAIT_TIME" property="clusterWaitTime" jdbcType="DECIMAL" />
+    <result column="USER_IO_WAIT_TIME" property="userIoWaitTime" jdbcType="DECIMAL" />
+    <result column="CONCURRENCY_WAIT_TIME" property="concurrencyWaitTime" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

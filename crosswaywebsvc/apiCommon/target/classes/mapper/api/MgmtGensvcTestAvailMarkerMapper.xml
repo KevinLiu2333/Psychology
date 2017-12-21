@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtGensvcTestAvailMarkerMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtGensvcTestAvailMarker" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="TEST_GUID" property="testGuid" jdbcType="VARBINARY" />
+    <result column="MARKER_TIMESTAMP" property="markerTimestamp" jdbcType="DATE" />
+    <result column="MARKER_AVAIL_STATUS" property="markerAvailStatus" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

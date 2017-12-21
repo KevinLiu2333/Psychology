@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtPurgePolicyMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtPurgePolicy" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="POLICY_NAME" property="policyName" jdbcType="VARCHAR" />
+    <result column="POLICY_DESCRIPTION" property="policyDescription" jdbcType="VARCHAR" />
+    <result column="POLICY_TYPE" property="policyType" jdbcType="DECIMAL" />
+    <result column="ROLLUP_PROC_NAME" property="rollupProcName" jdbcType="VARCHAR" />
+    <result column="PURGE_PROC_NAME" property="purgeProcName" jdbcType="VARCHAR" />
+    <result column="EXECUTION_GROUP_NAME" property="executionGroupName" jdbcType="VARCHAR" />
+    <result column="POLICY_RETENTION_HOURS" property="policyRetentionHours" jdbcType="DECIMAL" />
+    <result column="RETENTION_GROUP_NAME" property="retentionGroupName" jdbcType="VARCHAR" />
+    <result column="USER_CONFIGURABLE" property="userConfigurable" jdbcType="DECIMAL" />
+    <result column="IS_ENABLED" property="isEnabled" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

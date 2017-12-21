@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaApplyMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaApply">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="APPLY#" jdbcType="DECIMAL" property="apply" />
+    <result column="APPLY_NAME" jdbcType="VARCHAR" property="applyName" />
+    <result column="QUEUE_OWNER" jdbcType="VARCHAR" property="queueOwner" />
+    <result column="QUEUE_NAME" jdbcType="VARCHAR" property="queueName" />
+    <result column="STATUS" jdbcType="DECIMAL" property="status" />
+    <result column="FLAGS" jdbcType="DECIMAL" property="flags" />
+    <result column="RULESET_OWNER" jdbcType="VARCHAR" property="rulesetOwner" />
+    <result column="RULESET_NAME" jdbcType="VARCHAR" property="rulesetName" />
+    <result column="MESSAGE_HANDLER" jdbcType="VARCHAR" property="messageHandler" />
+    <result column="DDL_HANDLER" jdbcType="VARCHAR" property="ddlHandler" />
+    <result column="PRECOMMIT_HANDLER" jdbcType="VARCHAR" property="precommitHandler" />
+    <result column="APPLY_USERID" jdbcType="DECIMAL" property="applyUserid" />
+    <result column="APPLY_DBLINK" jdbcType="VARCHAR" property="applyDblink" />
+    <result column="START_DATE" jdbcType="DATE" property="startDate" />
+    <result column="END_DATE" jdbcType="DATE" property="endDate" />
+    <result column="NEGATIVE_RULESET_OWNER" jdbcType="VARCHAR" property="negativeRulesetOwner" />
+    <result column="NEGATIVE_RULESET_NAME" jdbcType="VARCHAR" property="negativeRulesetName" />
+    <result column="SPARE1" jdbcType="DECIMAL" property="spare1" />
+    <result column="SPARE2" jdbcType="DECIMAL" property="spare2" />
+    <result column="SPARE3" jdbcType="DECIMAL" property="spare3" />
+    <result column="STATUS_CHANGE_TIME" jdbcType="DATE" property="statusChangeTime" />
+    <result column="ERROR_NUMBER" jdbcType="DECIMAL" property="errorNumber" />
+    <result column="ERROR_MESSAGE" jdbcType="VARCHAR" property="errorMessage" />
+    <result column="UA_NOTIFICATION_HANDLER" jdbcType="VARCHAR" property="uaNotificationHandler" />
+    <result column="UA_RULESET_OWNER" jdbcType="VARCHAR" property="uaRulesetOwner" />
+    <result column="UA_RULESET_NAME" jdbcType="VARCHAR" property="uaRulesetName" />
+    <result column="QUEUE_OID" jdbcType="VARBINARY" property="queueOid" />
+    <result column="APPLY_TAG" jdbcType="VARBINARY" property="applyTag" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaApplySpillTxnMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaApplySpillTxn">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="APPLY_NAME" jdbcType="VARCHAR" property="applyName" />
+    <result column="XIDUSN" jdbcType="DECIMAL" property="xidusn" />
+    <result column="XIDSLT" jdbcType="DECIMAL" property="xidslt" />
+    <result column="XIDSQN" jdbcType="DECIMAL" property="xidsqn" />
+    <result column="FIRST_SCN" jdbcType="DECIMAL" property="firstScn" />
+    <result column="MESSAGE_COUNT" jdbcType="DECIMAL" property="messageCount" />
+    <result column="FIRST_MESSAGE_CREATE_TIME" jdbcType="DATE" property="firstMessageCreateTime" />
+    <result column="SPILL_CREATION_TIME" jdbcType="DATE" property="spillCreationTime" />
+    <result column="SPILL_FLAGS" jdbcType="DECIMAL" property="spillFlags" />
+    <result column="TRANSACTION_ID" jdbcType="VARCHAR" property="transactionId" />
+    <result column="FIRST_POSITION" jdbcType="VARBINARY" property="firstPosition" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.EmRtRegionRawSlowest7dayMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.EmRtRegionRawSlowest7day" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COMPOSITE_TARGET_NAME" property="compositeTargetName" jdbcType="VARCHAR" />
+    <result column="COMPOSITE_TARGET_TYPE" property="compositeTargetType" jdbcType="VARCHAR" />
+    <result column="METRIC_NAME" property="metricName" jdbcType="VARCHAR" />
+    <result column="DISPLAY_NAME" property="displayName" jdbcType="VARCHAR" />
+    <result column="URL_FILENAME" property="urlFilename" jdbcType="VARCHAR" />
+    <result column="URL_LINK" property="urlLink" jdbcType="VARCHAR" />
+    <result column="VISITOR_NODE" property="visitorNode" jdbcType="VARCHAR" />
+    <result column="VISITOR_DOMAIN" property="visitorDomain" jdbcType="VARCHAR" />
+    <result column="VISITOR_REGION" property="visitorRegion" jdbcType="VARCHAR" />
+    <result column="COLLECTION_TIMESTAMP" property="collectionTimestamp" jdbcType="DATE" />
+    <result column="ELAPSED_TIME" property="elapsedTime" jdbcType="DECIMAL" />
+    <result column="SUBMIT_ACTION_TIMESTAMP" property="submitActionTimestamp" jdbcType="DECIMAL" />
+    <result column="OS_NAME" property="osName" jdbcType="VARCHAR" />
+    <result column="OS_VERSION" property="osVersion" jdbcType="VARCHAR" />
+    <result column="BROWSER_NAME" property="browserName" jdbcType="VARCHAR" />
+    <result column="BROWSER_VERSION" property="browserVersion" jdbcType="VARCHAR" />
+    <result column="COMPOSITE_TARGET_GUID" property="compositeTargetGuid" jdbcType="VARBINARY" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

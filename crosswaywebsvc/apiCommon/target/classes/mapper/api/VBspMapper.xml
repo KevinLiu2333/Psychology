@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VBspMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VBsp" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CR_REQUESTS" property="crRequests" jdbcType="DECIMAL" />
+    <result column="CURRENT_REQUESTS" property="currentRequests" jdbcType="DECIMAL" />
+    <result column="DATA_REQUESTS" property="dataRequests" jdbcType="DECIMAL" />
+    <result column="UNDO_REQUESTS" property="undoRequests" jdbcType="DECIMAL" />
+    <result column="TX_REQUESTS" property="txRequests" jdbcType="DECIMAL" />
+    <result column="CURRENT_RESULTS" property="currentResults" jdbcType="DECIMAL" />
+    <result column="PRIVATE_RESULTS" property="privateResults" jdbcType="DECIMAL" />
+    <result column="ZERO_RESULTS" property="zeroResults" jdbcType="DECIMAL" />
+    <result column="DISK_READ_RESULTS" property="diskReadResults" jdbcType="DECIMAL" />
+    <result column="FAIL_RESULTS" property="failResults" jdbcType="DECIMAL" />
+    <result column="FAIRNESS_DOWN_CONVERTS" property="fairnessDownConverts" jdbcType="DECIMAL" />
+    <result column="FAIRNESS_CLEARS" property="fairnessClears" jdbcType="DECIMAL" />
+    <result column="FREE_LOCK_ELEMENTS" property="freeLockElements" jdbcType="DECIMAL" />
+    <result column="FLUSHES" property="flushes" jdbcType="DECIMAL" />
+    <result column="FLUSHES_QUEUED" property="flushesQueued" jdbcType="DECIMAL" />
+    <result column="FLUSH_QUEUE_FULL" property="flushQueueFull" jdbcType="DECIMAL" />
+    <result column="FLUSH_MAX_TIME" property="flushMaxTime" jdbcType="DECIMAL" />
+    <result column="LIGHT_WORKS" property="lightWorks" jdbcType="DECIMAL" />
+    <result column="ERRORS" property="errors" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

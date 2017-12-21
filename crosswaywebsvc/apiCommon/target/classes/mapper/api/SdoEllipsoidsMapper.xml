@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoEllipsoidsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoEllipsoids" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ELLIPSOID_ID" property="ellipsoidId" jdbcType="DECIMAL" />
+    <result column="ELLIPSOID_NAME" property="ellipsoidName" jdbcType="VARCHAR" />
+    <result column="SEMI_MAJOR_AXIS" property="semiMajorAxis" jdbcType="DECIMAL" />
+    <result column="UOM_ID" property="uomId" jdbcType="DECIMAL" />
+    <result column="INV_FLATTENING" property="invFlattening" jdbcType="DECIMAL" />
+    <result column="SEMI_MINOR_AXIS" property="semiMinorAxis" jdbcType="DECIMAL" />
+    <result column="INFORMATION_SOURCE" property="informationSource" jdbcType="VARCHAR" />
+    <result column="DATA_SOURCE" property="dataSource" jdbcType="VARCHAR" />
+    <result column="IS_LEGACY" property="isLegacy" jdbcType="VARCHAR" />
+    <result column="LEGACY_CODE" property="legacyCode" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaViewsAeMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaViewsAe" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="VIEW_NAME" property="viewName" jdbcType="VARCHAR" />
+    <result column="TEXT_LENGTH" property="textLength" jdbcType="DECIMAL" />
+    <result column="TYPE_TEXT_LENGTH" property="typeTextLength" jdbcType="DECIMAL" />
+    <result column="TYPE_TEXT" property="typeText" jdbcType="VARCHAR" />
+    <result column="OID_TEXT_LENGTH" property="oidTextLength" jdbcType="DECIMAL" />
+    <result column="OID_TEXT" property="oidText" jdbcType="VARCHAR" />
+    <result column="VIEW_TYPE_OWNER" property="viewTypeOwner" jdbcType="VARCHAR" />
+    <result column="VIEW_TYPE" property="viewType" jdbcType="VARCHAR" />
+    <result column="SUPERVIEW_NAME" property="superviewName" jdbcType="VARCHAR" />
+    <result column="EDITIONING_VIEW" property="editioningView" jdbcType="VARCHAR" />
+    <result column="READ_ONLY" property="readOnly" jdbcType="VARCHAR" />
+    <result column="EDITION_NAME" property="editionName" jdbcType="VARCHAR" />
+    <result column="TEXT" property="text" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

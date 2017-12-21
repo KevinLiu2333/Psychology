@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuRmgrPlanViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuRmgrPlanView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="SCHEMA_OBJ" property="schemaObj" jdbcType="OTHER" />
+    <result column="CPU_METHOD" property="cpuMethod" jdbcType="VARCHAR" />
+    <result column="MAST_METHOD" property="mastMethod" jdbcType="VARCHAR" />
+    <result column="PDL_METHOD" property="pdlMethod" jdbcType="VARCHAR" />
+    <result column="NUM_PLAN_DIRECTIVES" property="numPlanDirectives" jdbcType="DECIMAL" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="QUE_METHOD" property="queMethod" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="MANDATORY" property="mandatory" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

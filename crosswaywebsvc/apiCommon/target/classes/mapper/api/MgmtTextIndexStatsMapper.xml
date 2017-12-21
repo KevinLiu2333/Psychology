@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtTextIndexStatsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtTextIndexStats" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COLLECTION_TIMESTAMP" property="collectionTimestamp" jdbcType="DATE" />
+    <result column="INDEX_NAME" property="indexName" jdbcType="VARCHAR" />
+    <result column="PARTN_NAME" property="partnName" jdbcType="VARCHAR" />
+    <result column="STAT_DATA" property="statData" jdbcType="VARCHAR" />
+    <result column="SIZE_DATA" property="sizeData" jdbcType="VARCHAR" />
+    <result column="OBJECTS_DATA" property="objectsData" jdbcType="VARCHAR" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

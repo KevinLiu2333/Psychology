@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigFrmRevBlkItemsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigFrmRevBlkItems" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="ITEM_ID" property="itemId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="LABEL" property="label" jdbcType="VARCHAR" />
+    <result column="ITEM_PROMPT" property="itemPrompt" jdbcType="VARCHAR" />
+    <result column="ITEMTYPE" property="itemtype" jdbcType="VARCHAR" />
+    <result column="LOVNAME" property="lovname" jdbcType="VARCHAR" />
+    <result column="LISTSTYLE" property="liststyle" jdbcType="VARCHAR" />
+    <result column="DATABASEITEM" property="databaseitem" jdbcType="VARCHAR" />
+    <result column="JUSTIFICATION" property="justification" jdbcType="VARCHAR" />
+    <result column="REQUIRED" property="required" jdbcType="VARCHAR" />
+    <result column="CHECKEDVALUE" property="checkedvalue" jdbcType="VARCHAR" />
+    <result column="UNCHECKEDVALUE" property="uncheckedvalue" jdbcType="VARCHAR" />
+    <result column="INITIALIZEVALUE" property="initializevalue" jdbcType="VARCHAR" />
+    <result column="FORMATMASK" property="formatmask" jdbcType="VARCHAR" />
+    <result column="TABPAGENAME" property="tabpagename" jdbcType="VARCHAR" />
+    <result column="COLUMNNAME" property="columnname" jdbcType="VARCHAR" />
+    <result column="MULTILINE" property="multiline" jdbcType="VARCHAR" />
+    <result column="MAXIMUMLENGTH" property="maximumlength" jdbcType="VARCHAR" />
+    <result column="HEIGHT" property="height" jdbcType="VARCHAR" />
+    <result column="WIDTH" property="width" jdbcType="VARCHAR" />
+    <result column="SELECT_FOR_APP" property="selectForApp" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="TIMESTAMP" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LOV_QUERY" property="lovQuery" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

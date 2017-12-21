@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllSdoIndexMetadataMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllSdoIndexMetadata" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SDO_INDEX_OWNER" property="sdoIndexOwner" jdbcType="VARCHAR" />
+    <result column="SDO_INDEX_TYPE" property="sdoIndexType" jdbcType="VARCHAR" />
+    <result column="SDO_LEVEL" property="sdoLevel" jdbcType="DECIMAL" />
+    <result column="SDO_NUMTILES" property="sdoNumtiles" jdbcType="DECIMAL" />
+    <result column="SDO_MAXLEVEL" property="sdoMaxlevel" jdbcType="DECIMAL" />
+    <result column="SDO_COMMIT_INTERVAL" property="sdoCommitInterval" jdbcType="DECIMAL" />
+    <result column="SDO_INDEX_TABLE" property="sdoIndexTable" jdbcType="VARCHAR" />
+    <result column="SDO_INDEX_NAME" property="sdoIndexName" jdbcType="VARCHAR" />
+    <result column="SDO_INDEX_PRIMARY" property="sdoIndexPrimary" jdbcType="DECIMAL" />
+    <result column="SDO_TSNAME" property="sdoTsname" jdbcType="VARCHAR" />
+    <result column="SDO_COLUMN_NAME" property="sdoColumnName" jdbcType="VARCHAR" />
+    <result column="SDO_RTREE_HEIGHT" property="sdoRtreeHeight" jdbcType="DECIMAL" />
+    <result column="SDO_RTREE_NUM_NODES" property="sdoRtreeNumNodes" jdbcType="DECIMAL" />
+    <result column="SDO_RTREE_DIMENSIONALITY" property="sdoRtreeDimensionality" jdbcType="DECIMAL" />
+    <result column="SDO_RTREE_FANOUT" property="sdoRtreeFanout" jdbcType="DECIMAL" />
+    <result column="SDO_RTREE_ROOT" property="sdoRtreeRoot" jdbcType="VARCHAR" />
+    <result column="SDO_RTREE_SEQ_NAME" property="sdoRtreeSeqName" jdbcType="VARCHAR" />
+    <result column="SDO_TABLESPACE" property="sdoTablespace" jdbcType="VARCHAR" />
+    <result column="SDO_INITIAL_EXTENT" property="sdoInitialExtent" jdbcType="VARCHAR" />
+    <result column="SDO_NEXT_EXTENT" property="sdoNextExtent" jdbcType="VARCHAR" />
+    <result column="SDO_PCTINCREASE" property="sdoPctincrease" jdbcType="DECIMAL" />
+    <result column="SDO_MIN_EXTENTS" property="sdoMinExtents" jdbcType="DECIMAL" />
+    <result column="SDO_MAX_EXTENTS" property="sdoMaxExtents" jdbcType="DECIMAL" />
+    <result column="SDO_INDEX_DIMS" property="sdoIndexDims" jdbcType="DECIMAL" />
+    <result column="SDO_LAYER_GTYPE" property="sdoLayerGtype" jdbcType="VARCHAR" />
+    <result column="SDO_RTREE_PCTFREE" property="sdoRtreePctfree" jdbcType="DECIMAL" />
+    <result column="SDO_INDEX_PARTITION" property="sdoIndexPartition" jdbcType="VARCHAR" />
+    <result column="SDO_PARTITIONED" property="sdoPartitioned" jdbcType="DECIMAL" />
+    <result column="SDO_RTREE_QUALITY" property="sdoRtreeQuality" jdbcType="DECIMAL" />
+    <result column="SDO_INDEX_VERSION" property="sdoIndexVersion" jdbcType="DECIMAL" />
+    <result column="SDO_INDEX_GEODETIC" property="sdoIndexGeodetic" jdbcType="VARCHAR" />
+    <result column="SDO_INDEX_STATUS" property="sdoIndexStatus" jdbcType="VARCHAR" />
+    <result column="SDO_NL_INDEX_TABLE" property="sdoNlIndexTable" jdbcType="VARCHAR" />
+    <result column="SDO_DML_BATCH_SIZE" property="sdoDmlBatchSize" jdbcType="DECIMAL" />
+    <result column="SDO_RTREE_ENT_XPND" property="sdoRtreeEntXpnd" jdbcType="DECIMAL" />
+    <result column="SDO_ROOT_MBR" property="sdoRootMbr" jdbcType="OTHER" />
+    <result column="SDO_FIXED_META" property="sdoFixedMeta" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

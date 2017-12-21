@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtDbDbninstanceinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtDbDbninstanceinfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HOST_NAME" property="hostName" jdbcType="VARCHAR" />
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="COLLECTION_TIMESTAMP" property="collectionTimestamp" jdbcType="DATE" />
+    <result column="DATABASE_NAME" property="databaseName" jdbcType="VARCHAR" />
+    <result column="GLOBAL_NAME" property="globalName" jdbcType="VARCHAR" />
+    <result column="BANNER" property="banner" jdbcType="VARCHAR" />
+    <result column="HOST" property="host" jdbcType="VARCHAR" />
+    <result column="INSTANCE_NAME" property="instanceName" jdbcType="VARCHAR" />
+    <result column="STARTUP_TIME" property="startupTime" jdbcType="DATE" />
+    <result column="LOGINS" property="logins" jdbcType="VARCHAR" />
+    <result column="LOG_MODE" property="logMode" jdbcType="VARCHAR" />
+    <result column="OPEN_MODE" property="openMode" jdbcType="VARCHAR" />
+    <result column="DEFAULT_TEMP_TABLESPACE" property="defaultTempTablespace" jdbcType="VARCHAR" />
+    <result column="CHARACTERSET" property="characterset" jdbcType="VARCHAR" />
+    <result column="NATIONAL_CHARACTERSET" property="nationalCharacterset" jdbcType="VARCHAR" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

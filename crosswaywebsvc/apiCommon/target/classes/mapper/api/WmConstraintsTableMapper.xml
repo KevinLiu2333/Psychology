@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WmConstraintsTableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WmConstraintsTable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <id column="CONSTRAINT_NAME" property="constraintName" jdbcType="VARCHAR" />
+    <id column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="CONSTRAINT_TYPE" property="constraintType" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="INDEX_OWNER" property="indexOwner" jdbcType="VARCHAR" />
+    <result column="INDEX_NAME" property="indexName" jdbcType="VARCHAR" />
+    <result column="INDEX_TYPE" property="indexType" jdbcType="VARCHAR" />
+    <result column="NUMINDEXCOLS" property="numindexcols" jdbcType="DECIMAL" />
+    <result column="SEARCH_CONDITION" property="searchCondition" jdbcType="CLOB" />
+    <result column="ALIASEDCOLUMNS" property="aliasedcolumns" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

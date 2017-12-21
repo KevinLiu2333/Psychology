@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VUnusableBackupfileDetailsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VUnusableBackupfileDetails" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SESSION_KEY" property="sessionKey" jdbcType="DECIMAL" />
+    <result column="SESSION_RECID" property="sessionRecid" jdbcType="DECIMAL" />
+    <result column="SESSION_STAMP" property="sessionStamp" jdbcType="DECIMAL" />
+    <result column="RMAN_STATUS_RECID" property="rmanStatusRecid" jdbcType="DECIMAL" />
+    <result column="RMAN_STATUS_STAMP" property="rmanStatusStamp" jdbcType="DECIMAL" />
+    <result column="BTYPE" property="btype" jdbcType="CHAR" />
+    <result column="BTYPE_KEY" property="btypeKey" jdbcType="DECIMAL" />
+    <result column="ID1" property="id1" jdbcType="DECIMAL" />
+    <result column="ID2" property="id2" jdbcType="DECIMAL" />
+    <result column="FILETYPE" property="filetype" jdbcType="VARCHAR" />
+    <result column="FILETYPE_KEY" property="filetypeKey" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="FILESIZE" property="filesize" jdbcType="DECIMAL" />
+    <result column="DEVICE_TYPE" property="deviceType" jdbcType="VARCHAR" />
+    <result column="FILENAME" property="filename" jdbcType="VARCHAR" />
+    <result column="MEDIA" property="media" jdbcType="VARCHAR" />
+    <result column="MEDIA_POOL" property="mediaPool" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

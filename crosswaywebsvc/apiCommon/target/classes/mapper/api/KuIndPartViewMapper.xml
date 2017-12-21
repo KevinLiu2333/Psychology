@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuIndPartViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuIndPartView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="SCHEMA_OBJ" property="schemaObj" jdbcType="OTHER" />
+    <result column="TS_NAME" property="tsName" jdbcType="VARCHAR" />
+    <result column="BLOCKSIZE" property="blocksize" jdbcType="DECIMAL" />
+    <result column="DEFERRED_STG" property="deferredStg" jdbcType="OTHER" />
+    <result column="STORAGE" property="storage" jdbcType="OTHER" />
+    <result column="DATAOBJ_NUM" property="dataobjNum" jdbcType="DECIMAL" />
+    <result column="BASE_OBJ_NUM" property="baseObjNum" jdbcType="DECIMAL" />
+    <result column="PART_NUM" property="partNum" jdbcType="DECIMAL" />
+    <result column="TAB_PART_NAME" property="tabPartName" jdbcType="VARCHAR" />
+    <result column="HIBOUNDLEN" property="hiboundlen" jdbcType="DECIMAL" />
+    <result column="HIBOUNDVAL" property="hiboundval" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="PCT_FREE" property="pctFree" jdbcType="DECIMAL" />
+    <result column="PCT_THRES" property="pctThres" jdbcType="DECIMAL" />
+    <result column="INITRANS" property="initrans" jdbcType="DECIMAL" />
+    <result column="MAXTRANS" property="maxtrans" jdbcType="DECIMAL" />
+    <result column="ANALYZETIME" property="analyzetime" jdbcType="DATE" />
+    <result column="SAMPLESIZE" property="samplesize" jdbcType="DECIMAL" />
+    <result column="ROWCNT" property="rowcnt" jdbcType="DECIMAL" />
+    <result column="BLEVEL" property="blevel" jdbcType="DECIMAL" />
+    <result column="LEAFCNT" property="leafcnt" jdbcType="DECIMAL" />
+    <result column="DISTKEY" property="distkey" jdbcType="DECIMAL" />
+    <result column="LBLKKEY" property="lblkkey" jdbcType="DECIMAL" />
+    <result column="DBLKKEY" property="dblkkey" jdbcType="DECIMAL" />
+    <result column="CLUFAC" property="clufac" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+    <result column="INCLCOL" property="inclcol" jdbcType="DECIMAL" />
+    <result column="PARAMETERS" property="parameters" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

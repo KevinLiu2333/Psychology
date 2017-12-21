@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvCpoolConnInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvCpoolConnInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="PROXY_USER" property="proxyUser" jdbcType="VARCHAR" />
+    <result column="CCLASS_NAME" property="cclassName" jdbcType="VARCHAR" />
+    <result column="PURITY" property="purity" jdbcType="VARCHAR" />
+    <result column="TAG" property="tag" jdbcType="VARCHAR" />
+    <result column="SERVICE" property="service" jdbcType="VARCHAR" />
+    <result column="PROCESS_ID" property="processId" jdbcType="VARCHAR" />
+    <result column="PROGRAM" property="program" jdbcType="VARCHAR" />
+    <result column="MACHINE" property="machine" jdbcType="VARCHAR" />
+    <result column="TERMINAL" property="terminal" jdbcType="VARCHAR" />
+    <result column="CONNECTION_MODE" property="connectionMode" jdbcType="VARCHAR" />
+    <result column="CONNECTION_STATUS" property="connectionStatus" jdbcType="VARCHAR" />
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="CMON_ADDR" property="cmonAddr" jdbcType="VARBINARY" />
+    <result column="SESSION_ADDR" property="sessionAddr" jdbcType="VARBINARY" />
+    <result column="CONNECTION_ADDR" property="connectionAddr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

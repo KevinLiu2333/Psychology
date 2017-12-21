@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SmonScnTimeMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SmonScnTime" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="THREAD" property="thread" jdbcType="DECIMAL" />
+    <result column="TIME_MP" property="timeMp" jdbcType="DECIMAL" />
+    <result column="TIME_DP" property="timeDp" jdbcType="DATE" />
+    <result column="SCN_WRP" property="scnWrp" jdbcType="DECIMAL" />
+    <result column="SCN_BAS" property="scnBas" jdbcType="DECIMAL" />
+    <result column="NUM_MAPPINGS" property="numMappings" jdbcType="DECIMAL" />
+    <result column="SCN" property="scn" jdbcType="DECIMAL" />
+    <result column="ORIG_THREAD" property="origThread" jdbcType="DECIMAL" />
+    <result column="TIM_SCN_MAP" property="timScnMap" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

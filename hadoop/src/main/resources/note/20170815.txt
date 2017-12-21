@@ -1,0 +1,5 @@
+map任务的执行节点和输入数据的存储节点是同一节点,Hadoop的性能达到最佳.这就是所谓的data locality optimization(数据局部性优化)
+reduce任务则不具备本地存储的优势,一个单一的reduce任务的输入往往来自于所有mapper的输出.
+有序map的输出必须通过网络传输到reduce任务运行的节点,并在那里进行合并,然后传递到用户定义的reduce函数中.为增加其可靠性,reduce的输出通常存储在HDFS中
+
+combiner函数并不能取代reduce函数.但可以减少reduce函数的工作量

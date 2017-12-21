@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RegistryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Registry" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="NAMESPACE" property="namespace" jdbcType="VARCHAR" />
+    <id column="CID" property="cid" jdbcType="VARCHAR" />
+    <result column="CNAME" property="cname" jdbcType="VARCHAR" />
+    <result column="SCHEMA#" property="schema" jdbcType="DECIMAL" />
+    <result column="INVOKER#" property="invoker" jdbcType="DECIMAL" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="MODIFIED" property="modified" jdbcType="DATE" />
+    <result column="PID" property="pid" jdbcType="VARCHAR" />
+    <result column="BANNER" property="banner" jdbcType="VARCHAR" />
+    <result column="VPROC" property="vproc" jdbcType="VARCHAR" />
+    <result column="DATE_INVALID" property="dateInvalid" jdbcType="DATE" />
+    <result column="DATE_VALID" property="dateValid" jdbcType="DATE" />
+    <result column="DATE_LOADING" property="dateLoading" jdbcType="DATE" />
+    <result column="DATE_LOADED" property="dateLoaded" jdbcType="DATE" />
+    <result column="DATE_UPGRADING" property="dateUpgrading" jdbcType="DATE" />
+    <result column="DATE_UPGRADED" property="dateUpgraded" jdbcType="DATE" />
+    <result column="DATE_DOWNGRADING" property="dateDowngrading" jdbcType="DATE" />
+    <result column="DATE_DOWNGRADED" property="dateDowngraded" jdbcType="DATE" />
+    <result column="DATE_REMOVING" property="dateRemoving" jdbcType="DATE" />
+    <result column="DATE_REMOVED" property="dateRemoved" jdbcType="DATE" />
+    <result column="ORG_VERSION" property="orgVersion" jdbcType="VARCHAR" />
+    <result column="PRV_VERSION" property="prvVersion" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

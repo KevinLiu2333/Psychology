@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtSoftwareComponentsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtSoftwareComponents" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="EXTERNAL_NAME" property="externalName" jdbcType="VARCHAR" />
+    <result column="BASE_VERSION" property="baseVersion" jdbcType="VARCHAR" />
+    <result column="PATCHSETS_IN_HOME" property="patchsetsInHome" jdbcType="VARCHAR" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="HOST_NAME" property="hostName" jdbcType="VARCHAR" />
+    <result column="HOME_LOCATION" property="homeLocation" jdbcType="VARCHAR" />
+    <result column="HOME_NAME" property="homeName" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="INSTALLER_VERSION" property="installerVersion" jdbcType="VARCHAR" />
+    <result column="MIN_DEINSTALLER_VERSION" property="minDeinstallerVersion" jdbcType="VARCHAR" />
+    <result column="INSTALL_TIMESTAMP" property="installTimestamp" jdbcType="DATE" />
+    <result column="IS_TOP_LEVEL" property="isTopLevel" jdbcType="VARCHAR" />
+    <result column="INTERIM_PATCHES_IN_HOME" property="interimPatchesInHome" jdbcType="VARCHAR" />
+    <result column="BUGS_FIXED_BY_INTERIM_PATCHES" property="bugsFixedByInterimPatches" jdbcType="VARCHAR" />
+    <result column="SNAPSHOT_GUID" property="snapshotGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

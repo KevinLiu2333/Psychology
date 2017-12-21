@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtBslnBaselinesMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtBslnBaselines">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="BSLN_GUID" jdbcType="VARBINARY" property="bslnGuid" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="TYPE" jdbcType="VARCHAR" property="type" />
+    <result column="SUBINTERVAL_KEY" jdbcType="VARCHAR" property="subintervalKey" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    <result column="TARGET_UID" jdbcType="VARBINARY" property="targetUid" />
+  </resultMap>
+</mapper>

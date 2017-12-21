@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtRcaTestResultMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtRcaTestResult" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="RESULT_GUID" property="resultGuid" jdbcType="VARBINARY" />
+    <result column="COLLECTION_TIMESTAMP" property="collectionTimestamp" jdbcType="DATE" />
+    <result column="TEST_VALUE" property="testValue" jdbcType="VARCHAR" />
+    <result column="LAST_COLL_TIMESTAMP" property="lastCollTimestamp" jdbcType="DATE" />
+    <result column="LAST_TEST_VALUE" property="lastTestValue" jdbcType="VARCHAR" />
+    <result column="RESULT_STATUS" property="resultStatus" jdbcType="DECIMAL" />
+    <result column="MESSAGE" property="message" jdbcType="VARCHAR" />
+    <result column="MESSAGE_NLSID" property="messageNlsid" jdbcType="VARCHAR" />
+    <result column="MESSAGE_PARAMS" property="messageParams" jdbcType="VARCHAR" />
+    <result column="IS_STATUS" property="isStatus" jdbcType="DECIMAL" />
+    <result column="METRIC_TEST_GUID" property="metricTestGuid" jdbcType="VARBINARY" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

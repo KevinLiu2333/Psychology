@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaRepcatExceptionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaRepcatExceptions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="EXCEPTION_ID" property="exceptionId" jdbcType="DECIMAL" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="JOB" property="job" jdbcType="DECIMAL" />
+    <result column="ERROR_DATE" property="errorDate" jdbcType="DATE" />
+    <result column="ERROR_NUMBER" property="errorNumber" jdbcType="DECIMAL" />
+    <result column="ERROR_MESSAGE" property="errorMessage" jdbcType="VARCHAR" />
+    <result column="LINE_NUMBER" property="lineNumber" jdbcType="DECIMAL" />
+    <result column="REQUEST" property="request" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

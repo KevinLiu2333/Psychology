@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WfsFeaturetypecomplextagsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WfsFeaturetypecomplextags" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="XML_TYPENAME" property="xmlTypename" jdbcType="VARCHAR" />
+    <result column="XML_TYPENAMENSURL" property="xmlTypenamensurl" jdbcType="VARCHAR" />
+    <result column="XML_TYPETAGNAME" property="xmlTypetagname" jdbcType="VARCHAR" />
+    <result column="XML_TYPETAGSEQNO" property="xmlTypetagseqno" jdbcType="DECIMAL" />
+    <result column="XML_TYPETAGTYPE" property="xmlTypetagtype" jdbcType="VARCHAR" />
+    <result column="XML_TYPETAGTYPENSURL" property="xmlTypetagtypensurl" jdbcType="VARCHAR" />
+    <result column="DB_ATTRNAME" property="dbAttrname" jdbcType="VARCHAR" />
+    <result column="DB_ATTRTYPE" property="dbAttrtype" jdbcType="VARCHAR" />
+    <result column="ISNULLABLE" property="isnullable" jdbcType="VARCHAR" />
+    <result column="DATALENGTH" property="datalength" jdbcType="DECIMAL" />
+    <result column="DB_ARRTYPE" property="dbArrtype" jdbcType="VARCHAR" />
+    <result column="ISARRAYTYPE" property="isarraytype" jdbcType="VARCHAR" />
+    <result column="ARRLENGTH" property="arrlength" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

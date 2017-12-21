@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrvUserExtractEntdictMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrvUserExtractEntdict" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="EED_POLID" property="eedPolid" jdbcType="DECIMAL" />
+    <result column="EED_ENTID" property="eedEntid" jdbcType="DECIMAL" />
+    <result column="EED_LANG" property="eedLang" jdbcType="VARCHAR" />
+    <result column="EED_MENTION" property="eedMention" jdbcType="VARCHAR" />
+    <result column="EED_TYPE" property="eedType" jdbcType="VARCHAR" />
+    <result column="EED_NORMID" property="eedNormid" jdbcType="DECIMAL" />
+    <result column="EED_ALTCNT" property="eedAltcnt" jdbcType="DECIMAL" />
+    <result column="EED_STATUS" property="eedStatus" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

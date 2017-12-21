@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OrddcmInstallDocsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OrddcmInstallDocs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DOC_NAME" property="docName" jdbcType="VARCHAR" />
+    <result column="DOC_TYPE_ID" property="docTypeId" jdbcType="DECIMAL" />
+    <result column="DOC_TYPE" property="docType" jdbcType="VARCHAR" />
+    <result column="LOAD_ORDER" property="loadOrder" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

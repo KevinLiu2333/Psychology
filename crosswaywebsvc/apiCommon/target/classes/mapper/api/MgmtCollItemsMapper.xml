@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCollItemsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCollItems" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <id column="TYPE_META_VER" property="typeMetaVer" jdbcType="VARCHAR" />
+    <id column="COLL_NAME" property="collName" jdbcType="VARCHAR" />
+    <id column="CATEGORY_PROP_1" property="categoryProp1" jdbcType="VARCHAR" />
+    <id column="CATEGORY_PROP_2" property="categoryProp2" jdbcType="VARCHAR" />
+    <id column="CATEGORY_PROP_3" property="categoryProp3" jdbcType="VARCHAR" />
+    <id column="CATEGORY_PROP_4" property="categoryProp4" jdbcType="VARCHAR" />
+    <id column="CATEGORY_PROP_5" property="categoryProp5" jdbcType="VARCHAR" />
+    <result column="IS_ENABLED" property="isEnabled" jdbcType="DECIMAL" />
+    <result column="IS_REQUIRED" property="isRequired" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

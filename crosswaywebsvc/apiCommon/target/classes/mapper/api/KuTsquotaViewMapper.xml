@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuTsquotaViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuTsquotaView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="USER_ID" property="userId" jdbcType="DECIMAL" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="TS_NAME" property="tsName" jdbcType="VARCHAR" />
+    <result column="TS_ID" property="tsId" jdbcType="DECIMAL" />
+    <result column="MAXBLOCKS" property="maxblocks" jdbcType="DECIMAL" />
+    <result column="BLOCKSIZE" property="blocksize" jdbcType="DECIMAL" />
+    <result column="GRANTOR_NUM" property="grantorNum" jdbcType="DECIMAL" />
+    <result column="GRANTOR" property="grantor" jdbcType="CHAR" />
+    <result column="BLOCKS" property="blocks" jdbcType="DECIMAL" />
+    <result column="PRIV1" property="priv1" jdbcType="DECIMAL" />
+    <result column="PRIV2" property="priv2" jdbcType="DECIMAL" />
+    <result column="PRIV3" property="priv3" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

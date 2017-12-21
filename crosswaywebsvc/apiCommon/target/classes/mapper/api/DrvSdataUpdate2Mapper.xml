@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrvSdataUpdate2Mapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrvSdataUpdate2" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SDU_IDX_ID" property="sduIdxId" jdbcType="DECIMAL" />
+    <result column="SDU_IXP_ID" property="sduIxpId" jdbcType="DECIMAL" />
+    <result column="SDU_SDATA_ID" property="sduSdataId" jdbcType="DECIMAL" />
+    <result column="SDU_DOCID" property="sduDocid" jdbcType="DECIMAL" />
+    <result column="SDU_NV_TYPE" property="sduNvType" jdbcType="VARCHAR" />
+    <result column="SDU_NV_NDATA" property="sduNvNdata" jdbcType="DECIMAL" />
+    <result column="SDU_NV_DDATA" property="sduNvDdata" jdbcType="DATE" />
+    <result column="SDU_NV_CDATA" property="sduNvCdata" jdbcType="VARCHAR" />
+    <result column="SDU_NV_RDATA" property="sduNvRdata" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

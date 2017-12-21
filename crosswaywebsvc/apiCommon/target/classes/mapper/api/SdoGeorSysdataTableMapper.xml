@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoGeorSysdataTableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoGeorSysdataTable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SDO_OWNER" property="sdoOwner" jdbcType="VARCHAR" />
+    <id column="RDT_TABLE_NAME" property="rdtTableName" jdbcType="VARCHAR" />
+    <id column="RASTER_ID" property="rasterId" jdbcType="DECIMAL" />
+    <result column="GEORASTER_TABLE_NAME" property="georasterTableName" jdbcType="VARCHAR" />
+    <result column="GEORASTER_COLUMN_NAME" property="georasterColumnName" jdbcType="VARCHAR" />
+    <result column="GEOR_METADATA_COLUMN_NAME" property="georMetadataColumnName" jdbcType="VARCHAR" />
+    <result column="OTHER_TABLE_NAMES" property="otherTableNames" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

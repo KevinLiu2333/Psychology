@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhDbCacheAdviceBlMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhDbCacheAdviceBl" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="BPID" property="bpid" jdbcType="DECIMAL" />
+    <id column="BUFFERS_FOR_ESTIMATE" property="buffersForEstimate" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="BLOCK_SIZE" property="blockSize" jdbcType="DECIMAL" />
+    <result column="ADVICE_STATUS" property="adviceStatus" jdbcType="VARCHAR" />
+    <result column="SIZE_FOR_ESTIMATE" property="sizeForEstimate" jdbcType="DECIMAL" />
+    <result column="SIZE_FACTOR" property="sizeFactor" jdbcType="DECIMAL" />
+    <result column="PHYSICAL_READS" property="physicalReads" jdbcType="DECIMAL" />
+    <result column="BASE_PHYSICAL_READS" property="basePhysicalReads" jdbcType="DECIMAL" />
+    <result column="ACTUAL_PHYSICAL_READS" property="actualPhysicalReads" jdbcType="DECIMAL" />
+    <result column="ESTD_PHYSICAL_READ_TIME" property="estdPhysicalReadTime" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

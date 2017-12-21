@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.XNm4o5gvjw67c95ob541f393d17gpMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.XNm4o5gvjw67c95ob541f393d17gp" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NMSPCURI" property="nmspcuri" jdbcType="VARCHAR" />
+    <result column="ID" property="id" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

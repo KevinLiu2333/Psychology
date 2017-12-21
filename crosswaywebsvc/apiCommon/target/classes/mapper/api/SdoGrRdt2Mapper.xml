@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoGrRdt2Mapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoGrRdt2" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="RASTERID" property="rasterid" jdbcType="DECIMAL" />
+    <id column="PYRAMIDLEVEL" property="pyramidlevel" jdbcType="DECIMAL" />
+    <id column="BANDBLOCKNUMBER" property="bandblocknumber" jdbcType="DECIMAL" />
+    <id column="ROWBLOCKNUMBER" property="rowblocknumber" jdbcType="DECIMAL" />
+    <id column="COLUMNBLOCKNUMBER" property="columnblocknumber" jdbcType="DECIMAL" />
+    <result column="BLOCKMBR" property="blockmbr" jdbcType="OTHER" />
+    <result column="RASTERBLOCK" property="rasterblock" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

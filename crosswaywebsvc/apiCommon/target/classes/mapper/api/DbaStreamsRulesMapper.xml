@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaStreamsRulesMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaStreamsRules">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="STREAMS_NAME" jdbcType="VARCHAR" property="streamsName" />
+    <result column="STREAMS_TYPE" jdbcType="DECIMAL" property="streamsType" />
+    <result column="RULE_TYPE" jdbcType="DECIMAL" property="ruleType" />
+    <result column="INCLUDE_TAGGED_LCR" jdbcType="DECIMAL" property="includeTaggedLcr" />
+    <result column="SOURCE_DATABASE" jdbcType="VARCHAR" property="sourceDatabase" />
+    <result column="RULE_OWNER" jdbcType="VARCHAR" property="ruleOwner" />
+    <result column="RULE_NAME" jdbcType="VARCHAR" property="ruleName" />
+    <result column="RULE_CONDITION" jdbcType="VARCHAR" property="ruleCondition" />
+    <result column="DML_CONDITION" jdbcType="VARCHAR" property="dmlCondition" />
+    <result column="SUBSETTING_OPERATION" jdbcType="DECIMAL" property="subsettingOperation" />
+    <result column="SCHEMA_NAME" jdbcType="VARCHAR" property="schemaName" />
+    <result column="OBJECT_NAME" jdbcType="VARCHAR" property="objectName" />
+    <result column="OBJECT_TYPE" jdbcType="DECIMAL" property="objectType" />
+    <result column="SPARE1" jdbcType="DECIMAL" property="spare1" />
+    <result column="SPARE2" jdbcType="DECIMAL" property="spare2" />
+    <result column="SPARE3" jdbcType="DECIMAL" property="spare3" />
+  </resultMap>
+</mapper>

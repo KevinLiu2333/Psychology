@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CtxUserIndexErrorsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CtxUserIndexErrors" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ERR_INDEX_NAME" property="errIndexName" jdbcType="VARCHAR" />
+    <result column="ERR_TIMESTAMP" property="errTimestamp" jdbcType="DATE" />
+    <result column="ERR_TEXTKEY" property="errTextkey" jdbcType="VARCHAR" />
+    <result column="ERR_TEXT" property="errText" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

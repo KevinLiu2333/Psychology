@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtTextindexLogsInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtTextindexLogsInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOG_DIRECTORY" property="logDirectory" jdbcType="VARCHAR" />
+    <result column="LOG_FILE" property="logFile" jdbcType="VARCHAR" />
+    <result column="START_DATE" property="startDate" jdbcType="TIMESTAMP" />
+    <result column="TEXTINDEX_ACTION_TYPE" property="textindexActionType" jdbcType="VARCHAR" />
+    <result column="TEXTINDEX_GUID" property="textindexGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

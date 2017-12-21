@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ColUsageMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ColUsage" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="INTCOL#" property="intcol" jdbcType="DECIMAL" />
+    <result column="EQUALITY_PREDS" property="equalityPreds" jdbcType="DECIMAL" />
+    <result column="EQUIJOIN_PREDS" property="equijoinPreds" jdbcType="DECIMAL" />
+    <result column="NONEQUIJOIN_PREDS" property="nonequijoinPreds" jdbcType="DECIMAL" />
+    <result column="RANGE_PREDS" property="rangePreds" jdbcType="DECIMAL" />
+    <result column="LIKE_PREDS" property="likePreds" jdbcType="DECIMAL" />
+    <result column="NULL_PREDS" property="nullPreds" jdbcType="DECIMAL" />
+    <result column="TIMESTAMP" property="timestamp" jdbcType="DATE" />
+  </resultMap>
+</mapper>

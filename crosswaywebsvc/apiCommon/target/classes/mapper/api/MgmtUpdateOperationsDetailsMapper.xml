@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtUpdateOperationsDetailsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtUpdateOperationsDetails" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OPERATION_GUID" property="operationGuid" jdbcType="VARBINARY" />
+    <id column="DESTINATION_TARGET_GUID" property="destinationTargetGuid" jdbcType="VARBINARY" />
+    <id column="AGENT_GUID" property="agentGuid" jdbcType="VARBINARY" />
+    <result column="EXECUTION_STATUS" property="executionStatus" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED_TIMESTAMP" property="lastUpdatedTimestamp" jdbcType="DATE" />
+    <result column="ERROR_MESSAGE" property="errorMessage" jdbcType="VARCHAR" />
+    <result column="EXECUTION_ID" property="executionId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

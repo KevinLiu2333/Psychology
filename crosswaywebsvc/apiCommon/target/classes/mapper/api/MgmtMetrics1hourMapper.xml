@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtMetrics1hourMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtMetrics1hour" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="METRIC_GUID" property="metricGuid" jdbcType="VARBINARY" />
+    <id column="KEY_VALUE" property="keyValue" jdbcType="VARCHAR" />
+    <id column="ROLLUP_TIMESTAMP" property="rollupTimestamp" jdbcType="DATE" />
+    <result column="SAMPLE_COUNT" property="sampleCount" jdbcType="DECIMAL" />
+    <result column="VALUE_AVERAGE" property="valueAverage" jdbcType="DECIMAL" />
+    <result column="VALUE_MINIMUM" property="valueMinimum" jdbcType="DECIMAL" />
+    <result column="VALUE_MAXIMUM" property="valueMaximum" jdbcType="DECIMAL" />
+    <result column="VALUE_SDEV" property="valueSdev" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

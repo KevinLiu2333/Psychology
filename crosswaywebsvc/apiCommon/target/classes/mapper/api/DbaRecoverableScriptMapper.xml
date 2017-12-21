@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaRecoverableScriptMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaRecoverableScript" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CREATION_TIME" property="creationTime" jdbcType="DATE" />
+    <result column="INVOKING_PACKAGE_OWNER" property="invokingPackageOwner" jdbcType="VARCHAR" />
+    <result column="INVOKING_PACKAGE" property="invokingPackage" jdbcType="VARCHAR" />
+    <result column="INVOKING_PROCEDURE" property="invokingProcedure" jdbcType="VARCHAR" />
+    <result column="INVOKING_USER" property="invokingUser" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="TOTAL_BLOCKS" property="totalBlocks" jdbcType="DECIMAL" />
+    <result column="DONE_BLOCK_NUM" property="doneBlockNum" jdbcType="DECIMAL" />
+    <result column="SCRIPT_COMMENT" property="scriptComment" jdbcType="VARCHAR" />
+    <result column="SCRIPT_ID" property="scriptId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

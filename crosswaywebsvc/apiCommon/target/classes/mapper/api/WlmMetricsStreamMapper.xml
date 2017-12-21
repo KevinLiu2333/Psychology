@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WlmMetricsStreamMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WlmMetricsStream" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TIMESTAMP" property="timestamp" jdbcType="DATE" />
+    <result column="PC" property="pc" jdbcType="VARCHAR" />
+    <result column="NEGATIVE_INTERVAL" property="negativeInterval" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

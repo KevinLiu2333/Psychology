@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ClusterDatabasesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ClusterDatabases" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DATABASE_NAME" property="databaseName" jdbcType="VARCHAR" />
+    <result column="SPAREN1" property="sparen1" jdbcType="DECIMAL" />
+    <result column="SPAREN2" property="sparen2" jdbcType="DECIMAL" />
+    <result column="SPAREVC1" property="sparevc1" jdbcType="VARCHAR" />
+    <result column="SPAREVC2" property="sparevc2" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

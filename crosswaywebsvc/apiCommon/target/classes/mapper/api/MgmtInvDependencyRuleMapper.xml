@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtInvDependencyRuleMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtInvDependencyRule" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DEPENDEE_GUID" property="dependeeGuid" jdbcType="VARBINARY" />
+    <id column="REFERENCER_GUID" property="referencerGuid" jdbcType="VARBINARY" />
+    <result column="DEPENDENCY_TYPE" property="dependencyType" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

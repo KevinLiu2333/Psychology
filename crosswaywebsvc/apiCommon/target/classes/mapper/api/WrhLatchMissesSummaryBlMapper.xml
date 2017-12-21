@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhLatchMissesSummaryBlMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhLatchMissesSummaryBl" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="PARENT_NAME" property="parentName" jdbcType="VARCHAR" />
+    <id column="WHERE_IN_CODE" property="whereInCode" jdbcType="VARCHAR" />
+    <result column="NWFAIL_COUNT" property="nwfailCount" jdbcType="DECIMAL" />
+    <result column="SLEEP_COUNT" property="sleepCount" jdbcType="DECIMAL" />
+    <result column="WTR_SLP_COUNT" property="wtrSlpCount" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

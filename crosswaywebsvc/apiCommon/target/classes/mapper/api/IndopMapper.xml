@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.IndopMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Indop" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="OPER#" property="oper" jdbcType="DECIMAL" />
+    <result column="BIND#" property="bind" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="FILT_NAM" property="filtNam" jdbcType="VARCHAR" />
+    <result column="FILT_SCH" property="filtSch" jdbcType="VARCHAR" />
+    <result column="FILT_TYP" property="filtTyp" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

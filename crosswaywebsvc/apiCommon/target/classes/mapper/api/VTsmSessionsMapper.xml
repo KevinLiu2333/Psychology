@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VTsmSessionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VTsmSessions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="SERIAL#" property="serial" jdbcType="DECIMAL" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="MIGRATABLE" property="migratable" jdbcType="VARCHAR" />
+    <result column="MIGRATION_ALLOWED" property="migrationAllowed" jdbcType="VARCHAR" />
+    <result column="TRANSFERABLE" property="transferable" jdbcType="VARCHAR" />
+    <result column="MIGRATION_BOUNDARY" property="migrationBoundary" jdbcType="VARCHAR" />
+    <result column="NONMIGRATABILITY_REASON" property="nonmigratabilityReason" jdbcType="VARCHAR" />
+    <result column="NONMIGRATABILITY_INFO" property="nonmigratabilityInfo" jdbcType="VARCHAR" />
+    <result column="NONTRANSFERABILITY_REASON" property="nontransferabilityReason" jdbcType="VARCHAR" />
+    <result column="NONTRANSFERABILITY_INFO" property="nontransferabilityInfo" jdbcType="VARCHAR" />
+    <result column="STATELESS" property="stateless" jdbcType="VARCHAR" />
+    <result column="PRESERVE_STATE" property="preserveState" jdbcType="VARCHAR" />
+    <result column="COST" property="cost" jdbcType="DECIMAL" />
+    <result column="DESTINATION" property="destination" jdbcType="VARCHAR" />
+    <result column="ROUNDTRIPS" property="roundtrips" jdbcType="DECIMAL" />
+    <result column="BLOCKING_COMPONENT" property="blockingComponent" jdbcType="VARCHAR" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="SEQUENCE_NUMBER" property="sequenceNumber" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

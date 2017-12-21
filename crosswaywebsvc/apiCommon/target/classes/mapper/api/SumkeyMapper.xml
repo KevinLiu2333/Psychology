@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SumkeyMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Sumkey" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SUMOBJ#" property="sumobj" jdbcType="DECIMAL" />
+    <result column="SUMCOLPOS#" property="sumcolpos" jdbcType="DECIMAL" />
+    <result column="CONTAINERCOL#" property="containercol" jdbcType="DECIMAL" />
+    <result column="DETAILOBJ#" property="detailobj" jdbcType="DECIMAL" />
+    <result column="QBCID" property="qbcid" jdbcType="DECIMAL" />
+    <result column="DETAILOBJTYPE" property="detailobjtype" jdbcType="DECIMAL" />
+    <result column="DETAILCOL#" property="detailcol" jdbcType="DECIMAL" />
+    <result column="GROUPINGPOS#" property="groupingpos" jdbcType="DECIMAL" />
+    <result column="EXPRLEN" property="exprlen" jdbcType="DECIMAL" />
+    <result column="EXPRESSION" property="expression" jdbcType="VARCHAR" />
+    <result column="TEXTLEN" property="textlen" jdbcType="DECIMAL" />
+    <result column="DETAILCOLFUNCTION" property="detailcolfunction" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="VARCHAR" />
+    <result column="SPARE4" property="spare4" jdbcType="DATE" />
+    <result column="NODETYPE" property="nodetype" jdbcType="DECIMAL" />
+    <result column="ORDINALPOS" property="ordinalpos" jdbcType="DECIMAL" />
+    <result column="PARENTPOS" property="parentpos" jdbcType="DECIMAL" />
+    <result column="INLINE#" property="inline" jdbcType="DECIMAL" />
+    <result column="INSTANCE#" property="instance" jdbcType="DECIMAL" />
+    <result column="TEXT" property="text" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

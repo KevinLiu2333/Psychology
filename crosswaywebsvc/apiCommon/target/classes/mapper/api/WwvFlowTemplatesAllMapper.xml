@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowTemplatesAllMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowTemplatesAll" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="THEME_ID" property="themeId" jdbcType="DECIMAL" />
+    <result column="THEME_CLASS_ID" property="themeClassId" jdbcType="DECIMAL" />
+    <result column="TEMP_TYPE" property="tempType" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

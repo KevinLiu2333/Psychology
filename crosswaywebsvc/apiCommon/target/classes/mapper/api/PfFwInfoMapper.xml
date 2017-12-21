@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.PfFwInfoMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.PfFwInfo">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FW_INFO_ID" jdbcType="VARCHAR" property="fwInfoId" />
+    <result column="FW_NAME" jdbcType="VARCHAR" property="fwName" />
+    <result column="FW_CODE" jdbcType="VARCHAR" property="fwCode" />
+    <result column="FW_TYPE" jdbcType="VARCHAR" property="fwType" />
+    <result column="FW_TYPE_CODE" jdbcType="VARCHAR" property="fwTypeCode" />
+    <result column="OPEN_TYPE" jdbcType="VARCHAR" property="openType" />
+    <result column="ALERT_LEVEL" jdbcType="VARCHAR" property="alertLevel" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    <result column="CREATE_TIME" jdbcType="DATE" property="createTime" />
+    <result column="OP_TIME" jdbcType="DATE" property="opTime" />
+    <result column="APPLY_COUNT" jdbcType="DECIMAL" property="applyCount" />
+    <result column="USED_COUNT" jdbcType="DECIMAL" property="usedCount" />
+    <result column="ZY_INFO_ID" jdbcType="VARCHAR" property="zyInfoId" />
+    <result column="CONFIG_FILE_ID" jdbcType="VARCHAR" property="configFileId" />
+    <result column="MULT_STAT_ID" jdbcType="VARCHAR" property="multStatId" />
+    <result column="CONFIG_URL" jdbcType="VARCHAR" property="configUrl" />
+    <result column="CONFIG_URL_TYPE" jdbcType="VARCHAR" property="configUrlType" />
+    <result column="CONFIG_RESULT_TYPE" jdbcType="VARCHAR" property="configResultType" />
+    <result column="APPLY_TYPE" jdbcType="VARCHAR" property="applyType" />
+    <result column="TAG_LIST" jdbcType="VARCHAR" property="tagList" />
+    <result column="FW_ABSTRACT" jdbcType="VARCHAR" property="fwAbstract" />
+    <result column="CONFIG_MEMO" jdbcType="VARCHAR" property="configMemo" />
+    <result column="FW_HOT" jdbcType="DECIMAL" property="fwHot" />
+  </resultMap>
+</mapper>

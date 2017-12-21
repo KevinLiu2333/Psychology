@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaMviewDetailPartitionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaMviewDetailPartition" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="MVIEW_NAME" property="mviewName" jdbcType="VARCHAR" />
+    <result column="DETAILOBJ_OWNER" property="detailobjOwner" jdbcType="VARCHAR" />
+    <result column="DETAILOBJ_NAME" property="detailobjName" jdbcType="VARCHAR" />
+    <result column="DETAIL_PARTITION_NAME" property="detailPartitionName" jdbcType="VARCHAR" />
+    <result column="DETAIL_PARTITION_POSITION" property="detailPartitionPosition" jdbcType="DECIMAL" />
+    <result column="FRESHNESS" property="freshness" jdbcType="CHAR" />
+  </resultMap>
+</mapper>

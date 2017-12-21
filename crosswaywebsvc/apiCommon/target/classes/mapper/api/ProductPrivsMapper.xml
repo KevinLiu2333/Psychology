@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ProductPrivsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ProductPrivs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PRODUCT" property="product" jdbcType="VARCHAR" />
+    <result column="USERID" property="userid" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE" property="attribute" jdbcType="VARCHAR" />
+    <result column="SCOPE" property="scope" jdbcType="VARCHAR" />
+    <result column="NUMERIC_VALUE" property="numericValue" jdbcType="DECIMAL" />
+    <result column="CHAR_VALUE" property="charValue" jdbcType="VARCHAR" />
+    <result column="DATE_VALUE" property="dateValue" jdbcType="DATE" />
+    <result column="LONG_VALUE" property="longValue" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

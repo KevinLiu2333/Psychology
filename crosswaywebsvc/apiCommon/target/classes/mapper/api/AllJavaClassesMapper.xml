@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllJavaClassesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllJavaClasses" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="MAJOR" property="major" jdbcType="DECIMAL" />
+    <result column="MINOR" property="minor" jdbcType="DECIMAL" />
+    <result column="KIND" property="kind" jdbcType="VARCHAR" />
+    <result column="ACCESSIBILITY" property="accessibility" jdbcType="VARCHAR" />
+    <result column="IS_INNER" property="isInner" jdbcType="VARCHAR" />
+    <result column="IS_ABSTRACT" property="isAbstract" jdbcType="VARCHAR" />
+    <result column="IS_FINAL" property="isFinal" jdbcType="VARCHAR" />
+    <result column="IS_DEBUG" property="isDebug" jdbcType="VARCHAR" />
+    <result column="SOURCE" property="source" jdbcType="VARCHAR" />
+    <result column="SUPER" property="super" jdbcType="VARCHAR" />
+    <result column="OUTER" property="outer" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

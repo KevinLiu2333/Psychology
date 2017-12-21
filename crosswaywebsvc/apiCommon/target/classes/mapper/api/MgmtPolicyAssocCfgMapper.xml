@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtPolicyAssocCfgMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtPolicyAssocCfg" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OBJECT_GUID" property="objectGuid" jdbcType="VARBINARY" />
+    <id column="POLICY_GUID" property="policyGuid" jdbcType="VARBINARY" />
+    <id column="COLL_NAME" property="collName" jdbcType="VARCHAR" />
+    <id column="KEY_VALUE" property="keyValue" jdbcType="VARCHAR" />
+    <id column="KEY_OPERATOR" property="keyOperator" jdbcType="DECIMAL" />
+    <result column="EVAL_ORDER" property="evalOrder" jdbcType="DECIMAL" />
+    <result column="IS_EXCEPTION" property="isException" jdbcType="DECIMAL" />
+    <result column="HAS_ACTIVE_BASELINE" property="hasActiveBaseline" jdbcType="DECIMAL" />
+    <result column="PREVENT_OVERRIDE" property="preventOverride" jdbcType="DECIMAL" />
+    <result column="FIXIT_JOB" property="fixitJob" jdbcType="VARCHAR" />
+    <result column="SIMULTANEOUS_ACTIONS" property="simultaneousActions" jdbcType="DECIMAL" />
+    <result column="IMPORTANCE" property="importance" jdbcType="DECIMAL" />
+    <result column="NUM_OCCURRENCES" property="numOccurrences" jdbcType="DECIMAL" />
+    <result column="IS_PUSH" property="isPush" jdbcType="DECIMAL" />
+    <result column="CONDITION_OPERATOR" property="conditionOperator" jdbcType="DECIMAL" />
+    <result column="MESSAGE" property="message" jdbcType="VARCHAR" />
+    <result column="MESSAGE_NLSID" property="messageNlsid" jdbcType="VARCHAR" />
+    <result column="CLEAR_MESSAGE" property="clearMessage" jdbcType="VARCHAR" />
+    <result column="CLEAR_MESSAGE_NLSID" property="clearMessageNlsid" jdbcType="VARCHAR" />
+    <result column="CRIT_ACTION_JOB_ID" property="critActionJobId" jdbcType="VARBINARY" />
+    <result column="WARN_ACTION_JOB_ID" property="warnActionJobId" jdbcType="VARBINARY" />
+    <result column="INFO_ACTION_JOB_ID" property="infoActionJobId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

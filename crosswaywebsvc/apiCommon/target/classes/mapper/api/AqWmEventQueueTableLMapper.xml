@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AqWmEventQueueTableLMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AqWmEventQueueTableL" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SUBSCRIBER#" property="subscriber" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="ADDRESS#" property="address" jdbcType="DECIMAL" />
+    <result column="DEQUEUE_TIME" property="dequeueTime" jdbcType="OTHER" />
+    <result column="TRANSACTION_ID" property="transactionId" jdbcType="VARCHAR" />
+    <result column="DEQUEUE_USER" property="dequeueUser" jdbcType="VARCHAR" />
+    <result column="MSGID" property="msgid" jdbcType="VARBINARY" />
+    <result column="FLAGS" property="flags" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

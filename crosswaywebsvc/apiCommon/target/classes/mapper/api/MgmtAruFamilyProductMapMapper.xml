@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtAruFamilyProductMapMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtAruFamilyProductMap" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="FAMILY_ID" property="familyId" jdbcType="DECIMAL" />
+    <id column="PRODUCT_ID" property="productId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowActivityLogMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowActivityLog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TIME_STAMP" property="timeStamp" jdbcType="DATE" />
+    <result column="COMPONENT_TYPE" property="componentType" jdbcType="VARCHAR" />
+    <result column="COMPONENT_NAME" property="componentName" jdbcType="VARCHAR" />
+    <result column="COMPONENT_ATTRIBUTE" property="componentAttribute" jdbcType="VARCHAR" />
+    <result column="INFORMATION" property="information" jdbcType="VARCHAR" />
+    <result column="ELAP" property="elap" jdbcType="DECIMAL" />
+    <result column="NUM_ROWS" property="numRows" jdbcType="DECIMAL" />
+    <result column="USERID" property="userid" jdbcType="VARCHAR" />
+    <result column="IP_ADDRESS" property="ipAddress" jdbcType="VARCHAR" />
+    <result column="USER_AGENT" property="userAgent" jdbcType="VARCHAR" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="STEP_ID" property="stepId" jdbcType="DECIMAL" />
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="SQLERRM" property="sqlerrm" jdbcType="VARCHAR" />
+    <result column="SQLERRM_COMPONENT_TYPE" property="sqlerrmComponentType" jdbcType="VARCHAR" />
+    <result column="SQLERRM_COMPONENT_NAME" property="sqlerrmComponentName" jdbcType="VARCHAR" />
+    <result column="PAGE_MODE" property="pageMode" jdbcType="VARCHAR" />
+    <result column="CACHED_REGIONS" property="cachedRegions" jdbcType="DECIMAL" />
+    <result column="APPLICATION_INFO" property="applicationInfo" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

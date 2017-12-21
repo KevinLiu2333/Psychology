@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuUtluseMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuUtluse" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="UTLNAME" property="utlname" jdbcType="VARCHAR" />
+    <result column="USECNT" property="usecnt" jdbcType="DECIMAL" />
+    <result column="ENCRYPTCNT" property="encryptcnt" jdbcType="DECIMAL" />
+    <result column="COMPRESSCNT" property="compresscnt" jdbcType="DECIMAL" />
+    <result column="LAST_USED" property="lastUsed" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

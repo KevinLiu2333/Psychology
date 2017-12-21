@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtStepMetricsDailyMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtStepMetricsDaily" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="STEP_NAME" property="stepName" jdbcType="VARCHAR" />
+    <result column="VALUE" property="value" jdbcType="DECIMAL" />
+    <result column="METRIC_COLUMN" property="metricColumn" jdbcType="VARCHAR" />
+    <result column="COLUMN_LABEL" property="columnLabel" jdbcType="VARCHAR" />
+    <result column="COLUMN_LABEL_NLSID" property="columnLabelNlsid" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="TXN_NAME" property="txnName" jdbcType="VARCHAR" />
+    <result column="BCN_NAME" property="bcnName" jdbcType="VARCHAR" />
+    <result column="COLLECTION_TIMESTAMP" property="collectionTimestamp" jdbcType="DATE" />
+    <result column="TXN_GUID" property="txnGuid" jdbcType="VARBINARY" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

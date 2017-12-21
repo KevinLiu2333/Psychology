@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrvPendingMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrvPending" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PND_CID" property="pndCid" jdbcType="DECIMAL" />
+    <result column="PND_PID" property="pndPid" jdbcType="DECIMAL" />
+    <result column="PND_ROWID" property="pndRowid" jdbcType="OTHER" />
+    <result column="PND_TIMESTAMP" property="pndTimestamp" jdbcType="DATE" />
+    <result column="PND_LOCK_FAILED" property="pndLockFailed" jdbcType="CHAR" />
+  </resultMap>
+</mapper>

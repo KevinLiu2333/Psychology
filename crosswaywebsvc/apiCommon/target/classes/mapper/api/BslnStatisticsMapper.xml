@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.BslnStatisticsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.BslnStatistics" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="METRIC_ID" property="metricId" jdbcType="DECIMAL" />
+    <id column="COMPUTE_DATE" property="computeDate" jdbcType="DATE" />
+    <id column="TIMEGROUP" property="timegroup" jdbcType="VARCHAR" />
+    <id column="BSLN_GUID" property="bslnGuid" jdbcType="VARBINARY" />
+    <result column="TIMEGROUPING" property="timegrouping" jdbcType="VARCHAR" />
+    <result column="SAMPLE_COUNT" property="sampleCount" jdbcType="DECIMAL" />
+    <result column="AVERAGE" property="average" jdbcType="DECIMAL" />
+    <result column="MINIMUM" property="minimum" jdbcType="DECIMAL" />
+    <result column="MAXIMUM" property="maximum" jdbcType="DECIMAL" />
+    <result column="SDEV" property="sdev" jdbcType="DECIMAL" />
+    <result column="PCTILE_25" property="pctile25" jdbcType="DECIMAL" />
+    <result column="PCTILE_50" property="pctile50" jdbcType="DECIMAL" />
+    <result column="PCTILE_75" property="pctile75" jdbcType="DECIMAL" />
+    <result column="PCTILE_90" property="pctile90" jdbcType="DECIMAL" />
+    <result column="PCTILE_95" property="pctile95" jdbcType="DECIMAL" />
+    <result column="PCTILE_99" property="pctile99" jdbcType="DECIMAL" />
+    <result column="EST_SAMPLE_COUNT" property="estSampleCount" jdbcType="DECIMAL" />
+    <result column="EST_SLOPE" property="estSlope" jdbcType="DECIMAL" />
+    <result column="EST_INTERCEPT" property="estIntercept" jdbcType="DECIMAL" />
+    <result column="EST_FIT_QUALITY" property="estFitQuality" jdbcType="DECIMAL" />
+    <result column="EST_PCTILE_999" property="estPctile999" jdbcType="DECIMAL" />
+    <result column="EST_PCTILE_9999" property="estPctile9999" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

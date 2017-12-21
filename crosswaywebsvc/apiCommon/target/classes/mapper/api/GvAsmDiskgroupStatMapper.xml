@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvAsmDiskgroupStatMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvAsmDiskgroupStat" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="GROUP_NUMBER" property="groupNumber" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="SECTOR_SIZE" property="sectorSize" jdbcType="DECIMAL" />
+    <result column="BLOCK_SIZE" property="blockSize" jdbcType="DECIMAL" />
+    <result column="ALLOCATION_UNIT_SIZE" property="allocationUnitSize" jdbcType="DECIMAL" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="TOTAL_MB" property="totalMb" jdbcType="DECIMAL" />
+    <result column="FREE_MB" property="freeMb" jdbcType="DECIMAL" />
+    <result column="HOT_USED_MB" property="hotUsedMb" jdbcType="DECIMAL" />
+    <result column="COLD_USED_MB" property="coldUsedMb" jdbcType="DECIMAL" />
+    <result column="REQUIRED_MIRROR_FREE_MB" property="requiredMirrorFreeMb" jdbcType="DECIMAL" />
+    <result column="USABLE_FILE_MB" property="usableFileMb" jdbcType="DECIMAL" />
+    <result column="OFFLINE_DISKS" property="offlineDisks" jdbcType="DECIMAL" />
+    <result column="COMPATIBILITY" property="compatibility" jdbcType="VARCHAR" />
+    <result column="DATABASE_COMPATIBILITY" property="databaseCompatibility" jdbcType="VARCHAR" />
+    <result column="VOTING_FILES" property="votingFiles" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

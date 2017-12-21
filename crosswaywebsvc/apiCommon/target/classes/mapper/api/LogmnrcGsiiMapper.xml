@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.LogmnrcGsiiMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.LogmnrcGsii" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="LOGMNR_UID" property="logmnrUid" jdbcType="DECIMAL" />
+    <id column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="BO#" property="bo" jdbcType="DECIMAL" />
+    <result column="INDTYPE#" property="indtype" jdbcType="DECIMAL" />
+    <result column="DROP_SCN" property="dropScn" jdbcType="DECIMAL" />
+    <result column="LOGMNR_SPARE1" property="logmnrSpare1" jdbcType="DECIMAL" />
+    <result column="LOGMNR_SPARE2" property="logmnrSpare2" jdbcType="DECIMAL" />
+    <result column="LOGMNR_SPARE3" property="logmnrSpare3" jdbcType="VARCHAR" />
+    <result column="LOGMNR_SPARE4" property="logmnrSpare4" jdbcType="DATE" />
+  </resultMap>
+</mapper>

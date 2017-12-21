@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MviewRecommendationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MviewRecommendations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RUNID" property="runid" jdbcType="DECIMAL" />
+    <result column="ALL_TABLES" property="allTables" jdbcType="VARCHAR" />
+    <result column="FACT_TABLES" property="factTables" jdbcType="VARCHAR" />
+    <result column="GROUPING_LEVELS" property="groupingLevels" jdbcType="VARCHAR" />
+    <result column="RECOMMENDATION_NUMBER" property="recommendationNumber" jdbcType="DECIMAL" />
+    <result column="RECOMMENDED_ACTION" property="recommendedAction" jdbcType="VARCHAR" />
+    <result column="MVIEW_OWNER" property="mviewOwner" jdbcType="VARCHAR" />
+    <result column="MVIEW_NAME" property="mviewName" jdbcType="VARCHAR" />
+    <result column="STORAGE_IN_BYTES" property="storageInBytes" jdbcType="DECIMAL" />
+    <result column="PCT_PERFORMANCE_GAIN" property="pctPerformanceGain" jdbcType="DECIMAL" />
+    <result column="BENEFIT_TO_COST_RATIO" property="benefitToCostRatio" jdbcType="DECIMAL" />
+    <result column="QUERY_TEXT" property="queryText" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

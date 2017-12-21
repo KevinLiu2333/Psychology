@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VIostatNetworkMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VIostatNetwork" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CLIENT" property="client" jdbcType="VARCHAR" />
+    <result column="READS#" property="reads" jdbcType="DECIMAL" />
+    <result column="WRITES#" property="writes" jdbcType="DECIMAL" />
+    <result column="KBYTES_READ" property="kbytesRead" jdbcType="DECIMAL" />
+    <result column="KBYTES_WRITTEN" property="kbytesWritten" jdbcType="DECIMAL" />
+    <result column="READ_LATENCY" property="readLatency" jdbcType="DECIMAL" />
+    <result column="WRITE_LATENCY" property="writeLatency" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

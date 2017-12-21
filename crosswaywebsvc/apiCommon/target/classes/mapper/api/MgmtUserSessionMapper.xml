@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtUserSessionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtUserSession" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="USER_SESSION_ID_GUID" property="userSessionIdGuid" jdbcType="VARBINARY" />
+    <result column="EM_USER" property="emUser" jdbcType="VARCHAR" />
+    <result column="EM_USER_TYPE" property="emUserType" jdbcType="VARCHAR" />
+    <result column="EM_USER_HOST_NAME" property="emUserHostName" jdbcType="VARCHAR" />
+    <result column="OMS_HOST_NAME" property="omsHostName" jdbcType="VARCHAR" />
+    <result column="BROWSER_TYPE" property="browserType" jdbcType="VARCHAR" />
+    <result column="LOGIN_TIME" property="loginTime" jdbcType="DATE" />
+    <result column="LOGOFF_TIME" property="logoffTime" jdbcType="DATE" />
+    <result column="IP_ADDRESS" property="ipAddress" jdbcType="VARCHAR" />
+    <result column="OSUSER" property="osuser" jdbcType="VARCHAR" />
+    <result column="SESSION_STATUS" property="sessionStatus" jdbcType="VARCHAR" />
+    <result column="SESSION_TYPE" property="sessionType" jdbcType="VARCHAR" />
+    <result column="TIME_ZONE" property="timeZone" jdbcType="VARCHAR" />
+    <result column="CA_NAME_1" property="caName1" jdbcType="VARCHAR" />
+    <result column="CA_VALUE_1" property="caValue1" jdbcType="VARCHAR" />
+    <result column="CA_NAME_2" property="caName2" jdbcType="VARCHAR" />
+    <result column="CA_VALUE_2" property="caValue2" jdbcType="VARCHAR" />
+    <result column="CA_NAME_3" property="caName3" jdbcType="VARCHAR" />
+    <result column="CA_VALUE_3" property="caValue3" jdbcType="VARCHAR" />
+    <result column="USER_SESSION_ID" property="userSessionId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

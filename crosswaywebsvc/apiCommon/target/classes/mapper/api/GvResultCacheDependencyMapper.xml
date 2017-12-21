@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvResultCacheDependencyMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvResultCacheDependency" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="RESULT_ID" property="resultId" jdbcType="DECIMAL" />
+    <result column="DEPEND_ID" property="dependId" jdbcType="DECIMAL" />
+    <result column="OBJECT_NO" property="objectNo" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

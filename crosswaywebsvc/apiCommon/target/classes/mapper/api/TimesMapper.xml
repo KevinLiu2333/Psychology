@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TimesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Times" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TIME_ID" property="timeId" jdbcType="DATE" />
+    <result column="DAY_NAME" property="dayName" jdbcType="VARCHAR" />
+    <result column="DAY_NUMBER_IN_WEEK" property="dayNumberInWeek" jdbcType="DECIMAL" />
+    <result column="DAY_NUMBER_IN_MONTH" property="dayNumberInMonth" jdbcType="DECIMAL" />
+    <result column="CALENDAR_WEEK_NUMBER" property="calendarWeekNumber" jdbcType="DECIMAL" />
+    <result column="FISCAL_WEEK_NUMBER" property="fiscalWeekNumber" jdbcType="DECIMAL" />
+    <result column="WEEK_ENDING_DAY" property="weekEndingDay" jdbcType="DATE" />
+    <result column="WEEK_ENDING_DAY_ID" property="weekEndingDayId" jdbcType="DECIMAL" />
+    <result column="CALENDAR_MONTH_NUMBER" property="calendarMonthNumber" jdbcType="DECIMAL" />
+    <result column="FISCAL_MONTH_NUMBER" property="fiscalMonthNumber" jdbcType="DECIMAL" />
+    <result column="CALENDAR_MONTH_DESC" property="calendarMonthDesc" jdbcType="VARCHAR" />
+    <result column="CALENDAR_MONTH_ID" property="calendarMonthId" jdbcType="DECIMAL" />
+    <result column="FISCAL_MONTH_DESC" property="fiscalMonthDesc" jdbcType="VARCHAR" />
+    <result column="FISCAL_MONTH_ID" property="fiscalMonthId" jdbcType="DECIMAL" />
+    <result column="DAYS_IN_CAL_MONTH" property="daysInCalMonth" jdbcType="DECIMAL" />
+    <result column="DAYS_IN_FIS_MONTH" property="daysInFisMonth" jdbcType="DECIMAL" />
+    <result column="END_OF_CAL_MONTH" property="endOfCalMonth" jdbcType="DATE" />
+    <result column="END_OF_FIS_MONTH" property="endOfFisMonth" jdbcType="DATE" />
+    <result column="CALENDAR_MONTH_NAME" property="calendarMonthName" jdbcType="VARCHAR" />
+    <result column="FISCAL_MONTH_NAME" property="fiscalMonthName" jdbcType="VARCHAR" />
+    <result column="CALENDAR_QUARTER_DESC" property="calendarQuarterDesc" jdbcType="CHAR" />
+    <result column="CALENDAR_QUARTER_ID" property="calendarQuarterId" jdbcType="DECIMAL" />
+    <result column="FISCAL_QUARTER_DESC" property="fiscalQuarterDesc" jdbcType="CHAR" />
+    <result column="FISCAL_QUARTER_ID" property="fiscalQuarterId" jdbcType="DECIMAL" />
+    <result column="DAYS_IN_CAL_QUARTER" property="daysInCalQuarter" jdbcType="DECIMAL" />
+    <result column="DAYS_IN_FIS_QUARTER" property="daysInFisQuarter" jdbcType="DECIMAL" />
+    <result column="END_OF_CAL_QUARTER" property="endOfCalQuarter" jdbcType="DATE" />
+    <result column="END_OF_FIS_QUARTER" property="endOfFisQuarter" jdbcType="DATE" />
+    <result column="CALENDAR_QUARTER_NUMBER" property="calendarQuarterNumber" jdbcType="DECIMAL" />
+    <result column="FISCAL_QUARTER_NUMBER" property="fiscalQuarterNumber" jdbcType="DECIMAL" />
+    <result column="CALENDAR_YEAR" property="calendarYear" jdbcType="DECIMAL" />
+    <result column="CALENDAR_YEAR_ID" property="calendarYearId" jdbcType="DECIMAL" />
+    <result column="FISCAL_YEAR" property="fiscalYear" jdbcType="DECIMAL" />
+    <result column="FISCAL_YEAR_ID" property="fiscalYearId" jdbcType="DECIMAL" />
+    <result column="DAYS_IN_CAL_YEAR" property="daysInCalYear" jdbcType="DECIMAL" />
+    <result column="DAYS_IN_FIS_YEAR" property="daysInFisYear" jdbcType="DECIMAL" />
+    <result column="END_OF_CAL_YEAR" property="endOfCalYear" jdbcType="DATE" />
+    <result column="END_OF_FIS_YEAR" property="endOfFisYear" jdbcType="DATE" />
+  </resultMap>
+</mapper>

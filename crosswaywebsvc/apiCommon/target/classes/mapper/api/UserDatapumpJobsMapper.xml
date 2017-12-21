@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserDatapumpJobsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserDatapumpJobs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="JOB_NAME" property="jobName" jdbcType="VARCHAR" />
+    <result column="OPERATION" property="operation" jdbcType="VARCHAR" />
+    <result column="JOB_MODE" property="jobMode" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="DEGREE" property="degree" jdbcType="DECIMAL" />
+    <result column="ATTACHED_SESSIONS" property="attachedSessions" jdbcType="DECIMAL" />
+    <result column="DATAPUMP_SESSIONS" property="datapumpSessions" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

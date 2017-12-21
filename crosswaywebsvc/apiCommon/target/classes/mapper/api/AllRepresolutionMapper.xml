@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllRepresolutionMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllRepresolution">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAME" jdbcType="VARCHAR" property="sname" />
+    <result column="ONAME" jdbcType="VARCHAR" property="oname" />
+    <result column="CONFLICT_TYPE" jdbcType="VARCHAR" property="conflictType" />
+    <result column="REFERENCE_NAME" jdbcType="VARCHAR" property="referenceName" />
+    <result column="SEQUENCE_NO" jdbcType="DECIMAL" property="sequenceNo" />
+    <result column="METHOD_NAME" jdbcType="VARCHAR" property="methodName" />
+    <result column="FUNCTION_NAME" jdbcType="VARCHAR" property="functionName" />
+    <result column="PRIORITY_GROUP" jdbcType="VARCHAR" property="priorityGroup" />
+    <result column="RESOLUTION_COMMENT" jdbcType="VARCHAR" property="resolutionComment" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Cwm2AwcubecompplanMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Cwm2Awcubecompplan" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="IRID" property="irid" jdbcType="DECIMAL" />
+    <result column="CUBELOAD_IRID" property="cubeloadIrid" jdbcType="DECIMAL" />
+    <result column="CUBECOMPSPEC_IRID" property="cubecompspecIrid" jdbcType="DECIMAL" />
+    <result column="CREATEDDATE" property="createddate" jdbcType="DATE" />
+    <result column="UPDATEDDATE" property="updateddate" jdbcType="DATE" />
+    <result column="LASTCHANGEUSER" property="lastchangeuser" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

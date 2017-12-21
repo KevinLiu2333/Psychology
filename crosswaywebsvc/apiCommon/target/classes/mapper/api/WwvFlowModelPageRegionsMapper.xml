@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowModelPageRegionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowModelPageRegions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="MODEL_PAGE_ID" property="modelPageId" jdbcType="DECIMAL" />
+    <result column="REGION_ID" property="regionId" jdbcType="DECIMAL" />
+    <result column="REGION_NAME" property="regionName" jdbcType="VARCHAR" />
+    <result column="REGION_SOURCE" property="regionSource" jdbcType="VARCHAR" />
+    <result column="DISPLAY_SEQUENCE" property="displaySequence" jdbcType="DECIMAL" />
+    <result column="REPORT_IMPLEMENTATION" property="reportImplementation" jdbcType="VARCHAR" />
+    <result column="SEARCH_ENABLED" property="searchEnabled" jdbcType="VARCHAR" />
+    <result column="LINK_COLUMN" property="linkColumn" jdbcType="VARCHAR" />
+    <result column="LINK_TEXT" property="linkText" jdbcType="VARCHAR" />
+    <result column="PARENT_LINK_FROM_COLUMN1" property="parentLinkFromColumn1" jdbcType="VARCHAR" />
+    <result column="PARENT_LINK_FROM_COLUMN2" property="parentLinkFromColumn2" jdbcType="VARCHAR" />
+    <result column="LINK_TO_COLUMN1" property="linkToColumn1" jdbcType="VARCHAR" />
+    <result column="LINK_TO_COLUMN2" property="linkToColumn2" jdbcType="VARCHAR" />
+    <result column="REPORT_FILTER" property="reportFilter" jdbcType="VARCHAR" />
+    <result column="COLUMN_HEADING_SORTING" property="columnHeadingSorting" jdbcType="VARCHAR" />
+    <result column="DOWNLOAD_LINK" property="downloadLink" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="SOURCE" property="source" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

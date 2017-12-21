@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaTablespaceThresholdsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaTablespaceThresholds" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TABLESPACE_NAME" property="tablespaceName" jdbcType="VARCHAR" />
+    <result column="CONTENTS" property="contents" jdbcType="VARCHAR" />
+    <result column="EXTENT_MANAGEMENT" property="extentManagement" jdbcType="VARCHAR" />
+    <result column="THRESHOLD_TYPE" property="thresholdType" jdbcType="VARCHAR" />
+    <result column="METRICS_NAME" property="metricsName" jdbcType="VARCHAR" />
+    <result column="WARNING_OPERATOR" property="warningOperator" jdbcType="VARCHAR" />
+    <result column="WARNING_VALUE" property="warningValue" jdbcType="VARCHAR" />
+    <result column="CRITICAL_OPERATOR" property="criticalOperator" jdbcType="VARCHAR" />
+    <result column="CRITICAL_VALUE" property="criticalValue" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

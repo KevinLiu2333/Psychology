@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvSessionLongopsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvSessionLongops" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="SERIAL#" property="serial" jdbcType="DECIMAL" />
+    <result column="OPNAME" property="opname" jdbcType="VARCHAR" />
+    <result column="TARGET" property="target" jdbcType="VARCHAR" />
+    <result column="TARGET_DESC" property="targetDesc" jdbcType="VARCHAR" />
+    <result column="SOFAR" property="sofar" jdbcType="DECIMAL" />
+    <result column="TOTALWORK" property="totalwork" jdbcType="DECIMAL" />
+    <result column="UNITS" property="units" jdbcType="VARCHAR" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="LAST_UPDATE_TIME" property="lastUpdateTime" jdbcType="DATE" />
+    <result column="TIMESTAMP" property="timestamp" jdbcType="DATE" />
+    <result column="TIME_REMAINING" property="timeRemaining" jdbcType="DECIMAL" />
+    <result column="ELAPSED_SECONDS" property="elapsedSeconds" jdbcType="DECIMAL" />
+    <result column="CONTEXT" property="context" jdbcType="DECIMAL" />
+    <result column="MESSAGE" property="message" jdbcType="VARCHAR" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="SQL_HASH_VALUE" property="sqlHashValue" jdbcType="DECIMAL" />
+    <result column="SQL_ID" property="sqlId" jdbcType="VARCHAR" />
+    <result column="SQL_PLAN_HASH_VALUE" property="sqlPlanHashValue" jdbcType="DECIMAL" />
+    <result column="SQL_EXEC_START" property="sqlExecStart" jdbcType="DATE" />
+    <result column="SQL_EXEC_ID" property="sqlExecId" jdbcType="DECIMAL" />
+    <result column="SQL_PLAN_LINE_ID" property="sqlPlanLineId" jdbcType="DECIMAL" />
+    <result column="SQL_PLAN_OPERATION" property="sqlPlanOperation" jdbcType="VARCHAR" />
+    <result column="SQL_PLAN_OPTIONS" property="sqlPlanOptions" jdbcType="VARCHAR" />
+    <result column="QCSID" property="qcsid" jdbcType="DECIMAL" />
+    <result column="SQL_ADDRESS" property="sqlAddress" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

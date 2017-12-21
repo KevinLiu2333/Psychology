@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoDatumsOldFormatMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoDatumsOldFormat" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="SHIFT_X" property="shiftX" jdbcType="DECIMAL" />
+    <result column="SHIFT_Y" property="shiftY" jdbcType="DECIMAL" />
+    <result column="SHIFT_Z" property="shiftZ" jdbcType="DECIMAL" />
+    <result column="ROTATE_X" property="rotateX" jdbcType="DECIMAL" />
+    <result column="ROTATE_Y" property="rotateY" jdbcType="DECIMAL" />
+    <result column="ROTATE_Z" property="rotateZ" jdbcType="DECIMAL" />
+    <result column="SCALE_ADJUST" property="scaleAdjust" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

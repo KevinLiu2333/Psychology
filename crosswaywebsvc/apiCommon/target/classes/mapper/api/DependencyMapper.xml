@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DependencyMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Dependency" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="D_OBJ#" property="dObj" jdbcType="DECIMAL" />
+    <result column="D_TIMESTAMP" property="dTimestamp" jdbcType="DATE" />
+    <result column="ORDER#" property="order" jdbcType="DECIMAL" />
+    <result column="P_OBJ#" property="pObj" jdbcType="DECIMAL" />
+    <result column="P_TIMESTAMP" property="pTimestamp" jdbcType="DATE" />
+    <result column="D_OWNER#" property="dOwner" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="D_ATTRS" property="dAttrs" jdbcType="VARBINARY" />
+    <result column="D_REASON" property="dReason" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoTopoRelationDataMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoTopoRelationData" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TG_LAYER_ID" property="tgLayerId" jdbcType="DECIMAL" />
+    <result column="TG_ID" property="tgId" jdbcType="DECIMAL" />
+    <result column="TOPO_ID" property="topoId" jdbcType="DECIMAL" />
+    <result column="TOPO_TYPE" property="topoType" jdbcType="DECIMAL" />
+    <result column="TOPO_ATTRIBUTE" property="topoAttribute" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

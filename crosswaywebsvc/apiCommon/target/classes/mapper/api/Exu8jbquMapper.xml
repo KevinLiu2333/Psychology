@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu8jbquMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu8jbqu" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="JOB" property="job" jdbcType="DECIMAL" />
+    <result column="OWNERID" property="ownerid" jdbcType="DECIMAL" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="LOWNER" property="lowner" jdbcType="VARCHAR" />
+    <result column="COWNER" property="cowner" jdbcType="VARCHAR" />
+    <result column="NEXT_DATE" property="nextDate" jdbcType="VARCHAR" />
+    <result column="FLAG" property="flag" jdbcType="VARCHAR" />
+    <result column="INTERVAL#" property="interval" jdbcType="VARCHAR" />
+    <result column="WHAT" property="what" jdbcType="VARCHAR" />
+    <result column="NLSENV" property="nlsenv" jdbcType="VARCHAR" />
+    <result column="INSTANCE" property="instance" jdbcType="DECIMAL" />
+    <result column="ENV" property="env" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

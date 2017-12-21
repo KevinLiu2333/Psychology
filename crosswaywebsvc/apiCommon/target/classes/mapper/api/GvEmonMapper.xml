@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvEmonMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvEmon" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="EMON#" property="emon" jdbcType="DECIMAL" />
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="STARTUP_TIME" property="startupTime" jdbcType="OTHER" />
+    <result column="SERVER_TYPE" property="serverType" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="STATUS_CHANGE_TIME" property="statusChangeTime" jdbcType="OTHER" />
+    <result column="NUM_NTFNS" property="numNtfns" jdbcType="DECIMAL" />
+    <result column="NUM_GROUPING_NTFNS" property="numGroupingNtfns" jdbcType="DECIMAL" />
+    <result column="NUM_NTFNS_ALL_GROUPS" property="numNtfnsAllGroups" jdbcType="DECIMAL" />
+    <result column="NUM_OCI_NTFNS" property="numOciNtfns" jdbcType="DECIMAL" />
+    <result column="NUM_PLSQL_NTFNS" property="numPlsqlNtfns" jdbcType="DECIMAL" />
+    <result column="NUM_EMAIL_NTFNS" property="numEmailNtfns" jdbcType="DECIMAL" />
+    <result column="NUM_HTTP_NTFNS" property="numHttpNtfns" jdbcType="DECIMAL" />
+    <result column="NUM_EVENTS_PROCESSED" property="numEventsProcessed" jdbcType="DECIMAL" />
+    <result column="NUM_EVENTS_PENDING" property="numEventsPending" jdbcType="DECIMAL" />
+    <result column="NUM_ANONYMOUS_NTFNS" property="numAnonymousNtfns" jdbcType="DECIMAL" />
+    <result column="NUM_AQ_NTFNS" property="numAqNtfns" jdbcType="DECIMAL" />
+    <result column="NUM_DBCHANGE_NTFNS" property="numDbchangeNtfns" jdbcType="DECIMAL" />
+    <result column="TOTAL_ANONYMOUS_NTFN_TIME" property="totalAnonymousNtfnTime" jdbcType="DECIMAL" />
+    <result column="TOTAL_AQ_NTFN_TIME" property="totalAqNtfnTime" jdbcType="DECIMAL" />
+    <result column="TOTAL_DBCHANGE_NTFN_TIME" property="totalDbchangeNtfnTime" jdbcType="DECIMAL" />
+    <result column="TOTAL_PLSQL_NTFN_TIME" property="totalPlsqlNtfnTime" jdbcType="DECIMAL" />
+    <result column="TOTAL_OCI_NTFN_TIME" property="totalOciNtfnTime" jdbcType="DECIMAL" />
+    <result column="TOTAL_EMAIL_NTFN_TIME" property="totalEmailNtfnTime" jdbcType="DECIMAL" />
+    <result column="TOTAL_HTTP_NTFN_TIME" property="totalHttpNtfnTime" jdbcType="DECIMAL" />
+    <result column="TOTAL_EMON_LATENCY" property="totalEmonLatency" jdbcType="DECIMAL" />
+    <result column="REGISTRATIONS_EXPIRED" property="registrationsExpired" jdbcType="DECIMAL" />
+    <result column="REGISTRATIONS_PURGED" property="registrationsPurged" jdbcType="DECIMAL" />
+    <result column="REGISTRATIONS_INVALID" property="registrationsInvalid" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATE_TIME" property="lastUpdateTime" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

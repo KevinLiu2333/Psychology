@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaHistUndostatMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaHistUndostat" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="BEGIN_TIME" property="beginTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="UNDOTSN" property="undotsn" jdbcType="DECIMAL" />
+    <result column="UNDOBLKS" property="undoblks" jdbcType="DECIMAL" />
+    <result column="TXNCOUNT" property="txncount" jdbcType="DECIMAL" />
+    <result column="MAXQUERYLEN" property="maxquerylen" jdbcType="DECIMAL" />
+    <result column="MAXQUERYSQLID" property="maxquerysqlid" jdbcType="VARCHAR" />
+    <result column="MAXCONCURRENCY" property="maxconcurrency" jdbcType="DECIMAL" />
+    <result column="UNXPSTEALCNT" property="unxpstealcnt" jdbcType="DECIMAL" />
+    <result column="UNXPBLKRELCNT" property="unxpblkrelcnt" jdbcType="DECIMAL" />
+    <result column="UNXPBLKREUCNT" property="unxpblkreucnt" jdbcType="DECIMAL" />
+    <result column="EXPSTEALCNT" property="expstealcnt" jdbcType="DECIMAL" />
+    <result column="EXPBLKRELCNT" property="expblkrelcnt" jdbcType="DECIMAL" />
+    <result column="EXPBLKREUCNT" property="expblkreucnt" jdbcType="DECIMAL" />
+    <result column="SSOLDERRCNT" property="ssolderrcnt" jdbcType="DECIMAL" />
+    <result column="NOSPACEERRCNT" property="nospaceerrcnt" jdbcType="DECIMAL" />
+    <result column="ACTIVEBLKS" property="activeblks" jdbcType="DECIMAL" />
+    <result column="UNEXPIREDBLKS" property="unexpiredblks" jdbcType="DECIMAL" />
+    <result column="EXPIREDBLKS" property="expiredblks" jdbcType="DECIMAL" />
+    <result column="TUNED_UNDORETENTION" property="tunedUndoretention" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

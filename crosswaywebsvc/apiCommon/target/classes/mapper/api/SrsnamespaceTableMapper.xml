@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SrsnamespaceTableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SrsnamespaceTable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SRSNAMESPACE" property="srsnamespace" jdbcType="VARCHAR" />
+    <id column="SRSNAME" property="srsname" jdbcType="VARCHAR" />
+    <result column="SDO_SRID" property="sdoSrid" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

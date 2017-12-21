@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.BmSzbSjQsfjE02Mapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.BmSzbSjQsfjE02" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="QSFJ_E02_ID" property="qsfjE02Id" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="ID_CARD" property="idCard" jdbcType="VARCHAR" />
+    <result column="AY" property="ay" jdbcType="VARCHAR" />
+    <result column="JZ_TYPE" property="jzType" jdbcType="VARCHAR" />
+    <result column="FJQK" property="fjqk" jdbcType="VARCHAR" />
+    <result column="XS_DATE" property="xsDate" jdbcType="DATE" />
+    <result column="START_DATE" property="startDate" jdbcType="DATE" />
+    <result column="END_DATE" property="endDate" jdbcType="DATE" />
+    <result column="JZQX" property="jzqx" jdbcType="VARCHAR" />
+    <result column="XG_DATE" property="xgDate" jdbcType="DATE" />
+    <result column="BELONG_TOWN" property="belongTown" jdbcType="VARCHAR" />
+    <result column="BELONG_COMMUNITY" property="belongCommunity" jdbcType="VARCHAR" />
+    <result column="TASK_NO" property="taskNo" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

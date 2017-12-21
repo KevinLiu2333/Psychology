@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllRepcolumnGroupMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllRepcolumnGroup">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAME" jdbcType="VARCHAR" property="sname" />
+    <result column="ONAME" jdbcType="VARCHAR" property="oname" />
+    <result column="GROUP_NAME" jdbcType="VARCHAR" property="groupName" />
+    <result column="GROUP_COMMENT" jdbcType="VARCHAR" property="groupComment" />
+  </resultMap>
+</mapper>

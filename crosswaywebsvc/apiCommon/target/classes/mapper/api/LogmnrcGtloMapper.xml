@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.LogmnrcGtloMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.LogmnrcGtlo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="LOGMNR_UID" property="logmnrUid" jdbcType="DECIMAL" />
+    <id column="KEYOBJ#" property="keyobj" jdbcType="DECIMAL" />
+    <id column="BASEOBJV#" property="baseobjv" jdbcType="DECIMAL" />
+    <result column="LVLCNT" property="lvlcnt" jdbcType="DECIMAL" />
+    <result column="BASEOBJ#" property="baseobj" jdbcType="DECIMAL" />
+    <result column="LVL1OBJ#" property="lvl1obj" jdbcType="DECIMAL" />
+    <result column="LVL2OBJ#" property="lvl2obj" jdbcType="DECIMAL" />
+    <result column="LVL0TYPE#" property="lvl0type" jdbcType="DECIMAL" />
+    <result column="LVL1TYPE#" property="lvl1type" jdbcType="DECIMAL" />
+    <result column="LVL2TYPE#" property="lvl2type" jdbcType="DECIMAL" />
+    <result column="OWNER#" property="owner" jdbcType="DECIMAL" />
+    <result column="OWNERNAME" property="ownername" jdbcType="VARCHAR" />
+    <result column="LVL0NAME" property="lvl0name" jdbcType="VARCHAR" />
+    <result column="LVL1NAME" property="lvl1name" jdbcType="VARCHAR" />
+    <result column="LVL2NAME" property="lvl2name" jdbcType="VARCHAR" />
+    <result column="INTCOLS" property="intcols" jdbcType="DECIMAL" />
+    <result column="COLS" property="cols" jdbcType="DECIMAL" />
+    <result column="KERNELCOLS" property="kernelcols" jdbcType="DECIMAL" />
+    <result column="TAB_FLAGS" property="tabFlags" jdbcType="DECIMAL" />
+    <result column="TRIGFLAG" property="trigflag" jdbcType="DECIMAL" />
+    <result column="ASSOC#" property="assoc" jdbcType="DECIMAL" />
+    <result column="OBJ_FLAGS" property="objFlags" jdbcType="DECIMAL" />
+    <result column="TS#" property="ts" jdbcType="DECIMAL" />
+    <result column="TSNAME" property="tsname" jdbcType="VARCHAR" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="START_SCN" property="startScn" jdbcType="DECIMAL" />
+    <result column="DROP_SCN" property="dropScn" jdbcType="DECIMAL" />
+    <result column="XIDUSN" property="xidusn" jdbcType="DECIMAL" />
+    <result column="XIDSLT" property="xidslt" jdbcType="DECIMAL" />
+    <result column="XIDSQN" property="xidsqn" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="LOGMNR_SPARE1" property="logmnrSpare1" jdbcType="DECIMAL" />
+    <result column="LOGMNR_SPARE2" property="logmnrSpare2" jdbcType="DECIMAL" />
+    <result column="LOGMNR_SPARE3" property="logmnrSpare3" jdbcType="VARCHAR" />
+    <result column="LOGMNR_SPARE4" property="logmnrSpare4" jdbcType="DATE" />
+    <result column="LOGMNR_SPARE5" property="logmnrSpare5" jdbcType="DECIMAL" />
+    <result column="LOGMNR_SPARE6" property="logmnrSpare6" jdbcType="DECIMAL" />
+    <result column="LOGMNR_SPARE7" property="logmnrSpare7" jdbcType="DECIMAL" />
+    <result column="LOGMNR_SPARE8" property="logmnrSpare8" jdbcType="DECIMAL" />
+    <result column="LOGMNR_SPARE9" property="logmnrSpare9" jdbcType="DECIMAL" />
+    <result column="PARTTYPE" property="parttype" jdbcType="DECIMAL" />
+    <result column="SUBPARTTYPE" property="subparttype" jdbcType="DECIMAL" />
+    <result column="UNSUPPORTEDCOLS" property="unsupportedcols" jdbcType="DECIMAL" />
+    <result column="COMPLEXTYPECOLS" property="complextypecols" jdbcType="DECIMAL" />
+    <result column="NTPARENTOBJNUM" property="ntparentobjnum" jdbcType="DECIMAL" />
+    <result column="NTPARENTOBJVERSION" property="ntparentobjversion" jdbcType="DECIMAL" />
+    <result column="NTPARENTINTCOLNUM" property="ntparentintcolnum" jdbcType="DECIMAL" />
+    <result column="LOGMNRTLOFLAGS" property="logmnrtloflags" jdbcType="DECIMAL" />
+    <result column="LOGMNRMCV" property="logmnrmcv" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RuleSetFobMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RuleSetFob" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RS_OBJ#" property="rsObj" jdbcType="DECIMAL" />
+    <result column="EC_OBJ#" property="ecObj" jdbcType="DECIMAL" />
+    <result column="BOX_ID" property="boxId" jdbcType="DECIMAL" />
+    <result column="BOX_TYPE" property="boxType" jdbcType="DECIMAL" />
+    <result column="OPR_TYPE" property="oprType" jdbcType="DECIMAL" />
+    <result column="OET_TYPE" property="oetType" jdbcType="DECIMAL" />
+    <result column="OEFLAGS" property="oeflags" jdbcType="DECIMAL" />
+    <result column="NUM_EXPRS" property="numExprs" jdbcType="DECIMAL" />
+    <result column="OPEXPR_N1" property="opexprN1" jdbcType="DECIMAL" />
+    <result column="OPEXPR_N2" property="opexprN2" jdbcType="DECIMAL" />
+    <result column="OPEXPR_N3" property="opexprN3" jdbcType="DECIMAL" />
+    <result column="OPEXPR_C1" property="opexprC1" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WfsFeaturetypetagsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WfsFeaturetypetags" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FEATURETYPEID" property="featuretypeid" jdbcType="DECIMAL" />
+    <result column="TAGNAME" property="tagname" jdbcType="VARCHAR" />
+    <result column="TAGSEQNO" property="tagseqno" jdbcType="DECIMAL" />
+    <result column="TAGTYPE" property="tagtype" jdbcType="VARCHAR" />
+    <result column="TAGTYPENSURL" property="tagtypensurl" jdbcType="VARCHAR" />
+    <result column="COLUMNNAME" property="columnname" jdbcType="VARCHAR" />
+    <result column="ISNULLABLE" property="isnullable" jdbcType="VARCHAR" />
+    <result column="DATALENGTH" property="datalength" jdbcType="DECIMAL" />
+    <result column="ISMANDATORY" property="ismandatory" jdbcType="VARCHAR" />
+    <result column="DBTYPENAME" property="dbtypename" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

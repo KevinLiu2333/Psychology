@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhMemoryResizeOpsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhMemoryResizeOps" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="COMPONENT" property="component" jdbcType="VARCHAR" />
+    <id column="OPER_TYPE" property="operType" jdbcType="VARCHAR" />
+    <id column="START_TIME" property="startTime" jdbcType="DATE" />
+    <id column="TARGET_SIZE" property="targetSize" jdbcType="DECIMAL" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="OPER_MODE" property="operMode" jdbcType="VARCHAR" />
+    <result column="PARAMETER" property="parameter" jdbcType="VARCHAR" />
+    <result column="INITIAL_SIZE" property="initialSize" jdbcType="DECIMAL" />
+    <result column="FINAL_SIZE" property="finalSize" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

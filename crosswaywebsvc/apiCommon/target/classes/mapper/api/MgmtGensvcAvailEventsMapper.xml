@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtGensvcAvailEventsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtGensvcAvailEvents" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="EVENT_CODE" property="eventCode" jdbcType="DECIMAL" />
+    <result column="EVENT_DESCRIPTION" property="eventDescription" jdbcType="VARCHAR" />
+    <result column="EVENT_TIMESTAMP" property="eventTimestamp" jdbcType="DATE" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <result column="TEST_GUID" property="testGuid" jdbcType="VARBINARY" />
+    <result column="BEACON_TARGET_GUID" property="beaconTargetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

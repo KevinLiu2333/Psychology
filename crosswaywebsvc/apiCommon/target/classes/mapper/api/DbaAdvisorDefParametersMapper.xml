@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaAdvisorDefParametersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaAdvisorDefParameters" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ADVISOR_NAME" property="advisorName" jdbcType="VARCHAR" />
+    <result column="PARAMETER_NAME" property="parameterName" jdbcType="VARCHAR" />
+    <result column="PARAMETER_VALUE" property="parameterValue" jdbcType="VARCHAR" />
+    <result column="PARAMETER_TYPE" property="parameterType" jdbcType="VARCHAR" />
+    <result column="IS_DEFAULT" property="isDefault" jdbcType="VARCHAR" />
+    <result column="IS_OUTPUT" property="isOutput" jdbcType="VARCHAR" />
+    <result column="IS_MODIFIABLE_ANYTIME" property="isModifiableAnytime" jdbcType="VARCHAR" />
+    <result column="IS_SYSTEM_TASK_ONLY" property="isSystemTaskOnly" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="EXECUTION_TYPE" property="executionType" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

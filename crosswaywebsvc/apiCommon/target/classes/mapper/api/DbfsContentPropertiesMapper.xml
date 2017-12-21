@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbfsContentPropertiesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbfsContentProperties" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="STORE" property="store" jdbcType="VARCHAR" />
+    <result column="MOUNT" property="mount" jdbcType="VARCHAR" />
+    <result column="PATHNAME" property="pathname" jdbcType="VARCHAR" />
+    <result column="PROPERTY_NAME" property="propertyName" jdbcType="VARCHAR" />
+    <result column="PROPERTY_VALUE" property="propertyValue" jdbcType="VARCHAR" />
+    <result column="PROPERTY_TYPE" property="propertyType" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

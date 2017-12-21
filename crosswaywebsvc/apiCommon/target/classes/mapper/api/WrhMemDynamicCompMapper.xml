@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhMemDynamicCompMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhMemDynamicComp" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="COMPONENT" property="component" jdbcType="VARCHAR" />
+    <result column="CURRENT_SIZE" property="currentSize" jdbcType="DECIMAL" />
+    <result column="MIN_SIZE" property="minSize" jdbcType="DECIMAL" />
+    <result column="MAX_SIZE" property="maxSize" jdbcType="DECIMAL" />
+    <result column="USER_SPECIFIED_SIZE" property="userSpecifiedSize" jdbcType="DECIMAL" />
+    <result column="OPER_COUNT" property="operCount" jdbcType="DECIMAL" />
+    <result column="LAST_OPER_TYPE" property="lastOperType" jdbcType="VARCHAR" />
+    <result column="LAST_OPER_MODE" property="lastOperMode" jdbcType="VARCHAR" />
+    <result column="LAST_OPER_TIME" property="lastOperTime" jdbcType="DATE" />
+    <result column="GRANULE_SIZE" property="granuleSize" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

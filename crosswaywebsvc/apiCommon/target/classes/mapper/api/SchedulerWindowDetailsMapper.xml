@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SchedulerWindowDetailsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SchedulerWindowDetails" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOG_ID" property="logId" jdbcType="DECIMAL" />
+    <result column="LOG_DATE" property="logDate" jdbcType="OTHER" />
+    <result column="INSTANCE_ID" property="instanceId" jdbcType="DECIMAL" />
+    <result column="REQ_START_DATE" property="reqStartDate" jdbcType="OTHER" />
+    <result column="START_DATE" property="startDate" jdbcType="OTHER" />
+    <result column="DURATION" property="duration" jdbcType="OTHER" />
+    <result column="ACTUAL_DURATION" property="actualDuration" jdbcType="OTHER" />
+    <result column="ADDITIONAL_INFO" property="additionalInfo" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OlHintsMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OlHints">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OL_NAME" jdbcType="VARCHAR" property="olName" />
+    <result column="HINT#" jdbcType="DECIMAL" property="hint" />
+    <result column="CATEGORY" jdbcType="VARCHAR" property="category" />
+    <result column="HINT_TYPE" jdbcType="DECIMAL" property="hintType" />
+    <result column="HINT_TEXT" jdbcType="VARCHAR" property="hintText" />
+    <result column="STAGE#" jdbcType="DECIMAL" property="stage" />
+    <result column="NODE#" jdbcType="DECIMAL" property="node" />
+    <result column="TABLE_NAME" jdbcType="VARCHAR" property="tableName" />
+    <result column="TABLE_TIN" jdbcType="DECIMAL" property="tableTin" />
+    <result column="TABLE_POS" jdbcType="DECIMAL" property="tablePos" />
+    <result column="REF_ID" jdbcType="DECIMAL" property="refId" />
+    <result column="USER_TABLE_NAME" jdbcType="VARCHAR" property="userTableName" />
+    <result column="COST" jdbcType="FLOAT" property="cost" />
+    <result column="CARDINALITY" jdbcType="FLOAT" property="cardinality" />
+    <result column="BYTES" jdbcType="FLOAT" property="bytes" />
+    <result column="HINT_TEXTOFF" jdbcType="DECIMAL" property="hintTextoff" />
+    <result column="HINT_TEXTLEN" jdbcType="DECIMAL" property="hintTextlen" />
+    <result column="JOIN_PRED" jdbcType="VARCHAR" property="joinPred" />
+    <result column="SPARE1" jdbcType="DECIMAL" property="spare1" />
+    <result column="SPARE2" jdbcType="DECIMAL" property="spare2" />
+    <result column="HINT_STRING" jdbcType="CLOB" property="hintString" />
+  </resultMap>
+</mapper>

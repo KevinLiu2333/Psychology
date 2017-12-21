@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtSwlibEntityRevisionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtSwlibEntityRevisions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="REVISION_ID" property="revisionId" jdbcType="VARBINARY" />
+    <result column="REVISION" property="revision" jdbcType="OTHER" />
+    <result column="MODIFIED_DATE" property="modifiedDate" jdbcType="DATE" />
+    <result column="REVISION_AUTHOR" property="revisionAuthor" jdbcType="OTHER" />
+    <result column="MATURITY_STATUS_ID" property="maturityStatusId" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="PRODUCT" property="product" jdbcType="OTHER" />
+    <result column="PRODUCT_VERSION" property="productVersion" jdbcType="OTHER" />
+    <result column="DATA_TYPE" property="dataType" jdbcType="VARCHAR" />
+    <result column="IS_CURRENT" property="isCurrent" jdbcType="DECIMAL" />
+    <result column="ENTITY_ID" property="entityId" jdbcType="VARBINARY" />
+    <result column="CHECKSUM" property="checksum" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

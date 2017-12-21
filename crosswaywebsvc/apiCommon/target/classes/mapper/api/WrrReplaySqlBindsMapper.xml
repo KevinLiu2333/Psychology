@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrrReplaySqlBindsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrrReplaySqlBinds" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="CAPTURE_ID" property="captureId" jdbcType="DECIMAL" />
+    <id column="FILE_ID" property="fileId" jdbcType="DECIMAL" />
+    <id column="CALL_COUNTER" property="callCounter" jdbcType="DECIMAL" />
+    <id column="ITERATION" property="iteration" jdbcType="DECIMAL" />
+    <id column="BIND_POS" property="bindPos" jdbcType="DECIMAL" />
+    <result column="BIND_VARNAME" property="bindVarname" jdbcType="VARCHAR" />
+    <result column="BIND_VALUE" property="bindValue" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

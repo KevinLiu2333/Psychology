@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaAuditSessionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaAuditSession" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OS_USERNAME" property="osUsername" jdbcType="VARCHAR" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="USERHOST" property="userhost" jdbcType="VARCHAR" />
+    <result column="TERMINAL" property="terminal" jdbcType="VARCHAR" />
+    <result column="TIMESTAMP" property="timestamp" jdbcType="DATE" />
+    <result column="ACTION_NAME" property="actionName" jdbcType="VARCHAR" />
+    <result column="LOGOFF_TIME" property="logoffTime" jdbcType="DATE" />
+    <result column="LOGOFF_LREAD" property="logoffLread" jdbcType="DECIMAL" />
+    <result column="LOGOFF_PREAD" property="logoffPread" jdbcType="DECIMAL" />
+    <result column="LOGOFF_LWRITE" property="logoffLwrite" jdbcType="DECIMAL" />
+    <result column="LOGOFF_DLOCK" property="logoffDlock" jdbcType="VARCHAR" />
+    <result column="SESSIONID" property="sessionid" jdbcType="DECIMAL" />
+    <result column="RETURNCODE" property="returncode" jdbcType="DECIMAL" />
+    <result column="CLIENT_ID" property="clientId" jdbcType="VARCHAR" />
+    <result column="SESSION_CPU" property="sessionCpu" jdbcType="DECIMAL" />
+    <result column="EXTENDED_TIMESTAMP" property="extendedTimestamp" jdbcType="OTHER" />
+    <result column="PROXY_SESSIONID" property="proxySessionid" jdbcType="DECIMAL" />
+    <result column="GLOBAL_UID" property="globalUid" jdbcType="VARCHAR" />
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="OS_PROCESS" property="osProcess" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

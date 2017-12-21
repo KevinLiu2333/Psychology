@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaAutotaskScheduleMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaAutotaskSchedule" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WINDOW_NAME" property="windowName" jdbcType="VARCHAR" />
+    <result column="START_TIME" property="startTime" jdbcType="OTHER" />
+    <result column="DURATION" property="duration" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

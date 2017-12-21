@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CdcChangeSetsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CdcChangeSets" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SET_NAME" property="setName" jdbcType="VARCHAR" />
+    <result column="CHANGE_SOURCE_NAME" property="changeSourceName" jdbcType="VARCHAR" />
+    <result column="BEGIN_DATE" property="beginDate" jdbcType="DATE" />
+    <result column="END_DATE" property="endDate" jdbcType="DATE" />
+    <result column="BEGIN_SCN" property="beginScn" jdbcType="DECIMAL" />
+    <result column="END_SCN" property="endScn" jdbcType="DECIMAL" />
+    <result column="FRESHNESS_DATE" property="freshnessDate" jdbcType="DATE" />
+    <result column="FRESHNESS_SCN" property="freshnessScn" jdbcType="DECIMAL" />
+    <result column="ADVANCE_ENABLED" property="advanceEnabled" jdbcType="VARCHAR" />
+    <result column="IGNORE_DDL" property="ignoreDdl" jdbcType="VARCHAR" />
+    <result column="CREATED" property="created" jdbcType="DATE" />
+    <result column="ROLLBACK_SEGMENT_NAME" property="rollbackSegmentName" jdbcType="VARCHAR" />
+    <result column="ADVANCING" property="advancing" jdbcType="VARCHAR" />
+    <result column="PURGING" property="purging" jdbcType="VARCHAR" />
+    <result column="LOWEST_SCN" property="lowestScn" jdbcType="DECIMAL" />
+    <result column="TABLESPACE" property="tablespace" jdbcType="VARCHAR" />
+    <result column="LM_SESSION_ID" property="lmSessionId" jdbcType="DECIMAL" />
+    <result column="PARTIAL_TX_DETECTED" property="partialTxDetected" jdbcType="VARCHAR" />
+    <result column="LAST_ADVANCE" property="lastAdvance" jdbcType="DATE" />
+    <result column="LAST_PURGE" property="lastPurge" jdbcType="DATE" />
+    <result column="STOP_ON_DDL" property="stopOnDdl" jdbcType="VARCHAR" />
+    <result column="CAPTURE_ENABLED" property="captureEnabled" jdbcType="VARCHAR" />
+    <result column="CAPTURE_ERROR" property="captureError" jdbcType="VARCHAR" />
+    <result column="CAPTURE_NAME" property="captureName" jdbcType="VARCHAR" />
+    <result column="QUEUE_NAME" property="queueName" jdbcType="VARCHAR" />
+    <result column="QUEUE_TABLE_NAME" property="queueTableName" jdbcType="VARCHAR" />
+    <result column="APPLY_NAME" property="applyName" jdbcType="VARCHAR" />
+    <result column="SUPPLEMENTAL_PROCS" property="supplementalProcs" jdbcType="DECIMAL" />
+    <result column="SET_DESCRIPTION" property="setDescription" jdbcType="VARCHAR" />
+    <result column="PUBLISHER" property="publisher" jdbcType="VARCHAR" />
+    <result column="SET_SEQUENCE" property="setSequence" jdbcType="VARCHAR" />
+    <result column="LOWEST_TIMESTAMP" property="lowestTimestamp" jdbcType="DATE" />
+    <result column="TIME_SCN_NAME" property="timeScnName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

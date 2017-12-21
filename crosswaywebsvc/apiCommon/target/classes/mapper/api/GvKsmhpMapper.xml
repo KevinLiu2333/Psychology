@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvKsmhpMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvKsmhp" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDX" property="indx" jdbcType="DECIMAL" />
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="KSMCHCOM" property="ksmchcom" jdbcType="VARCHAR" />
+    <result column="KSMCHSIZ" property="ksmchsiz" jdbcType="DECIMAL" />
+    <result column="KSMCHCLS" property="ksmchcls" jdbcType="VARCHAR" />
+    <result column="KSMCHTYP" property="ksmchtyp" jdbcType="DECIMAL" />
+    <result column="ADDR" property="addr" jdbcType="VARBINARY" />
+    <result column="KSMCHDS" property="ksmchds" jdbcType="VARBINARY" />
+    <result column="KSMCHPTR" property="ksmchptr" jdbcType="VARBINARY" />
+    <result column="KSMCHPAR" property="ksmchpar" jdbcType="VARBINARY" />
+    <result column="KSMCHOWN" property="ksmchown" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

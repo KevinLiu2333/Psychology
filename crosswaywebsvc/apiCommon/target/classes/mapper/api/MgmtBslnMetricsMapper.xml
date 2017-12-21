@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtBslnMetricsMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtBslnMetrics">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="METRIC_UID" jdbcType="VARBINARY" property="metricUid" />
+    <result column="TAIL_ESTIMATOR" jdbcType="CHAR" property="tailEstimator" />
+    <result column="THRESHOLD_METHOD_DEFAULT" jdbcType="CHAR" property="thresholdMethodDefault" />
+    <result column="NUM_OCCURRENCES_DEFAULT" jdbcType="DECIMAL" property="numOccurrencesDefault" />
+    <result column="WARNING_PARAM_DEFAULT" jdbcType="DECIMAL" property="warningParamDefault" />
+    <result column="CRITICAL_PARAM_DEFAULT" jdbcType="DECIMAL" property="criticalParamDefault" />
+  </resultMap>
+</mapper>

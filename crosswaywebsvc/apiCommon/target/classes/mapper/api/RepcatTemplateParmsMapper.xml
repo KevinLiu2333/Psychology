@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RepcatTemplateParmsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RepcatTemplateParms" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TEMPLATE_PARAMETER_ID" property="templateParameterId" jdbcType="DECIMAL" />
+    <result column="REFRESH_TEMPLATE_ID" property="refreshTemplateId" jdbcType="DECIMAL" />
+    <result column="PARAMETER_NAME" property="parameterName" jdbcType="VARCHAR" />
+    <result column="PROMPT_STRING" property="promptString" jdbcType="VARCHAR" />
+    <result column="USER_OVERRIDE" property="userOverride" jdbcType="VARCHAR" />
+    <result column="DEFAULT_PARM_VALUE" property="defaultParmValue" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

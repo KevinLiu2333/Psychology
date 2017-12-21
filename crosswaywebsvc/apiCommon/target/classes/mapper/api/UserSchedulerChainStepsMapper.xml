@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserSchedulerChainStepsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserSchedulerChainSteps" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CHAIN_NAME" property="chainName" jdbcType="VARCHAR" />
+    <result column="STEP_NAME" property="stepName" jdbcType="VARCHAR" />
+    <result column="PROGRAM_OWNER" property="programOwner" jdbcType="VARCHAR" />
+    <result column="PROGRAM_NAME" property="programName" jdbcType="VARCHAR" />
+    <result column="EVENT_SCHEDULE_OWNER" property="eventScheduleOwner" jdbcType="VARCHAR" />
+    <result column="EVENT_SCHEDULE_NAME" property="eventScheduleName" jdbcType="VARCHAR" />
+    <result column="EVENT_QUEUE_OWNER" property="eventQueueOwner" jdbcType="VARCHAR" />
+    <result column="EVENT_QUEUE_NAME" property="eventQueueName" jdbcType="VARCHAR" />
+    <result column="EVENT_QUEUE_AGENT" property="eventQueueAgent" jdbcType="VARCHAR" />
+    <result column="EVENT_CONDITION" property="eventCondition" jdbcType="VARCHAR" />
+    <result column="CREDENTIAL_OWNER" property="credentialOwner" jdbcType="VARCHAR" />
+    <result column="CREDENTIAL_NAME" property="credentialName" jdbcType="VARCHAR" />
+    <result column="DESTINATION" property="destination" jdbcType="VARCHAR" />
+    <result column="SKIP" property="skip" jdbcType="VARCHAR" />
+    <result column="PAUSE" property="pause" jdbcType="VARCHAR" />
+    <result column="RESTART_ON_RECOVERY" property="restartOnRecovery" jdbcType="VARCHAR" />
+    <result column="RESTART_ON_FAILURE" property="restartOnFailure" jdbcType="VARCHAR" />
+    <result column="STEP_TYPE" property="stepType" jdbcType="VARCHAR" />
+    <result column="TIMEOUT" property="timeout" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

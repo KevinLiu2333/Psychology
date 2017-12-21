@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OlMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Ol">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OL_NAME" jdbcType="VARCHAR" property="olName" />
+    <result column="TEXTLEN" jdbcType="DECIMAL" property="textlen" />
+    <result column="HASH_VALUE" jdbcType="DECIMAL" property="hashValue" />
+    <result column="HASH_VALUE2" jdbcType="DECIMAL" property="hashValue2" />
+    <result column="CATEGORY" jdbcType="VARCHAR" property="category" />
+    <result column="VERSION" jdbcType="VARCHAR" property="version" />
+    <result column="CREATOR" jdbcType="VARCHAR" property="creator" />
+    <result column="TIMESTAMP" jdbcType="DATE" property="timestamp" />
+    <result column="FLAGS" jdbcType="DECIMAL" property="flags" />
+    <result column="HINTCOUNT" jdbcType="DECIMAL" property="hintcount" />
+    <result column="SPARE1" jdbcType="DECIMAL" property="spare1" />
+    <result column="SPARE2" jdbcType="VARCHAR" property="spare2" />
+    <result column="SQL_TEXT" jdbcType="LONGVARCHAR" property="sqlText" />
+    <result column="SIGNATURE" jdbcType="VARBINARY" property="signature" />
+  </resultMap>
+</mapper>

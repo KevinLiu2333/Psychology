@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtMetricDependencyMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtMetricDependency" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="METRIC_GUID" property="metricGuid" jdbcType="VARBINARY" />
+    <id column="KEY_VALUE" property="keyValue" jdbcType="VARCHAR" />
+    <result column="RS_METRIC" property="rsMetric" jdbcType="DECIMAL" />
+    <result column="EVAL_ORDER" property="evalOrder" jdbcType="DECIMAL" />
+    <result column="EVAL_FUNC" property="evalFunc" jdbcType="VARCHAR" />
+    <result column="EVENT_METRIC" property="eventMetric" jdbcType="DECIMAL" />
+    <result column="DISABLED" property="disabled" jdbcType="DECIMAL" />
+    <result column="MEMBERS_READY" property="membersReady" jdbcType="DECIMAL" />
+    <result column="CAN_CALCULATE" property="canCalculate" jdbcType="DECIMAL" />
+    <result column="START_TIMESTAMP" property="startTimestamp" jdbcType="DATE" />
+    <result column="FORCE_CALCULATE" property="forceCalculate" jdbcType="DECIMAL" />
+    <result column="ERROR_MSG" property="errorMsg" jdbcType="VARCHAR" />
+    <result column="MIN_DEP_INTERVAL" property="minDepInterval" jdbcType="DECIMAL" />
+    <result column="OPT_CODE" property="optCode" jdbcType="DECIMAL" />
+    <result column="REPO_METRIC_ONLY" property="repoMetricOnly" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

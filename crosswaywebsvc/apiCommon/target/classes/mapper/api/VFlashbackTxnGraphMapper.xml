@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VFlashbackTxnGraphMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VFlashbackTxnGraph" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COMPENSATING_TXN_NAME" property="compensatingTxnName" jdbcType="VARCHAR" />
+    <result column="TXN_NAME" property="txnName" jdbcType="VARCHAR" />
+    <result column="INTERESTING" property="interesting" jdbcType="DECIMAL" />
+    <result column="ORIGINAL" property="original" jdbcType="DECIMAL" />
+    <result column="BACKOUT_SEQ" property="backoutSeq" jdbcType="DECIMAL" />
+    <result column="NUM_PREDS" property="numPreds" jdbcType="DECIMAL" />
+    <result column="NUM_SUCCS" property="numSuccs" jdbcType="DECIMAL" />
+    <result column="DEP_TXN_NAME" property="depTxnName" jdbcType="VARCHAR" />
+    <result column="TXN_CONF_SQL_ID" property="txnConfSqlId" jdbcType="DECIMAL" />
+    <result column="DEP_TXN_CONF_SQL_ID" property="depTxnConfSqlId" jdbcType="DECIMAL" />
+    <result column="CONFLICT_TYPE" property="conflictType" jdbcType="VARCHAR" />
+    <result column="COMPENSATING_XID" property="compensatingXid" jdbcType="VARBINARY" />
+    <result column="XID" property="xid" jdbcType="VARBINARY" />
+    <result column="PARENT_XID" property="parentXid" jdbcType="VARBINARY" />
+    <result column="DEP_XID" property="depXid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

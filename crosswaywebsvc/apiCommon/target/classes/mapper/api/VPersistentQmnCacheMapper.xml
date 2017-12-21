@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VPersistentQmnCacheMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VPersistentQmnCache" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="QUEUE_TABLE_ID" property="queueTableId" jdbcType="DECIMAL" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="NEXT_SERVICE_TIME" property="nextServiceTime" jdbcType="OTHER" />
+    <result column="WINDOW_END_TIME" property="windowEndTime" jdbcType="OTHER" />
+    <result column="TOTAL_RUNS" property="totalRuns" jdbcType="DECIMAL" />
+    <result column="TOTAL_LATENCY" property="totalLatency" jdbcType="DECIMAL" />
+    <result column="TOTAL_ELAPSED_TIME" property="totalElapsedTime" jdbcType="DECIMAL" />
+    <result column="TOTAL_CPU_TIME" property="totalCpuTime" jdbcType="DECIMAL" />
+    <result column="TMGR_ROWS_PROCESSED" property="tmgrRowsProcessed" jdbcType="DECIMAL" />
+    <result column="TMGR_ELAPSED_TIME" property="tmgrElapsedTime" jdbcType="DECIMAL" />
+    <result column="TMGR_CPU_TIME" property="tmgrCpuTime" jdbcType="DECIMAL" />
+    <result column="LAST_TMGR_PROCESSING_TIME" property="lastTmgrProcessingTime" jdbcType="OTHER" />
+    <result column="DEQLOG_ROWS_PROCESSED" property="deqlogRowsProcessed" jdbcType="DECIMAL" />
+    <result column="DEQLOG_PROCESSING_ELAPSED_TIME" property="deqlogProcessingElapsedTime" jdbcType="DECIMAL" />
+    <result column="DEQLOG_PROCESSING_CPU_TIME" property="deqlogProcessingCpuTime" jdbcType="DECIMAL" />
+    <result column="LAST_DEQLOG_PROCESSING_TIME" property="lastDeqlogProcessingTime" jdbcType="OTHER" />
+    <result column="DEQUEUE_INDEX_BLOCKS_FREED" property="dequeueIndexBlocksFreed" jdbcType="DECIMAL" />
+    <result column="HISTORY_INDEX_BLOCKS_FREED" property="historyIndexBlocksFreed" jdbcType="DECIMAL" />
+    <result column="TIME_INDEX_BLOCKS_FREED" property="timeIndexBlocksFreed" jdbcType="DECIMAL" />
+    <result column="INDEX_CLEANUP_COUNT" property="indexCleanupCount" jdbcType="DECIMAL" />
+    <result column="INDEX_CLEANUP_ELAPSED_TIME" property="indexCleanupElapsedTime" jdbcType="DECIMAL" />
+    <result column="INDEX_CLEANUP_CPU_TIME" property="indexCleanupCpuTime" jdbcType="DECIMAL" />
+    <result column="LAST_INDEX_CLEANUP_TIME" property="lastIndexCleanupTime" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllMpParentWorkspacesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllMpParentWorkspaces" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="MP_LEAF_WORKSPACE" property="mpLeafWorkspace" jdbcType="VARCHAR" />
+    <result column="PARENT_WORKSPACE" property="parentWorkspace" jdbcType="VARCHAR" />
+    <result column="CREATOR" property="creator" jdbcType="VARCHAR" />
+    <result column="CREATETIME" property="createtime" jdbcType="DATE" />
+    <result column="ISREFRESHED" property="isrefreshed" jdbcType="VARCHAR" />
+    <result column="PARENT_FLAG" property="parentFlag" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

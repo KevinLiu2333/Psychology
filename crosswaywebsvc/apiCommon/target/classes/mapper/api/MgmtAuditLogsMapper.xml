@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtAuditLogsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtAuditLogs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OP_CODE" property="opCode" jdbcType="DECIMAL" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <result column="OBJECT_OWNER" property="objectOwner" jdbcType="VARCHAR" />
+    <result column="TIME_STAMP" property="timeStamp" jdbcType="DATE" />
+    <result column="AUDIT_COLUMN_VALUE1" property="auditColumnValue1" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_VALUE2" property="auditColumnValue2" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_VALUE3" property="auditColumnValue3" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_VALUE4" property="auditColumnValue4" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_VALUE5" property="auditColumnValue5" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_VALUE6" property="auditColumnValue6" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_VALUE7" property="auditColumnValue7" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_VALUE8" property="auditColumnValue8" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_VALUE9" property="auditColumnValue9" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_VALUE10" property="auditColumnValue10" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_VALUE11" property="auditColumnValue11" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_VALUE12" property="auditColumnValue12" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_VALUE13" property="auditColumnValue13" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_VALUE14" property="auditColumnValue14" jdbcType="VARCHAR" />
+    <result column="AUDIT_COLUMN_VALUE15" property="auditColumnValue15" jdbcType="VARCHAR" />
+    <result column="USER_SESSION_ID_GUID" property="userSessionIdGuid" jdbcType="VARBINARY" />
+    <result column="AUDIT_GUID" property="auditGuid" jdbcType="VARBINARY" />
+    <result column="AUDIT_CLOB_VALUE1" property="auditClobValue1" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

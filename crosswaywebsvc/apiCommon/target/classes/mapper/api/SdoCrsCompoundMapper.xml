@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoCrsCompoundMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoCrsCompound" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SRID" property="srid" jdbcType="DECIMAL" />
+    <result column="COORD_REF_SYS_NAME" property="coordRefSysName" jdbcType="VARCHAR" />
+    <result column="CMPD_HORIZ_SRID" property="cmpdHorizSrid" jdbcType="DECIMAL" />
+    <result column="CMPD_VERT_SRID" property="cmpdVertSrid" jdbcType="DECIMAL" />
+    <result column="INFORMATION_SOURCE" property="informationSource" jdbcType="VARCHAR" />
+    <result column="DATA_SOURCE" property="dataSource" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu9doiuMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu9doiu" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="IOBJID" property="iobjid" jdbcType="DECIMAL" />
+    <result column="IOWNERID" property="iownerid" jdbcType="DECIMAL" />
+    <result column="IPARAMS" property="iparams" jdbcType="VARCHAR" />
+    <result column="ITNAME" property="itname" jdbcType="VARCHAR" />
+    <result column="ITOWNER" property="itowner" jdbcType="VARCHAR" />
+    <result column="IMPLNAME" property="implname" jdbcType="VARCHAR" />
+    <result column="IMPLOWNER" property="implowner" jdbcType="VARCHAR" />
+    <result column="DIVERSION" property="diversion" jdbcType="DECIMAL" />
+    <result column="IPROPERTY" property="iproperty" jdbcType="DECIMAL" />
+    <result column="GMFLAGS" property="gmflags" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

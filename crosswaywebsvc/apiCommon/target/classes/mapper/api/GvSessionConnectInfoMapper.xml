@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvSessionConnectInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvSessionConnectInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="SERIAL#" property="serial" jdbcType="DECIMAL" />
+    <result column="AUTHENTICATION_TYPE" property="authenticationType" jdbcType="VARCHAR" />
+    <result column="OSUSER" property="osuser" jdbcType="VARCHAR" />
+    <result column="NETWORK_SERVICE_BANNER" property="networkServiceBanner" jdbcType="VARCHAR" />
+    <result column="CLIENT_CHARSET" property="clientCharset" jdbcType="VARCHAR" />
+    <result column="CLIENT_CONNECTION" property="clientConnection" jdbcType="VARCHAR" />
+    <result column="CLIENT_OCI_LIBRARY" property="clientOciLibrary" jdbcType="VARCHAR" />
+    <result column="CLIENT_VERSION" property="clientVersion" jdbcType="VARCHAR" />
+    <result column="CLIENT_DRIVER" property="clientDriver" jdbcType="VARCHAR" />
+    <result column="CLIENT_LOBATTR" property="clientLobattr" jdbcType="VARCHAR" />
+    <result column="CLIENT_REGID" property="clientRegid" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

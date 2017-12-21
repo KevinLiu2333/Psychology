@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.XdbMountsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.XdbMounts" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DOBJ#" property="dobj" jdbcType="DECIMAL" />
+    <result column="DPATH" property="dpath" jdbcType="VARCHAR" />
+    <result column="SOBJ#" property="sobj" jdbcType="DECIMAL" />
+    <result column="SPATH" property="spath" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

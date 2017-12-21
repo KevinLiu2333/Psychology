@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MviewAdvFjgMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MviewAdvFjg" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="FJGID#" property="fjgid" jdbcType="DECIMAL" />
+    <result column="AJGID#" property="ajgid" jdbcType="DECIMAL" />
+    <result column="FJGDESLEN" property="fjgdeslen" jdbcType="DECIMAL" />
+    <result column="HASHVALUE" property="hashvalue" jdbcType="DECIMAL" />
+    <result column="FREQUENCY" property="frequency" jdbcType="DECIMAL" />
+    <result column="FJGDES" property="fjgdes" jdbcType="LONGVARBINARY" />
+  </resultMap>
+</mapper>

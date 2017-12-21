@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvArchiveMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvArchive" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="GROUP#" property="group" jdbcType="DECIMAL" />
+    <result column="THREAD#" property="thread" jdbcType="DECIMAL" />
+    <result column="SEQUENCE#" property="sequence" jdbcType="DECIMAL" />
+    <result column="ISCURRENT" property="iscurrent" jdbcType="VARCHAR" />
+    <result column="CURRENT" property="current" jdbcType="VARCHAR" />
+    <result column="FIRST_CHANGE#" property="firstChange" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

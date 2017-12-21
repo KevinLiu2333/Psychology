@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowWorksheetColumnsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowWorksheetColumns" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="PAGE_ID" property="pageId" jdbcType="DECIMAL" />
+    <result column="WORKSHEET_ID" property="worksheetId" jdbcType="DECIMAL" />
+    <result column="DB_COLUMN_NAME" property="dbColumnName" jdbcType="VARCHAR" />
+    <result column="DISPLAY_ORDER" property="displayOrder" jdbcType="DECIMAL" />
+    <result column="GROUP_ID" property="groupId" jdbcType="DECIMAL" />
+    <result column="COLUMN_IDENTIFIER" property="columnIdentifier" jdbcType="VARCHAR" />
+    <result column="COLUMN_EXPR" property="columnExpr" jdbcType="VARCHAR" />
+    <result column="COLUMN_LABEL" property="columnLabel" jdbcType="VARCHAR" />
+    <result column="REPORT_LABEL" property="reportLabel" jdbcType="VARCHAR" />
+    <result column="SYNC_FORM_LABEL" property="syncFormLabel" jdbcType="VARCHAR" />
+    <result column="DISPLAY_IN_DEFAULT_RPT" property="displayInDefaultRpt" jdbcType="VARCHAR" />
+    <result column="COLUMN_HTML_EXPRESSION" property="columnHtmlExpression" jdbcType="VARCHAR" />
+    <result column="COLUMN_LINK" property="columnLink" jdbcType="VARCHAR" />
+    <result column="COLUMN_LINKTEXT" property="columnLinktext" jdbcType="VARCHAR" />
+    <result column="COLUMN_LINK_ATTR" property="columnLinkAttr" jdbcType="VARCHAR" />
+    <result column="COLUMN_LINK_CHECKSUM_TYPE" property="columnLinkChecksumType" jdbcType="VARCHAR" />
+    <result column="IS_SORTABLE" property="isSortable" jdbcType="VARCHAR" />
+    <result column="ALLOW_SORTING" property="allowSorting" jdbcType="VARCHAR" />
+    <result column="ALLOW_FILTERING" property="allowFiltering" jdbcType="VARCHAR" />
+    <result column="ALLOW_CTRL_BREAKS" property="allowCtrlBreaks" jdbcType="VARCHAR" />
+    <result column="ALLOW_AGGREGATIONS" property="allowAggregations" jdbcType="VARCHAR" />
+    <result column="ALLOW_COMPUTATIONS" property="allowComputations" jdbcType="VARCHAR" />
+    <result column="ALLOW_CHARTING" property="allowCharting" jdbcType="VARCHAR" />
+    <result column="USE_CUSTOM" property="useCustom" jdbcType="VARCHAR" />
+    <result column="CUSTOM_FILTER" property="customFilter" jdbcType="VARCHAR" />
+    <result column="BASE_COLUMN" property="baseColumn" jdbcType="VARCHAR" />
+    <result column="ALLOW_FILTERS" property="allowFilters" jdbcType="VARCHAR" />
+    <result column="OTHERS_MAY_EDIT" property="othersMayEdit" jdbcType="VARCHAR" />
+    <result column="OTHERS_MAY_VIEW" property="othersMayView" jdbcType="VARCHAR" />
+    <result column="COLUMN_TYPE" property="columnType" jdbcType="VARCHAR" />
+    <result column="DISPLAY_AS" property="displayAs" jdbcType="VARCHAR" />
+    <result column="DISPLAY_TEXT_AS" property="displayTextAs" jdbcType="VARCHAR" />
+    <result column="HEADING_ALIGNMENT" property="headingAlignment" jdbcType="VARCHAR" />
+    <result column="COLUMN_ALIGNMENT" property="columnAlignment" jdbcType="VARCHAR" />
+    <result column="MAX_LENGTH" property="maxLength" jdbcType="DECIMAL" />
+    <result column="DISPLAY_WIDTH" property="displayWidth" jdbcType="DECIMAL" />
+    <result column="DISPLAY_HEIGHT" property="displayHeight" jdbcType="DECIMAL" />
+    <result column="ALLOW_NULL" property="allowNull" jdbcType="VARCHAR" />
+    <result column="FORMAT_MASK" property="formatMask" jdbcType="VARCHAR" />
+    <result column="FACT_TABLE_KEY" property="factTableKey" jdbcType="VARCHAR" />
+    <result column="DIMENSION_TABLE" property="dimensionTable" jdbcType="VARCHAR" />
+    <result column="DIMENSION_TABLE_ID" property="dimensionTableId" jdbcType="VARCHAR" />
+    <result column="DIMENSION_TABLE_VALUE" property="dimensionTableValue" jdbcType="VARCHAR" />
+    <result column="RPT_DISTINCT_LOV" property="rptDistinctLov" jdbcType="VARCHAR" />
+    <result column="RPT_LOV" property="rptLov" jdbcType="VARCHAR" />
+    <result column="RPT_NAMED_LOV" property="rptNamedLov" jdbcType="DECIMAL" />
+    <result column="RPT_SHOW_FILTER_LOV" property="rptShowFilterLov" jdbcType="VARCHAR" />
+    <result column="RPT_FILTER_DATE_RANGES" property="rptFilterDateRanges" jdbcType="VARCHAR" />
+    <result column="STATIC_LOV" property="staticLov" jdbcType="VARCHAR" />
+    <result column="LOV_NULL_TEXT" property="lovNullText" jdbcType="VARCHAR" />
+    <result column="LOV_ALLOW_NEW_VALUES" property="lovAllowNewValues" jdbcType="VARCHAR" />
+    <result column="LOV_IS_DISTINCT_VALUES" property="lovIsDistinctValues" jdbcType="VARCHAR" />
+    <result column="LOV_NUM_COLUMNS" property="lovNumColumns" jdbcType="DECIMAL" />
+    <result column="LOV_ID" property="lovId" jdbcType="DECIMAL" />
+    <result column="COMPUTATION_TYPE" property="computationType" jdbcType="VARCHAR" />
+    <result column="COMPUTATION_EXPR_1" property="computationExpr1" jdbcType="VARCHAR" />
+    <result column="COMPUTATION_EXPR_2" property="computationExpr2" jdbcType="VARCHAR" />
+    <result column="VALIDATION_TYPE" property="validationType" jdbcType="VARCHAR" />
+    <result column="VALIDATION_EXPR_1" property="validationExpr1" jdbcType="VARCHAR" />
+    <result column="VALIDATION_EXPR_2" property="validationExpr2" jdbcType="VARCHAR" />
+    <result column="DISPLAY_CONDITION_TYPE" property="displayConditionType" jdbcType="VARCHAR" />
+    <result column="DISPLAY_CONDITION" property="displayCondition" jdbcType="VARCHAR" />
+    <result column="DISPLAY_CONDITION2" property="displayCondition2" jdbcType="VARCHAR" />
+    <result column="DEFAULT_VALUE" property="defaultValue" jdbcType="VARCHAR" />
+    <result column="DEFAULT_WHEN" property="defaultWhen" jdbcType="VARCHAR" />
+    <result column="HELP_TEXT" property="helpText" jdbcType="VARCHAR" />
+    <result column="SECURITY_SCHEME" property="securityScheme" jdbcType="VARCHAR" />
+    <result column="COLUMN_FLAGS" property="columnFlags" jdbcType="VARCHAR" />
+    <result column="COLUMN_COMMENT" property="columnComment" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="UPDATED_ON" property="updatedOn" jdbcType="DATE" />
+    <result column="UPDATED_BY" property="updatedBy" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

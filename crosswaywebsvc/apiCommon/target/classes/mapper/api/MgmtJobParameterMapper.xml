@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtJobParameterMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtJobParameter" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="JOB_ID" property="jobId" jdbcType="VARBINARY" />
+    <id column="EXECUTION_ID" property="executionId" jdbcType="VARBINARY" />
+    <id column="PARAMETER_NAME" property="parameterName" jdbcType="VARCHAR" />
+    <result column="PARAMETER_TYPE" property="parameterType" jdbcType="DECIMAL" />
+    <result column="ENCRYPTED" property="encrypted" jdbcType="DECIMAL" />
+    <result column="SCALAR_VALUE" property="scalarValue" jdbcType="VARCHAR" />
+    <result column="VECTOR_VALUE" property="vectorValue" jdbcType="OTHER" />
+    <result column="CREATED_AT_SUBMIT" property="createdAtSubmit" jdbcType="DECIMAL" />
+    <result column="LARGE_VALUE" property="largeValue" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

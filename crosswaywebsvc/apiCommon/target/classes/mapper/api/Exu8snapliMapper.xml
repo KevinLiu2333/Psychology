@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu8snapliMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu8snapli" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOG_OWNER" property="logOwner" jdbcType="VARCHAR" />
+    <result column="LOG_OWNERID" property="logOwnerid" jdbcType="DECIMAL" />
+    <result column="MASTER" property="master" jdbcType="VARCHAR" />
+    <result column="LOG_TABLE" property="logTable" jdbcType="VARCHAR" />
+    <result column="LOG_TRIGGER" property="logTrigger" jdbcType="VARCHAR" />
+    <result column="FLAG" property="flag" jdbcType="DECIMAL" />
+    <result column="YOUNGEST" property="youngest" jdbcType="DATE" />
+    <result column="OLDEST" property="oldest" jdbcType="DATE" />
+    <result column="OLDEST_PK" property="oldestPk" jdbcType="DATE" />
+    <result column="MTIME" property="mtime" jdbcType="DATE" />
+    <result column="ROWID_SNAPL" property="rowidSnapl" jdbcType="DECIMAL" />
+    <result column="PRIMKEY_SNAPL" property="primkeySnapl" jdbcType="DECIMAL" />
+    <result column="FILE_VER" property="fileVer" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ChnfQueriesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ChnfQueries" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="QUERYID" property="queryid" jdbcType="DECIMAL" />
+    <result column="QUERYFLAGS" property="queryflags" jdbcType="DECIMAL" />
+    <result column="SCN" property="scn" jdbcType="DECIMAL" />
+    <result column="USERID" property="userid" jdbcType="DECIMAL" />
+    <result column="SELECTLIST" property="selectlist" jdbcType="CLOB" />
+    <result column="FROMLIST" property="fromlist" jdbcType="VARBINARY" />
+    <result column="WHERECLAUSE" property="whereclause" jdbcType="CLOB" />
+    <result column="HASHVAL" property="hashval" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

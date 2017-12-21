@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtMetricCategoriesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtMetricCategories" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="TYPE_VERSION" property="typeVersion" jdbcType="VARCHAR" />
+    <result column="METRIC_NAME" property="metricName" jdbcType="VARCHAR" />
+    <result column="METRIC_COLUMN" property="metricColumn" jdbcType="VARCHAR" />
+    <result column="METRIC_CLASS_NAME" property="metricClassName" jdbcType="VARCHAR" />
+    <result column="METRIC_CATEGORY_NAME" property="metricCategoryName" jdbcType="VARCHAR" />
+    <result column="METRIC_CATEGORY_NLSID" property="metricCategoryNlsid" jdbcType="VARCHAR" />
+    <result column="METRIC_GUID" property="metricGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

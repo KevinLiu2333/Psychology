@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaParallelExecuteChunksMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaParallelExecuteChunks" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CHUNK_ID" property="chunkId" jdbcType="DECIMAL" />
+    <result column="TASK_OWNER" property="taskOwner" jdbcType="VARCHAR" />
+    <result column="TASK_NAME" property="taskName" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="START_ROWID" property="startRowid" jdbcType="OTHER" />
+    <result column="END_ROWID" property="endRowid" jdbcType="OTHER" />
+    <result column="START_ID" property="startId" jdbcType="DECIMAL" />
+    <result column="END_ID" property="endId" jdbcType="DECIMAL" />
+    <result column="JOB_NAME" property="jobName" jdbcType="VARCHAR" />
+    <result column="START_TS" property="startTs" jdbcType="TIMESTAMP" />
+    <result column="END_TS" property="endTs" jdbcType="TIMESTAMP" />
+    <result column="ERROR_CODE" property="errorCode" jdbcType="DECIMAL" />
+    <result column="ERROR_MESSAGE" property="errorMessage" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

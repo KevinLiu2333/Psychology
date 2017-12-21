@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtNotifyRulesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtNotifyRules" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="RULE_NAME" property="ruleName" jdbcType="VARCHAR" />
+    <id column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="PUBLIC_RULE" property="publicRule" jdbcType="DECIMAL" />
+    <result column="REPEAT" property="repeat" jdbcType="DECIMAL" />
+    <result column="RULE_GUID" property="ruleGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

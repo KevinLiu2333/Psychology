@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserOpancillaryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserOpancillary" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="OPERATOR_NAME" property="operatorName" jdbcType="VARCHAR" />
+    <result column="BINDING#" property="binding" jdbcType="DECIMAL" />
+    <result column="PRIMOP_OWNER" property="primopOwner" jdbcType="VARCHAR" />
+    <result column="PRIMOP_NAME" property="primopName" jdbcType="VARCHAR" />
+    <result column="PRIMOP_BIND#" property="primopBind" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

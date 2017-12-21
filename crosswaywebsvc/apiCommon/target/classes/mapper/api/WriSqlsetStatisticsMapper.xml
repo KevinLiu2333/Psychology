@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriSqlsetStatisticsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriSqlsetStatistics" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="STMT_ID" property="stmtId" jdbcType="DECIMAL" />
+    <id column="PLAN_HASH_VALUE" property="planHashValue" jdbcType="DECIMAL" />
+    <result column="ELAPSED_TIME" property="elapsedTime" jdbcType="DECIMAL" />
+    <result column="ELAPSED_TIME_DELTA" property="elapsedTimeDelta" jdbcType="DECIMAL" />
+    <result column="CPU_TIME" property="cpuTime" jdbcType="DECIMAL" />
+    <result column="CPU_TIME_DELTA" property="cpuTimeDelta" jdbcType="DECIMAL" />
+    <result column="BUFFER_GETS" property="bufferGets" jdbcType="DECIMAL" />
+    <result column="BUFFER_GETS_DELTA" property="bufferGetsDelta" jdbcType="DECIMAL" />
+    <result column="DISK_READS" property="diskReads" jdbcType="DECIMAL" />
+    <result column="DISK_READS_DELTA" property="diskReadsDelta" jdbcType="DECIMAL" />
+    <result column="DIRECT_WRITES" property="directWrites" jdbcType="DECIMAL" />
+    <result column="DIRECT_WRITES_DELTA" property="directWritesDelta" jdbcType="DECIMAL" />
+    <result column="ROWS_PROCESSED" property="rowsProcessed" jdbcType="DECIMAL" />
+    <result column="ROWS_PROCESSED_DELTA" property="rowsProcessedDelta" jdbcType="DECIMAL" />
+    <result column="FETCHES" property="fetches" jdbcType="DECIMAL" />
+    <result column="FETCHES_DELTA" property="fetchesDelta" jdbcType="DECIMAL" />
+    <result column="EXECUTIONS" property="executions" jdbcType="DECIMAL" />
+    <result column="EXECUTIONS_DELTA" property="executionsDelta" jdbcType="DECIMAL" />
+    <result column="END_OF_FETCH_COUNT" property="endOfFetchCount" jdbcType="DECIMAL" />
+    <result column="OPTIMIZER_COST" property="optimizerCost" jdbcType="DECIMAL" />
+    <result column="FIRST_LOAD_TIME" property="firstLoadTime" jdbcType="VARCHAR" />
+    <result column="FIRST_LOAD_TIME_DELTA" property="firstLoadTimeDelta" jdbcType="VARCHAR" />
+    <result column="STAT_PERIOD" property="statPeriod" jdbcType="DECIMAL" />
+    <result column="ACTIVE_STAT_PERIOD" property="activeStatPeriod" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OrddcmCtLocatorpathsWrkMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OrddcmCtLocatorpathsWrk" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DOC_ID" property="docId" jdbcType="DECIMAL" />
+    <result column="PSID" property="psid" jdbcType="DECIMAL" />
+    <result column="LOCATOR_PATH" property="locatorPath" jdbcType="VARCHAR" />
+    <result column="HAS_MACRO_PARAM" property="hasMacroParam" jdbcType="DECIMAL" />
+    <result column="IS_COVERED" property="isCovered" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

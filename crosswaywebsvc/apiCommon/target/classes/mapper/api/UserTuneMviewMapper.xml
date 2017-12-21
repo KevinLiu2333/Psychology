@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserTuneMviewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserTuneMview" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TASK_NAME" property="taskName" jdbcType="VARCHAR" />
+    <result column="ACTION_ID" property="actionId" jdbcType="DECIMAL" />
+    <result column="SCRIPT_TYPE" property="scriptType" jdbcType="VARCHAR" />
+    <result column="STATEMENT" property="statement" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

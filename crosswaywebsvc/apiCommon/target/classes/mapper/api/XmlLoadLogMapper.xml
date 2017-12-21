@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.XmlLoadLogMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.XmlLoadLog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="XML_LOADID" property="xmlLoadid" jdbcType="DECIMAL" />
+    <id column="XML_RECORDID" property="xmlRecordid" jdbcType="DECIMAL" />
+    <result column="XML_DATE" property="xmlDate" jdbcType="DATE" />
+    <result column="XML_AW" property="xmlAw" jdbcType="VARCHAR" />
+    <result column="XML_MESSAGE" property="xmlMessage" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

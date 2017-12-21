@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtDbHdmMetricHelperMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtDbHdmMetricHelper" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <result column="COLLECTION_TIMESTAMP" property="collectionTimestamp" jdbcType="DATE" />
+    <result column="TASK_AVAILABLE" property="taskAvailable" jdbcType="DECIMAL" />
+    <result column="TASK_COUNT" property="taskCount" jdbcType="DECIMAL" />
+    <result column="REQUESTED_ANALYSIS" property="requestedAnalysis" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvBhMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvBh" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="FILE#" property="file" jdbcType="DECIMAL" />
+    <result column="BLOCK#" property="block" jdbcType="DECIMAL" />
+    <result column="CLASS#" property="class" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="XNC" property="xnc" jdbcType="DECIMAL" />
+    <result column="FORCED_READS" property="forcedReads" jdbcType="DECIMAL" />
+    <result column="FORCED_WRITES" property="forcedWrites" jdbcType="DECIMAL" />
+    <result column="LOCK_ELEMENT_NAME" property="lockElementName" jdbcType="DECIMAL" />
+    <result column="LOCK_ELEMENT_CLASS" property="lockElementClass" jdbcType="DECIMAL" />
+    <result column="DIRTY" property="dirty" jdbcType="VARCHAR" />
+    <result column="TEMP" property="temp" jdbcType="VARCHAR" />
+    <result column="PING" property="ping" jdbcType="VARCHAR" />
+    <result column="STALE" property="stale" jdbcType="VARCHAR" />
+    <result column="DIRECT" property="direct" jdbcType="VARCHAR" />
+    <result column="NEW" property="new" jdbcType="CHAR" />
+    <result column="OBJD" property="objd" jdbcType="DECIMAL" />
+    <result column="TS#" property="ts" jdbcType="DECIMAL" />
+    <result column="LOBID" property="lobid" jdbcType="DECIMAL" />
+    <result column="CACHEHINT" property="cachehint" jdbcType="DECIMAL" />
+    <result column="LOCK_ELEMENT_ADDR" property="lockElementAddr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

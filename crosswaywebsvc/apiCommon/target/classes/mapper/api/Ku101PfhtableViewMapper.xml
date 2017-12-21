@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Ku101PfhtableViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Ku101PfhtableView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="SCHEMA_OBJ" property="schemaObj" jdbcType="OTHER" />
+    <result column="BASE_OBJ" property="baseObj" jdbcType="OTHER" />
+    <result column="ANC_OBJ" property="ancObj" jdbcType="OTHER" />
+    <result column="PARENT_OBJ" property="parentObj" jdbcType="OTHER" />
+    <result column="STORAGE" property="storage" jdbcType="OTHER" />
+    <result column="TS_NAME" property="tsName" jdbcType="VARCHAR" />
+    <result column="BLOCKSIZE" property="blocksize" jdbcType="DECIMAL" />
+    <result column="DATAOBJ_NUM" property="dataobjNum" jdbcType="DECIMAL" />
+    <result column="BOBJ_NUM" property="bobjNum" jdbcType="DECIMAL" />
+    <result column="TAB_NUM" property="tabNum" jdbcType="DECIMAL" />
+    <result column="COLS" property="cols" jdbcType="DECIMAL" />
+    <result column="CLUCOLS" property="clucols" jdbcType="DECIMAL" />
+    <result column="TABCLUSTER" property="tabcluster" jdbcType="OTHER" />
+    <result column="FBA" property="fba" jdbcType="OTHER" />
+    <result column="PCT_FREE" property="pctFree" jdbcType="DECIMAL" />
+    <result column="PCT_USED" property="pctUsed" jdbcType="DECIMAL" />
+    <result column="INITRANS" property="initrans" jdbcType="DECIMAL" />
+    <result column="MAXTRANS" property="maxtrans" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="AUDIT_VAL" property="auditVal" jdbcType="VARCHAR" />
+    <result column="ROWCNT" property="rowcnt" jdbcType="DECIMAL" />
+    <result column="BLKCNT" property="blkcnt" jdbcType="DECIMAL" />
+    <result column="EMPCNT" property="empcnt" jdbcType="DECIMAL" />
+    <result column="AVGSPC" property="avgspc" jdbcType="DECIMAL" />
+    <result column="CHNCNT" property="chncnt" jdbcType="DECIMAL" />
+    <result column="AVGRLN" property="avgrln" jdbcType="DECIMAL" />
+    <result column="AVGSPC_FLB" property="avgspcFlb" jdbcType="DECIMAL" />
+    <result column="FLBCNT" property="flbcnt" jdbcType="DECIMAL" />
+    <result column="ANALYZETIME" property="analyzetime" jdbcType="DATE" />
+    <result column="SAMPLESIZE" property="samplesize" jdbcType="DECIMAL" />
+    <result column="DEGREE" property="degree" jdbcType="DECIMAL" />
+    <result column="INSTANCES" property="instances" jdbcType="DECIMAL" />
+    <result column="INTCOLS" property="intcols" jdbcType="DECIMAL" />
+    <result column="KERNELCOLS" property="kernelcols" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="PROPERTY2" property="property2" jdbcType="DECIMAL" />
+    <result column="XMLSCHEMACOLS" property="xmlschemacols" jdbcType="CHAR" />
+    <result column="XMLCOLSET" property="xmlcolset" jdbcType="OTHER" />
+    <result column="TRIGFLAG" property="trigflag" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+    <result column="SPARE4" property="spare4" jdbcType="VARCHAR" />
+    <result column="SPARE5" property="spare5" jdbcType="VARCHAR" />
+    <result column="SPARE6" property="spare6" jdbcType="DATE" />
+    <result column="ENCALG" property="encalg" jdbcType="DECIMAL" />
+    <result column="INTALG" property="intalg" jdbcType="DECIMAL" />
+    <result column="COL_LIST" property="colList" jdbcType="OTHER" />
+    <result column="NT" property="nt" jdbcType="OTHER" />
+    <result column="CON0_LIST" property="con0List" jdbcType="OTHER" />
+    <result column="CON1_LIST" property="con1List" jdbcType="OTHER" />
+    <result column="CON2_LIST" property="con2List" jdbcType="OTHER" />
+    <result column="PKREF_LIST" property="pkrefList" jdbcType="OTHER" />
+    <result column="PART_OBJ" property="partObj" jdbcType="OTHER" />
+    <result column="EXTTAB" property="exttab" jdbcType="OTHER" />
+    <result column="CUBETAB" property="cubetab" jdbcType="OTHER" />
+    <result column="REFPAR_LEVEL" property="refparLevel" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

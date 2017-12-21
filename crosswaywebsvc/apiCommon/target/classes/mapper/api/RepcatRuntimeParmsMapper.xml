@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RepcatRuntimeParmsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RepcatRuntimeParms" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RUNTIME_PARM_ID" property="runtimeParmId" jdbcType="DECIMAL" />
+    <result column="PARAMETER_NAME" property="parameterName" jdbcType="VARCHAR" />
+    <result column="PARM_VALUE" property="parmValue" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaWorkloadReplayFilterSetMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaWorkloadReplayFilterSet" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CAPTURE_ID" property="captureId" jdbcType="DECIMAL" />
+    <result column="SET_NAME" property="setName" jdbcType="VARCHAR" />
+    <result column="FILTER_NAME" property="filterName" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE" property="attribute" jdbcType="VARCHAR" />
+    <result column="VALUE" property="value" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

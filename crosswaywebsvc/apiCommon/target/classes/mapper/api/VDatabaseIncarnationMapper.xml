@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VDatabaseIncarnationMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VDatabaseIncarnation" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INCARNATION#" property="incarnation" jdbcType="DECIMAL" />
+    <result column="RESETLOGS_CHANGE#" property="resetlogsChange" jdbcType="DECIMAL" />
+    <result column="RESETLOGS_TIME" property="resetlogsTime" jdbcType="DATE" />
+    <result column="PRIOR_RESETLOGS_CHANGE#" property="priorResetlogsChange" jdbcType="DECIMAL" />
+    <result column="PRIOR_RESETLOGS_TIME" property="priorResetlogsTime" jdbcType="DATE" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="RESETLOGS_ID" property="resetlogsId" jdbcType="DECIMAL" />
+    <result column="PRIOR_INCARNATION#" property="priorIncarnation" jdbcType="DECIMAL" />
+    <result column="FLASHBACK_DATABASE_ALLOWED" property="flashbackDatabaseAllowed" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

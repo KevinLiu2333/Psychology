@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexUiDefaultsLovDataMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexUiDefaultsLovData" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SCHEMA" property="schema" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="LOV_DISP_SEQUENCE" property="lovDispSequence" jdbcType="DECIMAL" />
+    <result column="LOV_DISP_VALUE" property="lovDispValue" jdbcType="VARCHAR" />
+    <result column="LOV_RETURN_VALUE" property="lovReturnValue" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+  </resultMap>
+</mapper>

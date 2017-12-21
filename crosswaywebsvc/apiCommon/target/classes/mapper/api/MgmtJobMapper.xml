@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtJobMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtJob" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="JOB_ID" property="jobId" jdbcType="VARBINARY" />
+    <result column="JOB_NAME" property="jobName" jdbcType="VARCHAR" />
+    <result column="JOB_OWNER" property="jobOwner" jdbcType="VARCHAR" />
+    <result column="JOB_DESCRIPTION" property="jobDescription" jdbcType="VARCHAR" />
+    <result column="JOB_TYPE" property="jobType" jdbcType="VARCHAR" />
+    <result column="JOB_TYPE_MAJOR_VERSION" property="jobTypeMajorVersion" jdbcType="DECIMAL" />
+    <result column="NESTED" property="nested" jdbcType="DECIMAL" />
+    <result column="IS_LIBRARY" property="isLibrary" jdbcType="DECIMAL" />
+    <result column="EXECUTION_TIMEOUT" property="executionTimeout" jdbcType="DECIMAL" />
+    <result column="MAX_TARGET_LIST_INDEX" property="maxTargetListIndex" jdbcType="DECIMAL" />
+    <result column="SYSTEM_JOB" property="systemJob" jdbcType="DECIMAL" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="JOB_STATUS" property="jobStatus" jdbcType="DECIMAL" />
+    <result column="EXPIRED" property="expired" jdbcType="DECIMAL" />
+    <result column="IS_CORRECTIVE_ACTION" property="isCorrectiveAction" jdbcType="DECIMAL" />
+    <result column="RESTARTABLE" property="restartable" jdbcType="DECIMAL" />
+    <result column="BROKEN" property="broken" jdbcType="DECIMAL" />
+    <result column="BROKEN_REASON" property="brokenReason" jdbcType="DECIMAL" />
+    <result column="NESTED_JOB_TYPE_ID" property="nestedJobTypeId" jdbcType="VARBINARY" />
+    <result column="PARENT_JOB_ID" property="parentJobId" jdbcType="VARBINARY" />
+    <result column="SCHEDULE_ID" property="scheduleId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

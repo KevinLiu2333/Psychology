@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SumjoinMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Sumjoin" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SUMOBJ#" property="sumobj" jdbcType="DECIMAL" />
+    <result column="TAB1OBJ#" property="tab1obj" jdbcType="DECIMAL" />
+    <result column="TAB1COL#" property="tab1col" jdbcType="DECIMAL" />
+    <result column="TAB2OBJ#" property="tab2obj" jdbcType="DECIMAL" />
+    <result column="TAB2COL#" property="tab2col" jdbcType="DECIMAL" />
+    <result column="QBCID" property="qbcid" jdbcType="DECIMAL" />
+    <result column="JOINOP" property="joinop" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="VARCHAR" />
+    <result column="SPARE4" property="spare4" jdbcType="DATE" />
+    <result column="INLINE1#" property="inline1" jdbcType="DECIMAL" />
+    <result column="INLINE2#" property="inline2" jdbcType="DECIMAL" />
+    <result column="INSTANCE1#" property="instance1" jdbcType="DECIMAL" />
+    <result column="INSTANCE2#" property="instance2" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

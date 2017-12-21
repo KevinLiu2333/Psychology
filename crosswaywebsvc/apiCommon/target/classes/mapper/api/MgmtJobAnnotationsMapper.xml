@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtJobAnnotationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtJobAnnotations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="JOB_NAME" property="jobName" jdbcType="VARCHAR" />
+    <result column="JOB_OWNER" property="jobOwner" jdbcType="VARCHAR" />
+    <result column="JOB_STATUS" property="jobStatus" jdbcType="VARCHAR" />
+    <result column="OCCURRENCE_TIMESTAMP" property="occurrenceTimestamp" jdbcType="DATE" />
+    <result column="ANNOTATION_MESSAGE" property="annotationMessage" jdbcType="VARCHAR" />
+    <result column="ANNOTATION_TIMESTAMP" property="annotationTimestamp" jdbcType="DATE" />
+    <result column="ANNOTATED_BY" property="annotatedBy" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

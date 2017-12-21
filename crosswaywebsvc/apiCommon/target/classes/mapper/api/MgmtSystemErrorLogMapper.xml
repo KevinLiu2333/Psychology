@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtSystemErrorLogMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtSystemErrorLog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="MODULE_NAME" property="moduleName" jdbcType="VARCHAR" />
+    <result column="OCCUR_DATE" property="occurDate" jdbcType="DATE" />
+    <result column="ERROR_CODE" property="errorCode" jdbcType="DECIMAL" />
+    <result column="LOG_LEVEL" property="logLevel" jdbcType="VARCHAR" />
+    <result column="ERROR_MSG" property="errorMsg" jdbcType="VARCHAR" />
+    <result column="FACILITY" property="facility" jdbcType="VARCHAR" />
+    <result column="CLIENT_DATA" property="clientData" jdbcType="VARCHAR" />
+    <result column="HOST_URL" property="hostUrl" jdbcType="VARCHAR" />
+    <result column="EMD_URL" property="emdUrl" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

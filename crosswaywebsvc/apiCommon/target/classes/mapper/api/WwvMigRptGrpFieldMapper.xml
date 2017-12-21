@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigRptGrpFieldMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigRptGrpField" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="GROUP_ID" property="groupId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="SOURCE" property="source" jdbcType="VARCHAR" />
+    <result column="PAGENUMBER" property="pagenumber" jdbcType="VARCHAR" />
+    <result column="MINWIDOWLINES" property="minwidowlines" jdbcType="VARCHAR" />
+    <result column="LABEL" property="label" jdbcType="VARCHAR" />
+    <result column="DISPLAY" property="display" jdbcType="VARCHAR" />
+    <result column="WIDTH" property="width" jdbcType="VARCHAR" />
+    <result column="VISIBLE" property="visible" jdbcType="VARCHAR" />
+    <result column="HYPERLINK" property="hyperlink" jdbcType="VARCHAR" />
+    <result column="FORMATMASK" property="formatmask" jdbcType="VARCHAR" />
+    <result column="NULLVALUE" property="nullvalue" jdbcType="VARCHAR" />
+    <result column="SPACING" property="spacing" jdbcType="VARCHAR" />
+    <result column="CURRENCY" property="currency" jdbcType="VARCHAR" />
+    <result column="TSEP" property="tsep" jdbcType="VARCHAR" />
+    <result column="LINKDEST" property="linkdest" jdbcType="VARCHAR" />
+    <result column="BREAKORDER" property="breakorder" jdbcType="VARCHAR" />
+    <result column="FONT" property="font" jdbcType="VARCHAR" />
+    <result column="FONTSIZE" property="fontsize" jdbcType="VARCHAR" />
+    <result column="FONTSTYLE" property="fontstyle" jdbcType="VARCHAR" />
+    <result column="FONTEFFECT" property="fonteffect" jdbcType="VARCHAR" />
+    <result column="LINECOLOR" property="linecolor" jdbcType="VARCHAR" />
+    <result column="FILLCOLOR" property="fillcolor" jdbcType="VARCHAR" />
+    <result column="TEXTCOLOR" property="textcolor" jdbcType="VARCHAR" />
+    <result column="ALIGNMENT" property="alignment" jdbcType="VARCHAR" />
+    <result column="FORMATTRIGGER" property="formattrigger" jdbcType="VARCHAR" />
+    <result column="TEMPLATESECTION" property="templatesection" jdbcType="VARCHAR" />
+    <result column="SELECT_FOR_APP" property="selectForApp" jdbcType="VARCHAR" />
+    <result column="APPLICABLE" property="applicable" jdbcType="VARCHAR" />
+    <result column="COMPLETE" property="complete" jdbcType="VARCHAR" />
+    <result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+    <result column="ASSIGNEE" property="assignee" jdbcType="VARCHAR" />
+    <result column="NOTES" property="notes" jdbcType="VARCHAR" />
+    <result column="TAGS" property="tags" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

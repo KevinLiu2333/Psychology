@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtEcmMdAllTblColumnsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtEcmMdAllTblColumns" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="SNAPSHOT_TYPE" property="snapshotType" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="UI_NAME" property="uiName" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="TYPE_FORMAT" property="typeFormat" jdbcType="VARCHAR" />
+    <result column="UI_ON" property="uiOn" jdbcType="VARCHAR" />
+    <result column="COMPARE_ON" property="compareOn" jdbcType="VARCHAR" />
+    <result column="COMPARE_UI_ON" property="compareUiOn" jdbcType="VARCHAR" />
+    <result column="HISTORY_ON" property="historyOn" jdbcType="VARCHAR" />
+    <result column="HISTORY_UI_ON" property="historyUiOn" jdbcType="VARCHAR" />
+    <result column="IS_KEY" property="isKey" jdbcType="VARCHAR" />
+    <result column="IS_CONTEXT" property="isContext" jdbcType="VARCHAR" />
+    <result column="IS_SUMMARY" property="isSummary" jdbcType="VARCHAR" />
+    <result column="IS_CHILD_LINK" property="isChildLink" jdbcType="VARCHAR" />
+    <result column="LINK_COLUMN_NAME" property="linkColumnName" jdbcType="VARCHAR" />
+    <result column="COL_ORDER" property="colOrder" jdbcType="DECIMAL" />
+    <result column="SOURCE_TABLE_NAME" property="sourceTableName" jdbcType="VARCHAR" />
+    <result column="METADATA_ID" property="metadataId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

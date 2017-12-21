@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuTempSubpartViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuTempSubpartView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="TS_NUM" property="tsNum" jdbcType="DECIMAL" />
+    <result column="POBJ_NUM" property="pobjNum" jdbcType="DECIMAL" />
+    <result column="SUBPARTNO" property="subpartno" jdbcType="DECIMAL" />
+    <result column="BHIBOUNDVAL" property="bhiboundval" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

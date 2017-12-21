@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ImpdpStatsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ImpdpStats" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="STATID" property="statid" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="CHAR" />
+    <result column="VERSION" property="version" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="C1" property="c1" jdbcType="VARCHAR" />
+    <result column="C2" property="c2" jdbcType="VARCHAR" />
+    <result column="C3" property="c3" jdbcType="VARCHAR" />
+    <result column="C4" property="c4" jdbcType="VARCHAR" />
+    <result column="C5" property="c5" jdbcType="VARCHAR" />
+    <result column="N1" property="n1" jdbcType="DECIMAL" />
+    <result column="N2" property="n2" jdbcType="DECIMAL" />
+    <result column="N3" property="n3" jdbcType="DECIMAL" />
+    <result column="N4" property="n4" jdbcType="DECIMAL" />
+    <result column="N5" property="n5" jdbcType="DECIMAL" />
+    <result column="N6" property="n6" jdbcType="DECIMAL" />
+    <result column="N7" property="n7" jdbcType="DECIMAL" />
+    <result column="N8" property="n8" jdbcType="DECIMAL" />
+    <result column="N9" property="n9" jdbcType="DECIMAL" />
+    <result column="N10" property="n10" jdbcType="DECIMAL" />
+    <result column="N11" property="n11" jdbcType="DECIMAL" />
+    <result column="N12" property="n12" jdbcType="DECIMAL" />
+    <result column="D1" property="d1" jdbcType="DATE" />
+    <result column="CH1" property="ch1" jdbcType="VARCHAR" />
+    <result column="R1" property="r1" jdbcType="VARBINARY" />
+    <result column="R2" property="r2" jdbcType="VARBINARY" />
+    <result column="CL1" property="cl1" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

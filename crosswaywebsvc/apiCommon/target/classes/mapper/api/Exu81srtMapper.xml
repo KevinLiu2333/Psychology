@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu81srtMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu81srt" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SOWNER" property="sowner" jdbcType="VARCHAR" />
+    <result column="SOWNERID" property="sownerid" jdbcType="DECIMAL" />
+    <result column="VNAME" property="vname" jdbcType="VARCHAR" />
+    <result column="MASTER_OWNER" property="masterOwner" jdbcType="VARCHAR" />
+    <result column="MASTER" property="master" jdbcType="VARCHAR" />
+    <result column="TABNUM" property="tabnum" jdbcType="DECIMAL" />
+    <result column="REFRESH_TIME" property="refreshTime" jdbcType="DATE" />
+    <result column="MASTER_FLAG" property="masterFlag" jdbcType="DECIMAL" />
+    <result column="MASTER_OBJNUM" property="masterObjnum" jdbcType="DECIMAL" />
+    <result column="LOADERTIME" property="loadertime" jdbcType="DATE" />
+    <result column="INSTSITE" property="instsite" jdbcType="DECIMAL" />
+    <result column="LASTSUCCESS" property="lastsuccess" jdbcType="DATE" />
+    <result column="FCMASKVEC" property="fcmaskvec" jdbcType="VARCHAR" />
+    <result column="EJMASKVEC" property="ejmaskvec" jdbcType="VARCHAR" />
+    <result column="REFSCN" property="refscn" jdbcType="DECIMAL" />
+    <result column="SUB_HANDLE" property="subHandle" jdbcType="DECIMAL" />
+    <result column="CHANGE_VIEW" property="changeView" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

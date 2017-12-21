@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VDiagAlertExtMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VDiagAlertExt" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDX" property="indx" jdbcType="DECIMAL" />
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="ADR_PATH_IDX" property="adrPathIdx" jdbcType="VARCHAR" />
+    <result column="ADR_HOME" property="adrHome" jdbcType="VARCHAR" />
+    <result column="ORIGINATING_TIMESTAMP" property="originatingTimestamp" jdbcType="OTHER" />
+    <result column="NORMALIZED_TIMESTAMP" property="normalizedTimestamp" jdbcType="OTHER" />
+    <result column="ORGANIZATION_ID" property="organizationId" jdbcType="VARCHAR" />
+    <result column="COMPONENT_ID" property="componentId" jdbcType="VARCHAR" />
+    <result column="HOST_ID" property="hostId" jdbcType="VARCHAR" />
+    <result column="HOST_ADDRESS" property="hostAddress" jdbcType="VARCHAR" />
+    <result column="MESSAGE_TYPE" property="messageType" jdbcType="DECIMAL" />
+    <result column="MESSAGE_LEVEL" property="messageLevel" jdbcType="DECIMAL" />
+    <result column="MESSAGE_ID" property="messageId" jdbcType="VARCHAR" />
+    <result column="MESSAGE_GROUP" property="messageGroup" jdbcType="VARCHAR" />
+    <result column="CLIENT_ID" property="clientId" jdbcType="VARCHAR" />
+    <result column="MODULE_ID" property="moduleId" jdbcType="VARCHAR" />
+    <result column="PROCESS_ID" property="processId" jdbcType="VARCHAR" />
+    <result column="THREAD_ID" property="threadId" jdbcType="VARCHAR" />
+    <result column="USER_ID" property="userId" jdbcType="VARCHAR" />
+    <result column="INSTANCE_ID" property="instanceId" jdbcType="VARCHAR" />
+    <result column="DETAILED_LOCATION" property="detailedLocation" jdbcType="VARCHAR" />
+    <result column="UPSTREAM_COMP_ID" property="upstreamCompId" jdbcType="VARCHAR" />
+    <result column="DOWNSTREAM_COMP_ID" property="downstreamCompId" jdbcType="VARCHAR" />
+    <result column="EXECUTION_CONTEXT_ID" property="executionContextId" jdbcType="VARCHAR" />
+    <result column="EXECUTION_CONTEXT_SEQUENCE" property="executionContextSequence" jdbcType="DECIMAL" />
+    <result column="ERROR_INSTANCE_ID" property="errorInstanceId" jdbcType="DECIMAL" />
+    <result column="ERROR_INSTANCE_SEQUENCE" property="errorInstanceSequence" jdbcType="DECIMAL" />
+    <result column="MESSAGE_TEXT" property="messageText" jdbcType="VARCHAR" />
+    <result column="MESSAGE_ARGUMENTS" property="messageArguments" jdbcType="VARCHAR" />
+    <result column="SUPPLEMENTAL_ATTRIBUTES" property="supplementalAttributes" jdbcType="VARCHAR" />
+    <result column="SUPPLEMENTAL_DETAILS" property="supplementalDetails" jdbcType="VARCHAR" />
+    <result column="PARTITION" property="partition" jdbcType="DECIMAL" />
+    <result column="RECORD_ID" property="recordId" jdbcType="DECIMAL" />
+    <result column="FILENAME" property="filename" jdbcType="VARCHAR" />
+    <result column="PROBLEM_KEY" property="problemKey" jdbcType="VARCHAR" />
+    <result column="VERSION" property="version" jdbcType="DECIMAL" />
+    <result column="ADDR" property="addr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowAppBuildPrefMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowAppBuildPref" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="DEFAULT_PARSING_SCHEMA" property="defaultParsingSchema" jdbcType="VARCHAR" />
+    <result column="DEFAULT_AUTHENTICATION_SCHEME" property="defaultAuthenticationScheme" jdbcType="VARCHAR" />
+    <result column="DEFAULT_APPLICATION_THEME" property="defaultApplicationTheme" jdbcType="DECIMAL" />
+    <result column="DEFAULT_TABS" property="defaultTabs" jdbcType="VARCHAR" />
+    <result column="DEFAULT_PROXY_SERVER" property="defaultProxyServer" jdbcType="VARCHAR" />
+    <result column="DEFAULT_LANGUAGE" property="defaultLanguage" jdbcType="VARCHAR" />
+    <result column="DEFAULT_LANGUAGE_DERIVED" property="defaultLanguageDerived" jdbcType="VARCHAR" />
+    <result column="DATE_FORMAT" property="dateFormat" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="UPDATED_ON" property="updatedOn" jdbcType="DATE" />
+    <result column="UPDATED_BY" property="updatedBy" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoGrMosaic1Mapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoGrMosaic1" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RID" property="rid" jdbcType="OTHER" />
+    <result column="ULTR" property="ultr" jdbcType="DECIMAL" />
+    <result column="ULTC" property="ultc" jdbcType="DECIMAL" />
+    <result column="RSIZE" property="rsize" jdbcType="DECIMAL" />
+    <result column="CSIZE" property="csize" jdbcType="DECIMAL" />
+    <result column="R0" property="r0" jdbcType="DECIMAL" />
+    <result column="R1" property="r1" jdbcType="DECIMAL" />
+    <result column="C0" property="c0" jdbcType="DECIMAL" />
+    <result column="C1" property="c1" jdbcType="DECIMAL" />
+    <result column="B0" property="b0" jdbcType="DECIMAL" />
+    <result column="B1" property="b1" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>ptsjzx app</display-name>
+
+	<!--<filter>-->
+		<!--<filter-name>DddlClient</filter-name>-->
+		<!--<filter-class>com.wonders.dddl.DddlClient</filter-class>-->
+		<!--<init-param>-->
+			<!--<param-name>com.beyondbit.netsso.loginUrl</param-name>-->
+			<!--<param-value>http://sso.ptq.sh.gov.cn/signon.aspx</param-value>-->
+		<!--</init-param>-->
+		<!--<init-param>-->
+			<!--<param-name>com.beyondbit.netsso.logoutUrl</param-name>-->
+			<!--<param-value>http://sso.ptq.sh.gov.cn/signout.aspx</param-value>-->
+		<!--</init-param>-->
+		<!--<init-param>-->
+			<!--<param-name>com.beyondbit.netsso.validateUrl</param-name>-->
+			<!--<param-value>http://sso.ptq.sh.gov.cn/webservice.asmx</param-value>-->
+		<!--</init-param>-->
+		<!--<init-param>-->
+			<!--<param-name>com.beyondbit.netsso.renew</param-name>-->
+			<!--<param-value>false</param-value>-->
+		<!--</init-param>-->
+		<!--<init-param>-->
+			<!--<param-name>com.beyondbit.netsso.excludesUrl</param-name>-->
+			<!--<param-value>/services,/login,/login/jquery.min.js,/login/jslides.js,/login/style1.css,/login/login_box.png,/login/login_button_hover.png,/login/login_input.png,/login/login_button.png,/toIndex</param-value>-->
+		<!--</init-param>-->
+		<!--<init-param>-->
+			<!--<param-name>com.beyondbit.netsso.client.tomcat.uriencoding</param-name>-->
+			<!--<param-value />-->
+		<!--</init-param>-->
+		<!--<init-param>-->
+			<!--<param-name>com.beyondbit.netsso.client.pagencoding</param-name>-->
+			<!--<param-value />-->
+		<!--</init-param>-->
+	<!--</filter>-->
+
+	<!--<filter-mapping>-->
+		<!--<filter-name>DddlClient</filter-name>-->
+		<!--<url-pattern>/*</url-pattern>-->
+	<!--</filter-mapping>-->
+
+	<filter>
+		<filter-name>nutz</filter-name>
+		<filter-class>org.nutz.mvc.NutFilter</filter-class>
+		<init-param>
+			<param-name>modules</param-name>
+			<param-value>com.wonders.MainModule</param-value>
+		</init-param>
+		<init-param>
+			<param-name>ignore</param-name>
+			<param-value>^(.+[.])(jsp|png|gif|jpg|js|css|jspx|jpeg|html|xml|htm|doc|docx)$</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>nutz</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>AxisServlet</servlet-name>
+		<servlet-class>org.apache.axis.transport.http.AxisServlet</servlet-class>
+		<load-on-startup>15</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AxisServlet</servlet-name>
+		<url-pattern>/services/*</url-pattern>
+	</servlet-mapping>
+		<error-page>
+    	<error-code>404</error-code>
+    	<location>/404.jsp</location>
+	</error-page>
+	<error-page>
+    	<error-code>500</error-code>
+    	<location>/500.jsp</location>
+	</error-page>
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+	<servlet>  
+    <servlet-name>AuthImageServlet</servlet-name>  
+    <servlet-class>com.wonders.tiles.extend.setup.AuthImageServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>AuthImageServlet</servlet-name>  
+    <url-pattern>/servlet/AuthImageServlet</url-pattern>  
+  </servlet-mapping>  
+</web-app>

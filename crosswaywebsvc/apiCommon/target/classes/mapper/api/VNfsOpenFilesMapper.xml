@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VNfsOpenFilesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VNfsOpenFiles" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CLIENTID" property="clientid" jdbcType="DECIMAL" />
+    <result column="OPENOWNEROPAQUE" property="openowneropaque" jdbcType="VARCHAR" />
+    <result column="OPENSEQUENCEID" property="opensequenceid" jdbcType="DECIMAL" />
+    <result column="OPENREAD" property="openread" jdbcType="VARCHAR" />
+    <result column="OPENWRITE" property="openwrite" jdbcType="VARCHAR" />
+    <result column="SHAREACCESS" property="shareaccess" jdbcType="VARCHAR" />
+    <result column="SHAREDENY" property="sharedeny" jdbcType="VARCHAR" />
+    <result column="CONFIRMED" property="confirmed" jdbcType="VARCHAR" />
+    <result column="OPENSTATEID" property="openstateid" jdbcType="VARBINARY" />
+    <result column="FILEHANDLE" property="filehandle" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

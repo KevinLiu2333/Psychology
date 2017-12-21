@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCorrectiveActionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCorrectiveAction" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="JOB_ID" property="jobId" jdbcType="VARBINARY" />
+    <result column="CA_SCOPE" property="caScope" jdbcType="DECIMAL" />
+    <result column="CA_REFERENCE_COUNT" property="caReferenceCount" jdbcType="DECIMAL" />
+    <result column="CA_TARGET_GUID" property="caTargetGuid" jdbcType="VARBINARY" />
+    <result column="CA_TEMPLATE_GUID" property="caTemplateGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

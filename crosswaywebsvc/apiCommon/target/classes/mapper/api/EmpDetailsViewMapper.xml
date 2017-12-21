@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.EmpDetailsViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.EmpDetailsView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="EMPLOYEE_ID" property="employeeId" jdbcType="DECIMAL" />
+    <result column="JOB_ID" property="jobId" jdbcType="VARCHAR" />
+    <result column="MANAGER_ID" property="managerId" jdbcType="DECIMAL" />
+    <result column="DEPARTMENT_ID" property="departmentId" jdbcType="DECIMAL" />
+    <result column="LOCATION_ID" property="locationId" jdbcType="DECIMAL" />
+    <result column="COUNTRY_ID" property="countryId" jdbcType="CHAR" />
+    <result column="FIRST_NAME" property="firstName" jdbcType="VARCHAR" />
+    <result column="LAST_NAME" property="lastName" jdbcType="VARCHAR" />
+    <result column="SALARY" property="salary" jdbcType="DECIMAL" />
+    <result column="COMMISSION_PCT" property="commissionPct" jdbcType="DECIMAL" />
+    <result column="DEPARTMENT_NAME" property="departmentName" jdbcType="VARCHAR" />
+    <result column="JOB_TITLE" property="jobTitle" jdbcType="VARCHAR" />
+    <result column="CITY" property="city" jdbcType="VARCHAR" />
+    <result column="STATE_PROVINCE" property="stateProvince" jdbcType="VARCHAR" />
+    <result column="COUNTRY_NAME" property="countryName" jdbcType="VARCHAR" />
+    <result column="REGION_NAME" property="regionName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

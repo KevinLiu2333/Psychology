@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowSwResultsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowSwResults" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FILE_ID" property="fileId" jdbcType="DECIMAL" />
+    <result column="JOB_ID" property="jobId" jdbcType="DECIMAL" />
+    <result column="RUN_BY" property="runBy" jdbcType="VARCHAR" />
+    <result column="RUN_AS" property="runAs" jdbcType="VARCHAR" />
+    <result column="STARTED" property="started" jdbcType="DATE" />
+    <result column="START_TIME" property="startTime" jdbcType="DECIMAL" />
+    <result column="ENDED" property="ended" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="RUN_COMMENTS" property="runComments" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

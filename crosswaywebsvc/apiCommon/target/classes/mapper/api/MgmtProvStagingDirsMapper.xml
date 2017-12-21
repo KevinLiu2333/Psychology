@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtProvStagingDirsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtProvStagingDirs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="STAGE_GUID" property="stageGuid" jdbcType="VARBINARY" />
+    <result column="STAGE_SERVER_HOSTNAME" property="stageServerHostname" jdbcType="VARCHAR" />
+    <result column="NFS_EXPOSED_DIR" property="nfsExposedDir" jdbcType="VARCHAR" />
+    <result column="BASE_URL" property="baseUrl" jdbcType="VARCHAR" />
+    <result column="SIZE_LIMIT" property="sizeLimit" jdbcType="FLOAT" />
+    <result column="CURRENT_SIZE" property="currentSize" jdbcType="FLOAT" />
+    <result column="LAST_MODIFIED_TIME" property="lastModifiedTime" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

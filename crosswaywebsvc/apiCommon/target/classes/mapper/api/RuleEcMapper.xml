@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RuleEcMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RuleEc" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="EVAL_FUNC" property="evalFunc" jdbcType="VARCHAR" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="EC_COMMENT" property="ecComment" jdbcType="VARCHAR" />
+    <result column="NUM_TABS" property="numTabs" jdbcType="DECIMAL" />
+    <result column="NUM_VARS" property="numVars" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

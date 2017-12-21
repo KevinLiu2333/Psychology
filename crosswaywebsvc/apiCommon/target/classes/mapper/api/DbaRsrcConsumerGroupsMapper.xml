@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaRsrcConsumerGroupsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaRsrcConsumerGroups" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CONSUMER_GROUP_ID" property="consumerGroupId" jdbcType="DECIMAL" />
+    <result column="CONSUMER_GROUP" property="consumerGroup" jdbcType="VARCHAR" />
+    <result column="CPU_METHOD" property="cpuMethod" jdbcType="VARCHAR" />
+    <result column="MGMT_METHOD" property="mgmtMethod" jdbcType="VARCHAR" />
+    <result column="INTERNAL_USE" property="internalUse" jdbcType="VARCHAR" />
+    <result column="COMMENTS" property="comments" jdbcType="VARCHAR" />
+    <result column="CATEGORY" property="category" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="MANDATORY" property="mandatory" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

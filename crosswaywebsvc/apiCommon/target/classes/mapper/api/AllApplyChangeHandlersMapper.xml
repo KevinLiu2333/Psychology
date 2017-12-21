@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllApplyChangeHandlersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllApplyChangeHandlers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CHANGE_TABLE_OWNER" property="changeTableOwner" jdbcType="VARCHAR" />
+    <result column="CHANGE_TABLE_NAME" property="changeTableName" jdbcType="VARCHAR" />
+    <result column="SOURCE_TABLE_OWNER" property="sourceTableOwner" jdbcType="VARCHAR" />
+    <result column="SOURCE_TABLE_NAME" property="sourceTableName" jdbcType="VARCHAR" />
+    <result column="HANDLER_NAME" property="handlerName" jdbcType="VARCHAR" />
+    <result column="CAPTURE_VALUES" property="captureValues" jdbcType="VARCHAR" />
+    <result column="APPLY_NAME" property="applyName" jdbcType="VARCHAR" />
+    <result column="OPERATION_NAME" property="operationName" jdbcType="VARCHAR" />
+    <result column="CREATION_TIME" property="creationTime" jdbcType="TIMESTAMP" />
+    <result column="MODIFICATION_TIME" property="modificationTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

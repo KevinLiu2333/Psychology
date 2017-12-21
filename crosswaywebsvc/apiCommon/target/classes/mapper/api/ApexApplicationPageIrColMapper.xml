@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationPageIrColMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationPageIrCol" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="PAGE_ID" property="pageId" jdbcType="DECIMAL" />
+    <result column="INTERACTIVE_REPORT_ID" property="interactiveReportId" jdbcType="DECIMAL" />
+    <result column="COLUMN_ID" property="columnId" jdbcType="DECIMAL" />
+    <result column="COLUMN_ALIAS" property="columnAlias" jdbcType="VARCHAR" />
+    <result column="DISPLAY_ORDER" property="displayOrder" jdbcType="DECIMAL" />
+    <result column="COLUMN_GROUP" property="columnGroup" jdbcType="VARCHAR" />
+    <result column="COLUMN_GROUP_ID" property="columnGroupId" jdbcType="DECIMAL" />
+    <result column="REPORT_LABEL" property="reportLabel" jdbcType="VARCHAR" />
+    <result column="FORM_LABEL" property="formLabel" jdbcType="VARCHAR" />
+    <result column="COLUMN_LINK" property="columnLink" jdbcType="VARCHAR" />
+    <result column="COLUMN_LINKTEXT" property="columnLinktext" jdbcType="VARCHAR" />
+    <result column="COLUMN_LINK_ATTR" property="columnLinkAttr" jdbcType="VARCHAR" />
+    <result column="COLUMN_LINK_CHECKSUM_TYPE" property="columnLinkChecksumType" jdbcType="VARCHAR" />
+    <result column="ALLOW_SORTING" property="allowSorting" jdbcType="VARCHAR" />
+    <result column="ALLOW_FILTERING" property="allowFiltering" jdbcType="VARCHAR" />
+    <result column="ALLOW_CTRL_BREAKS" property="allowCtrlBreaks" jdbcType="VARCHAR" />
+    <result column="ALLOW_AGGREGATIONS" property="allowAggregations" jdbcType="VARCHAR" />
+    <result column="ALLOW_COMPUTATIONS" property="allowComputations" jdbcType="VARCHAR" />
+    <result column="ALLOW_CHARTING" property="allowCharting" jdbcType="VARCHAR" />
+    <result column="COLUMN_TYPE" property="columnType" jdbcType="VARCHAR" />
+    <result column="DISPLAY_TEXT_AS" property="displayTextAs" jdbcType="VARCHAR" />
+    <result column="HEADING_ALIGNMENT" property="headingAlignment" jdbcType="VARCHAR" />
+    <result column="COLUMN_ALIGNMENT" property="columnAlignment" jdbcType="VARCHAR" />
+    <result column="FORMAT_MASK" property="formatMask" jdbcType="VARCHAR" />
+    <result column="FILTER_LOV_SOURCE" property="filterLovSource" jdbcType="VARCHAR" />
+    <result column="RPT_LOV" property="rptLov" jdbcType="VARCHAR" />
+    <result column="FILTER_DATE_RANGES" property="filterDateRanges" jdbcType="VARCHAR" />
+    <result column="DISPLAY_CONDITION_TYPE" property="displayConditionType" jdbcType="VARCHAR" />
+    <result column="DISPLAY_CONDITION" property="displayCondition" jdbcType="VARCHAR" />
+    <result column="DISPLAY_CONDITION2" property="displayCondition2" jdbcType="VARCHAR" />
+    <result column="HELP_TEXT" property="helpText" jdbcType="VARCHAR" />
+    <result column="AUTHORIZATION_SCHEME" property="authorizationScheme" jdbcType="VARCHAR" />
+    <result column="AUTHORIZATION_SCHEME_ID" property="authorizationSchemeId" jdbcType="VARCHAR" />
+    <result column="COLUMN_EXPR" property="columnExpr" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="UPDATED_ON" property="updatedOn" jdbcType="DATE" />
+    <result column="UPDATED_BY" property="updatedBy" jdbcType="VARCHAR" />
+    <result column="COMPONENT_SIGNATURE" property="componentSignature" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

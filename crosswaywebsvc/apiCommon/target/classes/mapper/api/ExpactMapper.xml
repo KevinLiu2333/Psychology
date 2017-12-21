@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ExpactMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Expact" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="FUNC_SCHEMA" property="funcSchema" jdbcType="VARCHAR" />
+    <result column="FUNC_PACKAGE" property="funcPackage" jdbcType="VARCHAR" />
+    <result column="FUNC_PROC" property="funcProc" jdbcType="VARCHAR" />
+    <result column="CODE" property="code" jdbcType="DECIMAL" />
+    <result column="CALLORDER" property="callorder" jdbcType="DECIMAL" />
+    <result column="CALLARG" property="callarg" jdbcType="VARCHAR" />
+    <result column="OBJ_TYPE" property="objType" jdbcType="DECIMAL" />
+    <result column="USER_ARG" property="userArg" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtRcaEventAssocMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtRcaEventAssoc" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="EVENT_GUID" property="eventGuid" jdbcType="VARBINARY" />
+    <id column="UPDATE_ID" property="updateId" jdbcType="DECIMAL" />
+    <id column="SYMPTOM_EVENT_GUID" property="symptomEventGuid" jdbcType="VARBINARY" />
+    <id column="CAUSE_EVENT_GUID" property="causeEventGuid" jdbcType="VARBINARY" />
+    <result column="IS_ROOT_CAUSE" property="isRootCause" jdbcType="DECIMAL" />
+    <result column="CAUSE_CONFIDENCE" property="causeConfidence" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

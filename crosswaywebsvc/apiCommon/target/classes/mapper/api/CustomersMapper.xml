@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CustomersMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Customers">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CUSTOMER_ID" jdbcType="DECIMAL" property="customerId" />
+    <result column="CUST_FIRST_NAME" jdbcType="VARCHAR" property="custFirstName" />
+    <result column="CUST_LAST_NAME" jdbcType="VARCHAR" property="custLastName" />
+    <result column="CUST_ADDRESS" jdbcType="OTHER" property="custAddress" />
+    <result column="PHONE_NUMBERS" jdbcType="OTHER" property="phoneNumbers" />
+    <result column="NLS_LANGUAGE" jdbcType="VARCHAR" property="nlsLanguage" />
+    <result column="NLS_TERRITORY" jdbcType="VARCHAR" property="nlsTerritory" />
+    <result column="CREDIT_LIMIT" jdbcType="DECIMAL" property="creditLimit" />
+    <result column="CUST_EMAIL" jdbcType="VARCHAR" property="custEmail" />
+    <result column="ACCOUNT_MGR_ID" jdbcType="DECIMAL" property="accountMgrId" />
+    <result column="CUST_GEO_LOCATION" jdbcType="OTHER" property="custGeoLocation" />
+    <result column="DATE_OF_BIRTH" jdbcType="DATE" property="dateOfBirth" />
+    <result column="MARITAL_STATUS" jdbcType="VARCHAR" property="maritalStatus" />
+    <result column="GENDER" jdbcType="VARCHAR" property="gender" />
+    <result column="INCOME_LEVEL" jdbcType="VARCHAR" property="incomeLevel" />
+  </resultMap>
+</mapper>

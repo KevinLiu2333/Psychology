@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VAwOlapMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VAwOlap" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="AW_NUMBER" property="awNumber" jdbcType="DECIMAL" />
+    <result column="ATTACH_MODE" property="attachMode" jdbcType="VARCHAR" />
+    <result column="GENERATION" property="generation" jdbcType="DECIMAL" />
+    <result column="TEMP_SPACE_PAGES" property="tempSpacePages" jdbcType="DECIMAL" />
+    <result column="TEMP_SPACE_READS" property="tempSpaceReads" jdbcType="DECIMAL" />
+    <result column="LOB_READS" property="lobReads" jdbcType="DECIMAL" />
+    <result column="POOL_CHANGED_PAGES" property="poolChangedPages" jdbcType="DECIMAL" />
+    <result column="POOL_UNCHANGED_PAGES" property="poolUnchangedPages" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

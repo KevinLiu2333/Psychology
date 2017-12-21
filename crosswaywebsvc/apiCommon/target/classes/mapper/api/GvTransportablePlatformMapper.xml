@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvTransportablePlatformMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvTransportablePlatform" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="PLATFORM_ID" property="platformId" jdbcType="DECIMAL" />
+    <result column="PLATFORM_NAME" property="platformName" jdbcType="VARCHAR" />
+    <result column="ENDIAN_FORMAT" property="endianFormat" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

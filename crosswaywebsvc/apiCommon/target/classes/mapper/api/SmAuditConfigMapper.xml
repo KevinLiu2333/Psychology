@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SmAuditConfigMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SmAuditConfig" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="AUDIT_TYPE" property="auditType" jdbcType="VARCHAR" />
+    <result column="SCHEMA_USER" property="schemaUser" jdbcType="VARCHAR" />
+    <result column="AUDIT_TARGET" property="auditTarget" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

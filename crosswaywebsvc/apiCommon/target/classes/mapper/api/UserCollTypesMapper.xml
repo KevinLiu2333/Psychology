@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserCollTypesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserCollTypes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TYPE_NAME" property="typeName" jdbcType="VARCHAR" />
+    <result column="COLL_TYPE" property="collType" jdbcType="VARCHAR" />
+    <result column="UPPER_BOUND" property="upperBound" jdbcType="DECIMAL" />
+    <result column="ELEM_TYPE_MOD" property="elemTypeMod" jdbcType="VARCHAR" />
+    <result column="ELEM_TYPE_OWNER" property="elemTypeOwner" jdbcType="VARCHAR" />
+    <result column="ELEM_TYPE_NAME" property="elemTypeName" jdbcType="VARCHAR" />
+    <result column="LENGTH" property="length" jdbcType="DECIMAL" />
+    <result column="PRECISION" property="precision" jdbcType="DECIMAL" />
+    <result column="SCALE" property="scale" jdbcType="DECIMAL" />
+    <result column="CHARACTER_SET_NAME" property="characterSetName" jdbcType="VARCHAR" />
+    <result column="ELEM_STORAGE" property="elemStorage" jdbcType="VARCHAR" />
+    <result column="NULLS_STORED" property="nullsStored" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

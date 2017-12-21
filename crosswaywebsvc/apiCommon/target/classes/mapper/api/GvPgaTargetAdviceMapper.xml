@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvPgaTargetAdviceMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvPgaTargetAdvice" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="PGA_TARGET_FOR_ESTIMATE" property="pgaTargetForEstimate" jdbcType="DECIMAL" />
+    <result column="PGA_TARGET_FACTOR" property="pgaTargetFactor" jdbcType="DECIMAL" />
+    <result column="ADVICE_STATUS" property="adviceStatus" jdbcType="VARCHAR" />
+    <result column="BYTES_PROCESSED" property="bytesProcessed" jdbcType="DECIMAL" />
+    <result column="ESTD_TIME" property="estdTime" jdbcType="DECIMAL" />
+    <result column="ESTD_EXTRA_BYTES_RW" property="estdExtraBytesRw" jdbcType="DECIMAL" />
+    <result column="ESTD_PGA_CACHE_HIT_PERCENTAGE" property="estdPgaCacheHitPercentage" jdbcType="DECIMAL" />
+    <result column="ESTD_OVERALLOC_COUNT" property="estdOverallocCount" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

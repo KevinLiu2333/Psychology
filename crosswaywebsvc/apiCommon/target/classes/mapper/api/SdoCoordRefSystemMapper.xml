@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoCoordRefSystemMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoCoordRefSystem" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SRID" property="srid" jdbcType="DECIMAL" />
+    <result column="COORD_REF_SYS_NAME" property="coordRefSysName" jdbcType="VARCHAR" />
+    <result column="COORD_REF_SYS_KIND" property="coordRefSysKind" jdbcType="VARCHAR" />
+    <result column="COORD_SYS_ID" property="coordSysId" jdbcType="DECIMAL" />
+    <result column="DATUM_ID" property="datumId" jdbcType="DECIMAL" />
+    <result column="GEOG_CRS_DATUM_ID" property="geogCrsDatumId" jdbcType="DECIMAL" />
+    <result column="SOURCE_GEOG_SRID" property="sourceGeogSrid" jdbcType="DECIMAL" />
+    <result column="PROJECTION_CONV_ID" property="projectionConvId" jdbcType="DECIMAL" />
+    <result column="CMPD_HORIZ_SRID" property="cmpdHorizSrid" jdbcType="DECIMAL" />
+    <result column="CMPD_VERT_SRID" property="cmpdVertSrid" jdbcType="DECIMAL" />
+    <result column="INFORMATION_SOURCE" property="informationSource" jdbcType="VARCHAR" />
+    <result column="DATA_SOURCE" property="dataSource" jdbcType="VARCHAR" />
+    <result column="IS_LEGACY" property="isLegacy" jdbcType="VARCHAR" />
+    <result column="LEGACY_CODE" property="legacyCode" jdbcType="DECIMAL" />
+    <result column="LEGACY_WKTEXT" property="legacyWktext" jdbcType="VARCHAR" />
+    <result column="LEGACY_CS_BOUNDS" property="legacyCsBounds" jdbcType="OTHER" />
+    <result column="IS_VALID" property="isValid" jdbcType="VARCHAR" />
+    <result column="SUPPORTS_SDO_GEOMETRY" property="supportsSdoGeometry" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

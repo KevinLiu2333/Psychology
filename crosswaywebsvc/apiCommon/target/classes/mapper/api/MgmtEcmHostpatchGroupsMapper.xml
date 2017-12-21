@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtEcmHostpatchGroupsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtEcmHostpatchGroups" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="GROUP_GUID" property="groupGuid" jdbcType="VARBINARY" />
+    <result column="MATURITY_LEVEL" property="maturityLevel" jdbcType="VARCHAR" />
+    <result column="NEED_REBOOT_PKGS" property="needRebootPkgs" jdbcType="VARCHAR" />
+    <result column="MARK_ROGUE_PKGS" property="markRoguePkgs" jdbcType="DECIMAL" />
+    <result column="IGNORED_UNKNOWN_PKGS" property="ignoredUnknownPkgs" jdbcType="VARCHAR" />
+    <result column="MARK_HIGHER_VER_PKG_ROGUE" property="markHigherVerPkgRogue" jdbcType="DECIMAL" />
+    <result column="STRICT_VER_CHECK_PKGS" property="strictVerCheckPkgs" jdbcType="VARCHAR" />
+    <result column="CREDS_TYPE" property="credsType" jdbcType="DECIMAL" />
+    <result column="UPDATER_JOB_GUID" property="updaterJobGuid" jdbcType="VARBINARY" />
+    <result column="COLLECTOR_JOB_GUID" property="collectorJobGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TGaFwjbxxMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.TGaFwjbxx" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FWBM" property="fwbm" jdbcType="VARCHAR" />
+    <result column="MLPHBM" property="mlphbm" jdbcType="VARCHAR" />
+    <result column="JLXDM" property="jlxdm" jdbcType="VARCHAR" />
+    <result column="MLPHXX" property="mlphxx" jdbcType="VARCHAR" />
+    <result column="MLPH" property="mlph" jdbcType="VARCHAR" />
+    <result column="YJMLPH" property="yjmlph" jdbcType="VARCHAR" />
+    <result column="EJMLPH" property="ejmlph" jdbcType="VARCHAR" />
+    <result column="SH" property="sh" jdbcType="VARCHAR" />
+    <result column="XJGAJGDM" property="xjgajgdm" jdbcType="VARCHAR" />
+    <result column="XJGAJGMC" property="xjgajgmc" jdbcType="VARCHAR" />
+    <result column="PCSDM" property="pcsdm" jdbcType="VARCHAR" />
+    <result column="PCSMC" property="pcsmc" jdbcType="VARCHAR" />
+    <result column="JDDM" property="jddm" jdbcType="VARCHAR" />
+    <result column="JDMC" property="jdmc" jdbcType="VARCHAR" />
+    <result column="JCWDM" property="jcwdm" jdbcType="VARCHAR" />
+    <result column="JCWMC" property="jcwmc" jdbcType="VARCHAR" />
+    <result column="QDM" property="qdm" jdbcType="VARCHAR" />
+    <result column="QMC" property="qmc" jdbcType="VARCHAR" />
+    <result column="JZWBM" property="jzwbm" jdbcType="VARCHAR" />
+    <result column="SFLSMLPH" property="sflsmlph" jdbcType="CHAR" />
+    <result column="SJMLPH" property="sjmlph" jdbcType="VARCHAR" />
+    <result column="SJLY" property="sjly" jdbcType="VARCHAR" />
+    <result column="SZC" property="szc" jdbcType="VARCHAR" />
+    <result column="FWMS" property="fwms" jdbcType="VARCHAR" />
+    <result column="JLXMC" property="jlxmc" jdbcType="VARCHAR" />
+    <result column="FLAG_RHFL" property="flagRhfl" jdbcType="VARCHAR" />
+    <result column="FLAG_WBJZRY" property="flagWbjzry" jdbcType="VARCHAR" />
+    <result column="FLAG_SYRK" property="flagSyrk" jdbcType="VARCHAR" />
+    <result column="FWSHMS" property="fwshms" jdbcType="VARCHAR" />
+    <result column="SFWZJZW" property="sfwzjzw" jdbcType="CHAR" />
+    <result column="BDSJ" property="bdsj" jdbcType="VARCHAR" />
+    <result column="JLRKSJ" property="jlrksj" jdbcType="VARCHAR" />
+    <result column="JZFWLX" property="jzfwlx" jdbcType="VARCHAR" />
+    <result column="FZZJLX" property="fzzjlx" jdbcType="VARCHAR" />
+    <result column="FZZJHM" property="fzzjhm" jdbcType="VARCHAR" />
+    <result column="FZXM" property="fzxm" jdbcType="VARCHAR" />
+    <result column="FZLXDH" property="fzlxdh" jdbcType="VARCHAR" />
+    <result column="FWDWMC" property="fwdwmc" jdbcType="VARCHAR" />
+    <result column="ZAZRRXM" property="zazrrxm" jdbcType="VARCHAR" />
+    <result column="ZAZRRLXDH" property="zazrrlxdh" jdbcType="VARCHAR" />
+    <result column="JZLX" property="jzlx" jdbcType="VARCHAR" />
+    <result column="FDJHZBZ" property="fdjhzbz" jdbcType="VARCHAR" />
+    <result column="FZSJJZDZQXDM" property="fzsjjzdzqxdm" jdbcType="VARCHAR" />
+    <result column="FZSJJZDZJDDM" property="fzsjjzdzjddm" jdbcType="VARCHAR" />
+    <result column="FZSJJZDZXZ" property="fzsjjzdzxz" jdbcType="VARCHAR" />
+    <result column="FZSJJZDZ" property="fzsjjzdz" jdbcType="VARCHAR" />
+    <result column="FZSJJZDZQXMC" property="fzsjjzdzqxmc" jdbcType="VARCHAR" />
+    <result column="FZSJJZDZJDMC" property="fzsjjzdzjdmc" jdbcType="VARCHAR" />
+    <result column="ZXGXSJ" property="zxgxsj" jdbcType="VARCHAR" />
+    <result column="HH" property="hh" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

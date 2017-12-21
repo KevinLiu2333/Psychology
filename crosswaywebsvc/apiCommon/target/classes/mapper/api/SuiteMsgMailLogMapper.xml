@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SuiteMsgMailLogMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SuiteMsgMailLog">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" jdbcType="OTHER" property="id" />
+    <result column="MAIL_ID" jdbcType="OTHER" property="mailId" />
+    <result column="TO_ADDRESS" jdbcType="OTHER" property="toAddress" />
+    <result column="TO_MORE_ADDRESS" jdbcType="OTHER" property="toMoreAddress" />
+    <result column="MAIL_SUBJECT" jdbcType="OTHER" property="mailSubject" />
+    <result column="MAIL_CONTENT" jdbcType="OTHER" property="mailContent" />
+    <result column="TYPE" jdbcType="OTHER" property="type" />
+    <result column="SEND_TIME" jdbcType="DATE" property="sendTime" />
+  </resultMap>
+</mapper>

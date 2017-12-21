@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtEmxCellIormConfigViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtEmxCellIormConfigView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="CELLNAME" property="cellname" jdbcType="VARCHAR" />
+    <result column="REALMNAME" property="realmname" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="LATENCY" property="latency" jdbcType="VARCHAR" />
+    <result column="DIRECTIVETYPE" property="directivetype" jdbcType="VARCHAR" />
+    <result column="DBCATNAME" property="dbcatname" jdbcType="VARCHAR" />
+    <result column="LEVEL1" property="level1" jdbcType="VARCHAR" />
+    <result column="LEVEL2" property="level2" jdbcType="VARCHAR" />
+    <result column="LEVEL3" property="level3" jdbcType="VARCHAR" />
+    <result column="LEVEL4" property="level4" jdbcType="VARCHAR" />
+    <result column="LEVEL5" property="level5" jdbcType="VARCHAR" />
+    <result column="LEVEL6" property="level6" jdbcType="VARCHAR" />
+    <result column="LEVEL7" property="level7" jdbcType="VARCHAR" />
+    <result column="LEVEL8" property="level8" jdbcType="VARCHAR" />
+    <result column="ROLE" property="role" jdbcType="VARCHAR" />
+    <result column="START_TIMESTAMP" property="startTimestamp" jdbcType="DATE" />
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="ECM_SNAPSHOT_ID" property="ecmSnapshotId" jdbcType="VARBINARY" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

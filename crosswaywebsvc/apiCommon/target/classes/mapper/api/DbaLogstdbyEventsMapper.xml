@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaLogstdbyEventsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaLogstdbyEvents" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="EVENT_TIME" property="eventTime" jdbcType="DATE" />
+    <result column="EVENT_TIMESTAMP" property="eventTimestamp" jdbcType="TIMESTAMP" />
+    <result column="START_SCN" property="startScn" jdbcType="DECIMAL" />
+    <result column="CURRENT_SCN" property="currentScn" jdbcType="DECIMAL" />
+    <result column="COMMIT_SCN" property="commitScn" jdbcType="DECIMAL" />
+    <result column="XIDUSN" property="xidusn" jdbcType="DECIMAL" />
+    <result column="XIDSLT" property="xidslt" jdbcType="DECIMAL" />
+    <result column="XIDSQN" property="xidsqn" jdbcType="DECIMAL" />
+    <result column="STATUS_CODE" property="statusCode" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="EVENT" property="event" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

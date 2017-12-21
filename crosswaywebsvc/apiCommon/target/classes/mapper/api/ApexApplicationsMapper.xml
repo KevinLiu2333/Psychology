@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplications" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="ALIAS" property="alias" jdbcType="VARCHAR" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="APPLICATION_GROUP" property="applicationGroup" jdbcType="VARCHAR" />
+    <result column="APPLICATION_GROUP_ID" property="applicationGroupId" jdbcType="DECIMAL" />
+    <result column="HOME_LINK" property="homeLink" jdbcType="VARCHAR" />
+    <result column="PAGE_TEMPLATE" property="pageTemplate" jdbcType="VARCHAR" />
+    <result column="ERROR_PAGE_TEMPLATE" property="errorPageTemplate" jdbcType="VARCHAR" />
+    <result column="LOGGING" property="logging" jdbcType="VARCHAR" />
+    <result column="APPLICATION_PRIMARY_LANGUAGE" property="applicationPrimaryLanguage" jdbcType="VARCHAR" />
+    <result column="LANGUAGE_DERIVED_FROM" property="languageDerivedFrom" jdbcType="VARCHAR" />
+    <result column="DATE_FORMAT" property="dateFormat" jdbcType="VARCHAR" />
+    <result column="IMAGE_PREFIX" property="imagePrefix" jdbcType="VARCHAR" />
+    <result column="AUTHENTICATION_SCHEME_TYPE" property="authenticationSchemeType" jdbcType="VARCHAR" />
+    <result column="LOGIN_URL" property="loginUrl" jdbcType="VARCHAR" />
+    <result column="LOGOUT_URL" property="logoutUrl" jdbcType="VARCHAR" />
+    <result column="LOGO_TYPE" property="logoType" jdbcType="VARCHAR" />
+    <result column="LOGO" property="logo" jdbcType="VARCHAR" />
+    <result column="LOGO_ATTRIBUTES" property="logoAttributes" jdbcType="VARCHAR" />
+    <result column="PUBLIC_USER" property="publicUser" jdbcType="VARCHAR" />
+    <result column="PROXY_SERVER" property="proxyServer" jdbcType="VARCHAR" />
+    <result column="MEDIA_TYPE" property="mediaType" jdbcType="VARCHAR" />
+    <result column="AUTHENTICATION_SCHEME" property="authenticationScheme" jdbcType="VARCHAR" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="AVAILABILITY_STATUS" property="availabilityStatus" jdbcType="VARCHAR" />
+    <result column="UNAVAILABLE_TEXT" property="unavailableText" jdbcType="VARCHAR" />
+    <result column="RESTRICT_TO_USER" property="restrictToUser" jdbcType="VARCHAR" />
+    <result column="DEBUGGING" property="debugging" jdbcType="VARCHAR" />
+    <result column="EXACT_SUBSTITUTIONS" property="exactSubstitutions" jdbcType="VARCHAR" />
+    <result column="BUILD_STATUS" property="buildStatus" jdbcType="VARCHAR" />
+    <result column="VPD" property="vpd" jdbcType="VARCHAR" />
+    <result column="AUTHORIZATION_SCHEME" property="authorizationScheme" jdbcType="VARCHAR" />
+    <result column="AUTHORIZATION_SCHEME_ID" property="authorizationSchemeId" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="THEME_NUMBER" property="themeNumber" jdbcType="DECIMAL" />
+    <result column="GLOBAL_NOTIFICATION" property="globalNotification" jdbcType="VARCHAR" />
+    <result column="SESSION_STATE_PROTECTION" property="sessionStateProtection" jdbcType="VARCHAR" />
+    <result column="MAXIMUM_SESSION_LIFE_SECONDS" property="maximumSessionLifeSeconds" jdbcType="DECIMAL" />
+    <result column="SESSION_LIFETIME_EXCEEDED_URL" property="sessionLifetimeExceededUrl" jdbcType="VARCHAR" />
+    <result column="MAXIMUM_SESSION_IDLE_SECONDS" property="maximumSessionIdleSeconds" jdbcType="DECIMAL" />
+    <result column="SESSION_IDLE_TIME_EXCEEDED_URL" property="sessionIdleTimeExceededUrl" jdbcType="VARCHAR" />
+    <result column="PAGES" property="pages" jdbcType="DECIMAL" />
+    <result column="TABS" property="tabs" jdbcType="DECIMAL" />
+    <result column="PARENT_TABS" property="parentTabs" jdbcType="DECIMAL" />
+    <result column="APPLICATION_ITEMS" property="applicationItems" jdbcType="DECIMAL" />
+    <result column="APPLICATION_PROCESSES" property="applicationProcesses" jdbcType="DECIMAL" />
+    <result column="APPLICATION_COMPUTATIONS" property="applicationComputations" jdbcType="DECIMAL" />
+    <result column="SHORTCUTS" property="shortcuts" jdbcType="DECIMAL" />
+    <result column="WEB_SERVICES" property="webServices" jdbcType="DECIMAL" />
+    <result column="TREES" property="trees" jdbcType="DECIMAL" />
+    <result column="BUILD_OPTIONS" property="buildOptions" jdbcType="DECIMAL" />
+    <result column="BREADCRUMBS" property="breadcrumbs" jdbcType="DECIMAL" />
+    <result column="NAV_BAR_ENTRIES" property="navBarEntries" jdbcType="DECIMAL" />
+    <result column="LISTS" property="lists" jdbcType="DECIMAL" />
+    <result column="LISTS_OF_VALUES" property="listsOfValues" jdbcType="DECIMAL" />
+    <result column="THEMES" property="themes" jdbcType="DECIMAL" />
+    <result column="AUTHENTICATION_SCHEMES" property="authenticationSchemes" jdbcType="DECIMAL" />
+    <result column="AUTHORIZATION_SCHEMES" property="authorizationSchemes" jdbcType="DECIMAL" />
+    <result column="TRANSLATION_MESSAGES" property="translationMessages" jdbcType="DECIMAL" />
+    <result column="INSTALLATION_SCRIPTS" property="installationScripts" jdbcType="DECIMAL" />
+    <result column="CACHED_PAGES" property="cachedPages" jdbcType="DECIMAL" />
+    <result column="CACHED_REGIONS" property="cachedRegions" jdbcType="DECIMAL" />
+    <result column="COMPONENT_SIGNATURE" property="componentSignature" jdbcType="VARCHAR" />
+    <result column="WORKSPACE_ID" property="workspaceId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

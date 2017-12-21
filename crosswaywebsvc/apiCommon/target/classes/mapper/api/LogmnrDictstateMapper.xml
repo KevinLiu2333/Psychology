@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.LogmnrDictstateMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.LogmnrDictstate" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="LOGMNR_UID" property="logmnrUid" jdbcType="DECIMAL" />
+    <result column="START_SCNBAS" property="startScnbas" jdbcType="DECIMAL" />
+    <result column="START_SCNWRP" property="startScnwrp" jdbcType="DECIMAL" />
+    <result column="END_SCNBAS" property="endScnbas" jdbcType="DECIMAL" />
+    <result column="END_SCNWRP" property="endScnwrp" jdbcType="DECIMAL" />
+    <result column="REDO_THREAD" property="redoThread" jdbcType="DECIMAL" />
+    <result column="RBASQN" property="rbasqn" jdbcType="DECIMAL" />
+    <result column="RBABLK" property="rbablk" jdbcType="DECIMAL" />
+    <result column="RBABYTE" property="rbabyte" jdbcType="DECIMAL" />
+    <result column="LOGMNR_FLAGS" property="logmnrFlags" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

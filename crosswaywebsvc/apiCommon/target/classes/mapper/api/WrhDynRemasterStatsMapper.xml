@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhDynRemasterStatsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhDynRemasterStats" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="REMASTER_OPS" property="remasterOps" jdbcType="DECIMAL" />
+    <result column="REMASTER_TIME" property="remasterTime" jdbcType="DECIMAL" />
+    <result column="REMASTERED_OBJECTS" property="remasteredObjects" jdbcType="DECIMAL" />
+    <result column="QUIESCE_TIME" property="quiesceTime" jdbcType="DECIMAL" />
+    <result column="FREEZE_TIME" property="freezeTime" jdbcType="DECIMAL" />
+    <result column="CLEANUP_TIME" property="cleanupTime" jdbcType="DECIMAL" />
+    <result column="REPLAY_TIME" property="replayTime" jdbcType="DECIMAL" />
+    <result column="FIXWRITE_TIME" property="fixwriteTime" jdbcType="DECIMAL" />
+    <result column="SYNC_TIME" property="syncTime" jdbcType="DECIMAL" />
+    <result column="RESOURCES_CLEANED" property="resourcesCleaned" jdbcType="DECIMAL" />
+    <result column="REPLAYED_LOCKS_SENT" property="replayedLocksSent" jdbcType="DECIMAL" />
+    <result column="REPLAYED_LOCKS_RECEIVED" property="replayedLocksReceived" jdbcType="DECIMAL" />
+    <result column="CURRENT_OBJECTS" property="currentObjects" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SamSparsityAdviceMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SamSparsityAdvice" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CUBENAME" property="cubename" jdbcType="VARCHAR" />
+    <result column="FACT" property="fact" jdbcType="VARCHAR" />
+    <result column="DIMENSION" property="dimension" jdbcType="VARCHAR" />
+    <result column="DIMCOLUMN" property="dimcolumn" jdbcType="VARCHAR" />
+    <result column="DIMSOURCE" property="dimsource" jdbcType="VARCHAR" />
+    <result column="MEMBERCOUNT" property="membercount" jdbcType="DECIMAL" />
+    <result column="LEAFCOUNT" property="leafcount" jdbcType="DECIMAL" />
+    <result column="ADVICE" property="advice" jdbcType="VARCHAR" />
+    <result column="POSITION" property="position" jdbcType="DECIMAL" />
+    <result column="DENSITY" property="density" jdbcType="DECIMAL" />
+    <result column="PARTNUM" property="partnum" jdbcType="DECIMAL" />
+    <result column="PARTLEVEL" property="partlevel" jdbcType="VARCHAR" />
+    <result column="PARTBY" property="partby" jdbcType="CLOB" />
+    <result column="PARTTOPS" property="parttops" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

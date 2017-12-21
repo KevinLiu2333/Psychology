@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriAdvExecutionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriAdvExecutions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <id column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="EXEC_TYPE" property="execType" jdbcType="VARCHAR" />
+    <result column="EXEC_TYPE_ID" property="execTypeId" jdbcType="DECIMAL" />
+    <result column="ADVISOR_ID" property="advisorId" jdbcType="DECIMAL" />
+    <result column="EXEC_START" property="execStart" jdbcType="DATE" />
+    <result column="EXEC_MTIME" property="execMtime" jdbcType="DATE" />
+    <result column="EXEC_END" property="execEnd" jdbcType="DATE" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="STATUS_MSG_ID" property="statusMsgId" jdbcType="DECIMAL" />
+    <result column="ERROR_MSG_ID" property="errorMsgId" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

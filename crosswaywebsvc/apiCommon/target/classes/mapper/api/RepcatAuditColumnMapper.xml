@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RepcatAuditColumnMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RepcatAuditColumn" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <id column="ONAME" property="oname" jdbcType="VARCHAR" />
+    <id column="SNAME" property="sname" jdbcType="VARCHAR" />
+    <result column="BASE_SNAME" property="baseSname" jdbcType="VARCHAR" />
+    <result column="BASE_ONAME" property="baseOname" jdbcType="VARCHAR" />
+    <result column="BASE_CONFLICT_TYPE_ID" property="baseConflictTypeId" jdbcType="DECIMAL" />
+    <result column="BASE_REFERENCE_NAME" property="baseReferenceName" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE" property="attribute" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

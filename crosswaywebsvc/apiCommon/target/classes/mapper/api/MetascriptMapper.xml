@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MetascriptMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Metascript" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HTYPE" property="htype" jdbcType="VARCHAR" />
+    <result column="PTYPE" property="ptype" jdbcType="VARCHAR" />
+    <result column="SEQ#" property="seq" jdbcType="DECIMAL" />
+    <result column="RSEQ#" property="rseq" jdbcType="DECIMAL" />
+    <result column="LTYPE" property="ltype" jdbcType="VARCHAR" />
+    <result column="PROPERTIES" property="properties" jdbcType="DECIMAL" />
+    <result column="MODEL" property="model" jdbcType="VARCHAR" />
+    <result column="VERSION" property="version" jdbcType="DECIMAL" />
+    <result column="SOSEQ#" property="soseq" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.LogmnrgDictionaryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.LogmnrgDictionary" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DB_NAME" property="dbName" jdbcType="VARCHAR" />
+    <result column="DB_ID" property="dbId" jdbcType="DECIMAL" />
+    <result column="DB_CREATED" property="dbCreated" jdbcType="VARCHAR" />
+    <result column="DB_DICT_CREATED" property="dbDictCreated" jdbcType="VARCHAR" />
+    <result column="DB_DICT_SCN" property="dbDictScn" jdbcType="DECIMAL" />
+    <result column="DB_TXN_SCNBAS" property="dbTxnScnbas" jdbcType="DECIMAL" />
+    <result column="DB_TXN_SCNWRP" property="dbTxnScnwrp" jdbcType="DECIMAL" />
+    <result column="DB_RESETLOGS_CHANGE#" property="dbResetlogsChange" jdbcType="DECIMAL" />
+    <result column="DB_RESETLOGS_TIME" property="dbResetlogsTime" jdbcType="VARCHAR" />
+    <result column="DB_VERSION_TIME" property="dbVersionTime" jdbcType="VARCHAR" />
+    <result column="DB_REDO_TYPE_ID" property="dbRedoTypeId" jdbcType="VARCHAR" />
+    <result column="DB_REDO_RELEASE" property="dbRedoRelease" jdbcType="VARCHAR" />
+    <result column="DB_CHARACTER_SET" property="dbCharacterSet" jdbcType="VARCHAR" />
+    <result column="DB_VERSION" property="dbVersion" jdbcType="VARCHAR" />
+    <result column="DB_STATUS" property="dbStatus" jdbcType="VARCHAR" />
+    <result column="DB_GLOBAL_NAME" property="dbGlobalName" jdbcType="VARCHAR" />
+    <result column="DB_DICT_MAXOBJECTS" property="dbDictMaxobjects" jdbcType="DECIMAL" />
+    <result column="DB_DICT_OBJECTCOUNT" property="dbDictObjectcount" jdbcType="DECIMAL" />
+    <result column="DB_THREAD_MAP" property="dbThreadMap" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

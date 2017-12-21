@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MviewAdvOutputMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MviewAdvOutput" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="RUNID#" property="runid" jdbcType="DECIMAL" />
+    <id column="RANK#" property="rank" jdbcType="DECIMAL" />
+    <result column="OUTPUT_TYPE" property="outputType" jdbcType="DECIMAL" />
+    <result column="ACTION_TYPE" property="actionType" jdbcType="VARCHAR" />
+    <result column="SUMMARY_OWNER" property="summaryOwner" jdbcType="VARCHAR" />
+    <result column="SUMMARY_NAME" property="summaryName" jdbcType="VARCHAR" />
+    <result column="GROUP_BY_COLUMNS" property="groupByColumns" jdbcType="VARCHAR" />
+    <result column="WHERE_CLAUSE" property="whereClause" jdbcType="VARCHAR" />
+    <result column="FROM_CLAUSE" property="fromClause" jdbcType="VARCHAR" />
+    <result column="MEASURES_LIST" property="measuresList" jdbcType="VARCHAR" />
+    <result column="FACT_TABLES" property="factTables" jdbcType="VARCHAR" />
+    <result column="GROUPING_LEVELS" property="groupingLevels" jdbcType="VARCHAR" />
+    <result column="QUERYLEN" property="querylen" jdbcType="DECIMAL" />
+    <result column="STORAGE_IN_BYTES" property="storageInBytes" jdbcType="DECIMAL" />
+    <result column="PCT_PERFORMANCE_GAIN" property="pctPerformanceGain" jdbcType="DECIMAL" />
+    <result column="FREQUENCY" property="frequency" jdbcType="DECIMAL" />
+    <result column="CUMULATIVE_BENEFIT" property="cumulativeBenefit" jdbcType="DECIMAL" />
+    <result column="BENEFIT_TO_COST_RATIO" property="benefitToCostRatio" jdbcType="DECIMAL" />
+    <result column="VALIDATED" property="validated" jdbcType="DECIMAL" />
+    <result column="QUERY_TEXT" property="queryText" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

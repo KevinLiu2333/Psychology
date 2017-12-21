@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DirAlertHistoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DirAlertHistory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ALERT_NAME" property="alertName" jdbcType="VARCHAR" />
+    <result column="MESSAGE_LEVEL" property="messageLevel" jdbcType="DECIMAL" />
+    <result column="ACTION_ID" property="actionId" jdbcType="DECIMAL" />
+    <result column="REASON_ID" property="reasonId" jdbcType="DECIMAL" />
+    <result column="LAST_TIME" property="lastTime" jdbcType="DATE" />
+    <result column="NEXT_TIME" property="nextTime" jdbcType="DATE" />
+    <result column="ACTION_TIME" property="actionTime" jdbcType="DATE" />
+    <result column="INCARNATION_INFO" property="incarnationInfo" jdbcType="VARCHAR" />
+    <result column="JOB_NAME" property="jobName" jdbcType="VARCHAR" />
+    <result column="SPAREN1" property="sparen1" jdbcType="DECIMAL" />
+    <result column="SPAREN2" property="sparen2" jdbcType="DECIMAL" />
+    <result column="SPAREN3" property="sparen3" jdbcType="DECIMAL" />
+    <result column="SPAREN4" property="sparen4" jdbcType="DECIMAL" />
+    <result column="SPAREN5" property="sparen5" jdbcType="DECIMAL" />
+    <result column="SPAREVC1" property="sparevc1" jdbcType="VARCHAR" />
+    <result column="SPAREVC2" property="sparevc2" jdbcType="VARCHAR" />
+    <result column="SPAREVC3" property="sparevc3" jdbcType="VARCHAR" />
+    <result column="SPAREVC4" property="sparevc4" jdbcType="VARCHAR" />
+    <result column="SPAREVC5" property="sparevc5" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

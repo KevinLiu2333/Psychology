@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceGroup>
+    <service name="HelloWs" targetNamespace="http://ws.axis2Example/">
+        <description>JNLPGenerator service</description>
+        <schema schemaNamespace="http://ws.axis2Example/"/>
+        <parameter name="ServiceClass" locked="false">ws.HelloWs</parameter>
+        <operation name="sayHello">
+            <messageReceiver class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver"/>
+        </operation>
+    </service>
+</serviceGroup>

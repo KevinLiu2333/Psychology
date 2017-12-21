@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AcZyApplyMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AcZyApply">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ZY_APPLY_ID" jdbcType="VARCHAR" property="zyApplyId" />
+    <result column="ZY_INFO_ID" jdbcType="VARCHAR" property="zyInfoId" />
+    <result column="USER_ID" jdbcType="VARCHAR" property="userId" />
+    <result column="LINKMAN_PHONE" jdbcType="VARCHAR" property="linkmanPhone" />
+    <result column="CHECKED_PERSON" jdbcType="VARCHAR" property="checkedPerson" />
+    <result column="CHECK_LINKMAN_PHONE" jdbcType="VARCHAR" property="checkLinkmanPhone" />
+    <result column="APPLY_DATE" jdbcType="DATE" property="applyDate" />
+    <result column="CHECKED_DATE" jdbcType="DATE" property="checkedDate" />
+    <result column="RESOURCE_PROVIDER" jdbcType="VARCHAR" property="resourceProvider" />
+    <result column="RESOURCE_TYPE" jdbcType="VARCHAR" property="resourceType" />
+    <result column="RESOURCE_NAME" jdbcType="VARCHAR" property="resourceName" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    <result column="DATA_TYPE" jdbcType="VARCHAR" property="dataType" />
+    <result column="APPLY_REASON" jdbcType="VARCHAR" property="applyReason" />
+    <result column="CHECK_REASON" jdbcType="VARCHAR" property="checkReason" />
+    <result column="APPLY_TOPIC" jdbcType="VARCHAR" property="applyTopic" />
+    <result column="IS_SUBMIT" jdbcType="VARCHAR" property="isSubmit" />
+    <result column="FILE_IDS" jdbcType="VARCHAR" property="fileIds" />
+    <result column="APP_APPLY_NUM" jdbcType="VARCHAR" property="appApplyNum" />
+    <result column="OP_USER" jdbcType="VARCHAR" property="opUser" />
+    <result column="USER_NAME" jdbcType="VARCHAR" property="userName" />
+    <result column="FW_CODE" jdbcType="VARCHAR" property="fwCode" />
+    <result column="FW_DATE" jdbcType="DATE" property="fwDate" />
+    <result column="IS_NEW_APPLY" jdbcType="VARCHAR" property="isNewApply" />
+    <result column="UNIT_NAME" jdbcType="VARCHAR" property="unitName" />
+    <result column="UNIT_ID" jdbcType="VARCHAR" property="unitId" />
+  </resultMap>
+</mapper>

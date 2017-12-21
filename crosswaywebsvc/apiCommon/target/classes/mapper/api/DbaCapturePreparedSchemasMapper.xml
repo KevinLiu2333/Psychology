@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaCapturePreparedSchemasMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaCapturePreparedSchemas" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SCHEMA_NAME" property="schemaName" jdbcType="VARCHAR" />
+    <result column="TIMESTAMP" property="timestamp" jdbcType="DATE" />
+    <result column="SUPPLEMENTAL_LOG_DATA_PK" property="supplementalLogDataPk" jdbcType="VARCHAR" />
+    <result column="SUPPLEMENTAL_LOG_DATA_UI" property="supplementalLogDataUi" jdbcType="VARCHAR" />
+    <result column="SUPPLEMENTAL_LOG_DATA_FK" property="supplementalLogDataFk" jdbcType="VARCHAR" />
+    <result column="SUPPLEMENTAL_LOG_DATA_ALL" property="supplementalLogDataAll" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

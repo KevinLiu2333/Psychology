@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtJobExecLocksMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtJobExecLocks" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOCK_MODE" property="lockMode" jdbcType="DECIMAL" />
+    <result column="LOCK_STATUS" property="lockStatus" jdbcType="DECIMAL" />
+    <result column="LOCK_REQUEST_TIME" property="lockRequestTime" jdbcType="DATE" />
+    <result column="LOCK_ACQUIRED_TIME" property="lockAcquiredTime" jdbcType="DATE" />
+    <result column="LOCK_INDEX" property="lockIndex" jdbcType="DECIMAL" />
+    <result column="EXECUTION_ID" property="executionId" jdbcType="VARBINARY" />
+    <result column="JOB_ID" property="jobId" jdbcType="VARBINARY" />
+    <result column="JOB_TYPE_ID" property="jobTypeId" jdbcType="VARBINARY" />
+    <result column="LOCK_GUID" property="lockGuid" jdbcType="VARBINARY" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

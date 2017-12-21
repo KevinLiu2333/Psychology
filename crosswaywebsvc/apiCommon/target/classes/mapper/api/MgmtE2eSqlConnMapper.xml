@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtE2eSqlConnMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtE2eSqlConn" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="CONN_GUID" property="connGuid" jdbcType="VARBINARY" />
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <result column="CONN_SCHEMA" property="connSchema" jdbcType="VARCHAR" />
+    <result column="CONN_STRING" property="connString" jdbcType="VARCHAR" />
+    <result column="TTL_REF" property="ttlRef" jdbcType="DATE" />
+  </resultMap>
+</mapper>

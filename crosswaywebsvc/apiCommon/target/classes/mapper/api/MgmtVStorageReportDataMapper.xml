@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtVStorageReportDataMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtVStorageReportData" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="STORAGE_LAYER" property="storageLayer" jdbcType="VARCHAR" />
+    <result column="EM_QUERY_FLAG" property="emQueryFlag" jdbcType="VARCHAR" />
+    <result column="IS_TOP_LAYER" property="isTopLayer" jdbcType="VARCHAR" />
+    <result column="IS_VIRTUAL_LAYER" property="isVirtualLayer" jdbcType="VARCHAR" />
+    <result column="IS_BOTTOM_LAYER" property="isBottomLayer" jdbcType="VARCHAR" />
+    <result column="IS_INTERMEDIATE_LAYER" property="isIntermediateLayer" jdbcType="VARCHAR" />
+    <result column="IS_CONTAINER_LAYER" property="isContainerLayer" jdbcType="VARCHAR" />
+    <result column="IS_SPARE" property="isSpare" jdbcType="VARCHAR" />
+    <result column="IS_ALLOCATED" property="isAllocated" jdbcType="VARCHAR" />
+    <result column="ENTITY_TYPE" property="entityType" jdbcType="VARCHAR" />
+    <result column="RAWSIZEB" property="rawsizeb" jdbcType="DECIMAL" />
+    <result column="SIZEB" property="sizeb" jdbcType="DECIMAL" />
+    <result column="USEDB" property="usedb" jdbcType="DECIMAL" />
+    <result column="FREEB" property="freeb" jdbcType="DECIMAL" />
+    <result column="LOCAL_FS_TYPE" property="localFsType" jdbcType="VARCHAR" />
+    <result column="LOCAL_FS" property="localFs" jdbcType="VARCHAR" />
+    <result column="LOCAL_FS_MOUNTPOINT" property="localFsMountpoint" jdbcType="VARCHAR" />
+    <result column="NFS_VENDOR" property="nfsVendor" jdbcType="VARCHAR" />
+    <result column="NFS_SERVER" property="nfsServer" jdbcType="VARCHAR" />
+    <result column="NFS" property="nfs" jdbcType="VARCHAR" />
+    <result column="NFS_MOUNTPOINT" property="nfsMountpoint" jdbcType="VARCHAR" />
+    <result column="NFS_SERVER_IP_ADDRESS" property="nfsServerIpAddress" jdbcType="VARCHAR" />
+    <result column="NFS_MOUNT_PRIVILEGE" property="nfsMountPrivilege" jdbcType="VARCHAR" />
+    <result column="NFS_SERVER_MAC_ADDRESS" property="nfsServerMacAddress" jdbcType="VARCHAR" />
+    <result column="VOLUME_MANAGER_VENDOR" property="volumeManagerVendor" jdbcType="VARCHAR" />
+    <result column="VOLUME_MANAGER_PRODUCT" property="volumeManagerProduct" jdbcType="VARCHAR" />
+    <result column="VOLUME_MANAGER_DISK_GROUP" property="volumeManagerDiskGroup" jdbcType="VARCHAR" />
+    <result column="VOLUME_MANAGER_USED_PATH" property="volumeManagerUsedPath" jdbcType="VARCHAR" />
+    <result column="VOLUME_MANAGER_CONFIGURATION" property="volumeManagerConfiguration" jdbcType="VARCHAR" />
+    <result column="DISK_USED_PATH" property="diskUsedPath" jdbcType="VARCHAR" />
+    <result column="DISK_VENDOR" property="diskVendor" jdbcType="VARCHAR" />
+    <result column="DISK_PRODUCT" property="diskProduct" jdbcType="VARCHAR" />
+    <result column="FILE_TYPE" property="fileType" jdbcType="VARCHAR" />
+    <result column="ECM_SNAPSHOT_ID" property="ecmSnapshotId" jdbcType="VARBINARY" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <result column="KEY_VALUE" property="keyValue" jdbcType="VARBINARY" />
+    <result column="GLOBAL_UNIQUE_ID" property="globalUniqueId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

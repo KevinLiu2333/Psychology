@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllArgumentsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllArguments" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="PACKAGE_NAME" property="packageName" jdbcType="VARCHAR" />
+    <result column="OBJECT_ID" property="objectId" jdbcType="DECIMAL" />
+    <result column="OVERLOAD" property="overload" jdbcType="VARCHAR" />
+    <result column="SUBPROGRAM_ID" property="subprogramId" jdbcType="DECIMAL" />
+    <result column="ARGUMENT_NAME" property="argumentName" jdbcType="VARCHAR" />
+    <result column="POSITION" property="position" jdbcType="DECIMAL" />
+    <result column="SEQUENCE" property="sequence" jdbcType="DECIMAL" />
+    <result column="DATA_LEVEL" property="dataLevel" jdbcType="DECIMAL" />
+    <result column="DATA_TYPE" property="dataType" jdbcType="VARCHAR" />
+    <result column="DEFAULTED" property="defaulted" jdbcType="VARCHAR" />
+    <result column="DEFAULT_LENGTH" property="defaultLength" jdbcType="DECIMAL" />
+    <result column="IN_OUT" property="inOut" jdbcType="VARCHAR" />
+    <result column="DATA_LENGTH" property="dataLength" jdbcType="DECIMAL" />
+    <result column="DATA_PRECISION" property="dataPrecision" jdbcType="DECIMAL" />
+    <result column="DATA_SCALE" property="dataScale" jdbcType="DECIMAL" />
+    <result column="RADIX" property="radix" jdbcType="DECIMAL" />
+    <result column="CHARACTER_SET_NAME" property="characterSetName" jdbcType="VARCHAR" />
+    <result column="TYPE_OWNER" property="typeOwner" jdbcType="VARCHAR" />
+    <result column="TYPE_NAME" property="typeName" jdbcType="VARCHAR" />
+    <result column="TYPE_SUBNAME" property="typeSubname" jdbcType="VARCHAR" />
+    <result column="TYPE_LINK" property="typeLink" jdbcType="VARCHAR" />
+    <result column="PLS_TYPE" property="plsType" jdbcType="VARCHAR" />
+    <result column="CHAR_LENGTH" property="charLength" jdbcType="DECIMAL" />
+    <result column="CHAR_USED" property="charUsed" jdbcType="VARCHAR" />
+    <result column="DEFAULT_VALUE" property="defaultValue" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

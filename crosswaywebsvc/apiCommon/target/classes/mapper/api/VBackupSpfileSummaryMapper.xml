@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VBackupSpfileSummaryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VBackupSpfileSummary" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NUM_FILES_BACKED" property="numFilesBacked" jdbcType="DECIMAL" />
+    <result column="NUM_DISTINCT_FILES_BACKED" property="numDistinctFilesBacked" jdbcType="DECIMAL" />
+    <result column="MIN_MODIFICATION_TIME" property="minModificationTime" jdbcType="DATE" />
+    <result column="MAX_MODIFICATION_TIME" property="maxModificationTime" jdbcType="DATE" />
+    <result column="INPUT_BYTES" property="inputBytes" jdbcType="DECIMAL" />
+    <result column="INPUT_BYTES_DISPLAY" property="inputBytesDisplay" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

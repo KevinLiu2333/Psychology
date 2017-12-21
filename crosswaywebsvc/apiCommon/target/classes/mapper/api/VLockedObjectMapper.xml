@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VLockedObjectMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VLockedObject" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="XIDUSN" property="xidusn" jdbcType="DECIMAL" />
+    <result column="XIDSLOT" property="xidslot" jdbcType="DECIMAL" />
+    <result column="XIDSQN" property="xidsqn" jdbcType="DECIMAL" />
+    <result column="OBJECT_ID" property="objectId" jdbcType="DECIMAL" />
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="ORACLE_USERNAME" property="oracleUsername" jdbcType="VARCHAR" />
+    <result column="OS_USER_NAME" property="osUserName" jdbcType="VARCHAR" />
+    <result column="PROCESS" property="process" jdbcType="VARCHAR" />
+    <result column="LOCKED_MODE" property="lockedMode" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

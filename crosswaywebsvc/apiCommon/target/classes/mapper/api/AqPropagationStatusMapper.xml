@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AqPropagationStatusMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AqPropagationStatus" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="QUEUE_ID" property="queueId" jdbcType="DECIMAL" />
+    <id column="DESTINATION" property="destination" jdbcType="VARCHAR" />
+    <id column="DESTQUEUE_ID" property="destqueueId" jdbcType="DECIMAL" />
+    <result column="SEQUENCE" property="sequence" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="TXNID" property="txnid" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

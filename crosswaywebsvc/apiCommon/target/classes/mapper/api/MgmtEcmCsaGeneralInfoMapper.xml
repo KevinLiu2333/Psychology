@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtEcmCsaGeneralInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtEcmCsaGeneralInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ECM_SNAPSHOT_ID" property="ecmSnapshotId" jdbcType="VARBINARY" />
+    <result column="APPLET_VERSION" property="appletVersion" jdbcType="VARCHAR" />
+    <result column="CUSTOM_CLASS" property="customClass" jdbcType="VARCHAR" />
+    <result column="CUSTOM_CLASS_VERSION" property="customClassVersion" jdbcType="VARCHAR" />
+    <result column="TARGET_ID_METHOD" property="targetIdMethod" jdbcType="VARCHAR" />
+    <result column="OS_USER_NAME" property="osUserName" jdbcType="VARCHAR" />
+    <result column="BOOT_DISK_VOLUME_SERIAL_NUM" property="bootDiskVolumeSerialNum" jdbcType="VARCHAR" />
+    <result column="HOSTNAME" property="hostname" jdbcType="VARCHAR" />
+    <result column="DOMAIN" property="domain" jdbcType="VARCHAR" />
+    <result column="APPID" property="appid" jdbcType="VARCHAR" />
+    <result column="TARGET_KEY1" property="targetKey1" jdbcType="VARCHAR" />
+    <result column="TARGET_KEY2" property="targetKey2" jdbcType="VARCHAR" />
+    <result column="TARGET_KEY3" property="targetKey3" jdbcType="VARCHAR" />
+    <result column="PROXY_TARGET_NAME" property="proxyTargetName" jdbcType="VARCHAR" />
+    <result column="PROXY_TARGET_DISPLAY_NAME" property="proxyTargetDisplayName" jdbcType="VARCHAR" />
+    <result column="WORST_RULE_STATUS" property="worstRuleStatus" jdbcType="DECIMAL" />
+    <result column="PROXY_TARGET_ID" property="proxyTargetId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

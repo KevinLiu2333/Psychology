@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvMigAccRptsModulesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvMigAccRptsModules" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="PROJECT_ID" property="projectId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="MODULEID" property="moduleid" jdbcType="DECIMAL" />
+    <result column="REPORTID" property="reportid" jdbcType="DECIMAL" />
+    <result column="MODULENAME" property="modulename" jdbcType="VARCHAR" />
+    <result column="COUNTOFDECLARATIONLINES" property="countofdeclarationlines" jdbcType="DECIMAL" />
+    <result column="COUNTOFLINES" property="countoflines" jdbcType="DECIMAL" />
+    <result column="MODULETYPE" property="moduletype" jdbcType="DECIMAL" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LINES" property="lines" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtMessagesMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtMessages">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="MESSAGE_ID" jdbcType="VARCHAR" property="messageId" />
+    <id column="SUBSYSTEM" jdbcType="VARCHAR" property="subsystem" />
+    <id column="LANGUAGE_CODE" jdbcType="VARCHAR" property="languageCode" />
+    <id column="COUNTRY_CODE" jdbcType="VARCHAR" property="countryCode" />
+    <result column="MESSAGE" jdbcType="OTHER" property="message" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuProxyViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuProxyView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="USER_ID" property="userId" jdbcType="DECIMAL" />
+    <result column="CLIENT_NAME" property="clientName" jdbcType="VARCHAR" />
+    <result column="PROXY_NAME" property="proxyName" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="CRED_TYPE" property="credType" jdbcType="DECIMAL" />
+    <result column="PROXY_ROLE_LIST" property="proxyRoleList" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

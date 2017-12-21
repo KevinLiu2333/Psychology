@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtAlertAnnotationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtAlertAnnotations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="METRIC_NAME" property="metricName" jdbcType="VARCHAR" />
+    <result column="METRIC_COLUMN" property="metricColumn" jdbcType="VARCHAR" />
+    <result column="METRIC_LABEL" property="metricLabel" jdbcType="VARCHAR" />
+    <result column="COLUMN_LABEL" property="columnLabel" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE" property="keyValue" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE2" property="keyValue2" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE3" property="keyValue3" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE4" property="keyValue4" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE5" property="keyValue5" jdbcType="VARCHAR" />
+    <result column="MESSAGE" property="message" jdbcType="VARCHAR" />
+    <result column="ALERT_STATE" property="alertState" jdbcType="VARCHAR" />
+    <result column="VIOLATION_LEVEL" property="violationLevel" jdbcType="DECIMAL" />
+    <result column="COLLECTION_TIMESTAMP" property="collectionTimestamp" jdbcType="DATE" />
+    <result column="ANNOTATION_MESSAGE" property="annotationMessage" jdbcType="VARCHAR" />
+    <result column="ANNOTATION_TIMESTAMP" property="annotationTimestamp" jdbcType="DATE" />
+    <result column="ANNOTATED_BY" property="annotatedBy" jdbcType="VARCHAR" />
+    <result column="ANNOTATION_TYPE" property="annotationType" jdbcType="VARCHAR" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <result column="METRIC_GUID" property="metricGuid" jdbcType="VARBINARY" />
+    <result column="SOURCE_OBJ_GUID" property="sourceObjGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

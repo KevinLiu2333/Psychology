@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtJobStepCommandLogMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtJobStepCommandLog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="COMMAND_BLOCK_ID" property="commandBlockId" jdbcType="DECIMAL" />
+    <result column="STEP_ID" property="stepId" jdbcType="DECIMAL" />
+    <result column="COMMAND_BLOCK_STATUS" property="commandBlockStatus" jdbcType="DECIMAL" />
+    <result column="COMMAND_BLOCK_ERROR" property="commandBlockError" jdbcType="VARCHAR" />
+    <result column="COMMAND_BLOCK_TEXT_ID" property="commandBlockTextId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

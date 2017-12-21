@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtE2eJdbcMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtE2eJdbc" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="COLLECTION_TIMESTAMP" property="collectionTimestamp" jdbcType="DATE" />
+    <id column="URI" property="uri" jdbcType="VARCHAR" />
+    <id column="KEY_GUID" property="keyGuid" jdbcType="VARBINARY" />
+    <id column="VHOST" property="vhost" jdbcType="VARCHAR" />
+    <id column="APP_ID" property="appId" jdbcType="VARCHAR" />
+    <result column="USED_CONN_COUNT" property="usedConnCount" jdbcType="DECIMAL" />
+    <result column="CONN_CACHE_HIT" property="connCacheHit" jdbcType="DECIMAL" />
+    <result column="CONN_CACHE_MISS" property="connCacheMiss" jdbcType="DECIMAL" />
+    <result column="STMT_CREATE_TIME" property="stmtCreateTime" jdbcType="DECIMAL" />
+    <result column="STMT_CACHE_HIT" property="stmtCacheHit" jdbcType="DECIMAL" />
+    <result column="STMT_CACHE_MISS" property="stmtCacheMiss" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

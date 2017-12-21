@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaSchedulerJobArgsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaSchedulerJobArgs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="JOB_NAME" property="jobName" jdbcType="VARCHAR" />
+    <result column="ARGUMENT_NAME" property="argumentName" jdbcType="VARCHAR" />
+    <result column="ARGUMENT_POSITION" property="argumentPosition" jdbcType="DECIMAL" />
+    <result column="ARGUMENT_TYPE" property="argumentType" jdbcType="VARCHAR" />
+    <result column="VALUE" property="value" jdbcType="VARCHAR" />
+    <result column="ANYDATA_VALUE" property="anydataValue" jdbcType="OTHER" />
+    <result column="OUT_ARGUMENT" property="outArgument" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

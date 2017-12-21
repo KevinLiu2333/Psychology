@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WarehousesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Warehouses" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="WAREHOUSE_ID" property="warehouseId" jdbcType="DECIMAL" />
+    <result column="WAREHOUSE_SPEC" property="warehouseSpec" jdbcType="OTHER" />
+    <result column="WAREHOUSE_NAME" property="warehouseName" jdbcType="VARCHAR" />
+    <result column="LOCATION_ID" property="locationId" jdbcType="DECIMAL" />
+    <result column="WH_GEO_LOCATION" property="whGeoLocation" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

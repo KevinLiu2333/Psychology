@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RecentResourceIncarnationsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RecentResourceIncarnations" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="RESOURCE_TYPE" property="resourceType" jdbcType="VARCHAR" />
+    <id column="DB_DOMAIN" property="dbDomain" jdbcType="VARCHAR" />
+    <id column="DB_UNIQUE_NAME" property="dbUniqueName" jdbcType="VARCHAR" />
+    <id column="INSTANCE_NAME" property="instanceName" jdbcType="VARCHAR" />
+    <id column="INCARNATION" property="incarnation" jdbcType="VARCHAR" />
+    <id column="STARTUP_TIME" property="startupTime" jdbcType="OTHER" />
+    <result column="RESOURCE_ID" property="resourceId" jdbcType="DECIMAL" />
+    <result column="RESOURCE_NAME" property="resourceName" jdbcType="VARCHAR" />
+    <result column="HOST_NAME" property="hostName" jdbcType="VARCHAR" />
+    <result column="LOCATION" property="location" jdbcType="VARCHAR" />
+    <result column="SHUTDOWN_TIME" property="shutdownTime" jdbcType="OTHER" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

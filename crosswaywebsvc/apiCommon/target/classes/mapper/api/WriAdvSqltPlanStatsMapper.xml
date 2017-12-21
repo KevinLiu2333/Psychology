@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriAdvSqltPlanStatsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriAdvSqltPlanStats" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="PLAN_ID" property="planId" jdbcType="DECIMAL" />
+    <result column="PARSE_TIME" property="parseTime" jdbcType="DECIMAL" />
+    <result column="EXEC_TIME" property="execTime" jdbcType="DECIMAL" />
+    <result column="CPU_TIME" property="cpuTime" jdbcType="DECIMAL" />
+    <result column="USER_IO_TIME" property="userIoTime" jdbcType="DECIMAL" />
+    <result column="BUFFER_GETS" property="bufferGets" jdbcType="DECIMAL" />
+    <result column="DISK_READS" property="diskReads" jdbcType="DECIMAL" />
+    <result column="DIRECT_WRITES" property="directWrites" jdbcType="DECIMAL" />
+    <result column="ROWS_PROCESSED" property="rowsProcessed" jdbcType="DECIMAL" />
+    <result column="FETCHES" property="fetches" jdbcType="DECIMAL" />
+    <result column="EXECUTIONS" property="executions" jdbcType="DECIMAL" />
+    <result column="END_OF_FETCH_COUNT" property="endOfFetchCount" jdbcType="DECIMAL" />
+    <result column="OPTIMIZER_COST" property="optimizerCost" jdbcType="DECIMAL" />
+    <result column="IO_INTERCONNECT_BYTES" property="ioInterconnectBytes" jdbcType="DECIMAL" />
+    <result column="SPARE_N1" property="spareN1" jdbcType="DECIMAL" />
+    <result column="SPARE_N2" property="spareN2" jdbcType="DECIMAL" />
+    <result column="SPARE_N3" property="spareN3" jdbcType="DECIMAL" />
+    <result column="SPARE_N4" property="spareN4" jdbcType="DECIMAL" />
+    <result column="SPARE_N5" property="spareN5" jdbcType="DECIMAL" />
+    <result column="SPARE_C1" property="spareC1" jdbcType="VARCHAR" />
+    <result column="SPARE_C2" property="spareC2" jdbcType="VARCHAR" />
+    <result column="TESTEXEC_TOTAL_EXECS" property="testexecTotalExecs" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="SPARE_N6" property="spareN6" jdbcType="DECIMAL" />
+    <result column="SPARE_N7" property="spareN7" jdbcType="DECIMAL" />
+    <result column="SPARE_N8" property="spareN8" jdbcType="DECIMAL" />
+    <result column="SPARE_N9" property="spareN9" jdbcType="DECIMAL" />
+    <result column="SPARE_N10" property="spareN10" jdbcType="DECIMAL" />
+    <result column="OTHER" property="other" jdbcType="CLOB" />
+    <result column="SPARE_C3" property="spareC3" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

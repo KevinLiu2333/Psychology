@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowStandardCssMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowStandardCss" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="CLASS_NAME" property="className" jdbcType="VARCHAR" />
+    <result column="DEFINITION" property="definition" jdbcType="VARCHAR" />
+    <result column="EXAMPLE_01" property="example01" jdbcType="VARCHAR" />
+    <result column="EXAMPLE_02" property="example02" jdbcType="VARCHAR" />
+    <result column="CLASS_CATEGORY" property="classCategory" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

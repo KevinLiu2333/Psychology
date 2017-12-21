@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtSwlibEntitiesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtSwlibEntities" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ENTITY_ID" property="entityId" jdbcType="VARBINARY" />
+    <result column="NAME" property="name" jdbcType="OTHER" />
+    <result column="OWNER" property="owner" jdbcType="OTHER" />
+    <result column="CREATION_DATE" property="creationDate" jdbcType="DATE" />
+    <result column="DESCRIPTION" property="description" jdbcType="OTHER" />
+    <result column="TYPE" property="type" jdbcType="OTHER" />
+    <result column="VENDOR" property="vendor" jdbcType="OTHER" />
+    <result column="DIRECTORY_ID" property="directoryId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

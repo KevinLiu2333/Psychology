@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvLogmnrDictionaryLoadMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvLogmnrDictionaryLoad" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="LOGMNR_UID" property="logmnrUid" jdbcType="DECIMAL" />
+    <result column="ACTION#" property="action" jdbcType="DECIMAL" />
+    <result column="OPCODE" property="opcode" jdbcType="DECIMAL" />
+    <result column="COMMAND" property="command" jdbcType="VARCHAR" />
+    <result column="CURRENT_STATE" property="currentState" jdbcType="VARCHAR" />
+    <result column="COMPLETED_ACTIONS" property="completedActions" jdbcType="DECIMAL" />
+    <result column="TOTAL_ACTIONS" property="totalActions" jdbcType="DECIMAL" />
+    <result column="LOADED" property="loaded" jdbcType="VARCHAR" />
+    <result column="PERCENT_DONE" property="percentDone" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

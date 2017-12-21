@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserExpfilExpressionSetsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserExpfilExpressionSets" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="EXPR_TABLE" property="exprTable" jdbcType="VARCHAR" />
+    <result column="EXPR_COLUMN" property="exprColumn" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_SET" property="attributeSet" jdbcType="VARCHAR" />
+    <result column="LAST_ANALYZED" property="lastAnalyzed" jdbcType="DATE" />
+    <result column="NUM_EXPRESSIONS" property="numExpressions" jdbcType="DECIMAL" />
+    <result column="PREDS_PER_EXPR" property="predsPerExpr" jdbcType="DECIMAL" />
+    <result column="NUM_SPARSE_PREDS" property="numSparsePreds" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

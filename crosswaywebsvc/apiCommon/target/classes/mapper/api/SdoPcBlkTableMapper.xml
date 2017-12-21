@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoPcBlkTableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoPcBlkTable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ_ID" property="objId" jdbcType="DECIMAL" />
+    <result column="BLK_ID" property="blkId" jdbcType="DECIMAL" />
+    <result column="BLK_EXTENT" property="blkExtent" jdbcType="OTHER" />
+    <result column="BLK_DOMAIN" property="blkDomain" jdbcType="OTHER" />
+    <result column="PCBLK_MIN_RES" property="pcblkMinRes" jdbcType="DECIMAL" />
+    <result column="PCBLK_MAX_RES" property="pcblkMaxRes" jdbcType="DECIMAL" />
+    <result column="NUM_POINTS" property="numPoints" jdbcType="DECIMAL" />
+    <result column="NUM_UNSORTED_POINTS" property="numUnsortedPoints" jdbcType="DECIMAL" />
+    <result column="PT_SORT_DIM" property="ptSortDim" jdbcType="DECIMAL" />
+    <result column="POINTS" property="points" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

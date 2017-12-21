@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllXstreamInboundProgressMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllXstreamInboundProgress" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SERVER_NAME" property="serverName" jdbcType="VARCHAR" />
+    <result column="PROCESSED_LOW_POSITION" property="processedLowPosition" jdbcType="VARBINARY" />
+    <result column="APPLIED_LOW_POSITION" property="appliedLowPosition" jdbcType="VARBINARY" />
+    <result column="APPLIED_HIGH_POSITION" property="appliedHighPosition" jdbcType="VARBINARY" />
+    <result column="SPILL_POSITION" property="spillPosition" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

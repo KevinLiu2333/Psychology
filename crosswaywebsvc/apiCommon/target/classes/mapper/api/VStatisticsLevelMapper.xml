@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VStatisticsLevelMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VStatisticsLevel" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="STATISTICS_NAME" property="statisticsName" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="SESSION_STATUS" property="sessionStatus" jdbcType="VARCHAR" />
+    <result column="SYSTEM_STATUS" property="systemStatus" jdbcType="VARCHAR" />
+    <result column="ACTIVATION_LEVEL" property="activationLevel" jdbcType="VARCHAR" />
+    <result column="STATISTICS_VIEW_NAME" property="statisticsViewName" jdbcType="VARCHAR" />
+    <result column="SESSION_SETTABLE" property="sessionSettable" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

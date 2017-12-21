@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtStorageReportIssuesMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtStorageReportIssues">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ECM_SNAPSHOT_ID" jdbcType="VARBINARY" property="ecmSnapshotId" />
+    <id column="TYPE" jdbcType="VARCHAR" property="type" />
+    <id column="MESSAGE_COUNTER" jdbcType="DECIMAL" property="messageCounter" />
+    <result column="MESSAGE_ID" jdbcType="VARCHAR" property="messageId" />
+    <result column="MESSAGE_PARAMS" jdbcType="VARCHAR" property="messageParams" />
+    <result column="ACTION_ID" jdbcType="VARCHAR" property="actionId" />
+    <result column="ACTION_PARAMS" jdbcType="VARCHAR" property="actionParams" />
+  </resultMap>
+</mapper>

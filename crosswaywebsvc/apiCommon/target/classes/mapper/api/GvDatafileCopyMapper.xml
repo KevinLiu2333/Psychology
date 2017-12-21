@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvDatafileCopyMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvDatafileCopy" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="RECID" property="recid" jdbcType="DECIMAL" />
+    <result column="STAMP" property="stamp" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="TAG" property="tag" jdbcType="VARCHAR" />
+    <result column="FILE#" property="file" jdbcType="DECIMAL" />
+    <result column="RFILE#" property="rfile" jdbcType="DECIMAL" />
+    <result column="CREATION_CHANGE#" property="creationChange" jdbcType="DECIMAL" />
+    <result column="CREATION_TIME" property="creationTime" jdbcType="DATE" />
+    <result column="RESETLOGS_CHANGE#" property="resetlogsChange" jdbcType="DECIMAL" />
+    <result column="RESETLOGS_TIME" property="resetlogsTime" jdbcType="DATE" />
+    <result column="INCREMENTAL_LEVEL" property="incrementalLevel" jdbcType="DECIMAL" />
+    <result column="CHECKPOINT_CHANGE#" property="checkpointChange" jdbcType="DECIMAL" />
+    <result column="CHECKPOINT_TIME" property="checkpointTime" jdbcType="DATE" />
+    <result column="ABSOLUTE_FUZZY_CHANGE#" property="absoluteFuzzyChange" jdbcType="DECIMAL" />
+    <result column="RECOVERY_FUZZY_CHANGE#" property="recoveryFuzzyChange" jdbcType="DECIMAL" />
+    <result column="RECOVERY_FUZZY_TIME" property="recoveryFuzzyTime" jdbcType="DATE" />
+    <result column="ONLINE_FUZZY" property="onlineFuzzy" jdbcType="VARCHAR" />
+    <result column="BACKUP_FUZZY" property="backupFuzzy" jdbcType="VARCHAR" />
+    <result column="MARKED_CORRUPT" property="markedCorrupt" jdbcType="DECIMAL" />
+    <result column="MEDIA_CORRUPT" property="mediaCorrupt" jdbcType="DECIMAL" />
+    <result column="LOGICALLY_CORRUPT" property="logicallyCorrupt" jdbcType="DECIMAL" />
+    <result column="BLOCKS" property="blocks" jdbcType="DECIMAL" />
+    <result column="BLOCK_SIZE" property="blockSize" jdbcType="DECIMAL" />
+    <result column="OLDEST_OFFLINE_RANGE" property="oldestOfflineRange" jdbcType="DECIMAL" />
+    <result column="DELETED" property="deleted" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="COMPLETION_TIME" property="completionTime" jdbcType="DATE" />
+    <result column="CONTROLFILE_TYPE" property="controlfileType" jdbcType="VARCHAR" />
+    <result column="KEEP" property="keep" jdbcType="VARCHAR" />
+    <result column="KEEP_UNTIL" property="keepUntil" jdbcType="DATE" />
+    <result column="KEEP_OPTIONS" property="keepOptions" jdbcType="VARCHAR" />
+    <result column="SCANNED" property="scanned" jdbcType="VARCHAR" />
+    <result column="IS_RECOVERY_DEST_FILE" property="isRecoveryDestFile" jdbcType="VARCHAR" />
+    <result column="RMAN_STATUS_RECID" property="rmanStatusRecid" jdbcType="DECIMAL" />
+    <result column="RMAN_STATUS_STAMP" property="rmanStatusStamp" jdbcType="DECIMAL" />
+    <result column="CONVERTED_FILE" property="convertedFile" jdbcType="VARCHAR" />
+    <result column="SAME_ENDIAN" property="sameEndian" jdbcType="VARCHAR" />
+    <result column="FOREIGN_DBID" property="foreignDbid" jdbcType="DECIMAL" />
+    <result column="PLUGGED_READONLY" property="pluggedReadonly" jdbcType="VARCHAR" />
+    <result column="PLUGIN_CHANGE#" property="pluginChange" jdbcType="DECIMAL" />
+    <result column="PLUGIN_RESETLOGS_CHANGE#" property="pluginResetlogsChange" jdbcType="DECIMAL" />
+    <result column="PLUGIN_RESETLOGS_TIME" property="pluginResetlogsTime" jdbcType="DATE" />
+    <result column="BACKED_BY_VSS" property="backedByVss" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

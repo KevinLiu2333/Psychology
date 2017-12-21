@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AcJoinInfoMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AcJoinInfo">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="JOIN_ID" jdbcType="VARCHAR" property="joinId" />
+    <result column="UNIT_ID" jdbcType="VARCHAR" property="unitId" />
+    <result column="UNIT_NAME" jdbcType="VARCHAR" property="unitName" />
+    <result column="JOIN_NAME" jdbcType="VARCHAR" property="joinName" />
+    <result column="IS_SYS_INFO" jdbcType="VARCHAR" property="isSysInfo" />
+    <result column="JOIN_DATE" jdbcType="DATE" property="joinDate" />
+    <result column="JOIN_TYPE" jdbcType="VARCHAR" property="joinType" />
+    <result column="JOIN_STATUS" jdbcType="VARCHAR" property="joinStatus" />
+    <result column="UPDATE_MOMO" jdbcType="VARCHAR" property="updateMomo" />
+  </resultMap>
+</mapper>

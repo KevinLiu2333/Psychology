@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtTestMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtTest" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TEST_TYPE" property="testType" jdbcType="VARCHAR" />
+    <result column="LABEL" property="label" jdbcType="VARCHAR" />
+    <result column="NLSID" property="nlsid" jdbcType="VARCHAR" />
+    <result column="RESOURCE_BUNDLE" property="resourceBundle" jdbcType="VARCHAR" />
+    <result column="COLLECTION_GENERATOR" property="collectionGenerator" jdbcType="VARCHAR" />
+    <result column="MIN_BEACON_VER" property="minBeaconVer" jdbcType="VARCHAR" />
+    <result column="TEST_VERSION" property="testVersion" jdbcType="VARCHAR" />
+    <result column="DEPRECATED" property="deprecated" jdbcType="CHAR" />
+    <result column="AVAIL_METRIC" property="availMetric" jdbcType="VARCHAR" />
+    <result column="AVAIL_METRIC_COLUMN" property="availMetricColumn" jdbcType="VARCHAR" />
+    <result column="HELP_ID" property="helpId" jdbcType="VARCHAR" />
+    <result column="TIP_TEXT" property="tipText" jdbcType="VARCHAR" />
+    <result column="TIP_TEXT_NLSID" property="tipTextNlsid" jdbcType="VARCHAR" />
+    <result column="VALIDATOR" property="validator" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

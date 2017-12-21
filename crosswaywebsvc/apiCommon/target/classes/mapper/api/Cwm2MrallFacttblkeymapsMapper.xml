@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Cwm2MrallFacttblkeymapsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Cwm2MrallFacttblkeymaps" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="CUBE_NAME" property="cubeName" jdbcType="VARCHAR" />
+    <result column="DIM_HIER_COMBO_ID" property="dimHierComboId" jdbcType="DECIMAL" />
+    <result column="DIMENSION_OWNER" property="dimensionOwner" jdbcType="VARCHAR" />
+    <result column="DIMENSION_NAME" property="dimensionName" jdbcType="VARCHAR" />
+    <result column="HIERARCHY_NAME" property="hierarchyName" jdbcType="VARCHAR" />
+    <result column="LEVEL_NAME" property="levelName" jdbcType="VARCHAR" />
+    <result column="FACT_TABLE_OWNER" property="factTableOwner" jdbcType="VARCHAR" />
+    <result column="FACT_TABLE_NAME" property="factTableName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="COLUMN_DATA_TYPE" property="columnDataType" jdbcType="VARCHAR" />
+    <result column="COLUMN_DATA_LENGTH" property="columnDataLength" jdbcType="DECIMAL" />
+    <result column="COLUMN_DATA_PRECISION" property="columnDataPrecision" jdbcType="DECIMAL" />
+    <result column="GID_COLUMN_NAME" property="gidColumnName" jdbcType="VARCHAR" />
+    <result column="GID_COLUMN_DATA_TYPE" property="gidColumnDataType" jdbcType="VARCHAR" />
+    <result column="GID_COLUMN_DATA_LENGTH" property="gidColumnDataLength" jdbcType="DECIMAL" />
+    <result column="GID_COLUMN_DATA_PRECISION" property="gidColumnDataPrecision" jdbcType="DECIMAL" />
+    <result column="DIMENSION_KEYMAP_TYPE" property="dimensionKeymapType" jdbcType="DECIMAL" />
+    <result column="MV_SUMMARYCODE" property="mvSummarycode" jdbcType="VARCHAR" />
+    <result column="COLUMN_POSITION" property="columnPosition" jdbcType="DECIMAL" />
+    <result column="VERSION_ID" property="versionId" jdbcType="CHAR" />
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="TABLE_ID" property="tableId" jdbcType="DECIMAL" />
+    <result column="COLUMN_ID" property="columnId" jdbcType="DECIMAL" />
+    <result column="GIDCOLUMN_ID" property="gidcolumnId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

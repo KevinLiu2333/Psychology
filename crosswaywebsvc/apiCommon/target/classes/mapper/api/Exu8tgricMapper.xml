@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu8tgricMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu8tgric" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNERID" property="ownerid" jdbcType="DECIMAL" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="BASEOBJECT" property="baseobject" jdbcType="DECIMAL" />
+    <result column="DEFINITION" property="definition" jdbcType="VARCHAR" />
+    <result column="WHENCLAUSE" property="whenclause" jdbcType="VARCHAR" />
+    <result column="ENABLED" property="enabled" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="BASENAME" property="basename" jdbcType="VARCHAR" />
+    <result column="BASETYPE" property="basetype" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="BTOWNER" property="btowner" jdbcType="VARCHAR" />
+    <result column="BTOWNERID" property="btownerid" jdbcType="DECIMAL" />
+    <result column="ACTIONSIZE" property="actionsize" jdbcType="DECIMAL" />
+    <result column="ACTION" property="action" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

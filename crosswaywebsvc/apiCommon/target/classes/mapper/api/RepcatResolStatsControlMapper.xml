@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RepcatResolStatsControlMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RepcatResolStatsControl" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SNAME" property="sname" jdbcType="VARCHAR" />
+    <id column="ONAME" property="oname" jdbcType="VARCHAR" />
+    <result column="CREATED" property="created" jdbcType="DATE" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="STATUS_UPDATE_DATE" property="statusUpdateDate" jdbcType="DATE" />
+    <result column="PURGED_DATE" property="purgedDate" jdbcType="DATE" />
+    <result column="LAST_PURGE_START_DATE" property="lastPurgeStartDate" jdbcType="DATE" />
+    <result column="LAST_PURGE_END_DATE" property="lastPurgeEndDate" jdbcType="DATE" />
+  </resultMap>
+</mapper>

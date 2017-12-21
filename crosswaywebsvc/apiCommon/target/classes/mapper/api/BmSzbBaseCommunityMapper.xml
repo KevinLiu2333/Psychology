@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.BmSzbBaseCommunityMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.BmSzbBaseCommunity" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COMMUNITY_ID" property="communityId" jdbcType="VARCHAR" />
+    <result column="VILLAGE_ID" property="villageId" jdbcType="VARCHAR" />
+    <result column="COMMUNITY_NAME" property="communityName" jdbcType="VARCHAR" />
+    <result column="COMMUNITY_ADDRESS" property="communityAddress" jdbcType="VARCHAR" />
+    <result column="COMMUNITY_TYPE" property="communityType" jdbcType="VARCHAR" />
+    <result column="HU_COUNT" property="huCount" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

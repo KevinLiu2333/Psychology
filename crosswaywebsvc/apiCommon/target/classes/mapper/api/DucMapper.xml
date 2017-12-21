@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DucMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Duc" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="PACK" property="pack" jdbcType="VARCHAR" />
+    <result column="PROC" property="proc" jdbcType="VARCHAR" />
+    <result column="FIELD1" property="field1" jdbcType="DECIMAL" />
+    <result column="OPERATION#" property="operation" jdbcType="DECIMAL" />
+    <result column="SEQ" property="seq" jdbcType="DECIMAL" />
+    <result column="COM" property="com" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

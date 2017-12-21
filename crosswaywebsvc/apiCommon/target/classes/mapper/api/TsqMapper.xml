@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TsqMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Tsq" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TS#" property="ts" jdbcType="DECIMAL" />
+    <result column="USER#" property="user" jdbcType="DECIMAL" />
+    <result column="GRANTOR#" property="grantor" jdbcType="DECIMAL" />
+    <result column="BLOCKS" property="blocks" jdbcType="DECIMAL" />
+    <result column="MAXBLOCKS" property="maxblocks" jdbcType="DECIMAL" />
+    <result column="PRIV1" property="priv1" jdbcType="DECIMAL" />
+    <result column="PRIV2" property="priv2" jdbcType="DECIMAL" />
+    <result column="PRIV3" property="priv3" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.PendingTransMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.PendingTrans" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOCAL_TRAN_ID" property="localTranId" jdbcType="VARCHAR" />
+    <result column="GLOBAL_TRAN_FMT" property="globalTranFmt" jdbcType="DECIMAL" />
+    <result column="GLOBAL_ORACLE_ID" property="globalOracleId" jdbcType="VARCHAR" />
+    <result column="TRAN_COMMENT" property="tranComment" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="HEURISTIC_DFLT" property="heuristicDflt" jdbcType="VARCHAR" />
+    <result column="TYPE#" property="type" jdbcType="DECIMAL" />
+    <result column="FAIL_TIME" property="failTime" jdbcType="DATE" />
+    <result column="HEURISTIC_TIME" property="heuristicTime" jdbcType="DATE" />
+    <result column="RECO_TIME" property="recoTime" jdbcType="DATE" />
+    <result column="TOP_DB_USER" property="topDbUser" jdbcType="VARCHAR" />
+    <result column="TOP_OS_USER" property="topOsUser" jdbcType="VARCHAR" />
+    <result column="TOP_OS_HOST" property="topOsHost" jdbcType="VARCHAR" />
+    <result column="TOP_OS_TERMINAL" property="topOsTerminal" jdbcType="VARCHAR" />
+    <result column="GLOBAL_COMMIT#" property="globalCommit" jdbcType="VARCHAR" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="VARCHAR" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+    <result column="SPARE4" property="spare4" jdbcType="VARCHAR" />
+    <result column="GLOBAL_FOREIGN_ID" property="globalForeignId" jdbcType="VARBINARY" />
+    <result column="SESSION_VECTOR" property="sessionVector" jdbcType="VARBINARY" />
+    <result column="RECO_VECTOR" property="recoVector" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

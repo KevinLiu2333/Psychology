@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VSqlHintMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VSqlHint" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="SQL_FEATURE" property="sqlFeature" jdbcType="VARCHAR" />
+    <result column="CLASS" property="class" jdbcType="VARCHAR" />
+    <result column="INVERSE" property="inverse" jdbcType="VARCHAR" />
+    <result column="TARGET_LEVEL" property="targetLevel" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="VERSION_OUTLINE" property="versionOutline" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

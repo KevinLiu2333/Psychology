@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.CtxUserIndexSubLexersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.CtxUserIndexSubLexers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ISL_INDEX_NAME" property="islIndexName" jdbcType="VARCHAR" />
+    <result column="ISL_LANGUAGE" property="islLanguage" jdbcType="VARCHAR" />
+    <result column="ISL_ALT_VALUE" property="islAltValue" jdbcType="VARCHAR" />
+    <result column="ISL_OBJECT" property="islObject" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

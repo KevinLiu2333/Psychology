@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaTsmDestinationMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaTsmDestination" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SOURCE_DATABASE_NAME" property="sourceDatabaseName" jdbcType="VARCHAR" />
+    <result column="DESTINATION_DATABASE_NAME" property="destinationDatabaseName" jdbcType="VARCHAR" />
+    <result column="DESTINATION_INSTANCE_NAME" property="destinationInstanceName" jdbcType="VARCHAR" />
+    <result column="DESTINATION_INSTANCE_ID" property="destinationInstanceId" jdbcType="VARCHAR" />
+    <result column="DESTINATION_INST_START_TIME" property="destinationInstStartTime" jdbcType="OTHER" />
+    <result column="SEQUENCE#" property="sequence" jdbcType="DECIMAL" />
+    <result column="DESTINATION_SID" property="destinationSid" jdbcType="DECIMAL" />
+    <result column="DESTINATION_SERIAL#" property="destinationSerial" jdbcType="DECIMAL" />
+    <result column="DESTINATION_START_TIME" property="destinationStartTime" jdbcType="OTHER" />
+    <result column="DESTINATION_END_TIME" property="destinationEndTime" jdbcType="OTHER" />
+    <result column="DESTINATION_USER_NAME" property="destinationUserName" jdbcType="VARCHAR" />
+    <result column="DESTINATION_SCHEMA_NAME" property="destinationSchemaName" jdbcType="VARCHAR" />
+    <result column="DESTINATION_STATE" property="destinationState" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

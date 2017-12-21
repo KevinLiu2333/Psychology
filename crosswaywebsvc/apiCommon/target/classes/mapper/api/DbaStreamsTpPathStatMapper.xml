@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaStreamsTpPathStatMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaStreamsTpPathStat" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PATH_ID" property="pathId" jdbcType="DECIMAL" />
+    <result column="STATISTIC_TIME" property="statisticTime" jdbcType="DATE" />
+    <result column="STATISTIC_NAME" property="statisticName" jdbcType="VARCHAR" />
+    <result column="STATISTIC_VALUE" property="statisticValue" jdbcType="DECIMAL" />
+    <result column="STATISTIC_UNIT" property="statisticUnit" jdbcType="VARCHAR" />
+    <result column="ADVISOR_RUN_ID" property="advisorRunId" jdbcType="DECIMAL" />
+    <result column="ADVISOR_RUN_TIME" property="advisorRunTime" jdbcType="DATE" />
+  </resultMap>
+</mapper>

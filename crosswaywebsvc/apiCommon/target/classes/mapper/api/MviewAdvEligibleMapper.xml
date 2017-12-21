@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MviewAdvEligibleMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MviewAdvEligible" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SUMOBJN#" property="sumobjn" jdbcType="DECIMAL" />
+    <id column="RUNID#" property="runid" jdbcType="DECIMAL" />
+    <result column="BYTECOST" property="bytecost" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="FREQUENCY" property="frequency" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

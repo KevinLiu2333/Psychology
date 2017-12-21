@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaHistJavaPoolAdviceMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaHistJavaPoolAdvice" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="JAVA_POOL_SIZE_FOR_ESTIMATE" property="javaPoolSizeForEstimate" jdbcType="DECIMAL" />
+    <result column="JAVA_POOL_SIZE_FACTOR" property="javaPoolSizeFactor" jdbcType="DECIMAL" />
+    <result column="ESTD_LC_SIZE" property="estdLcSize" jdbcType="DECIMAL" />
+    <result column="ESTD_LC_MEMORY_OBJECTS" property="estdLcMemoryObjects" jdbcType="DECIMAL" />
+    <result column="ESTD_LC_TIME_SAVED" property="estdLcTimeSaved" jdbcType="DECIMAL" />
+    <result column="ESTD_LC_TIME_SAVED_FACTOR" property="estdLcTimeSavedFactor" jdbcType="DECIMAL" />
+    <result column="ESTD_LC_LOAD_TIME" property="estdLcLoadTime" jdbcType="DECIMAL" />
+    <result column="ESTD_LC_LOAD_TIME_FACTOR" property="estdLcLoadTimeFactor" jdbcType="DECIMAL" />
+    <result column="ESTD_LC_MEMORY_OBJECT_HITS" property="estdLcMemoryObjectHits" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

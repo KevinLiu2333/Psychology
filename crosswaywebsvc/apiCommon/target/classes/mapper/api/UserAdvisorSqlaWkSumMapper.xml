@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserAdvisorSqlaWkSumMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserAdvisorSqlaWkSum" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TASK_NAME" property="taskName" jdbcType="VARCHAR" />
+    <result column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <result column="NUM_SELECT_STMT" property="numSelectStmt" jdbcType="DECIMAL" />
+    <result column="NUM_UPDATE_STMT" property="numUpdateStmt" jdbcType="DECIMAL" />
+    <result column="NUM_DELETE_STMT" property="numDeleteStmt" jdbcType="DECIMAL" />
+    <result column="NUM_INSERT_STMT" property="numInsertStmt" jdbcType="DECIMAL" />
+    <result column="NUM_MERGE_STMT" property="numMergeStmt" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

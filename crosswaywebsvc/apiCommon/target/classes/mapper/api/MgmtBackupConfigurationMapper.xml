@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtBackupConfigurationMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtBackupConfiguration" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="AUTOBACKUPLOCATION" property="autobackuplocation" jdbcType="VARCHAR" />
+    <result column="USE_DISK" property="useDisk" jdbcType="VARCHAR" />
+    <result column="DISK_PARALLELISM" property="diskParallelism" jdbcType="DECIMAL" />
+    <result column="DISK_LOCATION" property="diskLocation" jdbcType="VARCHAR" />
+    <result column="USE_TAPE" property="useTape" jdbcType="VARCHAR" />
+    <result column="TAPE_PARALLELISM" property="tapeParallelism" jdbcType="DECIMAL" />
+    <result column="TAPE_PARMS" property="tapeParms" jdbcType="VARCHAR" />
+    <result column="PIECE_SIZE_UNIT" property="pieceSizeUnit" jdbcType="VARCHAR" />
+    <result column="MAX_PIECE_SIZE" property="maxPieceSize" jdbcType="DECIMAL" />
+    <result column="TAPE_DF_COPIES" property="tapeDfCopies" jdbcType="DECIMAL" />
+    <result column="TAPE_AL_COPIES" property="tapeAlCopies" jdbcType="DECIMAL" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

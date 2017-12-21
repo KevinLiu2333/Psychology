@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowImageRepositoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowImageRepository" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="IMAGE_NAME" property="imageName" jdbcType="VARCHAR" />
+    <result column="IMAGE_TAG" property="imageTag" jdbcType="VARCHAR" />
+    <result column="UPPER_IMAGE_NAME" property="upperImageName" jdbcType="VARCHAR" />
+    <result column="FILE_OBJECT_ID" property="fileObjectId" jdbcType="DECIMAL" />
+    <result column="NATIONAL_LANGUAGE" property="nationalLanguage" jdbcType="VARCHAR" />
+    <result column="HEIGHT" property="height" jdbcType="DECIMAL" />
+    <result column="WIDTH" property="width" jdbcType="DECIMAL" />
+    <result column="NOTES" property="notes" jdbcType="VARCHAR" />
+    <result column="IS_ON_FILESYSTEM" property="isOnFilesystem" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

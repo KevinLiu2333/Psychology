@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllDequeueQueuesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllDequeueQueues" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="QUEUE_TABLE" property="queueTable" jdbcType="VARCHAR" />
+    <result column="QID" property="qid" jdbcType="DECIMAL" />
+    <result column="QUEUE_TYPE" property="queueType" jdbcType="VARCHAR" />
+    <result column="MAX_RETRIES" property="maxRetries" jdbcType="DECIMAL" />
+    <result column="RETRY_DELAY" property="retryDelay" jdbcType="DECIMAL" />
+    <result column="ENQUEUE_ENABLED" property="enqueueEnabled" jdbcType="VARCHAR" />
+    <result column="DEQUEUE_ENABLED" property="dequeueEnabled" jdbcType="VARCHAR" />
+    <result column="RETENTION" property="retention" jdbcType="VARCHAR" />
+    <result column="USER_COMMENT" property="userComment" jdbcType="VARCHAR" />
+    <result column="NETWORK_NAME" property="networkName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

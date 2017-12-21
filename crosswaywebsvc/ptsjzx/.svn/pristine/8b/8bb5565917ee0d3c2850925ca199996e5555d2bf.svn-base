@@ -1,0 +1,110 @@
+package com.wonders.ws.send.minzhengju;
+
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+import org.nutz.ioc.Ioc;
+
+import com.wonders.api.entity.ApiServiceUser;
+import com.wonders.tiles.tools.IocSingle;
+import com.wonders.ws.WsUitl;
+import com.wonders.ws.dao.KeyChecker;
+import com.wonders.ws.dao.ServiceDao;
+
+public class mzjTaizhangPeopleService {
+	Ioc			ioc	= null;
+	ServiceDao	dao	= null;
+
+	/**
+	 * 根据身份证号查询人基本信息
+	 * 
+	 * @param zjhm
+	 * @return
+	 */
+	public String getInfoByZjhmToMzjTaizhang(String key, String SFZH, String returntype) {
+		try {
+			if (ioc == null) {
+				ioc = IocSingle.getInstance();
+			}
+			KeyChecker checker = ioc.get(KeyChecker.class);
+			ApiServiceUser serviceUser = checker.keyckeck(key, "getInfoByZjhmToMzjTaizhang");
+			if (serviceUser == null) {
+				return WsUitl.getResult(KeyChecker.ERROR_KEY, returntype);
+			}
+			if (serviceUser.getEndDate().before(new Date())) {
+				return WsUitl.getResult(KeyChecker.OVER_TIME, returntype);
+			}
+			if (dao == null) {
+				dao = ioc.get(ServiceDao.class);
+				Map<String, String> result = dao.getInfoByZjhmToMzjTaizhang(SFZH, serviceUser);
+				return WsUitl.getResult(result, returntype);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return null;
+	}
+	
+	/**
+	 * 根据姓名和出生日期查询人基本信息
+	 * @param zjhm
+	 * @return
+	 */
+	@SuppressWarnings("rawtypes")
+	public String getInfoByXmToMzjTaizhang(String key, String XM, String CSRQ, String returntype) {
+		try {
+			if (ioc == null) {
+				ioc = IocSingle.getInstance();
+			}
+			KeyChecker checker = ioc.get(KeyChecker.class);
+			ApiServiceUser serviceUser = checker.keyckeck(key, "getInfoByXmToMzjTaizhang");
+			if (serviceUser == null) {
+				return WsUitl.getResult(KeyChecker.ERROR_KEY, returntype);
+			}
+			if (serviceUser.getEndDate().before(new Date())) {
+				return WsUitl.getResult(KeyChecker.OVER_TIME, returntype);
+			}
+			if (dao == null) {
+				dao = ioc.get(ServiceDao.class);
+				Map<String, Object> result = dao.getInfoByXmToMzjTaizhang(XM, CSRQ, serviceUser);
+				return WsUitl.ListResult((List)result.get("list"), returntype);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return null;
+	}
+	/**
+	 * 根据居委会代码返回统计信息
+	 * @param JWHDM
+	 * @return
+	 */
+	public String getInfoByJwhdmToMzjTaizhang(String key, String JWHDM, String returntype) {
+		try {
+			if (ioc == null) {
+				ioc = IocSingle.getInstance();
+			}
+			KeyChecker checker = ioc.get(KeyChecker.class);
+			ApiServiceUser serviceUser = checker.keyckeck(key, "getInfoByJwhdmToMzjTaizhang");
+			if (serviceUser == null) {
+				return WsUitl.getResult(KeyChecker.ERROR_KEY, returntype);
+			}
+			if (serviceUser.getEndDate().before(new Date())) {
+				return WsUitl.getResult(KeyChecker.OVER_TIME, returntype);
+			}
+			if (dao == null) {
+				dao = ioc.get(ServiceDao.class);
+				Map<String, Object> result = dao.getInfoByJwhdmToMzjTaizhang(JWHDM, serviceUser);
+				return WsUitl.getResult(result, returntype);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return null;
+	}
+
+}

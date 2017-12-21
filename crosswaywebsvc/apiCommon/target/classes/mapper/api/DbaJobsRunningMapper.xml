@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaJobsRunningMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaJobsRunning" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="JOB" property="job" jdbcType="DECIMAL" />
+    <result column="FAILURES" property="failures" jdbcType="DECIMAL" />
+    <result column="LAST_DATE" property="lastDate" jdbcType="DATE" />
+    <result column="LAST_SEC" property="lastSec" jdbcType="VARCHAR" />
+    <result column="THIS_DATE" property="thisDate" jdbcType="DATE" />
+    <result column="THIS_SEC" property="thisSec" jdbcType="VARCHAR" />
+    <result column="INSTANCE" property="instance" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

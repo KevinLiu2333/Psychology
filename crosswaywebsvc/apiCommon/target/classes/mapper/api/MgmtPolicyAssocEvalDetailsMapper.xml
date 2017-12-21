@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtPolicyAssocEvalDetailsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtPolicyAssocEvalDetails" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="POLICY_GUID" property="policyGuid" jdbcType="VARBINARY" />
+    <id column="COLL_NAME" property="collName" jdbcType="VARCHAR" />
+    <id column="RESULT_KEY_VALUE" property="resultKeyValue" jdbcType="VARCHAR" />
+    <result column="INFO_COUNTER" property="infoCounter" jdbcType="DECIMAL" />
+    <result column="WARN_COUNTER" property="warnCounter" jdbcType="DECIMAL" />
+    <result column="CRIT_COUNTER" property="critCounter" jdbcType="DECIMAL" />
+    <result column="LAST_EVALUATION_DATE" property="lastEvaluationDate" jdbcType="DATE" />
+    <result column="LAST_ERROR_MESSAGE" property="lastErrorMessage" jdbcType="VARCHAR" />
+    <result column="CFG_KEY_VALUE" property="cfgKeyValue" jdbcType="VARCHAR" />
+    <result column="CFG_KEY_OPERATOR" property="cfgKeyOperator" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

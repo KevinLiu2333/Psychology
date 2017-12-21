@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuJijoinViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuJijoinView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="TAB1OBJ_NUM" property="tab1objNum" jdbcType="DECIMAL" />
+    <result column="TAB1COL_NUM" property="tab1colNum" jdbcType="DECIMAL" />
+    <result column="TAB2OBJ_NUM" property="tab2objNum" jdbcType="DECIMAL" />
+    <result column="TAB2COL_NUM" property="tab2colNum" jdbcType="DECIMAL" />
+    <result column="TAB1COL" property="tab1col" jdbcType="OTHER" />
+    <result column="TAB2COL" property="tab2col" jdbcType="OTHER" />
+    <result column="JOINOP" property="joinop" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="TAB1INST_NUM" property="tab1instNum" jdbcType="DECIMAL" />
+    <result column="TAB2INST_NUM" property="tab2instNum" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

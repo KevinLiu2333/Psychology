@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SumdepMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Sumdep" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SUMOBJ#" property="sumobj" jdbcType="DECIMAL" />
+    <result column="ORDER#" property="order" jdbcType="DECIMAL" />
+    <result column="P_OBJ#" property="pObj" jdbcType="DECIMAL" />
+    <result column="P_TYPE" property="pType" jdbcType="DECIMAL" />
+    <result column="QBCID" property="qbcid" jdbcType="DECIMAL" />
+    <result column="P_REF_TIME" property="pRefTime" jdbcType="DATE" />
+    <result column="P_REF_SCN" property="pRefScn" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="INLINE#" property="inline" jdbcType="DECIMAL" />
+    <result column="INSTANCE#" property="instance" jdbcType="DECIMAL" />
+    <result column="SYN_OWN" property="synOwn" jdbcType="VARCHAR" />
+    <result column="SYN_NAME" property="synName" jdbcType="VARCHAR" />
+    <result column="SYN_MASTER" property="synMaster" jdbcType="DECIMAL" />
+    <result column="VW_QUERY_LEN" property="vwQueryLen" jdbcType="DECIMAL" />
+    <result column="VW_QUERY" property="vwQuery" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

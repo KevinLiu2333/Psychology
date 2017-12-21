@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserProceduresMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserProcedures" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="PROCEDURE_NAME" property="procedureName" jdbcType="VARCHAR" />
+    <result column="OBJECT_ID" property="objectId" jdbcType="DECIMAL" />
+    <result column="SUBPROGRAM_ID" property="subprogramId" jdbcType="DECIMAL" />
+    <result column="OVERLOAD" property="overload" jdbcType="VARCHAR" />
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <result column="AGGREGATE" property="aggregate" jdbcType="VARCHAR" />
+    <result column="PIPELINED" property="pipelined" jdbcType="VARCHAR" />
+    <result column="IMPLTYPEOWNER" property="impltypeowner" jdbcType="VARCHAR" />
+    <result column="IMPLTYPENAME" property="impltypename" jdbcType="VARCHAR" />
+    <result column="PARALLEL" property="parallel" jdbcType="VARCHAR" />
+    <result column="INTERFACE" property="interface" jdbcType="VARCHAR" />
+    <result column="DETERMINISTIC" property="deterministic" jdbcType="VARCHAR" />
+    <result column="AUTHID" property="authid" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

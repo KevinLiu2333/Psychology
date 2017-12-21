@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Ku101PindStatsViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Ku101PindStatsView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ_NUM" property="objNum" jdbcType="DECIMAL" />
+    <result column="SCHEMA_OBJ" property="schemaObj" jdbcType="OTHER" />
+    <result column="BOBJ_NUM" property="bobjNum" jdbcType="DECIMAL" />
+    <result column="ROWCNT" property="rowcnt" jdbcType="DECIMAL" />
+    <result column="LEAFCNT" property="leafcnt" jdbcType="DECIMAL" />
+    <result column="DISTKEY" property="distkey" jdbcType="DECIMAL" />
+    <result column="LBLKKEY" property="lblkkey" jdbcType="DECIMAL" />
+    <result column="DBLKKEY" property="dblkkey" jdbcType="DECIMAL" />
+    <result column="CLUFAC" property="clufac" jdbcType="DECIMAL" />
+    <result column="BLEVEL" property="blevel" jdbcType="DECIMAL" />
+    <result column="IND_FLAGS" property="indFlags" jdbcType="DECIMAL" />
+    <result column="OBJ_FLAGS" property="objFlags" jdbcType="DECIMAL" />
+    <result column="CACHE_INFO" property="cacheInfo" jdbcType="OTHER" />
+    <result column="SUBPARTITION_LIST" property="subpartitionList" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaNetworkAclPrivilegesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaNetworkAclPrivileges" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ACL" property="acl" jdbcType="VARCHAR" />
+    <result column="PRINCIPAL" property="principal" jdbcType="VARCHAR" />
+    <result column="PRIVILEGE" property="privilege" jdbcType="VARCHAR" />
+    <result column="IS_GRANT" property="isGrant" jdbcType="VARCHAR" />
+    <result column="INVERT" property="invert" jdbcType="VARCHAR" />
+    <result column="START_DATE" property="startDate" jdbcType="OTHER" />
+    <result column="END_DATE" property="endDate" jdbcType="OTHER" />
+    <result column="ACLID" property="aclid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

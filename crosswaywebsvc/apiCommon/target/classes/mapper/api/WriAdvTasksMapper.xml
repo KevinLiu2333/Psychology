@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriAdvTasksMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriAdvTasks" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="OWNER#" property="owner" jdbcType="DECIMAL" />
+    <result column="OWNER_NAME" property="ownerName" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="ADVISOR_ID" property="advisorId" jdbcType="DECIMAL" />
+    <result column="ADVISOR_NAME" property="advisorName" jdbcType="VARCHAR" />
+    <result column="CTIME" property="ctime" jdbcType="DATE" />
+    <result column="MTIME" property="mtime" jdbcType="DATE" />
+    <result column="PARENT_ID" property="parentId" jdbcType="DECIMAL" />
+    <result column="PARENT_REC_ID" property="parentRecId" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="VERSION" property="version" jdbcType="DECIMAL" />
+    <result column="LAST_EXEC_NAME" property="lastExecName" jdbcType="VARCHAR" />
+    <result column="EXEC_START" property="execStart" jdbcType="DATE" />
+    <result column="EXEC_END" property="execEnd" jdbcType="DATE" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="STATUS_MSG_ID" property="statusMsgId" jdbcType="DECIMAL" />
+    <result column="PCT_COMPLETION_TIME" property="pctCompletionTime" jdbcType="DECIMAL" />
+    <result column="PROGRESS_METRIC" property="progressMetric" jdbcType="DECIMAL" />
+    <result column="METRIC_UNITS" property="metricUnits" jdbcType="VARCHAR" />
+    <result column="ACTIVITY_COUNTER" property="activityCounter" jdbcType="DECIMAL" />
+    <result column="REC_COUNT" property="recCount" jdbcType="DECIMAL" />
+    <result column="ERROR_MSG#" property="errorMsg" jdbcType="DECIMAL" />
+    <result column="CLEANUP" property="cleanup" jdbcType="DECIMAL" />
+    <result column="HOW_CREATED" property="howCreated" jdbcType="VARCHAR" />
+    <result column="SOURCE" property="source" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

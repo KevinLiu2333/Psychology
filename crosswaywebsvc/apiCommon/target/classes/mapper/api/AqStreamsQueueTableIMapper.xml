@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AqStreamsQueueTableIMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AqStreamsQueueTableI" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SUBSCRIBER#" property="subscriber" jdbcType="DECIMAL" />
+    <id column="NAME" property="name" jdbcType="VARCHAR" />
+    <id column="QUEUE#" property="queue" jdbcType="DECIMAL" />
+    <id column="MSG_ENQ_TID" property="msgEnqTid" jdbcType="VARCHAR" />
+    <id column="SENDER#" property="sender" jdbcType="DECIMAL" />
+    <id column="TXN_STEP#" property="txnStep" jdbcType="DECIMAL" />
+    <id column="MSG_CHAIN_NO" property="msgChainNo" jdbcType="DECIMAL" />
+    <id column="MSG_LOCAL_ORDER_NO" property="msgLocalOrderNo" jdbcType="DECIMAL" />
+    <id column="MSGID" property="msgid" jdbcType="VARBINARY" />
+    <result column="HINT" property="hint" jdbcType="OTHER" />
+    <result column="SPARE" property="spare" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtSqlproblemFactorsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtSqlproblemFactors" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="EVAL_TIMESTAMP" property="evalTimestamp" jdbcType="DATE" />
+    <id column="ADDRESS" property="address" jdbcType="VARBINARY" />
+    <id column="HASH_VALUE" property="hashValue" jdbcType="DECIMAL" />
+    <id column="PLAN_HASH_VALUE" property="planHashValue" jdbcType="DECIMAL" />
+    <id column="REASON_CODE" property="reasonCode" jdbcType="DECIMAL" />
+    <id column="ATTRIBUTE" property="attribute" jdbcType="VARCHAR" />
+    <result column="IMPORTANCE" property="importance" jdbcType="VARCHAR" />
+    <result column="CONFIDENCE" property="confidence" jdbcType="VARCHAR" />
+    <result column="SQL_TEXT" property="sqlText" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

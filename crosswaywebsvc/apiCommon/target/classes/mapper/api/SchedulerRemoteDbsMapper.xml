@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SchedulerRemoteDbsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SchedulerRemoteDbs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DATABASE_NAME" property="databaseName" jdbcType="VARCHAR" />
+    <id column="REG_STATUS" property="regStatus" jdbcType="DECIMAL" />
+    <result column="DB_INDEX" property="dbIndex" jdbcType="DECIMAL" />
+    <result column="DATABASE_LINK" property="databaseLink" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

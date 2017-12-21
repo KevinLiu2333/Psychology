@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrSectionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrSection" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SEC_ID" property="secId" jdbcType="DECIMAL" />
+    <result column="SEC_TYPE" property="secType" jdbcType="DECIMAL" />
+    <result column="SEC_NAME" property="secName" jdbcType="VARCHAR" />
+    <result column="SEC_SGP_ID" property="secSgpId" jdbcType="DECIMAL" />
+    <result column="SEC_TAG" property="secTag" jdbcType="VARCHAR" />
+    <result column="SEC_FID" property="secFid" jdbcType="DECIMAL" />
+    <result column="SEC_VISIBLE" property="secVisible" jdbcType="CHAR" />
+    <result column="SEC_DATATYPE" property="secDatatype" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

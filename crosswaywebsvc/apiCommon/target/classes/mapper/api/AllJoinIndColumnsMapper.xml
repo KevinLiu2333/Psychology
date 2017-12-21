@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllJoinIndColumnsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllJoinIndColumns" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDEX_OWNER" property="indexOwner" jdbcType="VARCHAR" />
+    <result column="INDEX_NAME" property="indexName" jdbcType="VARCHAR" />
+    <result column="INNER_TABLE_OWNER" property="innerTableOwner" jdbcType="VARCHAR" />
+    <result column="INNER_TABLE_NAME" property="innerTableName" jdbcType="VARCHAR" />
+    <result column="INNER_TABLE_COLUMN" property="innerTableColumn" jdbcType="VARCHAR" />
+    <result column="OUTER_TABLE_OWNER" property="outerTableOwner" jdbcType="VARCHAR" />
+    <result column="OUTER_TABLE_NAME" property="outerTableName" jdbcType="VARCHAR" />
+    <result column="OUTER_TABLE_COLUMN" property="outerTableColumn" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

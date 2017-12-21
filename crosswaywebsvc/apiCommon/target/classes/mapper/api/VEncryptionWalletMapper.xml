@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VEncryptionWalletMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VEncryptionWallet" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WRL_TYPE" property="wrlType" jdbcType="VARCHAR" />
+    <result column="WRL_PARAMETER" property="wrlParameter" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

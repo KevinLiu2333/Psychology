@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu8vdptMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu8vdpt" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PARENT" property="parent" jdbcType="DECIMAL" />
+    <result column="CHILD" property="child" jdbcType="DECIMAL" />
+    <result column="POWNER" property="powner" jdbcType="DECIMAL" />
+    <result column="COWNER" property="cowner" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrStoplistMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrStoplist" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SPL_ID" property="splId" jdbcType="DECIMAL" />
+    <result column="SPL_OWNER#" property="splOwner" jdbcType="DECIMAL" />
+    <result column="SPL_NAME" property="splName" jdbcType="VARCHAR" />
+    <result column="SPL_COUNT" property="splCount" jdbcType="DECIMAL" />
+    <result column="SPL_TYPE" property="splType" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

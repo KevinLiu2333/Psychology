@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu9tbsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu9tbs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="OWNER" property="owner" jdbcType="CHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="ISONLINE" property="isonline" jdbcType="VARCHAR" />
+    <result column="CONTENT" property="content" jdbcType="VARCHAR" />
+    <result column="INIEXT" property="iniext" jdbcType="DECIMAL" />
+    <result column="SEXT" property="sext" jdbcType="DECIMAL" />
+    <result column="PCTINC" property="pctinc" jdbcType="DECIMAL" />
+    <result column="MINEXT" property="minext" jdbcType="DECIMAL" />
+    <result column="MAXEXT" property="maxext" jdbcType="DECIMAL" />
+    <result column="MINLEN" property="minlen" jdbcType="DECIMAL" />
+    <result column="DEFLOG" property="deflog" jdbcType="DECIMAL" />
+    <result column="EXT_MGT" property="extMgt" jdbcType="DECIMAL" />
+    <result column="ALLOC_TYPE" property="allocType" jdbcType="DECIMAL" />
+    <result column="BLOCKSIZE" property="blocksize" jdbcType="DECIMAL" />
+    <result column="MAXSIZE" property="maxsize" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

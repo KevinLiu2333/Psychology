@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.FinalPartitionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.FinalPartition" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERTEX_ID" property="vertexId" jdbcType="DECIMAL" />
+    <result column="P_ID" property="pId" jdbcType="DECIMAL" />
+    <result column="X" property="x" jdbcType="DECIMAL" />
+    <result column="Y" property="y" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

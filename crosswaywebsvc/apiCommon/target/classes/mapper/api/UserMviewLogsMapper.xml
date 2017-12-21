@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserMviewLogsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserMviewLogs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOG_OWNER" property="logOwner" jdbcType="VARCHAR" />
+    <result column="MASTER" property="master" jdbcType="VARCHAR" />
+    <result column="LOG_TABLE" property="logTable" jdbcType="VARCHAR" />
+    <result column="LOG_TRIGGER" property="logTrigger" jdbcType="VARCHAR" />
+    <result column="ROWIDS" property="rowids" jdbcType="VARCHAR" />
+    <result column="PRIMARY_KEY" property="primaryKey" jdbcType="VARCHAR" />
+    <result column="OBJECT_ID" property="objectId" jdbcType="VARCHAR" />
+    <result column="FILTER_COLUMNS" property="filterColumns" jdbcType="VARCHAR" />
+    <result column="SEQUENCE" property="sequence" jdbcType="VARCHAR" />
+    <result column="INCLUDE_NEW_VALUES" property="includeNewValues" jdbcType="VARCHAR" />
+    <result column="PURGE_ASYNCHRONOUS" property="purgeAsynchronous" jdbcType="VARCHAR" />
+    <result column="PURGE_DEFERRED" property="purgeDeferred" jdbcType="VARCHAR" />
+    <result column="PURGE_START" property="purgeStart" jdbcType="DATE" />
+    <result column="PURGE_INTERVAL" property="purgeInterval" jdbcType="VARCHAR" />
+    <result column="LAST_PURGE_DATE" property="lastPurgeDate" jdbcType="DATE" />
+    <result column="LAST_PURGE_STATUS" property="lastPurgeStatus" jdbcType="DECIMAL" />
+    <result column="NUM_ROWS_PURGED" property="numRowsPurged" jdbcType="DECIMAL" />
+    <result column="COMMIT_SCN_BASED" property="commitScnBased" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

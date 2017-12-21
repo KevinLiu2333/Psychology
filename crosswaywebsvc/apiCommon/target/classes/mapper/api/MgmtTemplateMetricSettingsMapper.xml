@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtTemplateMetricSettingsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtTemplateMetricSettings" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TEMPLATE_NAME" property="templateName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="METRIC_NAME" property="metricName" jdbcType="VARCHAR" />
+    <result column="METRIC_COLUMN" property="metricColumn" jdbcType="VARCHAR" />
+    <result column="COLLECTION_NAME" property="collectionName" jdbcType="VARCHAR" />
+    <result column="CATEGORY" property="category" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE" property="keyValue" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE2" property="keyValue2" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE3" property="keyValue3" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE4" property="keyValue4" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE5" property="keyValue5" jdbcType="VARCHAR" />
+    <result column="KEY_OPERATOR" property="keyOperator" jdbcType="DECIMAL" />
+    <result column="PREVENT_OVERRIDE" property="preventOverride" jdbcType="DECIMAL" />
+    <result column="WARNING_OPERATOR" property="warningOperator" jdbcType="DECIMAL" />
+    <result column="WARNING_THRESHOLD" property="warningThreshold" jdbcType="VARCHAR" />
+    <result column="CRITICAL_OPERATOR" property="criticalOperator" jdbcType="DECIMAL" />
+    <result column="CRITICAL_THRESHOLD" property="criticalThreshold" jdbcType="VARCHAR" />
+    <result column="OCCURRENCE_COUNT" property="occurrenceCount" jdbcType="DECIMAL" />
+    <result column="WARNING_ACTION_TYPE" property="warningActionType" jdbcType="VARCHAR" />
+    <result column="WARNING_ACTION_JOB_TYPE" property="warningActionJobType" jdbcType="VARCHAR" />
+    <result column="WARNING_ACTION_JOB_OWNER" property="warningActionJobOwner" jdbcType="VARCHAR" />
+    <result column="WARNING_ACTION_JOB_NAME" property="warningActionJobName" jdbcType="VARCHAR" />
+    <result column="CRITICAL_ACTION_TYPE" property="criticalActionType" jdbcType="VARCHAR" />
+    <result column="CRITICAL_ACTION_JOB_TYPE" property="criticalActionJobType" jdbcType="VARCHAR" />
+    <result column="CRITICAL_ACTION_JOB_OWNER" property="criticalActionJobOwner" jdbcType="VARCHAR" />
+    <result column="CRITICAL_ACTION_JOB_NAME" property="criticalActionJobName" jdbcType="VARCHAR" />
+    <result column="TEMPLATE_GUID" property="templateGuid" jdbcType="VARBINARY" />
+    <result column="METRIC_GUID" property="metricGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

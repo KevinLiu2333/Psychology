@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvAsmUsergroupMemberMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvAsmUsergroupMember" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="GROUP_NUMBER" property="groupNumber" jdbcType="DECIMAL" />
+    <result column="MEMBER_NUMBER" property="memberNumber" jdbcType="DECIMAL" />
+    <result column="MEMBER_INCARNATION" property="memberIncarnation" jdbcType="DECIMAL" />
+    <result column="USERGROUP_NUMBER" property="usergroupNumber" jdbcType="DECIMAL" />
+    <result column="USERGROUP_INCARNATION" property="usergroupIncarnation" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

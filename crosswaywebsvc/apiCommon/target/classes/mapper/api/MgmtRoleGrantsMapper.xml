@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtRoleGrantsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtRoleGrants" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="GRANTEE" property="grantee" jdbcType="VARCHAR" />
+    <id column="ROLE_NAME" property="roleName" jdbcType="VARCHAR" />
+    <result column="WITH_ADMIN" property="withAdmin" jdbcType="DECIMAL" />
+    <result column="GRANTEE_IS_ROLE" property="granteeIsRole" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

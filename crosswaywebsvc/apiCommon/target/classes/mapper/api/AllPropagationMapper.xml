@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllPropagationMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllPropagation" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PROPAGATION_NAME" property="propagationName" jdbcType="VARCHAR" />
+    <result column="SOURCE_QUEUE_OWNER" property="sourceQueueOwner" jdbcType="VARCHAR" />
+    <result column="SOURCE_QUEUE_NAME" property="sourceQueueName" jdbcType="VARCHAR" />
+    <result column="DESTINATION_QUEUE_OWNER" property="destinationQueueOwner" jdbcType="VARCHAR" />
+    <result column="DESTINATION_QUEUE_NAME" property="destinationQueueName" jdbcType="VARCHAR" />
+    <result column="DESTINATION_DBLINK" property="destinationDblink" jdbcType="VARCHAR" />
+    <result column="RULE_SET_OWNER" property="ruleSetOwner" jdbcType="VARCHAR" />
+    <result column="RULE_SET_NAME" property="ruleSetName" jdbcType="VARCHAR" />
+    <result column="NEGATIVE_RULE_SET_OWNER" property="negativeRuleSetOwner" jdbcType="VARCHAR" />
+    <result column="NEGATIVE_RULE_SET_NAME" property="negativeRuleSetName" jdbcType="VARCHAR" />
+    <result column="QUEUE_TO_QUEUE" property="queueToQueue" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="ERROR_MESSAGE" property="errorMessage" jdbcType="VARCHAR" />
+    <result column="ERROR_DATE" property="errorDate" jdbcType="DATE" />
+    <result column="ORIGINAL_PROPAGATION_NAME" property="originalPropagationName" jdbcType="VARCHAR" />
+    <result column="ORIGINAL_SOURCE_QUEUE_OWNER" property="originalSourceQueueOwner" jdbcType="VARCHAR" />
+    <result column="ORIGINAL_SOURCE_QUEUE_NAME" property="originalSourceQueueName" jdbcType="VARCHAR" />
+    <result column="ACKED_SCN" property="ackedScn" jdbcType="DECIMAL" />
+    <result column="AUTO_MERGE_THRESHOLD" property="autoMergeThreshold" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

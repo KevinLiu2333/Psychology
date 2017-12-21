@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtBugFixApplicCompListMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtBugFixApplicCompList" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="COMPONENT_LIST_GUID" property="componentListGuid" jdbcType="VARBINARY" />
+    <result column="BUG_NUMBER" property="bugNumber" jdbcType="DECIMAL" />
+    <result column="AP_GUID" property="apGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

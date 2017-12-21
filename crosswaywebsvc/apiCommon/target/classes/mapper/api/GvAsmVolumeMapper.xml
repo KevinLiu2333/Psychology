@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvAsmVolumeMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvAsmVolume" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="GROUP_NUMBER" property="groupNumber" jdbcType="DECIMAL" />
+    <result column="VOLUME_NAME" property="volumeName" jdbcType="VARCHAR" />
+    <result column="COMPOUND_INDEX" property="compoundIndex" jdbcType="DECIMAL" />
+    <result column="SIZE_MB" property="sizeMb" jdbcType="DECIMAL" />
+    <result column="VOLUME_NUMBER" property="volumeNumber" jdbcType="DECIMAL" />
+    <result column="REDUNDANCY" property="redundancy" jdbcType="VARCHAR" />
+    <result column="STRIPE_COLUMNS" property="stripeColumns" jdbcType="DECIMAL" />
+    <result column="STRIPE_WIDTH_K" property="stripeWidthK" jdbcType="DECIMAL" />
+    <result column="FILE_NUMBER" property="fileNumber" jdbcType="DECIMAL" />
+    <result column="INCARNATION" property="incarnation" jdbcType="DECIMAL" />
+    <result column="DRL_FILE_NUMBER" property="drlFileNumber" jdbcType="DECIMAL" />
+    <result column="USAGE" property="usage" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="RESIZE_UNIT_MB" property="resizeUnitMb" jdbcType="DECIMAL" />
+    <result column="VOLUME_DEVICE" property="volumeDevice" jdbcType="VARCHAR" />
+    <result column="MOUNTPATH" property="mountpath" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

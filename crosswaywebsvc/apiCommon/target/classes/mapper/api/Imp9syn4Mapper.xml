@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Imp9syn4Mapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Imp9syn4" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SYNNAME" property="synname" jdbcType="VARCHAR" />
+    <result column="SYNOWNER" property="synowner" jdbcType="VARCHAR" />
+    <result column="TYPENAME" property="typename" jdbcType="VARCHAR" />
+    <result column="TYPEOWNER" property="typeowner" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

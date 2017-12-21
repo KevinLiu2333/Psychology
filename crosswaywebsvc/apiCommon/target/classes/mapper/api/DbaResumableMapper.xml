@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaResumableMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaResumable" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="USER_ID" property="userId" jdbcType="DECIMAL" />
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="INSTANCE_ID" property="instanceId" jdbcType="DECIMAL" />
+    <result column="COORD_INSTANCE_ID" property="coordInstanceId" jdbcType="DECIMAL" />
+    <result column="COORD_SESSION_ID" property="coordSessionId" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="TIMEOUT" property="timeout" jdbcType="DECIMAL" />
+    <result column="START_TIME" property="startTime" jdbcType="VARCHAR" />
+    <result column="SUSPEND_TIME" property="suspendTime" jdbcType="VARCHAR" />
+    <result column="RESUME_TIME" property="resumeTime" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="SQL_TEXT" property="sqlText" jdbcType="VARCHAR" />
+    <result column="ERROR_NUMBER" property="errorNumber" jdbcType="DECIMAL" />
+    <result column="ERROR_PARAMETER1" property="errorParameter1" jdbcType="VARCHAR" />
+    <result column="ERROR_PARAMETER2" property="errorParameter2" jdbcType="VARCHAR" />
+    <result column="ERROR_PARAMETER3" property="errorParameter3" jdbcType="VARCHAR" />
+    <result column="ERROR_PARAMETER4" property="errorParameter4" jdbcType="VARCHAR" />
+    <result column="ERROR_PARAMETER5" property="errorParameter5" jdbcType="VARCHAR" />
+    <result column="ERROR_MSG" property="errorMsg" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RlmOrderclsalsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RlmOrderclsals" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="RSET_OWNER" property="rsetOwner" jdbcType="VARCHAR" />
+    <id column="RSET_NAME" property="rsetName" jdbcType="VARCHAR" />
+    <id column="ORDRKEYALS" property="ordrkeyals" jdbcType="VARCHAR" />
+    <result column="ORDRKEYPFX" property="ordrkeypfx" jdbcType="VARCHAR" />
+    <result column="ORDRKEY" property="ordrkey" jdbcType="VARCHAR" />
+    <result column="DATATYPE" property="datatype" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

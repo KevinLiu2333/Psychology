@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuInsertTsViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuInsertTsView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="BASE_OBJ_NUM" property="baseObjNum" jdbcType="DECIMAL" />
+    <result column="POSITION_NUM" property="positionNum" jdbcType="DECIMAL" />
+    <result column="TS_NUM" property="tsNum" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

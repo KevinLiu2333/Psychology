@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaFileGroupVersionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaFileGroupVersions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FILE_GROUP_OWNER" property="fileGroupOwner" jdbcType="VARCHAR" />
+    <result column="FILE_GROUP_NAME" property="fileGroupName" jdbcType="VARCHAR" />
+    <result column="VERSION_NAME" property="versionName" jdbcType="VARCHAR" />
+    <result column="VERSION" property="version" jdbcType="DECIMAL" />
+    <result column="CREATOR" property="creator" jdbcType="VARCHAR" />
+    <result column="CREATED" property="created" jdbcType="OTHER" />
+    <result column="COMMENTS" property="comments" jdbcType="VARCHAR" />
+    <result column="DEFAULT_DIRECTORY" property="defaultDirectory" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowWorksheetHistoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowWorksheetHistory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="ROW_ID" property="rowId" jdbcType="DECIMAL" />
+    <result column="WORKSHEET_ID" property="worksheetId" jdbcType="DECIMAL" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="OLD_VALUE" property="oldValue" jdbcType="VARCHAR" />
+    <result column="NEW_VALUE" property="newValue" jdbcType="VARCHAR" />
+    <result column="APPLICATION_USER_ID" property="applicationUserId" jdbcType="VARCHAR" />
+    <result column="CHANGE_DATE" property="changeDate" jdbcType="DATE" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

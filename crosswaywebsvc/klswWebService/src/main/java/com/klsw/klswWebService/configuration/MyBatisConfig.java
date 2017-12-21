@@ -44,20 +44,19 @@ import java.util.Properties;
 
 /**
  * MyBatis基础配置
- *
  */
 @org.springframework.context.annotation.Configuration
 @EnableTransactionManagement
 public class MyBatisConfig implements TransactionManagementConfigurer {
-	
-	@Autowired
+
+    @Autowired
     @Qualifier("dataSource1")
     private DataSource dataSource1;
-	
+
 //	@Autowired
 //    @Qualifier("dataSource2")
 //    private DataSource dataSource2;
-	
+
     @Bean(name = "sqlSessionFactory1")
     public SqlSessionFactory sqlSessionFactoryBean1() {
         Configuration configuration = new Configuration();
@@ -117,12 +116,10 @@ public class MyBatisConfig implements TransactionManagementConfigurer {
 //            throw new RuntimeException(e);
 //        }
 //    }
-    
-    
-    
-    
+
+
     @Bean
-    public SqlSessionTemplate sqlSessionTemplate(@Qualifier("sqlSessionFactory1")SqlSessionFactory sqlSessionFactory) {
+    public SqlSessionTemplate sqlSessionTemplate(@Qualifier("sqlSessionFactory1") SqlSessionFactory sqlSessionFactory) {
         return new SqlSessionTemplate(sqlSessionFactory);
     }
 

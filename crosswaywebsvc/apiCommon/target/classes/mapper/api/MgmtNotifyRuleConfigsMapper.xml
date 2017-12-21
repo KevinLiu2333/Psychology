@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtNotifyRuleConfigsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtNotifyRuleConfigs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RULE_NAME" property="ruleName" jdbcType="VARCHAR" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="METRIC_NAME" property="metricName" jdbcType="VARCHAR" />
+    <result column="METRIC_COLUMN" property="metricColumn" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE" property="keyValue" jdbcType="VARCHAR" />
+    <result column="KEY_PART_1" property="keyPart1" jdbcType="VARCHAR" />
+    <result column="KEY_PART_2" property="keyPart2" jdbcType="VARCHAR" />
+    <result column="KEY_PART_3" property="keyPart3" jdbcType="VARCHAR" />
+    <result column="KEY_PART_4" property="keyPart4" jdbcType="VARCHAR" />
+    <result column="KEY_PART_5" property="keyPart5" jdbcType="VARCHAR" />
+    <result column="WANT_CLEARS" property="wantClears" jdbcType="DECIMAL" />
+    <result column="WANT_WARNINGS" property="wantWarnings" jdbcType="DECIMAL" />
+    <result column="WANT_CRITICAL_ALERTS" property="wantCriticalAlerts" jdbcType="DECIMAL" />
+    <result column="WANT_TARGET_UP" property="wantTargetUp" jdbcType="DECIMAL" />
+    <result column="WANT_TARGET_DOWN" property="wantTargetDown" jdbcType="DECIMAL" />
+    <result column="WANT_TARGET_UNREACHABLE_START" property="wantTargetUnreachableStart" jdbcType="DECIMAL" />
+    <result column="WANT_TARGET_UNREACHABLE_END" property="wantTargetUnreachableEnd" jdbcType="DECIMAL" />
+    <result column="WANT_TARGET_METRIC_ERR_START" property="wantTargetMetricErrStart" jdbcType="DECIMAL" />
+    <result column="WANT_TARGET_METRIC_ERR_END" property="wantTargetMetricErrEnd" jdbcType="DECIMAL" />
+    <result column="WANT_TARGET_BLACKOUT_START" property="wantTargetBlackoutStart" jdbcType="DECIMAL" />
+    <result column="WANT_TARGET_BLACKOUT_END" property="wantTargetBlackoutEnd" jdbcType="DECIMAL" />
+    <result column="WANT_POLICY_CLEARS" property="wantPolicyClears" jdbcType="DECIMAL" />
+    <result column="WANT_POLICY_VIOLATIONS" property="wantPolicyViolations" jdbcType="DECIMAL" />
+    <result column="WANT_WARNING_JOB_SUCCEEDED" property="wantWarningJobSucceeded" jdbcType="DECIMAL" />
+    <result column="WANT_WARNING_JOB_PROBLEMS" property="wantWarningJobProblems" jdbcType="DECIMAL" />
+    <result column="WANT_CRITICAL_JOB_SUCCEEDED" property="wantCriticalJobSucceeded" jdbcType="DECIMAL" />
+    <result column="WANT_CRITICAL_JOB_PROBLEMS" property="wantCriticalJobProblems" jdbcType="DECIMAL" />
+    <result column="WANT_POLICY_JOB_SUCCEEDED" property="wantPolicyJobSucceeded" jdbcType="DECIMAL" />
+    <result column="WANT_POLICY_JOB_PROBLEMS" property="wantPolicyJobProblems" jdbcType="DECIMAL" />
+    <result column="IGNORE_RCA" property="ignoreRca" jdbcType="DECIMAL" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

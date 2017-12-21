@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrmWrUsageMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrmWrUsage" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FEATURE_TYPE" property="featureType" jdbcType="VARCHAR" />
+    <result column="FEATURE_NAME" property="featureName" jdbcType="VARCHAR" />
+    <result column="USAGE_TIME" property="usageTime" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RecTabMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RecTab" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="EC_OBJ#" property="ecObj" jdbcType="DECIMAL" />
+    <result column="TAB_ALIAS" property="tabAlias" jdbcType="VARCHAR" />
+    <result column="TAB_NAME" property="tabName" jdbcType="VARCHAR" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="TAB_ID" property="tabId" jdbcType="DECIMAL" />
+    <result column="TAB_OBJ#" property="tabObj" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

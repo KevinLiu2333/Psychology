@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexWorkspaceLogSummaryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexWorkspaceLogSummary" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="PAGE_VIEWS" property="pageViews" jdbcType="DECIMAL" />
+    <result column="DISTINCT_PAGES" property="distinctPages" jdbcType="DECIMAL" />
+    <result column="TOTAL_ELAPSED_TIME" property="totalElapsedTime" jdbcType="DECIMAL" />
+    <result column="AVERAGE_ELAPSED_TIME" property="averageElapsedTime" jdbcType="DECIMAL" />
+    <result column="MINIMUM_ELAPSED_TIME" property="minimumElapsedTime" jdbcType="DECIMAL" />
+    <result column="MAXIMUM_ELAPSED_TIME" property="maximumElapsedTime" jdbcType="DECIMAL" />
+    <result column="TOTAL_ROWS_QUERIED" property="totalRowsQueried" jdbcType="DECIMAL" />
+    <result column="IP_ADDRESSES" property="ipAddresses" jdbcType="DECIMAL" />
+    <result column="AGENTS" property="agents" jdbcType="DECIMAL" />
+    <result column="APEX_SESSIONS" property="apexSessions" jdbcType="DECIMAL" />
+    <result column="PAGE_VIEWS_WITH_ERRORS" property="pageViewsWithErrors" jdbcType="DECIMAL" />
+    <result column="DYNAMIC_PAGE_VIEWS" property="dynamicPageViews" jdbcType="DECIMAL" />
+    <result column="CACHED_PAGE_VIEWS" property="cachedPageViews" jdbcType="DECIMAL" />
+    <result column="FIRST_VIEW" property="firstView" jdbcType="DATE" />
+    <result column="LAST_VIEW" property="lastView" jdbcType="DATE" />
+    <result column="PERIOD_IN_DAYS" property="periodInDays" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

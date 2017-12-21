@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhCompIostatMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhCompIostat" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="SNAP_ID" property="snapId" jdbcType="DECIMAL" />
+    <id column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <id column="COMPONENT" property="component" jdbcType="VARCHAR" />
+    <id column="FILE_TYPE" property="fileType" jdbcType="VARCHAR" />
+    <id column="IO_TYPE" property="ioType" jdbcType="CHAR" />
+    <id column="OPERATION" property="operation" jdbcType="CHAR" />
+    <result column="BYTES" property="bytes" jdbcType="DECIMAL" />
+    <result column="IO_COUNT" property="ioCount" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.LogmnrTabColsSupportMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.LogmnrTabColsSupport" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOGMNR_UID" property="logmnrUid" jdbcType="DECIMAL" />
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="OWNER#" property="owner" jdbcType="DECIMAL" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="TYPE#" property="type" jdbcType="DECIMAL" />
+    <result column="DATA_TYPE" property="dataType" jdbcType="VARCHAR" />
+    <result column="DATA_TYPE_MOD" property="dataTypeMod" jdbcType="VARCHAR" />
+    <result column="DATA_TYPE_OWNER" property="dataTypeOwner" jdbcType="VARCHAR" />
+    <result column="DATA_LENGTH" property="dataLength" jdbcType="DECIMAL" />
+    <result column="DATA_PRECISION" property="dataPrecision" jdbcType="DECIMAL" />
+    <result column="DATA_SCALE" property="dataScale" jdbcType="DECIMAL" />
+    <result column="NULLABLE" property="nullable" jdbcType="VARCHAR" />
+    <result column="COLUMN_ID" property="columnId" jdbcType="DECIMAL" />
+    <result column="CHARACTER_SET_NAME" property="characterSetName" jdbcType="VARCHAR" />
+    <result column="CHAR_COL_DECL_LENGTH" property="charColDeclLength" jdbcType="DECIMAL" />
+    <result column="CHAR_USED" property="charUsed" jdbcType="VARCHAR" />
+    <result column="V80_FMT_IMAGE" property="v80FmtImage" jdbcType="VARCHAR" />
+    <result column="HIDDEN_COLUMN" property="hiddenColumn" jdbcType="VARCHAR" />
+    <result column="VIRTUAL_COLUMN" property="virtualColumn" jdbcType="VARCHAR" />
+    <result column="SEGMENT_COLUMN_ID" property="segmentColumnId" jdbcType="DECIMAL" />
+    <result column="INTERNAL_COLUMN_ID" property="internalColumnId" jdbcType="DECIMAL" />
+    <result column="QUALIFIED_COL_NAME" property="qualifiedColName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

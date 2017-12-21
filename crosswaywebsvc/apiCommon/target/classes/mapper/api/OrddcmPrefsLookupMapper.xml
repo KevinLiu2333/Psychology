@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OrddcmPrefsLookupMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OrddcmPrefsLookup" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="PARAM_NAME" property="paramName" jdbcType="VARCHAR" />
+    <result column="PARAM_TYPE" property="paramType" jdbcType="VARCHAR" />
+    <result column="MIN_VAL" property="minVal" jdbcType="DECIMAL" />
+    <result column="MAX_VAL" property="maxVal" jdbcType="DECIMAL" />
+    <result column="DEFAULT_NUMBER_VAL" property="defaultNumberVal" jdbcType="DECIMAL" />
+    <result column="DEFAULT_STR_VAL" property="defaultStrVal" jdbcType="VARCHAR" />
+    <result column="DEFAULT_STR_VALUES" property="defaultStrValues" jdbcType="OTHER" />
+    <result column="VALID_STR_VALUES" property="validStrValues" jdbcType="OTHER" />
+    <result column="PARAM_DESC" property="paramDesc" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

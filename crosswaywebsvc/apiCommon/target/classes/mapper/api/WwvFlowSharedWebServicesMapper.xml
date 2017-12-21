@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowSharedWebServicesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowSharedWebServices" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="URL" property="url" jdbcType="VARCHAR" />
+    <result column="ACTION" property="action" jdbcType="VARCHAR" />
+    <result column="PROXY_OVERRIDE" property="proxyOverride" jdbcType="VARCHAR" />
+    <result column="STATIC_PARM_01" property="staticParm01" jdbcType="VARCHAR" />
+    <result column="STATIC_PARM_02" property="staticParm02" jdbcType="VARCHAR" />
+    <result column="STATIC_PARM_03" property="staticParm03" jdbcType="VARCHAR" />
+    <result column="STATIC_PARM_04" property="staticParm04" jdbcType="VARCHAR" />
+    <result column="STATIC_PARM_05" property="staticParm05" jdbcType="VARCHAR" />
+    <result column="STATIC_PARM_06" property="staticParm06" jdbcType="VARCHAR" />
+    <result column="STATIC_PARM_07" property="staticParm07" jdbcType="VARCHAR" />
+    <result column="STATIC_PARM_08" property="staticParm08" jdbcType="VARCHAR" />
+    <result column="STATIC_PARM_09" property="staticParm09" jdbcType="VARCHAR" />
+    <result column="STATIC_PARM_10" property="staticParm10" jdbcType="VARCHAR" />
+    <result column="REFERENCE_ID" property="referenceId" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="SOAP_ENVELOPE" property="soapEnvelope" jdbcType="CLOB" />
+    <result column="FLOW_ITEMS_COMMA_DELIMITED" property="flowItemsCommaDelimited" jdbcType="CLOB" />
+    <result column="STYLESHEET" property="stylesheet" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

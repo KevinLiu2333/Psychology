@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserComparisonMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserComparison" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COMPARISON_NAME" property="comparisonName" jdbcType="VARCHAR" />
+    <result column="COMPARISON_MODE" property="comparisonMode" jdbcType="VARCHAR" />
+    <result column="SCHEMA_NAME" property="schemaName" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <result column="REMOTE_SCHEMA_NAME" property="remoteSchemaName" jdbcType="VARCHAR" />
+    <result column="REMOTE_OBJECT_NAME" property="remoteObjectName" jdbcType="VARCHAR" />
+    <result column="REMOTE_OBJECT_TYPE" property="remoteObjectType" jdbcType="VARCHAR" />
+    <result column="DBLINK_NAME" property="dblinkName" jdbcType="VARCHAR" />
+    <result column="SCAN_MODE" property="scanMode" jdbcType="VARCHAR" />
+    <result column="SCAN_PERCENT" property="scanPercent" jdbcType="DECIMAL" />
+    <result column="CYCLIC_INDEX_VALUE" property="cyclicIndexValue" jdbcType="VARCHAR" />
+    <result column="NULL_VALUE" property="nullValue" jdbcType="VARCHAR" />
+    <result column="MAX_NUM_BUCKETS" property="maxNumBuckets" jdbcType="DECIMAL" />
+    <result column="MIN_ROWS_IN_BUCKET" property="minRowsInBucket" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATE_TIME" property="lastUpdateTime" jdbcType="TIMESTAMP" />
+    <result column="LOCAL_CONVERGE_TAG" property="localConvergeTag" jdbcType="VARBINARY" />
+    <result column="REMOTE_CONVERGE_TAG" property="remoteConvergeTag" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

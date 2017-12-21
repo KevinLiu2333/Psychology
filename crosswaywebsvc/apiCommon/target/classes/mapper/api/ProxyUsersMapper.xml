@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ProxyUsersMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ProxyUsers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PROXY" property="proxy" jdbcType="VARCHAR" />
+    <result column="CLIENT" property="client" jdbcType="VARCHAR" />
+    <result column="AUTHENTICATION" property="authentication" jdbcType="VARCHAR" />
+    <result column="FLAGS" property="flags" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

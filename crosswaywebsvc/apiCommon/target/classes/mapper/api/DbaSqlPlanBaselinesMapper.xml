@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaSqlPlanBaselinesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaSqlPlanBaselines" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SIGNATURE" property="signature" jdbcType="DECIMAL" />
+    <result column="SQL_HANDLE" property="sqlHandle" jdbcType="VARCHAR" />
+    <result column="PLAN_NAME" property="planName" jdbcType="VARCHAR" />
+    <result column="CREATOR" property="creator" jdbcType="VARCHAR" />
+    <result column="ORIGIN" property="origin" jdbcType="VARCHAR" />
+    <result column="PARSING_SCHEMA_NAME" property="parsingSchemaName" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="CREATED" property="created" jdbcType="TIMESTAMP" />
+    <result column="LAST_MODIFIED" property="lastModified" jdbcType="TIMESTAMP" />
+    <result column="LAST_EXECUTED" property="lastExecuted" jdbcType="TIMESTAMP" />
+    <result column="LAST_VERIFIED" property="lastVerified" jdbcType="TIMESTAMP" />
+    <result column="ENABLED" property="enabled" jdbcType="VARCHAR" />
+    <result column="ACCEPTED" property="accepted" jdbcType="VARCHAR" />
+    <result column="FIXED" property="fixed" jdbcType="VARCHAR" />
+    <result column="AUTOPURGE" property="autopurge" jdbcType="VARCHAR" />
+    <result column="OPTIMIZER_COST" property="optimizerCost" jdbcType="DECIMAL" />
+    <result column="MODULE" property="module" jdbcType="VARCHAR" />
+    <result column="ACTION" property="action" jdbcType="VARCHAR" />
+    <result column="EXECUTIONS" property="executions" jdbcType="DECIMAL" />
+    <result column="ELAPSED_TIME" property="elapsedTime" jdbcType="DECIMAL" />
+    <result column="CPU_TIME" property="cpuTime" jdbcType="DECIMAL" />
+    <result column="BUFFER_GETS" property="bufferGets" jdbcType="DECIMAL" />
+    <result column="DISK_READS" property="diskReads" jdbcType="DECIMAL" />
+    <result column="DIRECT_WRITES" property="directWrites" jdbcType="DECIMAL" />
+    <result column="ROWS_PROCESSED" property="rowsProcessed" jdbcType="DECIMAL" />
+    <result column="FETCHES" property="fetches" jdbcType="DECIMAL" />
+    <result column="END_OF_FETCH_COUNT" property="endOfFetchCount" jdbcType="DECIMAL" />
+    <result column="SQL_TEXT" property="sqlText" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

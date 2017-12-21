@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu8hstuMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu8hstu" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="POBJID" property="pobjid" jdbcType="DECIMAL" />
+    <result column="TOWNERID" property="townerid" jdbcType="DECIMAL" />
+    <result column="INTCOL" property="intcol" jdbcType="DECIMAL" />
+    <result column="BUCKET" property="bucket" jdbcType="DECIMAL" />
+    <result column="ENDPTHASH" property="endpthash" jdbcType="DECIMAL" />
+    <result column="ENDPTVAL" property="endptval" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

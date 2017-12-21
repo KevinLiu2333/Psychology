@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaMviewKeysMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaMviewKeys" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="MVIEW_NAME" property="mviewName" jdbcType="VARCHAR" />
+    <result column="POSITION_IN_SELECT" property="positionInSelect" jdbcType="DECIMAL" />
+    <result column="CONTAINER_COLUMN" property="containerColumn" jdbcType="VARCHAR" />
+    <result column="DETAILOBJ_OWNER" property="detailobjOwner" jdbcType="VARCHAR" />
+    <result column="DETAILOBJ_NAME" property="detailobjName" jdbcType="VARCHAR" />
+    <result column="DETAILOBJ_ALIAS" property="detailobjAlias" jdbcType="VARCHAR" />
+    <result column="DETAILOBJ_TYPE" property="detailobjType" jdbcType="VARCHAR" />
+    <result column="DETAILOBJ_COLUMN" property="detailobjColumn" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

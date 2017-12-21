@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationListEntriesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationListEntries" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="LIST_NAME" property="listName" jdbcType="VARCHAR" />
+    <result column="PARENT_ENTRY_TEXT" property="parentEntryText" jdbcType="VARCHAR" />
+    <result column="DISPLAY_SEQUENCE" property="displaySequence" jdbcType="DECIMAL" />
+    <result column="ENTRY_TEXT" property="entryText" jdbcType="VARCHAR" />
+    <result column="ENTRY_TARGET" property="entryTarget" jdbcType="VARCHAR" />
+    <result column="ENTRY_IMAGE" property="entryImage" jdbcType="VARCHAR" />
+    <result column="ENTRY_IMAGE_ATTRIBUTES" property="entryImageAttributes" jdbcType="VARCHAR" />
+    <result column="CURRENT_FOR_PAGES_TYPE" property="currentForPagesType" jdbcType="VARCHAR" />
+    <result column="CURRENT_FOR_PAGES_EXPRESSION" property="currentForPagesExpression" jdbcType="VARCHAR" />
+    <result column="CONDITION_TYPE" property="conditionType" jdbcType="VARCHAR" />
+    <result column="CONDITION_EXPRESSION1" property="conditionExpression1" jdbcType="VARCHAR" />
+    <result column="CONDITION_EXPRESSION2" property="conditionExpression2" jdbcType="VARCHAR" />
+    <result column="COUNT_CLICKS" property="countClicks" jdbcType="VARCHAR" />
+    <result column="CLICK_COUNT_CATEGORY" property="clickCountCategory" jdbcType="VARCHAR" />
+    <result column="ENTRY_ATTRIBUTE_01" property="entryAttribute01" jdbcType="VARCHAR" />
+    <result column="ENTRY_ATTRIBUTE_02" property="entryAttribute02" jdbcType="VARCHAR" />
+    <result column="ENTRY_ATTRIBUTE_03" property="entryAttribute03" jdbcType="VARCHAR" />
+    <result column="ENTRY_ATTRIBUTE_04" property="entryAttribute04" jdbcType="VARCHAR" />
+    <result column="ENTRY_ATTRIBUTE_05" property="entryAttribute05" jdbcType="VARCHAR" />
+    <result column="ENTRY_ATTRIBUTE_06" property="entryAttribute06" jdbcType="VARCHAR" />
+    <result column="ENTRY_ATTRIBUTE_07" property="entryAttribute07" jdbcType="VARCHAR" />
+    <result column="ENTRY_ATTRIBUTE_08" property="entryAttribute08" jdbcType="VARCHAR" />
+    <result column="ENTRY_ATTRIBUTE_09" property="entryAttribute09" jdbcType="VARCHAR" />
+    <result column="ENTRY_ATTRIBUTE_10" property="entryAttribute10" jdbcType="VARCHAR" />
+    <result column="BUILD_OPTION" property="buildOption" jdbcType="VARCHAR" />
+    <result column="AUTHORIZATION_SCHEME" property="authorizationScheme" jdbcType="VARCHAR" />
+    <result column="AUTHORIZATION_SCHEME_ID" property="authorizationSchemeId" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="COMPONENT_COMMENT" property="componentComment" jdbcType="VARCHAR" />
+    <result column="LIST_ID" property="listId" jdbcType="DECIMAL" />
+    <result column="LIST_ENTRY_PARENT_ID" property="listEntryParentId" jdbcType="DECIMAL" />
+    <result column="LIST_ENTRY_ID" property="listEntryId" jdbcType="DECIMAL" />
+    <result column="COMPONENT_SIGNATURE" property="componentSignature" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

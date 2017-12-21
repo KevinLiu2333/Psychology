@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationPageIrRptMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationPageIrRpt" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="PAGE_ID" property="pageId" jdbcType="DECIMAL" />
+    <result column="INTERACTIVE_REPORT_ID" property="interactiveReportId" jdbcType="DECIMAL" />
+    <result column="REPORT_ID" property="reportId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_USER" property="applicationUser" jdbcType="VARCHAR" />
+    <result column="REPORT_NAME" property="reportName" jdbcType="VARCHAR" />
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="BASE_REPORT_ID" property="baseReportId" jdbcType="DECIMAL" />
+    <result column="REPORT_DESCRIPTION" property="reportDescription" jdbcType="VARCHAR" />
+    <result column="DISPLAY_SEQUENCE" property="displaySequence" jdbcType="DECIMAL" />
+    <result column="REPORT_VIEW_MODE" property="reportViewMode" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="CATEGORY_ID" property="categoryId" jdbcType="DECIMAL" />
+    <result column="REPORT_TYPE" property="reportType" jdbcType="VARCHAR" />
+    <result column="DISPLAY_ROWS" property="displayRows" jdbcType="DECIMAL" />
+    <result column="REPORT_COLUMNS" property="reportColumns" jdbcType="VARCHAR" />
+    <result column="SORT_COLUMN_1" property="sortColumn1" jdbcType="VARCHAR" />
+    <result column="SORT_DIRECTION_1" property="sortDirection1" jdbcType="VARCHAR" />
+    <result column="SORT_COLUMN_2" property="sortColumn2" jdbcType="VARCHAR" />
+    <result column="SORT_DIRECTION_2" property="sortDirection2" jdbcType="VARCHAR" />
+    <result column="SORT_COLUMN_3" property="sortColumn3" jdbcType="VARCHAR" />
+    <result column="SORT_DIRECTION_3" property="sortDirection3" jdbcType="VARCHAR" />
+    <result column="SORT_COLUMN_4" property="sortColumn4" jdbcType="VARCHAR" />
+    <result column="SORT_DIRECTION_4" property="sortDirection4" jdbcType="VARCHAR" />
+    <result column="SORT_COLUMN_5" property="sortColumn5" jdbcType="VARCHAR" />
+    <result column="SORT_DIRECTION_5" property="sortDirection5" jdbcType="VARCHAR" />
+    <result column="SORT_COLUMN_6" property="sortColumn6" jdbcType="VARCHAR" />
+    <result column="SORT_DIRECTION_6" property="sortDirection6" jdbcType="VARCHAR" />
+    <result column="BREAK_ON" property="breakOn" jdbcType="VARCHAR" />
+    <result column="BREAK_ENABLED_ON" property="breakEnabledOn" jdbcType="VARCHAR" />
+    <result column="SUM_COLUMNS_ON_BREAK" property="sumColumnsOnBreak" jdbcType="VARCHAR" />
+    <result column="AVG_COLUMNS_ON_BREAK" property="avgColumnsOnBreak" jdbcType="VARCHAR" />
+    <result column="MAX_COLUMNS_ON_BREAK" property="maxColumnsOnBreak" jdbcType="VARCHAR" />
+    <result column="MIN_COLUMNS_ON_BREAK" property="minColumnsOnBreak" jdbcType="VARCHAR" />
+    <result column="MEDIAN_COLUMNS_ON_BREAK" property="medianColumnsOnBreak" jdbcType="VARCHAR" />
+    <result column="COUNT_COLUMNS_ON_BREAK" property="countColumnsOnBreak" jdbcType="VARCHAR" />
+    <result column="FLASHBACK_MINUTES" property="flashbackMinutes" jdbcType="VARCHAR" />
+    <result column="FLASHBACK_ENABLED" property="flashbackEnabled" jdbcType="VARCHAR" />
+    <result column="CHART_TYPE" property="chartType" jdbcType="VARCHAR" />
+    <result column="CHART_LABEL_COLUMN" property="chartLabelColumn" jdbcType="VARCHAR" />
+    <result column="CHART_LABEL_TITLE" property="chartLabelTitle" jdbcType="VARCHAR" />
+    <result column="CHART_VALUE_COLUMN" property="chartValueColumn" jdbcType="VARCHAR" />
+    <result column="CHART_AGGREGATE" property="chartAggregate" jdbcType="VARCHAR" />
+    <result column="CHART_VALUE_TITLE" property="chartValueTitle" jdbcType="VARCHAR" />
+    <result column="CHART_SORT_ORDER" property="chartSortOrder" jdbcType="VARCHAR" />
+    <result column="CREATED_ON" property="createdOn" jdbcType="DATE" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

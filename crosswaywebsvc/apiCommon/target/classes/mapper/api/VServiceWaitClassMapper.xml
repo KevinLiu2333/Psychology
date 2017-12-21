@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VServiceWaitClassMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VServiceWaitClass" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SERVICE_NAME" property="serviceName" jdbcType="VARCHAR" />
+    <result column="SERVICE_NAME_HASH" property="serviceNameHash" jdbcType="DECIMAL" />
+    <result column="WAIT_CLASS_ID" property="waitClassId" jdbcType="DECIMAL" />
+    <result column="WAIT_CLASS#" property="waitClass" jdbcType="DECIMAL" />
+    <result column="WAIT_CLASS" property="waitClass" jdbcType="VARCHAR" />
+    <result column="TOTAL_WAITS" property="totalWaits" jdbcType="DECIMAL" />
+    <result column="TIME_WAITED" property="timeWaited" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

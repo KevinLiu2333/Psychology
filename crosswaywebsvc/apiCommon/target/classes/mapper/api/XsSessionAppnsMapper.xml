@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.XsSessionAppnsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.XsSessionAppns" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NSNAME" property="nsname" jdbcType="VARCHAR" />
+    <result column="ATTRNAME" property="attrname" jdbcType="VARCHAR" />
+    <result column="NSHANDLER" property="nshandler" jdbcType="VARCHAR" />
+    <result column="NSAUDIT" property="nsaudit" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="ATTRVALUE" property="attrvalue" jdbcType="VARCHAR" />
+    <result column="MODTIME" property="modtime" jdbcType="TIMESTAMP" />
+    <result column="SID" property="sid" jdbcType="VARBINARY" />
+    <result column="NSACLOID" property="nsacloid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

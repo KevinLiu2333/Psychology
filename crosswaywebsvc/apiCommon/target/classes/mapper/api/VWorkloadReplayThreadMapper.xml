@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VWorkloadReplayThreadMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VWorkloadReplayThread" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CLOCK" property="clock" jdbcType="DECIMAL" />
+    <result column="NEXT_TICKER" property="nextTicker" jdbcType="DECIMAL" />
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="SERIAL#" property="serial" jdbcType="DECIMAL" />
+    <result column="SPID" property="spid" jdbcType="VARCHAR" />
+    <result column="LOGON_USER" property="logonUser" jdbcType="VARCHAR" />
+    <result column="LOGON_TIME" property="logonTime" jdbcType="DATE" />
+    <result column="EVENT" property="event" jdbcType="VARCHAR" />
+    <result column="EVENT_ID" property="eventId" jdbcType="DECIMAL" />
+    <result column="EVENT#" property="event" jdbcType="DECIMAL" />
+    <result column="P1TEXT" property="p1text" jdbcType="VARCHAR" />
+    <result column="P1" property="p1" jdbcType="DECIMAL" />
+    <result column="P2TEXT" property="p2text" jdbcType="VARCHAR" />
+    <result column="P2" property="p2" jdbcType="DECIMAL" />
+    <result column="P3TEXT" property="p3text" jdbcType="VARCHAR" />
+    <result column="P3" property="p3" jdbcType="DECIMAL" />
+    <result column="WAIT_FOR_SCN" property="waitForScn" jdbcType="DECIMAL" />
+    <result column="FILE_ID" property="fileId" jdbcType="DECIMAL" />
+    <result column="CALL_COUNTER" property="callCounter" jdbcType="DECIMAL" />
+    <result column="DEPENDENT_SCN" property="dependentScn" jdbcType="DECIMAL" />
+    <result column="STATEMENT_SCN" property="statementScn" jdbcType="DECIMAL" />
+    <result column="COMMIT_WAIT_SCN" property="commitWaitScn" jdbcType="DECIMAL" />
+    <result column="POST_COMMIT_SCN" property="postCommitScn" jdbcType="DECIMAL" />
+    <result column="ACTION_TYPE" property="actionType" jdbcType="DECIMAL" />
+    <result column="SESSION_TYPE" property="sessionType" jdbcType="VARCHAR" />
+    <result column="WRC_ID" property="wrcId" jdbcType="DECIMAL" />
+    <result column="FILE_NAME" property="fileName" jdbcType="VARCHAR" />
+    <result column="SKIP_IT" property="skipIt" jdbcType="VARCHAR" />
+    <result column="DIRTY_BUFFERS" property="dirtyBuffers" jdbcType="VARCHAR" />
+    <result column="DBTIME" property="dbtime" jdbcType="DECIMAL" />
+    <result column="NETWORK_TIME" property="networkTime" jdbcType="DECIMAL" />
+    <result column="THINK_TIME" property="thinkTime" jdbcType="DECIMAL" />
+    <result column="TIME_GAIN" property="timeGain" jdbcType="DECIMAL" />
+    <result column="TIME_LOSS" property="timeLoss" jdbcType="DECIMAL" />
+    <result column="USER_CALLS" property="userCalls" jdbcType="DECIMAL" />
+    <result column="CLIENT_OS_USER" property="clientOsUser" jdbcType="VARCHAR" />
+    <result column="CLIENT_HOST" property="clientHost" jdbcType="VARCHAR" />
+    <result column="CLIENT_PID" property="clientPid" jdbcType="VARCHAR" />
+    <result column="PROGRAM" property="program" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

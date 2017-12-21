@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OrddcmCtPredParWrkMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OrddcmCtPredParWrk" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PID" property="pid" jdbcType="DECIMAL" />
+    <result column="PARNAME" property="parname" jdbcType="VARCHAR" />
+    <result column="PARVAL" property="parval" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

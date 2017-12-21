@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowCompoundConditionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowCompoundConditions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FLOW_ID" property="flowId" jdbcType="DECIMAL" />
+    <result column="CONDITION_LOGICAL_OPERATOR" property="conditionLogicalOperator" jdbcType="VARCHAR" />
+    <result column="CONDITION_DISABLED_Y_N" property="conditionDisabledYN" jdbcType="VARCHAR" />
+    <result column="CONDITION_TERM_COUNT" property="conditionTermCount" jdbcType="DECIMAL" />
+    <result column="TERM1_COND_TYPE" property="term1CondType" jdbcType="VARCHAR" />
+    <result column="TERM1_COND_EXP1" property="term1CondExp1" jdbcType="VARCHAR" />
+    <result column="TERM1_COND_EXP2" property="term1CondExp2" jdbcType="VARCHAR" />
+    <result column="TERM2_COND_TYPE" property="term2CondType" jdbcType="VARCHAR" />
+    <result column="TERM2_COND_EXP1" property="term2CondExp1" jdbcType="VARCHAR" />
+    <result column="TERM2_COND_EXP2" property="term2CondExp2" jdbcType="VARCHAR" />
+    <result column="TERM3_COND_TYPE" property="term3CondType" jdbcType="VARCHAR" />
+    <result column="TERM3_COND_EXP1" property="term3CondExp1" jdbcType="VARCHAR" />
+    <result column="TERM3_COND_EXP2" property="term3CondExp2" jdbcType="VARCHAR" />
+    <result column="TERM4_COND_TYPE" property="term4CondType" jdbcType="VARCHAR" />
+    <result column="TERM4_COND_EXP1" property="term4CondExp1" jdbcType="VARCHAR" />
+    <result column="TERM4_COND_EXP2" property="term4CondExp2" jdbcType="VARCHAR" />
+    <result column="TERM5_COND_TYPE" property="term5CondType" jdbcType="VARCHAR" />
+    <result column="TERM5_COND_EXP1" property="term5CondExp1" jdbcType="VARCHAR" />
+    <result column="TERM5_COND_EXP2" property="term5CondExp2" jdbcType="VARCHAR" />
+    <result column="TERM6_COND_TYPE" property="term6CondType" jdbcType="VARCHAR" />
+    <result column="TERM6_COND_EXP1" property="term6CondExp1" jdbcType="VARCHAR" />
+    <result column="TERM6_COND_EXP2" property="term6CondExp2" jdbcType="VARCHAR" />
+    <result column="TERM7_COND_TYPE" property="term7CondType" jdbcType="VARCHAR" />
+    <result column="TERM7_COND_EXP1" property="term7CondExp1" jdbcType="VARCHAR" />
+    <result column="TERM7_COND_EXP2" property="term7CondExp2" jdbcType="VARCHAR" />
+    <result column="TERM8_COND_TYPE" property="term8CondType" jdbcType="VARCHAR" />
+    <result column="TERM8_COND_EXP1" property="term8CondExp1" jdbcType="VARCHAR" />
+    <result column="TERM8_COND_EXP2" property="term8CondExp2" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+  </resultMap>
+</mapper>

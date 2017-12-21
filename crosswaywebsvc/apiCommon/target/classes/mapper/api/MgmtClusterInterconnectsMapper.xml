@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtClusterInterconnectsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtClusterInterconnects" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CLUSTER_NAME" property="clusterName" jdbcType="VARCHAR" />
+    <result column="HOST_NAME" property="hostName" jdbcType="VARCHAR" />
+    <result column="HOST_STATUS" property="hostStatus" jdbcType="DECIMAL" />
+    <result column="IF_NAME" property="ifName" jdbcType="VARCHAR" />
+    <result column="IF_SUBNET" property="ifSubnet" jdbcType="VARCHAR" />
+    <result column="IF_PUBLIC" property="ifPublic" jdbcType="VARCHAR" />
+    <result column="TOTRATE_5MIN" property="totrate5min" jdbcType="DECIMAL" />
+    <result column="TOTERR_5MIN" property="toterr5min" jdbcType="DECIMAL" />
+    <result column="INRATE_5MIN" property="inrate5min" jdbcType="DECIMAL" />
+    <result column="CURR_WARNING" property="currWarning" jdbcType="DECIMAL" />
+    <result column="CURR_CRITICAL" property="currCritical" jdbcType="DECIMAL" />
+    <result column="LATEST_COLLECTION_TIMESTAMP" property="latestCollectionTimestamp" jdbcType="DATE" />
+  </resultMap>
+</mapper>

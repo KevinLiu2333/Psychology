@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VPxSessionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VPxSession" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SID" property="sid" jdbcType="DECIMAL" />
+    <result column="SERIAL#" property="serial" jdbcType="DECIMAL" />
+    <result column="QCSID" property="qcsid" jdbcType="DECIMAL" />
+    <result column="QCSERIAL#" property="qcserial" jdbcType="DECIMAL" />
+    <result column="QCINST_ID" property="qcinstId" jdbcType="DECIMAL" />
+    <result column="SERVER_GROUP" property="serverGroup" jdbcType="DECIMAL" />
+    <result column="SERVER_SET" property="serverSet" jdbcType="DECIMAL" />
+    <result column="SERVER#" property="server" jdbcType="DECIMAL" />
+    <result column="DEGREE" property="degree" jdbcType="DECIMAL" />
+    <result column="REQ_DEGREE" property="reqDegree" jdbcType="DECIMAL" />
+    <result column="SADDR" property="saddr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

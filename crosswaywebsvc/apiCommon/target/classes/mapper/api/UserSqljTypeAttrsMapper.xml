@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserSqljTypeAttrsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserSqljTypeAttrs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TYPE_NAME" property="typeName" jdbcType="VARCHAR" />
+    <result column="ATTR_NAME" property="attrName" jdbcType="VARCHAR" />
+    <result column="EXTERNAL_ATTR_NAME" property="externalAttrName" jdbcType="VARCHAR" />
+    <result column="ATTR_TYPE_MOD" property="attrTypeMod" jdbcType="VARCHAR" />
+    <result column="ATTR_TYPE_OWNER" property="attrTypeOwner" jdbcType="VARCHAR" />
+    <result column="ATTR_TYPE_NAME" property="attrTypeName" jdbcType="VARCHAR" />
+    <result column="LENGTH" property="length" jdbcType="DECIMAL" />
+    <result column="PRECISION" property="precision" jdbcType="DECIMAL" />
+    <result column="SCALE" property="scale" jdbcType="DECIMAL" />
+    <result column="CHARACTER_SET_NAME" property="characterSetName" jdbcType="VARCHAR" />
+    <result column="ATTR_NO" property="attrNo" jdbcType="DECIMAL" />
+    <result column="INHERITED" property="inherited" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

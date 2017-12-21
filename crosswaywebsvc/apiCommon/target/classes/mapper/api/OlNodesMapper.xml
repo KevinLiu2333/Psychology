@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OlNodesMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OlNodes">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OL_NAME" jdbcType="VARCHAR" property="olName" />
+    <result column="CATEGORY" jdbcType="VARCHAR" property="category" />
+    <result column="NODE_ID" jdbcType="DECIMAL" property="nodeId" />
+    <result column="PARENT_ID" jdbcType="DECIMAL" property="parentId" />
+    <result column="NODE_TYPE" jdbcType="DECIMAL" property="nodeType" />
+    <result column="NODE_TEXTLEN" jdbcType="DECIMAL" property="nodeTextlen" />
+    <result column="NODE_TEXTOFF" jdbcType="DECIMAL" property="nodeTextoff" />
+    <result column="NODE_NAME" jdbcType="VARCHAR" property="nodeName" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ExppkgobjMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exppkgobj" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PACKAGE" property="package" jdbcType="VARCHAR" />
+    <result column="SCHEMA" property="schema" jdbcType="VARCHAR" />
+    <result column="CLASS" property="class" jdbcType="DECIMAL" />
+    <result column="TYPE#" property="type" jdbcType="DECIMAL" />
+    <result column="PREPOST" property="prepost" jdbcType="DECIMAL" />
+    <result column="LEVEL#" property="level" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

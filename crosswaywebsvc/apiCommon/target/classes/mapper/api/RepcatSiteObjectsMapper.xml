@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RepcatSiteObjectsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RepcatSiteObjects" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TEMPLATE_SITE_ID" property="templateSiteId" jdbcType="DECIMAL" />
+    <result column="SNAME" property="sname" jdbcType="VARCHAR" />
+    <result column="ONAME" property="oname" jdbcType="VARCHAR" />
+    <result column="OBJECT_TYPE_ID" property="objectTypeId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

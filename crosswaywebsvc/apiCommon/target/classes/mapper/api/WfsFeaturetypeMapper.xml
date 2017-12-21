@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WfsFeaturetypeMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WfsFeaturetype" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="FEATURETYPEID" property="featuretypeid" jdbcType="DECIMAL" />
+    <result column="FEATURETYPENAME" property="featuretypename" jdbcType="VARCHAR" />
+    <result column="FEATUREDESC" property="featuredesc" jdbcType="OTHER" />
+    <result column="DESCRIBEFEATURETYPE" property="describefeaturetype" jdbcType="OTHER" />
+    <result column="LASTDESCRIBEFEATURETYPEGENTS" property="lastdescribefeaturetypegents" jdbcType="TIMESTAMP" />
+    <result column="LASTFEATUREUPDATETS" property="lastfeatureupdatets" jdbcType="TIMESTAMP" />
+    <result column="NAMESPACEPREFIX" property="namespaceprefix" jdbcType="VARCHAR" />
+    <result column="NAMESPACEURL" property="namespaceurl" jdbcType="VARCHAR" />
+    <result column="SCHEMALOCATION" property="schemalocation" jdbcType="VARCHAR" />
+    <result column="KEYCOLS" property="keycols" jdbcType="VARCHAR" />
+    <result column="DATAPOINTER" property="datapointer" jdbcType="VARCHAR" />
+    <result column="ISDOCBASED" property="isdocbased" jdbcType="VARCHAR" />
+    <result column="SPATIALCOLS" property="spatialcols" jdbcType="OTHER" />
+    <result column="MANDATORYCOLS" property="mandatorycols" jdbcType="OTHER" />
+    <result column="TSCOLS" property="tscols" jdbcType="OTHER" />
+    <result column="DOCIDPATHS" property="docidpaths" jdbcType="OTHER" />
+    <result column="SPATIALPATHARRSEP" property="spatialpatharrsep" jdbcType="OTHER" />
+    <result column="PRIMARYSPATIALCOL" property="primaryspatialcol" jdbcType="VARCHAR" />
+    <result column="FEATUREMEMBERNAME" property="featuremembername" jdbcType="VARCHAR" />
+    <result column="SRSNS" property="srsns" jdbcType="VARCHAR" />
+    <result column="SRSNSALIAS" property="srsnsalias" jdbcType="VARCHAR" />
+    <result column="FTXSDREFID" property="ftxsdrefid" jdbcType="VARCHAR" />
+    <result column="ISMTABLEVIEW" property="ismtableview" jdbcType="VARCHAR" />
+    <result column="VTABLELIST" property="vtablelist" jdbcType="OTHER" />
+    <result column="VKEYCOLSLIST" property="vkeycolslist" jdbcType="OTHER" />
+    <result column="TKEYCOLSLIST" property="tkeycolslist" jdbcType="OTHER" />
+    <result column="NUMCOLS" property="numcols" jdbcType="OTHER" />
+    <result column="IDXPATHS" property="idxpaths" jdbcType="OTHER" />
+    <result column="IDXPATHTYPES" property="idxpathtypes" jdbcType="OTHER" />
+    <result column="XTIDXCREATED" property="xtidxcreated" jdbcType="VARCHAR" />
+    <result column="FEATURECOLLECTIONNAME" property="featurecollectionname" jdbcType="VARCHAR" />
+    <result column="FORMATTEDKEYCOLS" property="formattedkeycols" jdbcType="OTHER" />
+    <result column="FORMATTEDTKEYCOLLIST" property="formattedtkeycollist" jdbcType="OTHER" />
+    <result column="ISGML3" property="isgml3" jdbcType="VARCHAR" />
+    <result column="SPATIALARRLIST" property="spatialarrlist" jdbcType="OTHER" />
+    <result column="SPATIALPATHSSRSNSLIST" property="spatialpathssrsnslist" jdbcType="OTHER" />
+    <result column="SPATIALARRPATHSSRSNSLIST" property="spatialarrpathssrsnslist" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

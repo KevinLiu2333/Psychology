@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Dba2pcPendingMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Dba2pcPending" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOCAL_TRAN_ID" property="localTranId" jdbcType="VARCHAR" />
+    <result column="GLOBAL_TRAN_ID" property="globalTranId" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="MIXED" property="mixed" jdbcType="VARCHAR" />
+    <result column="ADVICE" property="advice" jdbcType="VARCHAR" />
+    <result column="TRAN_COMMENT" property="tranComment" jdbcType="VARCHAR" />
+    <result column="FAIL_TIME" property="failTime" jdbcType="DATE" />
+    <result column="FORCE_TIME" property="forceTime" jdbcType="DATE" />
+    <result column="RETRY_TIME" property="retryTime" jdbcType="DATE" />
+    <result column="OS_USER" property="osUser" jdbcType="VARCHAR" />
+    <result column="OS_TERMINAL" property="osTerminal" jdbcType="VARCHAR" />
+    <result column="HOST" property="host" jdbcType="VARCHAR" />
+    <result column="DB_USER" property="dbUser" jdbcType="VARCHAR" />
+    <result column="COMMIT#" property="commit" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

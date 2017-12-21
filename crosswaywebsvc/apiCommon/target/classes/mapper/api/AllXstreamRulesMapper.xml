@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllXstreamRulesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllXstreamRules" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="STREAMS_NAME" property="streamsName" jdbcType="VARCHAR" />
+    <result column="STREAMS_TYPE" property="streamsType" jdbcType="VARCHAR" />
+    <result column="STREAMS_RULE_TYPE" property="streamsRuleType" jdbcType="VARCHAR" />
+    <result column="RULE_SET_OWNER" property="ruleSetOwner" jdbcType="VARCHAR" />
+    <result column="RULE_SET_NAME" property="ruleSetName" jdbcType="VARCHAR" />
+    <result column="RULE_SET_TYPE" property="ruleSetType" jdbcType="CHAR" />
+    <result column="RULE_OWNER" property="ruleOwner" jdbcType="VARCHAR" />
+    <result column="RULE_NAME" property="ruleName" jdbcType="VARCHAR" />
+    <result column="RULE_TYPE" property="ruleType" jdbcType="VARCHAR" />
+    <result column="SCHEMA_NAME" property="schemaName" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="INCLUDE_TAGGED_LCR" property="includeTaggedLcr" jdbcType="VARCHAR" />
+    <result column="SUBSETTING_OPERATION" property="subsettingOperation" jdbcType="VARCHAR" />
+    <result column="DML_CONDITION" property="dmlCondition" jdbcType="VARCHAR" />
+    <result column="SOURCE_DATABASE" property="sourceDatabase" jdbcType="VARCHAR" />
+    <result column="ORIGINAL_RULE_CONDITION" property="originalRuleCondition" jdbcType="VARCHAR" />
+    <result column="SAME_RULE_CONDITION" property="sameRuleCondition" jdbcType="VARCHAR" />
+    <result column="RULE_CONDITION" property="ruleCondition" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

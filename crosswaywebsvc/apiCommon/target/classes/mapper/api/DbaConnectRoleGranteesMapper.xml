@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaConnectRoleGranteesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaConnectRoleGrantees" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="GRANTEE" property="grantee" jdbcType="VARCHAR" />
+    <result column="PATH_OF_CONNECT_ROLE_GRANT" property="pathOfConnectRoleGrant" jdbcType="VARCHAR" />
+    <result column="ADMIN_OPT" property="adminOpt" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

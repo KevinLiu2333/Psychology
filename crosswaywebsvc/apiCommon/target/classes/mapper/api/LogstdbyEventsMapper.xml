@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.LogstdbyEventsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.LogstdbyEvents" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="EVENT_TIME" property="eventTime" jdbcType="TIMESTAMP" />
+    <result column="CURRENT_SCN" property="currentScn" jdbcType="DECIMAL" />
+    <result column="COMMIT_SCN" property="commitScn" jdbcType="DECIMAL" />
+    <result column="XIDUSN" property="xidusn" jdbcType="DECIMAL" />
+    <result column="XIDSLT" property="xidslt" jdbcType="DECIMAL" />
+    <result column="XIDSQN" property="xidsqn" jdbcType="DECIMAL" />
+    <result column="ERRVAL" property="errval" jdbcType="DECIMAL" />
+    <result column="EVENT" property="event" jdbcType="VARCHAR" />
+    <result column="ERROR" property="error" jdbcType="VARCHAR" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="VARCHAR" />
+    <result column="FULL_EVENT" property="fullEvent" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

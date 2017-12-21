@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvPqTqstatMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvPqTqstat" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="DFO_NUMBER" property="dfoNumber" jdbcType="DECIMAL" />
+    <result column="TQ_ID" property="tqId" jdbcType="DECIMAL" />
+    <result column="SERVER_TYPE" property="serverType" jdbcType="VARCHAR" />
+    <result column="NUM_ROWS" property="numRows" jdbcType="DECIMAL" />
+    <result column="BYTES" property="bytes" jdbcType="DECIMAL" />
+    <result column="OPEN_TIME" property="openTime" jdbcType="DECIMAL" />
+    <result column="AVG_LATENCY" property="avgLatency" jdbcType="DECIMAL" />
+    <result column="WAITS" property="waits" jdbcType="DECIMAL" />
+    <result column="TIMEOUTS" property="timeouts" jdbcType="DECIMAL" />
+    <result column="PROCESS" property="process" jdbcType="VARCHAR" />
+    <result column="INSTANCE" property="instance" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

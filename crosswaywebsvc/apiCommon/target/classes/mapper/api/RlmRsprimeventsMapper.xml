@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.RlmRsprimeventsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.RlmRsprimevents" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="RSET_OWNER" property="rsetOwner" jdbcType="VARCHAR" />
+    <id column="RSET_NAME" property="rsetName" jdbcType="VARCHAR" />
+    <id column="PRIM_ATTR" property="primAttr" jdbcType="VARCHAR" />
+    <result column="PRIM_ATTRPOS" property="primAttrpos" jdbcType="DECIMAL" />
+    <result column="PRIM_ATTRALS" property="primAttrals" jdbcType="VARCHAR" />
+    <result column="PRIM_ASETNM" property="primAsetnm" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

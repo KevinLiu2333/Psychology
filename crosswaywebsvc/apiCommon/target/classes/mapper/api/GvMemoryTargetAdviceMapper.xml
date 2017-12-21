@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvMemoryTargetAdviceMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvMemoryTargetAdvice" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="MEMORY_SIZE" property="memorySize" jdbcType="DECIMAL" />
+    <result column="MEMORY_SIZE_FACTOR" property="memorySizeFactor" jdbcType="DECIMAL" />
+    <result column="ESTD_DB_TIME" property="estdDbTime" jdbcType="DECIMAL" />
+    <result column="ESTD_DB_TIME_FACTOR" property="estdDbTimeFactor" jdbcType="DECIMAL" />
+    <result column="VERSION" property="version" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

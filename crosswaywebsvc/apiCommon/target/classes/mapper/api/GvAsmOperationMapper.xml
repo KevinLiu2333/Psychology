@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvAsmOperationMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvAsmOperation" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="GROUP_NUMBER" property="groupNumber" jdbcType="DECIMAL" />
+    <result column="OPERATION" property="operation" jdbcType="CHAR" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="POWER" property="power" jdbcType="DECIMAL" />
+    <result column="ACTUAL" property="actual" jdbcType="DECIMAL" />
+    <result column="SOFAR" property="sofar" jdbcType="DECIMAL" />
+    <result column="EST_WORK" property="estWork" jdbcType="DECIMAL" />
+    <result column="EST_RATE" property="estRate" jdbcType="DECIMAL" />
+    <result column="EST_MINUTES" property="estMinutes" jdbcType="DECIMAL" />
+    <result column="ERROR_CODE" property="errorCode" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

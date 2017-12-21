@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DrSupTextIdxIMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DrSupTextIdxI" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TOKEN_TEXT" property="tokenText" jdbcType="VARCHAR" />
+    <result column="TOKEN_TYPE" property="tokenType" jdbcType="DECIMAL" />
+    <result column="TOKEN_FIRST" property="tokenFirst" jdbcType="DECIMAL" />
+    <result column="TOKEN_LAST" property="tokenLast" jdbcType="DECIMAL" />
+    <result column="TOKEN_COUNT" property="tokenCount" jdbcType="DECIMAL" />
+    <result column="TOKEN_INFO" property="tokenInfo" jdbcType="BLOB" />
+  </resultMap>
+</mapper>

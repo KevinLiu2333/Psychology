@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AqMgmtNotifyQtableRMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AqMgmtNotifyQtableR" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="QUEUE" property="queue" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="ADDRESS" property="address" jdbcType="VARCHAR" />
+    <result column="PROTOCOL" property="protocol" jdbcType="DECIMAL" />
+    <result column="RULE_SET" property="ruleSet" jdbcType="VARCHAR" />
+    <result column="TRANSFORMATION" property="transformation" jdbcType="VARCHAR" />
+    <result column="RULE" property="rule" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

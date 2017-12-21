@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaStreamsComponentStatMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaStreamsComponentStat" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COMPONENT_NAME" property="componentName" jdbcType="VARCHAR" />
+    <result column="COMPONENT_DB" property="componentDb" jdbcType="VARCHAR" />
+    <result column="COMPONENT_TYPE" property="componentType" jdbcType="DECIMAL" />
+    <result column="STAT_TIME" property="statTime" jdbcType="DATE" />
+    <result column="COUNT1" property="count1" jdbcType="DECIMAL" />
+    <result column="COUNT2" property="count2" jdbcType="DECIMAL" />
+    <result column="COUNT3" property="count3" jdbcType="DECIMAL" />
+    <result column="COUNT4" property="count4" jdbcType="DECIMAL" />
+    <result column="LATENCY" property="latency" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="VARCHAR" />
+    <result column="SPARE4" property="spare4" jdbcType="DATE" />
+  </resultMap>
+</mapper>

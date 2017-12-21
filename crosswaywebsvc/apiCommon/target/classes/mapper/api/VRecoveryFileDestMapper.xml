@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VRecoveryFileDestMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VRecoveryFileDest" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="SPACE_LIMIT" property="spaceLimit" jdbcType="DECIMAL" />
+    <result column="SPACE_USED" property="spaceUsed" jdbcType="DECIMAL" />
+    <result column="SPACE_RECLAIMABLE" property="spaceReclaimable" jdbcType="DECIMAL" />
+    <result column="NUMBER_OF_FILES" property="numberOfFiles" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

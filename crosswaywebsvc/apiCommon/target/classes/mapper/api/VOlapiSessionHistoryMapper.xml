@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VOlapiSessionHistoryMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VOlapiSessionHistory" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="HIST_ID" property="histId" jdbcType="DECIMAL" />
+    <result column="SEQNO" property="seqno" jdbcType="DECIMAL" />
+    <result column="SESS_ID" property="sessId" jdbcType="DECIMAL" />
+    <result column="SESS_SER" property="sessSer" jdbcType="DECIMAL" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="TOTSQL2CPP" property="totsql2cpp" jdbcType="DECIMAL" />
+    <result column="TOTCPPEXEC" property="totcppexec" jdbcType="DECIMAL" />
+    <result column="TOTCPP2SQL" property="totcpp2sql" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

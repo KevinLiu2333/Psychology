@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuStorageViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuStorageView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="FILE_NUM" property="fileNum" jdbcType="DECIMAL" />
+    <result column="BLOCK_NUM" property="blockNum" jdbcType="DECIMAL" />
+    <result column="TYPE_NUM" property="typeNum" jdbcType="DECIMAL" />
+    <result column="TS_NUM" property="tsNum" jdbcType="DECIMAL" />
+    <result column="BLOCKS" property="blocks" jdbcType="DECIMAL" />
+    <result column="EXTENTS" property="extents" jdbcType="DECIMAL" />
+    <result column="INIEXTS" property="iniexts" jdbcType="DECIMAL" />
+    <result column="MINEXTS" property="minexts" jdbcType="DECIMAL" />
+    <result column="MAXEXTS" property="maxexts" jdbcType="DECIMAL" />
+    <result column="EXTSIZE" property="extsize" jdbcType="DECIMAL" />
+    <result column="EXTPCT" property="extpct" jdbcType="DECIMAL" />
+    <result column="USER_NUM" property="userNum" jdbcType="DECIMAL" />
+    <result column="LISTS" property="lists" jdbcType="DECIMAL" />
+    <result column="GROUPS" property="groups" jdbcType="DECIMAL" />
+    <result column="BITMAPRANGES" property="bitmapranges" jdbcType="DECIMAL" />
+    <result column="CACHEHINT" property="cachehint" jdbcType="DECIMAL" />
+    <result column="SCANHINT" property="scanhint" jdbcType="DECIMAL" />
+    <result column="HWMINCR" property="hwmincr" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

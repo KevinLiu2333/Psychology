@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DeferrorMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Deferror">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DEFERRED_TRAN_ID" jdbcType="VARCHAR" property="deferredTranId" />
+    <result column="ORIGIN_TRAN_DB" jdbcType="VARCHAR" property="originTranDb" />
+    <result column="ORIGIN_TRAN_ID" jdbcType="VARCHAR" property="originTranId" />
+    <result column="CALLNO" jdbcType="DECIMAL" property="callno" />
+    <result column="DESTINATION" jdbcType="VARCHAR" property="destination" />
+    <result column="START_TIME" jdbcType="DATE" property="startTime" />
+    <result column="ERROR_NUMBER" jdbcType="DECIMAL" property="errorNumber" />
+    <result column="ERROR_MSG" jdbcType="VARCHAR" property="errorMsg" />
+    <result column="RECEIVER" jdbcType="VARCHAR" property="receiver" />
+  </resultMap>
+</mapper>

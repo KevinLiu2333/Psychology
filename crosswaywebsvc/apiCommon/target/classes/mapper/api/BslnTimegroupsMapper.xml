@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.BslnTimegroupsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.BslnTimegroups" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="HOUR" property="hour" jdbcType="DECIMAL" />
+    <result column="INTRADAY" property="intraday" jdbcType="VARCHAR" />
+    <result column="EXTRADAY" property="extraday" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

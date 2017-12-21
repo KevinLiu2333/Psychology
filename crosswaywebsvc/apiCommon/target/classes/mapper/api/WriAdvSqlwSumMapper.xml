@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WriAdvSqlwSumMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WriAdvSqlwSum" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="WORKLOAD_ID" property="workloadId" jdbcType="DECIMAL" />
+    <result column="DATA_SOURCE" property="dataSource" jdbcType="VARCHAR" />
+    <result column="NUM_SELECT" property="numSelect" jdbcType="DECIMAL" />
+    <result column="NUM_INSERT" property="numInsert" jdbcType="DECIMAL" />
+    <result column="NUM_DELETE" property="numDelete" jdbcType="DECIMAL" />
+    <result column="NUM_UPDATE" property="numUpdate" jdbcType="DECIMAL" />
+    <result column="NUM_MERGE" property="numMerge" jdbcType="DECIMAL" />
+    <result column="SQLSET_ID" property="sqlsetId" jdbcType="DECIMAL" />
+    <result column="SQLSET_REF_ID" property="sqlsetRefId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

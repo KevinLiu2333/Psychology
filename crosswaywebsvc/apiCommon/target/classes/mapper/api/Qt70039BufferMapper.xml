@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Qt70039BufferMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Qt70039Buffer" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDX" property="indx" jdbcType="DECIMAL" />
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="OBJNO" property="objno" jdbcType="DECIMAL" />
+    <result column="QUEUE_ID" property="queueId" jdbcType="DECIMAL" />
+    <result column="CORRID" property="corrid" jdbcType="VARCHAR" />
+    <result column="SEQUENCE_NUM" property="sequenceNum" jdbcType="DECIMAL" />
+    <result column="MSG_NUM" property="msgNum" jdbcType="DECIMAL" />
+    <result column="STATE" property="state" jdbcType="DECIMAL" />
+    <result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+    <result column="EXPIRATION" property="expiration" jdbcType="DECIMAL" />
+    <result column="ENQ_TIME" property="enqTime" jdbcType="TIMESTAMP" />
+    <result column="ENQ_UID" property="enqUid" jdbcType="DECIMAL" />
+    <result column="ENQ_USER_NAME" property="enqUserName" jdbcType="VARCHAR" />
+    <result column="RETRY_COUNT" property="retryCount" jdbcType="DECIMAL" />
+    <result column="SENDER_NAME" property="senderName" jdbcType="VARCHAR" />
+    <result column="SENDER_ADDRESS" property="senderAddress" jdbcType="VARCHAR" />
+    <result column="SENDER_PROTOCOL" property="senderProtocol" jdbcType="DECIMAL" />
+    <result column="SRCSEQUENCE_NUM" property="srcsequenceNum" jdbcType="DECIMAL" />
+    <result column="SUBSCRIBER_ID" property="subscriberId" jdbcType="DECIMAL" />
+    <result column="EXCEPTIONQ_SCHEMA" property="exceptionqSchema" jdbcType="VARCHAR" />
+    <result column="EXCEPTIONQ_NAME" property="exceptionqName" jdbcType="VARCHAR" />
+    <result column="ADDR" property="addr" jdbcType="VARBINARY" />
+    <result column="MSGID" property="msgid" jdbcType="VARBINARY" />
+    <result column="DEQUEUE_MSGID" property="dequeueMsgid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

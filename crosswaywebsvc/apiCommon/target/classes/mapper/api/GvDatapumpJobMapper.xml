@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvDatapumpJobMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvDatapumpJob" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="JOB_NAME" property="jobName" jdbcType="VARCHAR" />
+    <result column="OWNER_NAME" property="ownerName" jdbcType="VARCHAR" />
+    <result column="MSG_CTRL_QUEUE" property="msgCtrlQueue" jdbcType="VARCHAR" />
+    <result column="STATUS_QUEUE" property="statusQueue" jdbcType="VARCHAR" />
+    <result column="OPERATION" property="operation" jdbcType="VARCHAR" />
+    <result column="JOB_MODE" property="jobMode" jdbcType="VARCHAR" />
+    <result column="MASTER_ID" property="masterId" jdbcType="DECIMAL" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="WORKERS" property="workers" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="SERIALNUM" property="serialnum" jdbcType="DECIMAL" />
+    <result column="QUEUE_TABNUM" property="queueTabnum" jdbcType="DECIMAL" />
+    <result column="JOB_ID" property="jobId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

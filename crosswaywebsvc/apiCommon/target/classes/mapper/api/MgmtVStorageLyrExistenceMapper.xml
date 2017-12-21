@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtVStorageLyrExistenceMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtVStorageLyrExistence" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DB_EXISTS_FLAG" property="dbExistsFlag" jdbcType="VARCHAR" />
+    <result column="ASM_EXISTS_FLAG" property="asmExistsFlag" jdbcType="VARCHAR" />
+    <result column="RAC_EXISTS_FLAG" property="racExistsFlag" jdbcType="VARCHAR" />
+    <result column="LOCAL_FS_EXISTS_FLAG" property="localFsExistsFlag" jdbcType="VARCHAR" />
+    <result column="WRITEABLE_NFS_EXISTS_FLAG" property="writeableNfsExistsFlag" jdbcType="VARCHAR" />
+    <result column="VOL_EXISTS_FLAG" property="volExistsFlag" jdbcType="VARCHAR" />
+    <result column="DISK_EXISTS_FLAG" property="diskExistsFlag" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

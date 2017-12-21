@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.LogmnrPartobjMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.LogmnrPartobj" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="LOGMNR_UID" property="logmnrUid" jdbcType="DECIMAL" />
+    <id column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="PARTTYPE" property="parttype" jdbcType="DECIMAL" />
+    <result column="PARTCNT" property="partcnt" jdbcType="DECIMAL" />
+    <result column="PARTKEYCOLS" property="partkeycols" jdbcType="DECIMAL" />
+    <result column="FLAGS" property="flags" jdbcType="DECIMAL" />
+    <result column="DEFTS#" property="defts" jdbcType="DECIMAL" />
+    <result column="DEFPCTFREE" property="defpctfree" jdbcType="DECIMAL" />
+    <result column="DEFPCTUSED" property="defpctused" jdbcType="DECIMAL" />
+    <result column="DEFPCTTHRES" property="defpctthres" jdbcType="DECIMAL" />
+    <result column="DEFINITRANS" property="definitrans" jdbcType="DECIMAL" />
+    <result column="DEFMAXTRANS" property="defmaxtrans" jdbcType="DECIMAL" />
+    <result column="DEFTINIEXTS" property="deftiniexts" jdbcType="DECIMAL" />
+    <result column="DEFEXTSIZE" property="defextsize" jdbcType="DECIMAL" />
+    <result column="DEFMINEXTS" property="defminexts" jdbcType="DECIMAL" />
+    <result column="DEFMAXEXTS" property="defmaxexts" jdbcType="DECIMAL" />
+    <result column="DEFEXTPCT" property="defextpct" jdbcType="DECIMAL" />
+    <result column="DEFLISTS" property="deflists" jdbcType="DECIMAL" />
+    <result column="DEFGROUPS" property="defgroups" jdbcType="DECIMAL" />
+    <result column="DEFLOGGING" property="deflogging" jdbcType="DECIMAL" />
+    <result column="SPARE1" property="spare1" jdbcType="DECIMAL" />
+    <result column="SPARE2" property="spare2" jdbcType="DECIMAL" />
+    <result column="SPARE3" property="spare3" jdbcType="DECIMAL" />
+    <result column="DEFINCLCOL" property="definclcol" jdbcType="DECIMAL" />
+    <result column="PARAMETERS" property="parameters" jdbcType="VARCHAR" />
+    <result column="LOGMNR_FLAGS" property="logmnrFlags" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaIndexesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaIndexes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="INDEX_NAME" property="indexName" jdbcType="VARCHAR" />
+    <result column="INDEX_TYPE" property="indexType" jdbcType="VARCHAR" />
+    <result column="TABLE_OWNER" property="tableOwner" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="TABLE_TYPE" property="tableType" jdbcType="VARCHAR" />
+    <result column="UNIQUENESS" property="uniqueness" jdbcType="VARCHAR" />
+    <result column="COMPRESSION" property="compression" jdbcType="VARCHAR" />
+    <result column="PREFIX_LENGTH" property="prefixLength" jdbcType="DECIMAL" />
+    <result column="TABLESPACE_NAME" property="tablespaceName" jdbcType="VARCHAR" />
+    <result column="INI_TRANS" property="iniTrans" jdbcType="DECIMAL" />
+    <result column="MAX_TRANS" property="maxTrans" jdbcType="DECIMAL" />
+    <result column="INITIAL_EXTENT" property="initialExtent" jdbcType="DECIMAL" />
+    <result column="NEXT_EXTENT" property="nextExtent" jdbcType="DECIMAL" />
+    <result column="MIN_EXTENTS" property="minExtents" jdbcType="DECIMAL" />
+    <result column="MAX_EXTENTS" property="maxExtents" jdbcType="DECIMAL" />
+    <result column="PCT_INCREASE" property="pctIncrease" jdbcType="DECIMAL" />
+    <result column="PCT_THRESHOLD" property="pctThreshold" jdbcType="DECIMAL" />
+    <result column="INCLUDE_COLUMN" property="includeColumn" jdbcType="DECIMAL" />
+    <result column="FREELISTS" property="freelists" jdbcType="DECIMAL" />
+    <result column="FREELIST_GROUPS" property="freelistGroups" jdbcType="DECIMAL" />
+    <result column="PCT_FREE" property="pctFree" jdbcType="DECIMAL" />
+    <result column="LOGGING" property="logging" jdbcType="VARCHAR" />
+    <result column="BLEVEL" property="blevel" jdbcType="DECIMAL" />
+    <result column="LEAF_BLOCKS" property="leafBlocks" jdbcType="DECIMAL" />
+    <result column="DISTINCT_KEYS" property="distinctKeys" jdbcType="DECIMAL" />
+    <result column="AVG_LEAF_BLOCKS_PER_KEY" property="avgLeafBlocksPerKey" jdbcType="DECIMAL" />
+    <result column="AVG_DATA_BLOCKS_PER_KEY" property="avgDataBlocksPerKey" jdbcType="DECIMAL" />
+    <result column="CLUSTERING_FACTOR" property="clusteringFactor" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="NUM_ROWS" property="numRows" jdbcType="DECIMAL" />
+    <result column="SAMPLE_SIZE" property="sampleSize" jdbcType="DECIMAL" />
+    <result column="LAST_ANALYZED" property="lastAnalyzed" jdbcType="DATE" />
+    <result column="DEGREE" property="degree" jdbcType="VARCHAR" />
+    <result column="INSTANCES" property="instances" jdbcType="VARCHAR" />
+    <result column="PARTITIONED" property="partitioned" jdbcType="VARCHAR" />
+    <result column="TEMPORARY" property="temporary" jdbcType="VARCHAR" />
+    <result column="GENERATED" property="generated" jdbcType="VARCHAR" />
+    <result column="SECONDARY" property="secondary" jdbcType="VARCHAR" />
+    <result column="BUFFER_POOL" property="bufferPool" jdbcType="VARCHAR" />
+    <result column="FLASH_CACHE" property="flashCache" jdbcType="VARCHAR" />
+    <result column="CELL_FLASH_CACHE" property="cellFlashCache" jdbcType="VARCHAR" />
+    <result column="USER_STATS" property="userStats" jdbcType="VARCHAR" />
+    <result column="DURATION" property="duration" jdbcType="VARCHAR" />
+    <result column="PCT_DIRECT_ACCESS" property="pctDirectAccess" jdbcType="DECIMAL" />
+    <result column="ITYP_OWNER" property="itypOwner" jdbcType="VARCHAR" />
+    <result column="ITYP_NAME" property="itypName" jdbcType="VARCHAR" />
+    <result column="PARAMETERS" property="parameters" jdbcType="VARCHAR" />
+    <result column="GLOBAL_STATS" property="globalStats" jdbcType="VARCHAR" />
+    <result column="DOMIDX_STATUS" property="domidxStatus" jdbcType="VARCHAR" />
+    <result column="DOMIDX_OPSTATUS" property="domidxOpstatus" jdbcType="VARCHAR" />
+    <result column="FUNCIDX_STATUS" property="funcidxStatus" jdbcType="VARCHAR" />
+    <result column="JOIN_INDEX" property="joinIndex" jdbcType="VARCHAR" />
+    <result column="IOT_REDUNDANT_PKEY_ELIM" property="iotRedundantPkeyElim" jdbcType="VARCHAR" />
+    <result column="DROPPED" property="dropped" jdbcType="VARCHAR" />
+    <result column="VISIBILITY" property="visibility" jdbcType="VARCHAR" />
+    <result column="DOMIDX_MANAGEMENT" property="domidxManagement" jdbcType="VARCHAR" />
+    <result column="SEGMENT_CREATED" property="segmentCreated" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

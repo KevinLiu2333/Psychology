@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu8usrMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu8usr" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="USERID" property="userid" jdbcType="DECIMAL" />
+    <result column="PASSWD" property="passwd" jdbcType="VARCHAR" />
+    <result column="DEFROLE" property="defrole" jdbcType="VARCHAR" />
+    <result column="DATATS" property="datats" jdbcType="VARCHAR" />
+    <result column="TEMPTS" property="tempts" jdbcType="VARCHAR" />
+    <result column="PROFILE#" property="profile" jdbcType="DECIMAL" />
+    <result column="PROFNAME" property="profname" jdbcType="VARCHAR" />
+    <result column="ASTATUS" property="astatus" jdbcType="DECIMAL" />
+    <result column="EXT_USERNAME" property="extUsername" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TilesLogLoginMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.TilesLogLogin" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="LOGIN_LOG_ID" property="loginLogId" jdbcType="VARCHAR" />
+    <result column="LOGIN_TYPE" property="loginType" jdbcType="VARCHAR" />
+    <result column="LOGIN_RESULT" property="loginResult" jdbcType="VARCHAR" />
+    <result column="OP_USER_ID" property="opUserId" jdbcType="VARCHAR" />
+    <result column="OP_USER_NAME" property="opUserName" jdbcType="VARCHAR" />
+    <result column="OP_TIME" property="opTime" jdbcType="DATE" />
+    <result column="UNIT_ID" property="unitId" jdbcType="VARCHAR" />
+    <result column="UNIT_NAME" property="unitName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

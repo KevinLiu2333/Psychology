@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaRefsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaRefs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="WITH_ROWID" property="withRowid" jdbcType="VARCHAR" />
+    <result column="IS_SCOPED" property="isScoped" jdbcType="VARCHAR" />
+    <result column="SCOPE_TABLE_OWNER" property="scopeTableOwner" jdbcType="VARCHAR" />
+    <result column="SCOPE_TABLE_NAME" property="scopeTableName" jdbcType="VARCHAR" />
+    <result column="OBJECT_ID_TYPE" property="objectIdType" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MracOlap2AwPhysObjPropVMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MracOlap2AwPhysObjPropV" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="AW_OWNER" property="awOwner" jdbcType="VARCHAR" />
+    <result column="AW_NAME" property="awName" jdbcType="VARCHAR" />
+    <result column="AW_OBJECT_NAME" property="awObjectName" jdbcType="VARCHAR" />
+    <result column="AW_PROP_NAME" property="awPropName" jdbcType="VARCHAR" />
+    <result column="AW_PROP_VALUE" property="awPropValue" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllCaptureMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllCapture" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="CAPTURE_NAME" property="captureName" jdbcType="VARCHAR" />
+    <result column="QUEUE_NAME" property="queueName" jdbcType="VARCHAR" />
+    <result column="QUEUE_OWNER" property="queueOwner" jdbcType="VARCHAR" />
+    <result column="RULE_SET_NAME" property="ruleSetName" jdbcType="VARCHAR" />
+    <result column="RULE_SET_OWNER" property="ruleSetOwner" jdbcType="VARCHAR" />
+    <result column="CAPTURE_USER" property="captureUser" jdbcType="VARCHAR" />
+    <result column="START_SCN" property="startScn" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="CAPTURED_SCN" property="capturedScn" jdbcType="DECIMAL" />
+    <result column="APPLIED_SCN" property="appliedScn" jdbcType="DECIMAL" />
+    <result column="USE_DATABASE_LINK" property="useDatabaseLink" jdbcType="VARCHAR" />
+    <result column="FIRST_SCN" property="firstScn" jdbcType="DECIMAL" />
+    <result column="SOURCE_DATABASE" property="sourceDatabase" jdbcType="VARCHAR" />
+    <result column="SOURCE_DBID" property="sourceDbid" jdbcType="DECIMAL" />
+    <result column="SOURCE_RESETLOGS_SCN" property="sourceResetlogsScn" jdbcType="DECIMAL" />
+    <result column="SOURCE_RESETLOGS_TIME" property="sourceResetlogsTime" jdbcType="DECIMAL" />
+    <result column="LOGMINER_ID" property="logminerId" jdbcType="DECIMAL" />
+    <result column="NEGATIVE_RULE_SET_NAME" property="negativeRuleSetName" jdbcType="VARCHAR" />
+    <result column="NEGATIVE_RULE_SET_OWNER" property="negativeRuleSetOwner" jdbcType="VARCHAR" />
+    <result column="MAX_CHECKPOINT_SCN" property="maxCheckpointScn" jdbcType="DECIMAL" />
+    <result column="REQUIRED_CHECKPOINT_SCN" property="requiredCheckpointScn" jdbcType="DECIMAL" />
+    <result column="LOGFILE_ASSIGNMENT" property="logfileAssignment" jdbcType="VARCHAR" />
+    <result column="STATUS_CHANGE_TIME" property="statusChangeTime" jdbcType="DATE" />
+    <result column="ERROR_NUMBER" property="errorNumber" jdbcType="DECIMAL" />
+    <result column="ERROR_MESSAGE" property="errorMessage" jdbcType="VARCHAR" />
+    <result column="VERSION" property="version" jdbcType="VARCHAR" />
+    <result column="CAPTURE_TYPE" property="captureType" jdbcType="VARCHAR" />
+    <result column="LAST_ENQUEUED_SCN" property="lastEnqueuedScn" jdbcType="DECIMAL" />
+    <result column="CHECKPOINT_RETENTION_TIME" property="checkpointRetentionTime" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

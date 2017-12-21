@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserAuditObjectMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserAuditObject" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OS_USERNAME" property="osUsername" jdbcType="VARCHAR" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="USERHOST" property="userhost" jdbcType="VARCHAR" />
+    <result column="TERMINAL" property="terminal" jdbcType="VARCHAR" />
+    <result column="TIMESTAMP" property="timestamp" jdbcType="DATE" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="OBJ_NAME" property="objName" jdbcType="VARCHAR" />
+    <result column="ACTION_NAME" property="actionName" jdbcType="VARCHAR" />
+    <result column="NEW_OWNER" property="newOwner" jdbcType="VARCHAR" />
+    <result column="NEW_NAME" property="newName" jdbcType="VARCHAR" />
+    <result column="SES_ACTIONS" property="sesActions" jdbcType="VARCHAR" />
+    <result column="COMMENT_TEXT" property="commentText" jdbcType="VARCHAR" />
+    <result column="SESSIONID" property="sessionid" jdbcType="DECIMAL" />
+    <result column="ENTRYID" property="entryid" jdbcType="DECIMAL" />
+    <result column="STATEMENTID" property="statementid" jdbcType="DECIMAL" />
+    <result column="RETURNCODE" property="returncode" jdbcType="DECIMAL" />
+    <result column="PRIV_USED" property="privUsed" jdbcType="VARCHAR" />
+    <result column="CLIENT_ID" property="clientId" jdbcType="VARCHAR" />
+    <result column="ECONTEXT_ID" property="econtextId" jdbcType="VARCHAR" />
+    <result column="SESSION_CPU" property="sessionCpu" jdbcType="DECIMAL" />
+    <result column="EXTENDED_TIMESTAMP" property="extendedTimestamp" jdbcType="OTHER" />
+    <result column="PROXY_SESSIONID" property="proxySessionid" jdbcType="DECIMAL" />
+    <result column="GLOBAL_UID" property="globalUid" jdbcType="VARCHAR" />
+    <result column="INSTANCE_NUMBER" property="instanceNumber" jdbcType="DECIMAL" />
+    <result column="OS_PROCESS" property="osProcess" jdbcType="VARCHAR" />
+    <result column="SCN" property="scn" jdbcType="DECIMAL" />
+    <result column="SQL_BIND" property="sqlBind" jdbcType="OTHER" />
+    <result column="SQL_TEXT" property="sqlText" jdbcType="OTHER" />
+    <result column="OBJ_EDITION_NAME" property="objEditionName" jdbcType="VARCHAR" />
+    <result column="TRANSACTIONID" property="transactionid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

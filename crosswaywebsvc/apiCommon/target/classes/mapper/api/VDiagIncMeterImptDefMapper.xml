@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VDiagIncMeterImptDefMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VDiagIncMeterImptDef" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INDX" property="indx" jdbcType="DECIMAL" />
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="ADR_PATH_IDX" property="adrPathIdx" jdbcType="VARCHAR" />
+    <result column="ADR_HOME" property="adrHome" jdbcType="VARCHAR" />
+    <result column="IMPACT_ID" property="impactId" jdbcType="DECIMAL" />
+    <result column="IMPACT_NAME" property="impactName" jdbcType="VARCHAR" />
+    <result column="IMPACT_SCOPE" property="impactScope" jdbcType="DECIMAL" />
+    <result column="IMPACT_SEVERITY" property="impactSeverity" jdbcType="DECIMAL" />
+    <result column="IMPACT_DESC" property="impactDesc" jdbcType="VARCHAR" />
+    <result column="IMPACT_FLAGS" property="impactFlags" jdbcType="DECIMAL" />
+    <result column="ADDR" property="addr" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

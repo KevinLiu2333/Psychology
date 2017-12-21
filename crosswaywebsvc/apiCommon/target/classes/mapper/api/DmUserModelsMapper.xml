@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DmUserModelsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DmUserModels" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="FUNCTION_NAME" property="functionName" jdbcType="VARCHAR" />
+    <result column="ALGORITHM_NAME" property="algorithmName" jdbcType="VARCHAR" />
+    <result column="CREATION_DATE" property="creationDate" jdbcType="DATE" />
+    <result column="BUILD_DURATION" property="buildDuration" jdbcType="DECIMAL" />
+    <result column="TARGET_ATTRIBUTE" property="targetAttribute" jdbcType="VARCHAR" />
+    <result column="MODEL_SIZE" property="modelSize" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

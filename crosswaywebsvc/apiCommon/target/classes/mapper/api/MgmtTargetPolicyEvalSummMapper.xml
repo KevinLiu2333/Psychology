@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtTargetPolicyEvalSummMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtTargetPolicyEvalSumm" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="POLICY_NAME" property="policyName" jdbcType="VARCHAR" />
+    <result column="COLL_NAME" property="collName" jdbcType="VARCHAR" />
+    <result column="LAST_EVALUATION_DATE" property="lastEvaluationDate" jdbcType="DATE" />
+    <result column="TOTAL_VIOLATIONS" property="totalViolations" jdbcType="DECIMAL" />
+    <result column="NON_SUPPRESS_VIOLATIONS" property="nonSuppressViolations" jdbcType="DECIMAL" />
+    <result column="COMPLIANCE_SCORE" property="complianceScore" jdbcType="DECIMAL" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <result column="POLICY_GUID" property="policyGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationTransMapMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationTransMap" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="MAP_ID" property="mapId" jdbcType="DECIMAL" />
+    <result column="PRIMARY_APPLICATION_ID" property="primaryApplicationId" jdbcType="DECIMAL" />
+    <result column="PRIMARY_APPLICATION_NAME" property="primaryApplicationName" jdbcType="VARCHAR" />
+    <result column="TRANSLATED_APPLICATION_ID" property="translatedApplicationId" jdbcType="DECIMAL" />
+    <result column="TRANSLATED_APP_LANGUAGE" property="translatedAppLanguage" jdbcType="VARCHAR" />
+    <result column="TRANSLATED_APPL_IMG_DIR" property="translatedApplImgDir" jdbcType="VARCHAR" />
+    <result column="TRANSLATION_COMMENTS" property="translationComments" jdbcType="VARCHAR" />
+    <result column="TRANSLATION_MAP_COMMENTS" property="translationMapComments" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+  </resultMap>
+</mapper>

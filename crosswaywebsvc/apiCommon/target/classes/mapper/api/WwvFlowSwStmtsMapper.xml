@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowSwStmtsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowSwStmts" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FILE_ID" property="fileId" jdbcType="DECIMAL" />
+    <result column="STMT_NUMBER" property="stmtNumber" jdbcType="DECIMAL" />
+    <result column="SRC_LINE_NUMBER" property="srcLineNumber" jdbcType="DECIMAL" />
+    <result column="OFFSET" property="offset" jdbcType="DECIMAL" />
+    <result column="LENGTH" property="length" jdbcType="DECIMAL" />
+    <result column="STMT_CLASS" property="stmtClass" jdbcType="DECIMAL" />
+    <result column="STMT_ID" property="stmtId" jdbcType="DECIMAL" />
+    <result column="ISRUNNABLE" property="isrunnable" jdbcType="VARCHAR" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="STMT" property="stmt" jdbcType="CLOB" />
+  </resultMap>
+</mapper>

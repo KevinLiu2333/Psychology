@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllOlapmrAttributesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllOlapmrAttributes" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DIM_OWNER" property="dimOwner" jdbcType="VARCHAR" />
+    <result column="DIM_NAME" property="dimName" jdbcType="VARCHAR" />
+    <result column="DIM_ATTRIBUTE_NAME" property="dimAttributeName" jdbcType="VARCHAR" />
+    <result column="LEVELNAME" property="levelname" jdbcType="VARCHAR" />
+    <result column="DTYPE" property="dtype" jdbcType="VARCHAR" />
+    <result column="COL_OWNER" property="colOwner" jdbcType="VARCHAR" />
+    <result column="COL_TABLE" property="colTable" jdbcType="VARCHAR" />
+    <result column="COL_NAME" property="colName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

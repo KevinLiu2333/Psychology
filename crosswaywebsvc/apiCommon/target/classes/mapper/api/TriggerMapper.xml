@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.TriggerMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Trigger" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJ#" property="obj" jdbcType="DECIMAL" />
+    <result column="TYPE#" property="type" jdbcType="DECIMAL" />
+    <result column="UPDATE$" property="update" jdbcType="DECIMAL" />
+    <result column="INSERT$" property="insert" jdbcType="DECIMAL" />
+    <result column="DELETE$" property="delete" jdbcType="DECIMAL" />
+    <result column="BASEOBJECT" property="baseobject" jdbcType="DECIMAL" />
+    <result column="REFOLDNAME" property="refoldname" jdbcType="VARCHAR" />
+    <result column="REFNEWNAME" property="refnewname" jdbcType="VARCHAR" />
+    <result column="DEFINITION" property="definition" jdbcType="VARCHAR" />
+    <result column="WHENCLAUSE" property="whenclause" jdbcType="VARCHAR" />
+    <result column="ACTIONSIZE" property="actionsize" jdbcType="DECIMAL" />
+    <result column="ENABLED" property="enabled" jdbcType="DECIMAL" />
+    <result column="PROPERTY" property="property" jdbcType="DECIMAL" />
+    <result column="SYS_EVTS" property="sysEvts" jdbcType="DECIMAL" />
+    <result column="NTTRIGCOL" property="nttrigcol" jdbcType="DECIMAL" />
+    <result column="NTTRIGATT" property="nttrigatt" jdbcType="DECIMAL" />
+    <result column="REFPRTNAME" property="refprtname" jdbcType="VARCHAR" />
+    <result column="ACTIONLINENO" property="actionlineno" jdbcType="DECIMAL" />
+    <result column="TRIGNAMELINE" property="trignameline" jdbcType="DECIMAL" />
+    <result column="TRIGNAMECOL" property="trignamecol" jdbcType="DECIMAL" />
+    <result column="TRIGNAMECOLOFS" property="trignamecolofs" jdbcType="DECIMAL" />
+    <result column="ACTIONCOLNO" property="actioncolno" jdbcType="DECIMAL" />
+    <result column="ACTION#" property="action" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

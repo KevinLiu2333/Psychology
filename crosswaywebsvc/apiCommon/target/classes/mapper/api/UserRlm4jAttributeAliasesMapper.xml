@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserRlm4jAttributeAliasesMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserRlm4jAttributeAliases" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="EVENT_STRUCT" property="eventStruct" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_ALIAS" property="attributeAlias" jdbcType="VARCHAR" />
+    <result column="ATTRIBUTE_EXPRESSION" property="attributeExpression" jdbcType="VARCHAR" />
+    <result column="ALIAS_TYPE" property="aliasType" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

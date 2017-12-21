@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WrhLatchNameMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WrhLatchName" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <id column="LATCH_HASH" property="latchHash" jdbcType="DECIMAL" />
+    <result column="LATCH_NAME" property="latchName" jdbcType="VARCHAR" />
+    <result column="LATCH#" property="latch" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

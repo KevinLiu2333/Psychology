@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvSubcacheMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvSubcache" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="OWNER_NAME" property="ownerName" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="DECIMAL" />
+    <result column="HEAP_NUM" property="heapNum" jdbcType="DECIMAL" />
+    <result column="CACHE_ID" property="cacheId" jdbcType="DECIMAL" />
+    <result column="CACHE_CNT" property="cacheCnt" jdbcType="DECIMAL" />
+    <result column="HEAP_SZ" property="heapSz" jdbcType="DECIMAL" />
+    <result column="HEAP_ALOC" property="heapAloc" jdbcType="DECIMAL" />
+    <result column="HEAP_USED" property="heapUsed" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

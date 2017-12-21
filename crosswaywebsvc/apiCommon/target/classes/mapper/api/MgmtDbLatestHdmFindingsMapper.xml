@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtDbLatestHdmFindingsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtDbLatestHdmFindings" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="TASK_ID" property="taskId" jdbcType="DECIMAL" />
+    <id column="FINDING_ID" property="findingId" jdbcType="DECIMAL" />
+    <id column="REC_TYPE" property="recType" jdbcType="VARCHAR" />
+    <result column="COLLECTION_TIMESTAMP" property="collectionTimestamp" jdbcType="DATE" />
+    <result column="REC_COUNT" property="recCount" jdbcType="DECIMAL" />
+    <result column="IMPACT_PCT" property="impactPct" jdbcType="DECIMAL" />
+    <result column="MESSAGE" property="message" jdbcType="VARCHAR" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="END_TIME" property="endTime" jdbcType="DATE" />
+    <result column="FINDING_COUNT" property="findingCount" jdbcType="DECIMAL" />
+    <result column="FINDING_NAME" property="findingName" jdbcType="VARCHAR" />
+    <result column="ACTIVE_SESSIONS" property="activeSessions" jdbcType="DECIMAL" />
+    <result column="INSTANCE_COUNT" property="instanceCount" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

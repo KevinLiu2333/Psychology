@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvSysauxOccupantsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvSysauxOccupants" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="OCCUPANT_NAME" property="occupantName" jdbcType="VARCHAR" />
+    <result column="OCCUPANT_DESC" property="occupantDesc" jdbcType="VARCHAR" />
+    <result column="SCHEMA_NAME" property="schemaName" jdbcType="VARCHAR" />
+    <result column="MOVE_PROCEDURE" property="moveProcedure" jdbcType="VARCHAR" />
+    <result column="MOVE_PROCEDURE_DESC" property="moveProcedureDesc" jdbcType="VARCHAR" />
+    <result column="SPACE_USAGE_KBYTES" property="spaceUsageKbytes" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

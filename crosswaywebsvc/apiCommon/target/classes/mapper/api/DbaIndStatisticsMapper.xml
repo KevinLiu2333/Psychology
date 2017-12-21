@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaIndStatisticsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaIndStatistics" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="INDEX_NAME" property="indexName" jdbcType="VARCHAR" />
+    <result column="TABLE_OWNER" property="tableOwner" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="PARTITION_NAME" property="partitionName" jdbcType="VARCHAR" />
+    <result column="PARTITION_POSITION" property="partitionPosition" jdbcType="DECIMAL" />
+    <result column="SUBPARTITION_NAME" property="subpartitionName" jdbcType="VARCHAR" />
+    <result column="SUBPARTITION_POSITION" property="subpartitionPosition" jdbcType="DECIMAL" />
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <result column="BLEVEL" property="blevel" jdbcType="DECIMAL" />
+    <result column="LEAF_BLOCKS" property="leafBlocks" jdbcType="DECIMAL" />
+    <result column="DISTINCT_KEYS" property="distinctKeys" jdbcType="DECIMAL" />
+    <result column="AVG_LEAF_BLOCKS_PER_KEY" property="avgLeafBlocksPerKey" jdbcType="DECIMAL" />
+    <result column="AVG_DATA_BLOCKS_PER_KEY" property="avgDataBlocksPerKey" jdbcType="DECIMAL" />
+    <result column="CLUSTERING_FACTOR" property="clusteringFactor" jdbcType="DECIMAL" />
+    <result column="NUM_ROWS" property="numRows" jdbcType="DECIMAL" />
+    <result column="AVG_CACHED_BLOCKS" property="avgCachedBlocks" jdbcType="DECIMAL" />
+    <result column="AVG_CACHE_HIT_RATIO" property="avgCacheHitRatio" jdbcType="DECIMAL" />
+    <result column="SAMPLE_SIZE" property="sampleSize" jdbcType="DECIMAL" />
+    <result column="LAST_ANALYZED" property="lastAnalyzed" jdbcType="DATE" />
+    <result column="GLOBAL_STATS" property="globalStats" jdbcType="VARCHAR" />
+    <result column="USER_STATS" property="userStats" jdbcType="VARCHAR" />
+    <result column="STATTYPE_LOCKED" property="stattypeLocked" jdbcType="VARCHAR" />
+    <result column="STALE_STATS" property="staleStats" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.WwvFlowEntryPointArgsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.WwvFlowEntryPointArgs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="FLOW_ENTRY_POINT_ID" property="flowEntryPointId" jdbcType="DECIMAL" />
+    <result column="ENTRY_POINT_ARG_SEQUENCE" property="entryPointArgSequence" jdbcType="DECIMAL" />
+    <result column="ENTRY_POINT_ARG_ITEM_ID" property="entryPointArgItemId" jdbcType="DECIMAL" />
+    <result column="SECURITY_GROUP_ID" property="securityGroupId" jdbcType="DECIMAL" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="ENTRY_POINT_ARG_COMMENT" property="entryPointArgComment" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

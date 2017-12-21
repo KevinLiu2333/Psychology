@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtTargetsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtTargets" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <id column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="TYPE_META_VER" property="typeMetaVer" jdbcType="VARCHAR" />
+    <result column="CATEGORY_PROP_1" property="categoryProp1" jdbcType="VARCHAR" />
+    <result column="CATEGORY_PROP_2" property="categoryProp2" jdbcType="VARCHAR" />
+    <result column="CATEGORY_PROP_3" property="categoryProp3" jdbcType="VARCHAR" />
+    <result column="CATEGORY_PROP_4" property="categoryProp4" jdbcType="VARCHAR" />
+    <result column="CATEGORY_PROP_5" property="categoryProp5" jdbcType="VARCHAR" />
+    <result column="LOAD_TIMESTAMP" property="loadTimestamp" jdbcType="DATE" />
+    <result column="TIMEZONE_DELTA" property="timezoneDelta" jdbcType="DECIMAL" />
+    <result column="TIMEZONE_REGION" property="timezoneRegion" jdbcType="VARCHAR" />
+    <result column="DISPLAY_NAME" property="displayName" jdbcType="VARCHAR" />
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="TYPE_DISPLAY_NAME" property="typeDisplayName" jdbcType="VARCHAR" />
+    <result column="SERVICE_TYPE" property="serviceType" jdbcType="VARCHAR" />
+    <result column="HOST_NAME" property="hostName" jdbcType="VARCHAR" />
+    <result column="EMD_URL" property="emdUrl" jdbcType="VARCHAR" />
+    <result column="LAST_LOAD_TIME" property="lastLoadTime" jdbcType="DATE" />
+    <result column="IS_GROUP" property="isGroup" jdbcType="DECIMAL" />
+    <result column="BROKEN_REASON" property="brokenReason" jdbcType="DECIMAL" />
+    <result column="BROKEN_STR" property="brokenStr" jdbcType="VARCHAR" />
+    <result column="LAST_RT_LOAD_TIME" property="lastRtLoadTime" jdbcType="DATE" />
+    <result column="LAST_UPDATED_TIME" property="lastUpdatedTime" jdbcType="DATE" />
+    <result column="MONITORING_MODE" property="monitoringMode" jdbcType="DECIMAL" />
+    <result column="REP_SIDE_AVAIL" property="repSideAvail" jdbcType="DECIMAL" />
+    <result column="LAST_E2E_LOAD_TIME" property="lastE2eLoadTime" jdbcType="DATE" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

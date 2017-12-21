@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtHaBackupMapper">
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtHaBackup">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" jdbcType="VARBINARY" property="targetGuid" />
+    <result column="COLLECTION_TIMESTAMP" jdbcType="DATE" property="collectionTimestamp" />
+    <result column="END_TIME" jdbcType="DATE" property="endTime" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    <result column="SESSION_KEY" jdbcType="DECIMAL" property="sessionKey" />
+    <result column="SESSION_RECID" jdbcType="DECIMAL" property="sessionRecid" />
+    <result column="SESSION_STAMP" jdbcType="DECIMAL" property="sessionStamp" />
+    <result column="COMMAND_ID" jdbcType="VARCHAR" property="commandId" />
+    <result column="START_TIME" jdbcType="DATE" property="startTime" />
+    <result column="TIME_TAKEN_DISPLAY" jdbcType="VARCHAR" property="timeTakenDisplay" />
+    <result column="INPUT_TYPE" jdbcType="VARCHAR" property="inputType" />
+    <result column="OUTPUT_DEVICE_TYPE" jdbcType="VARCHAR" property="outputDeviceType" />
+    <result column="INPUT_BYTES_DISPLAY" jdbcType="VARCHAR" property="inputBytesDisplay" />
+    <result column="OUTPUT_BYTES_DISPLAY" jdbcType="VARCHAR" property="outputBytesDisplay" />
+    <result column="OUTPUT_BYTES_PER_SEC_DISPLAY" jdbcType="VARCHAR" property="outputBytesPerSecDisplay" />
+  </resultMap>
+</mapper>

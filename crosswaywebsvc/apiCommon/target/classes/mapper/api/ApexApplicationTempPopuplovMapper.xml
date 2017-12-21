@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.ApexApplicationTempPopuplovMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.ApexApplicationTempPopuplov" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="WORKSPACE" property="workspace" jdbcType="VARCHAR" />
+    <result column="APPLICATION_ID" property="applicationId" jdbcType="DECIMAL" />
+    <result column="APPLICATION_NAME" property="applicationName" jdbcType="VARCHAR" />
+    <result column="POPUP_ICON" property="popupIcon" jdbcType="VARCHAR" />
+    <result column="POPUP_ICON_ATTR" property="popupIconAttr" jdbcType="VARCHAR" />
+    <result column="POPUP_ICON2" property="popupIcon2" jdbcType="VARCHAR" />
+    <result column="POPUP_ICON_ATTR2" property="popupIconAttr2" jdbcType="VARCHAR" />
+    <result column="PAGE_TITLE" property="pageTitle" jdbcType="VARCHAR" />
+    <result column="PAGE_HTML_HEAD" property="pageHtmlHead" jdbcType="VARCHAR" />
+    <result column="PAGE_BODY_ATTR" property="pageBodyAttr" jdbcType="VARCHAR" />
+    <result column="BEFORE_FIELD_TEXT" property="beforeFieldText" jdbcType="VARCHAR" />
+    <result column="AFTER_FIELD_TEXT" property="afterFieldText" jdbcType="VARCHAR" />
+    <result column="PAGE_HEADING_TEXT" property="pageHeadingText" jdbcType="VARCHAR" />
+    <result column="PAGE_FOOTER_TEXT" property="pageFooterText" jdbcType="VARCHAR" />
+    <result column="BEFORE_RESULT_SET" property="beforeResultSet" jdbcType="VARCHAR" />
+    <result column="AFTER_RESULT_SET" property="afterResultSet" jdbcType="VARCHAR" />
+    <result column="FILTER_WIDTH" property="filterWidth" jdbcType="VARCHAR" />
+    <result column="FILTER_MAX_WIDTH" property="filterMaxWidth" jdbcType="VARCHAR" />
+    <result column="FILTER_TEXT_ATTR" property="filterTextAttr" jdbcType="VARCHAR" />
+    <result column="FIND_BUTTON_TEXT" property="findButtonText" jdbcType="VARCHAR" />
+    <result column="FIND_BUTTON_IMAGE" property="findButtonImage" jdbcType="VARCHAR" />
+    <result column="FIND_BUTTON_ATTR" property="findButtonAttr" jdbcType="VARCHAR" />
+    <result column="CLOSE_BUTTON_TEXT" property="closeButtonText" jdbcType="VARCHAR" />
+    <result column="CLOSE_BUTTON_IMAGE" property="closeButtonImage" jdbcType="VARCHAR" />
+    <result column="CLOSE_BUTTON_ATTR" property="closeButtonAttr" jdbcType="VARCHAR" />
+    <result column="NEXT_BUTTON_TEXT" property="nextButtonText" jdbcType="VARCHAR" />
+    <result column="NEXT_BUTTON_IMAGE" property="nextButtonImage" jdbcType="VARCHAR" />
+    <result column="NEXT_BUTTON_ATTR" property="nextButtonAttr" jdbcType="VARCHAR" />
+    <result column="PREV_BUTTON_TEXT" property="prevButtonText" jdbcType="VARCHAR" />
+    <result column="PREV_BUTTON_IMAGE" property="prevButtonImage" jdbcType="VARCHAR" />
+    <result column="PREV_BUTTON_ATTR" property="prevButtonAttr" jdbcType="VARCHAR" />
+    <result column="SCROLLBARS" property="scrollbars" jdbcType="VARCHAR" />
+    <result column="RESIZABLE" property="resizable" jdbcType="VARCHAR" />
+    <result column="WIDTH" property="width" jdbcType="VARCHAR" />
+    <result column="HEIGHT" property="height" jdbcType="VARCHAR" />
+    <result column="RESULT_ROW_X_OF_Y" property="resultRowXOfY" jdbcType="VARCHAR" />
+    <result column="RESULT_ROWS_PER_PG" property="resultRowsPerPg" jdbcType="DECIMAL" />
+    <result column="WHEN_NO_DATA_FOUND_MESSAGE" property="whenNoDataFoundMessage" jdbcType="VARCHAR" />
+    <result column="BEFORE_FIRST_FETCH_MESSAGE" property="beforeFirstFetchMessage" jdbcType="VARCHAR" />
+    <result column="MINIMUM_CHARACTERS_REQUIRED" property="minimumCharactersRequired" jdbcType="DECIMAL" />
+    <result column="THEME_NUMBER" property="themeNumber" jdbcType="DECIMAL" />
+    <result column="THEME_CLASS" property="themeClass" jdbcType="VARCHAR" />
+    <result column="IS_SUBSCRIBED" property="isSubscribed" jdbcType="VARCHAR" />
+    <result column="SUBSCRIBED_FROM" property="subscribedFrom" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="lastUpdatedOn" jdbcType="DATE" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="TRANSLATABLE" property="translatable" jdbcType="VARCHAR" />
+    <result column="COMPONENT_COMMENT" property="componentComment" jdbcType="VARCHAR" />
+    <result column="TEMPLATE_ID" property="templateId" jdbcType="DECIMAL" />
+    <result column="COMPONENT_SIGNATURE" property="componentSignature" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

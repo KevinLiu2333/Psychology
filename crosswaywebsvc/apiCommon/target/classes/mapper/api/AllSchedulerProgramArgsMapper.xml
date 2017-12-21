@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.AllSchedulerProgramArgsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.AllSchedulerProgramArgs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OWNER" property="owner" jdbcType="VARCHAR" />
+    <result column="PROGRAM_NAME" property="programName" jdbcType="VARCHAR" />
+    <result column="ARGUMENT_NAME" property="argumentName" jdbcType="VARCHAR" />
+    <result column="ARGUMENT_POSITION" property="argumentPosition" jdbcType="DECIMAL" />
+    <result column="ARGUMENT_TYPE" property="argumentType" jdbcType="VARCHAR" />
+    <result column="METADATA_ATTRIBUTE" property="metadataAttribute" jdbcType="VARCHAR" />
+    <result column="DEFAULT_VALUE" property="defaultValue" jdbcType="VARCHAR" />
+    <result column="DEFAULT_ANYDATA_VALUE" property="defaultAnydataValue" jdbcType="OTHER" />
+    <result column="OUT_ARGUMENT" property="outArgument" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

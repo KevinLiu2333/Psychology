@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.UserObjectsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.UserObjects" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="SUBOBJECT_NAME" property="subobjectName" jdbcType="VARCHAR" />
+    <result column="OBJECT_ID" property="objectId" jdbcType="DECIMAL" />
+    <result column="DATA_OBJECT_ID" property="dataObjectId" jdbcType="DECIMAL" />
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <result column="CREATED" property="created" jdbcType="DATE" />
+    <result column="LAST_DDL_TIME" property="lastDdlTime" jdbcType="DATE" />
+    <result column="TIMESTAMP" property="timestamp" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="TEMPORARY" property="temporary" jdbcType="VARCHAR" />
+    <result column="GENERATED" property="generated" jdbcType="VARCHAR" />
+    <result column="SECONDARY" property="secondary" jdbcType="VARCHAR" />
+    <result column="NAMESPACE" property="namespace" jdbcType="DECIMAL" />
+    <result column="EDITION_NAME" property="editionName" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

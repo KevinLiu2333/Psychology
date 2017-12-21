@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu81assocMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu81assoc" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJOWNER" property="objowner" jdbcType="VARCHAR" />
+    <result column="OBJOWNER#" property="objowner" jdbcType="DECIMAL" />
+    <result column="OBJTYPE" property="objtype" jdbcType="DECIMAL" />
+    <result column="OBJNAME" property="objname" jdbcType="VARCHAR" />
+    <result column="OBJCOL" property="objcol" jdbcType="VARCHAR" />
+    <result column="STATSSCHEMA" property="statsschema" jdbcType="VARCHAR" />
+    <result column="STATSNAME" property="statsname" jdbcType="VARCHAR" />
+    <result column="SELECTIVITY" property="selectivity" jdbcType="DECIMAL" />
+    <result column="CPU_COST" property="cpuCost" jdbcType="DECIMAL" />
+    <result column="IO_COST" property="ioCost" jdbcType="DECIMAL" />
+    <result column="NET_COST" property="netCost" jdbcType="DECIMAL" />
+    <result column="MAINTENANCETYPE" property="maintenancetype" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

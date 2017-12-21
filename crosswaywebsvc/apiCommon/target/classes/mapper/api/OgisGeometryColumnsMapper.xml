@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.OgisGeometryColumnsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.OgisGeometryColumns" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="F_TABLE_SCHEMA" property="fTableSchema" jdbcType="VARCHAR" />
+    <result column="F_TABLE_NAME" property="fTableName" jdbcType="VARCHAR" />
+    <result column="F_GEOMETRY_COLUMN" property="fGeometryColumn" jdbcType="VARCHAR" />
+    <result column="G_TABLE_SCHEMA" property="gTableSchema" jdbcType="VARCHAR" />
+    <result column="G_TABLE_NAME" property="gTableName" jdbcType="VARCHAR" />
+    <result column="STORAGE_TYPE" property="storageType" jdbcType="DECIMAL" />
+    <result column="GEOMETRY_TYPE" property="geometryType" jdbcType="DECIMAL" />
+    <result column="COORD_DIMENSION" property="coordDimension" jdbcType="DECIMAL" />
+    <result column="MAX_PPR" property="maxPpr" jdbcType="DECIMAL" />
+    <result column="SRID" property="srid" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

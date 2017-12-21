@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvDatabaseMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvDatabase" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="DBID" property="dbid" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="CREATED" property="created" jdbcType="DATE" />
+    <result column="RESETLOGS_CHANGE#" property="resetlogsChange" jdbcType="DECIMAL" />
+    <result column="RESETLOGS_TIME" property="resetlogsTime" jdbcType="DATE" />
+    <result column="PRIOR_RESETLOGS_CHANGE#" property="priorResetlogsChange" jdbcType="DECIMAL" />
+    <result column="PRIOR_RESETLOGS_TIME" property="priorResetlogsTime" jdbcType="DATE" />
+    <result column="LOG_MODE" property="logMode" jdbcType="VARCHAR" />
+    <result column="CHECKPOINT_CHANGE#" property="checkpointChange" jdbcType="DECIMAL" />
+    <result column="ARCHIVE_CHANGE#" property="archiveChange" jdbcType="DECIMAL" />
+    <result column="CONTROLFILE_TYPE" property="controlfileType" jdbcType="VARCHAR" />
+    <result column="CONTROLFILE_CREATED" property="controlfileCreated" jdbcType="DATE" />
+    <result column="CONTROLFILE_SEQUENCE#" property="controlfileSequence" jdbcType="DECIMAL" />
+    <result column="CONTROLFILE_CHANGE#" property="controlfileChange" jdbcType="DECIMAL" />
+    <result column="CONTROLFILE_TIME" property="controlfileTime" jdbcType="DATE" />
+    <result column="OPEN_RESETLOGS" property="openResetlogs" jdbcType="VARCHAR" />
+    <result column="VERSION_TIME" property="versionTime" jdbcType="DATE" />
+    <result column="OPEN_MODE" property="openMode" jdbcType="VARCHAR" />
+    <result column="PROTECTION_MODE" property="protectionMode" jdbcType="VARCHAR" />
+    <result column="PROTECTION_LEVEL" property="protectionLevel" jdbcType="VARCHAR" />
+    <result column="REMOTE_ARCHIVE" property="remoteArchive" jdbcType="VARCHAR" />
+    <result column="ACTIVATION#" property="activation" jdbcType="DECIMAL" />
+    <result column="SWITCHOVER#" property="switchover" jdbcType="DECIMAL" />
+    <result column="DATABASE_ROLE" property="databaseRole" jdbcType="VARCHAR" />
+    <result column="ARCHIVELOG_CHANGE#" property="archivelogChange" jdbcType="DECIMAL" />
+    <result column="ARCHIVELOG_COMPRESSION" property="archivelogCompression" jdbcType="VARCHAR" />
+    <result column="SWITCHOVER_STATUS" property="switchoverStatus" jdbcType="VARCHAR" />
+    <result column="DATAGUARD_BROKER" property="dataguardBroker" jdbcType="VARCHAR" />
+    <result column="GUARD_STATUS" property="guardStatus" jdbcType="VARCHAR" />
+    <result column="SUPPLEMENTAL_LOG_DATA_MIN" property="supplementalLogDataMin" jdbcType="VARCHAR" />
+    <result column="SUPPLEMENTAL_LOG_DATA_PK" property="supplementalLogDataPk" jdbcType="VARCHAR" />
+    <result column="SUPPLEMENTAL_LOG_DATA_UI" property="supplementalLogDataUi" jdbcType="VARCHAR" />
+    <result column="FORCE_LOGGING" property="forceLogging" jdbcType="VARCHAR" />
+    <result column="PLATFORM_ID" property="platformId" jdbcType="DECIMAL" />
+    <result column="PLATFORM_NAME" property="platformName" jdbcType="VARCHAR" />
+    <result column="RECOVERY_TARGET_INCARNATION#" property="recoveryTargetIncarnation" jdbcType="DECIMAL" />
+    <result column="LAST_OPEN_INCARNATION#" property="lastOpenIncarnation" jdbcType="DECIMAL" />
+    <result column="CURRENT_SCN" property="currentScn" jdbcType="DECIMAL" />
+    <result column="FLASHBACK_ON" property="flashbackOn" jdbcType="VARCHAR" />
+    <result column="SUPPLEMENTAL_LOG_DATA_FK" property="supplementalLogDataFk" jdbcType="VARCHAR" />
+    <result column="SUPPLEMENTAL_LOG_DATA_ALL" property="supplementalLogDataAll" jdbcType="VARCHAR" />
+    <result column="DB_UNIQUE_NAME" property="dbUniqueName" jdbcType="VARCHAR" />
+    <result column="STANDBY_BECAME_PRIMARY_SCN" property="standbyBecamePrimaryScn" jdbcType="DECIMAL" />
+    <result column="FS_FAILOVER_STATUS" property="fsFailoverStatus" jdbcType="VARCHAR" />
+    <result column="FS_FAILOVER_CURRENT_TARGET" property="fsFailoverCurrentTarget" jdbcType="VARCHAR" />
+    <result column="FS_FAILOVER_THRESHOLD" property="fsFailoverThreshold" jdbcType="DECIMAL" />
+    <result column="FS_FAILOVER_OBSERVER_PRESENT" property="fsFailoverObserverPresent" jdbcType="VARCHAR" />
+    <result column="FS_FAILOVER_OBSERVER_HOST" property="fsFailoverObserverHost" jdbcType="VARCHAR" />
+    <result column="CONTROLFILE_CONVERTED" property="controlfileConverted" jdbcType="VARCHAR" />
+    <result column="PRIMARY_DB_UNIQUE_NAME" property="primaryDbUniqueName" jdbcType="VARCHAR" />
+    <result column="SUPPLEMENTAL_LOG_DATA_PL" property="supplementalLogDataPl" jdbcType="VARCHAR" />
+    <result column="MIN_REQUIRED_CAPTURE_CHANGE#" property="minRequiredCaptureChange" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

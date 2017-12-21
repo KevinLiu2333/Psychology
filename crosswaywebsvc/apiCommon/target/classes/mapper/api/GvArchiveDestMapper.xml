@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvArchiveDestMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvArchiveDest" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="DEST_ID" property="destId" jdbcType="DECIMAL" />
+    <result column="DEST_NAME" property="destName" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="BINDING" property="binding" jdbcType="VARCHAR" />
+    <result column="NAME_SPACE" property="nameSpace" jdbcType="VARCHAR" />
+    <result column="TARGET" property="target" jdbcType="VARCHAR" />
+    <result column="ARCHIVER" property="archiver" jdbcType="VARCHAR" />
+    <result column="SCHEDULE" property="schedule" jdbcType="VARCHAR" />
+    <result column="DESTINATION" property="destination" jdbcType="VARCHAR" />
+    <result column="LOG_SEQUENCE" property="logSequence" jdbcType="DECIMAL" />
+    <result column="REOPEN_SECS" property="reopenSecs" jdbcType="DECIMAL" />
+    <result column="DELAY_MINS" property="delayMins" jdbcType="DECIMAL" />
+    <result column="MAX_CONNECTIONS" property="maxConnections" jdbcType="DECIMAL" />
+    <result column="NET_TIMEOUT" property="netTimeout" jdbcType="DECIMAL" />
+    <result column="PROCESS" property="process" jdbcType="VARCHAR" />
+    <result column="REGISTER" property="register" jdbcType="VARCHAR" />
+    <result column="FAIL_DATE" property="failDate" jdbcType="DATE" />
+    <result column="FAIL_SEQUENCE" property="failSequence" jdbcType="DECIMAL" />
+    <result column="FAIL_BLOCK" property="failBlock" jdbcType="DECIMAL" />
+    <result column="FAILURE_COUNT" property="failureCount" jdbcType="DECIMAL" />
+    <result column="MAX_FAILURE" property="maxFailure" jdbcType="DECIMAL" />
+    <result column="ERROR" property="error" jdbcType="VARCHAR" />
+    <result column="ALTERNATE" property="alternate" jdbcType="VARCHAR" />
+    <result column="DEPENDENCY" property="dependency" jdbcType="VARCHAR" />
+    <result column="REMOTE_TEMPLATE" property="remoteTemplate" jdbcType="VARCHAR" />
+    <result column="QUOTA_SIZE" property="quotaSize" jdbcType="DECIMAL" />
+    <result column="QUOTA_USED" property="quotaUsed" jdbcType="DECIMAL" />
+    <result column="MOUNTID" property="mountid" jdbcType="DECIMAL" />
+    <result column="TRANSMIT_MODE" property="transmitMode" jdbcType="VARCHAR" />
+    <result column="ASYNC_BLOCKS" property="asyncBlocks" jdbcType="DECIMAL" />
+    <result column="AFFIRM" property="affirm" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="VALID_NOW" property="validNow" jdbcType="VARCHAR" />
+    <result column="VALID_TYPE" property="validType" jdbcType="VARCHAR" />
+    <result column="VALID_ROLE" property="validRole" jdbcType="VARCHAR" />
+    <result column="DB_UNIQUE_NAME" property="dbUniqueName" jdbcType="VARCHAR" />
+    <result column="VERIFY" property="verify" jdbcType="VARCHAR" />
+    <result column="COMPRESSION" property="compression" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

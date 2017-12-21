@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.VProcessMemoryDetailMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.VProcessMemoryDetail" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="PID" property="pid" jdbcType="DECIMAL" />
+    <result column="SERIAL#" property="serial" jdbcType="DECIMAL" />
+    <result column="CATEGORY" property="category" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="HEAP_NAME" property="heapName" jdbcType="VARCHAR" />
+    <result column="BYTES" property="bytes" jdbcType="DECIMAL" />
+    <result column="ALLOCATION_COUNT" property="allocationCount" jdbcType="DECIMAL" />
+    <result column="HEAP_DESCRIPTOR" property="heapDescriptor" jdbcType="VARBINARY" />
+    <result column="PARENT_HEAP_DESCRIPTOR" property="parentHeapDescriptor" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

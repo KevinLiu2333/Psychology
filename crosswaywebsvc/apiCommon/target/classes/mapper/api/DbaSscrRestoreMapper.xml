@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbaSscrRestoreMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbaSscrRestore" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="DB_NAME" property="dbName" jdbcType="VARCHAR" />
+    <result column="INST_NAME" property="instName" jdbcType="VARCHAR" />
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="SESSION_SERIAL#" property="sessionSerial" jdbcType="DECIMAL" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="SCHEMA_NAME" property="schemaName" jdbcType="VARCHAR" />
+    <result column="SEQUENCE#" property="sequence" jdbcType="DECIMAL" />
+    <result column="RESTORE_MODE" property="restoreMode" jdbcType="VARCHAR" />
+    <result column="RESTORE_SCOPE" property="restoreScope" jdbcType="VARCHAR" />
+    <result column="RESTORE_FORMAT" property="restoreFormat" jdbcType="VARCHAR" />
+    <result column="RESTORE_DIR" property="restoreDir" jdbcType="VARCHAR" />
+    <result column="RESTORE_TIME" property="restoreTime" jdbcType="TIMESTAMP" />
+    <result column="RESTORE_LOCATOR" property="restoreLocator" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

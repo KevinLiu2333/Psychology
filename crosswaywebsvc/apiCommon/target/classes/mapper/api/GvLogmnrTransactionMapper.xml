@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvLogmnrTransactionMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvLogmnrTransaction" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="SESSION_ID" property="sessionId" jdbcType="DECIMAL" />
+    <result column="XIDUSN" property="xidusn" jdbcType="DECIMAL" />
+    <result column="XIDSLT" property="xidslt" jdbcType="DECIMAL" />
+    <result column="XIDSQN" property="xidsqn" jdbcType="DECIMAL" />
+    <result column="PARENT_XIDUSN" property="parentXidusn" jdbcType="DECIMAL" />
+    <result column="PARENT_XIDSLT" property="parentXidslt" jdbcType="DECIMAL" />
+    <result column="PARENT_XIDSQN" property="parentXidsqn" jdbcType="DECIMAL" />
+    <result column="START_TIME" property="startTime" jdbcType="DATE" />
+    <result column="START_SCN" property="startScn" jdbcType="DECIMAL" />
+    <result column="CHUNK#" property="chunk" jdbcType="DECIMAL" />
+    <result column="TOTAL_CHUNKS" property="totalChunks" jdbcType="DECIMAL" />
+    <result column="REDO_THREAD" property="redoThread" jdbcType="DECIMAL" />
+    <result column="LOW_TIME" property="lowTime" jdbcType="DATE" />
+    <result column="LOW_SCN" property="lowScn" jdbcType="DECIMAL" />
+    <result column="HIGH_TIME" property="highTime" jdbcType="DATE" />
+    <result column="HIGH_SCN" property="highScn" jdbcType="DECIMAL" />
+    <result column="LCR_COUNT" property="lcrCount" jdbcType="DECIMAL" />
+    <result column="SPILLED_LCR_COUNT" property="spilledLcrCount" jdbcType="DECIMAL" />
+    <result column="DFLAG" property="dflag" jdbcType="DECIMAL" />
+    <result column="MFLAG" property="mflag" jdbcType="DECIMAL" />
+    <result column="MFLAG2" property="mflag2" jdbcType="DECIMAL" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="MINING_STATUS" property="miningStatus" jdbcType="VARCHAR" />
+    <result column="QUEUE" property="queue" jdbcType="VARCHAR" />
+    <result column="XID" property="xid" jdbcType="VARBINARY" />
+    <result column="PARENT_XID" property="parentXid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

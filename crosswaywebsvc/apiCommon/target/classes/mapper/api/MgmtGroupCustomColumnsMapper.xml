@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtGroupCustomColumnsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtGroupCustomColumns" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="COLUMN_TYPE" property="columnType" jdbcType="DECIMAL" />
+    <result column="PROPERTY_NAME" property="propertyName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="ABBREVIATION" property="abbreviation" jdbcType="VARCHAR" />
+    <result column="DISPLAY_ORDER" property="displayOrder" jdbcType="DECIMAL" />
+    <result column="VIEW_TYPE" property="viewType" jdbcType="DECIMAL" />
+    <result column="COMPOSITE_TARGET_GUID" property="compositeTargetGuid" jdbcType="VARBINARY" />
+    <result column="MEMBER_METRIC_GUID" property="memberMetricGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

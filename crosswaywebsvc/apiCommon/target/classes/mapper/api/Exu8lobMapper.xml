@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.Exu8lobMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.Exu8lob" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TOBJID" property="tobjid" jdbcType="DECIMAL" />
+    <result column="OWNERID" property="ownerid" jdbcType="DECIMAL" />
+    <result column="CNAME" property="cname" jdbcType="VARCHAR" />
+    <result column="SNAME" property="sname" jdbcType="VARCHAR" />
+    <result column="SSGFLAG" property="ssgflag" jdbcType="DECIMAL" />
+    <result column="STSNAME" property="stsname" jdbcType="VARCHAR" />
+    <result column="STSNO" property="stsno" jdbcType="DECIMAL" />
+    <result column="SFILE" property="sfile" jdbcType="DECIMAL" />
+    <result column="SBLOCK" property="sblock" jdbcType="DECIMAL" />
+    <result column="SDOBJID" property="sdobjid" jdbcType="DECIMAL" />
+    <result column="SCHUNKING" property="schunking" jdbcType="DECIMAL" />
+    <result column="SVPOOL" property="svpool" jdbcType="DECIMAL" />
+    <result column="SFLAGS" property="sflags" jdbcType="DECIMAL" />
+    <result column="INAME" property="iname" jdbcType="VARCHAR" />
+    <result column="ISGFLAG" property="isgflag" jdbcType="DECIMAL" />
+    <result column="ITSNAME" property="itsname" jdbcType="VARCHAR" />
+    <result column="ITSNO" property="itsno" jdbcType="DECIMAL" />
+    <result column="IFILE" property="ifile" jdbcType="DECIMAL" />
+    <result column="IBLOCK" property="iblock" jdbcType="DECIMAL" />
+    <result column="IDOBJID" property="idobjid" jdbcType="DECIMAL" />
+    <result column="IINITRANS" property="iinitrans" jdbcType="DECIMAL" />
+    <result column="IMAXTRANS" property="imaxtrans" jdbcType="DECIMAL" />
+    <result column="SPROPERTY" property="sproperty" jdbcType="DECIMAL" />
+    <result column="COLTYPE" property="coltype" jdbcType="DECIMAL" />
+    <result column="COLTYPFLG" property="coltypflg" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

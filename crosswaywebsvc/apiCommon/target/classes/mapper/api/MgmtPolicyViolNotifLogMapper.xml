@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtPolicyViolNotifLogMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtPolicyViolNotifLog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+    <result column="TARGET_TYPE" property="targetType" jdbcType="VARCHAR" />
+    <result column="POLICY_NAME" property="policyName" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE" property="keyValue" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE2" property="keyValue2" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE3" property="keyValue3" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE4" property="keyValue4" jdbcType="VARCHAR" />
+    <result column="KEY_VALUE5" property="keyValue5" jdbcType="VARCHAR" />
+    <result column="VIOLATION_MESSAGE" property="violationMessage" jdbcType="VARCHAR" />
+    <result column="VIOLATION_LEVEL" property="violationLevel" jdbcType="VARCHAR" />
+    <result column="COLLECTION_TIMESTAMP" property="collectionTimestamp" jdbcType="DATE" />
+    <result column="DELIVERY_MESSAGE" property="deliveryMessage" jdbcType="VARCHAR" />
+    <result column="DELIVERY_TIMESTAMP" property="deliveryTimestamp" jdbcType="DATE" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <result column="POLICY_GUID" property="policyGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

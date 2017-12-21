@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.GvRestorePointMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.GvRestorePoint" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="INST_ID" property="instId" jdbcType="DECIMAL" />
+    <result column="SCN" property="scn" jdbcType="DECIMAL" />
+    <result column="DATABASE_INCARNATION#" property="databaseIncarnation" jdbcType="DECIMAL" />
+    <result column="GUARANTEE_FLASHBACK_DATABASE" property="guaranteeFlashbackDatabase" jdbcType="VARCHAR" />
+    <result column="STORAGE_SIZE" property="storageSize" jdbcType="DECIMAL" />
+    <result column="TIME" property="time" jdbcType="OTHER" />
+    <result column="RESTORE_POINT_TIME" property="restorePointTime" jdbcType="OTHER" />
+    <result column="PRESERVED" property="preserved" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

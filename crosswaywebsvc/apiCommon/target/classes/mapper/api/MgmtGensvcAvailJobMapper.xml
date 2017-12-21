@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtGensvcAvailJobMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtGensvcAvailJob" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+    <id column="TEST_GUID" property="testGuid" jdbcType="VARBINARY" />
+    <result column="NEXT_RUN" property="nextRun" jdbcType="DATE" />
+    <result column="IN_ERROR" property="inError" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

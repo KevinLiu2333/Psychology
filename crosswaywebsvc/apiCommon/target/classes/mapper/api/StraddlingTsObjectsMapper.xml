@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.StraddlingTsObjectsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.StraddlingTsObjects" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OBJECT1" property="object1" jdbcType="DECIMAL" />
+    <result column="TS1" property="ts1" jdbcType="DECIMAL" />
+    <result column="OBJECT2" property="object2" jdbcType="DECIMAL" />
+    <result column="TS2" property="ts2" jdbcType="DECIMAL" />
+    <result column="REASON_ID" property="reasonId" jdbcType="VARCHAR" />
+    <result column="MESG_ID" property="mesgId" jdbcType="DECIMAL" />
+  </resultMap>
+</mapper>

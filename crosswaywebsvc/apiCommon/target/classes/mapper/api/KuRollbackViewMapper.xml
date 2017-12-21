@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.KuRollbackViewMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.KuRollbackView" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="VERS_MAJOR" property="versMajor" jdbcType="CHAR" />
+    <result column="VERS_MINOR" property="versMinor" jdbcType="CHAR" />
+    <result column="US_NUM" property="usNum" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="USER_NUM" property="userNum" jdbcType="DECIMAL" />
+    <result column="OPTIMAL" property="optimal" jdbcType="DECIMAL" />
+    <result column="INIEXTS" property="iniexts" jdbcType="DECIMAL" />
+    <result column="MINEXTS" property="minexts" jdbcType="DECIMAL" />
+    <result column="MAXEXTS" property="maxexts" jdbcType="DECIMAL" />
+    <result column="EXTSIZE" property="extsize" jdbcType="DECIMAL" />
+    <result column="TABLESPACE" property="tablespace" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

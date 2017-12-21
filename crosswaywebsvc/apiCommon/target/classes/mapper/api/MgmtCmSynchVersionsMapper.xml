@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtCmSynchVersionsMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtCmSynchVersions" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="SYNCH_VERSION" property="synchVersion" jdbcType="DECIMAL" />
+    <result column="VERSION_STATUS" property="versionStatus" jdbcType="VARCHAR" />
+    <result column="VERSION_STATE" property="versionState" jdbcType="DECIMAL" />
+    <result column="SOURCE_VERSION" property="sourceVersion" jdbcType="DECIMAL" />
+    <result column="GENERATION_TIME" property="generationTime" jdbcType="DATE" />
+    <result column="TIMEZONE_REGION" property="timezoneRegion" jdbcType="VARCHAR" />
+    <result column="EXECUTION_TIME" property="executionTime" jdbcType="DATE" />
+    <result column="PROCESSING_MODE" property="processingMode" jdbcType="DECIMAL" />
+    <result column="MAX_IR_SEVERITY" property="maxIrSeverity" jdbcType="DECIMAL" />
+    <result column="SYNCH_GUID" property="synchGuid" jdbcType="VARBINARY" />
+    <result column="JOB_EXECUTION_ID" property="jobExecutionId" jdbcType="VARBINARY" />
+    <result column="IMPACT_REPORT" property="impactReport" jdbcType="BLOB" />
+    <result column="SCRIPT" property="script" jdbcType="BLOB" />
+    <result column="COMPARISON_JOB_EXEC_ID" property="comparisonJobExecId" jdbcType="VARBINARY" />
+    <result column="GENERATION_JOB_EXEC_ID" property="generationJobExecId" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

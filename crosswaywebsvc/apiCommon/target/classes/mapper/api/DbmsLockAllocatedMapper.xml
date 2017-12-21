@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.DbmsLockAllocatedMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.DbmsLockAllocated" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="LOCKID" property="lockid" jdbcType="DECIMAL" />
+    <result column="EXPIRATION" property="expiration" jdbcType="DATE" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.BmKwProjectinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.BmKwProjectinfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="AMOUNT" property="amount" jdbcType="DECIMAL" />
+    <result column="FUNDNAME" property="fundname" jdbcType="VARCHAR" />
+    <result column="FUNDTYPENAME" property="fundtypename" jdbcType="VARCHAR" />
+    <result column="COMPANYNAME" property="companyname" jdbcType="VARCHAR" />
+    <result column="STREETNAME" property="streetname" jdbcType="VARCHAR" />
+    <result column="PLANSTARTTIME" property="planstarttime" jdbcType="TIMESTAMP" />
+    <result column="PLANENDTIME" property="planendtime" jdbcType="TIMESTAMP" />
+    <result column="PUBLICITYSTARTTIME" property="publicitystarttime" jdbcType="TIMESTAMP" />
+    <result column="PUBLICITYACTUALSTARTTIME" property="publicityactualstarttime" jdbcType="TIMESTAMP" />
+    <result column="PUBLICITYACTUALENDTIME" property="publicityactualendtime" jdbcType="TIMESTAMP" />
+    <result column="REQUESTTIME" property="requesttime" jdbcType="TIMESTAMP" />
+    <result column="ONEDEPTNAME" property="onedeptname" jdbcType="VARCHAR" />
+    <result column="TWODEPTNAME" property="twodeptname" jdbcType="VARCHAR" />
+    <result column="REGISTEREDADDRESS" property="registeredaddress" jdbcType="VARCHAR" />
+    <result column="COMPANYPROPERTY" property="companyproperty" jdbcType="VARCHAR" />
+    <result column="INDUSTRYMAINDEPT" property="industrymaindept" jdbcType="VARCHAR" />
+    <result column="PROJECTINVESTMENT" property="projectinvestment" jdbcType="DECIMAL" />
+    <result column="RELEVANTBASIS" property="relevantbasis" jdbcType="VARCHAR" />
+    <result column="PROGRESSSITUATION" property="progresssituation" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

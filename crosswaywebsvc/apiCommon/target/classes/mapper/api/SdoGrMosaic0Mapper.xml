@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.SdoGrMosaic0Mapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.SdoGrMosaic0" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="RID" property="rid" jdbcType="OTHER" />
+    <result column="RDT" property="rdt" jdbcType="VARCHAR" />
+    <result column="RSTID" property="rstid" jdbcType="DECIMAL" />
+    <result column="RSTYPE" property="rstype" jdbcType="DECIMAL" />
+    <result column="SRID" property="srid" jdbcType="DECIMAL" />
+    <result column="RCTIF" property="rctif" jdbcType="VARCHAR" />
+    <result column="R0" property="r0" jdbcType="DECIMAL" />
+    <result column="C0" property="c0" jdbcType="DECIMAL" />
+    <result column="B0" property="b0" jdbcType="DECIMAL" />
+    <result column="R1" property="r1" jdbcType="DECIMAL" />
+    <result column="C1" property="c1" jdbcType="DECIMAL" />
+    <result column="B1" property="b1" jdbcType="DECIMAL" />
+    <result column="BANDS" property="bands" jdbcType="DECIMAL" />
+    <result column="BCV" property="bcv" jdbcType="DECIMAL" />
+    <result column="ILV" property="ilv" jdbcType="VARCHAR" />
+    <result column="RBLKSZ" property="rblksz" jdbcType="DECIMAL" />
+    <result column="CBLKSZ" property="cblksz" jdbcType="DECIMAL" />
+    <result column="BBLKSZ" property="bblksz" jdbcType="DECIMAL" />
+    <result column="CDL" property="cdl" jdbcType="DECIMAL" />
+    <result column="CDP" property="cdp" jdbcType="VARCHAR" />
+    <result column="ULTR" property="ultr" jdbcType="DECIMAL" />
+    <result column="ULTC" property="ultc" jdbcType="DECIMAL" />
+    <result column="ULTB" property="ultb" jdbcType="DECIMAL" />
+    <result column="RROWS" property="rrows" jdbcType="DECIMAL" />
+    <result column="COLS" property="cols" jdbcType="DECIMAL" />
+    <result column="CPTYPE" property="cptype" jdbcType="VARCHAR" />
+    <result column="META" property="meta" jdbcType="OTHER" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.klsw.apiCommon.api.mapper2.MgmtBamIsessionDatasourceMapper" >
+  <resultMap id="BaseResultMap" type="com.klsw.apiCommon.api.model2.MgmtBamIsessionDatasource" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="SESSION_GUID" property="sessionGuid" jdbcType="VARBINARY" />
+    <id column="DATASOURCE_NAME" property="datasourceName" jdbcType="VARCHAR" />
+    <result column="DS_NAMESPACE" property="dsNamespace" jdbcType="VARCHAR" />
+    <result column="JMS_TOPIC_CONNECTION_FACTORY" property="jmsTopicConnectionFactory" jdbcType="VARCHAR" />
+    <result column="JMS_TOPIC_NAME" property="jmsTopicName" jdbcType="VARCHAR" />
+    <result column="JMS_SUBSCRIBER_ID" property="jmsSubscriberId" jdbcType="VARCHAR" />
+    <result column="JMS_USERNAME" property="jmsUsername" jdbcType="VARCHAR" />
+    <result column="JMS_PASSWORD" property="jmsPassword" jdbcType="VARCHAR" />
+    <result column="SOURCE_TYPE" property="sourceType" jdbcType="DECIMAL" />
+    <result column="TARGET_GUID" property="targetGuid" jdbcType="VARBINARY" />
+  </resultMap>
+</mapper>

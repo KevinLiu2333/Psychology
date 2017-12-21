@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.springboot.mapper.JcptRbFileMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.springboot.model.JcptRbFile">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="RB_FILE_ID" jdbcType="VARCHAR" property="rbFileId" />
+    <result column="TARGET_TYPE" jdbcType="VARCHAR" property="targetType" />
+    <result column="TARGET_NAME" jdbcType="VARCHAR" property="targetName" />
+    <result column="TARGET_NO" jdbcType="VARCHAR" property="targetNo" />
+    <result column="NIAN" jdbcType="VARCHAR" property="nian" />
+    <result column="YUE" jdbcType="VARCHAR" property="yue" />
+    <result column="UPLOAD_DATE" jdbcType="DATE" property="uploadDate" />
+    <result column="OP_USER_ID" jdbcType="VARCHAR" property="opUserId" />
+    <result column="OP_USER_NAME" jdbcType="VARCHAR" property="opUserName" />
+    <result column="UNIT_ID" jdbcType="VARCHAR" property="unitId" />
+    <result column="UNIT_NAME" jdbcType="VARCHAR" property="unitName" />
+    <result column="FILE_ID" jdbcType="VARCHAR" property="fileId" />
+  </resultMap>
+</mapper>
