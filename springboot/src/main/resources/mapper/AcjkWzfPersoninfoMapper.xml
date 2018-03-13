@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.springboot.mapper.AcjkWzfPersoninfoMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.springboot.model.AcjkWzfPersoninfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="USER_NAME" jdbcType="VARCHAR" property="userName" />
+    <result column="MOBILE" jdbcType="VARCHAR" property="mobile" />
+    <result column="IDENTITY_CARD" jdbcType="VARCHAR" property="identityCard" />
+    <result column="IDENTITY_TYPE" jdbcType="VARCHAR" property="identityType" />
+    <result column="AREA_CODE" jdbcType="VARCHAR" property="areaCode" />
+    <result column="STREET_CODE" jdbcType="VARCHAR" property="streetCode" />
+    <result column="COMMITTEE_CODE" jdbcType="VARCHAR" property="committeeCode" />
+    <result column="DETAILED_ADDRESS" jdbcType="VARCHAR" property="detailedAddress" />
+    <result column="PERMANENT_ADDRESS" jdbcType="VARCHAR" property="permanentAddress" />
+    <result column="NATION_CODE" jdbcType="VARCHAR" property="nationCode" />
+    <result column="MARRIAGE_CODE" jdbcType="VARCHAR" property="marriageCode" />
+    <result column="EDUCATION_CODE" jdbcType="VARCHAR" property="educationCode" />
+    <result column="NATIONALITY" jdbcType="VARCHAR" property="nationality" />
+    <result column="ENTERPRISE_CODE" jdbcType="VARCHAR" property="enterpriseCode" />
+    <result column="INDUSTRY_CODE" jdbcType="VARCHAR" property="industryCode" />
+    <result column="TITLE_CODE" jdbcType="VARCHAR" property="titleCode" />
+    <result column="SPECIALTY_CODE" jdbcType="VARCHAR" property="specialtyCode" />
+    <result column="HOBBY_CODE" jdbcType="VARCHAR" property="hobbyCode" />
+    <result column="POLITICAL_CODE" jdbcType="VARCHAR" property="politicalCode" />
+    <result column="PAMILY_TIES_CODE" jdbcType="VARCHAR" property="pamilyTiesCode" />
+  </resultMap>
+</mapper>

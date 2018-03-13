@@ -1,0 +1,3 @@
+	<service name="ZfwZACorpInfoService" provider="java:RPC">
+		<parameter name="className" value="com.wonders.ws.send.zfw.ZfwZACorpInfoService" />
+	</service>

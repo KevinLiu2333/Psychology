@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.springboot.mapper.AcjkSzshEntywarningsinfoMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.springboot.model.AcjkSzshEntywarningsinfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="WRNG_ID" jdbcType="VARCHAR" property="wrngId" />
+    <result column="UNI_SCID" jdbcType="VARCHAR" property="uniScid" />
+    <result column="REG_NO" jdbcType="VARCHAR" property="regNo" />
+    <result column="ENT_NAME" jdbcType="VARCHAR" property="entName" />
+    <result column="WRNG_NAME" jdbcType="VARCHAR" property="wrngName" />
+    <result column="WRNG_REASON" jdbcType="VARCHAR" property="wrngReason" />
+    <result column="WRNG_DESC" jdbcType="VARCHAR" property="wrngDesc" />
+    <result column="WRNG_START" jdbcType="VARCHAR" property="wrngStart" />
+    <result column="WRNG_END" jdbcType="VARCHAR" property="wrngEnd" />
+    <result column="WRNG_ORGAN_NAME" jdbcType="VARCHAR" property="wrngOrganName" />
+    <result column="WRNG_DATE" jdbcType="VARCHAR" property="wrngDate" />
+    <result column="ACCEPT_ORGAN_NAME" jdbcType="VARCHAR" property="acceptOrganName" />
+    <result column="ACCEPT_DATE" jdbcType="VARCHAR" property="acceptDate" />
+    <result column="RECEIVE_USER_NAME" jdbcType="VARCHAR" property="receiveUserName" />
+  </resultMap>
+</mapper>

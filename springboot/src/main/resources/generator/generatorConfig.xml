@@ -29,7 +29,7 @@
         <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetJavaProject}"
                              type="XMLMAPPER"/>
         <!--    表配置    -->
-        <table tableName="JCPT_START_INFO">
+        <table tableName="T_GA_RJBXX">
             <generatedKey column="ID" sqlStatement="oracle" identity="true"/>
         </table>
     </context>

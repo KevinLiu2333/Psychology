@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.springboot.mapper.AcjkSzshEntycasesinfoMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.springboot.model.AcjkSzshEntycasesinfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="CASE_ID" jdbcType="VARCHAR" property="caseId" />
+    <result column="UNI_SCID" jdbcType="VARCHAR" property="uniScid" />
+    <result column="REG_NO" jdbcType="VARCHAR" property="regNo" />
+    <result column="ENT_NAME" jdbcType="VARCHAR" property="entName" />
+    <result column="PENDEC_NO" jdbcType="VARCHAR" property="pendecNo" />
+    <result column="PENDEC_ISS_DATE" jdbcType="VARCHAR" property="pendecIssDate" />
+    <result column="JUD_AUTH" jdbcType="VARCHAR" property="judAuth" />
+    <result column="ILLEG_ACT_TYPE" jdbcType="VARCHAR" property="illegActType" />
+    <result column="PEN_TYPE" jdbcType="VARCHAR" property="penType" />
+    <result column="PEN_TYPE_CN" jdbcType="VARCHAR" property="penTypeCn" />
+    <result column="PEN_AM" jdbcType="VARCHAR" property="penAm" />
+    <result column="FORF_AM" jdbcType="VARCHAR" property="forfAm" />
+    <result column="PEN_CONTENT" jdbcType="VARCHAR" property="penContent" />
+    <result column="PUBLIC_DATE" jdbcType="VARCHAR" property="publicDate" />
+    <result column="REMARK" jdbcType="VARCHAR" property="remark" />
+    <result column="DATADEPT" jdbcType="VARCHAR" property="datadept" />
+  </resultMap>
+</mapper>

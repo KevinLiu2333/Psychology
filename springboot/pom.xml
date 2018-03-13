@@ -137,6 +137,11 @@
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>commons-pool</groupId>
+            <artifactId>commons-pool</artifactId>
+            <version>1.4</version>
+        </dependency>
 
         <!--    编码部分    -->
         <!--    这个不说了,大家都懂的,最常用的json工具    -->
@@ -221,8 +226,6 @@
             <artifactId>okhttp</artifactId>
             <version>RELEASE</version>
         </dependency>
-
-
         <!--    junit测试工具   -->
         <dependency>
             <groupId>junit</groupId>
@@ -273,7 +276,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>RELEASE</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>

@@ -1,12 +1,12 @@
 package com.kevin.springboot.configuration;
 
-import org.apache.commons.lang.StringUtils;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.util.AntPathMatcher;
+import org.springframework.util.StringUtils;
 import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -59,7 +59,7 @@ public class WebConfiguration extends WebMvcConfigurerAdapter implements Environ
      */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        if (StringUtils.isBlank(static_path)) {
+        if (StringUtils.isEmpty(static_path)) {
             try {
 //                注意,该文件夹不能不存在,也不能为空文件夹
                 static_path = new ClassPathResource("static").getFile().getAbsolutePath() + "/";

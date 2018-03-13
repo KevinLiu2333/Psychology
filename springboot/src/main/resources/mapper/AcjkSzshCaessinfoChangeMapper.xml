@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.springboot.mapper.AcjkSzshCaessinfoChangeMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.springboot.model.AcjkSzshCaessinfoChange">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="CASE_ALT_ID" jdbcType="VARCHAR" property="caseAltId" />
+    <result column="CASE_ID" jdbcType="VARCHAR" property="caseId" />
+    <result column="ALT_DATE" jdbcType="VARCHAR" property="altDate" />
+    <result column="ALT" jdbcType="VARCHAR" property="alt" />
+    <result column="PEN_AUTH" jdbcType="VARCHAR" property="penAuth" />
+    <result column="DATA_DEPT" jdbcType="VARCHAR" property="dataDept" />
+  </resultMap>
+</mapper>

@@ -11,7 +11,7 @@ var ioc = {
 //			url : 'jdbc:oracle:thin:@10.1.8.73:1521:ORCL',
 //			url : 'jdbc:oracle:thin:@10.208.250.100:1521:ORCL',
 //			url : 'jdbc:oracle:thin:@localhost:1521:ORCL',
-			url : 'jdbc:oracle:thin:@10.2.8.116:1521:ORCL',
+			url : 'jdbc:oracle:thin:@10.2.8.138:1521:ORCL',
 //			username : 'ptsjzx',
 //			password : 'ptsjzx',
 		    username : 'ptfrk',

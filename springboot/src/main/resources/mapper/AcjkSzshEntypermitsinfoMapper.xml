@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.springboot.mapper.AcjkSzshEntypermitsinfoMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.springboot.model.AcjkSzshEntypermitsinfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="LIC_ID" jdbcType="VARCHAR" property="licId" />
+    <result column="UNI_SCID" jdbcType="VARCHAR" property="uniScid" />
+    <result column="REG_NO" jdbcType="VARCHAR" property="regNo" />
+    <result column="ENT_NAME" jdbcType="VARCHAR" property="entName" />
+    <result column="LIC_NO" jdbcType="VARCHAR" property="licNo" />
+    <result column="LIC_NAME" jdbcType="VARCHAR" property="licName" />
+    <result column="VAL_FROM" jdbcType="VARCHAR" property="valFrom" />
+    <result column="VAL_TO" jdbcType="VARCHAR" property="valTo" />
+    <result column="LIC_ANTH" jdbcType="VARCHAR" property="licAnth" />
+    <result column="LIC_ITEM" jdbcType="VARCHAR" property="licItem" />
+    <result column="TYPE" jdbcType="VARCHAR" property="type" />
+    <result column="CAN_DATE" jdbcType="VARCHAR" property="canDate" />
+    <result column="EQUPLE_CAN_REA" jdbcType="VARCHAR" property="equpleCanRea" />
+    <result column="REV_DATE" jdbcType="VARCHAR" property="revDate" />
+    <result column="SUG_REV_REASON" jdbcType="VARCHAR" property="sugRevReason" />
+    <result column="INVALID_DATE" jdbcType="VARCHAR" property="invalidDate" />
+    <result column="INVALID_REA" jdbcType="VARCHAR" property="invalidRea" />
+    <result column="DATADEPT" jdbcType="VARCHAR" property="datadept" />
+  </resultMap>
+</mapper>

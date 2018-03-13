@@ -6,7 +6,7 @@
     <script src="../js/jquery.min.js"></script>
     <script>
         $(function () {
-            variableScope();
+            packageObj();
         });
 
         function date() {
@@ -92,20 +92,6 @@
             var s = "test";
         }
 
-        function packageObj() {
-            var o = {x: 1};//定义一个对象
-            o.x = 2;//通过修改对象属性值来更改对象
-            o.y = 3;//再次更改这个对象,给它增加一个新的属性
-
-            var a = [1, 2, 3];//数组也是可以修改的
-            a[0] = 0;//更改数组的一个元素
-            a[3] = 4;//给数组增加一个新的元素
-            //对象的比较并非值的比较,即使两个对象包含同样的属性及相同的值,它们也是不相等的.各个索引元素完全相等的两个数组也不相等.
-            var x = {x: 2};
-            var y = {x: 2};
-            alert(x === y);//false
-        }
-
         function typeChange() {
             //用 == 做比较时,会出现类型转换
             alert(null == undefined);
@@ -149,16 +135,54 @@
                 //优先选取局部变量
                 return scope;
             }
+
             alert(checkScope());//local
             scope = "global";
+
             function checkScope2() {
                 scope = "local";
                 myscope = "local";
-                return [scope,myscope];
+                return [scope, myscope];
             }
+
             alert(checkScope2());
             alert(scope);
             alert(myscope);
+
+        }
+
+        function packageObj() {
+            var s = "test";
+            //创建一个临时字符串对象,并给其len属性赋值为4,随即销毁
+            s.len = 4;
+            //undefined
+            alert(s.len);
+            var t = s.len;
+            //undefined
+            alert(t);
+
+        }
+
+        function change() {
+            var s = "hello";
+            //并没有改变原值,实际上是在原值的基础上进行处理,然后返回新值
+            s.toUpperCase();
+            alert(s);
+            var o = {x: 1};  //定义一个对象
+            o.x = 2;    //通过修改对象的属性值来改变对象
+            o.y = 3;    //再次改变对象,增加新的属性
+            alert(o.x); //2
+            alert(o.y); //3
+            var a = [1, 2, 3];    //数组也是可修改的
+            a[0] = 0;  //更改数组的一个元素
+            a[3] = 4;  //给数组增加一个新的元素
+            alert(a[0]);    //0
+            alert(a[3]);    //4
+            //    对象的比较并非值的比较,即使两个对象包含同样的属性及相同的值,他们也是不相等的.各个索引元素完全相等的连个数组也不相等
+            var x = {x: 1}, y = {x: 1};  //具有相同属性的两个对象
+            alert(x === y);   //false
+            var a0 = [], b0 = [];    //两个单独的空数组
+            alert(a0 === b0); //false
 
         }
     </script>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kevin.springboot.mapper.AcjkSzshEntyspotchecksinfoMapper">
+  <resultMap id="BaseResultMap" type="com.kevin.springboot.model.AcjkSzshEntyspotchecksinfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="INS_ID" jdbcType="VARCHAR" property="insId" />
+    <result column="UNI_SCID" jdbcType="VARCHAR" property="uniScid" />
+    <result column="REG_NO" jdbcType="VARCHAR" property="regNo" />
+    <result column="ENT_NAME" jdbcType="VARCHAR" property="entName" />
+    <result column="INS_AUTH_CN" jdbcType="VARCHAR" property="insAuthCn" />
+    <result column="INS_TYPE" jdbcType="VARCHAR" property="insType" />
+    <result column="INS_DATE" jdbcType="VARCHAR" property="insDate" />
+    <result column="CHECK_ITEM" jdbcType="VARCHAR" property="checkItem" />
+    <result column="CHECK_PROBLEM" jdbcType="VARCHAR" property="checkProblem" />
+    <result column="INS_CHECKRES" jdbcType="VARCHAR" property="insCheckres" />
+    <result column="INS_CHECKRES_CN" jdbcType="VARCHAR" property="insCheckresCn" />
+    <result column="INS_PERSON" jdbcType="VARCHAR" property="insPerson" />
+    <result column="DATA_DEPT" jdbcType="VARCHAR" property="dataDept" />
+  </resultMap>
+</mapper>

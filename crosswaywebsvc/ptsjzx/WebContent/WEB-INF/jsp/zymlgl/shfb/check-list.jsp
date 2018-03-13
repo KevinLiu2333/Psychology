@@ -57,7 +57,7 @@ function gozypz(){
 						<button type="submit" class="midButton">检     索</button>
 					</td>
 					<td colspan="2" style="text-align:center;">
-				<button type="button" class="midButton" onclick="gozypz()">资源目录配置</button>
+				
 			</td>
 				</tr>
 			</table>

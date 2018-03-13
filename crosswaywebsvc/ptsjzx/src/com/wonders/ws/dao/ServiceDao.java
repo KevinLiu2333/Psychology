@@ -182,7 +182,9 @@ public class ServiceDao {
     public Map<String, Object> getInfoByyuefenToMzjDztz(String nianyue, ApiServiceUser serviceUser) {
         Map<String, Object> map = new HashMap<>();
 
-        Sql sql = Sqls.create("select ZJHM from T_RJBXX_CHANGE where date_time=@nianyue");
+//        Sql sql = Sqls.create("select ZJHM from T_RJBXX_CHANGE where date_time=@nianyue");
+        //只选取万里街道的,且排除已经离开的人
+        Sql sql = Sqls.create("select a.zjhm from t_rjbxx_change a, t_ga_rjbxx b where a.zjhm = b.zjhm and b.hjdjddm = '07021' and a.date_time=@nianyue");
         sql.params().set("nianyue", nianyue);
         sql.setCallback(new SqlCallback() {
             @Override

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表达式和运算符</title>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function () {
+
+        });
+
+        //原始表达式
+        function primaryExpression() {
+            true;
+            false;
+            null;
+        }
+
+        function initExpression() {
+            [];//一个空数组,不包含任何元素
+            [1 + 2, 3 + 4];//拥有两个元素的数组,第一个是3,第二个是7
+            //数组初始化表达式中的元素初始化表达式可以是数组初始化表达式
+            var matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+            var sparseArray = [1, , , , 5];//未初始化的元素为undefined
+            var p = {x: 2.3, y: -1.2};//一个拥有两个属性成员的对象
+            var q = {};//一个空对象
+            q.x = 2.3;
+            q.y = -1.2;//q的成员属性和p一样
+            //对象直接量也可以嵌套,比如:
+            var rectangle = {upperLeft: {x: 2, y: 2}, lowerRight: {x: 4, y: 5}};
+
+        }
+
+        function definitionExpression() {
+            //函数定义表达式
+            var square = function (x) {
+                return x * x;
+            };
+
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
