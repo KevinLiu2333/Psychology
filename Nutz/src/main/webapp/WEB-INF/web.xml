@@ -1,62 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+<web-app version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
-         version="3.1">
-    <display-name>hellonutz</display-name>
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
     <filter>
         <filter-name>nutz</filter-name>
-        <!--将自己同一个JSP/SERVLET容器挂接-->
         <filter-class>org.nutz.mvc.NutFilter</filter-class>
         <init-param>
             <param-name>modules</param-name>
-            <param-value>demo.hello.MainModule</param-value>
+            <param-value>com.kevin.nutzbook.MainModule</param-value>
+        </init-param>
+        <!--排除路径-->
+        <init-param>
+            <param-name>exclusions</param-name>
+            <param-value>/rs/*,/druid/*</param-value>
         </init-param>
     </filter>
     <filter-mapping>
         <filter-name>nutz</filter-name>
         <url-pattern>/*</url-pattern>
+        <!-- ForwardView需要下面的配置 @Ok("->:/xxx/yyy/zzz") -->
         <dispatcher>REQUEST</dispatcher>
         <dispatcher>FORWARD</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
     </filter-mapping>
-    <!--附:典型配置-->
-    <!--<filter>-->
-    <!--<filter-name>nutz</filter-name>-->
-    <!--<filter-class>org.nutz.mvc.NutFilter</filter-class>-->
-    <!--<init-param>-->
-    <!--<param-name>modules</param-name>-->
-    <!--<param-value>net.wendal.nutzbook.MainModule</param-value>-->
-    <!--</init-param>-->
-    <!--</filter>-->
-    <!--<filter-mapping>-->
-    <!--<filter-name>nutz</filter-name>-->
-    <!--<url-pattern>/*</url-pattern>-->
-    <!--<dispatcher>REQUEST</dispatcher>-->
-    <!--<dispatcher>FORWARD</dispatcher>-->
-    <!--</filter-mapping>-->
-
-    <!--<filter>-->
-    <!--<filter-name>nutz</filter-name>-->
-    <!--<filter-class>org.nutz.mvc.NutFilter</filter-class>-->
-    <!--<init-param>-->
-    <!--<param-name>modules</param-name>-->
-    <!--<param-value>com.mine.app.MainModule</param-value>-->
-    <!--</init-param>-->
-    <!--<init-param>-->
-    <!--<param-name>ignore</param-name>-->
-    <!--默认ignore`"^(.+[.])(jsp|png|gif|jpg|js|css|jspx|jpeg|swf|ico|map)$"`-->
-    <!--也可以自定义，如下-->
-    <!--<param-value>^(.+[.])(jsp|png|gif|jpg|js|css|jspx|jpeg|swf|ico|map|html)$</param-value>-->
-    <!--</init-param>-->
-    <!--更灵活的忽略模式 exclusions参数-->
-    <!--<param-name>exclusions</param-name>-->
-    <!-- *.XXX 忽略后缀 -->
-    <!-- /XX/* 忽略前缀 -->
-    <!-- /cc   忽略固定路径 -->
-    <!-- 下面的例子忽略了html和ftl后缀, 忽略了/rs/和/druid/前缀,和忽略了固定路径/abc/notaction -->
-    <!--<param-value>*.html,*.ftl,/rs/*,/druid/*,/abc/notaction</param-value>-->
-    <!--</filter>-->
-
-    <!--动作链-->
+    <!--druid监控-->
+    <filter>
+        <filter-name>DruidWebStatFilter</filter-name>
+        <filter-class>com.alibaba.druid.support.http.WebStatFilter</filter-class>
+        <init-param>
+            <param-name>exclusions</param-name>
+            <param-value>*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*,/rs/*</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>DruidWebStatFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>DruidStatView</servlet-name>
+        <servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DruidStatView</servlet-name>
+        <url-pattern>/druid/*</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
 </web-app>
         
