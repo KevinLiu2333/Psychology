@@ -1,11 +1,6 @@
 package com.kevin.nutzbook.bean;
 
-import org.nutz.dao.entity.annotation.Column;
-import org.nutz.dao.entity.annotation.Id;
-import org.nutz.dao.entity.annotation.Name;
-import org.nutz.dao.entity.annotation.Table;
-
-import java.util.Date;
+import org.nutz.dao.entity.annotation.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,20 +9,23 @@ import java.util.Date;
  * Time: 10:14
  */
 @Table("t_user")
-public class User {
+public class User extends BasePojo {
     @Id
     private int id;
+
+    //建立关联 id关联userId
+    @One(target = UserProfile.class, field = "id", key = "userId")
+    protected UserProfile profile;
+
     @Name
     @Column
     private String name;
+
     @Column("passwd")
     private String password;
+
     @Column
     private String salt;
-    @Column("ct")
-    private Date createTime;
-    @Column("ut")
-    private Date updateTime;
 
     public int getId() {
         return id;
@@ -61,19 +59,11 @@ public class User {
         this.salt = salt;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public UserProfile getProfile() {
+        return profile;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+    public void setProfile(UserProfile profile) {
+        this.profile = profile;
     }
 }

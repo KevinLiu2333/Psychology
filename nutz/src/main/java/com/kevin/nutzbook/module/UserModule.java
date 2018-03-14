@@ -2,8 +2,6 @@ package com.kevin.nutzbook.module;
 
 import com.kevin.nutzbook.bean.User;
 import org.nutz.dao.Cnd;
-import org.nutz.dao.Dao;
-import org.nutz.ioc.loader.annotation.Inject;
 import org.nutz.ioc.loader.annotation.IocBean;
 import org.nutz.lang.Strings;
 import org.nutz.lang.util.NutMap;
@@ -25,9 +23,7 @@ import java.util.Date;
 @At("/user")
 @Ok("json")
 @Fail("http:500")
-public class UserModule {
-    @Inject
-    private Dao dao;
+public class UserModule extends BaseModule{
 
     @At
     public int count() {
@@ -51,7 +47,7 @@ public class UserModule {
         session.invalidate();
     }
 
-    protected String checkUser(User user, boolean create) {
+    private String checkUser(User user, boolean create) {
         if (user == null) {
             return "空对象";
         }

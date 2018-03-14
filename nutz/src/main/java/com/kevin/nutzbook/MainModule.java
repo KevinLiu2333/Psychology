@@ -1,5 +1,6 @@
 package com.kevin.nutzbook;
 
+import org.nutz.mvc.annotation.ChainBy;
 import org.nutz.mvc.annotation.IocBy;
 import org.nutz.mvc.annotation.Modules;
 import org.nutz.mvc.annotation.SetupBy;
@@ -14,8 +15,9 @@ import org.nutz.mvc.annotation.SetupBy;
         // 这个package下所有带@IocBean注解的类,都会登记上
         "*anno", "com.kevin.nutzbook",
         "*tx", // 事务拦截 aop
-        "*async"}) // 异步执行aop
+        "*quartz"}) // quartz配置
 @Modules//扫描路径
 @SetupBy(MainSetup.class)
+@ChainBy(args="mvc/nutzbook-mvc-chain.js")//动作链
 public class MainModule {
 }
