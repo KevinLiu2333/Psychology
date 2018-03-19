@@ -1,17 +1,17 @@
 package com.kevin.nutzbook.module;
 
 import com.kevin.nutzbook.bean.User;
+import com.kevin.nutzbook.service.UserService;
+import com.kevin.nutzbook.util.Toolkit;
 import org.nutz.dao.Cnd;
+import org.nutz.ioc.loader.annotation.Inject;
 import org.nutz.ioc.loader.annotation.IocBean;
 import org.nutz.lang.Strings;
 import org.nutz.lang.util.NutMap;
-import org.nutz.mvc.annotation.At;
-import org.nutz.mvc.annotation.Fail;
-import org.nutz.mvc.annotation.Ok;
-import org.nutz.mvc.annotation.Param;
+import org.nutz.mvc.Scope;
+import org.nutz.mvc.annotation.*;
 
 import javax.servlet.http.HttpSession;
-import java.util.Date;
 
 /**
  * Created with IntelliJ IDEA.
@@ -23,7 +23,10 @@ import java.util.Date;
 @At("/user")
 @Ok("json")
 @Fail("http:500")
-public class UserModule extends BaseModule{
+public class UserModule extends BaseModule {
+
+    @Inject
+    protected UserService userService;
 
     @At
     public int count() {
@@ -31,13 +34,25 @@ public class UserModule extends BaseModule{
     }
 
     @At
-    public Object login(@Param("username") String name, @Param("password") String password, HttpSession session) {
-        User user = dao.fetch(User.class, Cnd.where("name", "=", name).and("password", "=", password));
-        if (user == null) {
-            return false;
+    @Filters // 覆盖UserModule类的@Filter设置,因为登陆可不能要求是个已经登陆的Session
+    @POST
+    public Object login(@Param("username") String username,
+                        @Param("password") String password,
+                        @Param("captcha") String captcha,
+                        @Attr(scope = Scope.SESSION, value = "nutz_captcha") String _captcha,
+                        HttpSession session) {
+        NutMap re = new NutMap();
+        if (!Toolkit.checkCaptcha(_captcha, captcha)) {
+            return re.setv("ok", false).setv("msg", "验证码错误");
+        }
+        int userId = userService.fetch(username, password);
+        if (userId < 0) {
+            return re.setv("ok", false).setv("msg", "用户名或密码错误");
         } else {
-            session.setAttribute("me", user.getId());
-            return true;
+            session.setAttribute("me", userId);
+            // 完成nutdao_realm后启用.
+            // SecurityUtils.getSubject().login(new SimpleShiroToken(userId));
+            return re.setv("ok", true);
         }
     }
 
@@ -79,15 +94,22 @@ public class UserModule extends BaseModule{
     }
 
     @At
-    public Object add(@Param("..")User user) {
+    public Object add(@Param("..") User user) {  // 两个点号是按对象属性一一设置
         NutMap re = new NutMap();
         String msg = checkUser(user, true);
-        if (msg != null){
+        if (msg != null) {
             return re.setv("ok", false).setv("msg", msg);
         }
-        user.setCreateTime(new Date());
-        user.setUpdateTime(new Date());
-        user = dao.insert(user);
+        user = userService.add(user.getName(), user.getPassword());
         return re.setv("ok", true).setv("data", user);
+    }
+
+    @At
+    public Object update(@Param("password") String password, @Attr("me") int me) {
+        if (Strings.isBlank(password) || password.length() < 6) {
+            return new NutMap().setv("ok", false).setv("msg", "密码不符合要求");
+        }
+        userService.updatePassword(me, password);
+        return new NutMap().setv("ok", true);
     }
 }

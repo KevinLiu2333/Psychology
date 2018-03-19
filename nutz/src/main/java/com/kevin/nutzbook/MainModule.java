@@ -1,9 +1,7 @@
 package com.kevin.nutzbook;
 
-import org.nutz.mvc.annotation.ChainBy;
-import org.nutz.mvc.annotation.IocBy;
-import org.nutz.mvc.annotation.Modules;
-import org.nutz.mvc.annotation.SetupBy;
+import org.nutz.integration.shiro.ShiroSessionProvider;
+import org.nutz.mvc.annotation.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,6 +16,7 @@ import org.nutz.mvc.annotation.SetupBy;
         "*quartz"}) // quartz配置
 @Modules//扫描路径
 @SetupBy(MainSetup.class)
-@ChainBy(args="mvc/nutzbook-mvc-chain.js")//动作链
+@ChainBy(args = "mvc/nutzbook-mvc-chain.js")//动作链
+@SessionBy(ShiroSessionProvider.class)//使用Shiro的Session替换NutzFilter作用域内的Session
 public class MainModule {
 }

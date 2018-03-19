@@ -2,6 +2,8 @@ package com.kevin.nutzbook.bean;
 
 import org.nutz.dao.entity.annotation.*;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Kevin
@@ -10,22 +12,33 @@ import org.nutz.dao.entity.annotation.*;
  */
 @Table("t_user")
 public class User extends BasePojo {
-    @Id
-    private int id;
 
-    //建立关联 id关联userId
-    @One(target = UserProfile.class, field = "id", key = "userId")
-    protected UserProfile profile;
+    @Id
+    protected int id;
 
     @Name
     @Column
-    private String name;
+    protected String name;
 
     @Column("passwd")
-    private String password;
+    @ColDefine(width = 128)//长度限制
+    protected String password;
 
     @Column
-    private String salt;
+    protected String salt;
+
+    @Column
+    private boolean locked;
+
+    @ManyMany(from = "u_id", relation = "t_user_role", target = Role.class, to = "role_id")
+    protected List<Role> roles;
+
+    @ManyMany(from = "u_id", relation = "t_user_permission", target = Permission.class, to = "permission_id")
+
+    protected List<Permission> permissions;
+    @One(target = UserProfile.class, field = "id", key = "userId")
+
+    protected UserProfile profile;
 
     public int getId() {
         return id;
@@ -57,6 +70,30 @@ public class User extends BasePojo {
 
     public void setSalt(String salt) {
         this.salt = salt;
+    }
+
+    public boolean isLocked() {
+        return locked;
+    }
+
+    public void setLocked(boolean locked) {
+        this.locked = locked;
+    }
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
+    }
+
+    public List<Permission> getPermissions() {
+        return permissions;
+    }
+
+    public void setPermissions(List<Permission> permissions) {
+        this.permissions = permissions;
     }
 
     public UserProfile getProfile() {
