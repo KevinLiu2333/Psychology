@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.8.RELEASE</version>
+        <version>1.5.9.RELEASE</version>
     </parent>
     <dependencies>
         <!--    核心部件    -->
@@ -31,6 +31,17 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!--    aop所需组件开始    -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>aopalliance</groupId>
+            <artifactId>aopalliance</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!--    aop所需组件结束    -->
         <!--    通用mapper这个老牛逼了,各种查询都靠他,关键是咱中国人写的,已经直接集成springboot    -->
         <dependency>
             <groupId>tk.mybatis</groupId>
@@ -46,7 +57,7 @@
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
-            <version>RELEASE</version>
+            <version>1.2.4</version>
         </dependency>
         <!--    包含spring对schedule的支持    -->
         <dependency>
@@ -194,11 +205,17 @@
             <artifactId>netty-all</artifactId>
             <version>RELEASE</version>
         </dependency>
+        <!--    mybatis    -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>1.3.1</version>
+        </dependency>
         <!--    mapper工具    -->
         <dependency>
             <groupId>tk.mybatis</groupId>
-            <artifactId>mapper</artifactId>
-            <version>RELEASE</version>
+            <artifactId>mapper-spring-boot-starter</artifactId>
+            <version>1.2.4</version>
         </dependency>
 
 
@@ -232,6 +249,20 @@
             <artifactId>junit</artifactId>
             <version>RELEASE</version>
         </dependency>
+        <!--    commons-io    -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.5</version>
+        </dependency>
+
+        <!--    dubbo start 嘿嘿,找到了最新的配置方法-->
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>0.1.0</version>
+        </dependency>
+        <!--    dubbo finish    -->
     </dependencies>
     <build>
         <plugins>

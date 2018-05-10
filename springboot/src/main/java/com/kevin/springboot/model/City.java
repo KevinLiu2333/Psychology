@@ -1,12 +1,13 @@
 package com.kevin.springboot.model;
 
-import javax.persistence.*;
-import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-public class City implements Serializable {
-    private static final long serialVersionUID = -1263344404671412999L;
-    @Column(name = "ID")
+public class City {
     @Id
+    @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
@@ -90,16 +91,5 @@ public class City implements Serializable {
      */
     public void setPopulation(Integer population) {
         this.population = population;
-    }
-
-    @Override
-    public String toString() {
-        return "City{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", countrycode='" + countrycode + '\'' +
-                ", district='" + district + '\'' +
-                ", population=" + population +
-                '}';
     }
 }

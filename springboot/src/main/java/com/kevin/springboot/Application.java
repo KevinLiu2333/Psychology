@@ -26,8 +26,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableAutoConfiguration
 //扫描注解
 @ComponentScan("com.kevin.springboot")
-//mapper扫描注解,隶属于mybatis
-@MapperScan("com.kevin.springboot.mapper")
+//mapper扫描注解,隶属于mybatis 注意格式...
+@MapperScan("com.kevin.springboot.mapper.*")
 //swagger2注解
 @EnableSwagger2
 //支持缓存
@@ -35,6 +35,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
+        //注解解析context，可接受一个配置类作为参数
+//        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+//        context.getBean("xxx");
+
     }
 
     @Bean
