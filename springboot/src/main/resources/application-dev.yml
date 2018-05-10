@@ -1,0 +1,106 @@
+#server配置
+server:
+  port: 8021
+  session:
+    timeout: 3600
+
+
+spring:
+  #datasource配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/world?useUnicode=true&characterEncoding=utf-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false
+    username: root
+    password: 4491973
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  #redis配置
+  redis:
+    database: 0 #Redis数据库索引（默认为0）
+    host: 127.0.0.1 #Redis服务器地址
+    port: 6379  #Redis服务连接端口
+    password:   #Redis连接密码
+    timeout: 0  #连接池超时时间
+    pool:
+      max-active: 8 #连接池最大连接数（使用负值表示没有限制）
+      max-wait: -1  #连接池最大阻塞等待时间（使用负值表示没有限制）
+      max-idle: 8 #连接池最大空闲连接
+      min-idle: 0 #连接池最小空闲连接
+
+  #thymrleaf配置
+  thymeleaf:
+    prefix: classpath:/templates/ #模板目录地址前缀
+    suffix: .html #模板后缀
+    mode: LEGACYHTML5 #一个宽容度更高的html模板,需引入相关jar包
+    encoding: UTF-8 #编码
+    content-type: text/html #内容类型
+    cache: true #开启缓存
+
+
+#dubbo配置
+dubbo:
+  application:
+    id: dubbo-provider-demo
+    name: dubbo-provider-demo
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 12345
+  registry:
+    id: my-registry
+  scan:
+    base-packages: com.kevin.springboot.dubbo.provider.service
+
+
+
+#mybatis配置
+mybatis:
+  type-aliases-package: com.kevin.springboot.model  #实体类路径
+  mapper-locations: classpath:mapper/*.xml  #mapper路径
+  configuration:
+    call-setters-on-nulls: true #数据空值不影响映射
+
+
+#mapper配置
+mapper:
+  mappers: com.kevin.springboot.MyMapper  #mapper基础类路径
+  not-empty: false  #空值不影响插入
+  identity: MYSQL #mapper类型信息
+
+
+#pageHelper分页插件配置
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+
+#tcp服务器配置
+tcp:
+  server:
+    port: 19999
+
+
+#阿里云配置
+aliyun:
+  accessKey:
+    id: LTAIksw4QT0KaoXY
+    secret: PHXKpCu6FlM5aIJFinaCxUrMSkCp79
+  mts_region: cn-hangzhou
+  oss:
+    endpoint: http://oss-cn-hangzhou.aliyuncs.com
+    domain: klsw-wk.oss-cn-hangzhou.aliyuncs.com
+    bucket: klsw-wk
+    region: oss-cn-hangzhou
+
+
+#其他配置
+web:
+  static:
+    path:
+
+
+
+
+
