@@ -1,13 +1,13 @@
 package com.kevin.springboot.mongodb.service;
 
 import com.kevin.springboot.mongodb.model.Users;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -19,8 +19,8 @@ import java.util.List;
 @Component("userService")
 public class UserServiceImpl implements IuserService {
 
-    @Autowired
-    MongoOperations mongoTemplate;
+    @Resource
+    private MongoOperations mongoTemplate;
 
     @Override
     public void saveUser(Users users) {
