@@ -31,6 +31,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <!--    aop所需组件开始    -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -42,17 +43,20 @@
             <version>1.0</version>
         </dependency>
         <!--    aop所需组件结束    -->
+
         <!--    通用mapper这个老牛逼了,各种查询都靠他,关键是咱中国人写的,已经直接集成springboot    -->
         <dependency>
             <groupId>tk.mybatis</groupId>
             <artifactId>mapper-spring-boot-starter</artifactId>
             <version>RELEASE</version>
         </dependency>
+
         <!--    thymeleaf是一个不错的模板引擎,比jsp速度更快,也是springboot标配模板    -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+
         <!--    分页插件,这个也不错,分页实用,已直接集成springboot    -->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
@@ -64,11 +68,18 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
         </dependency>
+
         <!--    spring的redis组件    -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-redis</artifactId>
             <version>RELEASE</version>
+        </dependency>
+
+        <!--    spring的mongodb组件    -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
 
         <!--    poi包含对xml和word文档的处理    -->
@@ -311,6 +322,22 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
+            </plugin>
+            <!--    springboot打包工具    -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>1.5.9.RELEASE</version>
+                <configuration>
+                    <mainClass>com.eglsc.spiss.Application</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

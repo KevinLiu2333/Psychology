@@ -2,7 +2,9 @@
 server:
   port: 8021
   session:
-    timeout: 3600
+    timeout: 60
+  tomcat:
+    uri-encoding: utf-8
 
 
 spring:
@@ -35,6 +37,11 @@ spring:
     encoding: UTF-8 #编码
     content-type: text/html #内容类型
     cache: true #开启缓存
+
+  #mongodb配置
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/itstyle
 
 
 #dubbo配置
