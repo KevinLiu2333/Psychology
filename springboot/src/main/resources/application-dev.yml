@@ -38,11 +38,17 @@ spring:
     content-type: text/html #内容类型
     cache: true #开启缓存
 
-  #mongodb配置
   data:
+    #mongodb配置
     mongodb:
       uri: mongodb://127.0.0.1:27017/itstyle
 
+    #elasticsearch配置
+    elasticsearch:
+      cluster-name: elasticsearch #节点名字，默认elasticsearch
+      cluster-nodes: 127.0.0.1:9300 #节点地址，多个节点用逗号隔开
+      repositories:
+        enabled: true
 
 #dubbo配置
 dubbo:
