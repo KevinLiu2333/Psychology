@@ -15,6 +15,7 @@ import java.io.Serializable;
  * Time: 8:51
  */
 @Document(collection = "users")
+//复合主键 name和age将作为复合索引，数字参数指定索引的方向，1为正序，-1为倒序。方向对单键索引和随机存不要紧，但如果你要执行分组和排序操作的时候，它就非常重要了。
 @CompoundIndexes({
         @CompoundIndex(name = "age_idx", def = "{'name': 1, 'age': -1}")
 })
