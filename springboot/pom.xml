@@ -44,20 +44,20 @@
         </dependency>
         <!--    aop所需组件结束    -->
 
-        <!--    通用mapper这个老牛逼了,各种查询都靠他,关键是咱中国人写的,已经直接集成springboot    -->
+        <!--    通用mapper   -->
         <dependency>
             <groupId>tk.mybatis</groupId>
             <artifactId>mapper-spring-boot-starter</artifactId>
             <version>RELEASE</version>
         </dependency>
 
-        <!--    thymeleaf是一个不错的模板引擎,比jsp速度更快,也是springboot标配模板    -->
+        <!--    thymeleaf,springboot标配模板    -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
-        <!--    分页插件,这个也不错,分页实用,已直接集成springboot    -->
+        <!--    分页插件,已直接集成springboot    -->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
@@ -229,11 +229,11 @@
             <groupId>net.sourceforge.nekohtml</groupId>
             <artifactId>nekohtml</artifactId>
         </dependency>
-        <!--    netty    -->
+        <!--    netty 使用较多的是4.x版本，5版本已废弃    -->
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
-            <version>RELEASE</version>
+            <version>4.1.9.Final</version>
         </dependency>
         <!--    mybatis    -->
         <dependency>

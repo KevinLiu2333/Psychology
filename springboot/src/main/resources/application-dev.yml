@@ -43,12 +43,12 @@ spring:
     mongodb:
       uri: mongodb://127.0.0.1:27017/itstyle
 
-    #elasticsearch配置
-    elasticsearch:
-      cluster-name: elasticsearch #节点名字，默认elasticsearch
-      cluster-nodes: 127.0.0.1:9300 #节点地址，多个节点用逗号隔开
-      repositories:
-        enabled: true
+    #elasticsearch配置 有点问题
+#    elasticsearch:
+#      cluster-name: elasticsearch #节点名字，默认elasticsearch
+#      cluster-nodes: 127.0.0.1:9300 #节点地址，多个节点用逗号隔开
+#      repositories:
+#        enabled: true
 
 #dubbo配置
 dubbo:
